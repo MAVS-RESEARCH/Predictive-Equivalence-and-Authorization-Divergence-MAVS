@@ -9,7 +9,9 @@ The benchmark keeps two hypotheses separate:
 
 Phase 0 freezes the research charter, claim boundaries, access-state dictionaries, diagnostic identities, method inventory, holdout custody contract, protected operating-point objective, and clause-level requirements registry.
 
-Phase 1 implements the immutable record, canonical serialization, hashing, content identity, seed lineage, typed registry, run-layout, decision chronology, trace, and result-cleanup contracts. Neither phase generates benchmark cases, trains models, or reports scientific results.
+Phase 1 implements the immutable record, canonical serialization, hashing, content identity, seed lineage, typed registry, run-layout, decision chronology, trace, and result-cleanup contracts.
+
+Phase 2 implements the independent authorization truth system: a strict declarative policy DSL, a total deterministic DSL evaluator, a separately coded procedural reference evaluator, exact compatible-world ambiguity certificates, released rule fixtures, and release-blocking agreement audits. These phases do not generate benchmark banks, train models, or report scientific results.
 
 ## Phase 0 validation
 
@@ -61,6 +63,20 @@ Run the complete regression, property, and stress suite and the Phase 1 audit:
 ```
 
 All operational commands emit structured JSON console events. Each `console.log(...)` call is paired with a stable `STEP LOG` source comment and indexed by the applicable phase audit.
+
+## Phase 2 verification
+
+Run the complete regression, unit, property, metamorphic, and stress suite, then
+execute the independent-label compliance audit:
+
+```powershell
+.\.venv\Scripts\python.exe scripts\run_phase2_tests.py
+.\.venv\Scripts\python.exe scripts\audit_labels.py
+```
+
+The retained Phase 2 evidence reports exact dual-engine agreement, per-stratum
+Oracle rule accuracy, quarantine status, certificate completeness, evaluator
+source independence, and later-phase boundary exclusions.
 
 ## Scientific boundaries
 

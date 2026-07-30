@@ -1,0 +1,200 @@
+{
+  "claim_bearing_cases": 3,
+  "conclusions": [
+    "ambiguity_resolution_available",
+    "irreducibly_ambiguous_escalate",
+    "resolvable_unique"
+  ],
+  "independently_verified": 3,
+  "records": [
+    {
+      "case_id": "ambiguity-resolvable-unique",
+      "certificate": {
+        "available_channels": [],
+        "case_id": "ambiguity-resolvable-unique",
+        "certificate_id": "ambiguity_fe775244f1d564b439f34a1952bee81154f7c1c621ee852a0c5811615b68f4d2",
+        "claim_bearing": true,
+        "compatible_classes": [
+          "Accept"
+        ],
+        "compatible_space_size": 3,
+        "completeness_status": "complete",
+        "conclusion": "resolvable_unique",
+        "enumerated_worlds": 3,
+        "exhausted_channels": [],
+        "irreducible_no_channel_reason": null,
+        "permitted_channels": [],
+        "projection_hash": "255ea37e421c77c3de750bea6686be4150146911d85fe5142e2f236ad7c459c0",
+        "proof_hash": "bd97863fbf12cfd10d3811ea68ae7881962f8b137fb866ce677683377bd8263d",
+        "proof_method": "exact_finite_enumeration",
+        "schema_version": "1.0",
+        "solver_configuration": "deterministic;ordered_by_world_id",
+        "solver_name": "pead-exact-enumerator",
+        "solver_version": "1.0",
+        "unavailable_channels": [],
+        "unique_class_proof": "All 3 compatible worlds authorize Accept.",
+        "visible_state_hash": "2f69e50a129c56fb98c2538efc0aa41f7b25a1f193f77b8310fa8c009e402811",
+        "witnesses": [
+          {
+            "authorization": "Accept",
+            "facts_hash": "b30375544a6b8d636d4d21279226866a6cdecf5bf97901ed294da919e9f272c2",
+            "world_id": "ambiguity-resolvable-unique-world-000"
+          }
+        ]
+      },
+      "independently_verified": true,
+      "proof_worlds": [
+        {
+          "authorization": "Accept",
+          "facts_hash": "b30375544a6b8d636d4d21279226866a6cdecf5bf97901ed294da919e9f272c2",
+          "world_id": "ambiguity-resolvable-unique-world-000"
+        },
+        {
+          "authorization": "Accept",
+          "facts_hash": "4ccc29c6099719fc8b351a839704f40a25c5ff3777da84ff12dc3841255b42d3",
+          "world_id": "ambiguity-resolvable-unique-world-001"
+        },
+        {
+          "authorization": "Accept",
+          "facts_hash": "aea647e38ac95bbf505265a53d72a03067e568e4aaf55470190d68dbfcc7af64",
+          "world_id": "ambiguity-resolvable-unique-world-002"
+        }
+      ]
+    },
+    {
+      "case_id": "ambiguity-irreducible",
+      "certificate": {
+        "available_channels": [],
+        "case_id": "ambiguity-irreducible",
+        "certificate_id": "ambiguity_02c1736cea3bfcd63e140de6cef687f16e05e8559fbf001abcda9c471566f087",
+        "claim_bearing": true,
+        "compatible_classes": [
+          "Accept",
+          "Escalate",
+          "Reject"
+        ],
+        "compatible_space_size": 3,
+        "completeness_status": "complete",
+        "conclusion": "irreducibly_ambiguous_escalate",
+        "enumerated_worlds": 3,
+        "exhausted_channels": [
+          "authority_query"
+        ],
+        "irreducible_no_channel_reason": "Multiple authorization classes remain after complete enumeration; every permitted resolution channel is unavailable or exhausted.",
+        "permitted_channels": [
+          "authority_query",
+          "provenance_query"
+        ],
+        "projection_hash": "255ea37e421c77c3de750bea6686be4150146911d85fe5142e2f236ad7c459c0",
+        "proof_hash": "806431d6e5a7c2bb034f18297b60a05b4dd7e5e4e61686473492a3a168d1e6e5",
+        "proof_method": "exact_finite_enumeration",
+        "schema_version": "1.0",
+        "solver_configuration": "deterministic;ordered_by_world_id",
+        "solver_name": "pead-exact-enumerator",
+        "solver_version": "1.0",
+        "unavailable_channels": [
+          "provenance_query"
+        ],
+        "unique_class_proof": null,
+        "visible_state_hash": "bdf36a3640cbed2ca832cb5a7ce9f13079abc7ded56c21b8e8ce89c227723908",
+        "witnesses": [
+          {
+            "authorization": "Accept",
+            "facts_hash": "4ed623b4d35feffd3f0c56643cad43bd6f5adc365da7c7f4c18c5d5fc53bc0e2",
+            "world_id": "ambiguity-irreducible-world-000"
+          },
+          {
+            "authorization": "Escalate",
+            "facts_hash": "6936f56624a296d526498be81d8a1387e864ce0ed7e5b31edf073d83bb4d74a9",
+            "world_id": "ambiguity-irreducible-world-002"
+          },
+          {
+            "authorization": "Reject",
+            "facts_hash": "47d7ba5c15effef960463e71beef324b0dd7d27c14d521c7a116cf10d3d1fdbf",
+            "world_id": "ambiguity-irreducible-world-001"
+          }
+        ]
+      },
+      "independently_verified": true,
+      "proof_worlds": [
+        {
+          "authorization": "Accept",
+          "facts_hash": "4ed623b4d35feffd3f0c56643cad43bd6f5adc365da7c7f4c18c5d5fc53bc0e2",
+          "world_id": "ambiguity-irreducible-world-000"
+        },
+        {
+          "authorization": "Reject",
+          "facts_hash": "47d7ba5c15effef960463e71beef324b0dd7d27c14d521c7a116cf10d3d1fdbf",
+          "world_id": "ambiguity-irreducible-world-001"
+        },
+        {
+          "authorization": "Escalate",
+          "facts_hash": "6936f56624a296d526498be81d8a1387e864ce0ed7e5b31edf073d83bb4d74a9",
+          "world_id": "ambiguity-irreducible-world-002"
+        }
+      ]
+    },
+    {
+      "case_id": "ambiguity-resolution-available",
+      "certificate": {
+        "available_channels": [
+          "authority_query"
+        ],
+        "case_id": "ambiguity-resolution-available",
+        "certificate_id": "ambiguity_9c8d249aff85ae3bc940827cbb378f47ca81d0e0ef1933d070bceff7b95a1668",
+        "claim_bearing": true,
+        "compatible_classes": [
+          "Accept",
+          "Reject"
+        ],
+        "compatible_space_size": 2,
+        "completeness_status": "complete",
+        "conclusion": "ambiguity_resolution_available",
+        "enumerated_worlds": 2,
+        "exhausted_channels": [],
+        "irreducible_no_channel_reason": null,
+        "permitted_channels": [
+          "authority_query"
+        ],
+        "projection_hash": "255ea37e421c77c3de750bea6686be4150146911d85fe5142e2f236ad7c459c0",
+        "proof_hash": "4e8ad39dc118c8f83cea10010400ee13b66cd63f72bb47c03986498f15f51374",
+        "proof_method": "exact_finite_enumeration",
+        "schema_version": "1.0",
+        "solver_configuration": "deterministic;ordered_by_world_id",
+        "solver_name": "pead-exact-enumerator",
+        "solver_version": "1.0",
+        "unavailable_channels": [],
+        "unique_class_proof": null,
+        "visible_state_hash": "31d9235ca82a75480c36ea9f6cbeca6b6f5650343a87467137de61c0022916dc",
+        "witnesses": [
+          {
+            "authorization": "Accept",
+            "facts_hash": "2970c12bac4c176bd9646fceb3e29d69112339a0b25088bf262d73ebdd5784b4",
+            "world_id": "ambiguity-resolution-available-world-000"
+          },
+          {
+            "authorization": "Reject",
+            "facts_hash": "36b0eabbb9059e1a6f56f3625d257cba1efb773329ae34a38aa3cb690361e385",
+            "world_id": "ambiguity-resolution-available-world-001"
+          }
+        ]
+      },
+      "independently_verified": true,
+      "proof_worlds": [
+        {
+          "authorization": "Accept",
+          "facts_hash": "2970c12bac4c176bd9646fceb3e29d69112339a0b25088bf262d73ebdd5784b4",
+          "world_id": "ambiguity-resolution-available-world-000"
+        },
+        {
+          "authorization": "Reject",
+          "facts_hash": "36b0eabbb9059e1a6f56f3625d257cba1efb773329ae34a38aa3cb690361e385",
+          "world_id": "ambiguity-resolution-available-world-001"
+        }
+      ]
+    }
+  ],
+  "schema_version": "1.0",
+  "status": "pass",
+  "timeout_unknown_accepted_as_proof": 0
+}

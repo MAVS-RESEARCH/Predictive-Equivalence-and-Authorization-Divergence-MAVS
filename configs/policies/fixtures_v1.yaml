@@ -1,0 +1,124 @@
+schema_version: "1.0"
+fixture_registry_id: phase2_authorization_fixtures_v1
+families:
+  - policy_file: configs/policies/deploy_authorized_v1.yaml
+    base_facts:
+      action:
+        type: deploy_patch
+        environment: production
+        rollback_available: true
+      actor:
+        permissions: [production.deploy]
+      policy:
+        change_control:
+          active: true
+          prohibited: false
+          validity:
+            valid_from: "2026-01-01T00:00:00+00:00"
+            valid_until: "2026-12-31T23:59:59+00:00"
+      provenance:
+        compromised: false
+        sources:
+          - {source_id: source-a, independent: true}
+          - {source_id: source-b, independent: true}
+      consequence:
+        impact_tier: 3
+      evidence:
+        provenance_status: verified
+        resolution_available: true
+      decision_time: "2026-06-01T12:00:00+00:00"
+    cases:
+      - case_id: deploy-positive
+        fixture_class: positive
+        benchmark_strata: [exact, domain]
+        expected: Accept
+        overrides: {}
+      - case_id: deploy-negative
+        fixture_class: negative
+        benchmark_strata: [reversal, scope]
+        expected: Reject
+        overrides:
+          actor.permissions: []
+      - case_id: deploy-boundary
+        fixture_class: boundary
+        benchmark_strata: [near, domain]
+        expected: Accept
+        overrides:
+          consequence.impact_tier: 5
+      - case_id: deploy-contradictory
+        fixture_class: contradictory
+        benchmark_strata: [evidence, reversal]
+        expected: Reject
+        overrides:
+          policy.change_control.prohibited: true
+          evidence.provenance_status: unknown
+          evidence.resolution_available: false
+      - case_id: deploy-temporal
+        fixture_class: temporal
+        benchmark_strata: [structural, scope]
+        expected: Reject
+        overrides:
+          decision_time: "2027-01-01T00:00:00+00:00"
+  - policy_file: configs/policies/data_export_v1.yaml
+    base_facts:
+      action:
+        type: export_records
+        environment: research
+      actor:
+        permissions: [records.export]
+      authority:
+        graph:
+          nodes:
+            - {id: actor}
+            - {id: review-board}
+            - {id: dataset}
+          edges:
+            - {source: actor, target: review-board, edge_type: delegates}
+            - {source: review-board, target: dataset, edge_type: delegates}
+      policy:
+        export:
+          prohibited: false
+          validity:
+            valid_from: "2026-01-01T00:00:00+00:00"
+            valid_until: "2026-12-31T23:59:59+00:00"
+      consequence:
+        records: 100
+      data:
+        sensitivity: controlled
+      evidence:
+        available: true
+        purpose_status: verified
+        resolution_available: true
+      decision_time: "2026-06-01T12:00:00+00:00"
+    cases:
+      - case_id: export-positive
+        fixture_class: positive
+        benchmark_strata: [exact, structural]
+        expected: Accept
+        overrides: {}
+      - case_id: export-negative
+        fixture_class: negative
+        benchmark_strata: [domain, reversal]
+        expected: Reject
+        overrides:
+          data.sensitivity: restricted
+      - case_id: export-boundary
+        fixture_class: boundary
+        benchmark_strata: [near, scope]
+        expected: Accept
+        overrides:
+          consequence.records: 1000
+      - case_id: export-contradictory
+        fixture_class: contradictory
+        benchmark_strata: [evidence, structural]
+        expected: Reject
+        overrides:
+          policy.export.prohibited: true
+          evidence.purpose_status: unknown
+          evidence.resolution_available: false
+      - case_id: export-temporal
+        fixture_class: temporal
+        benchmark_strata: [structural, domain]
+        expected: Reject
+        overrides:
+          decision_time: "2027-01-01T00:00:00+00:00"

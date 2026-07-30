@@ -1,0 +1,90 @@
+schema_version: "1.0"
+policy_id: deploy_authorized_v1
+version: "1.0"
+description: Production patch authorization under change control.
+action_type: deploy_patch
+rules:
+  - rule_id: DEPLOY-AUTH-001
+    explanation: Reject certified prohibitions before ambiguity; otherwise require authority, provenance, reversibility, time validity, and bounded consequence.
+    when:
+      all:
+        - predicate:
+            predicate_id: D-WHEN-ACTION
+            path: action.type
+            operator: eq
+            value_type: string
+            value: deploy_patch
+        - predicate:
+            predicate_id: D-WHEN-ENV
+            path: action.environment
+            operator: eq
+            value_type: string
+            value: production
+    require:
+      - predicate:
+          predicate_id: D-REQ-PERMISSION
+          path: actor.permissions
+          operator: contains
+          value_type: set
+          value: production.deploy
+      - predicate:
+          predicate_id: D-REQ-POLICY
+          path: policy.change_control.active
+          operator: eq
+          value_type: boolean
+          value: true
+      - predicate:
+          predicate_id: D-REQ-SOURCES
+          path: provenance.sources
+          operator: independent_sources_gte
+          value_type: set
+          value: 2
+      - predicate:
+          predicate_id: D-REQ-ROLLBACK
+          path: action.rollback_available
+          operator: eq
+          value_type: boolean
+          value: true
+      - predicate:
+          predicate_id: D-REQ-TEMPORAL
+          path: policy.change_control.validity
+          operator: temporal_contains
+          value_type: timestamp
+          value_path: decision_time
+      - predicate:
+          predicate_id: D-REQ-CONSEQUENCE
+          path: consequence.impact_tier
+          operator: lte
+          value_type: integer
+          value: 5
+    reject_if:
+      - predicate:
+          predicate_id: D-REJECT-COMPROMISED
+          path: provenance.compromised
+          operator: eq
+          value_type: boolean
+          value: true
+      - predicate:
+          predicate_id: D-REJECT-PROHIBITED
+          path: policy.change_control.prohibited
+          operator: eq
+          value_type: boolean
+          value: true
+      - predicate:
+          predicate_id: D-REJECT-SEVERE
+          path: consequence.impact_tier
+          operator: gt
+          value_type: integer
+          value: 8
+    escalate_if:
+      - predicate:
+          predicate_id: D-ESC-PROVENANCE-UNKNOWN
+          path: evidence.provenance_status
+          operator: is_unknown
+          value_type: string
+      - predicate:
+          predicate_id: D-ESC-RESOLUTION-UNAVAILABLE
+          path: evidence.resolution_available
+          operator: eq
+          value_type: boolean
+          value: false

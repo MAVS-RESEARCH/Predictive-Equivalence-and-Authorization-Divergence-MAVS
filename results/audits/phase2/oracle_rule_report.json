@@ -1,0 +1,70 @@
+{
+  "correct": 10,
+  "deterministic_errors": [],
+  "errors_are_never_averaged": true,
+  "errors_invalidate_bank": true,
+  "fixture_classes_by_rule_family": {
+    "data_export_v1": [
+      "boundary",
+      "contradictory",
+      "negative",
+      "positive",
+      "temporal"
+    ],
+    "deploy_authorized_v1": [
+      "boundary",
+      "contradictory",
+      "negative",
+      "positive",
+      "temporal"
+    ]
+  },
+  "oracle_rule_accuracy": 1.0,
+  "required_fixture_classes": [
+    "boundary",
+    "contradictory",
+    "negative",
+    "positive",
+    "temporal"
+  ],
+  "schema_version": "1.0",
+  "status": "pass",
+  "stratum_accuracy": {
+    "domain": {
+      "accuracy": 1.0,
+      "correct": 4,
+      "total": 4
+    },
+    "evidence": {
+      "accuracy": 1.0,
+      "correct": 2,
+      "total": 2
+    },
+    "exact": {
+      "accuracy": 1.0,
+      "correct": 2,
+      "total": 2
+    },
+    "near": {
+      "accuracy": 1.0,
+      "correct": 2,
+      "total": 2
+    },
+    "reversal": {
+      "accuracy": 1.0,
+      "correct": 3,
+      "total": 3
+    },
+    "scope": {
+      "accuracy": 1.0,
+      "correct": 3,
+      "total": 3
+    },
+    "structural": {
+      "accuracy": 1.0,
+      "correct": 4,
+      "total": 4
+    }
+  },
+  "valid_deterministic_fixtures": 10
+}

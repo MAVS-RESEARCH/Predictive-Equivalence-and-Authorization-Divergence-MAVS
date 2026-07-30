@@ -29,7 +29,7 @@ Rules:
 |---:|---|---|---|
 | 0 | Research charter, claim ledger, and execution controls | Complete | All local gates passed; implementation commit `8259d22e14cfd532185416795ba079448216540b` pushed and remotely verified |
 | 1 | Core immutable infrastructure and safe result hygiene | Complete | 52/52 tests passed; implementation commit `01de85198fbaa1ffdc55591f6b303029299c92d5` pushed and remotely verified |
-| 2 | Independent authorization truth system | Not started | None |
+| 2 | Independent authorization truth system | Local gates passed; publication pending | 74/74 tests; dual-engine agreement 10/10; OracleRuleAccuracy 1.0; 3/3 ambiguity certificates independently verified |
 | 3 | Causal world registry, exact twins, and near twins | Not started | None |
 | 4 | Reversals, scope banks, and evidence sufficiency | Not started | None |
 | 5 | Eight domain adapters and validity review | Not started | None |
@@ -775,3 +775,262 @@ Copy this block for every meaningful action:
 - **Phase verdict:** Complete. Every Phase 1 WorkPlan scope item, required file group, implementation method, verification gate, stress gate, evidence requirement, cleanup requirement, console documentation requirement, ledger requirement, and publication requirement is satisfied.
 - **Compliance gaps:** None detected.
 - **Next permitted action:** Stop. Phase 2 may begin only after a new explicit user instruction.
+
+### PATH-0024 - Phase 2 authorization-source reconfirmation and execution boundary
+
+- **Timestamp:** 2026-07-30T20:57:08+05:00
+- **Phase:** 2.
+- **Status:** Pass.
+- **Change ID:** `P2-SOURCE-001`.
+- **WorkPlan alignment:** Phase 2 scope and Sections 5.3, 5.8, 5.12, and 6 Phase 2.
+- **User authorization:** The user explicitly instructed implementation of Phase 2. No Phase 3 work was authorized.
+- **Source verification:**
+  - Recomputed the supplied `MAVS-Diagnostic Sciences.pdf` SHA-256 as `B7CC77BF32558B042B8ECFA7C4BB9267B53910B0B84816198CF34A9E73EEE758`, exactly matching `PATH-0001`.
+  - Re-rendered and visually reviewed PDF pages 3, 12, 13, and 14, the pages directly controlling Phase 2 decision semantics.
+  - Re-read WorkPlan Phase 2 and the complete Section 5.12 certificate schema before implementation.
+- **Frozen semantic findings used in code:**
+  - The terminal authorization classes are `Accept`, `Reject`, and `Escalate`.
+  - Prediction and governance remain separate; confidence or raw correlation cannot independently authorize or veto.
+  - Certified prohibition/harm has hard-veto precedence over ambiguity.
+  - Failed mandatory authorization requirements cause `Reject`.
+  - Unresolved mandatory requirements or explicit permitted-resolution needs cause `Escalate`; missing evidence alone does not cause `Reject`.
+  - Claim-bearing ambiguity requires a complete proof and one witness per compatible terminal class.
+  - Timeout, unknown, sampling, and incomplete search cannot prove uniqueness or irreducibility.
+- **Execution boundary:** Phase 2 produced policy truth-system code, released rule fixtures, certificate fixtures, tests, and audit evidence only. It did not generate Phase 3 worlds or banks and did not train, calibrate, or benchmark a model.
+- **Source modification:** None. The supplied PDF remained read-only and outside the repository.
+- **Deviation:** None.
+
+### PATH-0025 - Phase 2 declarative and independent procedural truth engines
+
+- **Timestamp:** 2026-07-30T20:57:08+05:00
+- **Phase:** 2.
+- **Status:** Implemented and verified.
+- **Change ID:** `P2-LABEL-ENGINE-001`.
+- **WorkPlan alignment:** Phase 2 Scope and Code and implementation method.
+- **Files implemented:**
+  - `src/pead/labels/dsl.py`
+  - `src/pead/labels/parser.py`
+  - `src/pead/labels/evaluator_dsl.py`
+  - `src/pead/labels/evaluator_reference.py`
+  - `src/pead/labels/reasons.py`
+  - `src/pead/labels/__init__.py`
+- **Typed DSL:**
+  - Defines immutable policy, rule, expression, and predicate objects.
+  - Supports boolean, integer, number, string, timestamp, set, and graph value types.
+  - Supports `eq`, `ne`, ordered comparisons, membership, containment, existence, explicit unknown evidence, temporal containment, directed graph-path existence, and independent-source thresholds.
+  - Supports recursive `all`, `any`, and `not` composition under deterministic three-valued logic.
+- **Strict parser:**
+  - Requires schema version `1.0` and exact policy/rule/predicate key sets.
+  - Rejects unknown keys, missing operands, conflicting `value`/`value_path`, duplicate rule identities, duplicate predicate identities, unknown operators/types, invalid graph queries, invalid temporal contracts, and invalid independent-source thresholds.
+  - Parses YAML into immutable typed syntax; evaluator code never evaluates raw YAML.
+- **DSL evaluator:**
+  - Accepts serialized UTF-8 JSON latent facts.
+  - Is total over valid JSON fact mappings: absent, null, malformed-type, invalid-time, and incomplete graph facts become typed `unknown` rather than unhandled branches.
+  - Deterministically evaluates every policy rule, including multi-rule scope selection.
+  - Applies precedence in this order: no matching scope, unresolved scope, certified prohibition, failed mandatory constraint, unresolved/explicit ambiguity, authorized.
+  - Emits the complete `LabelEvaluation`: label, reason class, satisfied atomic constraints, violated atomic constraints, ambiguity basis, policy/rule lineage, and content-derived evaluation hash.
+- **Procedural reference evaluator:**
+  - Receives only a policy identity and serialized UTF-8 JSON latent facts.
+  - Implements fixed deploy and data-export decision trees separately from the DSL evaluator.
+  - Does not import `pead.labels.dsl`, `pead.labels.parser`, or `pead.labels.evaluator_dsl`.
+  - Does not parse YAML or consume a parsed `Policy`.
+  - Returns exactly the same complete `LabelEvaluation` schema.
+  - Independence evidence records different source hashes:
+    - DSL evaluator: `011b7d9934819c4899c17a6f9623f52c8afd029a2c5330e77be6fe80a36df8ca`.
+    - Reference evaluator: `7550f9ca58b80377c151959772a775cd88a465c4cedf0b8b0864f3e98686701c`.
+- **Disagreement control:**
+  - `quarantine_disagreement(...)` creates a typed `LabelDisagreement` whenever any result field differs.
+  - The record status is necessarily `quarantined` and carries a non-empty invalidation scope including the affected rule family, fixture bank, and dependent release.
+  - The audit writes disagreements before failing, so an error cannot be averaged away or silently discarded.
+- **Professional-code controls:** Frozen dataclasses, typed enums, explicit exceptions, deterministic ordering, stable reason identities, no dynamic code execution, no label inference from filenames, and no decorative logging or output.
+- **Deviation:** None.
+
+### PATH-0026 - Phase 2 policies, mechanism interfaces, fixtures, and exact ambiguity proof
+
+- **Timestamp:** 2026-07-30T20:57:08+05:00
+- **Phase:** 2.
+- **Status:** Pass.
+- **Change IDs:** `P2-POLICY-001`, `P2-AMBIGUITY-001`.
+- **WorkPlan alignment:** Phase 2 required `configs/mechanisms/*.yaml`, `configs/policies/*.yaml`, positive/negative/boundary/contradictory/temporal coverage, and Section 5.12.
+- **Policy/configuration files:**
+  - `configs/policies/deploy_authorized_v1.yaml`
+  - `configs/policies/data_export_v1.yaml`
+  - `configs/policies/fixtures_v1.yaml`
+  - `configs/policies/ambiguity_cases_v1.yaml`
+  - `configs/mechanisms/authorization_factors_v1.yaml`
+- **Deploy rule family:**
+  - Requires production-deploy permission, active change control, at least two distinct independent sources, rollback availability, inclusive temporal validity, and impact tier at or below 5.
+  - Rejects compromised provenance, explicit prohibition, or severe consequence.
+  - Explicitly escalates unknown provenance or unavailable resolution where no rejection has already fired.
+- **Data-export rule family:**
+  - Requires export permission, a directed delegation path from actor to dataset, inclusive temporal validity, record volume at or below 1,000, and evidence availability.
+  - Rejects explicit prohibition, restricted sensitivity, or severe export volume.
+  - Explicitly escalates unknown purpose or unavailable resolution where no rejection has already fired.
+- **Mechanism registry:**
+  - Declares seven Phase 2 latent truth interfaces: authority permission, policy prohibition, provenance integrity, delegated-authority graph, temporal validity, consequence threshold, and evidence availability.
+  - Contains no terminal authorization label.
+  - Explicitly marks world generation `deferred_to_phase_3`.
+- **Released deterministic fixture denominator:**
+  - Two rule families.
+  - Five fixture classes per family: positive, negative, boundary, contradictory, and temporal.
+  - Ten released fixtures total.
+  - Fixture metadata covers every WorkPlan future-case stratum named in the Phase 2 gate: exact, near, reversal, scope, evidence, structural, and domain.
+  - Contradictory fixtures simultaneously activate a prohibition and escalation condition and verify that rejection has precedence.
+- **Complete `AmbiguityCertificate`:**
+  - Contains separate visible-state and projection hashes.
+  - Contains all compatible terminal classes and exactly one witness world for every class.
+  - Contains permitted, available, unavailable, and exhausted resolution-channel partitions.
+  - Contains proof method, solver name, solver version, solver configuration, proof hash, completeness state, enumerated denominator, and compatible-space size.
+  - Contains a unique-class proof for resolvable cases.
+  - Contains a no-channel reason for irreducibly ambiguous cases.
+  - Uses content-derived proof and certificate identities.
+- **Certificate cases and verdict:**
+  - `ambiguity-resolvable-unique`: complete exact enumeration, `resolvable_unique`.
+  - `ambiguity-irreducible`: complete exact enumeration, three terminal classes, every permitted channel unavailable or exhausted, `irreducibly_ambiguous_escalate`.
+  - `ambiguity-resolution-available`: complete exact enumeration, multiple terminal classes with an available permitted channel, `ambiguity_resolution_available`; irreducibility is not claimed.
+  - Independently verified: 3/3.
+  - Timeout/unknown accepted as proof: 0.
+- **Non-claim path:** Timeout, unknown, incomplete, and sampled work can only create `unresolved_nonclaim`; the verifier rejects terminal claims, unique proofs, irreducibility reasons, or altered evidence hashes on that path.
+- **Sampling:** Used only as an explicitly rejected claim method in tests. No Phase 2 claim uses sampling.
+- **Deviation:** None.
+
+### PATH-0027 - Phase 2 tests, stress gates, and retained corrective history
+
+- **Timestamp:** 2026-07-30T20:57:08+05:00
+- **Phase:** 2.
+- **Status:** Pass; 74/74.
+- **Change IDs:** `P2-TEST-001`, `P2-INCIDENTS-001`.
+- **Required test files:**
+  - `tests/unit/test_policy_dsl.py`
+  - `tests/property/test_label_agreement.py`
+  - `tests/property/test_label_ambiguity.py`
+  - `tests/metamorphic/test_authorization_invariants.py`
+- **Additional stress/support files:**
+  - `tests/stress/test_phase2_stress.py`
+  - `tests/phase2_fixtures.py`
+  - `src/pead/phase2/fixtures.py`
+  - `src/pead/phase2/test_runner.py`
+  - `scripts/run_phase2_tests.py`
+- **Final complete-suite command:** `.\.venv\Scripts\python.exe scripts\run_phase2_tests.py`.
+- **Final result:** 74 tests run, 74 successful, 0 failures, 0 errors, 0 skips.
+- **Stress results:**
+  - 100,000 evaluator invocations across 50,000 varied facts: 100,000/100,000 completed; 50,000/50,000 full-result dual-engine agreements.
+  - 4,096 compatible worlds: all 4,096 enumerated and the resulting three-class certificate independently verified.
+  - 2,000 deterministic randomized nuisance variations: 2,000/2,000 full-result dual-engine agreements.
+  - Ten released fixtures: 10/10 full-result dual-engine agreements and 10/10 expected labels.
+- **Metamorphic results:**
+  - Revoking an authorization permission changed both positive family fixtures from `Accept` to `Reject`; it never improved authorization.
+  - Adding a prohibition changed both positive family fixtures to `Reject`; it never improved authorization.
+  - Fifty fixture/intervention combinations spanning null, boolean, integer, text, and nested structured nuisance values preserved the full evaluation in both engines.
+- **Adversarial/unit results:**
+  - Unknown keys, duplicate predicate IDs, invalid graph-query shapes, invalid UTF-8, and unknown reference-policy identities are rejected.
+  - Missing mandatory facts deterministically escalate with the missing constraint in the ambiguity basis.
+  - Reject-versus-escalate contradictions deterministically reject.
+  - Three-valued `all`/`any`/`not`, multi-rule selection, timestamps, graphs, consequence thresholds, and all result fields are tested.
+  - Incomplete enumeration, sampling as proof, altered proof hashes, and incomplete/tampered certificates are rejected.
+  - Synthetic engine disagreement produces a release-blocking quarantine.
+- **Regression:** All Phase 0 and Phase 1 tests remained in the same passing 74-test complete-suite execution.
+- **Retained correction `INC-P2-001`:**
+  - The first targeted 19-test execution produced one assertion failure in the logical-composition test.
+  - Cause: the evaluator reports atomic predicate truth in satisfied/violated collections; a true predicate under `not` remains an atomically satisfied predicate even though the composed expression is false. The test had incorrectly expected the atom to be listed as violated.
+  - Correction: fixed the test expectation to preserve the documented atomic-truth semantics. No evaluator behavior or policy label changed.
+  - Retest: all 19 targeted tests passed.
+- **Retained correction `INC-P2-002`:**
+  - The first complete suite passed 73/73, and the first compliance audit passed.
+  - A subsequent manual Section 5.12 cross-check found that the certificate used the names `visible_projection_hash` and `projection_schema_hash`; although two hashes existed, the wording did not exactly expose separate `visible_state_hash` and `projection_hash` fields.
+  - Correction: renamed the certificate fields and all proof payloads, generators, verifiers, tests, and evidence to the exact semantic distinction. Added independent verification of non-claim evidence hashes.
+  - The same audit found the DSL evaluator selected only the first parsed rule. The released files each contain one rule, so no released label was wrong, but the general DSL contract permitted multiple rules.
+  - Correction: implemented deterministic multi-rule scope selection and added a direct unit test.
+  - Supersession: the 73-test report and its generated certificates were overwritten by the final 74-test run and final audit. They are not Phase 2 evidence.
+  - Final retest: 74/74 passed; all final certificates use `visible_state_hash` and `projection_hash`.
+- **Model/overfitting applicability:** No model was trained, fitted, calibrated, selected, or evaluated in Phase 2. Training-benchmark separation and model overfitting gates are therefore not applicable. Phase 2 does independently test rule engines with unit, property, metamorphic, adversarial, and scale-stress workloads that are distinct from the ten released deterministic fixtures.
+- **Evidence:** `results/audits/phase2/phase2_tests.json`.
+- **Deviation:** None. Corrections tightened the implementation to the frozen contract before publication.
+
+### PATH-0028 - Phase 2 operational console inventory
+
+- **Timestamp:** 2026-07-30T20:57:08+05:00
+- **Phase:** 2.
+- **Status:** Pass.
+- **Change ID:** `P2-CONSOLE-001`.
+- **Inventory denominator:** 15 `console.log(...)` statements, 15 immediately preceding identifying comments, 15 unique event IDs, 0 missing comments, 0 ID mismatches, 0 duplicates.
+- **Line-number convention:** Both columns are one-based final-source line numbers. The audit recomputes them directly from source. The requested comments are the immediately preceding `STEP LOG` comments shown below.
+
+| Event ID | `console.log` file:line | Comment line | Exact identifying comment |
+|---|---|---:|---|
+| `P2-AUDIT-001` | `src/pead/phase2/audit.py:488` | 487 | Establish the exact Phase 2 source, configuration, test, and evidence boundary. |
+| `P2-AUDIT-002` | `src/pead/phase2/audit.py:491` | 490 | Verify the procedural evaluator is source-independent from the DSL implementation. |
+| `P2-AUDIT-003` | `src/pead/phase2/audit.py:495` | 494 | Verify Phase 2 mechanism files declare latent interfaces without generating worlds. |
+| `P2-AUDIT-004` | `src/pead/phase2/audit.py:498` | 497 | Execute exact dual-engine agreement and Oracle accuracy gates. |
+| `P2-AUDIT-005` | `src/pead/phase2/audit.py:501` | 500 | Generate and independently verify every released ambiguity certificate. |
+| `P2-AUDIT-006` | `src/pead/phase2/audit.py:504` | 503 | Verify complete regression, property, metamorphic, and stress evidence. |
+| `P2-AUDIT-007` | `src/pead/phase2/audit.py:507` | 506 | Verify every Phase 2 operational console call has an adjacent identity comment. |
+| `P2-AUDIT-008` | `src/pead/phase2/audit.py:521` | 520 | Confirm Phase 2 did not cross into world generation, training, or benchmarking. |
+| `P2-AUDIT-009` | `src/pead/phase2/audit.py:524` | 523 | Verify the append-only Path ledger records the complete Phase 2 implementation and evidence. |
+| `P2-AUDIT-010` | `src/pead/phase2/audit.py:563` | 562 | Retain the complete Phase 2 compliance verdict and evidence pointers. |
+| `P2-AUDIT-011` | `src/pead/phase2/audit.py:575` | 574 | Report the final local Phase 2 gate verdict. |
+| `P2-AUDIT-012` | `src/pead/phase2/audit.py:591` | 590 | Emit the hard-gate failure without suppressing its cause. |
+| `P2-TEST-RUN-001` | `src/pead/phase2/test_runner.py:52` | 51 | Discover the complete regression and Phase 2 verification suite. |
+| `P2-TEST-RUN-002` | `src/pead/phase2/test_runner.py:60` | 59 | Report the exact complete-suite test denominator. |
+| `P2-TEST-RUN-003` | `src/pead/phase2/test_runner.py:109` | 108 | Retain the complete unit, property, metamorphic, regression, and stress verdict. |
+
+- **Evidence:** `results/audits/phase2/console_log_inventory.json`.
+- **Scope note:** Pure policy evaluation and proof functions do not print per-record messages because doing so would alter deterministic research-library behavior and produce 100,000 stress-run messages. Every operational phase step in the test runner and auditor uses the requested structured `console.log(...)` form and adjacent identifying comment.
+- **Deviation:** None.
+
+### PATH-0029 - Phase 2 extreme-rigor local completion audit
+
+- **Timestamp:** 2026-07-30T20:57:08+05:00
+- **Phase:** 2.
+- **Status:** Local gates passed; GitHub publication pending.
+- **Change ID:** `P2-AUDIT-LOCAL-001`.
+- **WorkPlan alignment:** Every Phase 2 scope, file family, implementation method, and completion gate.
+- **Audit implementation:** `src/pead/phase2/audit.py` and `scripts/audit_labels.py`.
+- **Commands:**
+  - `.\.venv\Scripts\python.exe scripts\run_phase2_tests.py`
+  - `.\.venv\Scripts\python.exe scripts\audit_labels.py`
+  - `.\.venv\Scripts\python.exe scripts\validate_config.py --study configs\study\pead_main_v1.yaml --verify-sources --source-root "C:\Users\Saif malik\Downloads"`
+  - `.\.venv\Scripts\python.exe -m compileall -q src scripts tests`
+  - `git diff --check`
+- **Source/config regression:** Pass with both supplied source identities rehashed, 789/789 source requirements retained, seven diagnostics retained, and all frozen Phase 0/1 configuration gates unchanged.
+- **Scope audit:**
+  - Declarative policy DSL: Pass.
+  - Strict typed parser: Pass.
+  - Total deterministic evaluator: Pass.
+  - Separately coded procedural evaluator: Pass.
+  - Compatible-world ambiguity logic: Pass.
+  - Complete certificate schema and verifier: Pass.
+  - Rule fixtures and label agreement auditor: Pass.
+- **Completion-gate audit:**
+  - Released dual-engine agreement: 10/10, `1.0`.
+  - Oracle deterministic fixtures: 10/10, `OracleRuleAccuracy = 1.0`.
+  - Per-stratum Oracle accuracy for exact, near, reversal, scope, evidence, structural, and domain fixture metadata: `1.0` in every stratum.
+  - Deterministic Oracle errors: 0.
+  - Errors averaged away: 0; code makes any error fatal and invalidates the affected bank/release.
+  - Required fixture classes: all five present in each of two rule families.
+  - Claim-bearing certificates: 3/3 complete and independently verified.
+  - Timeout/unknown/incomplete/sampling accepted as proof: 0.
+  - Permission-revocation monotonicity: Pass.
+  - Prohibition monotonicity: Pass.
+  - Irrelevant-intervention invariance: Pass.
+  - Label disagreements: 0.
+  - Quarantined released cases: 0; the quarantine mechanism itself passed a synthetic disagreement test.
+- **Stress audit:** 100,000 evaluator invocations, 4,096-world exact proof, 2,000 randomized nuisance-agreement cases, and full 74-test regression all passed.
+- **Independence audit:** AST import inspection found 0 forbidden imports; reference and DSL source hashes differ; reference facts arrive only as serialized bytes.
+- **Console audit:** 15/15 calls have adjacent comments and matching unique IDs; full line inventory is in `PATH-0028`.
+- **Phase-boundary audit:** 0 banks, 0 models, 0 checkpoints, 0 calibration artifacts, 0 benchmark outcomes, and no Phase 3 generation.
+- **Result-hygiene audit:** Phase 0/1 evidence remains because it is part of the current implementation history. The superseded in-turn Phase 2 evidence was overwritten; the repository contains only the final Phase 2 evidence listed below.
+- **Retained evidence and SHA-256:**
+  - `results/audits/phase2/ambiguity_certificates.json`: `43B7058DB0BFE97027A897B82C016A3DFA7262FEF59CF643C7B922896CD7B8D9`
+  - `results/audits/phase2/console_log_inventory.json`: `E0BE29D86BE489A54214BD524A47751007D2C0692AA48BE85D68B74A0598B2F7`
+  - `results/audits/phase2/independence_report.json`: `4C4199E8516BB4D70F08A5CB73C3BE2D395E96BED19A8BB9E51DCA719E20E1D6`
+  - `results/audits/phase2/label_agreement.json`: `BCC6F6411A350C1C745283C80224859A883E230B870F9C7EAE3BAA99CD190E4F`
+  - `results/audits/phase2/oracle_rule_report.json`: `238C722B2AC31DC24365E1FE92A19A9D48DDC4565C1C48B0E89E8DF7B6663B9F`
+  - `results/audits/phase2/phase2_compliance.json`: `FEC8EE29FAB52A7CE20A05D64660A1CF9B866AEA1656CDD03926A60E8F61475C`
+  - `results/audits/phase2/phase2_tests.json`: `48D005F70F44556B95E1513A8A4DED0A30DB8FE781606864AF1575CC5BF3C4C1`
+- **Compliance gaps:** None detected.
+- **Scientific result:** None. Phase 2 verifies authorization truth infrastructure; it does not test H1 or H2 and does not support a model-performance or deployment claim.
+- **Model training:** None; therefore no training benchmark, validation benchmark, final holdout, checkpoint selection, or overfitting claim exists in this phase.
+- **Deviation:** None.
+- **Publication state:** Pending. Under the ledger contract and WorkPlan Section 2.4, Phase 2 becomes complete only after an intentional commit, successful push, and exact remote-SHA verification.
+- **Next permitted action:** Inspect the intended Phase 2 diff, rerun final source/config/audit checks, stage only Phase 2 scope, commit, push, verify the remote branch SHA, append the publication record, and push that ledger close. Do not begin Phase 3.

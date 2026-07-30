@@ -1,0 +1,27 @@
+schema_version: "1.0"
+mechanism_registry_id: authorization_factors_v1
+phase: 2
+purpose: Declare latent authorization truth interfaces without generating Phase 3 worlds.
+mechanisms:
+  - mechanism_id: authority_permission
+    rule_families: [deploy_authorized_v1, data_export_v1]
+    latent_paths: [actor.permissions]
+  - mechanism_id: policy_prohibition
+    rule_families: [deploy_authorized_v1, data_export_v1]
+    latent_paths: [policy.change_control.prohibited, policy.export.prohibited]
+  - mechanism_id: provenance_integrity
+    rule_families: [deploy_authorized_v1]
+    latent_paths: [provenance.compromised, provenance.sources]
+  - mechanism_id: delegated_authority_graph
+    rule_families: [data_export_v1]
+    latent_paths: [authority.graph]
+  - mechanism_id: temporal_validity
+    rule_families: [deploy_authorized_v1, data_export_v1]
+    latent_paths: [decision_time, policy.change_control.validity, policy.export.validity]
+  - mechanism_id: consequence_threshold
+    rule_families: [deploy_authorized_v1, data_export_v1]
+    latent_paths: [consequence.impact_tier, consequence.records]
+  - mechanism_id: evidence_availability
+    rule_families: [deploy_authorized_v1, data_export_v1]
+    latent_paths: [evidence.available, evidence.provenance_status, evidence.purpose_status, evidence.resolution_available]
+generation_status: deferred_to_phase_3

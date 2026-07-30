@@ -1,0 +1,87 @@
+schema_version: "1.0"
+policy_id: data_export_v1
+version: "1.0"
+description: Research-record export authorization under delegated authority.
+action_type: export_records
+rules:
+  - rule_id: EXPORT-AUTH-001
+    explanation: Reject explicit export prohibitions before ambiguity; otherwise require permission, delegation, temporal validity, bounded volume, and evidence.
+    when:
+      all:
+        - predicate:
+            predicate_id: X-WHEN-ACTION
+            path: action.type
+            operator: eq
+            value_type: string
+            value: export_records
+        - predicate:
+            predicate_id: X-WHEN-ENV
+            path: action.environment
+            operator: eq
+            value_type: string
+            value: research
+    require:
+      - predicate:
+          predicate_id: X-REQ-PERMISSION
+          path: actor.permissions
+          operator: contains
+          value_type: set
+          value: records.export
+      - predicate:
+          predicate_id: X-REQ-DELEGATION
+          path: authority.graph
+          operator: graph_path_exists
+          value_type: graph
+          value:
+            source: actor
+            target: dataset
+            edge_type: delegates
+      - predicate:
+          predicate_id: X-REQ-TEMPORAL
+          path: policy.export.validity
+          operator: temporal_contains
+          value_type: timestamp
+          value_path: decision_time
+      - predicate:
+          predicate_id: X-REQ-CONSEQUENCE
+          path: consequence.records
+          operator: lte
+          value_type: integer
+          value: 1000
+      - predicate:
+          predicate_id: X-REQ-EVIDENCE
+          path: evidence.available
+          operator: eq
+          value_type: boolean
+          value: true
+    reject_if:
+      - predicate:
+          predicate_id: X-REJECT-PROHIBITED
+          path: policy.export.prohibited
+          operator: eq
+          value_type: boolean
+          value: true
+      - predicate:
+          predicate_id: X-REJECT-SENSITIVE
+          path: data.sensitivity
+          operator: eq
+          value_type: string
+          value: restricted
+      - predicate:
+          predicate_id: X-REJECT-SEVERE
+          path: consequence.records
+          operator: gt
+          value_type: integer
+          value: 5000
+    escalate_if:
+      - predicate:
+          predicate_id: X-ESC-PURPOSE-UNKNOWN
+          path: evidence.purpose_status
+          operator: is_unknown
+          value_type: string
+      - predicate:
+          predicate_id: X-ESC-RESOLUTION-UNAVAILABLE
+          path: evidence.resolution_available
+          operator: eq
+          value_type: boolean
+          value: false

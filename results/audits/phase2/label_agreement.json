@@ -1,0 +1,691 @@
+{
+  "cases": [
+    {
+      "agreement": true,
+      "benchmark_strata": [
+        "exact",
+        "domain"
+      ],
+      "case_id": "deploy-positive",
+      "dsl": {
+        "ambiguity_basis": [],
+        "label": "Accept",
+        "reason_class": "authorized",
+        "rule_lineage": [
+          "deploy_authorized_v1@1.0",
+          "DEPLOY-AUTH-001",
+          "authorized"
+        ],
+        "satisfied_constraints": [
+          "D-REQ-CONSEQUENCE",
+          "D-REQ-PERMISSION",
+          "D-REQ-POLICY",
+          "D-REQ-ROLLBACK",
+          "D-REQ-SOURCES",
+          "D-REQ-TEMPORAL",
+          "D-WHEN-ACTION",
+          "D-WHEN-ENV"
+        ],
+        "schema_version": "1.0",
+        "violated_constraints": [
+          "D-ESC-PROVENANCE-UNKNOWN",
+          "D-ESC-RESOLUTION-UNAVAILABLE",
+          "D-REJECT-COMPROMISED",
+          "D-REJECT-PROHIBITED",
+          "D-REJECT-SEVERE"
+        ]
+      },
+      "expected": "Accept",
+      "expected_correct": true,
+      "fixture_class": "positive",
+      "policy_id": "deploy_authorized_v1",
+      "reference": {
+        "ambiguity_basis": [],
+        "label": "Accept",
+        "reason_class": "authorized",
+        "rule_lineage": [
+          "deploy_authorized_v1@1.0",
+          "DEPLOY-AUTH-001",
+          "authorized"
+        ],
+        "satisfied_constraints": [
+          "D-REQ-CONSEQUENCE",
+          "D-REQ-PERMISSION",
+          "D-REQ-POLICY",
+          "D-REQ-ROLLBACK",
+          "D-REQ-SOURCES",
+          "D-REQ-TEMPORAL",
+          "D-WHEN-ACTION",
+          "D-WHEN-ENV"
+        ],
+        "schema_version": "1.0",
+        "violated_constraints": [
+          "D-ESC-PROVENANCE-UNKNOWN",
+          "D-ESC-RESOLUTION-UNAVAILABLE",
+          "D-REJECT-COMPROMISED",
+          "D-REJECT-PROHIBITED",
+          "D-REJECT-SEVERE"
+        ]
+      },
+      "release_status": "eligible"
+    },
+    {
+      "agreement": true,
+      "benchmark_strata": [
+        "reversal",
+        "scope"
+      ],
+      "case_id": "deploy-negative",
+      "dsl": {
+        "ambiguity_basis": [],
+        "label": "Reject",
+        "reason_class": "mandatory_constraint_failed",
+        "rule_lineage": [
+          "deploy_authorized_v1@1.0",
+          "DEPLOY-AUTH-001",
+          "mandatory_constraint_failed"
+        ],
+        "satisfied_constraints": [
+          "D-REQ-CONSEQUENCE",
+          "D-REQ-POLICY",
+          "D-REQ-ROLLBACK",
+          "D-REQ-SOURCES",
+          "D-REQ-TEMPORAL",
+          "D-WHEN-ACTION",
+          "D-WHEN-ENV"
+        ],
+        "schema_version": "1.0",
+        "violated_constraints": [
+          "D-ESC-PROVENANCE-UNKNOWN",
+          "D-ESC-RESOLUTION-UNAVAILABLE",
+          "D-REJECT-COMPROMISED",
+          "D-REJECT-PROHIBITED",
+          "D-REJECT-SEVERE",
+          "D-REQ-PERMISSION"
+        ]
+      },
+      "expected": "Reject",
+      "expected_correct": true,
+      "fixture_class": "negative",
+      "policy_id": "deploy_authorized_v1",
+      "reference": {
+        "ambiguity_basis": [],
+        "label": "Reject",
+        "reason_class": "mandatory_constraint_failed",
+        "rule_lineage": [
+          "deploy_authorized_v1@1.0",
+          "DEPLOY-AUTH-001",
+          "mandatory_constraint_failed"
+        ],
+        "satisfied_constraints": [
+          "D-REQ-CONSEQUENCE",
+          "D-REQ-POLICY",
+          "D-REQ-ROLLBACK",
+          "D-REQ-SOURCES",
+          "D-REQ-TEMPORAL",
+          "D-WHEN-ACTION",
+          "D-WHEN-ENV"
+        ],
+        "schema_version": "1.0",
+        "violated_constraints": [
+          "D-ESC-PROVENANCE-UNKNOWN",
+          "D-ESC-RESOLUTION-UNAVAILABLE",
+          "D-REJECT-COMPROMISED",
+          "D-REJECT-PROHIBITED",
+          "D-REJECT-SEVERE",
+          "D-REQ-PERMISSION"
+        ]
+      },
+      "release_status": "eligible"
+    },
+    {
+      "agreement": true,
+      "benchmark_strata": [
+        "near",
+        "domain"
+      ],
+      "case_id": "deploy-boundary",
+      "dsl": {
+        "ambiguity_basis": [],
+        "label": "Accept",
+        "reason_class": "authorized",
+        "rule_lineage": [
+          "deploy_authorized_v1@1.0",
+          "DEPLOY-AUTH-001",
+          "authorized"
+        ],
+        "satisfied_constraints": [
+          "D-REQ-CONSEQUENCE",
+          "D-REQ-PERMISSION",
+          "D-REQ-POLICY",
+          "D-REQ-ROLLBACK",
+          "D-REQ-SOURCES",
+          "D-REQ-TEMPORAL",
+          "D-WHEN-ACTION",
+          "D-WHEN-ENV"
+        ],
+        "schema_version": "1.0",
+        "violated_constraints": [
+          "D-ESC-PROVENANCE-UNKNOWN",
+          "D-ESC-RESOLUTION-UNAVAILABLE",
+          "D-REJECT-COMPROMISED",
+          "D-REJECT-PROHIBITED",
+          "D-REJECT-SEVERE"
+        ]
+      },
+      "expected": "Accept",
+      "expected_correct": true,
+      "fixture_class": "boundary",
+      "policy_id": "deploy_authorized_v1",
+      "reference": {
+        "ambiguity_basis": [],
+        "label": "Accept",
+        "reason_class": "authorized",
+        "rule_lineage": [
+          "deploy_authorized_v1@1.0",
+          "DEPLOY-AUTH-001",
+          "authorized"
+        ],
+        "satisfied_constraints": [
+          "D-REQ-CONSEQUENCE",
+          "D-REQ-PERMISSION",
+          "D-REQ-POLICY",
+          "D-REQ-ROLLBACK",
+          "D-REQ-SOURCES",
+          "D-REQ-TEMPORAL",
+          "D-WHEN-ACTION",
+          "D-WHEN-ENV"
+        ],
+        "schema_version": "1.0",
+        "violated_constraints": [
+          "D-ESC-PROVENANCE-UNKNOWN",
+          "D-ESC-RESOLUTION-UNAVAILABLE",
+          "D-REJECT-COMPROMISED",
+          "D-REJECT-PROHIBITED",
+          "D-REJECT-SEVERE"
+        ]
+      },
+      "release_status": "eligible"
+    },
+    {
+      "agreement": true,
+      "benchmark_strata": [
+        "evidence",
+        "reversal"
+      ],
+      "case_id": "deploy-contradictory",
+      "dsl": {
+        "ambiguity_basis": [],
+        "label": "Reject",
+        "reason_class": "certified_prohibition",
+        "rule_lineage": [
+          "deploy_authorized_v1@1.0",
+          "DEPLOY-AUTH-001",
+          "certified_prohibition"
+        ],
+        "satisfied_constraints": [
+          "D-ESC-PROVENANCE-UNKNOWN",
+          "D-ESC-RESOLUTION-UNAVAILABLE",
+          "D-REJECT-PROHIBITED",
+          "D-REQ-CONSEQUENCE",
+          "D-REQ-PERMISSION",
+          "D-REQ-POLICY",
+          "D-REQ-ROLLBACK",
+          "D-REQ-SOURCES",
+          "D-REQ-TEMPORAL",
+          "D-WHEN-ACTION",
+          "D-WHEN-ENV"
+        ],
+        "schema_version": "1.0",
+        "violated_constraints": [
+          "D-REJECT-COMPROMISED",
+          "D-REJECT-SEVERE"
+        ]
+      },
+      "expected": "Reject",
+      "expected_correct": true,
+      "fixture_class": "contradictory",
+      "policy_id": "deploy_authorized_v1",
+      "reference": {
+        "ambiguity_basis": [],
+        "label": "Reject",
+        "reason_class": "certified_prohibition",
+        "rule_lineage": [
+          "deploy_authorized_v1@1.0",
+          "DEPLOY-AUTH-001",
+          "certified_prohibition"
+        ],
+        "satisfied_constraints": [
+          "D-ESC-PROVENANCE-UNKNOWN",
+          "D-ESC-RESOLUTION-UNAVAILABLE",
+          "D-REJECT-PROHIBITED",
+          "D-REQ-CONSEQUENCE",
+          "D-REQ-PERMISSION",
+          "D-REQ-POLICY",
+          "D-REQ-ROLLBACK",
+          "D-REQ-SOURCES",
+          "D-REQ-TEMPORAL",
+          "D-WHEN-ACTION",
+          "D-WHEN-ENV"
+        ],
+        "schema_version": "1.0",
+        "violated_constraints": [
+          "D-REJECT-COMPROMISED",
+          "D-REJECT-SEVERE"
+        ]
+      },
+      "release_status": "eligible"
+    },
+    {
+      "agreement": true,
+      "benchmark_strata": [
+        "structural",
+        "scope"
+      ],
+      "case_id": "deploy-temporal",
+      "dsl": {
+        "ambiguity_basis": [],
+        "label": "Reject",
+        "reason_class": "mandatory_constraint_failed",
+        "rule_lineage": [
+          "deploy_authorized_v1@1.0",
+          "DEPLOY-AUTH-001",
+          "mandatory_constraint_failed"
+        ],
+        "satisfied_constraints": [
+          "D-REQ-CONSEQUENCE",
+          "D-REQ-PERMISSION",
+          "D-REQ-POLICY",
+          "D-REQ-ROLLBACK",
+          "D-REQ-SOURCES",
+          "D-WHEN-ACTION",
+          "D-WHEN-ENV"
+        ],
+        "schema_version": "1.0",
+        "violated_constraints": [
+          "D-ESC-PROVENANCE-UNKNOWN",
+          "D-ESC-RESOLUTION-UNAVAILABLE",
+          "D-REJECT-COMPROMISED",
+          "D-REJECT-PROHIBITED",
+          "D-REJECT-SEVERE",
+          "D-REQ-TEMPORAL"
+        ]
+      },
+      "expected": "Reject",
+      "expected_correct": true,
+      "fixture_class": "temporal",
+      "policy_id": "deploy_authorized_v1",
+      "reference": {
+        "ambiguity_basis": [],
+        "label": "Reject",
+        "reason_class": "mandatory_constraint_failed",
+        "rule_lineage": [
+          "deploy_authorized_v1@1.0",
+          "DEPLOY-AUTH-001",
+          "mandatory_constraint_failed"
+        ],
+        "satisfied_constraints": [
+          "D-REQ-CONSEQUENCE",
+          "D-REQ-PERMISSION",
+          "D-REQ-POLICY",
+          "D-REQ-ROLLBACK",
+          "D-REQ-SOURCES",
+          "D-WHEN-ACTION",
+          "D-WHEN-ENV"
+        ],
+        "schema_version": "1.0",
+        "violated_constraints": [
+          "D-ESC-PROVENANCE-UNKNOWN",
+          "D-ESC-RESOLUTION-UNAVAILABLE",
+          "D-REJECT-COMPROMISED",
+          "D-REJECT-PROHIBITED",
+          "D-REJECT-SEVERE",
+          "D-REQ-TEMPORAL"
+        ]
+      },
+      "release_status": "eligible"
+    },
+    {
+      "agreement": true,
+      "benchmark_strata": [
+        "exact",
+        "structural"
+      ],
+      "case_id": "export-positive",
+      "dsl": {
+        "ambiguity_basis": [],
+        "label": "Accept",
+        "reason_class": "authorized",
+        "rule_lineage": [
+          "data_export_v1@1.0",
+          "EXPORT-AUTH-001",
+          "authorized"
+        ],
+        "satisfied_constraints": [
+          "X-REQ-CONSEQUENCE",
+          "X-REQ-DELEGATION",
+          "X-REQ-EVIDENCE",
+          "X-REQ-PERMISSION",
+          "X-REQ-TEMPORAL",
+          "X-WHEN-ACTION",
+          "X-WHEN-ENV"
+        ],
+        "schema_version": "1.0",
+        "violated_constraints": [
+          "X-ESC-PURPOSE-UNKNOWN",
+          "X-ESC-RESOLUTION-UNAVAILABLE",
+          "X-REJECT-PROHIBITED",
+          "X-REJECT-SENSITIVE",
+          "X-REJECT-SEVERE"
+        ]
+      },
+      "expected": "Accept",
+      "expected_correct": true,
+      "fixture_class": "positive",
+      "policy_id": "data_export_v1",
+      "reference": {
+        "ambiguity_basis": [],
+        "label": "Accept",
+        "reason_class": "authorized",
+        "rule_lineage": [
+          "data_export_v1@1.0",
+          "EXPORT-AUTH-001",
+          "authorized"
+        ],
+        "satisfied_constraints": [
+          "X-REQ-CONSEQUENCE",
+          "X-REQ-DELEGATION",
+          "X-REQ-EVIDENCE",
+          "X-REQ-PERMISSION",
+          "X-REQ-TEMPORAL",
+          "X-WHEN-ACTION",
+          "X-WHEN-ENV"
+        ],
+        "schema_version": "1.0",
+        "violated_constraints": [
+          "X-ESC-PURPOSE-UNKNOWN",
+          "X-ESC-RESOLUTION-UNAVAILABLE",
+          "X-REJECT-PROHIBITED",
+          "X-REJECT-SENSITIVE",
+          "X-REJECT-SEVERE"
+        ]
+      },
+      "release_status": "eligible"
+    },
+    {
+      "agreement": true,
+      "benchmark_strata": [
+        "domain",
+        "reversal"
+      ],
+      "case_id": "export-negative",
+      "dsl": {
+        "ambiguity_basis": [],
+        "label": "Reject",
+        "reason_class": "certified_prohibition",
+        "rule_lineage": [
+          "data_export_v1@1.0",
+          "EXPORT-AUTH-001",
+          "certified_prohibition"
+        ],
+        "satisfied_constraints": [
+          "X-REJECT-SENSITIVE",
+          "X-REQ-CONSEQUENCE",
+          "X-REQ-DELEGATION",
+          "X-REQ-EVIDENCE",
+          "X-REQ-PERMISSION",
+          "X-REQ-TEMPORAL",
+          "X-WHEN-ACTION",
+          "X-WHEN-ENV"
+        ],
+        "schema_version": "1.0",
+        "violated_constraints": [
+          "X-ESC-PURPOSE-UNKNOWN",
+          "X-ESC-RESOLUTION-UNAVAILABLE",
+          "X-REJECT-PROHIBITED",
+          "X-REJECT-SEVERE"
+        ]
+      },
+      "expected": "Reject",
+      "expected_correct": true,
+      "fixture_class": "negative",
+      "policy_id": "data_export_v1",
+      "reference": {
+        "ambiguity_basis": [],
+        "label": "Reject",
+        "reason_class": "certified_prohibition",
+        "rule_lineage": [
+          "data_export_v1@1.0",
+          "EXPORT-AUTH-001",
+          "certified_prohibition"
+        ],
+        "satisfied_constraints": [
+          "X-REJECT-SENSITIVE",
+          "X-REQ-CONSEQUENCE",
+          "X-REQ-DELEGATION",
+          "X-REQ-EVIDENCE",
+          "X-REQ-PERMISSION",
+          "X-REQ-TEMPORAL",
+          "X-WHEN-ACTION",
+          "X-WHEN-ENV"
+        ],
+        "schema_version": "1.0",
+        "violated_constraints": [
+          "X-ESC-PURPOSE-UNKNOWN",
+          "X-ESC-RESOLUTION-UNAVAILABLE",
+          "X-REJECT-PROHIBITED",
+          "X-REJECT-SEVERE"
+        ]
+      },
+      "release_status": "eligible"
+    },
+    {
+      "agreement": true,
+      "benchmark_strata": [
+        "near",
+        "scope"
+      ],
+      "case_id": "export-boundary",
+      "dsl": {
+        "ambiguity_basis": [],
+        "label": "Accept",
+        "reason_class": "authorized",
+        "rule_lineage": [
+          "data_export_v1@1.0",
+          "EXPORT-AUTH-001",
+          "authorized"
+        ],
+        "satisfied_constraints": [
+          "X-REQ-CONSEQUENCE",
+          "X-REQ-DELEGATION",
+          "X-REQ-EVIDENCE",
+          "X-REQ-PERMISSION",
+          "X-REQ-TEMPORAL",
+          "X-WHEN-ACTION",
+          "X-WHEN-ENV"
+        ],
+        "schema_version": "1.0",
+        "violated_constraints": [
+          "X-ESC-PURPOSE-UNKNOWN",
+          "X-ESC-RESOLUTION-UNAVAILABLE",
+          "X-REJECT-PROHIBITED",
+          "X-REJECT-SENSITIVE",
+          "X-REJECT-SEVERE"
+        ]
+      },
+      "expected": "Accept",
+      "expected_correct": true,
+      "fixture_class": "boundary",
+      "policy_id": "data_export_v1",
+      "reference": {
+        "ambiguity_basis": [],
+        "label": "Accept",
+        "reason_class": "authorized",
+        "rule_lineage": [
+          "data_export_v1@1.0",
+          "EXPORT-AUTH-001",
+          "authorized"
+        ],
+        "satisfied_constraints": [
+          "X-REQ-CONSEQUENCE",
+          "X-REQ-DELEGATION",
+          "X-REQ-EVIDENCE",
+          "X-REQ-PERMISSION",
+          "X-REQ-TEMPORAL",
+          "X-WHEN-ACTION",
+          "X-WHEN-ENV"
+        ],
+        "schema_version": "1.0",
+        "violated_constraints": [
+          "X-ESC-PURPOSE-UNKNOWN",
+          "X-ESC-RESOLUTION-UNAVAILABLE",
+          "X-REJECT-PROHIBITED",
+          "X-REJECT-SENSITIVE",
+          "X-REJECT-SEVERE"
+        ]
+      },
+      "release_status": "eligible"
+    },
+    {
+      "agreement": true,
+      "benchmark_strata": [
+        "evidence",
+        "structural"
+      ],
+      "case_id": "export-contradictory",
+      "dsl": {
+        "ambiguity_basis": [],
+        "label": "Reject",
+        "reason_class": "certified_prohibition",
+        "rule_lineage": [
+          "data_export_v1@1.0",
+          "EXPORT-AUTH-001",
+          "certified_prohibition"
+        ],
+        "satisfied_constraints": [
+          "X-ESC-PURPOSE-UNKNOWN",
+          "X-ESC-RESOLUTION-UNAVAILABLE",
+          "X-REJECT-PROHIBITED",
+          "X-REQ-CONSEQUENCE",
+          "X-REQ-DELEGATION",
+          "X-REQ-EVIDENCE",
+          "X-REQ-PERMISSION",
+          "X-REQ-TEMPORAL",
+          "X-WHEN-ACTION",
+          "X-WHEN-ENV"
+        ],
+        "schema_version": "1.0",
+        "violated_constraints": [
+          "X-REJECT-SENSITIVE",
+          "X-REJECT-SEVERE"
+        ]
+      },
+      "expected": "Reject",
+      "expected_correct": true,
+      "fixture_class": "contradictory",
+      "policy_id": "data_export_v1",
+      "reference": {
+        "ambiguity_basis": [],
+        "label": "Reject",
+        "reason_class": "certified_prohibition",
+        "rule_lineage": [
+          "data_export_v1@1.0",
+          "EXPORT-AUTH-001",
+          "certified_prohibition"
+        ],
+        "satisfied_constraints": [
+          "X-ESC-PURPOSE-UNKNOWN",
+          "X-ESC-RESOLUTION-UNAVAILABLE",
+          "X-REJECT-PROHIBITED",
+          "X-REQ-CONSEQUENCE",
+          "X-REQ-DELEGATION",
+          "X-REQ-EVIDENCE",
+          "X-REQ-PERMISSION",
+          "X-REQ-TEMPORAL",
+          "X-WHEN-ACTION",
+          "X-WHEN-ENV"
+        ],
+        "schema_version": "1.0",
+        "violated_constraints": [
+          "X-REJECT-SENSITIVE",
+          "X-REJECT-SEVERE"
+        ]
+      },
+      "release_status": "eligible"
+    },
+    {
+      "agreement": true,
+      "benchmark_strata": [
+        "structural",
+        "domain"
+      ],
+      "case_id": "export-temporal",
+      "dsl": {
+        "ambiguity_basis": [],
+        "label": "Reject",
+        "reason_class": "mandatory_constraint_failed",
+        "rule_lineage": [
+          "data_export_v1@1.0",
+          "EXPORT-AUTH-001",
+          "mandatory_constraint_failed"
+        ],
+        "satisfied_constraints": [
+          "X-REQ-CONSEQUENCE",
+          "X-REQ-DELEGATION",
+          "X-REQ-EVIDENCE",
+          "X-REQ-PERMISSION",
+          "X-WHEN-ACTION",
+          "X-WHEN-ENV"
+        ],
+        "schema_version": "1.0",
+        "violated_constraints": [
+          "X-ESC-PURPOSE-UNKNOWN",
+          "X-ESC-RESOLUTION-UNAVAILABLE",
+          "X-REJECT-PROHIBITED",
+          "X-REJECT-SENSITIVE",
+          "X-REJECT-SEVERE",
+          "X-REQ-TEMPORAL"
+        ]
+      },
+      "expected": "Reject",
+      "expected_correct": true,
+      "fixture_class": "temporal",
+      "policy_id": "data_export_v1",
+      "reference": {
+        "ambiguity_basis": [],
+        "label": "Reject",
+        "reason_class": "mandatory_constraint_failed",
+        "rule_lineage": [
+          "data_export_v1@1.0",
+          "EXPORT-AUTH-001",
+          "mandatory_constraint_failed"
+        ],
+        "satisfied_constraints": [
+          "X-REQ-CONSEQUENCE",
+          "X-REQ-DELEGATION",
+          "X-REQ-EVIDENCE",
+          "X-REQ-PERMISSION",
+          "X-WHEN-ACTION",
+          "X-WHEN-ENV"
+        ],
+        "schema_version": "1.0",
+        "violated_constraints": [
+          "X-ESC-PURPOSE-UNKNOWN",
+          "X-ESC-RESOLUTION-UNAVAILABLE",
+          "X-REJECT-PROHIBITED",
+          "X-REJECT-SENSITIVE",
+          "X-REJECT-SEVERE",
+          "X-REQ-TEMPORAL"
+        ]
+      },
+      "release_status": "eligible"
+    }
+  ],
+  "deterministic_oracle_errors": [],
+  "dual_engine_agreement_rate": 1.0,
+  "dual_engine_agreements": 10,
+  "quarantines": [],
+  "released_cases": 10,
+  "schema_version": "1.0",
+  "status": "pass"
+}

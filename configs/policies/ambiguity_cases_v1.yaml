@@ -1,0 +1,27 @@
+schema_version: "1.0"
+registry_id: phase2_ambiguity_cases_v1
+cases:
+  - case_id: ambiguity-resolvable-unique
+    visible_projection: {action: deploy_patch, evidence_view: complete}
+    compatible_authorizations: [Accept, Accept, Accept]
+    permitted_channels: []
+    available_channels: []
+    unavailable_channels: []
+    exhausted_channels: []
+    expected_conclusion: resolvable_unique
+  - case_id: ambiguity-irreducible
+    visible_projection: {action: deploy_patch, evidence_view: provenance_hidden}
+    compatible_authorizations: [Accept, Reject, Escalate]
+    permitted_channels: [provenance_query, authority_query]
+    available_channels: []
+    unavailable_channels: [provenance_query]
+    exhausted_channels: [authority_query]
+    expected_conclusion: irreducibly_ambiguous_escalate
+  - case_id: ambiguity-resolution-available
+    visible_projection: {action: export_records, evidence_view: authority_hidden}
+    compatible_authorizations: [Accept, Reject]
+    permitted_channels: [authority_query]
+    available_channels: [authority_query]
+    unavailable_channels: []
+    exhausted_channels: []
+    expected_conclusion: ambiguity_resolution_available

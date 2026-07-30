@@ -1,0 +1,7 @@
+{
+  "dsl_source_sha256": "011b7d9934819c4899c17a6f9623f52c8afd029a2c5330e77be6fe80a36df8ca",
+  "forbidden_imports": [],
+  "reference_source_sha256": "7550f9ca58b80377c151959772a775cd88a465c4cedf0b8b0864f3e98686701c",
+  "serialized_input_only": true,
+  "status": "pass"
+}

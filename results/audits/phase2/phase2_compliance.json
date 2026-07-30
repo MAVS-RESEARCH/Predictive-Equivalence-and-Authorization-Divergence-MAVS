@@ -1,0 +1,87 @@
+{
+  "boundary": {
+    "banks_created": 0,
+    "benchmark_outcomes_created": 0,
+    "checkpoints_created": 0,
+    "models_trained": 0,
+    "phase3_generation_executed": false,
+    "status": "pass"
+  },
+  "completion_gates": {
+    "claim_certificates_verified": 3,
+    "deterministic_oracle_errors": 0,
+    "dual_engine_agreement": 1.0,
+    "fixture_classes_per_family": "complete",
+    "irrelevant_intervention_invariance": "pass",
+    "oracle_rule_accuracy": 1.0,
+    "permission_revocation_monotonicity": "pass",
+    "prohibition_monotonicity": "pass",
+    "quarantined_disagreements": 0,
+    "timeout_unknown_proofs_accepted": 0
+  },
+  "compliance_gaps": [],
+  "console_events": 15,
+  "files": {
+    "required_files": 19,
+    "status": "pass"
+  },
+  "independence": {
+    "dsl_source_sha256": "011b7d9934819c4899c17a6f9623f52c8afd029a2c5330e77be6fe80a36df8ca",
+    "forbidden_imports": [],
+    "reference_source_sha256": "7550f9ca58b80377c151959772a775cd88a465c4cedf0b8b0864f3e98686701c",
+    "serialized_input_only": true,
+    "status": "pass"
+  },
+  "ledger": {
+    "entries": [
+      "PATH-0024",
+      "PATH-0025",
+      "PATH-0026",
+      "PATH-0027",
+      "PATH-0028",
+      "PATH-0029"
+    ],
+    "evidence_pointers": [
+      "ambiguity_certificates.json",
+      "console_log_inventory.json",
+      "independence_report.json",
+      "label_agreement.json",
+      "oracle_rule_report.json",
+      "phase2_compliance.json",
+      "phase2_tests.json"
+    ],
+    "publication_state": "pending",
+    "status": "pass"
+  },
+  "mechanisms": {
+    "generation_status": "deferred_to_phase_3",
+    "mechanisms": 7,
+    "status": "pass",
+    "terminal_labels_present": false
+  },
+  "phase": 2,
+  "schema_version": "1.0",
+  "status": "pass",
+  "tests": {
+    "errors": 0,
+    "failures": 0,
+    "status": "pass",
+    "stress_gates": {
+      "dual_engine_evaluations": 100000,
+      "exact_certificate_worlds": 4096,
+      "randomized_nuisance_agreement_cases": 2000,
+      "released_fixture_cases": 10,
+      "rule_families": 2
+    },
+    "tests_run": 74
+  },
+  "workplan_scope": {
+    "compatible_world_ambiguity": "pass",
+    "declarative_policy_dsl": "pass",
+    "independent_reference_evaluator": "pass",
+    "label_agreement_audit": "pass",
+    "rule_fixtures": "pass",
+    "strict_parser": "pass",
+    "total_deterministic_evaluator": "pass"
+  }
+}

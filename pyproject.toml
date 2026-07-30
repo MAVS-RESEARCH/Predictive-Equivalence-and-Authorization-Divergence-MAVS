@@ -20,6 +20,8 @@ pead-validate-config = "pead.config.validator:main"
 pead-audit-phase0 = "pead.phase0.audit:main"
 pead-audit-phase1 = "pead.phase1.audit:main"
 pead-run-phase1-tests = "pead.phase1.test_runner:main"
+pead-audit-labels = "pead.phase2.audit:main"
+pead-run-phase2-tests = "pead.phase2.test_runner:main"
 
 [tool.setuptools]
 package-dir = {"" = "src"}
