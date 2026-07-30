@@ -42,7 +42,7 @@
       "phase5_tests.json",
       "summary.json"
     ],
-    "publication_state": "pending",
+    "publication_state": "complete",
     "status": "pass"
   },
   "phase": 5,

@@ -32,7 +32,7 @@ Rules:
 | 2 | Independent authorization truth system | Complete | 74/74 tests; implementation commit `629b18a7341cda0c44fa88f33c97c5869c3ae14e` pushed and remotely verified |
 | 3 | Causal world registry, exact twins, and near twins | Complete | 89/89 tests passed; implementation commit `81bd52c825fd41c12dc5fb921c5c656fbf9d20bd` pushed and remotely verified |
 | 4 | Reversals, scope banks, and evidence sufficiency | Complete | None |
-| 5 | Six open adapters and held-out interfaces | Local gates passed; publication pending | None |
+| 5 | Six open adapters and held-out interfaces | Complete | None |
 | 6 | Projection layer, feature firewall, and parity | Not started | None |
 | 7 | Baseline suite and common training harness | Not started | None |
 | 8 | Frozen MAVS-GC, DS-CF, and ablations | Not started | None |
@@ -1684,7 +1684,7 @@ Copy this block for every meaningful action:
 - **Console evidence:** 17/17 Phase 5 call sites have adjacent exact-ID comments. Final line-level inventory is in `PATH-0055` and `results/audits/phase5/console_log_inventory.json`.
 - **Retained audit evidence SHA-256:**
   - `results/audits/phase5/console_log_inventory.json`: `6539D231096A9AA7825B5F28345A38F2EA06BC0C0AE9DECAC9F7AB4DBB2235B8`
-  - `results/audits/phase5/phase5_compliance.json`: `40D29D28DF1E271BC24F405FBAAD6B664BC74BDDC3C08B00820837CAC7E002BD`
+  - `results/audits/phase5/phase5_compliance.json`: `A0C5F987208D96616D663CBB44BC47E0AD92202CDAA537B01D6EC3E92173637E`
   - `results/audits/phase5/phase5_tests.json`: `5FE62CE1810BF03B5A029CB7CF3F9E47AD32794FB1F50263E1E83532CEB1EC54`
   - `results/audits/phase5_domain_review_v1/domain_validity/summary.json`: `2E7D0B54CA2D877A12AFDA4EC2014303C12A0DB6FE6D816DD9EB043D4A5A8F38`
   - `results/audits/phase5_domain_review_v1/domain_validity/heldout_isolation.json`: `161D942E038A2C512309F011EA5A890E6EB318BECA34AA19CFB9B9E89F74DEBF`
@@ -1694,3 +1694,36 @@ Copy this block for every meaningful action:
 - **Scientific result:** Phase 5 establishes domain-interface breadth and validity controls. It does not measure model performance, demonstrate unseen-domain generalization, or enlarge any bounded proxy claim.
 - **Deviation:** None.
 - **Publication state:** Pending intentional staging, implementation commit, push, and exact remote-SHA verification.
+
+### PATH-0057 - Phase 5 GitHub publication and exact remote verification
+
+- **Timestamp:** 2026-07-31.
+- **Phase:** 5.
+- **Status:** Pass; implementation published and remotely verified.
+- **Change ID:** `P5-PUBLISH-001`.
+- **Branch:** `agent/pead-workplan`.
+- **Implementation commit:** `be6d226b46f035f2ee6605583517da1f99ad702b` - `phase-5: implement open domains and heldout contracts`.
+- **Implementation push:** `git push origin agent/pead-workplan` passed.
+- **Exact remote verification:** Correctly parsed `git ls-remote origin refs/heads/agent/pead-workplan` returned `be6d226b46f035f2ee6605583517da1f99ad702b`, exactly matching local `HEAD`.
+- **Pull request:** Draft PR #1 remains open at `https://github.com/MAVS-RESEARCH/Predictive-Equivalence-and-Authorization-Divergence-MAVS/pull/1`; GitHub reported head branch `agent/pead-workplan` and head SHA `be6d226b46f035f2ee6605583517da1f99ad702b`.
+- **Published scope:** 41 intended files comprising seven domain configurations, eight domain modules plus initialization, Phase 5 review/audit/test orchestration, three scripts, integration/stress tests, six domain reviews, held-out/summary/test/compliance evidence, the signed domain registry, README/project entry points, and this append-only ledger. `WorkPlan.md`, prior-phase code, and all custody-only content are unchanged.
+- **Retained publication incident:** The first post-push PowerShell expression applied `-split` directly within the command-substitution assignment and incorrectly extracted the single character `b`; it therefore raised a local verification exception after the push had already succeeded. No repository or remote state changed. The verification was immediately rerun by first capturing the complete `ls-remote` line and then splitting it; the resulting full SHA exactly matched local `HEAD` and GitHub's PR head SHA.
+- **Publication controls:** Staged diff check passed; credential-pattern scan found 0 matches; 112/112 tests passed; complete domain review and extreme compliance audit passed; worktree was clean immediately after the implementation commit.
+- **Phase boundary:** D7/D8 custody implementations remain absent; Phase 6 has not started; no model, checkpoint, calibration artifact, released claim-bank row, or performance claim was created.
+- **Scientific effect:** Publication changes no domain definition, case, mechanism balance, surface invariant, held-out contract, or validity result.
+- **Deviation:** None.
+- **Next action:** Rerun the auditor against the `Complete` ledger state, retain its post-publication evidence, commit/push the ledger close, verify the final remote SHA, and stop before Phase 6.
+
+### PATH-0058 - Phase 5 post-publication audit and ledger-close evidence
+
+- **Timestamp:** 2026-07-31.
+- **Phase:** 5.
+- **Status:** Pass; ledger close ready for publication.
+- **Change ID:** `P5-PUBLISH-CLOSE-001`.
+- **Post-publication audit:** The complete domain-validity and compliance auditor was rerun after the Phase 5 table changed to `Complete`. It regenerated all six domain reviews and the held-out isolation report, verified the signed registry, read the 112-test evidence, re-inventoried all 17 console sites, rechecked later-phase exclusions, and passed.
+- **Final compliance state:** `results/audits/phase5/phase5_compliance.json` reports `status=pass`, `ledger.publication_state=complete`, and zero compliance gaps.
+- **Final compliance SHA-256:** `A0C5F987208D96616D663CBB44BC47E0AD92202CDAA537B01D6EC3E92173637E`.
+- **Implementation identity:** `be6d226b46f035f2ee6605583517da1f99ad702b`, already present and verified on the remote branch.
+- **Scientific effect:** None. The rerun confirms reproducibility and changes only the recorded ledger publication state.
+- **Deviation:** None.
+- **Next action:** Commit and push this post-publication evidence and ledger close, verify the final remote branch SHA, and stop before Phase 6.
