@@ -197,7 +197,41 @@ Every method receives one of three access profiles:
 - **Raw-G:** the same `PredictiveState` plus the same registered raw `GovernanceState`; tests architecture under equal information.
 - **Oracle-G:** Raw-G plus latent governance truth; sanity/upper bound only and never a headline baseline.
 
-Oracle-G contains both the deterministic rule evaluator and one high-capacity learned sanity comparator. The learned Oracle-G comparator uses the frozen MLP architecture in Section 6, receives the canonical Oracle-G rendering, and is trained only to detect malformed representations or interfaces. Its result is non-headline; failure blocks the representation-sanity gate but can never redefine or vote on ground truth.
+Oracle-G contains both the deterministic rule evaluator and one high-capacity learned sanity comparator. The deterministic hard gate is `OracleRuleAccuracy = 1.0` on every valid released exact, near, reversal, scope, evidence, structural, and domain case. Any deterministic Oracle error is a generator, task, rule, or representation defect: the case is blocked and the affected bank is invalid until repaired and regenerated. Lossless Oracle serialization/reconstruction must also equal `1.0`; failure blocks the representation gate. The learned Oracle-G MLP is non-headline and diagnostic only: when the deterministic Oracle and lossless reconstruction pass, learned-model failure is reported as an optimization/capacity/generalization limitation and never blocks benchmark validity or changes ground truth.
+
+### 4.1 Frozen predictive and governance state dictionaries
+
+`configs/access/predictive_state_v1.yaml` and `configs/access/governance_state_v1.yaml` are frozen in Phase 0. Every dictionary entry contains: stable field ID, semantic definition, data type/shape, units/range, canonicalization, visibility profile, hashing rule, typed near-distance rule, exact-twin equality requirement, missing-value rule, permitted transformations, and prohibited derived information.
+
+The complete `PredictiveState` field set is:
+
+| Stable ID | Field | Exact-twin rule | Prohibited derived information |
+|---|---|---|---|
+| `P-SHARED-v1` | Shared representation/features | Byte-equal after frozen canonicalization | Provenance, policy, authority, temporal, consequence, evidence-availability, domain/mechanism/split IDs |
+| `P-SPECIALISTS-v1` | Ordered specialist outputs/scores | Field- and shape-equal | Specialist-source governance metadata |
+| `P-SUPPORT-v1` | Signed support vector | Elementwise equal | Governance annotations |
+| `P-LABEL-v1` | Predicted task label | Equal | Authorization label |
+| `P-CONFIDENCE-v1` | Predictive confidence | Equal after registered quantization | Policy/authority-conditioned confidence |
+| `P-UNCERTAINTY-v1` | Predictive uncertainty | Equal after registered quantization | Evidence-availability or consequence encoding |
+| `P-AGREEMENT-v1` | Agreement and disagreement summaries | Equal | Provenance independence or shared-premise truth |
+| `P-CALIBRATION-v1` | Calibration estimate/nonconformity summary | Equal | Holdout label prevalence or governance class |
+| `P-ACTION-v1` | Canonical candidate action | Equal | Permission, policy, reversibility, consequence, or execution-context annotations |
+
+The complete `GovernanceState` field families are:
+
+| Stable ID | Field family | Required contents |
+|---|---|---|
+| `G-PROVENANCE-v1` | Provenance | Source identities/types, independence evidence, compromise observations, trust metadata permitted by profile |
+| `G-AUTHORITY-v1` | Permissions and authority | Actor, role, delegation, scopes, limits, revocation state |
+| `G-POLICY-v1` | Policy | Active rules, versions, jurisdictions/proxy contexts, exceptions, conflicts |
+| `G-TEMPORAL-v1` | Temporal state | Validity windows, history available to the method, phase/change indicators permitted by profile |
+| `G-REVERSIBILITY-v1` | Reversibility | Rollback availability, irreversibility, recovery constraints |
+| `G-CONSEQUENCE-v1` | Consequence class | Impact class, budget/blast radius, registered loss tier |
+| `G-EVIDENCE-v1` | Evidence availability | Observed/missing/unknown facts, permitted queries/views, resolution-channel availability |
+| `G-DEPENDENCY-v1` | Dependency structure | Canonical provenance/dependency graph and typed relations |
+| `G-CFVIEW-v1` | Permitted counterfactual views | Registered alternate views and access permissions; no unregistered view |
+
+The dictionaries are immutable after Phase 0 unless a new study version restarts all dependent generation, model, and holdout work. Exact pairs require equality on every `P-*` field. Static and runtime audits reject any `G-*`, Oracle, label, lineage, or split information encoded directly or indirectly in `PredictiveState`.
 
 ## 5. Training, evaluation, and anti-overfitting doctrine
 
@@ -236,24 +270,24 @@ If a fixed MAVS threshold or coefficient is calibrated during development, that 
 
 #### 5.1.1 Frozen trainable-method specifications
 
-All library versions are exact-pinned in `requirements.lock`; container, accelerator, and model-weight hashes are recorded in the freeze manifest. All neural methods use three training seeds `{101, 211, 307}`. Model selection uses mean protected calibration utility, then worst-seed utility, then lower parameter count, then lower resource cost. Early stopping monitors the registered development objective, never public-validation or holdout metrics. Unless a row states otherwise, the maximum training volume is the complete registered development partition for that access profile, the calibration volume is the complete registered calibration partition, and no resampling may cross pair/sequence/family groups.
+All library versions are exact-pinned in `requirements.lock`; container, accelerator, and model-weight hashes are recorded in the freeze manifest. All neural methods use three training seeds `{101, 211, 307}`. Model and checkpoint selection uses mean protected `development_selection` utility, then worst-seed `development_selection` utility, then lower parameter count, then lower resource cost. Early stopping monitors `development_selection` only, never either calibration partition, public validation, or holdouts. Preprocessing estimators and gradient fitting use `development_fit` only. Unless a row states otherwise, the maximum fitting volume is the complete registered `development_fit` partition for that access profile; calibration estimators use `calibration_fit` once; terminal thresholds and the lexicographic operating point use `calibration_policy` once. No resampling may cross atomic groups.
 
 | Method | Frozen architecture/implementation | Input rendering and preprocessing | Training data | Optimizer/search and maximum trials | Training schedule and seeds | Calibration/selection | Compute ceiling | Mandatory blind evaluation |
 |---|---|---|---|---|---|---|---|---|
-| Logistic regression | `sklearn.linear_model.LogisticRegression`, multinomial, `saga`, `max_iter=5000` | Canonical tabular; train-only median imputation, missing indicators, train-only standardization, one-hot categories with unknown bucket | Full applicable development partition; group-atomic | penalty `{l1,l2}` x `C {1e-4,1e-3,1e-2,1e-1,1,10,100}` = 14 trials | Three seeds; convergence failure is retained | Multinomial temperature scaling; lexicographic operating point | 1 CPU-hour/trial, 8 GB RAM | All applicable exact, near, reversal, scope, evidence, structural, and domain banks |
-| Decision tree | `sklearn.tree.DecisionTreeClassifier`, cost-complexity pruning | Same canonical tabular pipeline | Full applicable development partition; grouped CV | `max_depth {4,8,16,None}` x `min_samples_leaf {1,10,50}` = 12 trials; pruning alpha chosen inside development by grouped five-fold CV | Three seeds | Isotonic calibration only if every class has >=1,000 calibration opportunities; otherwise Platt | 1 CPU-hour/trial, 8 GB | Same independent battery; report rule depth and unstable splits |
-| GBDT | `sklearn.ensemble.HistGradientBoostingClassifier`, three one-vs-rest heads with normalized scores | Native numeric/categorical canonical tabular rendering; missing values preserved | Full applicable development partition; group-atomic | `learning_rate {0.03,0.1}`, `max_iter {200,500}`, `max_leaf_nodes {15,31}`, `l2_regularization {0,1}` = 16 trials | Early stop after 20 development iterations without >=0.001 protected-objective gain; three seeds | Temperature scaling and registered terminal-policy sweep | 4 CPU-hours/trial, 16 GB | Full battery plus label-prior shift and nonlinear leakage challenge |
-| MLP | Tabular network `d_in -> 512 -> 256 -> 128 -> 3`; LayerNorm, GELU, dropout 0.10 after each hidden layer | Canonical tabular vector; train-only transformations identical to logistic regression | Full applicable development partition; group-atomic | AdamW; learning rate `{1e-4,3e-4,1e-3}` x weight decay `{1e-5,1e-4}` = 6 trials | Batch 256; maximum 100 epochs; patience 10; gradient norm 1.0; seeds `{101,211,307}` | Temperature scaling; checkpoint tie-break above | 8 GPU-hours/trial on <=24 GB GPU, or declared CPU equivalent | Full battery, three-seed dispersion, nuisance and calibration shift |
-| Sequence encoder | Typed-record Transformer: 4 encoder layers, `d_model=256`, 8 heads, FFN 1024, dropout 0.10, learned `[CLS]`, three-class head | Deterministic field-name/value token stream; 32,768-token unigram vocabulary trained on development text only; NFC normalization; numeric bucket tokens; `[UNK]`; maximum 512 tokens; deterministic head+tail truncation manifest | Full applicable development partition; vocabulary also development-only | AdamW; learning rate `{1e-4,3e-4}`, weight decay `{0.01,0.1}`, warmup `{0.05,0.10}` = 8 trials | Batch 128; maximum 60 epochs; patience 8; gradient norm 1.0; three seeds | Temperature scaling; lower truncation rate breaks ties before resource tie-break | 16 GPU-hours/trial on <=24 GB GPU | Unseen templates/grammar, lexical leakage, truncation parity, two-domain transfer |
-| Provenance/dependency GNN | 4-layer relational GCN, hidden 256, relation embedding 64, residual LayerNorm/ReLU/dropout 0.10, attention global pooling, 2-layer context MLP, three-class head | Canonical graph; stable node/edge ordering; train-only scalar normalization; unknown node/edge types mapped to registered unknown types; no graph truncation unless declared | Full applicable development graph partition; group-atomic | AdamW; learning rate `{1e-4,3e-4}`, weight decay `{1e-5,1e-4}`, hidden `{128,256}` = 8 trials | Batch 64 graphs; maximum 80 epochs; patience 10; three seeds | Temperature scaling; exact graph-retention audit required | 24 GPU-hours/trial on <=24 GB GPU | Unseen topology/depth/source-sharing, graph canaries, domain transfer |
-| Bayesian network/factor graph | `pgmpy` hill-climb structure search with BIC score, maximum indegree 4; Bayesian parameter estimator | Canonical tabular discretized by train-only quantiles; missing is an explicit state | Full applicable development partition; grouped bootstrap | Quantile bins `{8,16}` x BDeu equivalent sample size `{1,5,10}` = 6 trials; deterministic hill-climb order | Three bootstrap/group seeds; maximum 100,000 structure operations | Posterior predictive calibration; choose lowest-edge model on tie | 8 CPU-hours/trial, 32 GB | Held-out policy forms, dependency structures, and ambiguity; representation sanity |
-| Reject-option classifier | Frozen MLP above with terminal loss plus coverage penalty; three-class head remains explicit | Same tabular input as MLP | Full applicable development partition; group-atomic | MLP grid x coverage penalty `{0.1,1,10}` = 18 trials maximum | MLP schedule; three seeds | Penalty/threshold selected only on calibration under same protected objective | 8 GPU-hours/trial, 24 GB | Complete error-coverage frontier; forced-certainty and escalate-all stress |
-| Static conformal | Base probabilistic logistic/GBDT/MLP selected without conformal results; split conformal score `s(x,y)=1-p_y(x)` | Base-method rendering; group-atomic calibration examples | Frozen base development checkpoint plus complete untouched calibration partition | `alpha {0.01,0.025,0.05,0.10,0.20}`; finite-sample quantile `ceil((n+1)(1-alpha))/n`; no additional search | No retraining beyond base model | Singleton prediction set gives terminal class; non-singleton/empty set gives `Escalate`; operating point selected on calibration | Base-method ceiling plus 1 CPU-hour | Coverage under shift, exact twins, near ladder, structural/domain holdout; guarantees bounded to assumptions |
-| Adaptive conformal | Same nonconformity score; prequential window `{256,1024}` with registered delayed-label availability only | Sequence-ordered calibrated probabilities; no hidden/current label access | Frozen base checkpoint, calibration partition, then permitted past labels only | `alpha {0.025,0.05,0.10}` x window `{256,1024}` = 6 settings | Frozen base checkpoint; no gradient updates | Initial calibration split then causal window updates from permitted past labels only | Base ceiling plus 2 CPU-hours | Reversal sequences, drift, delayed labels, and no-label ablation |
-| Learned scalar risk | Raw-G encoder matched to MLP capacity through a single scalar bottleneck, then two frozen thresholds | Canonical Raw-G tabular; one scalar is the only terminal input | Full Raw-G development partition; group-atomic | MLP optimizer grid = 6 trials; scalar monotonic penalty `{0,0.1}` = 12 trials | MLP schedule; three seeds | Two thresholds selected lexicographically on calibration | 8 GPU-hours/trial, 24 GB | Central reduction test on composition, scope, reversal, ambiguity, and domain transfer |
-| Stacked ensemble | Base predictions from logistic, GBDT, MLP, sequence, and GNN when applicable; multinomial logistic meta-learner | Out-of-fold base scores only; five folds grouped by pair/sequence/latent/template/provenance lineage | Development only; out-of-fold base scores; untouched calibration for final stack | Meta `C {0.01,0.1,1,10}` = 4 trials; no blind/public predictions used for fitting | Three grouped fold assignments derived from registered seeds | Refit base models on full development only after meta selection; calibrate final stack on untouched calibration | Sum of base ceilings + 4 CPU-hours | Full independent battery; compare to best constituent and report stacking failure |
-| Judge/verifier | Local `Qwen/Qwen2.5-7B-Instruct`, version `2.5`, exact weight/tokenizer SHA-256 recorded before any training run; no provider substitution | Canonical sequence rendering with frozen system/user templates; output grammar `{"decision","scores","reason"}` | No fine-tuning; development smoke cases for parser only; calibration only for any threshold | No fine-tuning; temperature `0`, top-p `1`, top-k disabled, one sample; maximum 2,048 input and 256 output tokens; one call/case; one retry only for transport failure | Deterministic greedy decoding; retry reuses identical request ID | No prompt edits after development smoke; thresholds, if any, use calibration only | 1 call/case, <=2,304 tokens/case, <=2 GPU-seconds/case target; hard run ceiling declared in method card | All sequence-compatible blind banks; parser failure, prompt leakage, and reproducibility tolerance audit |
-| Learned Oracle-G sanity model | Frozen MLP architecture above, with Oracle-G inputs and separate non-headline config | Canonical Oracle-G tabular rendering; same preprocessing rules | Full Oracle-G development partition; non-headline | MLP grid = 6 trials; three seeds | Same MLP schedule | Temperature scaling; cannot participate in H1/H2 ranking | 8 GPU-hours/trial, 24 GB | Structural/domain sanity subset; failure blocks representation validity, never changes labels |
+| Logistic regression | `sklearn.linear_model.LogisticRegression`, multinomial, `saga`, `max_iter=5000` | Canonical tabular; fit-only median imputation, missing indicators, fit-only standardization, one-hot categories with unknown bucket | Full applicable `development_fit`; group-atomic | penalty `{l1,l2}` x `C {1e-4,1e-3,1e-2,1e-1,1,10,100}` = 14 trials | Three seeds; convergence failure is retained | Temperature on `calibration_fit`; terminal policy on `calibration_policy` | 1 CPU-hour/trial, 8 GB RAM | All applicable exact, near, reversal, scope, evidence, structural, and domain banks |
+| Decision tree | `sklearn.tree.DecisionTreeClassifier`, cost-complexity pruning | Same canonical tabular pipeline | Full applicable `development_fit`; selection on `development_selection` | `max_depth {4,8,16,None}` x `min_samples_leaf {1,10,50}` = 12 trials; pruning alpha selected on `development_selection` | Three seeds | Isotonic on `calibration_fit` only if every class has >=1,000 opportunities; otherwise Platt; policy on `calibration_policy` | 1 CPU-hour/trial, 8 GB | Same independent battery; report rule depth and unstable splits |
+| GBDT | `sklearn.ensemble.HistGradientBoostingClassifier`, three one-vs-rest heads with normalized scores | Native numeric/categorical canonical tabular rendering; missing values preserved | Full applicable `development_fit`; selection on `development_selection` | `learning_rate {0.03,0.1}`, `max_iter {200,500}`, `max_leaf_nodes {15,31}`, `l2_regularization {0,1}` = 16 trials | Early stop after 20 `development_selection` iterations without >=0.001 protected-objective gain; three seeds | Temperature on `calibration_fit`; terminal policy on `calibration_policy` | 4 CPU-hours/trial, 16 GB | Full battery plus label-prior shift and nonlinear leakage challenge |
+| MLP | Tabular network `d_in -> 512 -> 256 -> 128 -> 3`; LayerNorm, GELU, dropout 0.10 after each hidden layer | Canonical tabular vector; fit-only transformations identical to logistic regression | Full applicable `development_fit`; selection on `development_selection` | AdamW; learning rate `{1e-4,3e-4,1e-3}` x weight decay `{1e-5,1e-4}` = 6 trials | Batch 256; maximum 100 epochs; patience 10 on `development_selection`; gradient norm 1.0; seeds `{101,211,307}` | Temperature on `calibration_fit`; policy on `calibration_policy` | 8 GPU-hours/trial on <=24 GB GPU, or declared CPU equivalent | Full battery, three-seed dispersion, nuisance and calibration shift |
+| Sequence encoder | Typed-record Transformer: 4 encoder layers, `d_model=256`, 8 heads, FFN 1024, dropout 0.10, learned `[CLS]`, three-class head | Deterministic field-name/value token stream; 32,768-token unigram vocabulary trained on `development_fit` text only; NFC normalization; numeric bucket tokens; `[UNK]`; maximum 512 tokens; deterministic head+tail truncation manifest | Full applicable `development_fit`; selection on `development_selection` | AdamW; learning rate `{1e-4,3e-4}`, weight decay `{0.01,0.1}`, warmup `{0.05,0.10}` = 8 trials | Batch 128; maximum 60 epochs; patience 8 on `development_selection`; gradient norm 1.0; three seeds | Temperature on `calibration_fit`; policy on `calibration_policy` | 16 GPU-hours/trial on <=24 GB GPU | Unseen templates/grammar, lexical leakage, truncation parity, two-domain transfer |
+| Provenance/dependency GNN | 4-layer relational GCN, hidden 256, relation embedding 64, residual LayerNorm/ReLU/dropout 0.10, attention global pooling, 2-layer context MLP, three-class head | Canonical graph; stable node/edge ordering; `development_fit` scalar normalization; unknown node/edge types mapped to registered unknown types; no graph truncation unless declared | Full applicable `development_fit` graph partition; selection on `development_selection` | AdamW; learning rate `{1e-4,3e-4}`, weight decay `{1e-5,1e-4}`, hidden `{128,256}` = 8 trials | Batch 64 graphs; maximum 80 epochs; patience 10 on `development_selection`; three seeds | Temperature on `calibration_fit`; policy on `calibration_policy`; exact graph-retention audit required | 24 GPU-hours/trial on <=24 GB GPU | Unseen topology/depth/source-sharing, graph canaries, domain transfer |
+| Bayesian network/factor graph | `pgmpy` hill-climb structure search with BIC score, maximum indegree 4; Bayesian parameter estimator | Canonical tabular discretized by `development_fit` quantiles; missing is an explicit state | Full applicable `development_fit`; selection on `development_selection` | Quantile bins `{8,16}` x BDeu equivalent sample size `{1,5,10}` = 6 trials; deterministic hill-climb order | Three bootstrap/group seeds; maximum 100,000 structure operations | Posterior calibration on `calibration_fit`; terminal policy on `calibration_policy`; lowest-edge tie-break | 8 CPU-hours/trial, 32 GB | Held-out policy forms, dependency structures, and ambiguity; representation sanity |
+| Reject-option classifier | Frozen MLP above with terminal loss plus coverage penalty; three-class head remains explicit | Same tabular input as MLP | Full applicable `development_fit`; selection on `development_selection` | MLP grid x coverage penalty `{0.1,1,10}` = 18 trials maximum | MLP schedule; three seeds | Probability calibration on `calibration_fit`; penalty/threshold on `calibration_policy` | 8 GPU-hours/trial, 24 GB | Complete error-coverage frontier; forced-certainty and escalate-all stress |
+| Static conformal | Base probabilistic logistic/GBDT/MLP selected without conformal results; split conformal score `s(x,y)=1-p_y(x)` | Base-method rendering; group-atomic calibration examples | Frozen base checkpoint selected on `development_selection`; conformal quantiles from `calibration_fit` | `alpha {0.01,0.025,0.05,0.10,0.20}`; finite-sample quantile `ceil((n+1)(1-alpha))/n`; no additional search | No retraining beyond base model | Prediction-set quantiles on `calibration_fit`; terminal alpha/policy on `calibration_policy` | Base-method ceiling plus 1 CPU-hour | Coverage under shift, exact twins, near ladder, structural/domain holdout; guarantees bounded to assumptions |
+| Adaptive conformal | Same nonconformity score; prequential window `{256,1024}` with registered delayed-label availability only | Sequence-ordered calibrated probabilities; no hidden/current label access | Frozen base checkpoint; initial `calibration_fit`; then permitted past labels only | `alpha {0.025,0.05,0.10}` x window `{256,1024}` = 6 settings | Frozen base checkpoint; no gradient updates | Window/alpha policy selected on `calibration_policy`; causal updates use permitted past labels | Base ceiling plus 2 CPU-hours | Reversal sequences, drift, delayed labels, and no-label ablation |
+| Learned scalar risk | Raw-G encoder matched to MLP capacity through a single scalar bottleneck, then two frozen thresholds | Canonical Raw-G tabular; one scalar is the only terminal input | Full Raw-G `development_fit`; selection on `development_selection` | MLP optimizer grid = 6 trials; scalar monotonic penalty `{0,0.1}` = 12 trials | MLP schedule; three seeds | Scalar calibration on `calibration_fit`; two thresholds on `calibration_policy` | 8 GPU-hours/trial, 24 GB | Central reduction test on composition, scope, reversal, ambiguity, and domain transfer |
+| Stacked ensemble | Base predictions from logistic, GBDT, MLP, sequence, and GNN when applicable; multinomial logistic meta-learner | Out-of-fold base scores only; five folds grouped by pair/sequence/latent/template/provenance lineage | `development_fit` only for fitting; `development_selection` for base/meta selection | Meta `C {0.01,0.1,1,10}` = 4 trials; no calibration/public/blind predictions used for fitting | Three grouped fold assignments derived from registered seeds | Refit on `development_fit`; calibrate on `calibration_fit`; terminal policy on `calibration_policy` | Sum of base ceilings + 4 CPU-hours | Full independent battery; compare to best constituent and report stacking failure |
+| Judge/verifier | Local `Qwen/Qwen2.5-7B-Instruct`, version `2.5`, exact weight/tokenizer SHA-256 recorded before any training run; no provider substitution | Canonical sequence rendering with frozen system/user templates; output grammar `{"decision","scores","reason"}` | No fine-tuning; `development_fit` smoke cases for parser only; `calibration_policy` for any threshold | No fine-tuning; temperature `0`, top-p `1`, top-k disabled, one sample; maximum 2,048 input and 256 output tokens; one call/case; one retry only for transport failure | Deterministic greedy decoding; retry reuses identical request ID | No prompt edits after `development_fit` smoke; thresholds, if any, use `calibration_policy` only | 1 call/case, <=2,304 tokens/case, <=2 GPU-seconds/case target; hard run ceiling declared in method card | All sequence-compatible blind banks; parser failure, prompt leakage, and reproducibility tolerance audit |
+| Learned Oracle-G sanity model | Frozen MLP architecture above, with Oracle-G inputs and separate non-headline config | Canonical Oracle-G tabular rendering; same preprocessing rules | Oracle-G `development_fit`; selection on `development_selection`; non-headline | MLP grid = 6 trials; three seeds | Same MLP schedule | Temperature on `calibration_fit`; terminal diagnostics on `calibration_policy`; cannot participate in H1/H2 ranking | 8 GPU-hours/trial, 24 GB | Structural/domain sanity subset; failure is diagnostic only and never changes labels |
 
 The judge/verifier prompt contract is immutable and contains: role, permitted evidence fields, exact three-action definitions, prohibition on inferring hidden fields, required JSON schema, and no demonstrations from calibration or holdout cases. Requests are content-addressed and cached by model hash + prompt hash + projection hash. Parser rejection yields a recorded method failure; retries do not alter content. Exact greedy equality is expected on the pinned environment; otherwise the pre-freeze tolerance rule requires identical parsed decision and scores within `1e-6`.
 
@@ -263,11 +297,13 @@ Open-bank volumes are separate from the claim-bearing canonical bank:
 
 | Partition | Domains | Exact pairs/domain | Near pairs/domain | Reversal sequences/domain | Scope cases/domain | Evidence cases/domain | Use |
 |---|---:|---:|---:|---:|---:|---:|---|
-| Development | D1-D6 | 4,000 | 2,000 | 1,000 | 2,800 | 1,500 | Model fitting and grouped CV |
-| Calibration | D1-D6 | 1,000 | 500 | 250 | 700 | 375 | Calibration and operating point only |
+| `development_fit` | D1-D6 | 3,000 | 1,500 | 750 | 2,100 | 1,125 | Gradient fitting, vocabulary/preprocessing estimation |
+| `development_selection` | D1-D6 | 1,000 | 500 | 250 | 700 | 375 | Hyperparameter, architecture, checkpoint, and early-stopping selection |
+| `calibration_fit` | D1-D6 | 500 | 250 | 125 | 350 | 188 | Temperature/isotonic/Platt fitting and conformal quantiles only |
+| `calibration_policy` | D1-D6 | 500 | 250 | 125 | 350 | 187 | Terminal thresholds and lexicographic operating point only |
 | Public validation | D1-D6 | 1,000 | 500 | 250 | 700 | 375 | Sanity/power/report rehearsal only |
 
-Each trainable method receives all applicable registered development cases, no more than its tabled trial count, exactly three training seeds where relevant, and exactly one final calibration pass per retained checkpoint. A failure to train within the ceiling is reported as method failure; data, trials, epochs, architecture, or ceiling may not be expanded in response to comparative performance.
+The four open-data roles are mutually disjoint and group-atomic by pair, sequence, latent-world family, surface-template family, intervention lineage, and provenance-graph lineage. Every trainable method receives all applicable `development_fit` cases, no more than its tabled trial count, exactly three training seeds where relevant, and one permitted pass through each calibration role after development selection is frozen. Public validation is inspection-only and cannot select models, checkpoints, hyperparameters, calibration estimators, thresholds, or operating points. A failure to train within the ceiling is reported as method failure; data, trials, epochs, architecture, or ceiling may not be expanded in response to comparative performance.
 
 #### 5.1.3 Baseline method cards and fidelity
 
@@ -275,17 +311,49 @@ Every baseline has a release-blocking method card under `manifests/method_cards/
 
 MAVS human engineering effort, diagnostic design, scope-contract authorship, and rule construction are reported separately from training compute. Equal information and compute do not imply equal human design cost.
 
+#### 5.1.4 Frozen method inventory
+
+`configs/methods/method_inventory_v1.yaml` is the sole normative method registry. Every entry contains method ID, access profile, trained/fixed status, implementation file, fidelity class, mandatory tracks, compute class, required method-card ID, and headline/diagnostic role. Phase 7 may add implementation hashes but may not add, remove, or merge a required family without a new study version.
+
+| ID | Method family | Access | Status | Implementation | Fidelity | Mandatory tracks | Compute | Card | Role |
+|---|---|---|---|---|---|---|---|---|---|
+| `P01-CONF` | Confidence threshold | P-only | Fixed | `p_only.py` | Mechanism baseline | I-V + holdouts | Low | Required | Headline P-only |
+| `P02-UNC` | Uncertainty gate | P-only | Fixed | `p_only.py` | Mechanism baseline | I-V + holdouts | Low | Required | Headline P-only |
+| `P03-DIS` | Disagreement gate | P-only | Fixed | `p_only.py` | Mechanism baseline | I-V + holdouts | Low | Required | Headline P-only |
+| `P04-SC` | Self-consistency | P-only | Fixed sampling contract | `p_only.py` | Benchmark adaptation | I-V + holdouts | Medium | Required | Headline P-only |
+| `P05-CONF-STATIC` | Static conformal | P-only | Trained/calibrated | `p_only.py` | Faithful mechanism | I, II, V + holdouts | Medium | Required | Headline P-only |
+| `P06-CONF-ADAPT` | Adaptive conformal | P-only | Trained/calibrated | `p_only.py` | Faithful mechanism | II, III, V + holdouts | Medium | Required | Headline P-only |
+| `P07-REJECT` | Reject-option classifier | P-only | Trained | `p_only.py` | Faithful mechanism | I-V + holdouts | Medium | Required | Headline P-only |
+| `P08-TABULAR` | Logistic/GBDT/MLP tabular family; all three variants mandatory | P-only | Trained | `tabular.py`, `neural.py` | Generic learners | I-V + holdouts | Medium | One card/variant | Headline P-only |
+| `P09-SEQUENCE` | Canonical-record Transformer | P-only | Trained | `sequence.py` | Generic learner | I-V + holdouts | High | Required | Headline P-only |
+| `G01-LOGREG` | Logistic regression | Raw-G | Trained | `tabular.py` | Generic learner | I-V + holdouts | Low | Required | Headline Raw-G |
+| `G02-TREE` | Decision tree | Raw-G | Trained | `tabular.py` | Generic learner | I-V + holdouts | Low | Required | Headline Raw-G |
+| `G03-GBDT` | Gradient-boosted trees | Raw-G | Trained | `tabular.py` | Generic learner | I-V + holdouts | Medium | Required | Headline Raw-G |
+| `G04-MLP` | MLP | Raw-G | Trained | `neural.py` | Generic learner | I-V + holdouts | Medium | Required | Headline Raw-G |
+| `G05-SEQUENCE` | Typed-record Transformer | Raw-G | Trained | `sequence.py` | Generic learner | I-V + holdouts | High | Required | Headline Raw-G |
+| `G06-GRAPH` | Relational GNN | Raw-G | Trained | `graph.py` | Generic structured learner | I-V + holdouts | High | Required | Headline Raw-G |
+| `G07-BAYES` | Bayesian network/factor graph | Raw-G | Trained | `bayesian.py` | Generic structured learner | I-V + holdouts | High | Required | Headline Raw-G |
+| `G08-POLICY` | Policy engine | Raw-G | Fixed | `policy.py` | Mechanism-level adaptation | I-V + holdouts | Low | Required | Headline Raw-G |
+| `G09-VALIDATOR` | Validator stack | Raw-G | Fixed | `validator.py` | Simplified benchmark implementation | I-V + holdouts | Medium | Required | Headline Raw-G |
+| `G10-JUDGE` | Frozen local judge/verifier | Raw-G | Fixed model | `judge.py` | Proxy comparator | I-V + holdouts | High | Required | Headline Raw-G with fidelity caveat |
+| `G11-SCALAR` | One-scalar risk model | Raw-G | Fixed and trained variants | `scalar.py` | Central reduction comparator | I-V + holdouts | Medium | One card/variant | Headline Raw-G |
+| `G12-ENSEMBLE` | Raw-G stacked ensemble | Raw-G | Trained | `ensemble.py` | Generic ensemble | I-V + holdouts | High | Required | Headline Raw-G |
+
+The same registry additionally lists `O01-ORACLE-RULE` and `O02-ORACLE-MLP` as non-headline Oracle-G diagnostics and the MAVS A00-A15 conditions as structured-governance conditions; these do not alter the exact nine P-only/twelve Raw-G family count.
+
 ### 5.2 Training benchmark versus claim-bearing benchmarks
 
 The claim-bearing tests must be **structurally different from the training benchmark**, not merely different rows or random seeds.
 
 | Partition | Permitted content | Scientific role | Isolation requirement |
 |---|---|---|---|
-| Development/training | Open mechanisms, open policy forms, open graph families, domains D1-D6, development templates and seeds | Train models, debug code, fit representations | May be regenerated; never claim-bearing |
-| Calibration | Disjoint worlds from known mechanisms and templates; no holdout logical forms | Select thresholds and operating points | No architecture changes after final calibration |
-| Public validation | New seeds, nuisance families, and mechanism compositions from known development families | Sanity, power, public figures | Cannot determine final claim |
+| `development_fit` | Open mechanisms/forms/graphs, D1-D6; fit-role groups only | Gradient fitting and preprocessing/vocabulary estimation | Disjoint atomic groups; never used for selection or calibration |
+| `development_selection` | Open known families, D1-D6; selection-role groups only | Hyperparameter, architecture, checkpoint, and early-stopping selection | Disjoint from fit/calibration/public groups |
+| `calibration_fit` | Known families, D1-D6; calibration-fit groups only | Temperature, isotonic, Platt, conformal-quantile fitting | One pass after model selection; cannot choose models or thresholds |
+| `calibration_policy` | Known families, D1-D6; policy-role groups only | Terminal thresholds and lexicographic operating-point selection | One pass after calibration fitting; cannot choose models/calibrators |
+| Public validation | New seeds, nuisance families, and compositions from known D1-D6 families | Inspection-only sanity, power, and public figures | Cannot select model, checkpoint, calibrator, threshold, policy, or final claim |
 | Structural holdout | Unseen mechanism families/compositions, policy logical forms, provenance topologies/depths, diagnostic interactions, and intervention types | Causal generalization | Authored and sealed before model tuning ends |
-| Domain holdout | Two complete surface domains, provisionally D7 clinical-triage proxy and D8 content/policy-safety proxy | Cross-domain latent-grammar transfer | No templates, feature statistics, examples, labels, or adapter outputs exposed during training |
+| Domain holdout | Two custody-only complete surface domains: D7 clinical-triage proxy and D8 content/policy-safety proxy | Cross-domain latent-grammar transfer | Only placeholder IDs/interfaces are visible; no generation logic, templates, vocabularies, distributions, feature maps, nuisance transforms, allocations, examples, labels, or outputs leave custody before release |
 | Final blind bank | Cross-product of structural holdouts and the two unseen domains, with hidden seeds and held-out nuisance families | Claim-bearing evaluation | Unlocked only after signed freeze; single scientific run |
 
 The complete holdout registry and generation package is signed and sealed in Phase 9A before any Phase 10 training, calibration, or public-validation result exists. If D7/D8 prove invalid during independent domain review, replacement domains must be selected before Phase 9A and the change logged; they cannot be swapped based on method performance.
@@ -317,9 +385,9 @@ Every trained model must be evaluated on all applicable test families below, non
 - High-capacity leakage adversaries predict authorization, intervention, domain, mechanism, and split from P-only fields. Frozen permutation-derived chance bands govern release.
 - Exact and approximate duplicate audits cover lexical, tabular, vector, structural, and graph similarity.
 - No final-bank label prevalence is available for threshold setting.
-- Early stopping uses development data only. Operating points use calibration data only.
+- Early stopping and all model/checkpoint/hyperparameter selection use `development_selection` only. Calibration estimators use `calibration_fit`; terminal thresholds/operating points use `calibration_policy`.
 - Hyperparameter spaces, trial counts, compute ceilings, and tie-breakers are pre-registered.
-- The same training/calibration case IDs are used within each access profile.
+- P-only, Raw-G, and Oracle-G use the same underlying world, pair, sequence, atomic-group, and partition IDs for every open-data role and evaluation bank. Only the registered projection differs.
 - Raw-G methods receive semantically equivalent canonical tabular, sequence, and graph renderings from the same raw object; every lossy transformation is declared.
 - All final-bank access is logged. Manual inspection quarantines affected cases unless pre-authorized for infrastructure audit.
 - Scientific underperformance never permits retuning. Infrastructure repair requires invalidation, a documented diff, and complete affected-suite rerun.
@@ -401,7 +469,7 @@ Execution stops immediately for any non-identical released exact twin, any relea
 
 ### 5.9 Canonical claim-bearing allocation manifest
 
-`manifests/allocations/final_claim_bank_v1.json` is designed and hash-committed in Phase 9A before Phase 10 training. The following allocations are normative, not targets that may be rebalanced after results:
+`configs/allocations/final_claim_bank_v1.yaml` is the sole human-authored normative allocation object. Phase 9A validates it, canonicalizes it, and generates the signed `manifests/allocations/final_claim_bank_v1.json`. The JSON contains the YAML SHA-256, schema/version, canonicalization identity, signer, and every expanded quota. Bank generators are forbidden from reading the YAML or any other allocation source; they consume only the verified signed JSON manifest. Any YAML/JSON hash or semantic mismatch blocks generation. The following allocations are normative, not targets that may be rebalanced after results:
 
 | Track | Exact claim-bearing allocation |
 |---|---|
@@ -421,11 +489,21 @@ For each domain's 2,000 exact pairs:
 | I-A | `Accept <-> Reject` | 800 | Exactly 400 in each pair orientation; byte-identical `PredictiveState`; dual labels |
 | I-B | `Accept <-> Escalate` | 400 | Exactly 200 in each orientation; ambiguity certificate for every Escalate member |
 | I-C | `Reject <-> Escalate` | 400 | Exactly 200 in each orientation; danger witness plus ambiguity certificate |
-| I-N | Same-label exact controls | 400 | 133 Accept/Accept, 133 Reject/Reject, 134 Escalate/Escalate; irrelevant-intervention proof |
+| I-N | Same-label exact controls | 400 | Domain-rotated allocation below; irrelevant-intervention proof |
+
+The 400 I-N pairs per domain are allocated to correct the 400-world Escalate deficit created by I-A/I-B/I-C:
+
+| Domains | Accept/Accept | Reject/Reject | Escalate/Escalate | Final worlds/domain `(A,R,E)` |
+|---|---:|---:|---:|---:|
+| D1-D3 | 66 | 67 | 267 | `(1,332, 1,334, 1,334)` |
+| D4-D6 | 67 | 66 | 267 | `(1,334, 1,332, 1,334)` |
+| D7-D8 | 67 | 67 | 266 | `(1,334, 1,334, 1,332)` |
+
+Across all eight domains, the exact track therefore contains exactly `A=10,666`, `R=10,666`, and `E=10,668` worlds. The maximum global class-count difference is two.
 
 Per domain, primary-mechanism quotas are fixed by a largest-remainder rule: M01-M08 receive 167 pairs each and M09-M12 receive 166 each, totaling 2,000. Within every eligible sub-bank, intervention direction is balanced to within one pair. Exactly 30% of pairs are simple theorem sanity cases and 70% are compositional; at least 40% of all exact pairs use authorization rules with three or more interacting governance facts. Allocation exceptions caused by a mechanism/sub-bank incompatibility must be resolved by the precommitted substitution table, never after outcome inspection.
 
-Global opportunity-label counts are balanced as closely as integer arithmetic permits, with maximum class-count difference of two worlds. Every metric records exact denominators by sub-bank, domain, mechanism, label, intervention, complexity, and consequence class.
+Global opportunity-label counts must match the arithmetic above exactly. Every metric records exact denominators by sub-bank, domain, mechanism, label, intervention, complexity, and consequence class.
 
 The lower-bound implementation separately evaluates:
 
@@ -466,7 +544,15 @@ The allocation audit blocks release unless:
 | Text-derived predictive representation | Cosine distance between frozen encoder representations plus token-level normalized edit distance, both reported; aggregate uses precommitted maximum |
 | Missing value | Typed missingness mismatch cost fixed per field; missing/missing is zero |
 
-The aggregate is a precommitted weighted maximum of normalized field distances so one large change cannot be hidden by averaging. Field ranges and weights are calibrated on unlabeled development predictive states only. No authorization label, method output, or public-validation outcome may influence distance calibration. Each domain contributes exactly 125 pairs at each epsilon; at each epsilon, 25 pairs are I-A-like, 25 I-B-like, 25 I-C-like, and 50 same-label controls.
+The aggregate is a precommitted weighted maximum of normalized field distances so one large change cannot be hidden by averaging. Field ranges and weights are calibrated on unlabeled development-fit predictive states only. No authorization label, method output, or public-validation outcome may influence distance calibration. Each domain contributes exactly 125 pairs at each epsilon; at each epsilon, 25 pairs are I-A-like, 25 I-B-like, 25 I-C-like, and 50 same-label controls.
+
+For each of the 64 domain-epsilon cells, the 50 same-label controls use one rotated allocation:
+
+- rotation 0: `17 A/A, 17 R/R, 16 E/E`;
+- rotation 1: `17 A/A, 16 R/R, 17 E/E`;
+- rotation 2: `16 A/A, 17 R/R, 17 E/E`.
+
+Let `cell_index = (domain_index - 1) * 8 + epsilon_index`, with zero-based `epsilon_index` in ascending epsilon order. Use rotation `cell_index mod 3`. This gives 22 rotation-0 cells, 21 rotation-1 cells, and 21 rotation-2 cells. Across the complete near bank, the exact world counts are `A=5,334`, `R=5,334`, and `E=5,332`, again with maximum difference two.
 
 ### 5.11 Early Diagnostic Sciences registry
 
@@ -515,6 +601,8 @@ Timeout, `unknown`, incomplete search, or a failed proof may conservatively prod
 ### 5.13 Operational blind-bank custody and chronology
 
 All scientifically substantive holdout design occurs in Phase 9A, before Phase 10 training, calibration, or public-validation inspection. This includes mechanism families/compositions, policy logical forms, graph topology families, scope interactions, intervention classes, nuisance generators, domain templates, exact seed ranges/lists, generation code, allocation rules, distance rules, and ambiguity-proof rules. Their hashes are signed before Phase 10 begins.
+
+The development repository contains only the universal domain/holdout interfaces, generic serialization contracts, nonrevealing schema constraints, placeholder IDs for D7/D8, the allocation YAML, ciphertext, and hash commitments. The custody workspace exclusively contains the claim-bearing generator implementation and all concrete D7/D8 logic, templates, vocabularies, surface distributions, feature mappings, nuisance transformations, allocation realizations, and examples. Scientific review of D7/D8 occurs inside custody before sealing. Until the registered post-evaluation release point, no source or plaintext from those components enters the development repository or method-development context.
 
 Seed namespaces are disjoint and immutable:
 
@@ -587,8 +675,10 @@ Freeze hypotheses H1/H2, claims C1-C6, nulls, non-claims, access profiles, outco
 
 - `WorkPlan.md`, `Path.md`, `CLAIMS.md`
 - `configs/study/pead_main_v1.yaml`
+- `configs/access/{predictive_state_v1,governance_state_v1}.yaml`
 - `configs/holdouts/holdout_registry_v1.yaml`
 - `configs/diagnostics/{schema,ds_cf_zc,ds_cf_zh,ds_cf_zs,ds_cf_zm,ds_cf_zp,ds_cf_zo,ds_cf_zf}.yaml`
+- `configs/methods/method_inventory_v1.yaml`
 - `configs/requirements/pead_v1_requirements.yaml`
 - `configs/metrics/protected_objective_v1.yaml`
 - `docs/blind_custody_protocol.md`
@@ -601,6 +691,8 @@ Freeze hypotheses H1/H2, claims C1-C6, nulls, non-claims, access profiles, outco
 - Encode the lexicographic operating-point objective: unsafe-acceptance constraint, then FRR, unnecessary escalation, resource cost, and frozen low-complexity tie-break.
 - Add source-document hashes and base commit to the study manifest.
 - Freeze the diagnostic-registry schema, stable DS-CF diagnostic identities, strict failure-card schema, requirement-ID schema, and blind-custody protocol before dependent implementation.
+- Freeze every PredictiveState/GovernanceState field and its canonicalization, hash, distance, equality, visibility, and prohibited-derived-information rule.
+- Freeze the exact nine P-only, twelve Raw-G, Oracle-G, and MAVS condition inventory with access, training status, files, fidelity, tracks, compute, cards, and roles.
 
 **Verification and completion gates**
 
@@ -670,7 +762,8 @@ Implement the declarative policy DSL, parser, total deterministic evaluator, a s
 **Verification and completion gates**
 
 - `100%` dual-engine agreement on every released fixture/case.
-- Oracle rule evaluator obtains `100%` on valid deterministic fixtures.
+- Oracle rule evaluator obtains `100%` on valid deterministic fixtures and `OracleRuleAccuracy = 1.0` on every valid released exact, near, reversal, scope, evidence, structural, and domain case.
+- Any deterministic Oracle error blocks the case and invalidates the affected bank; it cannot be averaged away.
 - Positive, negative, boundary, contradictory, and temporal fixtures exist for every rule family.
 - Every claim-bearing resolvable or ambiguous case has a complete, independently verified certificate; timeout/unknown is never accepted as proof.
 - Permission revocation/prohibition monotonicity and irrelevant-intervention invariance pass.
@@ -687,7 +780,7 @@ Implement the latent factorization, mechanism registry M01-M12, primary and refe
 - `src/pead/world/{schema,generator_primary,generator_reference,mechanisms,interventions,nuisance}.py`
 - `src/pead/tracks/{exact,near,distances}.py`
 - `configs/tracks/near_distance_registry.yaml`
-- `configs/allocations/exact_track_i_v1.yaml`
+- `configs/allocations/final_claim_bank_v1.yaml`
 - `src/pead/audits/{equivalence,authorization,leakage}.py`
 - `scripts/generate_bank.py`, `scripts/audit_equivalence.py`, `scripts/audit_leakage.py`
 - `tests/property/test_twin_invariance.py`
@@ -748,34 +841,35 @@ Implement governance-reversal sequences, Diagnostic Sciences scope contracts, po
 - Ambiguity proofs reproduce every `Escalate` label.
 - Removing all permitted resolution channels converts reducible ambiguity to irreducible ambiguity, not arbitrary rejection.
 
-### Phase 5 - Eight domain adapters and independent validity review
+### Phase 5 - Six open adapters, held-out interfaces, and validity review
 
 **Scope**
 
-Implement tool execution, cyber response, multi-agent operations, retrieval/provenance, software deployment, financial approval proxy, clinical triage proxy, and content/policy safety adapters.
+Implement the six open development adapters: tool execution, cyber response, multi-agent operations, retrieval/provenance, software deployment, and financial approval proxy. Define only the universal interface, nonrevealing schema constraints, and placeholder IDs for held-out D7 clinical-triage and D8 content/policy-safety. Their actual implementations remain exclusively in custody.
 
 **Files**
 
-- `src/pead/domains/{base,tool,cyber,multi_agent,retrieval,software,finance,clinical,content}.py`
-- `configs/domains/*.yaml`
+- `src/pead/domains/{base,tool,cyber,multi_agent,retrieval,software,finance,heldout_interface}.py`
+- `configs/domains/{tool,cyber,multi_agent,retrieval,software,finance,heldout_placeholders}.yaml`
 - `tests/integration/test_domain_contracts.py`
 - `results/audits/<review_id>/domain_validity/*.json`
 
 **Code and implementation method**
 
-- All adapters implement the same task, candidate, mechanism, projection, and validation protocol.
-- Each domain instantiates at least six mechanism families, including composition and ambiguity.
+- All open adapters implement the same task, candidate, mechanism, projection, and validation protocol; the held-out interface declares shapes/types only.
+- Each open domain instantiates at least six mechanism families, including composition and ambiguity.
 - At least two domains use graph-dependent authorization; two use temporal reversal; two use policy-grammar composition.
 - Authorization may not be exposed as one obvious Raw-G Boolean.
 - Apply domain-specific label-swapping and surface anti-shortcut transformations.
+- Prohibit D7/D8 logic, templates, vocabulary, feature mappings, nuisance transforms, examples, or allocation details from the development repository and training environment.
 
 **Verification and completion gates**
 
-- Cross-domain schema parity passes.
-- Every domain meets anti-triviality minima.
+- Cross-domain schema parity passes for D1-D6 and the nonrevealing held-out interface.
+- Every open domain meets anti-triviality minima; D7/D8 are reviewed against the same minima inside custody in Phase 9A.
 - An evaluator who did not author an adapter reviews substantive meaning, projection defensibility, shortcuts, and bounded proxy claims.
-- Two valid domains and their complete templates are selected before Phase 9A and sealed there before the first Phase 10 training run.
-- Domain templates, anti-shortcut transforms, and allocation eligibility for all eight domains are complete before Phase 9A holdout sealing; they cannot be redesigned after model results.
+- D7/D8 placeholder IDs and universal contracts are frozen; no held-out implementation content is revealed.
+- D7/D8 custody implementations, scientific review, templates, transforms, and allocations are completed and sealed inside Phase 9A before the first Phase 10 training run.
 
 ### Phase 6 - Projection layer, feature firewall, and equal-information renderings
 
@@ -786,7 +880,7 @@ Implement P-only, Raw-G, and Oracle-G projections; sealed inputs; static/runtime
 **Files**
 
 - `src/pead/projections/{predictive,raw_governance,oracle,firewall,tabular,sequence,graph}.py`
-- `configs/access/{p_only,raw_g,oracle_g}.yaml`
+- `configs/access/{predictive_state_v1,governance_state_v1,p_only,raw_g,oracle_g}.yaml`
 - `src/pead/audits/access.py`
 - `scripts/audit_access.py`, `scripts/audit_representation_parity.py`
 - `tests/integration/test_access_profiles.py`
@@ -795,6 +889,7 @@ Implement P-only, Raw-G, and Oracle-G projections; sealed inputs; static/runtime
 **Code and implementation method**
 
 - The projection package is the only package allowed to transform `WorldState` into method input.
+- Implement the frozen state dictionaries exactly; no undeclared predictive/governance field or derived feature may enter a projection.
 - Return immutable objects with no back-reference to hidden state.
 - Log field masks, transformations, truncation, missing-value behavior, and projection hashes for every decision.
 - Static dependency scanning forbids method imports from hidden world, label, evaluator, and audit modules.
@@ -805,6 +900,7 @@ Implement P-only, Raw-G, and Oracle-G projections; sealed inputs; static/runtime
 
 - No forbidden import, attribute access, label access, or canary correlation.
 - Every representation can be traced back to the same Raw-G facts.
+- Lossless Oracle serialization/reconstruction equals `1.0` on every released case; any mismatch blocks the representation gate.
 - A representation-oracle test proves the canonical renderings retain truth-relevant visible information.
 - Any lossy transformation is declared and scientifically justified.
 
@@ -819,6 +915,7 @@ Implement all P-only and Raw-G baselines, a shared adapter interface, resource a
 - `src/pead/baselines/{base,p_only,tabular,neural,sequence,graph,bayesian,policy,validator,judge,scalar,ensemble}.py`
 - `src/pead/core/{training,calibration,budgets}.py`
 - `configs/methods/{p_only_*,raw_g_*}.yaml`
+- `configs/methods/method_inventory_v1.yaml`
 - `manifests/method_cards/*.yaml`
 - `scripts/train_suite.py`, `scripts/run_suite.py`, `scripts/audit_budget.py`
 - `tests/integration/test_method_suite.py`
@@ -827,9 +924,9 @@ Implement all P-only and Raw-G baselines, a shared adapter interface, resource a
 
 - Every method emits the same three-outcome `MethodDecision` schema.
 - Implement every architecture, preprocessing pipeline, search grid, trial count, seed set, schedule, early-stopping rule, calibration method, compute ceiling, checkpoint tie-break, and failure condition exactly as registered in Section 5.1.1.
-- Use matched training/calibration IDs inside each access profile.
+- For P-only, Raw-G, and Oracle-G, use the identical underlying world, pair, sequence, atomic-group, and partition IDs in `development_fit`, `development_selection`, `calibration_fit`, `calibration_policy`, public validation, and every holdout; only the projection differs.
 - Record seeds, package versions, hardware, wall time, memory, calls/tokens, checkpoint hashes, and complete hyperparameter history.
-- Fit calibration and terminal operating points only on the calibration split using the registered lexicographic objective.
+- After model/checkpoint selection is frozen on `development_selection`, fit calibration transforms/quantiles only on `calibration_fit`, then select terminal thresholds/operating points only on `calibration_policy` using the registered lexicographic objective.
 - Threshold sweeps are reported but cannot replace the pre-registered headline operating point.
 - Create and audit one fidelity method card per comparator; disclose MAVS human design effort separately from compute.
 - Include the learned Oracle-G MLP as a non-headline representation/generator sanity comparator.
@@ -837,9 +934,11 @@ Implement all P-only and Raw-G baselines, a shared adapter interface, resource a
 **Verification and completion gates**
 
 - All 9 P-only and 12 Raw-G method families run through the same runner.
+- Method-inventory audit finds exactly the nine P-only and twelve Raw-G IDs in Section 5.1.4, plus the registered Oracle/MAVS diagnostics, with no missing or unregistered method.
 - GBDT, graph, scalar-risk, validator/policy, and ensemble comparators are not omitted.
 - Judge/verifier model hash, prompt hashes, decoding, parser, cache, retry, call/token budget, and reproduction rule match the frozen contract.
 - Every comparator has a complete method card with a valid fidelity class and claim boundary.
+- Learned Oracle-G failure is reported diagnostically when deterministic Oracle accuracy and lossless reconstruction pass; it does not invalidate labels or the bank.
 - Training is reproducible within registered deterministic/tolerance rules.
 - Budget parity and equal-information audits pass.
 - No development or public-validation metric can change holdout definitions.
@@ -865,7 +964,7 @@ Integrate original MAVS-GC, MAVS-GC + DS-CF, prediction-only MAVS, fixed and lea
 - Trace supports, diagnostic vector, severity, contextual weights, mitigation, threshold, veto, ambiguity, consensus, and terminal decision.
 - Implement `z_c`, `z_h`, `z_s`, `z_m`, `z_p`, `z_o`, and `z_f` against the stable IDs, scope generators, authority limits, interactions, and monotonicity contracts frozen before Phase 4.
 - Raw correlation alone cannot hard-veto; safe consistency cannot override a certified hard veto; mitigation remains bounded.
-- All ablations retain identical Raw-G access. Learned scalarization uses the same training/calibration data and budget policy as comparable Raw-G learners.
+- All ablations retain identical Raw-G access. Learned scalarization uses the same underlying IDs in all four open-data roles and the same budget policy as comparable Raw-G learners.
 - No MAVS module is importable from generators or label engines.
 
 **Verification and completion gates**
@@ -924,27 +1023,32 @@ Before any Phase 10 model training, calibration, or public-validation result is 
 
 **Files and artifacts**
 
-- `configs/holdouts/{mechanisms,policy_forms,graph_topologies,scope_interactions,interventions,nuisance,domains,seeds,allocations}.yaml`
-- `configs/tracks/near_distance_registry.yaml`
-- `configs/allocations/final_claim_bank_v1.yaml`
-- `src/pead/holdouts/{generator,allocator,packager,custody}.py`
+- Development repository: `src/pead/holdouts/{interface,commitment_verifier}.py`
+- Development repository: `configs/allocations/final_claim_bank_v1.yaml`
+- Generated signed artifact: `manifests/allocations/final_claim_bank_v1.json`
+- Custody only: `<SEALED_WORKSPACE>/configs/holdouts/{mechanisms,policy_forms,graph_topologies,scope_interactions,interventions,nuisance,d7_clinical,d8_content,seeds}.yaml`
+- Custody only: `<SEALED_WORKSPACE>/src/pead_holdout/{generator,allocator,packager,ambiguity,custody}.py`
+- Custody only: D7/D8 generation logic, templates, vocabularies, surface distributions, feature mappings, nuisance transforms, allocation details, and concrete examples
 - `manifests/custody/holdout_design_commitment.json`
 - `manifests/custody/encrypted_blind_package.index.json`
 - `results/audits/<preseal_id>/{holdout_design,allocation,custody,human_review}.json`
 
 **Code and implementation method**
 
-- Prebuild holdout mechanism families/compositions, policy logical forms, graph topology families, scope interactions, intervention classes, nuisance generators, all eight domain templates, exact hidden seed lists, generation code, ambiguity-proof rules, typed distances, and allocation/substitution rules.
+- Inside custody, prebuild holdout mechanism families/compositions, policy logical forms, graph topology families, scope interactions, intervention classes, nuisance generators, D7/D8 implementations/templates, exact hidden seed lists, claim-bearing generator code, ambiguity-proof rules, typed distances, and allocation/substitution rules.
 - Apply the exact scale/sub-bank/epsilon/sequence/scope/evidence/control allocations in Section 5.9.
+- Validate the normative allocation YAML, generate/sign the canonical JSON containing its hash, and require custody generation to consume only that JSON.
 - Package content and labels separately using the custody protocol in Section 5.13.
-- Commit only ciphertext, commitments, counts, nonrevealing allocation metadata, and hashes to the development repository.
+- Commit only interface contracts, ciphertext, commitments, counts, nonrevealing allocation metadata, and hashes to the development repository. Claim-bearing generator source and D7/D8 implementation source remain custody-only until the post-evaluation release policy permits publication.
 - Obtain internal-independent review of scientific non-triviality, domain meaning, allocation, generator/label separation, and custody enforcement before sealing.
 
 **Verification and completion gates**
 
 - Every holdout design file and generator has a signed hash before Phase 10 begins.
+- Development-repository scan finds no D7/D8 implementation content or claim-bearing generator implementation beyond the nonrevealing interface/verifier.
 - Exact hidden seed lists are encrypted and hash-committed; no training/development process can read them.
 - Allocation, atomic-group, distance, ambiguity-certificate, generator-label-separation, and custody tests pass.
+- Allocation YAML-to-JSON hash/semantic equality passes, and a read-audit proves generators consumed only the signed JSON.
 - The custody workspace demonstrates denial/logging of pre-freeze development access.
 - `Path.md` and the remote Git commit prove Phase 9A predates all Phase 10 training and public-validation artifacts.
 - Any later scientific holdout-design change requires a new study version and repeats Phase 9A before retraining.
@@ -971,7 +1075,7 @@ Generate only the pre-registered open development/calibration/public-validation 
 - Run every trainable method within its exact architecture, data, trial, seed, schedule, calibration, and compute budget.
 - Infrastructure defects may be fixed; each fix invalidates and regenerates affected artifacts.
 - Scientific underperformance is retained.
-- Select thresholds on calibration only.
+- Freeze models/checkpoints from `development_selection`, fit calibration transforms on `calibration_fit`, and select terminal thresholds/operating points on `calibration_policy`; no role may be reused for another purpose.
 - Freeze report templates, statistical procedures, minimum effect sizes, and primary architecture-specific advantage before the blind run.
 
 **Verification and completion gates**
@@ -1022,7 +1126,7 @@ Verify the already precommitted holdout hashes; freeze methods, checkpoints, ope
 
 **Scope**
 
-Unlock the sealed bank, execute all valid methods once, audit before aggregate inspection, classify incidents, and retain all scientific outcomes.
+Begin streamed evaluation from Phase 11's verified immutable materialization, execute all valid methods once, audit before aggregate inspection, classify incidents, and retain all scientific outcomes. Phase 12 performs no unlock or rematerialization.
 
 **Files and artifacts**
 
@@ -1035,7 +1139,7 @@ Unlock the sealed bank, execute all valid methods once, audit before aggregate i
 
 **Code and implementation method**
 
-- Verify signed freeze and bank seals before execution.
+- Verify the signed freeze, Phase 11 materialization identity, and preserved encrypted-label stream before execution; do not invoke an unlock operation.
 - Commit every decision before hidden-label reveal.
 - Use the custody stream: evaluator receives encrypted case facts, method receives projection only, and label is revealed only after decision/trace commitment.
 - Execute matched methods on exact, near, reversal, scope, evidence, structural, and domain holdouts.
@@ -1046,6 +1150,7 @@ Unlock the sealed bank, execute all valid methods once, audit before aggregate i
 
 - No post-freeze parameter, feature, threshold, or representation changes.
 - Every release-blocking audit passes.
+- `OracleRuleAccuracy=1.0` and lossless Oracle serialization/reconstruction equal `1.0` on every valid released case; learned Oracle-G results are reported separately as diagnostics.
 - P-only lower-bound/error-coverage results, Raw-G escape, MAVS-vs-Raw-G, scalar compression, scope leakage, reversal fidelity, ambiguity, domain transfer, and worst-world results are all reported.
 - Every failure and negative outcome is retained.
 - Invalidated run IDs remain referenced and cannot be mistaken for valid release runs.
@@ -1142,6 +1247,8 @@ The matrix below is the human-readable control index. The machine registry expan
 | CORE-002 | Canonical key order, UTF-8, float, graph/set and action normalization | 1 | `hashing.py` | canonicalization tests | hash report | PEI/reproduction invalid |
 | CORE-003 | Trace contains study/run/config/commit/environment/world/group/split/method/budget/projection/decision/resource/label-order fields | 1, 6 | `traces.py` | trace schema test | trace-completeness report | Blocks headline results |
 | CORE-004 | Decision commits before hidden-label reveal | 1, 11, 12 | runner/custody | order/commit audit | signed event log | Blocks affected run |
+| STATE-P-001..009 | Frozen shared representation, specialist outputs, support, predicted label, confidence, uncertainty, agreement, calibration, candidate action dictionaries | 0, 6 | predictive-state config/projection | field/hash/equality audit | state dictionary manifest | H1/PEI blocked |
+| STATE-G-001..009 | Frozen provenance, authority, policy, temporal, reversibility, consequence, evidence, dependency, counterfactual-view dictionaries | 0, 6 | governance-state config/projection | visibility/field audit | state dictionary manifest | H1/H2 blocked |
 | GEN-001 | Generators emit facts/surface/lineage/interventions, never labels | 3 | `src/pead/world/*` | source/dependency/schema scan | generator separation report | Invalidates study version |
 | GEN-002 | Surface templates and authorization logic are separate and label-swappable | 3, 5 | world/domain templates | label-swap metamorphic tests | shortcut report | Quarantine bank |
 | GEN-003 | Pair intervention proof names changed authorization and unchanged predictive parents | 3 | `exact.py` | twin invariance | intervention certificate | Blocks pair/bank |
@@ -1160,16 +1267,19 @@ The matrix below is the human-readable control index. The machine registry expan
 | LABEL-001 | Declarative DSL supports typed/logical/temporal/graph/consequence/evidence/ambiguity rules | 2 | `src/pead/labels/*` | DSL fixtures | DSL audit | Blocks labels |
 | LABEL-002 | Procedural evaluator shares no decision code/parser | 2 | `evaluator_reference.py` | dependency/fixture tests | independence report | Invalidates labels |
 | LABEL-003 | Dual engines agree on 100% of released cases | 2, 9 | label audit | full agreement audit | L-01 report | Blocks release |
-| LABEL-004 | Oracle rule evaluator is 100% on valid fixtures | 2 | evaluator DSL | oracle fixtures | oracle report | Blocks generator sanity |
+| LABEL-004 | `OracleRuleAccuracy=1.0` on fixtures and every valid released case in every track/bank | 2, 9, 12 | evaluator DSL | full-bank Oracle audit | Oracle rule report | Case/bank/release blocked |
+| LABEL-006 | Oracle serialization/reconstruction is lossless on every released case | 6, 9, 12 | oracle projection | round-trip audit | Oracle representation report | Representation/bank blocked |
 | LABEL-005 | Claim-bearing ambiguity uses complete proof, never sampling alone | 2, 4 | ambiguity solver | certificate verifier | ambiguity certificates | Blocks C6/case |
 | TRACK-I-A | Accept/Reject exact bank: 800 pairs/domain, balanced orientation | 3, 9A | allocation/exact | quota/PEI/ADI | I-A manifest | Blocks C1/C2 |
 | TRACK-I-B | Accept/Escalate exact bank: 400 pairs/domain | 2, 3, 9A | allocation/exact | quota/certificate | I-B manifest | Blocks three-action/C6 |
 | TRACK-I-C | Reject/Escalate exact bank: 400 pairs/domain | 2, 3, 9A | allocation/exact | quota/witness/certificate | I-C manifest | Blocks three-action/C6 |
 | TRACK-I-N | Same-label exact controls: 400 pairs/domain | 3, 9A | allocation/exact | invariance/quota | I-N manifest | Blocks shortcut claims |
+| TRACK-I-BAL | Domain-rotated I-N yields exact global `(10666,10666,10668)` world counts | 3, 9A | allocation manifest | arithmetic/count audit | exact balance report | Exact bank invalid |
 | TRACK-I-LB | Deterministic, randomized, escalate-both, pair error-coverage lower bound | 3, 9, 12 | exact/paradigm metrics | analytic/pair tests | lower-bound report | Blocks C2 |
 | SPLIT-001 | Pair/sequence/latent/template/intervention/provenance lineage split atomically | 3, 9A | allocator | group-overlap audit | split manifest | Contamination blocks claims |
 | TRACK-II-001 | Typed scalar/vector/category/set/graph/probability/text/missing distances | 3, 9A | distances/registry | metric fixtures | distance registry report | Blocks near bank |
 | TRACK-II-002 | Eight epsilons x 125 pairs/domain with fixed suballocation | 3, 9A | near allocation | quota/distance audit | near manifest | Blocks robustness claim |
+| TRACK-II-BAL | Rotated 50 same-label controls/cell yield near counts `(5334,5334,5332)` | 3, 9A | near allocation | arithmetic/count audit | near balance report | Near bank invalid |
 | TRACK-III-001 | Permission/policy/provenance/rollback/expiry/evidence reversals | 4 | `reversal.py` | transition tests | sequence bank | Blocks reversal claim |
 | TRACK-III-002 | Detection latency, stale rate, unsafe continuation, recovery correctness/latency, hysteresis, false sensitivity, flip accuracy | 9, 12 | sequential metrics | known-sequence fixtures | sequential report | Blocks Track III claim |
 | DIAG-REG-001 | Registry exists before Phase 4 with scope/generator/authority/interaction/version fields | 0, 1 | diagnostics/core registry | registry schema test | registry manifest | Phase 4 blocked |
@@ -1183,27 +1293,33 @@ The matrix below is the human-readable control index. The machine registry expan
 | TRACK-IV-001 | Positive/matched-negative/boundary/out-of-scope banks, 100 each/diagnostic/domain | 4, 9A | scope allocation | quota/scope tests | scope manifest | Blocks C5 |
 | TRACK-IV-002 | Composition and nuisance controls evaluate interactions/stability | 4, 9 | scope metrics | pairwise/set tests | composition report | Blocks C5/C4 |
 | TRACK-V-001 | Resolvable, reducibly ambiguous, irreducibly ambiguous, 500/class/domain | 2, 4, 9A | evidence allocation | certificate/quota audit | evidence manifest | Blocks C6 |
-| DOMAIN-001 | Eight named bounded proxy adapters share one contract | 5 | `src/pead/domains/*` | schema parity | domain registry | Blocks broad claim |
+| DOMAIN-001 | Six open adapters plus nonrevealing D7/D8 placeholder interfaces share one contract | 5 | open domains/heldout interface | schema parity | domain registry | Blocks broad claim |
 | DOMAIN-002 | Six mechanisms/domain; graph/time/policy/composition/ambiguity minima | 5, 9A | domains/configs | non-triviality audit | domain review | Blocks domain |
-| DOMAIN-003 | Two complete unseen domains fixed before training | 5, 9A | domain holdout config | contamination audit | sealed templates | Blocks generalized claim |
+| DOMAIN-003 | D7/D8 implementation/source/templates/features/examples remain custody-only and are fixed before training | 5, 9A | custody domain source | repository/custody contamination audit | encrypted domain commitment | Blocks generalized claim |
 | ACCESS-001 | P-only/Raw-G/Oracle-G visibility profiles | 6 | projections/access configs | field-mask tests | access manifest | Blocks H1/H2 |
 | ACCESS-002 | Projection-only transformation; no WorldState back-reference | 6 | firewall | static/runtime tests | access audit | Invalidates method results |
 | ACCESS-003 | Canary, forbidden import/attribute/label access tests | 6, 9 | firewall/audit | adversarial access tests | canary report | Blocks release |
 | ACCESS-004 | Canonical tabular/sequence/graph Raw-G semantic parity | 6, 7 | renderings | field-method matrix | parity report | Blocks H2 |
+| ACCESS-005 | P-only/Raw-G/Oracle-G share identical world/pair/sequence/group/partition IDs; only projection differs | 6, 7, 10-12 | split/projection manifests | cross-profile ID audit | matched-case report | H1/H2 blocked |
 | METHOD-001 | Every trainable method follows exact Section 5.1.1 specification | 7, 10 | methods/configs | config/budget audit | training manifest | Method invalid |
 | METHOD-002 | Judge identity/prompt/decoding/budget/retry/parser/cache frozen | 7, 10 | judge config/card | request replay | judge manifest | Judge invalid |
 | METHOD-003 | Method cards classify fidelity and limitations | 7, 13 | method cards | schema/human audit | fidelity appendix | Comparator claim blocked |
 | METHOD-004 | MAVS human design effort separate from compute | 7, 13 | resource report | disclosure audit | cost appendix | Fairness claim blocked |
-| METHOD-005 | Learned Oracle-G sanity comparator is non-headline | 7, 10 | oracle config | representation sanity | oracle learned report | Interface validity blocked |
+| METHOD-005 | Learned Oracle-G sanity comparator is non-headline and diagnostic only | 7, 10 | oracle config | representation sanity | oracle learned report | No validity block when deterministic Oracle and lossless reconstruction pass |
+| METHOD-006 | Normative inventory contains exact P01-P09 and G01-G12 families with required metadata | 0, 7 | method inventory | inventory/schema audit | signed method manifest | Method suite/fairness blocked |
+| TRAIN-ROLE-001 | `development_fit`, `development_selection`, `calibration_fit`, `calibration_policy` are mutually disjoint and single-purpose | 7, 10 | split/training configs | group/role/use audit | role manifest | Model comparison invalid |
 | MAVS-A00-A15 | Every ablation in Section 5.6 uses registered identical access and causal change | 8, 12 | mavs/ablations configs | ablation/access audit | ablation matrix | C4 limited/blocked |
 | MAVS-SCALAR | Fixed and learned one-scalar reductions are central architecture tests | 7, 8, 12 | scalar configs | holdout frontier | scalar report | Strong C4 blocked |
 | ALLOC-001 | Exact 16k, near 8k, reversal 4k/24k steps, scope 22.4k, evidence 12k | 9A, 12 | allocation manifest | exact-count audit | signed allocation | Claim bank invalid |
 | ALLOC-002 | >=20% matched controls; prior shift and label permutation | 3, 9A | control allocations | quota/prior audit | control manifest | Leakage/robustness blocked |
 | ALLOC-003 | Domain/mechanism/label/intervention/complexity denominators present | 9A, 9 | allocations/metrics | balance audit | denominator report | Protected claims blocked |
+| ALLOC-004 | Normative YAML validates to signed canonical JSON containing YAML hash; generators read JSON only | 9A | allocation config/manifest | hash/semantic/read audit | signed allocation JSON | Generation blocked |
 | HOLD-001 | All substantive holdout design signed in Phase 9A before Phase 10 | 9A | holdout configs/code | chronology/hash audit | design commitment | Study version invalid |
-| HOLD-002 | Phase 11 only verifies/freezes/unlocks/materializes/checks contamination | 11 | freeze/custody scripts | no-design diff audit | unlock report | Blind run blocked |
+| HOLD-002 | Phase 11 alone unlocks, verifies, one-shot materializes, preserves encrypted labels, and checks contamination | 11 | freeze/custody scripts | no-design/single-unlock audit | unlock report | Blind run blocked |
 | HOLD-003 | Encrypted separate custody, key isolation, one-shot materialization, logged access | 9A, 11, 12 | custody code/protocol | custody attack tests | signed custody log | Bank invalid |
 | HOLD-004 | Labels encrypted until decision/trace commitment; methods see projection only | 11, 12 | custody/runner | reveal-order audit | event log | Run invalid |
+| HOLD-005 | Claim-bearing generator and D7/D8 source remain custody-only until registered post-evaluation release | 9A-13 | custody/repository scan | source-exposure audit | source commitment/release record | Generalization claim invalid |
+| HOLD-006 | Phase 12 streams Phase 11 immutable materialization and performs no second unlock/rematerialization | 12 | blind runner | unlock-call/materialization-ID audit | stream-start record | Blind run blocked |
 | METRIC-INT | PEI, ADI, label agreement, trace completeness, access compliance, reproduction | 9, 12, 13 | integrity metrics | exact fixtures | integrity report | Release blocked |
 | METRIC-PAR | LBG, GIG, GAG, AFA and raw components | 9, 12 | paradigm metrics | analytic fixtures | paradigm report | C2-C4 blocked |
 | METRIC-PROT | UAR, FRR, escalation, coverage, forced certainty, unnecessary escalation, catastrophic/worst losses | 9, 12 | protected metrics | denominator/edge tests | protected report | Safety wording blocked |
@@ -1252,3 +1368,8 @@ The project is complete only when:
 11. The custody log proves pre-freeze inaccessibility, key isolation, one-shot materialization, projection-only method access, and decision-before-label reveal.
 12. The clause-level requirements audit has no missing, duplicate, prose-only, untested, or artifact-free normative requirement.
 13. Exact, near, reversal, scope, evidence, diagnostic, baseline-fidelity, human-review, and failure-card allocation/schema audits all pass.
+14. The exact-bank allocation reconstructs to `(A=10,666, R=10,666, E=10,668)`, and the rotated near controls reconstruct to `(A=5,334, R=5,334, E=5,332)`, directly from the signed canonical allocation JSON.
+15. The `development_fit`, `development_selection`, `calibration_fit`, and `calibration_policy` roles are mutually disjoint, group-atomic, and used only for their registered purposes; public validation remains inspection-only.
+16. Repository and custody scans prove that claim-bearing generator source and every concrete D7/D8 implementation artifact stayed custody-only through the registered release point.
+17. Deterministic `OracleRuleAccuracy`, lossless Oracle serialization/reconstruction, cross-profile case-ID matching, frozen state dictionaries, and the exact P01-P09/G01-G12 method inventory all pass their hard gates.
+18. Phase 11 is the sole unlock/materialization event, and every Phase 12 result is traceable to that immutable materialization identity without an unlock or rematerialization.
