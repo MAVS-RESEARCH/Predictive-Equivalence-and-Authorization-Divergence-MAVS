@@ -27,7 +27,7 @@ Rules:
 
 | Phase | Name | Status | Evidence |
 |---:|---|---|---|
-| 0 | Research charter, claim ledger, and execution controls | Local gates passed; publication pending | Phase 0 implementation, 9 tests, 10,000 mutation stress cases, 789-clause source audit, and complete compliance audit passed |
+| 0 | Research charter, claim ledger, and execution controls | Complete | All local gates passed; implementation commit `8259d22e14cfd532185416795ba079448216540b` pushed and remotely verified |
 | 1 | Core immutable infrastructure and safe result hygiene | Not started | None |
 | 2 | Independent authorization truth system | Not started | None |
 | 3 | Causal world registry, exact twins, and near twins | Not started | None |
@@ -450,3 +450,24 @@ Copy this block for every meaningful action:
 - **Required retest:** Complete test runner, source verification, 10,000-mutation stress audit, console-line inventory, and diff check.
 - **Scientific effect:** None. No data, bank, model, label, holdout content, metric result, or claim outcome changed.
 - **Deviation:** None; the correction enforces repository and publication hygiene.
+
+### PATH-0015 - Phase 0 GitHub publication and remote verification
+
+- **Timestamp:** 2026-07-30T17:30:57+05:00
+- **Phase:** 0
+- **Status:** Pass; Phase 0 complete.
+- **WorkPlan alignment:** Section 2.4 mandatory post-phase publication and Phase 0 completion.
+- **Branch:** `agent/pead-workplan`.
+- **Implementation commits:**
+  - `52c00b822077ff51451da29359412a64f645da2e` - initial complete Phase 0 control implementation and evidence.
+  - `8259d22e14cfd532185416795ba079448216540b` - packaging-metadata removal, whitespace normalization, final retest evidence, and corrected local ledger.
+- **Pre-push state:** Working tree clean; `git diff --check` and all Phase 0 gates passed.
+- **Push command:** `git push origin agent/pead-workplan`.
+- **Push result:** Pass.
+- **Remote verification command:** `git ls-remote origin refs/heads/agent/pead-workplan`.
+- **Remote verification result:** `8259d22e14cfd532185416795ba079448216540b`, exactly equal to local `HEAD`.
+- **Pull request:** Draft PR #1, `https://github.com/MAVS-RESEARCH/Predictive-Equivalence-and-Authorization-Divergence-MAVS/pull/1`, open, head branch and SHA verified.
+- **Scientific effect:** None. Publication establishes provenance; it does not change any scientific result.
+- **Deviation:** None.
+- **Phase verdict:** Complete. Every Phase 0 WorkPlan scope item, file group, implementation method, local verification gate, evidence requirement, ledger requirement, and publication requirement is satisfied.
+- **Next permitted action:** Phase 1 may begin only on explicit user instruction.
