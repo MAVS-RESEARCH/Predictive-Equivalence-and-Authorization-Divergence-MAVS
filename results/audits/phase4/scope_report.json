@@ -1,0 +1,39 @@
+{
+  "additional_controls": 5600,
+  "atomic_groups": 28000,
+  "banks": {
+    "adversarial_out_of_scope": 5600,
+    "boundary": 5600,
+    "composition": 1400,
+    "label_permutation": 1400,
+    "matched_negative": 5600,
+    "nuisance": 1400,
+    "prior_shift": 1400,
+    "scope_positive": 5600
+  },
+  "canonical_cases": 22400,
+  "diagnostics": {
+    "DSCF-ZC-v1": 4000,
+    "DSCF-ZF-v1": 4000,
+    "DSCF-ZH-v1": 4000,
+    "DSCF-ZM-v1": 4000,
+    "DSCF-ZO-v1": 4000,
+    "DSCF-ZP-v1": 4000,
+    "DSCF-ZS-v1": 4000
+  },
+  "domains": {
+    "D1": 3500,
+    "D2": 3500,
+    "D3": 3500,
+    "D4": 3500,
+    "D5": 3500,
+    "D6": 3500,
+    "D7": 3500,
+    "D8": 3500
+  },
+  "out_of_scope_terminal_changes": 0,
+  "out_of_scope_truth_changes": 0,
+  "raw_correlation_terminal_vetoes": 0,
+  "total_cases": 28000,
+  "unregistered_terminal_influences": 0
+}

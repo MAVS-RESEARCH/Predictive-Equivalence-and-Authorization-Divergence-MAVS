@@ -31,7 +31,7 @@ Rules:
 | 1 | Core immutable infrastructure and safe result hygiene | Complete | 52/52 tests passed; implementation commit `01de85198fbaa1ffdc55591f6b303029299c92d5` pushed and remotely verified |
 | 2 | Independent authorization truth system | Complete | 74/74 tests; implementation commit `629b18a7341cda0c44fa88f33c97c5869c3ae14e` pushed and remotely verified |
 | 3 | Causal world registry, exact twins, and near twins | Complete | 89/89 tests passed; implementation commit `81bd52c825fd41c12dc5fb921c5c656fbf9d20bd` pushed and remotely verified |
-| 4 | Reversals, scope banks, and evidence sufficiency | Not started | None |
+| 4 | Reversals, scope banks, and evidence sufficiency | Local gates passed; publication pending | None |
 | 5 | Eight domain adapters and validity review | Not started | None |
 | 6 | Projection layer, feature firewall, and parity | Not started | None |
 | 7 | Baseline suite and common training harness | Not started | None |
@@ -1398,3 +1398,129 @@ Copy this block for every meaningful action:
 - **Scientific effect:** None. The post-publication run confirms reproducibility of the implementation commit and changes only elapsed-time metadata plus the ledger publication state.
 - **Deviation:** None.
 - **Next action:** Commit and push this ledger close and the post-publication evidence, then verify the final remote branch SHA. Stop before Phase 4.
+
+### PATH-0043 - Phase 4 source reconfirmation and execution boundary
+
+- **Timestamp:** 2026-07-30.
+- **Phase:** 4.
+- **Status:** Pass.
+- **Change ID:** `P4-SOURCE-BOUNDARY-001`.
+- **WorkPlan alignment:** Phase 4 scope, code method, named files, and all five completion gates; Section 5.9 exact denominators and atomic grouping requirements.
+- **Source reviewed:** `MAVS-Diagnostic Sciences.pdf`, SHA-256 `B7CC77BF32558B042B8ECFA7C4BB9267B53910B0B84816198CF34A9E73EEE758`.
+- **Visual verification:** Rendered pages 4-6 and 12-14 were inspected. These pages establish that diagnostics are scoped interventions with explicit scope contracts; raw correlation is observation-only and cannot veto; authority remains distinct from prediction; unresolved evidence must remain explicit through escalation; and adaptive governance belongs to a later companion paper rather than the fixed-method primary study.
+- **Frozen implementation boundary:** Phase 4 constructs validation fixtures and proofs only. Diagnostic execution remains Phase 8, final claim-bank signing remains Phase 9A, sequential metric computation remains Phase 9/12, and adaptive evidence acquisition remains outside Paper 1. No model training, calibration, model selection, released claim-bank rows, deployment conclusion, or Phase 5 adapter work was authorized or performed.
+- **Exact denominators adopted:** 4,000 canonical reversal sequences containing 24,000 steps; 800 additional reversal controls; 22,400 canonical diagnostic scope cases; 5,600 additional scope controls; and 12,000 evidence-sufficiency cases.
+- **Deviation:** None.
+
+### PATH-0044 - Governance-reversal chronology and Phase 9 metric fixtures
+
+- **Timestamp:** 2026-07-30.
+- **Phase:** 4.
+- **Status:** Pass.
+- **Change ID:** `P4-REVERSAL-001`.
+- **Files implemented:** `configs/tracks/reversal.yaml`, `src/pead/tracks/reversal.py`, and the reversal portion of `src/pead/phase4/generation.py`.
+- **Families:** Permission revoke/restore (`M01`), policy-version change/recovery (`M02`), provenance-compromise discovery/recovery (`M03`), rollback loss/restore (`M05`), exception expiry/restore (`M07`), and evidence restoration (`M04`).
+- **Chronology:** Each domain has exactly 100 four-step, 300 six-step, and 100 eight-step sequences. Four-step change/restoration indices are 1/3, six-step indices are 2/4, and eight-step indices are 2/6. Evidence-restoration sequences correctly treat the evidence-arrival change point as the restoration point and transition from `Escalate` to `Accept`.
+- **Construction controls:** Every step is generated through both independent world generators and both independent label evaluators. Predictive parents remain byte-identical, prediction-facing governance-token scans remain empty, labels must equal the family chronology, timestamps advance at fixed 60-second intervals, and each complete sequence is one atomic group with sequence, latent, template, intervention, and provenance lineage retained.
+- **Phase 9 readiness:** Exact change timestamps, restoration timestamps, adverse-window stale-authorization opportunities, authorization series, and 200 explicit false-reversal controls are exposed. An additional 600 nuisance, prior-shift, and label-permutation controls produce 800 controls total, exactly 20% of the canonical sequence denominator.
+- **Complete-bank evidence:** 4,000/4,000 sequences and 24,000/24,000 steps generated; 800 controls; 8,000 stale-authorization opportunities; 1,200 exact ambiguity certificates on evidence-restoration `Escalate` steps; zero primary/reference generation disagreements, zero dual-label disagreements, and zero predictive-state changes.
+- **Authorization distribution:** 14,800 `Accept`, 8,000 `Reject`, and 1,200 `Escalate` steps.
+- **Deviation:** None.
+
+### PATH-0045 - Frozen Diagnostic Sciences scope contracts and complete banks
+
+- **Timestamp:** 2026-07-30.
+- **Phase:** 4.
+- **Status:** Pass.
+- **Change ID:** `P4-SCOPE-001`.
+- **Files implemented:** `src/pead/core/diagnostic_registry.py`, `src/pead/core/scope_contract.py`, `configs/tracks/scope.yaml`, and `src/pead/tracks/scope.py`.
+- **Registry preservation:** The existing seven YAML diagnostic definitions were not rewritten. The typed registry now loads the complete frozen semantic definition, requires the exact schema fields and generator set, retains all authority, interaction, monotonicity, metric, response, retirement, and prohibited-path data, and binds every generated case to a content-derived definition hash.
+- **Canonical banks:** For every 8 domains x 7 diagnostics, 100 scope-positive, 100 matched-negative, 100 boundary, and 100 adversarial out-of-scope cases were constructed: 22,400 canonical cases.
+- **Additional controls:** For every diagnostic-domain cell, 25 registered-composition, 25 nuisance, 25 prior-shift, and 25 label-permutation cases were constructed: 5,600 controls, or 25% of the canonical denominator.
+- **Safety enforcement:** Expected influence paths must be a subset of the diagnostic's frozen permitted paths and disjoint from prohibited paths; composition partners must appear in the frozen interaction registry; out-of-scope cases preserve the truth hash and terminal authorization; nuisance/prior/label controls preserve meaning; and `DSCF-ZC-v1` remains observation-only.
+- **Boundary behavior:** Signed distances rotate deterministically over `-0.000001`, `0.0`, and `0.000001`. Boundary fixtures record registered observation without inventing terminal authority.
+- **Complete-bank evidence:** 28,000/28,000 cases validated; 4,000 cases per diagnostic; 3,500 cases per domain; 28,000 unique atomic groups; out-of-scope truth changes 0; out-of-scope terminal changes 0; unregistered terminal influences 0; raw-correlation terminal vetoes 0.
+- **Deviation:** None.
+
+### PATH-0046 - Exact evidence-sufficiency proofs and Paper 1/Paper 2 boundary
+
+- **Timestamp:** 2026-07-30.
+- **Phase:** 4.
+- **Status:** Pass.
+- **Change ID:** `P4-EVIDENCE-001`.
+- **Files implemented:** `configs/tracks/evidence.yaml` and `src/pead/tracks/evidence_sufficiency.py`.
+- **Classes:** Each of eight domains has 500 resolvable, 500 reducibly ambiguous, and 500 irreducibly ambiguous cases, producing 12,000 cases and 12,000 unique atomic proof groups.
+- **Proof method:** Every case uses complete deterministic finite enumeration with explicit compatible-world identities, fact hashes, authorization-class witnesses, visible projection hashes, permitted-channel partition, complete denominator, solver identity/version/configuration, and content-derived proof/certificate hashes. Sampling, timeout, and incomplete proof states cannot support a claim.
+- **Resolvable cases:** 4,000 unique-class proofs, balanced at 2,000 `Accept` and 2,000 `Reject`.
+- **Reducibly ambiguous cases:** 4,000 proofs with both `Accept` and `Reject` compatible worlds and an available registered evidence query. The fixed method returns `Escalate`; Phase 4 does not execute the query adaptively.
+- **Irreducibly ambiguous cases:** 4,000 proofs with both terminal classes and all permitted channels unavailable or exhausted. The required action remains `Escalate`.
+- **Metamorphic gate:** Removing every currently available permitted channel from a reducibly ambiguous case recomputes a complete proof whose conclusion is `irreducibly_ambiguous_escalate`; the action remains `Escalate` and never changes to arbitrary `Reject`.
+- **Complete-bank evidence:** 12,000/12,000 certificates independently reconstructed; 4,000 per class; 1,500 cases per domain; adaptive acquisition executions 0.
+- **Deviation:** None.
+
+### PATH-0047 - Phase 4 tests, stress execution, incidents, and retained evidence
+
+- **Timestamp:** 2026-07-30.
+- **Phase:** 4.
+- **Status:** Pass.
+- **Change ID:** `P4-VERIFY-001`.
+- **Required tests implemented:** `tests/property/test_scope_safe_diagnostics.py`, `tests/metamorphic/test_reversal_fidelity.py`, and `tests/unit/test_ambiguity_proof.py`.
+- **Additional stress test:** `tests/stress/test_phase4_stress.py` verifies complete global/domain/bank/class/length/control/atomic-group denominators rather than a training-like sample.
+- **Complete regression verdict:** 103/103 tests passed, including all 89 Phase 0-3 tests and 14 new Phase 4 property, metamorphic, unit, and stress tests. Failures 0; errors 0; skips 0.
+- **Full generation verdict:** The extreme audit generated all 24,000 reversal steps, all 28,000 scope cases, and all 12,000 evidence proofs in memory. It did not substitute sampled or training-set benchmarks.
+- **Source/config regression:** Both frozen source identities, 789/789 requirements, seven diagnostics, method inventory, custody registry, claims, and study configuration validated after implementation.
+- **Mechanical checks:** `python -m compileall -q src scripts tests` passed and `git diff --check` passed.
+- **Retained evidence:**
+  - `results/manifests/phase4/phase4_validation_manifest_v1.json`
+  - `results/audits/phase4/generation_summary.json`
+  - `results/audits/phase4/reversal_report.json`
+  - `results/audits/phase4/scope_report.json`
+  - `results/audits/phase4/evidence_sufficiency_report.json`
+  - `results/audits/phase4/phase4_tests.json`
+  - `results/audits/phase4/console_log_inventory.json`
+  - `results/audits/phase4/phase4_compliance.json`
+- **Retained audit incidents:**
+  - The first full-suite command was terminated by the command wrapper at approximately 124 seconds before completion. It produced no passing report and made no scientific decision. The suite was rerun with a sufficient timeout and passed 102/102.
+  - The first compliance-audit attempt stopped at the required-file gate because its diagnostic filename glob incorrectly expected diagnostic IDs in filenames. The actual frozen files use `ds_cf_*.yaml`. The audit was corrected to count all non-schema diagnostic YAML files, then rerun from the beginning and passed. No diagnostic, allocation, case, label, proof, or result was changed.
+- **Model and overfitting applicability:** No scientific model was trained, fitted, selected, calibrated, or saved. Consequently there is no training benchmark or trained-model overfitting risk in this phase. Integrity is instead challenged by full-denominator generation, independent generator/evaluator agreement, exact proof reconstruction, adversarial out-of-scope cases, matched controls, metamorphic channel removal, and complete prior-phase regression.
+- **Deviation:** None.
+
+### PATH-0048 - Phase 4 operational console inventory and extreme-rigor local audit
+
+- **Timestamp:** 2026-07-30.
+- **Phase:** 4.
+- **Status:** Local gates passed; GitHub publication pending.
+- **Change ID:** `P4-AUDIT-LOCAL-001`.
+- **Console policy:** Every operational `console.log(...)` call has an immediately preceding `STEP LOG` comment with the identical unique event ID. The retained source inventory contains 16/16 valid Phase 4 call sites:
+  - `P4-AUDIT-001`: `src/pead/phase4/audit.py`, comment line 84, call line 85, `Verify every WorkPlan-named implementation, configuration, test, and evidence file.`
+  - `P4-AUDIT-002`: same file, comment line 87, call line 88, `Verify the content-signed validation-only allocation manifest and exact denominators.`
+  - `P4-AUDIT-003`: same file, comment line 92, call line 93, `Generate and gate the complete reversal, scope, and evidence banks.`
+  - `P4-AUDIT-004`: same file, comment line 102, call line 103, `Verify every Phase 4 console call has an adjacent stable identity comment.`
+  - `P4-AUDIT-005`: same file, comment line 113, call line 114, `Verify Phase 4 did not train models, release banks, or execute adaptive acquisition.`
+  - `P4-AUDIT-006`: same file, comment line 151, call line 152, `Retain the clause-level Phase 4 compliance verdict and evidence.`
+  - `P4-AUDIT-007`: same file, comment line 159, call line 160, `Report the final local Phase 4 hard-gate verdict.`
+  - `P4-AUDIT-008`: same file, comment line 163, call line 164, `Emit a hard failure with its unsuppressed cause.`
+  - `P4-GENERATE-001`: `src/pead/phase4/generation.py`, comment line 34, call line 35, `Load and verify the signed Phase 4 denominators before constructing any case.`
+  - `P4-GENERATE-002`: same file, comment line 44, call line 45, `Generate one complete domain of deterministic reversal sequences with dual-engine checks.`
+  - `P4-GENERATE-003`: same file, comment line 67, call line 68, `Construct every frozen-registry scope case and verify authority-safe behavior.`
+  - `P4-GENERATE-004`: same file, comment line 76, call line 77, `Enumerate and independently verify every fixed-method evidence proof.`
+  - `P4-GENERATE-005`: same file, comment line 131, call line 132, `Report the complete generated denominators and hard-gate verdict.`
+  - `P4-TEST-RUN-001`: `src/pead/phase4/test_runner.py`, comment line 29, call line 30, `Discover the complete regression and Phase 4 verification suite.`
+  - `P4-TEST-RUN-002`: same file, comment line 36, call line 37, `Report the exact complete-suite test denominator before execution.`
+  - `P4-TEST-RUN-003`: same file, comment line 84, call line 85, `Retain the complete regression, unit, property, metamorphic, and stress verdict.`
+- **Clause-level audit result:** `results/audits/phase4/phase4_compliance.json` reports `status=pass`, zero compliance gaps, all WorkPlan completion gates passed, release authority `none`, and the Phase 9A final signature still required.
+- **Signed-manifest hardening:** The final clause audit identified that the first implementation signed all Phase 4 track configuration but allowed bank modules to reread those YAML files. Section 5.9 requires bank generators to consume only the verified signed allocation JSON. The manifest compiler was therefore expanded to include exact family, timing, control, bank, boundary, class, channel, and proof inputs; all three generators now load those allocation inputs exclusively from `phase4_validation_manifest_v1.json`. A source-level regression test rejects allocation/config YAML imports or paths in the bank modules. All 103 tests and the complete-bank audit passed after this correction.
+- **Final retained evidence SHA-256:**
+  - `console_log_inventory.json`: `AE4CEE6A40395183C0DEEC6D913765B57F1F938BAD1D3ACBB21A09AA28421206`
+  - `evidence_sufficiency_report.json`: `FF976128DDF6C0937C75F22B7F944E485F3E3EEB48D923DB3A8D758D4DB1EB5A`
+  - `generation_summary.json`: `0BCBEC46B95E6F691DA9E632A454107F828A3D342C78FAF604461A76CE9F7D59`
+  - `phase4_compliance.json`: `D791F5EEE2B5BC4CC147C6B00199F28FF768CBA5F5AE105EFAA414198647C618`
+  - `phase4_tests.json`: `021DF4362CDD7A400D41FE3CC73ED5CFEECED20731F6A5FE0E4AA65F1AE7217F`
+  - `reversal_report.json`: `87DD937A0965B96DCDA4589AC16BB8EC4AE94E25FBD0D79B3E1D15BD9ED08207`
+  - `scope_report.json`: `1B6F6D86CD9B7045E864C106EF8B9354E3B9C031D6AF1D0A43AA384B28574D01`
+  - `phase4_validation_manifest_v1.json`: `8514353AFEBEAEDECC9BB4EAAD7AB95B6C7DD79BA12716F9987725C4091D16C8`
+- **Phase boundary:** Models trained 0; checkpoints 0; adaptive acquisitions 0; released claim-bank rows 0; Phase 5 files 0.
+- **Compliance gaps:** None detected.
+- **Scientific result:** Phase 4 establishes deterministic reversal fixtures, authority-safe diagnostic scope fixtures, and exact fixed-method evidence boundaries. It does not estimate H1/H2 performance or make a deployment claim.
+- **Deviation:** None.
+- **Publication state:** Pending intentional staging, commit, push, and exact remote-SHA verification.

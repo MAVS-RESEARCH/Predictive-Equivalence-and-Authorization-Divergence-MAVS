@@ -1,0 +1,117 @@
+{
+  "count": 16,
+  "entries": [
+    {
+      "comment": "Verify every WorkPlan-named implementation, configuration, test, and evidence file.",
+      "comment_line": 84,
+      "console_log_line": 85,
+      "event_id": "P4-AUDIT-001",
+      "file": "src/pead/phase4/audit.py"
+    },
+    {
+      "comment": "Verify the content-signed validation-only allocation manifest and exact denominators.",
+      "comment_line": 87,
+      "console_log_line": 88,
+      "event_id": "P4-AUDIT-002",
+      "file": "src/pead/phase4/audit.py"
+    },
+    {
+      "comment": "Generate and gate the complete reversal, scope, and evidence banks.",
+      "comment_line": 92,
+      "console_log_line": 93,
+      "event_id": "P4-AUDIT-003",
+      "file": "src/pead/phase4/audit.py"
+    },
+    {
+      "comment": "Verify every Phase 4 console call has an adjacent stable identity comment.",
+      "comment_line": 102,
+      "console_log_line": 103,
+      "event_id": "P4-AUDIT-004",
+      "file": "src/pead/phase4/audit.py"
+    },
+    {
+      "comment": "Verify Phase 4 did not train models, release banks, or execute adaptive acquisition.",
+      "comment_line": 113,
+      "console_log_line": 114,
+      "event_id": "P4-AUDIT-005",
+      "file": "src/pead/phase4/audit.py"
+    },
+    {
+      "comment": "Retain the clause-level Phase 4 compliance verdict and evidence.",
+      "comment_line": 151,
+      "console_log_line": 152,
+      "event_id": "P4-AUDIT-006",
+      "file": "src/pead/phase4/audit.py"
+    },
+    {
+      "comment": "Report the final local Phase 4 hard-gate verdict.",
+      "comment_line": 159,
+      "console_log_line": 160,
+      "event_id": "P4-AUDIT-007",
+      "file": "src/pead/phase4/audit.py"
+    },
+    {
+      "comment": "Emit a hard failure with its unsuppressed cause.",
+      "comment_line": 163,
+      "console_log_line": 164,
+      "event_id": "P4-AUDIT-008",
+      "file": "src/pead/phase4/audit.py"
+    },
+    {
+      "comment": "Load and verify the signed Phase 4 denominators before constructing any case.",
+      "comment_line": 34,
+      "console_log_line": 35,
+      "event_id": "P4-GENERATE-001",
+      "file": "src/pead/phase4/generation.py"
+    },
+    {
+      "comment": "Generate one complete domain of deterministic reversal sequences with dual-engine checks.",
+      "comment_line": 44,
+      "console_log_line": 45,
+      "event_id": "P4-GENERATE-002",
+      "file": "src/pead/phase4/generation.py"
+    },
+    {
+      "comment": "Construct every frozen-registry scope case and verify authority-safe behavior.",
+      "comment_line": 67,
+      "console_log_line": 68,
+      "event_id": "P4-GENERATE-003",
+      "file": "src/pead/phase4/generation.py"
+    },
+    {
+      "comment": "Enumerate and independently verify every fixed-method evidence proof.",
+      "comment_line": 76,
+      "console_log_line": 77,
+      "event_id": "P4-GENERATE-004",
+      "file": "src/pead/phase4/generation.py"
+    },
+    {
+      "comment": "Report the complete generated denominators and hard-gate verdict.",
+      "comment_line": 131,
+      "console_log_line": 132,
+      "event_id": "P4-GENERATE-005",
+      "file": "src/pead/phase4/generation.py"
+    },
+    {
+      "comment": "Discover the complete regression and Phase 4 verification suite.",
+      "comment_line": 29,
+      "console_log_line": 30,
+      "event_id": "P4-TEST-RUN-001",
+      "file": "src/pead/phase4/test_runner.py"
+    },
+    {
+      "comment": "Report the exact complete-suite test denominator before execution.",
+      "comment_line": 36,
+      "console_log_line": 37,
+      "event_id": "P4-TEST-RUN-002",
+      "file": "src/pead/phase4/test_runner.py"
+    },
+    {
+      "comment": "Retain the complete regression, unit, property, metamorphic, and stress verdict.",
+      "comment_line": 84,
+      "console_log_line": 85,
+      "event_id": "P4-TEST-RUN-003",
+      "file": "src/pead/phase4/test_runner.py"
+    }
+  ]
+}

@@ -1,0 +1,187 @@
+{
+  "allocation_yaml_sha256": "07cc49e66c4be21bb7db480b45e7aac6a9965a3050a3dd36c2d48f7d0fb89164",
+  "content_sha256": "5ea3bb615f4480f5841f3db4786a1c3a3172bfaf2331e8c3739f5fc3cc5b1ae4",
+  "diagnostic_definition_hashes": {
+    "DSCF-ZC-v1": "dd7abed0d83c8d337465512b4ed88549327e5f026d08fe6ce45cb87163080619",
+    "DSCF-ZF-v1": "e420f9325e2857d33204f94cd030f044d2963267d00f4eee6e66dd5ad17fa614",
+    "DSCF-ZH-v1": "368e9b2ee493726036d49ca68565651b46177326721c6a566da5a0b0b00dfb1a",
+    "DSCF-ZM-v1": "c0de53196f7393ed875fa358db59012064dca54be91898c53d53f6204928b1e5",
+    "DSCF-ZO-v1": "844196e7cd9d21af6ffef0583eafa36f071f0f196a4566ae4417af93ad0ed385",
+    "DSCF-ZP-v1": "b6e44137cd2c869948ad2a0f8a00d1b4c87b61c9a117ee87996f9816a548d2ee",
+    "DSCF-ZS-v1": "91a066a46375d0557eb88c38694ed6222c06c2886a1b236b270f42552e7e0222"
+  },
+  "diagnostic_registry_sha256": "3e8a91aa68dc42a40af59a6a43ee61f1cbddded42a6795df70e47076c829cc39",
+  "domains": [
+    "D1",
+    "D2",
+    "D3",
+    "D4",
+    "D5",
+    "D6",
+    "D7",
+    "D8"
+  ],
+  "evidence_sufficiency": {
+    "canonical_cases": 12000,
+    "cases_per_class_domain": 500,
+    "channels": {
+      "irreducible_exhausted": [
+        "registered_counterfactual_view"
+      ],
+      "irreducible_unavailable": [
+        "registered_evidence_query"
+      ],
+      "permitted": [
+        "registered_evidence_query",
+        "registered_counterfactual_view"
+      ],
+      "reducible_available": [
+        "registered_evidence_query"
+      ],
+      "reducible_unavailable": [
+        "registered_counterfactual_view"
+      ]
+    },
+    "classes": {
+      "irreducibly_ambiguous": {
+        "correct_policy": "Escalate",
+        "expected_conclusion": "irreducibly_ambiguous_escalate",
+        "paper_boundary": "Explicit_lower_floor"
+      },
+      "reducibly_ambiguous": {
+        "correct_policy": "Escalate",
+        "expected_conclusion": "ambiguity_resolution_available",
+        "paper_boundary": "Bridge_to_Paper_2"
+      },
+      "resolvable": {
+        "correct_policy": "Accept_or_Reject",
+        "expected_conclusion": "resolvable_unique",
+        "paper_boundary": "Paper_1_primary"
+      }
+    },
+    "proof": {
+      "method": "exact_finite_enumeration",
+      "sampling_claims_forbidden": true,
+      "solver_name": "pead-phase4-exact-enumerator",
+      "solver_version": "1.0"
+    }
+  },
+  "manifest_id": "phase4_allocation_validation_v1",
+  "manifest_kind": "phase4_implementation_validation",
+  "paper_boundary": {
+    "adaptive_acquisition_executed": false,
+    "fixed_methods_only": true,
+    "self_learning_mavs_primary_paper": false
+  },
+  "parent_phase3_content_sha256": "2228b4429751de3fe23966c9e0886085e719ff26bb7658b08208b2fbf0d78ea4",
+  "phase9a_final_signature_required": true,
+  "release_authority": "none",
+  "reversal": {
+    "additional_controls": 800,
+    "canonical_sequences": 4000,
+    "canonical_steps": 24000,
+    "controls": {
+      "false_reversal": 25,
+      "label_permutation": 25,
+      "nuisance": 25,
+      "prior_shift": 25
+    },
+    "families": [
+      {
+        "adverse_action": "Reject",
+        "changed_parent": "actor.permissions",
+        "family_id": "permission_revoke_restore",
+        "mechanism_id": "M01"
+      },
+      {
+        "adverse_action": "Reject",
+        "changed_parent": "policy.change_control.prohibited",
+        "family_id": "policy_version_change",
+        "mechanism_id": "M02"
+      },
+      {
+        "adverse_action": "Reject",
+        "changed_parent": "provenance.compromised",
+        "family_id": "provenance_compromise_discovery",
+        "mechanism_id": "M03"
+      },
+      {
+        "adverse_action": "Reject",
+        "changed_parent": "action.rollback_available",
+        "family_id": "rollback_loss_restore",
+        "mechanism_id": "M05"
+      },
+      {
+        "adverse_action": "Reject",
+        "changed_parent": "decision_time",
+        "family_id": "exception_expiry_restore",
+        "mechanism_id": "M07"
+      },
+      {
+        "adverse_action": "Escalate",
+        "changed_parent": "evidence.provenance_status",
+        "family_id": "evidence_restoration",
+        "mechanism_id": "M04"
+      }
+    ],
+    "length_counts_per_domain": {
+      "4": 100,
+      "6": 300,
+      "8": 100
+    },
+    "sequences_per_domain": 500,
+    "timing": {
+      "eight_step": {
+        "change_index": 2,
+        "restoration_index": 6
+      },
+      "four_step": {
+        "change_index": 1,
+        "restoration_index": 3
+      },
+      "interval_seconds": 60,
+      "six_step": {
+        "change_index": 2,
+        "restoration_index": 4
+      }
+    }
+  },
+  "schema_version": "1.0",
+  "scope": {
+    "additional_controls": 5600,
+    "boundary_distances": [
+      -1e-06,
+      0.0,
+      1e-06
+    ],
+    "canonical_banks": {
+      "adversarial_out_of_scope": 100,
+      "boundary": 100,
+      "matched_negative": 100,
+      "scope_positive": 100
+    },
+    "canonical_cases": 22400,
+    "cases_per_bank_diagnostic_domain": 100,
+    "control_banks": {
+      "composition": 25,
+      "label_permutation": 25,
+      "nuisance": 25,
+      "prior_shift": 25
+    },
+    "diagnostics": [
+      "DSCF-ZC-v1",
+      "DSCF-ZF-v1",
+      "DSCF-ZH-v1",
+      "DSCF-ZM-v1",
+      "DSCF-ZO-v1",
+      "DSCF-ZP-v1",
+      "DSCF-ZS-v1"
+    ]
+  },
+  "signer": "phase4-deterministic-validation-compiler-v1",
+  "track_config_sha256": {
+    "evidence": "86c1d2a0826603c9a2f08e7576a79342bfdaaecdd80fae21863037c1f65a5628",
+    "reversal": "275ca35660662ef18be5309a069fb08d7d6e641d884760bca18075d3dd34af26",
+    "scope": "ea6c5b1340458742121f5ed2177cf8db3994ec2a170a8d827a54411d3f70e2eb"
+  }
+}

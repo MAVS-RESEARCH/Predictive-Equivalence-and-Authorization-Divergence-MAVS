@@ -1,0 +1,34 @@
+schema_version: "1.0"
+track_id: diagnostic_scope_v1
+diagnostic_registry_id: PEAD-DIAGNOSTICS-v1
+allocation_source: final_claim_bank_v1
+canonical:
+  domains: 8
+  diagnostics: 7
+  banks:
+    scope_positive: 100
+    matched_negative: 100
+    boundary: 100
+    adversarial_out_of_scope: 100
+  cases_per_diagnostic_domain: 400
+  global_cases: 22400
+additional_controls:
+  cases_per_diagnostic_domain:
+    composition: 25
+    nuisance: 25
+    prior_shift: 25
+    label_permutation: 25
+  global_cases: 5600
+  fraction_of_canonical: 0.25
+authority:
+  out_of_scope_terminal_influence: forbidden
+  unregistered_influence: forbidden
+  raw_correlation_independent_veto: forbidden
+  certified_veto_override_by_mitigation: forbidden
+boundary:
+  signed_distances: [-0.000001, 0.0, 0.000001]
+  abrupt_unregistered_authority: forbidden
+paper_boundary:
+  diagnostic_execution_phase: 8
+  phase4_role: frozen_scope_case_construction
+  adaptive_diagnostic_acquisition: forbidden

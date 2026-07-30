@@ -1,0 +1,33 @@
+{
+  "adaptive_acquisition_executed": false,
+  "atomic_groups": 12000,
+  "classes": {
+    "irreducibly_ambiguous": 4000,
+    "reducibly_ambiguous": 4000,
+    "resolvable": 4000
+  },
+  "conclusions": {
+    "ambiguity_resolution_available": 4000,
+    "irreducibly_ambiguous_escalate": 4000,
+    "resolvable_unique": 4000
+  },
+  "domains": {
+    "D1": 1500,
+    "D2": 1500,
+    "D3": 1500,
+    "D4": 1500,
+    "D5": 1500,
+    "D6": 1500,
+    "D7": 1500,
+    "D8": 1500
+  },
+  "expected_actions": {
+    "Accept": 2000,
+    "Escalate": 8000,
+    "Reject": 2000
+  },
+  "reducible_channel_removal_action": "Escalate",
+  "reducible_channel_removal_conclusion": "irreducibly_ambiguous_escalate",
+  "total_cases": 12000,
+  "verified_certificates": 12000
+}

@@ -1,0 +1,55 @@
+schema_version: "1.0"
+track_id: reversal_v1
+allocation_source: final_claim_bank_v1
+canonical:
+  sequences_per_domain: 500
+  global_sequences: 4000
+  length_counts_per_domain:
+    "4": 100
+    "6": 300
+    "8": 100
+  global_steps: 24000
+families:
+  - family_id: permission_revoke_restore
+    mechanism_id: M01
+    changed_parent: actor.permissions
+    adverse_action: Reject
+  - family_id: policy_version_change
+    mechanism_id: M02
+    changed_parent: policy.change_control.prohibited
+    adverse_action: Reject
+  - family_id: provenance_compromise_discovery
+    mechanism_id: M03
+    changed_parent: provenance.compromised
+    adverse_action: Reject
+  - family_id: rollback_loss_restore
+    mechanism_id: M05
+    changed_parent: action.rollback_available
+    adverse_action: Reject
+  - family_id: exception_expiry_restore
+    mechanism_id: M07
+    changed_parent: decision_time
+    adverse_action: Reject
+  - family_id: evidence_restoration
+    mechanism_id: M04
+    changed_parent: evidence.provenance_status
+    adverse_action: Escalate
+controls:
+  additional_per_domain: 100
+  kinds:
+    false_reversal: 25
+    nuisance: 25
+    prior_shift: 25
+    label_permutation: 25
+  minimum_fraction_of_canonical: 0.20
+timing:
+  four_step: {change_index: 1, restoration_index: 3}
+  six_step: {change_index: 2, restoration_index: 4}
+  eight_step: {change_index: 2, restoration_index: 6}
+  interval_seconds: 60
+requirements:
+  predictive_state_byte_stable: true
+  dual_label_agreement: true
+  stale_authorization_opportunity_required: true
+  recovery_state_required: true
+  false_reversal_control_required: true

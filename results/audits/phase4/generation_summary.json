@@ -1,0 +1,127 @@
+{
+  "evidence_sufficiency": {
+    "adaptive_acquisition_executed": false,
+    "atomic_groups": 12000,
+    "classes": {
+      "irreducibly_ambiguous": 4000,
+      "reducibly_ambiguous": 4000,
+      "resolvable": 4000
+    },
+    "conclusions": {
+      "ambiguity_resolution_available": 4000,
+      "irreducibly_ambiguous_escalate": 4000,
+      "resolvable_unique": 4000
+    },
+    "domains": {
+      "D1": 1500,
+      "D2": 1500,
+      "D3": 1500,
+      "D4": 1500,
+      "D5": 1500,
+      "D6": 1500,
+      "D7": 1500,
+      "D8": 1500
+    },
+    "expected_actions": {
+      "Accept": 2000,
+      "Escalate": 8000,
+      "Reject": 2000
+    },
+    "reducible_channel_removal_action": "Escalate",
+    "reducible_channel_removal_conclusion": "irreducibly_ambiguous_escalate",
+    "total_cases": 12000,
+    "verified_certificates": 12000
+  },
+  "paper_boundary": {
+    "adaptive_acquisition_executed": false,
+    "fixed_methods_only": true,
+    "models_trained": 0,
+    "released_claim_bank_rows": 0
+  },
+  "reversal": {
+    "additional_controls": 800,
+    "ambiguity_certificates": 1200,
+    "atomic_groups": 4800,
+    "authorization_labels": {
+      "Accept": 14800,
+      "Escalate": 1200,
+      "Reject": 8000
+    },
+    "canonical_sequences": 4000,
+    "canonical_steps": 24000,
+    "control_kinds": {
+      "false_reversal": 200,
+      "label_permutation": 200,
+      "nuisance": 200,
+      "prior_shift": 200
+    },
+    "domains": {
+      "D1": 500,
+      "D2": 500,
+      "D3": 500,
+      "D4": 500,
+      "D5": 500,
+      "D6": 500,
+      "D7": 500,
+      "D8": 500
+    },
+    "false_reversal_controls": 200,
+    "families": {
+      "evidence_restoration": 664,
+      "exception_expiry_restore": 664,
+      "permission_revoke_restore": 672,
+      "policy_version_change": 672,
+      "provenance_compromise_discovery": 664,
+      "rollback_loss_restore": 664
+    },
+    "generation_or_label_disagreements": 0,
+    "known_change_and_restoration_times": true,
+    "lengths": {
+      "4": 800,
+      "6": 2400,
+      "8": 800
+    },
+    "stale_authorization_opportunities": 8000
+  },
+  "schema_version": "1.0",
+  "scope": {
+    "additional_controls": 5600,
+    "atomic_groups": 28000,
+    "banks": {
+      "adversarial_out_of_scope": 5600,
+      "boundary": 5600,
+      "composition": 1400,
+      "label_permutation": 1400,
+      "matched_negative": 5600,
+      "nuisance": 1400,
+      "prior_shift": 1400,
+      "scope_positive": 5600
+    },
+    "canonical_cases": 22400,
+    "diagnostics": {
+      "DSCF-ZC-v1": 4000,
+      "DSCF-ZF-v1": 4000,
+      "DSCF-ZH-v1": 4000,
+      "DSCF-ZM-v1": 4000,
+      "DSCF-ZO-v1": 4000,
+      "DSCF-ZP-v1": 4000,
+      "DSCF-ZS-v1": 4000
+    },
+    "domains": {
+      "D1": 3500,
+      "D2": 3500,
+      "D3": 3500,
+      "D4": 3500,
+      "D5": 3500,
+      "D6": 3500,
+      "D7": 3500,
+      "D8": 3500
+    },
+    "out_of_scope_terminal_changes": 0,
+    "out_of_scope_truth_changes": 0,
+    "raw_correlation_terminal_vetoes": 0,
+    "total_cases": 28000,
+    "unregistered_terminal_influences": 0
+  },
+  "status": "pass"
+}

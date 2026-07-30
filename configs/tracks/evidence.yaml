@@ -1,0 +1,35 @@
+schema_version: "1.0"
+track_id: evidence_sufficiency_v1
+allocation_source: final_claim_bank_v1
+canonical:
+  domains: 8
+  cases_per_class_domain: 500
+  classes:
+    resolvable:
+      expected_conclusion: resolvable_unique
+      correct_policy: Accept_or_Reject
+      paper_boundary: Paper_1_primary
+    reducibly_ambiguous:
+      expected_conclusion: ambiguity_resolution_available
+      correct_policy: Escalate
+      paper_boundary: Bridge_to_Paper_2
+    irreducibly_ambiguous:
+      expected_conclusion: irreducibly_ambiguous_escalate
+      correct_policy: Escalate
+      paper_boundary: Explicit_lower_floor
+  global_cases: 12000
+channels:
+  permitted: [registered_evidence_query, registered_counterfactual_view]
+  reducible_available: [registered_evidence_query]
+  reducible_unavailable: [registered_counterfactual_view]
+  irreducible_unavailable: [registered_evidence_query]
+  irreducible_exhausted: [registered_counterfactual_view]
+proof:
+  method: exact_finite_enumeration
+  solver_name: pead-phase4-exact-enumerator
+  solver_version: "1.0"
+  sampling_claims_forbidden: true
+paper_boundary:
+  fixed_methods_represent_unresolved_evidence: true
+  adaptive_acquisition_executed: false
+  self_learning_mavs_primary_paper: forbidden

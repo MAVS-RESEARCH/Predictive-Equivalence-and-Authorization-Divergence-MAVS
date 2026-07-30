@@ -90,6 +90,18 @@ claim-bank rows; the signed Phase 9A allocation remains a mandatory release gate
 .\.venv\Scripts\python.exe scripts\audit_equivalence.py
 ```
 
+## Phase 4 verification
+
+Phase 4 constructs governance-reversal sequences, frozen-registry diagnostic
+scope banks, and exact compatible-world evidence-sufficiency proofs. It retains
+validation evidence only; it does not train a scientific model, release a final
+claim bank, or execute adaptive evidence acquisition.
+
+```powershell
+.\.venv\Scripts\python.exe scripts\run_phase4_tests.py
+.\.venv\Scripts\python.exe scripts\audit_phase4.py
+```
+
 ## Scientific boundaries
 
 The project does not claim universal prediction insufficiency, universal MAVS optimality, deployment readiness, certification, or zero risk. Negative scientific outcomes are publishable when integrity gates pass. Integrity failures invalidate affected results.
