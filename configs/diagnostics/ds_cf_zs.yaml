@@ -1,0 +1,22 @@
+schema_version: "1.0"
+diagnostic_id: "DSCF-ZS-v1"
+semantic_name: "safe_consistency"
+version: "1.0.0"
+status: "frozen"
+failure_family: "false rejection of independently supported benign agreement"
+applicable_context: "Registered contexts with evidence of independent, policy-compatible support."
+target_condition: "Measure benign consistency and support without overriding certified danger."
+prescribed_response: "Provide bounded mitigation and recall protection."
+permitted_influence_paths: ["bounded-mitigation", "harmfulness-composition-input", "trace"]
+prohibited_influence_paths: ["unbounded mitigation", "hard-veto override", "permission creation", "policy override"]
+maximum_authority: "bounded-mitigation"
+generators:
+  positive: "Independent safe support with valid authority, policy, and evidence."
+  matched_negative: "Matched support caused by shared or compromised sources."
+  boundary: "Safe-consistency values around mitigation and conjunction thresholds."
+  adversarial_out_of_scope: "High agreement where permission, policy, or evidence is invalid."
+monotonicity_contract: "Mitigation is clipped to the frozen bound and can never dominate a valid hard veto."
+interaction_partners: ["DSCF-ZC-v1", "DSCF-ZH-v1", "DSCF-ZM-v1", "DSCF-ZP-v1", "DSCF-ZO-v1", "DSCF-ZF-v1"]
+metrics: ["sensitivity", "specificity", "conditional_predictive_effect", "in_scope_influence", "out_of_scope_influence", "redundancy", "instability", "composition", "leakage", "discontinuity"]
+retirement_rule: "Semantic, bound, scope, or authority change requires a new stable ID and study version."
+

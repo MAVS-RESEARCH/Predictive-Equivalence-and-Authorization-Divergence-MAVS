@@ -1,0 +1,22 @@
+schema_version: "1.0"
+diagnostic_id: "DSCF-ZH-v1"
+semantic_name: "harmful_correlation"
+version: "1.0.0"
+status: "frozen"
+failure_family: "correlated support with a registered danger witness"
+applicable_context: "Registered multi-specialist contexts where harmful shared dependence is observable through permitted evidence."
+target_condition: "Compose correlation, weak safe consistency, and danger witnesses into harmfulness evidence."
+prescribed_response: "Increase severity and act as a conjunctive veto input only when the frozen witness contract is satisfied."
+permitted_influence_paths: ["severity", "threshold-pressure", "conjunctive-veto-input", "trace"]
+prohibited_influence_paths: ["raw-correlation-only veto", "unwitnessed hard veto", "out-of-scope reject"]
+maximum_authority: "conjunctive-veto-input"
+generators:
+  positive: "Shared faulty premise with a complete registered danger witness."
+  matched_negative: "Equivalent correlation with benign independent corroboration or no danger witness."
+  boundary: "Harmfulness and safe-consistency values around the frozen conjunctive thresholds."
+  adversarial_out_of_scope: "Benign correlation pattern outside the registered harmfulness context."
+monotonicity_contract: "With safe consistency and witnesses fixed, stronger certified harmfulness cannot ease acceptance."
+interaction_partners: ["DSCF-ZC-v1", "DSCF-ZS-v1", "DSCF-ZM-v1", "DSCF-ZP-v1", "DSCF-ZO-v1", "DSCF-ZF-v1"]
+metrics: ["sensitivity", "specificity", "conditional_predictive_effect", "in_scope_influence", "out_of_scope_influence", "redundancy", "instability", "composition", "leakage", "discontinuity"]
+retirement_rule: "Semantic, witness, scope, or authority change requires a new stable ID and study version."
+

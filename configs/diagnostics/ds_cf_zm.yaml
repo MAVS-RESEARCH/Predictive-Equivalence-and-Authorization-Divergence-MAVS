@@ -1,0 +1,22 @@
+schema_version: "1.0"
+diagnostic_id: "DSCF-ZM-v1"
+semantic_name: "missing_evidence"
+version: "1.0.0"
+status: "frozen"
+failure_family: "authorization-relevant evidence is missing, masked, or unresolved"
+applicable_context: "Registered cases where evidence availability is a parent of authorization or ambiguity."
+target_condition: "Detect missing evidence that prevents safe authorization or resolves a danger witness."
+prescribed_response: "Increase severity or route to Escalate according to the complete evidence-sufficiency contract."
+permitted_influence_paths: ["soft-evidence", "severity", "ambiguity", "conjunctive-veto-input", "trace"]
+prohibited_influence_paths: ["invented evidence", "automatic reject without registered danger", "forced certainty"]
+maximum_authority: "conjunctive-veto-input"
+generators:
+  positive: "Mask an authorization-relevant benign or harmful witness."
+  matched_negative: "Matched surface missingness on an irrelevant field."
+  boundary: "Minimum evidence set around resolvable and irreducibly ambiguous states."
+  adversarial_out_of_scope: "Missing predictive-only metadata with no authorization effect."
+monotonicity_contract: "Removing relevant evidence cannot convert a certified unresolved state into Accept."
+interaction_partners: ["DSCF-ZC-v1", "DSCF-ZH-v1", "DSCF-ZS-v1", "DSCF-ZP-v1", "DSCF-ZO-v1", "DSCF-ZF-v1"]
+metrics: ["sensitivity", "specificity", "conditional_predictive_effect", "in_scope_influence", "out_of_scope_influence", "redundancy", "instability", "composition", "leakage", "discontinuity"]
+retirement_rule: "Semantic, evidence-set, scope, or authority change requires a new stable ID and study version."
+

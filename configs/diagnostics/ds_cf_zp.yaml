@@ -1,0 +1,22 @@
+schema_version: "1.0"
+diagnostic_id: "DSCF-ZP-v1"
+semantic_name: "policy_conflict"
+version: "1.0.0"
+status: "frozen"
+failure_family: "active policy constraints conflict or do not authorize the candidate action"
+applicable_context: "Registered policy contexts and versions where the visible logical form applies."
+target_condition: "Detect active policy conflict within the declared policy scope."
+prescribed_response: "Apply registered severity, threshold, ambiguity, or veto influence according to policy semantics."
+permitted_influence_paths: ["severity", "threshold-pressure", "ambiguity", "conjunctive-veto-input", "trace"]
+prohibited_influence_paths: ["out-of-scope policy application", "silent policy-version substitution", "unregistered exception inference"]
+maximum_authority: "conjunctive-veto-input"
+generators:
+  positive: "Active applicable policy conflict or prohibition."
+  matched_negative: "Matched policy text with compatible scope, exception, or inactive version."
+  boundary: "Effective-time, jurisdiction-proxy, exception, and precedence boundaries."
+  adversarial_out_of_scope: "Lexically similar policy from an inapplicable context."
+monotonicity_contract: "Activating an applicable prohibition cannot ease acceptance while other authorization parents remain fixed."
+interaction_partners: ["DSCF-ZC-v1", "DSCF-ZH-v1", "DSCF-ZS-v1", "DSCF-ZM-v1", "DSCF-ZO-v1", "DSCF-ZF-v1"]
+metrics: ["sensitivity", "specificity", "conditional_predictive_effect", "in_scope_influence", "out_of_scope_influence", "redundancy", "instability", "composition", "leakage", "discontinuity"]
+retirement_rule: "Semantic, policy-scope, precedence, or authority change requires a new stable ID and study version."
+

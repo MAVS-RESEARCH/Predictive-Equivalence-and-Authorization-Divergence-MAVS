@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools==80.9.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pead-bench"
+version = "0.1.0"
+description = "Predictive Equivalence and Authorization Divergence benchmark controls"
+readme = "README.md"
+requires-python = ">=3.11,<3.14"
+license = {file = "LICENSE"}
+authors = [{name = "MAVS Research"}]
+dependencies = [
+  "PyYAML==6.0.2",
+  "python-docx==1.2.0",
+]
+
+[project.scripts]
+pead-validate-config = "pead.config.validator:main"
+pead-audit-phase0 = "pead.phase0.audit:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+

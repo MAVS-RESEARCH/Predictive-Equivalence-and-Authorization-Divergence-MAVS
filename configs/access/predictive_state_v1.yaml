@@ -1,0 +1,132 @@
+schema_version: "1.0"
+state_type: "PredictiveState"
+dictionary_id: "PEAD-PREDICTIVE-v1"
+frozen_in_phase: 0
+fields:
+  - stable_id: "P-SHARED-v1"
+    name: "shared_representation"
+    semantic_definition: "Canonical shared prediction-facing representation or feature state."
+    data_type: "array[number] or typed feature mapping"
+    shape: "domain-declared and frozen"
+    units_or_range: "field registry"
+    canonicalization: "UTF-8 NFC keys, deterministic field order, frozen float quantization"
+    visibility: ["P-only", "Raw-G", "Oracle-G"]
+    hashing_rule: "SHA-256 of canonical bytes"
+    near_distance_rule: "typed aggregate distance from near-distance registry"
+    exact_twin_equal: true
+    missing_value_rule: "typed missing marker; missing/missing equal"
+    permitted_transformations: ["registered tabular", "registered sequence", "registered graph"]
+    prohibited_derived_information: ["provenance", "policy", "authority", "temporal state", "consequence", "evidence availability", "domain ID", "mechanism ID", "split ID"]
+  - stable_id: "P-SPECIALISTS-v1"
+    name: "specialist_outputs"
+    semantic_definition: "Ordered specialist outputs and scores visible to prediction-facing methods."
+    data_type: "array[SpecialistOutput]"
+    shape: "fixed specialist registry order"
+    units_or_range: "signed support and registered score range"
+    canonicalization: "stable specialist ID then frozen float quantization"
+    visibility: ["P-only", "Raw-G", "Oracle-G"]
+    hashing_rule: "SHA-256 of canonical bytes"
+    near_distance_rule: "root-mean-square normalized component distance"
+    exact_twin_equal: true
+    missing_value_rule: "explicit typed unavailable output"
+    permitted_transformations: ["registered vectorization", "registered sequence rendering"]
+    prohibited_derived_information: ["specialist-source governance metadata", "authorization label"]
+  - stable_id: "P-SUPPORT-v1"
+    name: "support_vector"
+    semantic_definition: "Signed support vector produced by the registered specialist layer."
+    data_type: "array[number]"
+    shape: "[n_specialists]"
+    units_or_range: "[-1,1] unless domain registry states otherwise"
+    canonicalization: "fixed specialist order and frozen float quantization"
+    visibility: ["P-only", "Raw-G", "Oracle-G"]
+    hashing_rule: "SHA-256 of canonical bytes"
+    near_distance_rule: "root-mean-square normalized component distance"
+    exact_twin_equal: true
+    missing_value_rule: "explicit typed missing component"
+    permitted_transformations: ["registered normalization"]
+    prohibited_derived_information: ["governance annotations", "authorization label"]
+  - stable_id: "P-LABEL-v1"
+    name: "predicted_task_label"
+    semantic_definition: "Prediction-layer task label proposed for possible action."
+    data_type: "string"
+    shape: "scalar"
+    units_or_range: "domain task-label registry"
+    canonicalization: "stable label ID"
+    visibility: ["P-only", "Raw-G", "Oracle-G"]
+    hashing_rule: "SHA-256 of UTF-8 stable label ID"
+    near_distance_rule: "registered categorical mismatch cost"
+    exact_twin_equal: true
+    missing_value_rule: "explicit no-prediction ID"
+    permitted_transformations: ["one-hot encoding"]
+    prohibited_derived_information: ["authorization label"]
+  - stable_id: "P-CONFIDENCE-v1"
+    name: "predictive_confidence"
+    semantic_definition: "Prediction-layer confidence in the proposed task label."
+    data_type: "number"
+    shape: "scalar"
+    units_or_range: "[0,1]"
+    canonicalization: "clip to [0,1] then frozen quantization"
+    visibility: ["P-only", "Raw-G", "Oracle-G"]
+    hashing_rule: "SHA-256 of canonical decimal"
+    near_distance_rule: "absolute logit distance with registered clipping and scale"
+    exact_twin_equal: true
+    missing_value_rule: "typed missing; no implicit zero"
+    permitted_transformations: ["logit", "registered calibration transform"]
+    prohibited_derived_information: ["policy-conditioned confidence", "authority-conditioned confidence"]
+  - stable_id: "P-UNCERTAINTY-v1"
+    name: "predictive_uncertainty"
+    semantic_definition: "Prediction-layer uncertainty measure independent of authorization evidence."
+    data_type: "number or fixed vector"
+    shape: "registry-defined"
+    units_or_range: "registry-defined nonnegative range"
+    canonicalization: "frozen float quantization"
+    visibility: ["P-only", "Raw-G", "Oracle-G"]
+    hashing_rule: "SHA-256 of canonical bytes"
+    near_distance_rule: "normalized scalar or vector distance"
+    exact_twin_equal: true
+    missing_value_rule: "typed missing"
+    permitted_transformations: ["registered monotone transform"]
+    prohibited_derived_information: ["evidence availability", "consequence class", "authorization label"]
+  - stable_id: "P-AGREEMENT-v1"
+    name: "agreement_disagreement"
+    semantic_definition: "Prediction-facing specialist agreement and disagreement summaries."
+    data_type: "mapping[string,number]"
+    shape: "frozen summary field set"
+    units_or_range: "registered per summary"
+    canonicalization: "sorted stable keys and frozen quantization"
+    visibility: ["P-only", "Raw-G", "Oracle-G"]
+    hashing_rule: "SHA-256 of canonical mapping"
+    near_distance_rule: "weighted maximum of normalized field distances"
+    exact_twin_equal: true
+    missing_value_rule: "typed missing per summary"
+    permitted_transformations: ["registered vectorization"]
+    prohibited_derived_information: ["provenance independence", "shared-premise truth", "authorization label"]
+  - stable_id: "P-CALIBRATION-v1"
+    name: "calibration_estimate"
+    semantic_definition: "Prediction-layer calibration or nonconformity summary fixed before blind evaluation."
+    data_type: "mapping[string,number]"
+    shape: "frozen estimator output"
+    units_or_range: "registered estimator range"
+    canonicalization: "sorted keys and frozen quantization"
+    visibility: ["P-only", "Raw-G", "Oracle-G"]
+    hashing_rule: "SHA-256 of canonical mapping"
+    near_distance_rule: "normalized scalar/vector distance"
+    exact_twin_equal: true
+    missing_value_rule: "typed unavailable estimate"
+    permitted_transformations: ["registered probability or conformal rendering"]
+    prohibited_derived_information: ["holdout prevalence", "governance class", "hidden label"]
+  - stable_id: "P-ACTION-v1"
+    name: "candidate_action"
+    semantic_definition: "Canonical candidate action proposed by the prediction layer."
+    data_type: "typed mapping"
+    shape: "domain action schema"
+    units_or_range: "domain registry"
+    canonicalization: "sorted keys, stable action IDs, normalized arguments"
+    visibility: ["P-only", "Raw-G", "Oracle-G"]
+    hashing_rule: "SHA-256 of canonical action bytes"
+    near_distance_rule: "field-specific categorical, scalar, set, graph, or text distance"
+    exact_twin_equal: true
+    missing_value_rule: "candidate action is required"
+    permitted_transformations: ["registered tabular", "registered sequence"]
+    prohibited_derived_information: ["permission", "policy", "reversibility", "consequence", "execution context"]
+

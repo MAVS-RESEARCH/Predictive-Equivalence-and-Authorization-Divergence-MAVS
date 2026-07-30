@@ -1,0 +1,156 @@
+schema_version: "1.0"
+study:
+  id: "PEAD-MAIN-v1"
+  version: "1.0.0"
+  status: "phase-0-frozen"
+  base_commit: "9e6c1a7113f416c83aec4110c399273a2ded8b9b"
+  plan_commit_at_phase_start: "c388d0ef329903d3ff728dd3cb91138bf97dba7f"
+  primary_paper: "PEAD Paper 1"
+  adaptive_companion_in_scope: false
+  timezone: "Asia/Karachi"
+source_documents:
+  - source_id: "PEAD-SPEC-v1"
+    role: "normative-specification"
+    filename: "PEAD_Benchmark_Implementation_Specification_v1.0.docx"
+    sha256: "820650b6ce0276cebf6f8d0b96813e4a99018bf30aae2010f50b5ca0c8ee27df"
+  - source_id: "MAVS-DS-v1"
+    role: "scientific-context"
+    filename: "MAVS-Diagnostic Sciences.pdf"
+    sha256: "b7cc77bf32558b042b8ecfa7c4bb9267b53910b0b84816198cf34a9e73eee758"
+hypotheses:
+  H1:
+    name: "information necessity"
+    statement: "Prediction-facing state alone is insufficient to determine Accept, Reject, or Escalate on the registered authorization-divergent PEAD class."
+    independently_reportable: true
+    required_claims: ["C1", "C2", "C3"]
+    nulls: ["N1", "N3", "N4", "N5"]
+  H2:
+    name: "architecture value"
+    statement: "Under equal Raw-G information and matched cases, budgets, tuning, and reporting, structured MAVS-GC provides a pre-registered protected, scope, or transfer advantage over eligible flat or generic Raw-G methods."
+    independently_reportable: true
+    depends_on_valid_h1: true
+    required_claims: ["C4", "C5", "C6"]
+    nulls: ["N2", "N4", "N5"]
+  H3:
+    name: "adaptive perception"
+    statement: "Reserved for a separately versioned Self-Learning MAVS companion study."
+    paper_1_status: "excluded"
+claims:
+  registry: "CLAIMS.md"
+  ids: ["C1", "C2", "C3", "C4", "C5", "C6"]
+  forbidden_global_wording:
+    - "universal prediction insufficiency"
+    - "universal MAVS optimality"
+    - "deployment certification"
+    - "zero risk"
+    - "escalation alone is safety"
+    - "proxy comparator is an official framework evaluation"
+data_roles:
+  - id: "development_fit"
+    purpose: "gradient fitting and preprocessing or vocabulary estimation"
+    group_atomic: true
+  - id: "development_selection"
+    purpose: "hyperparameter, architecture, checkpoint, and early-stopping selection"
+    group_atomic: true
+  - id: "calibration_fit"
+    purpose: "probability calibration and conformal quantile fitting"
+    group_atomic: true
+  - id: "calibration_policy"
+    purpose: "terminal thresholds and lexicographic operating-point selection"
+    group_atomic: true
+data_role_constraints:
+  mutually_disjoint: true
+  atomic_keys:
+    - "pair_id"
+    - "sequence_id"
+    - "latent_family_id"
+    - "template_family_id"
+    - "intervention_lineage_id"
+    - "provenance_lineage_id"
+  public_validation: "inspection-only"
+access_profiles:
+  P-only:
+    visible_states: ["PredictiveState"]
+    headline_eligible: true
+  Raw-G:
+    visible_states: ["PredictiveState", "GovernanceState"]
+    headline_eligible: true
+  Oracle-G:
+    visible_states: ["PredictiveState", "GovernanceState", "OracleState"]
+    headline_eligible: false
+    role: "deterministic hard-gate and learned diagnostic sanity"
+cross_profile_identity:
+  identical_ids:
+    - "world_id"
+    - "pair_id"
+    - "sequence_id"
+    - "atomic_group_id"
+    - "partition_id"
+  only_projection_may_differ: true
+integrity_gates:
+  PEI: 1.0
+  ADI: 1.0
+  dual_label_agreement: 1.0
+  deterministic_oracle_rule_accuracy: 1.0
+  oracle_round_trip_accuracy: 1.0
+  trace_completeness: 1.0
+  access_compliance: 1.0
+  deterministic_artifact_reproduction: 1.0
+  generator_mavs_dependency_allowed: false
+negative_result_policy:
+  publish_integrity_valid_negative: true
+  scientific_underperformance_allows_retuning: false
+  scientific_underperformance_allows_omission: false
+  integrity_failure_invalidates_affected_results: true
+outcome_tiers:
+  - id: "integrity-valid-negative"
+    objective_condition: "All integrity gates pass and H1 fails."
+    maximum_interpretation: "The registered PEAD formulation did not establish prediction insufficiency."
+  - id: "paradigm-support"
+    objective_condition: "The exact/near P-only frontier matches the registered lower bound and Raw-G escapes on blind families."
+    maximum_interpretation: "Prediction-facing state is insufficient on the registered PEAD class."
+  - id: "generalized-paradigm-support"
+    objective_condition: "Paradigm support persists across structural and domain holdouts."
+    maximum_interpretation: "The effect covers the broad registered class, not one grammar."
+  - id: "architectural-support"
+    objective_condition: "MAVS improves a frozen protected/scope/transfer frontier over the best eligible equal-information Raw-G comparator."
+    maximum_interpretation: "Structured governance adds value in the registered conditions."
+  - id: "strongest-result"
+    objective_condition: "Generalized H1, architectural support, scalar-compression failure, and audit-perfect reproduction."
+    maximum_interpretation: "Paradigm-level impact potential without universal, deployment, certification, or zero-risk claims."
+stop_conditions:
+  - id: "STOP-01"
+    condition: "Any released exact pair has non-identical PredictiveState."
+    action: "Stop execution; invalidate the affected pair and bank."
+  - id: "STOP-02"
+    condition: "Any released case has dual-label disagreement."
+    action: "Stop execution; quarantine the case and block dependent release."
+  - id: "STOP-03"
+    condition: "Any method accesses a hidden label or forbidden field."
+    action: "Stop execution; invalidate affected method results."
+  - id: "STOP-04"
+    condition: "Any final-bank contamination or post-freeze tuning occurs."
+    action: "Stop execution; invalidate the blind run."
+  - id: "STOP-05"
+    condition: "Any headline result lacks complete trace lineage."
+    action: "Stop execution; block the headline result."
+  - id: "STOP-06"
+    condition: "Clean reproduction changes a claim."
+    action: "Stop release; invalidate the affected reproducibility claim."
+  - id: "STOP-07"
+    condition: "Benchmark truth generation depends on MAVS implementation code."
+    action: "Invalidate the study version."
+versioning:
+  phase_0_frozen_files:
+    - "CLAIMS.md"
+    - "configs/study/pead_main_v1.yaml"
+    - "configs/access/predictive_state_v1.yaml"
+    - "configs/access/governance_state_v1.yaml"
+    - "configs/holdouts/holdout_registry_v1.yaml"
+    - "configs/diagnostics/schema.yaml"
+    - "configs/methods/method_inventory_v1.yaml"
+    - "configs/requirements/pead_v1_requirements.yaml"
+    - "configs/metrics/protected_objective_v1.yaml"
+    - "docs/blind_custody_protocol.md"
+  change_after_freeze: "new-study-version-and-dependent-regeneration"
+

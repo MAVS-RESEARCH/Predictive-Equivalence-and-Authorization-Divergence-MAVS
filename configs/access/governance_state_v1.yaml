@@ -1,0 +1,132 @@
+schema_version: "1.0"
+state_type: "GovernanceState"
+dictionary_id: "PEAD-GOVERNANCE-v1"
+frozen_in_phase: 0
+fields:
+  - stable_id: "G-PROVENANCE-v1"
+    name: "provenance"
+    semantic_definition: "Observed source identities, types, independence evidence, compromise observations, and profile-permitted trust metadata."
+    data_type: "typed graph and mapping"
+    shape: "variable graph with registered node and edge types"
+    units_or_range: "registry-defined"
+    canonicalization: "stable node/edge order and sorted metadata keys"
+    visibility: ["Raw-G", "Oracle-G"]
+    hashing_rule: "SHA-256 of canonical graph bytes"
+    near_distance_rule: "registered weighted graph-edit distance"
+    exact_twin_equal: false
+    missing_value_rule: "observed, missing, and unknown are distinct"
+    permitted_transformations: ["registered tabular", "registered sequence", "registered graph"]
+    prohibited_derived_information: ["AuthorizationLabel", "OracleState", "split identity"]
+  - stable_id: "G-AUTHORITY-v1"
+    name: "permissions_authority"
+    semantic_definition: "Observed actor, role, delegation, scope, limit, and revocation state."
+    data_type: "typed mapping"
+    shape: "registered authority facts"
+    units_or_range: "policy registry"
+    canonicalization: "stable actor/role/scope IDs and sorted facts"
+    visibility: ["Raw-G", "Oracle-G"]
+    hashing_rule: "SHA-256 of canonical mapping"
+    near_distance_rule: "weighted categorical/set distance"
+    exact_twin_equal: false
+    missing_value_rule: "unknown is not permission"
+    permitted_transformations: ["registered rule facts", "tabular", "sequence"]
+    prohibited_derived_information: ["AuthorizationLabel", "latent authority truth"]
+  - stable_id: "G-POLICY-v1"
+    name: "policy"
+    semantic_definition: "Observed active rules, versions, proxy jurisdictions or contexts, exceptions, and conflicts."
+    data_type: "typed rule sequence"
+    shape: "registered policy grammar"
+    units_or_range: "policy registry"
+    canonicalization: "canonical logical form and stable rule/version IDs"
+    visibility: ["Raw-G", "Oracle-G"]
+    hashing_rule: "SHA-256 of canonical logical form"
+    near_distance_rule: "typed tree/set edit distance"
+    exact_twin_equal: false
+    missing_value_rule: "unknown policy state is explicit"
+    permitted_transformations: ["registered AST", "sequence", "tabular"]
+    prohibited_derived_information: ["AuthorizationLabel", "hidden policy truth"]
+  - stable_id: "G-TEMPORAL-v1"
+    name: "temporal_state"
+    semantic_definition: "Observed validity windows, permitted history, and registered phase/change indicators."
+    data_type: "typed temporal mapping"
+    shape: "registered timestamps and intervals"
+    units_or_range: "UTC instants and durations"
+    canonicalization: "UTC ISO-8601 and stable event order"
+    visibility: ["Raw-G", "Oracle-G"]
+    hashing_rule: "SHA-256 of canonical temporal bytes"
+    near_distance_rule: "normalized absolute time distance plus categorical state cost"
+    exact_twin_equal: false
+    missing_value_rule: "unknown time and absent event are distinct"
+    permitted_transformations: ["registered interval features", "sequence"]
+    prohibited_derived_information: ["future hidden events", "AuthorizationLabel"]
+  - stable_id: "G-REVERSIBILITY-v1"
+    name: "reversibility"
+    semantic_definition: "Observed rollback availability, irreversibility, and recovery constraints."
+    data_type: "typed mapping"
+    shape: "registered reversibility fields"
+    units_or_range: "categorical flags and bounded costs"
+    canonicalization: "stable keys and quantized costs"
+    visibility: ["Raw-G", "Oracle-G"]
+    hashing_rule: "SHA-256 of canonical mapping"
+    near_distance_rule: "weighted categorical/scalar distance"
+    exact_twin_equal: false
+    missing_value_rule: "unknown reversibility is explicit"
+    permitted_transformations: ["tabular", "sequence"]
+    prohibited_derived_information: ["AuthorizationLabel", "latent recovery outcome"]
+  - stable_id: "G-CONSEQUENCE-v1"
+    name: "consequence_class"
+    semantic_definition: "Observed impact class, budget or blast radius, and registered loss tier."
+    data_type: "typed mapping"
+    shape: "registered consequence fields"
+    units_or_range: "ordered impact classes and bounded quantities"
+    canonicalization: "stable class IDs and frozen quantization"
+    visibility: ["Raw-G", "Oracle-G"]
+    hashing_rule: "SHA-256 of canonical mapping"
+    near_distance_rule: "ordered categorical and normalized scalar distance"
+    exact_twin_equal: false
+    missing_value_rule: "unknown consequence is explicit"
+    permitted_transformations: ["tabular", "sequence"]
+    prohibited_derived_information: ["AuthorizationLabel", "latent realized harm"]
+  - stable_id: "G-EVIDENCE-v1"
+    name: "evidence_availability"
+    semantic_definition: "Observed, missing, and unknown facts plus permitted queries, views, and resolution-channel availability."
+    data_type: "typed mapping and set"
+    shape: "registered evidence channels"
+    units_or_range: "availability states and query budgets"
+    canonicalization: "stable evidence IDs and sorted sets"
+    visibility: ["Raw-G", "Oracle-G"]
+    hashing_rule: "SHA-256 of canonical bytes"
+    near_distance_rule: "weighted set/categorical distance"
+    exact_twin_equal: false
+    missing_value_rule: "observed, missing, masked, and unknown are distinct"
+    permitted_transformations: ["tabular", "sequence", "registered query view"]
+    prohibited_derived_information: ["unpermitted query result", "AuthorizationLabel", "OracleState"]
+  - stable_id: "G-DEPENDENCY-v1"
+    name: "dependency_structure"
+    semantic_definition: "Observed canonical provenance/dependency graph and typed relations."
+    data_type: "typed graph"
+    shape: "variable graph"
+    units_or_range: "registered node/edge types"
+    canonicalization: "stable node/edge IDs, order, and metadata"
+    visibility: ["Raw-G", "Oracle-G"]
+    hashing_rule: "SHA-256 of canonical graph"
+    near_distance_rule: "registered weighted graph-edit distance"
+    exact_twin_equal: false
+    missing_value_rule: "unknown edge and absent edge are distinct"
+    permitted_transformations: ["graph tensor", "canonical sequence", "registered tabular summary"]
+    prohibited_derived_information: ["latent dependency truth", "AuthorizationLabel"]
+  - stable_id: "G-CFVIEW-v1"
+    name: "permitted_counterfactual_views"
+    semantic_definition: "Registered alternate views available to the method and their access permissions."
+    data_type: "typed list"
+    shape: "bounded registered view set"
+    units_or_range: "view registry"
+    canonicalization: "stable view IDs and sorted permissions"
+    visibility: ["Raw-G", "Oracle-G"]
+    hashing_rule: "SHA-256 of canonical list"
+    near_distance_rule: "weighted set distance plus typed per-view distance"
+    exact_twin_equal: false
+    missing_value_rule: "unavailable and unqueried are distinct"
+    permitted_transformations: ["registered view encoder"]
+    prohibited_derived_information: ["unregistered alternate view", "AuthorizationLabel", "OracleState"]
+

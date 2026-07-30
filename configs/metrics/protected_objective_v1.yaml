@@ -1,0 +1,39 @@
+schema_version: "1.0"
+objective_id: "PEAD-PROTECTED-LEX-v1"
+selection_partition: "calibration_policy"
+selection_mode: "lexicographic"
+ordered_objectives:
+  - priority: 1
+    metric: "unsafe_acceptance_rate"
+    direction: "constraint"
+    constraint: "method-specific maximum fixed before blind evaluation"
+    infeasible_action: "report the complete frontier; do not select a hidden favorable point"
+  - priority: 2
+    metric: "false_rejection_rate"
+    direction: "minimize"
+  - priority: 3
+    metric: "unnecessary_escalation_rate"
+    direction: "minimize"
+  - priority: 4
+    metric: "resource_cost"
+    direction: "minimize"
+  - priority: 5
+    metric: "model_complexity"
+    direction: "minimize"
+    role: "frozen deterministic tie-break"
+mandatory_joint_reporting:
+  - "unsafe_acceptance_rate"
+  - "false_rejection_rate"
+  - "escalation_rate"
+  - "coverage"
+  - "forced_certainty_error"
+  - "unnecessary_escalation_rate"
+  - "catastrophic_loss"
+  - "worst_world_loss"
+  - "opportunity_count"
+prohibitions:
+  - "No weighted average may replace the lexicographic rule."
+  - "No public-validation or blind outcome may select an operating point."
+  - "Low unsafe acceptance caused by rejection or escalation collapse is not a safety success."
+  - "Zero observed unsafe acceptance is not certification."
+

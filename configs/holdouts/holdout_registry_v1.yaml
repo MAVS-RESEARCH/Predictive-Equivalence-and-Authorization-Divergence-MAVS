@@ -1,0 +1,50 @@
+schema_version: "1.0"
+registry_id: "PEAD-HOLDOUTS-v1"
+frozen_in_phase: 0
+chronology:
+  substantive_design_phase: "9A"
+  training_phase: 10
+  unlock_and_materialize_phase: 11
+  streamed_evaluation_phase: 12
+  one_unlock_only: true
+holdouts:
+  - id: "structural"
+    role: "causal-generalization"
+    held_out_dimensions:
+      - "mechanism families and compositions"
+      - "policy logical forms"
+      - "provenance topology and depth"
+      - "diagnostic interactions"
+      - "intervention types"
+      - "nuisance families"
+    custody: "sealed before Phase 10"
+  - id: "domain-D7"
+    role: "unseen-domain-generalization"
+    public_identity: "D7"
+    development_repository_content: ["interface", "schema", "placeholder ID", "ciphertext", "hash", "count", "nonrevealing metadata"]
+    custody_only_content: ["generation logic", "templates", "vocabulary", "surface distribution", "feature mapping", "nuisance transforms", "allocation realization", "examples", "labels", "adapter outputs"]
+  - id: "domain-D8"
+    role: "unseen-domain-generalization"
+    public_identity: "D8"
+    development_repository_content: ["interface", "schema", "placeholder ID", "ciphertext", "hash", "count", "nonrevealing metadata"]
+    custody_only_content: ["generation logic", "templates", "vocabulary", "surface distribution", "feature mapping", "nuisance transforms", "allocation realization", "examples", "labels", "adapter outputs"]
+  - id: "final-blind"
+    role: "claim-bearing"
+    construction: "cross-product of structural holdouts and D7/D8 with hidden seeds and held-out nuisance families"
+    claim_bearing_generator_location: "custody-only until registered post-evaluation release"
+    method_access: "registered projection only"
+    label_access: "encrypted until decision and trace commitment"
+freeze_constraints:
+  - "No substantive holdout design may be influenced by Phase 10 behavior."
+  - "D7/D8 implementation content may not enter the development repository before registered release."
+  - "Claim-bearing generator source remains custody-only before registered release."
+  - "Phase 11 alone unlocks and one-shot materializes."
+  - "Phase 12 consumes the immutable Phase 11 materialization without unlock or rematerialization."
+invalidating_events:
+  - "pre-freeze access"
+  - "hash mismatch"
+  - "missing custody log event"
+  - "key exposure"
+  - "non-one-shot mutation"
+  - "direct method access to hidden content or labels"
+

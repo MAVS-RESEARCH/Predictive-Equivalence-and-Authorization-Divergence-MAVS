@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If you use PEAD-Bench, cite the software and its associated research specification."
+title: "PEAD-Bench: Predictive Equivalence and Authorization Divergence"
+type: software
+version: 0.1.0
+date-released: 2026-07-30
+authors:
+  - family-names: Malik
+    given-names: Saif
+repository-code: "https://github.com/MAVS-RESEARCH/Predictive-Equivalence-and-Authorization-Divergence-MAVS"
+license: MIT
+keywords:
+  - AI governance
+  - predictive equivalence
+  - authorization divergence
+  - diagnostic sciences
+  - selective prediction
+

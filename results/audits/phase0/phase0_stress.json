@@ -1,0 +1,7 @@
+{
+  "iterations": 10000,
+  "mutation_classes": 6,
+  "rejected_invalid_mutations": 10000,
+  "status": "pass",
+  "unexpected_acceptances": 0
+}

@@ -1,0 +1,224 @@
+{
+  "count": 31,
+  "entries": [
+    {
+      "comment": "Establish the immutable source identity.",
+      "comment_line": 43,
+      "console_log_line": 44,
+      "event_id": "P0-REQUIREMENTS-001",
+      "file": "scripts/build_requirements.py"
+    },
+    {
+      "comment": "Confirm complete source-block extraction counts.",
+      "comment_line": 50,
+      "console_log_line": 51,
+      "event_id": "P0-REQUIREMENTS-002",
+      "file": "scripts/build_requirements.py"
+    },
+    {
+      "comment": "Retain the canonical machine registry.",
+      "comment_line": 71,
+      "console_log_line": 72,
+      "event_id": "P0-REQUIREMENTS-003",
+      "file": "scripts/build_requirements.py"
+    },
+    {
+      "comment": "Report source extraction failure as a hard gate.",
+      "comment_line": 83,
+      "console_log_line": 84,
+      "event_id": "P0-REQUIREMENTS-004",
+      "file": "scripts/build_requirements.py"
+    },
+    {
+      "comment": "Begin the complete Phase 0 validation sequence.",
+      "comment_line": 107,
+      "console_log_line": 108,
+      "event_id": "P0-VALIDATE-001",
+      "file": "src/pead/config/validator.py"
+    },
+    {
+      "comment": "Validate the study charter and source identities.",
+      "comment_line": 113,
+      "console_log_line": 114,
+      "event_id": "P0-VALIDATE-002",
+      "file": "src/pead/config/validator.py"
+    },
+    {
+      "comment": "Validate PredictiveState and GovernanceState dictionaries.",
+      "comment_line": 116,
+      "console_log_line": 117,
+      "event_id": "P0-VALIDATE-003",
+      "file": "src/pead/config/validator.py"
+    },
+    {
+      "comment": "Validate the Diagnostic Sciences registry.",
+      "comment_line": 119,
+      "console_log_line": 120,
+      "event_id": "P0-VALIDATE-004",
+      "file": "src/pead/config/validator.py"
+    },
+    {
+      "comment": "Validate the frozen method inventory.",
+      "comment_line": 122,
+      "console_log_line": 123,
+      "event_id": "P0-VALIDATE-005",
+      "file": "src/pead/config/validator.py"
+    },
+    {
+      "comment": "Validate holdout custody and single-unlock controls.",
+      "comment_line": 125,
+      "console_log_line": 126,
+      "event_id": "P0-VALIDATE-006",
+      "file": "src/pead/config/validator.py"
+    },
+    {
+      "comment": "Validate the protected operating-point objective.",
+      "comment_line": 128,
+      "console_log_line": 129,
+      "event_id": "P0-VALIDATE-007",
+      "file": "src/pead/config/validator.py"
+    },
+    {
+      "comment": "Validate the strict FailureCard contract.",
+      "comment_line": 131,
+      "console_log_line": 132,
+      "event_id": "P0-VALIDATE-008",
+      "file": "src/pead/config/validator.py"
+    },
+    {
+      "comment": "Validate the clause-level requirements registry.",
+      "comment_line": 134,
+      "console_log_line": 135,
+      "event_id": "P0-VALIDATE-009",
+      "file": "src/pead/config/validator.py"
+    },
+    {
+      "comment": "Validate the human-readable claim ledger.",
+      "comment_line": 137,
+      "console_log_line": 138,
+      "event_id": "P0-VALIDATE-010",
+      "file": "src/pead/config/validator.py"
+    },
+    {
+      "comment": "Report successful completion and audited counts.",
+      "comment_line": 146,
+      "console_log_line": 147,
+      "event_id": "P0-VALIDATE-011",
+      "file": "src/pead/config/validator.py"
+    },
+    {
+      "comment": "Record the retained validation evidence location.",
+      "comment_line": 649,
+      "console_log_line": 650,
+      "event_id": "P0-VALIDATE-012",
+      "file": "src/pead/config/validator.py"
+    },
+    {
+      "comment": "Emit a factual validation failure before returning nonzero.",
+      "comment_line": 658,
+      "console_log_line": 659,
+      "event_id": "P0-VALIDATE-013",
+      "file": "src/pead/config/validator.py"
+    },
+    {
+      "comment": "Establish the exact Phase 0 file boundary.",
+      "comment_line": 325,
+      "console_log_line": 326,
+      "event_id": "P0-AUDIT-001",
+      "file": "src/pead/phase0/audit.py"
+    },
+    {
+      "comment": "Execute all typed configuration and charter gates.",
+      "comment_line": 328,
+      "console_log_line": 329,
+      "event_id": "P0-AUDIT-002",
+      "file": "src/pead/phase0/audit.py"
+    },
+    {
+      "comment": "Rebuild and compare every source-clause requirement.",
+      "comment_line": 335,
+      "console_log_line": 336,
+      "event_id": "P0-AUDIT-003",
+      "file": "src/pead/phase0/audit.py"
+    },
+    {
+      "comment": "Verify every console event has an adjacent identifying comment.",
+      "comment_line": 338,
+      "console_log_line": 339,
+      "event_id": "P0-AUDIT-004",
+      "file": "src/pead/phase0/audit.py"
+    },
+    {
+      "comment": "Confirm Phase 0 produced no benchmark or model result.",
+      "comment_line": 341,
+      "console_log_line": 342,
+      "event_id": "P0-AUDIT-005",
+      "file": "src/pead/phase0/audit.py"
+    },
+    {
+      "comment": "Validate project metadata, lock, custody, and ledger controls.",
+      "comment_line": 344,
+      "console_log_line": 345,
+      "event_id": "P0-AUDIT-006",
+      "file": "src/pead/phase0/audit.py"
+    },
+    {
+      "comment": "Execute deterministic invalid-configuration mutation stress.",
+      "comment_line": 347,
+      "console_log_line": 348,
+      "event_id": "P0-AUDIT-007",
+      "file": "src/pead/phase0/audit.py"
+    },
+    {
+      "comment": "Retain the complete machine-readable Phase 0 evidence.",
+      "comment_line": 397,
+      "console_log_line": 398,
+      "event_id": "P0-AUDIT-008",
+      "file": "src/pead/phase0/audit.py"
+    },
+    {
+      "comment": "Report the final local Phase 0 gate verdict.",
+      "comment_line": 408,
+      "console_log_line": 409,
+      "event_id": "P0-AUDIT-009",
+      "file": "src/pead/phase0/audit.py"
+    },
+    {
+      "comment": "Emit the hard-gate failure without suppressing evidence.",
+      "comment_line": 416,
+      "console_log_line": 417,
+      "event_id": "P0-AUDIT-010",
+      "file": "src/pead/phase0/audit.py"
+    },
+    {
+      "comment": "Discover the independent Phase 0 test suite.",
+      "comment_line": 29,
+      "console_log_line": 30,
+      "event_id": "P0-TEST-RUN-001",
+      "file": "src/pead/phase0/test_runner.py"
+    },
+    {
+      "comment": "Report the exact discovered-test denominator.",
+      "comment_line": 37,
+      "console_log_line": 38,
+      "event_id": "P0-TEST-RUN-002",
+      "file": "src/pead/phase0/test_runner.py"
+    },
+    {
+      "comment": "Retain the independent test verdict and denominators.",
+      "comment_line": 73,
+      "console_log_line": 74,
+      "event_id": "P0-TEST-RUN-003",
+      "file": "src/pead/phase0/test_runner.py"
+    },
+    {
+      "comment": "Exercise canonical structured console serialization.",
+      "comment_line": 46,
+      "console_log_line": 47,
+      "event_id": "P0-TEST-001",
+      "file": "tests/unit/test_phase0_config.py"
+    }
+  ],
+  "phase": 0,
+  "status": "pass"
+}

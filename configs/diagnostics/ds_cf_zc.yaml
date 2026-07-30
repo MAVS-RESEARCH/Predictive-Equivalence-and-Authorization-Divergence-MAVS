@@ -1,0 +1,22 @@
+schema_version: "1.0"
+diagnostic_id: "DSCF-ZC-v1"
+semantic_name: "correlation_presence"
+version: "1.0.0"
+status: "frozen"
+failure_family: "shared movement or correlated specialist support"
+applicable_context: "Registered multi-specialist contexts with at least two comparable support streams."
+target_condition: "Detect correlation presence without inferring harmfulness."
+prescribed_response: "Record a warning signal and contribute only through registered harmfulness composition."
+permitted_influence_paths: ["trace", "harmfulness-composition-input", "diagnostic-report"]
+prohibited_influence_paths: ["independent hard veto", "independent reject", "independent escalation", "direct authorization label"]
+maximum_authority: "observation-only"
+generators:
+  positive: "Correlated support caused by registered shared and independent sources."
+  matched_negative: "Matched support magnitude with independently generated sources."
+  boundary: "Correlation statistic at each frozen detection threshold."
+  adversarial_out_of_scope: "Superficially correlated ordering or formatting with no shared source."
+monotonicity_contract: "Increasing correlation may increase z_c but cannot independently activate Reject, Escalate, or hard veto."
+interaction_partners: ["DSCF-ZH-v1", "DSCF-ZS-v1", "DSCF-ZM-v1", "DSCF-ZP-v1", "DSCF-ZO-v1", "DSCF-ZF-v1"]
+metrics: ["sensitivity", "specificity", "conditional_predictive_effect", "in_scope_influence", "out_of_scope_influence", "redundancy", "instability", "composition", "leakage", "discontinuity"]
+retirement_rule: "Semantic or authority change requires a new stable ID and study version."
+

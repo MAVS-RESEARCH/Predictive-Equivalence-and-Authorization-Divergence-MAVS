@@ -1,0 +1,21 @@
+schema_version: "1.0"
+diagnostic_id: "DSCF-ZF-v1"
+semantic_name: "counterfactual_fragility"
+version: "1.0.0"
+status: "frozen"
+failure_family: "candidate support or authorization is unstable across permitted alternate views"
+applicable_context: "Registered contexts with explicitly permitted counterfactual views."
+target_condition: "Measure decision-relevant fragility using only views available under the AccessProfile."
+prescribed_response: "Apply bounded soft severity, ambiguity evidence, or registered conjunctive influence."
+permitted_influence_paths: ["soft-evidence", "severity", "ambiguity", "conjunctive-veto-input", "trace"]
+prohibited_influence_paths: ["unregistered view access", "hidden-label query", "independent hard veto"]
+maximum_authority: "conjunctive-veto-input"
+generators:
+  positive: "Permitted alternate view changes support or exposes a registered authorization concern."
+  matched_negative: "Equivalent permitted view change with stable support and authorization."
+  boundary: "Fragility distance around each frozen threshold and query budget."
+  adversarial_out_of_scope: "A tempting alternate view not permitted by the AccessProfile."
+monotonicity_contract: "Only registered permitted views contribute; unavailable views have no hidden influence."
+interaction_partners: ["DSCF-ZC-v1", "DSCF-ZH-v1", "DSCF-ZS-v1", "DSCF-ZM-v1", "DSCF-ZP-v1", "DSCF-ZO-v1"]
+metrics: ["sensitivity", "specificity", "conditional_predictive_effect", "in_scope_influence", "out_of_scope_influence", "redundancy", "instability", "composition", "leakage", "discontinuity"]
+retirement_rule: "Semantic, view registry, scope, or authority change requires a new stable ID and study version."
