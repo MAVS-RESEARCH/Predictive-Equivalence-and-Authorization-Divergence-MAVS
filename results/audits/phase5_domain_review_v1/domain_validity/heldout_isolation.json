@@ -1,0 +1,36 @@
+{
+  "contract_hash": "c0ad72abcada9c90e4d95777710e5ddd96cf015dfc1923964d8fd445ac8925b9",
+  "custody_completion_phase": "9A",
+  "custody_implementation_status": "pending_phase_9a",
+  "files_scanned": 16,
+  "first_training_phase": 10,
+  "implementation_instantiation_blocked": true,
+  "phase10_blocked_until_custody_sealed": true,
+  "placeholder_ids": [
+    "D7",
+    "D8"
+  ],
+  "placeholder_location_violations": 0,
+  "projection_signature": [
+    [
+      "task_projection",
+      "mapping"
+    ],
+    [
+      "candidate_projection",
+      "mapping"
+    ],
+    [
+      "predictive_projection",
+      "mapping"
+    ],
+    [
+      "raw_governance_projection",
+      "mapping"
+    ]
+  ],
+  "repository_exposure": "interface_and_placeholder_ids_only",
+  "schema_version": "1.0",
+  "semantic_marker_violations": 0,
+  "status": "pass"
+}

@@ -102,6 +102,19 @@ claim bank, or execute adaptive evidence acquisition.
 .\.venv\Scripts\python.exe scripts\audit_phase4.py
 ```
 
+## Phase 5 verification
+
+Phase 5 validates six open development-domain adapters against one universal
+task, candidate, mechanism, projection, and validation contract. The D7/D8
+development surface is restricted to placeholder identities and nonrevealing
+shapes; concrete implementations remain custody-only for Phase 9A.
+
+```powershell
+.\.venv\Scripts\python.exe scripts\review_domains.py
+.\.venv\Scripts\python.exe scripts\run_phase5_tests.py
+.\.venv\Scripts\python.exe scripts\audit_phase5.py
+```
+
 ## Scientific boundaries
 
 The project does not claim universal prediction insufficiency, universal MAVS optimality, deployment readiness, certification, or zero risk. Negative scientific outcomes are publishable when integrity gates pass. Integrity failures invalidate affected results.

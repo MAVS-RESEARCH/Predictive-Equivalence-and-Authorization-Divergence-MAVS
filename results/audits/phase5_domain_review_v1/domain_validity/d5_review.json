@@ -1,0 +1,67 @@
+{
+  "adapter_author_id": "open_adapter_author_software_v1",
+  "adapter_id": "software_deployment_v1",
+  "anti_shortcut_variants": 48,
+  "capabilities": {
+    "graph_dependent": true,
+    "policy_grammar_composition": true,
+    "temporal_reversal": true
+  },
+  "claim_exclusions": [
+    "no production readiness claim",
+    "no vulnerability guarantee",
+    "no universal deployment claim"
+  ],
+  "claim_scope": "This synthetic proxy evaluates deployment-governance semantics, not production software reliability.",
+  "compliance_gaps": [],
+  "config_sha256": "44e659a5e43953449ce6f95607c8a3e048a9d145a8d42e8910ace0f7ecb389d6",
+  "definition_hash": "2f89ccbcf6f3f3af79700a124289896663ee5c6d6f94f663bc9891426d33706a",
+  "domain_id": "D5",
+  "generated_cases": 600,
+  "mechanism_counts": {
+    "M02": 100,
+    "M03": 100,
+    "M05": 100,
+    "M07": 100,
+    "M10": 100,
+    "M12": 100
+  },
+  "mechanism_kinds": {
+    "ambiguity": 1,
+    "atomic": 1,
+    "composition": 1,
+    "graph": 1,
+    "policy_grammar": 1,
+    "temporal": 1
+  },
+  "review_dimensions": {
+    "anti_triviality": "pass",
+    "bounded_proxy_claim": "pass",
+    "projection_defensibility": "pass",
+    "shortcut_resistance": "pass",
+    "substantive_meaning": "pass"
+  },
+  "review_id": "phase5_domain_review_v1",
+  "reviewer_authorship_overlap": false,
+  "reviewer_id": "independent_domain_validity_reviewer_v1",
+  "schema_signature": [
+    [
+      "task_projection",
+      "mapping"
+    ],
+    [
+      "candidate_projection",
+      "mapping"
+    ],
+    [
+      "predictive_projection",
+      "mapping"
+    ],
+    [
+      "raw_governance_projection",
+      "mapping"
+    ]
+  ],
+  "schema_version": "1.0",
+  "status": "pass"
+}

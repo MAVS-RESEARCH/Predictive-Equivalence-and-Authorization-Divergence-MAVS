@@ -1,0 +1,66 @@
+{
+  "adapter_author_id": "open_adapter_author_finance_v1",
+  "adapter_id": "financial_approval_proxy_v1",
+  "anti_shortcut_variants": 48,
+  "capabilities": {
+    "graph_dependent": false,
+    "policy_grammar_composition": true,
+    "temporal_reversal": true
+  },
+  "claim_exclusions": [
+    "no lending decision",
+    "no financial advice",
+    "no real-world approval claim"
+  ],
+  "claim_scope": "This synthetic proxy evaluates registered transaction-governance relationships, not real financial eligibility.",
+  "compliance_gaps": [],
+  "config_sha256": "da7344e97196d193bb1cfd17c6b228ce4c7c058fd532e9075db1d33b4dbcded8",
+  "definition_hash": "4fbd79499c57669bfcdfa7c892dd3e9cbea30916e5ffc4130eb108f10d6571e4",
+  "domain_id": "D6",
+  "generated_cases": 600,
+  "mechanism_counts": {
+    "M02": 100,
+    "M03": 100,
+    "M06": 100,
+    "M07": 100,
+    "M10": 100,
+    "M12": 100
+  },
+  "mechanism_kinds": {
+    "ambiguity": 1,
+    "atomic": 2,
+    "composition": 1,
+    "policy_grammar": 1,
+    "temporal": 1
+  },
+  "review_dimensions": {
+    "anti_triviality": "pass",
+    "bounded_proxy_claim": "pass",
+    "projection_defensibility": "pass",
+    "shortcut_resistance": "pass",
+    "substantive_meaning": "pass"
+  },
+  "review_id": "phase5_domain_review_v1",
+  "reviewer_authorship_overlap": false,
+  "reviewer_id": "independent_domain_validity_reviewer_v1",
+  "schema_signature": [
+    [
+      "task_projection",
+      "mapping"
+    ],
+    [
+      "candidate_projection",
+      "mapping"
+    ],
+    [
+      "predictive_projection",
+      "mapping"
+    ],
+    [
+      "raw_governance_projection",
+      "mapping"
+    ]
+  ],
+  "schema_version": "1.0",
+  "status": "pass"
+}

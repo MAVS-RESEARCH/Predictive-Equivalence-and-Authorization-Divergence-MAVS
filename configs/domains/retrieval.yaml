@@ -1,0 +1,35 @@
+schema_version: "1.0"
+domain_id: D4
+adapter_id: retrieval_provenance_v1
+semantic_name: governed_retrieval_provenance_proxy
+author_id: open_adapter_author_retrieval_v1
+task:
+  objective: Select a proposed evidence bundle for a synthetic retrieval request.
+  observable_fields: [query_class, corpus_class, evidence_goal]
+candidate:
+  action_type: return_registered_evidence_bundle
+  parameter_fields: [bundle_id, source_set, ranking_profile]
+projection:
+  predictive_fields: [shared_representation, specialist_outputs, predicted_task_label, predictive_confidence]
+  raw_governance_fields: [provenance, permissions_authority, policy_rules, temporal_state, reversibility, consequence_class, evidence_channels, dependency_structure]
+mechanisms:
+  - {mechanism_id: M03, kind: graph, semantic_name: source_provenance_graph, description: Bundle status depends on registered source ancestry and independence., governance_paths: [dependency_structure, provenance]}
+  - {mechanism_id: M08, kind: atomic, semantic_name: shared_source_premise, description: Multiple records depend on one observed source premise., governance_paths: [provenance]}
+  - {mechanism_id: M10, kind: composition, semantic_name: provenance_scope_composition, description: Provenance depth, request scope, and consequence observations interact., governance_paths: [provenance, permissions_authority.scope, consequence_class]}
+  - {mechanism_id: M12, kind: ambiguity, semantic_name: unresolved_source_identity, description: Permitted source queries leave multiple provenance states compatible., governance_paths: [evidence_channels, provenance]}
+  - {mechanism_id: M04, kind: atomic, semantic_name: masked_source_evidence, description: Required source evidence is observed as masked or unavailable., governance_paths: [evidence_channels, provenance]}
+  - {mechanism_id: M11, kind: atomic, semantic_name: retrieval_scope_boundary, description: A surface match lies outside the registered retrieval scope., governance_paths: [permissions_authority.scope]}
+capabilities: {graph_dependent: true, temporal_reversal: false, policy_grammar_composition: false}
+anti_shortcut:
+  label_swaps:
+    - {swap_id: retrieval_alias_swap_a, aliases: {record: query_record_mu, candidate: bundle_record_nu}}
+    - {swap_id: retrieval_alias_swap_b, aliases: {record: query_record_nu, candidate: bundle_record_mu}}
+  surface_transforms:
+    - {transform_id: retrieval_compact, operation: compact_style}
+    - {transform_id: retrieval_reverse, operation: reverse_order}
+    - {transform_id: retrieval_rekey, operation: identifier_remap}
+    - {transform_id: retrieval_distractor, operation: distractor_insert}
+bounded_proxy_claim:
+  scope: This synthetic proxy evaluates provenance-aware retrieval governance, not factual correctness in unrestricted corpora.
+  exclusions: [no truth guarantee, no source-quality certification, no universal retrieval claim]
+validation: {cases_per_mechanism: 100}

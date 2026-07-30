@@ -1,0 +1,67 @@
+{
+  "adapter_author_id": "open_adapter_author_cyber_v1",
+  "adapter_id": "cyber_response_v1",
+  "anti_shortcut_variants": 48,
+  "capabilities": {
+    "graph_dependent": true,
+    "policy_grammar_composition": true,
+    "temporal_reversal": true
+  },
+  "claim_exclusions": [
+    "no operational response advice",
+    "no live-system guarantee",
+    "no universal security claim"
+  ],
+  "claim_scope": "This synthetic proxy tests governance relationships in bounded incident response, not production cyber defense.",
+  "compliance_gaps": [],
+  "config_sha256": "aa6754d469aadba829c781680fb26d3a6ade08cefd2cc2f79071470c9e42c486",
+  "definition_hash": "0880b2c9618743c882dce853b69d9db730be4eb42105ad19168b09592f8aeaa3",
+  "domain_id": "D2",
+  "generated_cases": 600,
+  "mechanism_counts": {
+    "M02": 100,
+    "M03": 100,
+    "M06": 100,
+    "M07": 100,
+    "M10": 100,
+    "M12": 100
+  },
+  "mechanism_kinds": {
+    "ambiguity": 1,
+    "atomic": 1,
+    "composition": 1,
+    "graph": 1,
+    "policy_grammar": 1,
+    "temporal": 1
+  },
+  "review_dimensions": {
+    "anti_triviality": "pass",
+    "bounded_proxy_claim": "pass",
+    "projection_defensibility": "pass",
+    "shortcut_resistance": "pass",
+    "substantive_meaning": "pass"
+  },
+  "review_id": "phase5_domain_review_v1",
+  "reviewer_authorship_overlap": false,
+  "reviewer_id": "independent_domain_validity_reviewer_v1",
+  "schema_signature": [
+    [
+      "task_projection",
+      "mapping"
+    ],
+    [
+      "candidate_projection",
+      "mapping"
+    ],
+    [
+      "predictive_projection",
+      "mapping"
+    ],
+    [
+      "raw_governance_projection",
+      "mapping"
+    ]
+  ],
+  "schema_version": "1.0",
+  "status": "pass"
+}

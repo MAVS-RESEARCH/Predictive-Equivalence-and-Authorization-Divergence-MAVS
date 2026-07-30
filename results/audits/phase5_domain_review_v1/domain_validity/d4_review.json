@@ -1,0 +1,65 @@
+{
+  "adapter_author_id": "open_adapter_author_retrieval_v1",
+  "adapter_id": "retrieval_provenance_v1",
+  "anti_shortcut_variants": 48,
+  "capabilities": {
+    "graph_dependent": true,
+    "policy_grammar_composition": false,
+    "temporal_reversal": false
+  },
+  "claim_exclusions": [
+    "no truth guarantee",
+    "no source-quality certification",
+    "no universal retrieval claim"
+  ],
+  "claim_scope": "This synthetic proxy evaluates provenance-aware retrieval governance, not factual correctness in unrestricted corpora.",
+  "compliance_gaps": [],
+  "config_sha256": "119ad3883584f48b2073af4025951ef7b22a3f8a0a5ddd69f9da21bb9b3e46ab",
+  "definition_hash": "83678df54d4d31ce5c8fb12b91fd08bbc416fe6db50848e32c89615e20e58f73",
+  "domain_id": "D4",
+  "generated_cases": 600,
+  "mechanism_counts": {
+    "M03": 100,
+    "M04": 100,
+    "M08": 100,
+    "M10": 100,
+    "M11": 100,
+    "M12": 100
+  },
+  "mechanism_kinds": {
+    "ambiguity": 1,
+    "atomic": 3,
+    "composition": 1,
+    "graph": 1
+  },
+  "review_dimensions": {
+    "anti_triviality": "pass",
+    "bounded_proxy_claim": "pass",
+    "projection_defensibility": "pass",
+    "shortcut_resistance": "pass",
+    "substantive_meaning": "pass"
+  },
+  "review_id": "phase5_domain_review_v1",
+  "reviewer_authorship_overlap": false,
+  "reviewer_id": "independent_domain_validity_reviewer_v1",
+  "schema_signature": [
+    [
+      "task_projection",
+      "mapping"
+    ],
+    [
+      "candidate_projection",
+      "mapping"
+    ],
+    [
+      "predictive_projection",
+      "mapping"
+    ],
+    [
+      "raw_governance_projection",
+      "mapping"
+    ]
+  ],
+  "schema_version": "1.0",
+  "status": "pass"
+}

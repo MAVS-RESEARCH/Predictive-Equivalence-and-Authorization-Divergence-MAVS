@@ -1,0 +1,17 @@
+{
+  "content_sha256": "554873d69dc5375a92f5eb507d0eb3c79c93a1b927cf5f016a08e2ca4fc11fc4",
+  "domain_definition_hashes": {
+    "D1": "5efbdcf719fd9318e243415f11ef25b689f087bc22a12b165034e049b32393ac",
+    "D2": "0880b2c9618743c882dce853b69d9db730be4eb42105ad19168b09592f8aeaa3",
+    "D3": "64d8de2b12fbc8344528903acddd122c52dd32e2cafe7ed8df4345563ac05208",
+    "D4": "83678df54d4d31ce5c8fb12b91fd08bbc416fe6db50848e32c89615e20e58f73",
+    "D5": "2f89ccbcf6f3f3af79700a124289896663ee5c6d6f94f663bc9891426d33706a",
+    "D6": "4fbd79499c57669bfcdfa7c892dd3e9cbea30916e5ffc4130eb108f10d6571e4"
+  },
+  "heldout_contract_hash": "c0ad72abcada9c90e4d95777710e5ddd96cf015dfc1923964d8fd445ac8925b9",
+  "phase9a_custody_completion_required": true,
+  "registry_id": "phase5_open_domain_registry_v1",
+  "release_authority": "none",
+  "review_content_sha256": "203d4aa394073b58b0272d0b12ebcdb6728be321d36a3cc669f2b90ec3b64053",
+  "schema_version": "1.0"
+}

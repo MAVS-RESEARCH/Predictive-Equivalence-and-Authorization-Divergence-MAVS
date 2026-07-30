@@ -1,0 +1,144 @@
+{
+  "boundary": {
+    "checkpoints_created": 0,
+    "heldout_implementations_exposed": 0,
+    "models_trained": 0,
+    "phase10_training_executed": false,
+    "phase6_started": false,
+    "phase9a_custody_work_executed": false,
+    "released_claim_bank_rows": 0,
+    "status": "pass"
+  },
+  "completion_gates": {
+    "d1_d6_universal_schema_parity": "pass",
+    "heldout_implementation_exposure": 0,
+    "heldout_interface_schema_parity": "pass",
+    "heldout_placeholders_frozen": "pass",
+    "independent_validity_review": "pass",
+    "open_domain_anti_triviality": "pass",
+    "phase9a_pretraining_custody_gate": "enforced"
+  },
+  "compliance_gaps": [],
+  "console_events": 17,
+  "files": {
+    "domain_review_files": 8,
+    "required_files": 19,
+    "status": "pass"
+  },
+  "ledger": {
+    "entries": [
+      "PATH-0050",
+      "PATH-0051",
+      "PATH-0052",
+      "PATH-0053",
+      "PATH-0054",
+      "PATH-0055"
+    ],
+    "evidence_pointers": [
+      "console_log_inventory.json",
+      "domain_registry_v1.json",
+      "heldout_isolation.json",
+      "phase5_compliance.json",
+      "phase5_tests.json",
+      "summary.json"
+    ],
+    "publication_state": "pending",
+    "status": "pass"
+  },
+  "phase": 5,
+  "registry": {
+    "content_sha256": "554873d69dc5375a92f5eb507d0eb3c79c93a1b927cf5f016a08e2ca4fc11fc4",
+    "heldout_contract_hash": "c0ad72abcada9c90e4d95777710e5ddd96cf015dfc1923964d8fd445ac8925b9",
+    "open_domains": 6,
+    "release_authority": "none",
+    "status": "pass"
+  },
+  "review": {
+    "anti_shortcut_variants": 288,
+    "capability_counts": {
+      "graph_dependent": 5,
+      "policy_grammar_composition": 4,
+      "temporal_reversal": 4
+    },
+    "compliance_gaps": [],
+    "content_sha256": "203d4aa394073b58b0272d0b12ebcdb6728be321d36a3cc669f2b90ec3b64053",
+    "generated_open_cases": 3600,
+    "heldout": {
+      "contract_hash": "c0ad72abcada9c90e4d95777710e5ddd96cf015dfc1923964d8fd445ac8925b9",
+      "custody_completion_phase": "9A",
+      "custody_implementation_status": "pending_phase_9a",
+      "files_scanned": 16,
+      "first_training_phase": 10,
+      "implementation_instantiation_blocked": true,
+      "phase10_blocked_until_custody_sealed": true,
+      "placeholder_ids": [
+        "D7",
+        "D8"
+      ],
+      "placeholder_location_violations": 0,
+      "projection_signature": [
+        [
+          "task_projection",
+          "mapping"
+        ],
+        [
+          "candidate_projection",
+          "mapping"
+        ],
+        [
+          "predictive_projection",
+          "mapping"
+        ],
+        [
+          "raw_governance_projection",
+          "mapping"
+        ]
+      ],
+      "repository_exposure": "interface_and_placeholder_ids_only",
+      "schema_version": "1.0",
+      "semantic_marker_violations": 0,
+      "status": "pass"
+    },
+    "independent_review": {
+      "all_dimensions_pass": true,
+      "reviewer_authorship_overlaps": 0
+    },
+    "open_adapter_count": 6,
+    "open_domains": [
+      "D1",
+      "D2",
+      "D3",
+      "D4",
+      "D5",
+      "D6"
+    ],
+    "phase9a_requirements": {
+      "current_status": "pending_phase_9a",
+      "custody_implementations_completed_and_sealed": "required",
+      "d7_d8_same_minima_review_inside_custody": "required",
+      "must_precede_first_phase10_training": true
+    },
+    "release_authority": "none",
+    "review_id": "phase5_domain_review_v1",
+    "reviewer_id": "independent_domain_validity_reviewer_v1",
+    "schema_parity": true,
+    "schema_version": "1.0",
+    "status": "pass"
+  },
+  "schema_version": "1.0",
+  "status": "pass",
+  "tests": {
+    "errors": 0,
+    "failures": 0,
+    "status": "pass",
+    "stress_gates": {
+      "complete_open_cases": 3600,
+      "crossed_anti_shortcut_variants": 288,
+      "heldout_implementations_exposed": 0,
+      "heldout_placeholder_interfaces": 2,
+      "mechanisms_per_adapter_minimum": 6,
+      "open_adapters": 6
+    },
+    "tests_run": 112
+  }
+}

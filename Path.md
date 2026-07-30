@@ -32,7 +32,7 @@ Rules:
 | 2 | Independent authorization truth system | Complete | 74/74 tests; implementation commit `629b18a7341cda0c44fa88f33c97c5869c3ae14e` pushed and remotely verified |
 | 3 | Causal world registry, exact twins, and near twins | Complete | 89/89 tests passed; implementation commit `81bd52c825fd41c12dc5fb921c5c656fbf9d20bd` pushed and remotely verified |
 | 4 | Reversals, scope banks, and evidence sufficiency | Complete | None |
-| 5 | Eight domain adapters and validity review | Not started | None |
+| 5 | Six open adapters and held-out interfaces | Local gates passed; publication pending | None |
 | 6 | Projection layer, feature firewall, and parity | Not started | None |
 | 7 | Baseline suite and common training harness | Not started | None |
 | 8 | Frozen MAVS-GC, DS-CF, and ablations | Not started | None |
@@ -1545,3 +1545,152 @@ Copy this block for every meaningful action:
 - **Scientific effect:** Publication changes no allocation, case, label, chronology, authority path, compatible world, or proof.
 - **Deviation:** None.
 - **Next action:** Commit and push this ledger-close hardening and refreshed evidence, verify the new remote SHA, and stop before Phase 5.
+
+### PATH-0050 - Phase 5 source reconfirmation and custody boundary
+
+- **Timestamp:** 2026-07-31.
+- **Phase:** 5.
+- **Status:** Pass.
+- **Change ID:** `P5-SOURCE-BOUNDARY-001`.
+- **WorkPlan alignment:** Phase 5 scope, named files, implementation method, and all five completion gates; Sections 3.4, 5.11, 9A custody chronology, and requirements `DOMAIN-001` through `DOMAIN-003`.
+- **Source reviewed:** `MAVS-Diagnostic Sciences.pdf`, SHA-256 `B7CC77BF32558B042B8ECFA7C4BB9267B53910B0B84816198CF34A9E73EEE758`.
+- **Visual verification:** Pages 4-6 and 12-14 were rendered and inspected. They establish the implementation boundary used here: prediction is distinct from authorization; governance depends on distributed evidence rather than a verdict-like feature; diagnostic value and authority remain scoped; unresolved evidence remains explicit; ecological complexity does not enlarge the claim; and bounded proxy evidence is not a deployment guarantee.
+- **Open-domain boundary:** D1-D6 are development-visible proxy adapters. Phase 5 may define their task, candidate, mechanism, projection, validation, surface, and anti-shortcut semantics.
+- **Held-out boundary:** D7/D8 are represented only by placeholder IDs and universal type/shape constraints. No generator, adapter, template, vocabulary, surface distribution, feature map, nuisance transform, allocation realization, example, label, or adapter output was created or inspected.
+- **Chronology enforcement:** The held-out contract records custody completion in Phase 9A, first training in Phase 10, and a hard block on Phase 10 until the custody implementations and reviews are sealed.
+- **Deviation:** None.
+
+### PATH-0051 - Universal domain protocol and six open adapters
+
+- **Timestamp:** 2026-07-31.
+- **Phase:** 5.
+- **Status:** Pass.
+- **Change ID:** `P5-OPEN-ADAPTERS-001`.
+- **Files implemented:** `src/pead/domains/base.py`, `tool.py`, `cyber.py`, `multi_agent.py`, `retrieval.py`, `software.py`, `finance.py`, and corresponding `configs/domains/*.yaml`.
+- **Universal protocol:** Every adapter implements the same immutable `DomainTask`, `DomainCandidate`, `DomainMechanism`, `DomainProjection`, and `DomainCase` contract. The executable stages are `build_task`, `build_candidate`, `instantiate_mechanism`, `project`, `build_case`, and `validate_case`.
+- **Projection shape:** Every open domain and held-out placeholder uses task, candidate, predictive, and Raw-G mapping projections. Predictive and Raw-G semantic fields are disjoint. Raw-G contains eight distributed evidence families plus mechanism observations and has no direct terminal-action, approval, denial, or authorization Boolean.
+- **Open adapters:**
+  - D1: governed tool-execution proxy.
+  - D2: governed cyber-response proxy.
+  - D3: governed multi-agent-operations proxy.
+  - D4: governed retrieval/provenance proxy.
+  - D5: governed software-deployment proxy.
+  - D6: bounded financial-approval proxy.
+- **Mechanism coverage:** Each domain has exactly six registered mechanism families and contains both composition and ambiguity. All mechanism instances expose observed governance facts without embedding a terminal label.
+- **Complete denominator:** Each domain generates 600 cases, exactly 100 per mechanism; 3,600/3,600 open cases validated with 3,600 unique content-derived case IDs.
+- **Scientific scope:** Each adapter configuration contains an explicit synthetic-proxy scope and at least three exclusions. No adapter claims real operational safety, production readiness, real financial eligibility, or universal validity.
+- **Deviation:** None.
+
+### PATH-0052 - Cross-domain anti-triviality and anti-shortcut controls
+
+- **Timestamp:** 2026-07-31.
+- **Phase:** 5.
+- **Status:** Pass.
+- **Change ID:** `P5-ANTI-TRIVIALITY-001`.
+- **Cross-domain structural minima:** Graph-dependent authorization is present in five domains, temporal reversal in four, and policy-grammar composition in four; every WorkPlan minimum of two is exceeded without changing the registered claim boundary.
+- **Distributed Raw-G:** Every adapter declares provenance, permissions/authority evidence, policy rules, temporal state, reversibility, consequence class, evidence channels, and dependency structure. Validation rejects obvious verdict field names and any surface/projection serialization containing a terminal shortcut.
+- **Domain-specific label swapping:** Each domain has two distinct neutral alias swaps. These alter surface token assignments but never modify the task, candidate, mechanism, projection, or latent-meaning hash.
+- **Surface transformations:** Each domain implements compact style, reversed order, identifier remapping, and neutral distractor insertion with domain-specific stable transform IDs.
+- **Crossed stress bank:** All 6 domains x 6 mechanisms x 2 swaps x 4 transformations = 288 crossed variants were generated. Within each domain-mechanism group, eight surface hashes were distinct while the latent-meaning hash and full projection hash remained exactly invariant.
+- **Shortcut result:** Surface collisions 0; meaning changes 0; projection changes 0; obvious Raw-G terminal fields 0; terminal-token exposures 0.
+- **Deviation:** None.
+
+### PATH-0053 - Nonrevealing held-out interface and custody contamination audit
+
+- **Timestamp:** 2026-07-31.
+- **Phase:** 5.
+- **Status:** Pass.
+- **Change ID:** `P5-HELDOUT-001`.
+- **Files implemented:** `src/pead/domains/heldout_interface.py` and `configs/domains/heldout_placeholders.yaml`.
+- **Exposed content:** Placeholder IDs `D7` and `D8`; universal task, candidate, mechanism, projection, and validation shapes; prohibited-content category names; custody chronology.
+- **Not exposed:** Domain implementation classes, generation logic, templates, vocabulary, distributions, feature mappings, nuisance transforms, allocation realizations, examples, labels, or outputs.
+- **Executable safeguard:** Calling the held-out contract's `instantiate` method always raises `DomainContractError`. No D7/D8 adapter loader exists.
+- **Repository scan:** Sixteen files in the domain source/config roots were inspected; held-out semantic marker violations 0; placeholder-location violations 0; held-out implementations exposed 0.
+- **Frozen interface:** Contract hash `c0ad72abcada9c90e4d95777710e5ddd96cf015dfc1923964d8fd445ac8925b9`; universal projection signature exactly matches D1-D6.
+- **Deferred gate, not false completion:** D7/D8 anti-triviality and scientific review remain `pending_phase_9a`, as required. Phase 5 enforces that these must be completed and sealed inside custody before the first Phase 10 training run; it does not claim custody work was performed in the development repository.
+- **Deviation:** None.
+
+### PATH-0054 - Independent validity review and complete verification
+
+- **Timestamp:** 2026-07-31.
+- **Phase:** 5.
+- **Status:** Pass.
+- **Change ID:** `P5-VALIDITY-REVIEW-001`.
+- **Review identity:** `independent_domain_validity_reviewer_v1`; the six adapter author-role IDs are distinct and reviewer/author overlap is 0/6.
+- **Review dimensions:** Every domain received explicit pass/fail checks for substantive meaning, projection defensibility, shortcut resistance, bounded proxy scope, and anti-triviality.
+- **Review evidence:** Six domain-specific JSON reports, `heldout_isolation.json`, and a content-signed `summary.json` are retained under `results/audits/phase5_domain_review_v1/domain_validity/`.
+- **Registry:** `results/manifests/phase5/domain_registry_v1.json` binds all six definition hashes, the held-out contract hash, and the review summary hash. It has `release_authority: none` and retains the Phase 9A custody-completion requirement.
+- **Complete regression verdict:** 112/112 tests passed, including all 103 Phase 0-4 tests and nine new Phase 5 integration/stress tests. Failures 0; errors 0; skips 0.
+- **Stress verdict:** 3,600/3,600 complete open cases and 288/288 crossed anti-shortcut variants passed.
+- **Model and overfitting applicability:** No model was trained, selected, calibrated, or checkpointed. There is no training benchmark in Phase 5. Overfitting/shortcut risk is addressed through complete case enumeration, exact mechanism balance, crossed transformations, invariant latent/projection hashes, distributed Raw-G, bounded claims, and held-out implementation isolation rather than through a model test set.
+- **Retained evidence SHA-256:**
+  - `d1_review.json`: `63081FAFDF5EA6D7DC332A1CF0511D34A1F21269F35AD14F7DD31ADF029C4E7B`
+  - `d2_review.json`: `CEF4EE69B6CB6758A2270ACE3A54A95EC64190C947097B4F64A557EBF4398D62`
+  - `d3_review.json`: `3DCC631480387A3D8F4DA2317B2B06886B381BEDE0CE675BE63B87D938F8DFCD`
+  - `d4_review.json`: `AA7B2C715671A2F0FD7BFDB281D87236F3C8FD04290816F6F7477150C29BB550`
+  - `d5_review.json`: `0AED21930F0BAF95E819655B781C8AAF107EDEDC19A14A3DA2B4BF1FFC5596E7`
+  - `d6_review.json`: `2B73CBC707F2E8EC2AF300A7B0EAF7D983738AA64195A6CE0B5D235724C2A0CB`
+  - `heldout_isolation.json`: `161D942E038A2C512309F011EA5A890E6EB318BECA34AA19CFB9B9E89F74DEBF`
+  - `summary.json`: `2E7D0B54CA2D877A12AFDA4EC2014303C12A0DB6FE6D816DD9EB043D4A5A8F38`
+  - `domain_registry_v1.json`: `095AA7BB0464DF06F8410F6E29BE42E5FB219B7093C3C8E280B29E37D9002F24`
+  - `phase5_tests.json`: `5FE62CE1810BF03B5A029CB7CF3F9E47AD32794FB1F50263E1E83532CEB1EC54`
+- **Deviation:** None.
+
+### PATH-0055 - Phase 5 operational console inventory and local audit preparation
+
+- **Timestamp:** 2026-07-31.
+- **Phase:** 5.
+- **Status:** Local gates passed; GitHub publication pending.
+- **Change ID:** `P5-CONSOLE-LOCAL-001`.
+- **Console policy:** Every operational `console.log(...)` has an immediately preceding `STEP LOG` comment with the exact same unique event ID. The final source inventory contains 17 Phase 5 call sites:
+  - `P5-AUDIT-001`: `src/pead/phase5/audit.py`, comment line 170, call line 171, `Verify every WorkPlan-named domain, configuration, test, review, and manifest file.`
+  - `P5-AUDIT-002`: same file, comment line 173, call line 174, `Regenerate every open-domain validity review through the independent reviewer.`
+  - `P5-AUDIT-003`: same file, comment line 176, call line 177, `Verify the content-signed open-domain registry and Phase 9A boundary.`
+  - `P5-AUDIT-004`: same file, comment line 179, call line 180, `Verify complete regression, integration, adversarial, and stress evidence.`
+  - `P5-AUDIT-005`: same file, comment line 182, call line 183, `Verify every Phase 5 console call has an adjacent stable identity comment.`
+  - `P5-AUDIT-006`: same file, comment line 193, call line 194, `Verify Path completeness and prohibit held-out, training, model, release, and Phase 6 outputs.`
+  - `P5-AUDIT-007`: same file, comment line 219, call line 220, `Retain the clause-level Phase 5 compliance verdict and evidence.`
+  - `P5-AUDIT-008`: same file, comment line 231, call line 232, `Report the final local Phase 5 hard-gate verdict.`
+  - `P5-AUDIT-009`: same file, comment line 235, call line 236, `Emit a hard failure with its unsuppressed cause.`
+  - `P5-REVIEW-001`: `src/pead/phase5/review.py`, comment line 213, call line 214, `Load the six open adapters through the universal domain protocol.`
+  - `P5-REVIEW-002`: same file, comment line 218, call line 219, `Independently review one complete open adapter for meaning, projection, shortcuts, and bounded claims.`
+  - `P5-REVIEW-003`: same file, comment line 230, call line 231, `Verify held-out placeholders expose only universal shapes and enforce Phase 9A custody chronology.`
+  - `P5-REVIEW-004`: same file, comment line 249, call line 250, `Confirm the cross-domain capability and universal-schema minima.`
+  - `P5-REVIEW-005`: same file, comment line 310, call line 311, `Retain the complete independent domain-validity verdict.`
+  - `P5-TEST-RUN-001`: `src/pead/phase5/test_runner.py`, comment line 29, call line 30, `Discover the complete regression and Phase 5 verification suite.`
+  - `P5-TEST-RUN-002`: same file, comment line 36, call line 37, `Report the exact complete-suite test denominator before execution.`
+  - `P5-TEST-RUN-003`: same file, comment line 84, call line 85, `Retain the complete regression, integration, adversarial, and stress verdict.`
+- **Pending evidence:** `results/audits/phase5/console_log_inventory.json` and `phase5_compliance.json` are produced by the complete auditor after this ledger entry makes the Path gate evaluable.
+- **Phase boundary:** Models 0; checkpoints 0; released claim-bank rows 0; held-out implementation artifacts 0; Phase 6 implementation 0; Phase 9A custody execution 0; Phase 10 training 0.
+- **Deviation:** None.
+
+### PATH-0056 - Phase 5 extreme-rigor local completion audit
+
+- **Timestamp:** 2026-07-31.
+- **Phase:** 5.
+- **Status:** Local gates passed; GitHub publication pending.
+- **Change ID:** `P5-AUDIT-LOCAL-001`.
+- **Commands:** `scripts/run_phase5_tests.py`, `scripts/audit_phase5.py`, source-identity/config validation with the supplied source root, `python -m compileall -q src scripts tests`, and `git diff --check`.
+- **Completion gates:**
+  - D1-D6 universal schema parity: Pass.
+  - Nonrevealing held-out interface schema parity: Pass.
+  - Every open domain anti-triviality minimum: Pass.
+  - Separate reviewer-role semantic/projection/shortcut/bounded-claim review: Pass; author/reviewer overlaps 0.
+  - D7/D8 placeholder IDs and universal contracts frozen: Pass.
+  - Held-out implementation content exposed: 0.
+  - Phase 9A custody completion before Phase 10 training: Enforced; current custody status remains correctly pending Phase 9A.
+- **Regression/stress evidence:** 112/112 tests passed; 3,600/3,600 open cases; 288/288 crossed surface variants; six mechanisms per adapter; six open adapters; two noninstantiable held-out placeholders.
+- **Source/config evidence:** Both supplied source hashes, 789/789 requirements, seven diagnostics, frozen holdout chronology, methods, access dictionaries, and claim limits remained valid.
+- **Console evidence:** 17/17 Phase 5 call sites have adjacent exact-ID comments. Final line-level inventory is in `PATH-0055` and `results/audits/phase5/console_log_inventory.json`.
+- **Retained audit evidence SHA-256:**
+  - `results/audits/phase5/console_log_inventory.json`: `6539D231096A9AA7825B5F28345A38F2EA06BC0C0AE9DECAC9F7AB4DBB2235B8`
+  - `results/audits/phase5/phase5_compliance.json`: `40D29D28DF1E271BC24F405FBAAD6B664BC74BDDC3C08B00820837CAC7E002BD`
+  - `results/audits/phase5/phase5_tests.json`: `5FE62CE1810BF03B5A029CB7CF3F9E47AD32794FB1F50263E1E83532CEB1EC54`
+  - `results/audits/phase5_domain_review_v1/domain_validity/summary.json`: `2E7D0B54CA2D877A12AFDA4EC2014303C12A0DB6FE6D816DD9EB043D4A5A8F38`
+  - `results/audits/phase5_domain_review_v1/domain_validity/heldout_isolation.json`: `161D942E038A2C512309F011EA5A890E6EB318BECA34AA19CFB9B9E89F74DEBF`
+  - `results/manifests/phase5/domain_registry_v1.json`: `095AA7BB0464DF06F8410F6E29BE42E5FB219B7093C3C8E280B29E37D9002F24`
+- **Phase boundary:** Models trained 0; model-selection actions 0; calibration actions 0; checkpoints 0; released claim-bank rows 0; D7/D8 implementation artifacts 0; Phase 6 files 0.
+- **Compliance gaps:** None detected.
+- **Scientific result:** Phase 5 establishes domain-interface breadth and validity controls. It does not measure model performance, demonstrate unseen-domain generalization, or enlarge any bounded proxy claim.
+- **Deviation:** None.
+- **Publication state:** Pending intentional staging, implementation commit, push, and exact remote-SHA verification.

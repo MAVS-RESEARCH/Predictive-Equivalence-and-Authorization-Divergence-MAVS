@@ -1,0 +1,66 @@
+{
+  "adapter_author_id": "open_adapter_author_multi_agent_v1",
+  "adapter_id": "multi_agent_operations_v1",
+  "anti_shortcut_variants": 48,
+  "capabilities": {
+    "graph_dependent": true,
+    "policy_grammar_composition": true,
+    "temporal_reversal": false
+  },
+  "claim_exclusions": [
+    "no autonomy guarantee",
+    "no human-oversight substitute",
+    "no universal coordination claim"
+  ],
+  "claim_scope": "This synthetic proxy evaluates governance of coordinated agent operations, not autonomous-system deployment.",
+  "compliance_gaps": [],
+  "config_sha256": "1777914b13d2b8d00ad011c3bc5870af8270e53b070746b464ab57bd8be875ba",
+  "definition_hash": "64d8de2b12fbc8344528903acddd122c52dd32e2cafe7ed8df4345563ac05208",
+  "domain_id": "D3",
+  "generated_cases": 600,
+  "mechanism_counts": {
+    "M01": 100,
+    "M02": 100,
+    "M03": 100,
+    "M04": 100,
+    "M10": 100,
+    "M12": 100
+  },
+  "mechanism_kinds": {
+    "ambiguity": 1,
+    "atomic": 2,
+    "composition": 1,
+    "graph": 1,
+    "policy_grammar": 1
+  },
+  "review_dimensions": {
+    "anti_triviality": "pass",
+    "bounded_proxy_claim": "pass",
+    "projection_defensibility": "pass",
+    "shortcut_resistance": "pass",
+    "substantive_meaning": "pass"
+  },
+  "review_id": "phase5_domain_review_v1",
+  "reviewer_authorship_overlap": false,
+  "reviewer_id": "independent_domain_validity_reviewer_v1",
+  "schema_signature": [
+    [
+      "task_projection",
+      "mapping"
+    ],
+    [
+      "candidate_projection",
+      "mapping"
+    ],
+    [
+      "predictive_projection",
+      "mapping"
+    ],
+    [
+      "raw_governance_projection",
+      "mapping"
+    ]
+  ],
+  "schema_version": "1.0",
+  "status": "pass"
+}

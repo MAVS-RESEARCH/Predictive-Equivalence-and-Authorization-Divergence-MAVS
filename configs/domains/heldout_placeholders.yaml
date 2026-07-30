@@ -1,0 +1,24 @@
+schema_version: "1.0"
+registry_id: PEAD-HELDOUT-DOMAIN-PLACEHOLDERS-v1
+placeholder_ids: [D7, D8]
+universal_shapes:
+  task: {schema_version: string, task_id: string, domain_id: string, objective: string, observable_context: mapping}
+  candidate: {schema_version: string, candidate_id: string, action_type: string, parameters: mapping}
+  mechanism: {schema_version: string, mechanism_id: string, kind: string, governing_facts: mapping}
+  projection: {task_projection: mapping, candidate_projection: mapping, predictive_projection: mapping, raw_governance_projection: mapping}
+  validation: {schema_parity: boolean, anti_triviality: boolean, bounded_proxy_review: boolean}
+forbidden_repository_content:
+  - generation_logic
+  - templates
+  - vocabulary
+  - surface_distribution
+  - feature_mapping
+  - nuisance_transforms
+  - allocation_realization
+  - examples
+  - labels
+  - adapter_outputs
+chronology:
+  custody_completion_phase: 9A
+  first_training_phase: 10
+  phase10_blocked_until_custody_sealed: true

@@ -1,0 +1,35 @@
+schema_version: "1.0"
+domain_id: D5
+adapter_id: software_deployment_v1
+semantic_name: governed_software_deployment_proxy
+author_id: open_adapter_author_software_v1
+task:
+  objective: Select a proposed bounded deployment for a synthetic software change.
+  observable_fields: [change_class, environment_class, deployment_goal]
+candidate:
+  action_type: deploy_registered_change
+  parameter_fields: [artifact_id, environment_id, rollout_profile]
+projection:
+  predictive_fields: [shared_representation, specialist_outputs, predicted_task_label, predictive_confidence]
+  raw_governance_fields: [provenance, permissions_authority, policy_rules, temporal_state, reversibility, consequence_class, evidence_channels, dependency_structure]
+mechanisms:
+  - {mechanism_id: M03, kind: graph, semantic_name: artifact_dependency_graph, description: Deployment scope depends on registered artifact ancestry., governance_paths: [dependency_structure, provenance]}
+  - {mechanism_id: M07, kind: temporal, semantic_name: deployment_window_reversal, description: A registered deployment window expires and is restored., governance_paths: [temporal_state, policy_rules.validity]}
+  - {mechanism_id: M02, kind: policy_grammar, semantic_name: change_control_grammar, description: Change-control clauses compose as a typed logical expression., governance_paths: [policy_rules, permissions_authority.scope]}
+  - {mechanism_id: M10, kind: composition, semantic_name: rollout_risk_composition, description: Dependency, rollback, and consequence observations interact., governance_paths: [dependency_structure, reversibility, consequence_class]}
+  - {mechanism_id: M12, kind: ambiguity, semantic_name: incomplete_release_evidence, description: Permitted release evidence does not identify one governance state., governance_paths: [evidence_channels, provenance]}
+  - {mechanism_id: M05, kind: atomic, semantic_name: rollback_availability, description: Observed rollback capability changes within the registered environment., governance_paths: [reversibility]}
+capabilities: {graph_dependent: true, temporal_reversal: true, policy_grammar_composition: true}
+anti_shortcut:
+  label_swaps:
+    - {swap_id: software_alias_swap_a, aliases: {record: change_record_omicron, candidate: rollout_record_pi}}
+    - {swap_id: software_alias_swap_b, aliases: {record: change_record_pi, candidate: rollout_record_omicron}}
+  surface_transforms:
+    - {transform_id: software_compact, operation: compact_style}
+    - {transform_id: software_reverse, operation: reverse_order}
+    - {transform_id: software_rekey, operation: identifier_remap}
+    - {transform_id: software_distractor, operation: distractor_insert}
+bounded_proxy_claim:
+  scope: This synthetic proxy evaluates deployment-governance semantics, not production software reliability.
+  exclusions: [no production readiness claim, no vulnerability guarantee, no universal deployment claim]
+validation: {cases_per_mechanism: 100}
