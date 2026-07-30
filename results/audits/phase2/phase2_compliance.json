@@ -50,7 +50,7 @@
       "phase2_compliance.json",
       "phase2_tests.json"
     ],
-    "publication_state": "pending",
+    "publication_state": "complete",
     "status": "pass"
   },
   "mechanisms": {

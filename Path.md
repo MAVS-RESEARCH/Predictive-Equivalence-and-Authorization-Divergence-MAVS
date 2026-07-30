@@ -29,7 +29,7 @@ Rules:
 |---:|---|---|---|
 | 0 | Research charter, claim ledger, and execution controls | Complete | All local gates passed; implementation commit `8259d22e14cfd532185416795ba079448216540b` pushed and remotely verified |
 | 1 | Core immutable infrastructure and safe result hygiene | Complete | 52/52 tests passed; implementation commit `01de85198fbaa1ffdc55591f6b303029299c92d5` pushed and remotely verified |
-| 2 | Independent authorization truth system | Local gates passed; publication pending | 74/74 tests; dual-engine agreement 10/10; OracleRuleAccuracy 1.0; 3/3 ambiguity certificates independently verified |
+| 2 | Independent authorization truth system | Complete | 74/74 tests; implementation commit `629b18a7341cda0c44fa88f33c97c5869c3ae14e` pushed and remotely verified |
 | 3 | Causal world registry, exact twins, and near twins | Not started | None |
 | 4 | Reversals, scope banks, and evidence sufficiency | Not started | None |
 | 5 | Eight domain adapters and validity review | Not started | None |
@@ -958,18 +958,18 @@ Copy this block for every meaningful action:
 
 | Event ID | `console.log` file:line | Comment line | Exact identifying comment |
 |---|---|---:|---|
-| `P2-AUDIT-001` | `src/pead/phase2/audit.py:488` | 487 | Establish the exact Phase 2 source, configuration, test, and evidence boundary. |
-| `P2-AUDIT-002` | `src/pead/phase2/audit.py:491` | 490 | Verify the procedural evaluator is source-independent from the DSL implementation. |
-| `P2-AUDIT-003` | `src/pead/phase2/audit.py:495` | 494 | Verify Phase 2 mechanism files declare latent interfaces without generating worlds. |
-| `P2-AUDIT-004` | `src/pead/phase2/audit.py:498` | 497 | Execute exact dual-engine agreement and Oracle accuracy gates. |
-| `P2-AUDIT-005` | `src/pead/phase2/audit.py:501` | 500 | Generate and independently verify every released ambiguity certificate. |
-| `P2-AUDIT-006` | `src/pead/phase2/audit.py:504` | 503 | Verify complete regression, property, metamorphic, and stress evidence. |
-| `P2-AUDIT-007` | `src/pead/phase2/audit.py:507` | 506 | Verify every Phase 2 operational console call has an adjacent identity comment. |
-| `P2-AUDIT-008` | `src/pead/phase2/audit.py:521` | 520 | Confirm Phase 2 did not cross into world generation, training, or benchmarking. |
-| `P2-AUDIT-009` | `src/pead/phase2/audit.py:524` | 523 | Verify the append-only Path ledger records the complete Phase 2 implementation and evidence. |
-| `P2-AUDIT-010` | `src/pead/phase2/audit.py:563` | 562 | Retain the complete Phase 2 compliance verdict and evidence pointers. |
-| `P2-AUDIT-011` | `src/pead/phase2/audit.py:575` | 574 | Report the final local Phase 2 gate verdict. |
-| `P2-AUDIT-012` | `src/pead/phase2/audit.py:591` | 590 | Emit the hard-gate failure without suppressing its cause. |
+| `P2-AUDIT-001` | `src/pead/phase2/audit.py:487` | 486 | Establish the exact Phase 2 source, configuration, test, and evidence boundary. |
+| `P2-AUDIT-002` | `src/pead/phase2/audit.py:490` | 489 | Verify the procedural evaluator is source-independent from the DSL implementation. |
+| `P2-AUDIT-003` | `src/pead/phase2/audit.py:494` | 493 | Verify Phase 2 mechanism files declare latent interfaces without generating worlds. |
+| `P2-AUDIT-004` | `src/pead/phase2/audit.py:497` | 496 | Execute exact dual-engine agreement and Oracle accuracy gates. |
+| `P2-AUDIT-005` | `src/pead/phase2/audit.py:500` | 499 | Generate and independently verify every released ambiguity certificate. |
+| `P2-AUDIT-006` | `src/pead/phase2/audit.py:503` | 502 | Verify complete regression, property, metamorphic, and stress evidence. |
+| `P2-AUDIT-007` | `src/pead/phase2/audit.py:506` | 505 | Verify every Phase 2 operational console call has an adjacent identity comment. |
+| `P2-AUDIT-008` | `src/pead/phase2/audit.py:520` | 519 | Confirm Phase 2 did not cross into world generation, training, or benchmarking. |
+| `P2-AUDIT-009` | `src/pead/phase2/audit.py:523` | 522 | Verify the append-only Path ledger records the complete Phase 2 implementation and evidence. |
+| `P2-AUDIT-010` | `src/pead/phase2/audit.py:562` | 561 | Retain the complete Phase 2 compliance verdict and evidence pointers. |
+| `P2-AUDIT-011` | `src/pead/phase2/audit.py:574` | 573 | Report the final local Phase 2 gate verdict. |
+| `P2-AUDIT-012` | `src/pead/phase2/audit.py:590` | 589 | Emit the hard-gate failure without suppressing its cause. |
 | `P2-TEST-RUN-001` | `src/pead/phase2/test_runner.py:52` | 51 | Discover the complete regression and Phase 2 verification suite. |
 | `P2-TEST-RUN-002` | `src/pead/phase2/test_runner.py:60` | 59 | Report the exact complete-suite test denominator. |
 | `P2-TEST-RUN-003` | `src/pead/phase2/test_runner.py:109` | 108 | Retain the complete unit, property, metamorphic, regression, and stress verdict. |
@@ -1022,15 +1022,48 @@ Copy this block for every meaningful action:
 - **Result-hygiene audit:** Phase 0/1 evidence remains because it is part of the current implementation history. The superseded in-turn Phase 2 evidence was overwritten; the repository contains only the final Phase 2 evidence listed below.
 - **Retained evidence and SHA-256:**
   - `results/audits/phase2/ambiguity_certificates.json`: `43B7058DB0BFE97027A897B82C016A3DFA7262FEF59CF643C7B922896CD7B8D9`
-  - `results/audits/phase2/console_log_inventory.json`: `E0BE29D86BE489A54214BD524A47751007D2C0692AA48BE85D68B74A0598B2F7`
+  - `results/audits/phase2/console_log_inventory.json`: `9A068E0927F737CBF22090D3CA8203B61BE0DB277134D17C7BFBC4FE4F266E63`
   - `results/audits/phase2/independence_report.json`: `4C4199E8516BB4D70F08A5CB73C3BE2D395E96BED19A8BB9E51DCA719E20E1D6`
   - `results/audits/phase2/label_agreement.json`: `BCC6F6411A350C1C745283C80224859A883E230B870F9C7EAE3BAA99CD190E4F`
   - `results/audits/phase2/oracle_rule_report.json`: `238C722B2AC31DC24365E1FE92A19A9D48DDC4565C1C48B0E89E8DF7B6663B9F`
-  - `results/audits/phase2/phase2_compliance.json`: `FEC8EE29FAB52A7CE20A05D64660A1CF9B866AEA1656CDD03926A60E8F61475C`
-  - `results/audits/phase2/phase2_tests.json`: `48D005F70F44556B95E1513A8A4DED0A30DB8FE781606864AF1575CC5BF3C4C1`
+  - `results/audits/phase2/phase2_compliance.json`: `7B790045363D4AAF48B3DCCB0AFB50CABAD1B8A661ED8EF1DAE1B9A989641E0A`
+  - `results/audits/phase2/phase2_tests.json`: `D3198531CB9EF6BD8B07FB51FC79C3A743DDB0CDB3A3E873CF1E44809B26A2B3`
 - **Compliance gaps:** None detected.
 - **Scientific result:** None. Phase 2 verifies authorization truth infrastructure; it does not test H1 or H2 and does not support a model-performance or deployment claim.
 - **Model training:** None; therefore no training benchmark, validation benchmark, final holdout, checkpoint selection, or overfitting claim exists in this phase.
 - **Deviation:** None.
 - **Publication state:** Pending. Under the ledger contract and WorkPlan Section 2.4, Phase 2 becomes complete only after an intentional commit, successful push, and exact remote-SHA verification.
 - **Next permitted action:** Inspect the intended Phase 2 diff, rerun final source/config/audit checks, stage only Phase 2 scope, commit, push, verify the remote branch SHA, append the publication record, and push that ledger close. Do not begin Phase 3.
+
+### PATH-0030 - Phase 2 GitHub publication, remote verification, and reproducible close
+
+- **Timestamp:** 2026-07-30T21:06:48+05:00
+- **Phase:** 2.
+- **Status:** Pass; Phase 2 complete.
+- **Change ID:** `P2-PUBLISH-001`.
+- **WorkPlan alignment:** Section 2.4 mandatory post-phase publication and Phase 2 completion.
+- **Scope review:** The implementation commit contained exactly 35 intended Phase 2 files: six required label modules plus package initialization, two policy families, released deterministic and ambiguity fixtures, the mechanism truth-interface registry, required unit/property/metamorphic tests, scale-stress tests, audit/test runners, seven final evidence reports, README/project entry points, and this append-only ledger. `WorkPlan.md` was unchanged. No Phase 3 file, bank, model, checkpoint, calibration artifact, or benchmark result was staged.
+- **Pre-commit controls:**
+  - Final source/config validation with source-hash verification: Pass.
+  - Complete regression/unit/property/metamorphic/stress suite: Pass, 74/74.
+  - Strict Phase 2 compliance and ledger audit: Pass.
+  - `python -m compileall -q src scripts tests`: Pass.
+  - `git diff --check` and `git diff --cached --check`: Pass.
+  - Credential-pattern scan across the staged Phase 2 scope: 0 matches.
+- **Branch:** `agent/pead-workplan`.
+- **Implementation commit:** `629b18a7341cda0c44fa88f33c97c5869c3ae14e` - `phase-2: implement independent authorization truth system`.
+- **Implementation push:** `git push origin agent/pead-workplan` passed.
+- **Implementation remote verification:** `git ls-remote origin refs/heads/agent/pead-workplan` returned `629b18a7341cda0c44fa88f33c97c5869c3ae14e`, exactly equal to local `HEAD` at verification time.
+- **Pull request:** Draft PR #1, `https://github.com/MAVS-RESEARCH/Predictive-Equivalence-and-Authorization-Divergence-MAVS/pull/1`, remains open; GitHub reported head branch `agent/pead-workplan` and head SHA `629b18a7341cda0c44fa88f33c97c5869c3ae14e`.
+- **Publication-close correction:**
+  - The first PowerShell upstream-inspection command parsed unquoted `@{u}` as a hash literal and performed no Git mutation. It was immediately rerun with the revision quoted and returned `origin/agent/pead-workplan`.
+  - After the implementation push, the auditor was found to accept only the ledger's `publication pending` state. That would make a clean audit fail after this entry marked the phase `Complete`.
+  - Correction: the ledger audit now explicitly accepts and reports either the pre-publication `pending` state or the post-verification `complete` state, while rejecting every other Phase 2 status.
+  - Complete-suite retest after the correction: 74/74 passed.
+  - This publication record and the corrected post-publication audit evidence are committed and pushed in a ledger-close commit. The implementation commit remains the immutable Phase 2 scientific/engineering scope identity.
+- **Result hygiene:** No previous-study result was introduced. Phase 0/1 evidence belongs to the same current implementation history. In-turn superseded Phase 2 reports were overwritten before the implementation commit; only final Phase 2 reports are tracked.
+- **Scientific effect:** None. Publication and ledger-state hardening do not alter a label, fixture, certificate conclusion, hypothesis, model result, or benchmark claim.
+- **Deviation:** None.
+- **Phase verdict:** Complete. Every Phase 2 WorkPlan scope item, required file group, implementation method, completion gate, stress gate, console-documentation requirement, append-only ledger requirement, and automatic publication requirement is satisfied.
+- **Compliance gaps:** None detected.
+- **Next permitted action:** Stop. Phase 3 may begin only after a new explicit user instruction.

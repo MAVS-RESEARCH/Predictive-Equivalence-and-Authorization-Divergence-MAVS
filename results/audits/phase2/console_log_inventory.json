@@ -3,85 +3,85 @@
   "entries": [
     {
       "comment": "Establish the exact Phase 2 source, configuration, test, and evidence boundary.",
-      "comment_line": 487,
-      "console_log_line": 488,
+      "comment_line": 486,
+      "console_log_line": 487,
       "event_id": "P2-AUDIT-001",
       "file": "src/pead/phase2/audit.py"
     },
     {
       "comment": "Verify the procedural evaluator is source-independent from the DSL implementation.",
-      "comment_line": 490,
-      "console_log_line": 491,
+      "comment_line": 489,
+      "console_log_line": 490,
       "event_id": "P2-AUDIT-002",
       "file": "src/pead/phase2/audit.py"
     },
     {
       "comment": "Verify Phase 2 mechanism files declare latent interfaces without generating worlds.",
-      "comment_line": 494,
-      "console_log_line": 495,
+      "comment_line": 493,
+      "console_log_line": 494,
       "event_id": "P2-AUDIT-003",
       "file": "src/pead/phase2/audit.py"
     },
     {
       "comment": "Execute exact dual-engine agreement and Oracle accuracy gates.",
-      "comment_line": 497,
-      "console_log_line": 498,
+      "comment_line": 496,
+      "console_log_line": 497,
       "event_id": "P2-AUDIT-004",
       "file": "src/pead/phase2/audit.py"
     },
     {
       "comment": "Generate and independently verify every released ambiguity certificate.",
-      "comment_line": 500,
-      "console_log_line": 501,
+      "comment_line": 499,
+      "console_log_line": 500,
       "event_id": "P2-AUDIT-005",
       "file": "src/pead/phase2/audit.py"
     },
     {
       "comment": "Verify complete regression, property, metamorphic, and stress evidence.",
-      "comment_line": 503,
-      "console_log_line": 504,
+      "comment_line": 502,
+      "console_log_line": 503,
       "event_id": "P2-AUDIT-006",
       "file": "src/pead/phase2/audit.py"
     },
     {
       "comment": "Verify every Phase 2 operational console call has an adjacent identity comment.",
-      "comment_line": 506,
-      "console_log_line": 507,
+      "comment_line": 505,
+      "console_log_line": 506,
       "event_id": "P2-AUDIT-007",
       "file": "src/pead/phase2/audit.py"
     },
     {
       "comment": "Confirm Phase 2 did not cross into world generation, training, or benchmarking.",
-      "comment_line": 520,
-      "console_log_line": 521,
+      "comment_line": 519,
+      "console_log_line": 520,
       "event_id": "P2-AUDIT-008",
       "file": "src/pead/phase2/audit.py"
     },
     {
       "comment": "Verify the append-only Path ledger records the complete Phase 2 implementation and evidence.",
-      "comment_line": 523,
-      "console_log_line": 524,
+      "comment_line": 522,
+      "console_log_line": 523,
       "event_id": "P2-AUDIT-009",
       "file": "src/pead/phase2/audit.py"
     },
     {
       "comment": "Retain the complete Phase 2 compliance verdict and evidence pointers.",
-      "comment_line": 562,
-      "console_log_line": 563,
+      "comment_line": 561,
+      "console_log_line": 562,
       "event_id": "P2-AUDIT-010",
       "file": "src/pead/phase2/audit.py"
     },
     {
       "comment": "Report the final local Phase 2 gate verdict.",
-      "comment_line": 574,
-      "console_log_line": 575,
+      "comment_line": 573,
+      "console_log_line": 574,
       "event_id": "P2-AUDIT-011",
       "file": "src/pead/phase2/audit.py"
     },
     {
       "comment": "Emit the hard-gate failure without suppressing its cause.",
-      "comment_line": 590,
-      "console_log_line": 591,
+      "comment_line": 589,
+      "console_log_line": 590,
       "event_id": "P2-AUDIT-012",
       "file": "src/pead/phase2/audit.py"
     },

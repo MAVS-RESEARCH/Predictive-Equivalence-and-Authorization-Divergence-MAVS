@@ -459,16 +459,15 @@ def audit_path_ledger(repo_root: Path) -> dict[str, Any]:
         raise ConfigValidationError(
             f"Phase 2 ledger evidence pointers are missing: {missing_evidence}"
         )
-    if (
-        "| 2 | Independent authorization truth system | "
-        "Local gates passed; publication pending |"
-    ) not in ledger:
-        raise ConfigValidationError("Phase 2 ledger status is not publication-pending")
+    pending = "| 2 | Independent authorization truth system | Local gates passed; publication pending |"
+    complete = "| 2 | Independent authorization truth system | Complete |"
+    if pending not in ledger and complete not in ledger:
+        raise ConfigValidationError("Phase 2 ledger status is neither pending nor complete")
     return {
         "status": "pass",
         "entries": sorted(required_entries),
         "evidence_pointers": sorted(required_evidence),
-        "publication_state": "pending",
+        "publication_state": "complete" if complete in ledger else "pending",
     }
 
 
