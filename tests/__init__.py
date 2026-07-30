@@ -1,2 +1,1 @@
 """PEAD-Bench test suite."""
-

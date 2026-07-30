@@ -129,4 +129,3 @@ fields:
     missing_value_rule: "unavailable and unqueried are distinct"
     permitted_transformations: ["registered view encoder"]
     prohibited_derived_information: ["unregistered alternate view", "AuthorizationLabel", "OracleState"]
-

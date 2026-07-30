@@ -1,3 +1,0 @@
-[console_scripts]
-pead-audit-phase0 = pead.phase0.audit:main
-pead-validate-config = pead.config.validator:main

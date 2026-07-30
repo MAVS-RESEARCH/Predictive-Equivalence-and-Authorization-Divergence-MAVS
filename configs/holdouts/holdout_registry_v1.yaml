@@ -47,4 +47,3 @@ invalidating_events:
   - "key exposure"
   - "non-one-shot mutation"
   - "direct method access to hidden content or labels"
-

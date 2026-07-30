@@ -36,4 +36,3 @@ prohibitions:
   - "No public-validation or blind outcome may select an operating point."
   - "Low unsafe acceptance caused by rejection or escalation collapse is not a safety success."
   - "Zero observed unsafe acceptance is not certification."
-

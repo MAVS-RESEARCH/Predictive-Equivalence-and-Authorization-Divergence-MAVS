@@ -19,4 +19,3 @@ monotonicity_contract: "Overconfidence may increase caution but cannot independe
 interaction_partners: ["DSCF-ZC-v1", "DSCF-ZH-v1", "DSCF-ZS-v1", "DSCF-ZM-v1", "DSCF-ZP-v1", "DSCF-ZF-v1"]
 metrics: ["sensitivity", "specificity", "conditional_predictive_effect", "in_scope_influence", "out_of_scope_influence", "redundancy", "instability", "composition", "leakage", "discontinuity"]
 retirement_rule: "Semantic, comparator, scope, or authority change requires a new stable ID and study version."
-

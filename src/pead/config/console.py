@@ -38,4 +38,3 @@ class ResearchConsole:
             file=self.stream,
             flush=True,
         )
-

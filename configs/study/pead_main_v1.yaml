@@ -153,4 +153,3 @@ versioning:
     - "configs/metrics/protected_objective_v1.yaml"
     - "docs/blind_custody_protocol.md"
   change_after_freeze: "new-study-version-and-dependent-regeneration"
-

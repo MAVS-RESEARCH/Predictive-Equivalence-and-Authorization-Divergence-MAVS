@@ -1,7 +1,7 @@
 # PEAD Blind-Custody Protocol
 
-Protocol version: 1.0  
-Frozen in Phase: 0  
+Protocol version: 1.0
+Frozen in Phase: 0
 Applies to: structural holdouts, D7, D8, and the final blind bank
 
 ## Purpose

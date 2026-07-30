@@ -256,4 +256,3 @@ def build_registry(source_docx: Path) -> dict[str, Any]:
         ],
         "requirements": requirements,
     }
-

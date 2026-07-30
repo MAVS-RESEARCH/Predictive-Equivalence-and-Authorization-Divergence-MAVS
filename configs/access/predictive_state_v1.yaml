@@ -129,4 +129,3 @@ fields:
     missing_value_rule: "candidate action is required"
     permitted_transformations: ["registered tabular", "registered sequence"]
     prohibited_derived_information: ["permission", "policy", "reversibility", "consequence", "execution context"]
-

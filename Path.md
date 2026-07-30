@@ -195,6 +195,7 @@ No implementation, data, method, benchmark, metric, holdout, access, or claim de
 |---|---:|---|---|---|---|
 | None | - | - | - | - | No benchmark incident has occurred |
 | `INC-P0-001` | 0 | Infrastructure validation defect | Initial local validation command | Restricted claim-table row counting to the causal-closure section and reran the complete suite | Corrected; no scientific artifact affected |
+| `INC-P0-002` | 0 | Packaging hygiene | Local commit `52c00b8` before publication | Removed generated `*.egg-info`, ignored future package metadata, normalized text whitespace, and reran all gates | Corrected before push; no scientific artifact affected |
 
 ## 9. Standard entry template for future work
 
@@ -364,7 +365,7 @@ Copy this block for every meaningful action:
   - `results/audits/phase0/phase0_validation.json`: `9d43ed2a7cc0d47b0d2b480c14d527fc060464c48d8919bdf6f4fac70da54e71`.
   - `results/audits/phase0/phase0_tests.json`: `fcd6aaddd02c8eff268f92f652725ed09f68384d2e7521d6c1272c60b238970e`.
   - `results/audits/phase0/phase0_stress.json`: `07b0d71df5a5f42f900f138264e7d45eadacb783f61b1294c01b391182802f03`.
-  - `results/audits/phase0/phase0_compliance.json`: `b37b8328ed9522e54a2244ad91c3bcbe4836f40f8197cb7af751dbbde109f155`.
+  - `results/audits/phase0/phase0_compliance.json`: `bee0228c498c15a7d265577bcbc4832bc1d786e1f1050bd1a935634f9558358f`.
   - `results/audits/phase0/console_log_inventory.json`: `8628dbd6b818072744a1a50d2a5934e7293a5ec9d444290240e47dbd9efe00d3`.
 - **Deviation:** None.
 
@@ -429,3 +430,23 @@ Copy this block for every meaningful action:
 - **Scientific deviations:** None.
 - **Publication state:** Not yet complete under WorkPlan Section 2.4. The phase becomes complete only after commit, push, remote-SHA verification, and the subsequent publication ledger entry.
 - **Next permitted action:** Commit and push the exact Phase 0 scope to `origin/agent/pead-workplan`, verify the remote SHA, then record the publication in `Path.md`.
+
+### PATH-0014 - Corrected pre-publication packaging hygiene
+
+- **Timestamp:** 2026-07-30T17:22:32+05:00
+- **Phase:** 0
+- **Status:** Corrected; publication still pending.
+- **Incident:** `INC-P0-002`.
+- **Trigger:** The explicit staged-file and `git diff --cached --check` review required by WorkPlan Section 2.4.
+- **Observed issues:**
+  - Editable installation generated `src/pead_bench.egg-info/`, which is environment-derived package metadata and not research source.
+  - Several new text files contained trailing blank lines or Markdown trailing spaces.
+- **Correction:**
+  - Added `*.egg-info/` to `.gitignore`.
+  - Removed all generated `src/pead_bench.egg-info/` files from the final tree.
+  - Mechanically normalized trailing whitespace and terminal blank lines without changing semantic content.
+  - Preserved UTF-8 without BOM and preserved source-code line positions for every recorded console event.
+- **Git history:** Local commit `52c00b8` captured the initial Phase 0 implementation but was not pushed. A non-rewriting corrective commit will remove the generated metadata and normalize the final tree. No amend, reset, force-push, or history rewrite was used.
+- **Required retest:** Complete test runner, source verification, 10,000-mutation stress audit, console-line inventory, and diff check.
+- **Scientific effect:** None. No data, bank, model, label, holdout content, metric result, or claim outcome changed.
+- **Deviation:** None; the correction enforces repository and publication hygiene.

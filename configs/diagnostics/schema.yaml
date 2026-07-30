@@ -48,4 +48,3 @@ global_constraints:
   - "Out-of-scope patterns cannot activate a prohibited influence path."
   - "Diagnostic interactions are evaluated pairwise and as registered compositions."
   - "Retirement or semantic change creates a new diagnostic version."
-

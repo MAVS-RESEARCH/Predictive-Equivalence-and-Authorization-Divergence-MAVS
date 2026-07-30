@@ -1,7 +1,7 @@
 # PEAD-Bench Claim Ledger
 
-Ledger version: 1.0  
-Study ID: `PEAD-MAIN-v1`  
+Ledger version: 1.0
+Study ID: `PEAD-MAIN-v1`
 Paper boundary: fixed MAVS-GC and Diagnostic Sciences only
 
 ## Scientific identity
