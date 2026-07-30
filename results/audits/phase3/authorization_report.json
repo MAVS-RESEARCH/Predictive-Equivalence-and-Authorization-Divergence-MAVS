@@ -1,0 +1,93 @@
+{
+  "ambiguity_certificates": {
+    "failures": 0,
+    "verified": 16000
+  },
+  "dual_engine_agreement": "verified_during_pair_construction",
+  "exact_complexity": {
+    "compositional": 11200,
+    "simple": 4800
+  },
+  "exact_subbanks": {
+    "I-A": 6400,
+    "I-B": 3200,
+    "I-C": 3200,
+    "I-N": 3200
+  },
+  "exact_three_or_more_fact_pairs": 6400,
+  "exact_world_labels": {
+    "Accept": 10666,
+    "Escalate": 10668,
+    "Reject": 10666
+  },
+  "near_world_labels": {
+    "Accept": 5334,
+    "Escalate": 5332,
+    "Reject": 5334
+  },
+  "predictive_only_lower_bounds": {
+    "deterministic_terminal": {
+      "Accept": {
+        "coverage": 1.0,
+        "evaluator": "deterministic_accept",
+        "expected_terminal_errors": 21334.0,
+        "pair_count": 16000,
+        "pair_error_rate": 0.6666875
+      },
+      "Reject": {
+        "coverage": 1.0,
+        "evaluator": "deterministic_reject",
+        "expected_terminal_errors": 21334.0,
+        "pair_count": 16000,
+        "pair_error_rate": 0.6666875
+      }
+    },
+    "escalate_both": {
+      "coverage": 0.0,
+      "evaluator": "escalate_both",
+      "expected_terminal_errors": 0.0,
+      "pair_count": 16000,
+      "pair_error_rate": 0.0
+    },
+    "pair_error_coverage_frontier": [
+      {
+        "coverage": 0.0,
+        "evaluator": "escalate_both",
+        "expected_terminal_errors": 0.0,
+        "pair_count": 16000,
+        "pair_error_rate": 0.0
+      },
+      {
+        "coverage": 1.0,
+        "evaluator": "deterministic_accept",
+        "expected_terminal_errors": 21334.0,
+        "pair_count": 16000,
+        "pair_error_rate": 0.6666875
+      },
+      {
+        "coverage": 1.0,
+        "evaluator": "deterministic_reject",
+        "expected_terminal_errors": 21334.0,
+        "pair_count": 16000,
+        "pair_error_rate": 0.6666875
+      },
+      {
+        "coverage": 1.0,
+        "evaluator": "randomized_terminal",
+        "expected_terminal_errors": 21334.0,
+        "pair_count": 16000,
+        "pair_error_rate": 0.6666875
+      }
+    ],
+    "randomized_terminal": {
+      "coverage": 1.0,
+      "evaluator": "randomized_terminal",
+      "expected_terminal_errors": 21334.0,
+      "pair_count": 16000,
+      "pair_error_rate": 0.6666875
+    }
+  },
+  "quota_errors": [],
+  "schema_version": "1.0",
+  "status": "pass"
+}

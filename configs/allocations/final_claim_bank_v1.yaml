@@ -1,0 +1,67 @@
+schema_version: "1.0"
+allocation_id: final_claim_bank_v1
+normative_status: human_authored_pending_phase_9a_signature
+domains: [D1, D2, D3, D4, D5, D6, D7, D8]
+exact:
+  pairs_per_domain: 2000
+  subbanks:
+    I-A: 800
+    I-B: 400
+    I-C: 400
+    I-N: 400
+  orientations:
+    I-A: {forward: 400, reverse: 400}
+    I-B: {forward: 200, reverse: 200}
+    I-C: {forward: 200, reverse: 200}
+  same_label_by_domain_group:
+    D1-D3: {Accept: 66, Reject: 67, Escalate: 267}
+    D4-D6: {Accept: 67, Reject: 66, Escalate: 267}
+    D7-D8: {Accept: 67, Reject: 67, Escalate: 266}
+  mechanism_pairs_per_domain:
+    M01: 167
+    M02: 167
+    M03: 167
+    M04: 167
+    M05: 167
+    M06: 167
+    M07: 167
+    M08: 167
+    M09: 166
+    M10: 166
+    M11: 166
+    M12: 166
+  substitution_rules:
+    - rule_id: SUB-M11-DIVERGENT
+      constraint: M11 is allocated only to I-N scope-boundary controls.
+      replacement_cycle: [M01, M02, M03, M04, M05, M06, M07, M08, M09, M10, M12]
+  complexity:
+    simple_fraction: 0.30
+    compositional_fraction: 0.70
+    minimum_three_factor_fraction: 0.40
+  global_world_counts: {Accept: 10666, Reject: 10666, Escalate: 10668}
+near:
+  pairs_per_domain: 1000
+  epsilons: [0.0, 0.000001, 0.00001, 0.0001, 0.001, 0.01, 0.05, 0.1]
+  pairs_per_domain_epsilon: 125
+  per_cell:
+    I-A: 25
+    I-B: 25
+    I-C: 25
+    I-N: 50
+  same_label_rotations:
+    - {Accept: 17, Reject: 17, Escalate: 16}
+    - {Accept: 17, Reject: 16, Escalate: 17}
+    - {Accept: 16, Reject: 17, Escalate: 17}
+  rotation_rule: "(domain_index * 8 + epsilon_index) mod 3"
+  global_world_counts: {Accept: 5334, Reject: 5334, Escalate: 5332}
+future_tracks:
+  reversal: {sequences_per_domain: 500, global_steps: 24000}
+  scope: {cases_per_diagnostic_domain_bank: 100, global_cases: 22400}
+  evidence_sufficiency: {cases_per_class_domain: 500, global_cases: 12000}
+matched_controls:
+  minimum_fraction: 0.20
+  required: [composition, nuisance, prior_shift, label_permutation]
+final_signature:
+  phase: 9A
+  status: pending
+  required_output: manifests/allocations/final_claim_bank_v1.json

@@ -1,0 +1,21 @@
+{
+  "adversary_accuracy": {
+    "gbdt": 0.330121491411814,
+    "graph": 0.3317972350230415,
+    "linear": 0.33033095936321744,
+    "nearest_neighbor": 0.32991202346041054,
+    "sequence": 0.3317972350230415
+  },
+  "failures": {},
+  "frozen_accuracy_upper_band": 0.36,
+  "group_overlap": 0,
+  "permutation_seed": 3003,
+  "permutations": 200,
+  "pooled_prediction_permutation_p99": 0.3383954754922497,
+  "schema_version": "1.0",
+  "status": "pass",
+  "test_atomic_groups": 4774,
+  "test_worlds": 9548,
+  "train_atomic_groups": 9634,
+  "train_worlds": 19268
+}

@@ -1,0 +1,152 @@
+{
+  "count": 21,
+  "entries": [
+    {
+      "comment": "Execute complete in-memory Phase 3 bank generation.",
+      "comment_line": 20,
+      "console_log_line": 21,
+      "event_id": "P3-BANK-001",
+      "file": "scripts/generate_bank.py"
+    },
+    {
+      "comment": "Retain generation evidence while preserving the Phase 9A release boundary.",
+      "comment_line": 30,
+      "console_log_line": 31,
+      "event_id": "P3-BANK-002",
+      "file": "scripts/generate_bank.py"
+    },
+    {
+      "comment": "Establish the required Phase 3 implementation and evidence file boundary.",
+      "comment_line": 205,
+      "console_log_line": 206,
+      "event_id": "P3-AUDIT-001",
+      "file": "src/pead/phase3/audit.py"
+    },
+    {
+      "comment": "Verify the content-signed validation manifest and preserve the Phase 9A release boundary.",
+      "comment_line": 208,
+      "console_log_line": 209,
+      "event_id": "P3-AUDIT-002",
+      "file": "src/pead/phase3/audit.py"
+    },
+    {
+      "comment": "Generate every exact and near pair and execute equivalence and authorization gates.",
+      "comment_line": 211,
+      "console_log_line": 212,
+      "event_id": "P3-AUDIT-003",
+      "file": "src/pead/phase3/audit.py"
+    },
+    {
+      "comment": "Scan both generator paths and unlabeled schemas for prohibited label logic.",
+      "comment_line": 220,
+      "console_log_line": 221,
+      "event_id": "P3-AUDIT-004",
+      "file": "src/pead/phase3/audit.py"
+    },
+    {
+      "comment": "Train and test five predictive-only leakage adversaries on disjoint atomic groups.",
+      "comment_line": 232,
+      "console_log_line": 233,
+      "event_id": "P3-AUDIT-005",
+      "file": "src/pead/phase3/audit.py"
+    },
+    {
+      "comment": "Verify complete regression, property, metamorphic, and stress evidence.",
+      "comment_line": 243,
+      "console_log_line": 244,
+      "event_id": "P3-AUDIT-006",
+      "file": "src/pead/phase3/audit.py"
+    },
+    {
+      "comment": "Verify every Phase 3 operational console call has an adjacent identity comment.",
+      "comment_line": 246,
+      "console_log_line": 247,
+      "event_id": "P3-AUDIT-007",
+      "file": "src/pead/phase3/audit.py"
+    },
+    {
+      "comment": "Confirm Phase 3 did not train models or release an unsigned final bank.",
+      "comment_line": 259,
+      "console_log_line": 260,
+      "event_id": "P3-AUDIT-008",
+      "file": "src/pead/phase3/audit.py"
+    },
+    {
+      "comment": "Verify the append-only Path ledger records implementation and evidence.",
+      "comment_line": 262,
+      "console_log_line": 263,
+      "event_id": "P3-AUDIT-009",
+      "file": "src/pead/phase3/audit.py"
+    },
+    {
+      "comment": "Retain the complete Phase 3 compliance verdict and evidence pointers.",
+      "comment_line": 311,
+      "console_log_line": 312,
+      "event_id": "P3-AUDIT-010",
+      "file": "src/pead/phase3/audit.py"
+    },
+    {
+      "comment": "Report the final local Phase 3 gate verdict.",
+      "comment_line": 324,
+      "console_log_line": 325,
+      "event_id": "P3-AUDIT-011",
+      "file": "src/pead/phase3/audit.py"
+    },
+    {
+      "comment": "Emit the hard-gate failure without suppressing its cause.",
+      "comment_line": 336,
+      "console_log_line": 337,
+      "event_id": "P3-AUDIT-012",
+      "file": "src/pead/phase3/audit.py"
+    },
+    {
+      "comment": "Confirm the complete exact and near allocation denominators before world generation.",
+      "comment_line": 50,
+      "console_log_line": 51,
+      "event_id": "P3-GENERATE-001",
+      "file": "src/pead/phase3/generation.py"
+    },
+    {
+      "comment": "Report each completed exact-domain generation boundary.",
+      "comment_line": 67,
+      "console_log_line": 68,
+      "event_id": "P3-GENERATE-002",
+      "file": "src/pead/phase3/generation.py"
+    },
+    {
+      "comment": "Report each completed near-domain generation boundary.",
+      "comment_line": 82,
+      "console_log_line": 83,
+      "event_id": "P3-GENERATE-003",
+      "file": "src/pead/phase3/generation.py"
+    },
+    {
+      "comment": "Retain the complete in-memory generation verdict without releasing unsigned bank rows.",
+      "comment_line": 106,
+      "console_log_line": 107,
+      "event_id": "P3-GENERATE-004",
+      "file": "src/pead/phase3/generation.py"
+    },
+    {
+      "comment": "Discover the complete regression and Phase 3 verification suite.",
+      "comment_line": 51,
+      "console_log_line": 52,
+      "event_id": "P3-TEST-RUN-001",
+      "file": "src/pead/phase3/test_runner.py"
+    },
+    {
+      "comment": "Report the exact complete-suite test denominator.",
+      "comment_line": 59,
+      "console_log_line": 60,
+      "event_id": "P3-TEST-RUN-002",
+      "file": "src/pead/phase3/test_runner.py"
+    },
+    {
+      "comment": "Retain the complete unit, property, metamorphic, regression, and stress verdict.",
+      "comment_line": 109,
+      "console_log_line": 110,
+      "event_id": "P3-TEST-RUN-003",
+      "file": "src/pead/phase3/test_runner.py"
+    }
+  ]
+}

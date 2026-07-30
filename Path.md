@@ -30,7 +30,7 @@ Rules:
 | 0 | Research charter, claim ledger, and execution controls | Complete | All local gates passed; implementation commit `8259d22e14cfd532185416795ba079448216540b` pushed and remotely verified |
 | 1 | Core immutable infrastructure and safe result hygiene | Complete | 52/52 tests passed; implementation commit `01de85198fbaa1ffdc55591f6b303029299c92d5` pushed and remotely verified |
 | 2 | Independent authorization truth system | Complete | 74/74 tests; implementation commit `629b18a7341cda0c44fa88f33c97c5869c3ae14e` pushed and remotely verified |
-| 3 | Causal world registry, exact twins, and near twins | Not started | None |
+| 3 | Causal world registry, exact twins, and near twins | Local gates passed; publication pending | 89/89 tests passed; complete 16,000 exact-pair and 8,000 near-pair audit pending publication |
 | 4 | Reversals, scope banks, and evidence sufficiency | Not started | None |
 | 5 | Eight domain adapters and validity review | Not started | None |
 | 6 | Projection layer, feature firewall, and parity | Not started | None |
@@ -1067,3 +1067,285 @@ Copy this block for every meaningful action:
 - **Phase verdict:** Complete. Every Phase 2 WorkPlan scope item, required file group, implementation method, completion gate, stress gate, console-documentation requirement, append-only ledger requirement, and automatic publication requirement is satisfied.
 - **Compliance gaps:** None detected.
 - **Next permitted action:** Stop. Phase 3 may begin only after a new explicit user instruction.
+
+### PATH-0031 - Phase 3 source reconfirmation and execution boundary
+
+- **Timestamp:** 2026-07-30.
+- **Phase:** 3.
+- **Status:** Pass.
+- **Change ID:** `P3-SOURCE-001`.
+- **WorkPlan alignment:** Phase 3 source interpretation, causal-world scope, and Phase 4 exclusion.
+- **Source reviewed:** `C:\Users\Saif malik\Downloads\MAVS-Diagnostic Sciences.pdf`.
+- **Source SHA-256 reconfirmed:** `B7CC77BF32558B042B8ECFA7C4BB9267B53910B0B84816198CF34A9E73EEE758`.
+- **Visual verification:** Re-inspected rendered pages covering the central MAVS claim, prediction/governance separation, governance separability, and hard-veto precedence.
+- **Applied interpretation:** Identical prediction-facing support may coexist with different authorization because governance evidence is a separate causal input. Raw correlation is not granted an independent veto. Phase 3 therefore generates unlabeled worlds first, keeps `PredictiveState` separate from governance and Oracle state, and obtains terminal authorization only through the Phase 2 dual truth engines.
+- **Starting repository boundary:** Clean `agent/pead-workplan` branch at remotely verified Phase 2 close `6b8ff788154e1c2de37c591c49708d5b8809300a`.
+- **Phase exclusion:** No Phase 4 reversal, scope-bank, or evidence-sufficiency implementation was started.
+- **Deviation:** None.
+
+### PATH-0032 - Unlabeled world schema, M01-M12 registry, interventions, nuisance controls, and independent generators
+
+- **Timestamp:** 2026-07-30.
+- **Phase:** 3.
+- **Status:** Pass.
+- **Change IDs:** `P3-WORLD-001`, `P3-MECHANISM-001`, `P3-GENERATOR-001`.
+- **WorkPlan alignment:** Phase 3 latent factorization, mechanism registry, primary/reference generation, registered authorization-parent interventions, nuisance controls, and static label-leakage prohibition.
+- **Files implemented:**
+  - `src/pead/world/schema.py`
+  - `src/pead/world/mechanisms.py`
+  - `src/pead/world/interventions.py`
+  - `src/pead/world/nuisance.py`
+  - `src/pead/world/generator_primary.py`
+  - `src/pead/world/generator_reference.py`
+  - `src/pead/world/__init__.py`
+- **Schema contract:** `WorldRequest` carries domain, mechanism, template, latent, intervention, provenance, predictive-parent, latent-fact, and nuisance identities only. `GeneratedWorld` contains `WorldState`, `PredictiveState`, `GovernanceState`, `OracleState`, latent facts, surface, and lineage. Neither schema contains `label`, `authorization_label`, `target`, or `outcome`.
+- **Complete-world construction:** Each request begins from a complete predictive-parent dictionary and a complete latent-fact graph. Interventions copy that complete graph, change only registry-declared authorization parents, and prove the predictive-parent hash and canonical bytes are unchanged.
+- **Mechanism registry:** Exactly ordered `M01` through `M12`: authority mismatch, policy conflict, provenance dependence, evidence masking, reversibility shift, consequence escalation, temporal validity, shared-premise corruption, counterfactual fragility, constraint interaction, scope boundary, and ambiguity class. `M11` is restricted to `I-N`.
+- **Generator separation:** Primary and reference generators are separately coded source files. The reference path does not import the primary generator, the label DSL, label parser, or either label evaluator. Both paths independently produce matching predictive, governance, Oracle, latent, and surface semantics.
+- **Nuisance controls:** Six deterministic balanced variants are implemented: canonical, identifier swap, ordering change, compact style, label-swapped surface, and prior-shift surface. Nuisance metadata changes are isolated from predictive and registered authorization parents.
+- **Static prohibition:** Generator source AST scans reject Phase 2 label imports and literal terminal labels. Schema inspection rejects terminal target fields.
+- **Retained correction `INC-P3-001`:** The first generated exact-pair sample exposed that `copy.deepcopy` cannot copy nested `mappingproxy` values created by immutable `WorldRequest` freezing. A recursive `_thaw` conversion was implemented in `nuisance.py`. No pair or evidence artifact had been released. Exact sample generation then passed.
+- **Deviation:** None. The correction enforces the immutable-input/mutable-transform boundary intended by the plan.
+
+### PATH-0033 - Exact-bank construction, allocation proof, controls, and predictive-only lower bounds
+
+- **Timestamp:** 2026-07-30.
+- **Phase:** 3.
+- **Status:** Pass.
+- **Change IDs:** `P3-EXACT-001`, `P3-ALLOCATION-001`.
+- **WorkPlan alignment:** Phase 3 exact twins, Section 5.9 exact quotas, dual-label agreement, ambiguity proof, atomic grouping, and deterministic/randomized/escalate-both lower bounds.
+- **Files implemented:**
+  - `src/pead/tracks/exact.py`
+  - `src/pead/phase3/allocation.py`
+  - `configs/allocations/final_claim_bank_v1.yaml`
+  - `results/manifests/phase3/allocation_validation_manifest_v1.json`
+- **Exact allocation denominator:** 16,000 pairs and 32,000 generated worlds across eight domains, exactly 2,000 pairs per domain.
+- **Per-domain subbanks:** `I-A=800`, `I-B=400`, `I-C=400`, `I-N=400`.
+- **Orientations:** Per domain, `I-A` has 400 forward and 400 reverse; `I-B` and `I-C` each have 200 forward and 200 reverse.
+- **Global exact labels:** `Accept=10,666`, `Reject=10,666`, `Escalate=10,668`.
+- **Mechanism quotas per domain:** `M01-M08=167` pairs each and `M09-M12=166` each. The M11 restriction is satisfied through I-N allocation and frozen substitution rules.
+- **Complexity:** 4,800 simple pairs and 11,200 compositional pairs; 6,400 pairs use at least three interacting facts.
+- **Twin release gates:** A pair is constructed only after predictive field equality, canonical-byte equality, primary/reference generation agreement, DSL/reference label agreement, expected-label agreement, registered intervention proof, and certificate verification for every Escalate world.
+- **Same-label controls:** `I-N` preserves PEI=1 and ADI=0 with the frozen per-domain `Accept/Reject/Escalate` schedule.
+- **Atomic grouping:** Pair, latent, template, intervention, and provenance identities map to one `atomic_group_id`; group-derived development roles are indivisible.
+- **Analytical controls:** Deterministic Accept, deterministic Reject, randomized 50/50 terminal, escalate-both, and pair error-coverage frontier functions compute the required predictive-only lower-bound evidence.
+- **Manifest authority:** The human-authored YAML is compiled to a SHA-256 content-signed validation manifest with `release_authority: none`. It explicitly requires the final Phase 9A signature. Phase 3 releases zero final claim-bank rows.
+- **Retained correction `INC-P3-002`:** The first allocation enumeration attempted to parse the literal `group_` prefix as hexadecimal. Split derivation was corrected to remove the prefix before integer conversion. The complete allocation was regenerated and exactly matched every frozen quota.
+- **Deviation:** None.
+
+### PATH-0034 - Near-equivalence registry, typed distances, frozen epsilon cells, and grouping controls
+
+- **Timestamp:** 2026-07-30.
+- **Phase:** 3.
+- **Status:** Pass.
+- **Change ID:** `P3-NEAR-001`.
+- **WorkPlan alignment:** Phase 3 Section 5.10 near-equivalence construction, typed distances, frozen thresholds, nuisance controls, and governance-leak prevention.
+- **Files implemented:**
+  - `src/pead/tracks/near.py`
+  - `src/pead/tracks/distances.py`
+  - `configs/tracks/near_distance_registry.yaml`
+- **Near denominator:** 8,000 pairs and 16,000 worlds: 1,000 pairs per domain and 125 pairs in each of 64 domain/epsilon cells.
+- **Frozen epsilon grid:** `0`, `1e-6`, `1e-5`, `1e-4`, `1e-3`, `1e-2`, `5e-2`, and `1e-1`.
+- **Per-cell subbanks:** `I-A=25`, `I-B=25`, `I-C=25`, `I-N=50`.
+- **Near global labels:** `Accept=5,334`, `Reject=5,334`, `Escalate=5,332`, using the three frozen I-N rotations.
+- **Typed metrics:** Vector RMS, calibrated-probability clipped-logit, scalar robust-range, categorical mismatch, weighted Jaccard set, normalized graph edit, and maximum token-cosine/token-edit distances. Missing/missing is zero and one-sided missingness uses the frozen cost.
+- **Aggregate:** Weighted maximum over all predictive fields. Every generated near pair must equal its registered epsilon within `1e-12`.
+- **Leak prevention:** Governance intervention identities and mechanism terms are scanned out of serialized `PredictiveState`; 0 visible governance tokens are permitted.
+- **Retained correction `INC-P3-003`:** The initial text-distance serialization could not encode nested `mappingproxy` structures. Typed distance serialization now recursively converts immutable mappings, sequences, and sets to canonical plain values. All eight sampled epsilon levels then passed, including floating-point tolerance at `0.1`.
+- **Deviation:** None.
+
+### PATH-0035 - Independent equivalence, authorization, source, grouping, and empirical leakage audits
+
+- **Timestamp:** 2026-07-30.
+- **Phase:** 3.
+- **Status:** Pass.
+- **Change IDs:** `P3-AUDIT-CODE-001`, `P3-LEAKAGE-001`.
+- **WorkPlan alignment:** Phase 3 equivalence, authorization, dependency/source, lineage, label-swapped, same-label, lower-bound, and five-adversary leakage audits.
+- **Files implemented:**
+  - `src/pead/audits/equivalence.py`
+  - `src/pead/audits/authorization.py`
+  - `src/pead/audits/leakage.py`
+  - `src/pead/phase3/generation.py`
+  - `src/pead/phase3/audit.py`
+  - `scripts/generate_bank.py`
+  - `scripts/audit_equivalence.py`
+  - `scripts/audit_leakage.py`
+- **Equivalence audit:** Streams all exact and near pairs through PEI, ADI, epsilon, generator-agreement, governance-token, unique-group, and lineage/split-overlap gates.
+- **Authorization audit:** Independently recounts every domain, subbank, orientation, mechanism, complexity, interacting-fact, epsilon-cell, and global-label quota. Every Escalate certificate is reconstructed from its witnesses and independently verified.
+- **Source audit:** AST-inspects both generators for label dependencies and terminal literals, checks separate source hashes, and verifies unlabeled schemas.
+- **Leakage samples:** Retain only prediction-facing numeric features, prediction-facing sequence signatures, prediction-facing graph signatures, the external audit label, atomic group, and split role.
+- **Train/test separation:** Linear, GBDT-style decision stump, sequence-signature, graph-signature, and nearest-neighbor adversaries train on `development_fit` plus `development_selection` and test only on `public_validation`. Atomic-group overlap is a hard failure. Calibration roles are excluded from training and testing.
+- **Overfitting controls:** Frozen seed `3003`, 200 label permutations, frozen maximum authorization accuracy `0.36`, deterministic feature extraction, disjoint groups, five structurally different adversaries, and regeneration required on any failure.
+- **Model scope:** These five small classifiers are leakage probes, not scientific benchmark models, and are not saved as checkpoints. No Phase 7/8 model training occurs.
+- **Deviation:** None.
+
+### PATH-0036 - Phase 3 regression, property, metamorphic, adversarial, and stress tests
+
+- **Timestamp:** 2026-07-30.
+- **Phase:** 3.
+- **Status:** Pass; 89/89.
+- **Change ID:** `P3-TEST-001`.
+- **Required test files:**
+  - `tests/property/test_twin_invariance.py`
+  - `tests/metamorphic/test_nuisance_invariance.py`
+- **Additional test files:**
+  - `tests/unit/test_world_generation.py`
+  - `tests/unit/test_phase3_distances.py`
+  - `tests/property/test_phase3_authorization.py`
+  - `tests/property/test_group_splits.py`
+  - `tests/stress/test_phase3_stress.py`
+  - `src/pead/phase3/test_runner.py`
+  - `scripts/run_phase3_tests.py`
+- **Targeted Phase 3 run:** 15/15 passed in 7.405 seconds.
+- **Complete-suite command:** `.\.venv\Scripts\python.exe scripts\run_phase3_tests.py`.
+- **Complete result:** 89 tests run, 89 successful, 0 failures, 0 errors, 0 skips.
+- **Stress gates:** Complete allocation enumeration of 16,000 exact and 8,000 near pairs; exact/near world denominators 32,000/16,000; all 12 mechanisms; all 64 domain/epsilon cells; five leakage adversary families.
+- **Property evidence:** Sampled exact twins preserve field and byte equality across all domains/subbanks; divergent banks have ADI=1; same-label controls have ADI=0; all mechanism labels match both evaluators; certificates verify independently; all lineages remain indivisible.
+- **Metamorphic evidence:** Every nuisance variant preserves predictive hash and authorization label while producing at least five distinct surface hashes.
+- **Regression:** All Phase 0, Phase 1, and Phase 2 tests remain in the same passing 89-test execution.
+- **Retained execution incident `INC-P3-004`:** The first complete-suite command used the system Python, which lacked the locked `python-docx` dependency. It discovered 82 tests and produced two import errors before executing Phase 0 modules. This was an interpreter-selection error, not an implementation failure. The locked repository virtual environment was then used and the complete 89-test suite passed. The failed report was overwritten by the final environment-correct report and is not evidence.
+- **Evidence:** `results/audits/phase3/phase3_tests.json`.
+- **Deviation:** None.
+
+### PATH-0037 - Phase 3 operational console inventory
+
+- **Timestamp:** 2026-07-30.
+- **Phase:** 3.
+- **Status:** Pass.
+- **Change ID:** `P3-CONSOLE-001`.
+- **Inventory denominator:** 21 `console.log(...)` statements, 21 immediately preceding identifying comments, 21 unique event IDs, 0 missing comments, 0 ID mismatches, and 0 duplicates.
+- **Line-number convention:** Both line columns are one-based source line numbers. The Phase 3 auditor recomputes them directly from the final source.
+
+| Event ID | `console.log` file:line | Comment line | Exact identifying comment |
+|---|---|---:|---|
+| `P3-BANK-001` | `scripts/generate_bank.py:21` | 20 | Execute complete in-memory Phase 3 bank generation. |
+| `P3-BANK-002` | `scripts/generate_bank.py:31` | 30 | Retain generation evidence while preserving the Phase 9A release boundary. |
+| `P3-AUDIT-001` | `src/pead/phase3/audit.py:206` | 205 | Establish the required Phase 3 implementation and evidence file boundary. |
+| `P3-AUDIT-002` | `src/pead/phase3/audit.py:209` | 208 | Verify the content-signed validation manifest and preserve the Phase 9A release boundary. |
+| `P3-AUDIT-003` | `src/pead/phase3/audit.py:212` | 211 | Generate every exact and near pair and execute equivalence and authorization gates. |
+| `P3-AUDIT-004` | `src/pead/phase3/audit.py:221` | 220 | Scan both generator paths and unlabeled schemas for prohibited label logic. |
+| `P3-AUDIT-005` | `src/pead/phase3/audit.py:233` | 232 | Train and test five predictive-only leakage adversaries on disjoint atomic groups. |
+| `P3-AUDIT-006` | `src/pead/phase3/audit.py:244` | 243 | Verify complete regression, property, metamorphic, and stress evidence. |
+| `P3-AUDIT-007` | `src/pead/phase3/audit.py:247` | 246 | Verify every Phase 3 operational console call has an adjacent identity comment. |
+| `P3-AUDIT-008` | `src/pead/phase3/audit.py:260` | 259 | Confirm Phase 3 did not train models or release an unsigned final bank. |
+| `P3-AUDIT-009` | `src/pead/phase3/audit.py:263` | 262 | Verify the append-only Path ledger records implementation and evidence. |
+| `P3-AUDIT-010` | `src/pead/phase3/audit.py:312` | 311 | Retain the complete Phase 3 compliance verdict and evidence pointers. |
+| `P3-AUDIT-011` | `src/pead/phase3/audit.py:325` | 324 | Report the final local Phase 3 gate verdict. |
+| `P3-AUDIT-012` | `src/pead/phase3/audit.py:337` | 336 | Emit the hard-gate failure without suppressing its cause. |
+| `P3-GENERATE-001` | `src/pead/phase3/generation.py:51` | 50 | Confirm the complete exact and near allocation denominators before world generation. |
+| `P3-GENERATE-002` | `src/pead/phase3/generation.py:68` | 67 | Report each completed exact-domain generation boundary. |
+| `P3-GENERATE-003` | `src/pead/phase3/generation.py:83` | 82 | Report each completed near-domain generation boundary. |
+| `P3-GENERATE-004` | `src/pead/phase3/generation.py:107` | 106 | Retain the complete in-memory generation verdict without releasing unsigned bank rows. |
+| `P3-TEST-RUN-001` | `src/pead/phase3/test_runner.py:52` | 51 | Discover the complete regression and Phase 3 verification suite. |
+| `P3-TEST-RUN-002` | `src/pead/phase3/test_runner.py:60` | 59 | Report the exact complete-suite test denominator. |
+| `P3-TEST-RUN-003` | `src/pead/phase3/test_runner.py:110` | 109 | Retain the complete unit, property, metamorphic, regression, and stress verdict. |
+
+- **Evidence pointer:** `results/audits/phase3/console_log_inventory.json`.
+- **Scope note:** Pure per-record generation and distance functions do not print because the complete audit creates 48,000 worlds and per-record output would alter library behavior and obscure gate evidence. Every operational generation boundary, test step, and audit step uses the requested structured `console.log(...)` form with an adjacent identifying comment.
+- **Deviation:** None.
+
+### PATH-0038 - Phase 3 full-bank audit evidence and retained ledger-pointer correction
+
+- **Timestamp:** 2026-07-30.
+- **Phase:** 3.
+- **Status:** Full scientific and engineering gates passed; final compliance rerun required after this append-only correction.
+- **Change ID:** `P3-AUDIT-EVIDENCE-001`.
+- **Full-bank command:** `.\.venv\Scripts\python.exe scripts\audit_equivalence.py`.
+- **Generated denominator:** All 16,000 exact pairs, all 8,000 near pairs, and all 48,000 worlds generated and independently audited in memory.
+- **Equivalence result:** Exact PEI=1 for 16,000/16,000 pairs; divergent ADI=1 for 12,800/12,800; I-N ADI=0 for 3,200/3,200; near frozen-distance compliance 8,000/8,000; governance tokens visible in predictive state 0; primary/reference generation disagreements 0.
+- **Group result:** 24,000 unique atomic groups; template, latent, intervention, and provenance cross-split overlaps 0. Pair counts were development-fit 4,874, development-selection 4,918, calibration-fit 4,813, calibration-policy 4,754, and public-validation 4,641.
+- **Authorization result:** Every exact and near quota matched; all Escalate ambiguity certificates were independently verified; deterministic, randomized, escalate-both, and error-coverage lower-bound reports were retained.
+- **Leakage result:** Train worlds 19,584 in 9,792 atomic groups; public-validation worlds 9,282 in 4,641 disjoint groups; overlap 0. Accuracy was linear `0.3372118078`, GBDT `0.3255763844`, sequence `0.3260073260`, graph `0.3260073260`, and nearest-neighbor `0.3200818789`. All are below the frozen `0.36` ceiling. The pooled 200-permutation p99 was `0.3389355742`.
+- **Release result:** Validation-only generation; final claim-bank rows released 0; release authority `none`; final Phase 9A signature still required.
+- **Evidence pointers:**
+  - `results/audits/phase3/generation_summary.json`
+  - `results/audits/phase3/equivalence_report.json`
+  - `results/audits/phase3/authorization_report.json`
+  - `results/audits/phase3/leakage_report.json`
+  - `results/audits/phase3/generator_separation_report.json`
+  - `results/audits/phase3/phase3_tests.json`
+  - `results/audits/phase3/console_log_inventory.json`
+  - `results/audits/phase3/phase3_compliance.json`
+- **Retained audit incident `INC-P3-005`:**
+  - The first audit attempt stopped before generation because the audit expected the key `final_phase_9a_signature_required`, while the signed validation manifest intentionally names it `phase9a_final_signature_required`.
+  - The auditor was corrected to read the exact manifest schema. No manifest, allocation, pair, or result changed.
+  - The second audit completed all 48,000 worlds and every scientific/engineering gate, then correctly failed the append-only ledger gate because this entry had not yet named the generated evidence files.
+  - This entry supplies those exact evidence pointers. The complete audit is rerun after the correction; the failed audit has no `phase3_compliance.json` and is not final evidence.
+- **Scientific effect:** None. The incidents affected audit metadata validation only; generated worlds, labels, quotas, distances, certificates, and leakage measurements were unchanged.
+- **Deviation:** None.
+
+### PATH-0039 - Phase 3 extreme-rigor local completion audit
+
+- **Timestamp:** 2026-07-30.
+- **Phase:** 3.
+- **Status:** Local gates passed; GitHub publication pending.
+- **Change ID:** `P3-AUDIT-LOCAL-001`.
+- **WorkPlan alignment:** Every Phase 3 scope item, named file family, implementation method, and verification/completion gate.
+- **Final hardening before audit:** A clause-level comparison against the Phase 3 WorkPlan found that atomic grouping explicitly names sequence lineage even though exact and near twins are singleton, non-reversal cases. `sequence_lineage_id` was therefore added to `WorldRequest`, both allocation schemas, both generator lineages, atomic-group hashes, lineage-split audits, and property tests. This prevents a future sequence relation from being lost when Phase 4 extends the same identities.
+- **Supersession note:** The numerical split and leakage results in `PATH-0038` describe the preceding valid pair/latent/template/intervention/provenance grouping. They are retained as historical audit evidence but are superseded by this stricter final run, which additionally groups singleton sequence lineage. Labels, quotas, predictive states, mechanisms, and distances did not change.
+- **Final commands:**
+  - `.\.venv\Scripts\python.exe scripts\run_phase3_tests.py`
+  - `.\.venv\Scripts\python.exe scripts\audit_equivalence.py`
+  - `.\.venv\Scripts\python.exe scripts\validate_config.py --study configs\study\pead_main_v1.yaml --verify-sources --source-root "C:\Users\Saif malik\Downloads"`
+  - `.\.venv\Scripts\python.exe -m compileall -q src scripts tests`
+  - `git diff --check`
+- **Test verdict:** 89/89 passed, including all Phase 0-2 regression tests and every Phase 3 unit/property/metamorphic/stress test.
+- **Complete generation verdict:** 16,000/16,000 exact pairs and 8,000/8,000 near pairs generated; 48,000 worlds audited; primary/reference generation disagreements 0.
+- **Exact gates:** PEI=1 for 16,000/16,000; divergent ADI=1 for 12,800/12,800; I-N same-label ADI=0 for 3,200/3,200.
+- **Near gates:** Frozen typed distance satisfied for 8,000/8,000; predictive governance-intervention tokens 0.
+- **Quota gates:** All domain, subbank, orientation, mechanism, label, complexity, three-factor, epsilon-cell, and I-N rotation counts matched exactly. Exact global labels are `10,666/10,666/10,668`; near labels are `5,334/5,334/5,332`.
+- **Certificate gate:** 16,000/16,000 Escalate-world exact-enumeration certificates independently verified; failures 0.
+- **Grouping gate:** 24,000 unique atomic groups. Pair, singleton sequence, latent family, template family, intervention lineage, and provenance lineage cross-split overlap 0.
+- **Final split counts:** development-fit 4,825; development-selection 4,809; calibration-fit 4,815; calibration-policy 4,777; public-validation 4,774.
+- **Final leakage gate:**
+  - Training: 19,268 worlds in 9,634 atomic groups.
+  - Public validation: 9,548 worlds in 4,774 disjoint atomic groups.
+  - Atomic-group overlap: 0.
+  - Linear accuracy: `0.3303309594`.
+  - GBDT accuracy: `0.3301214914`.
+  - Sequence accuracy: `0.3317972350`.
+  - Graph accuracy: `0.3317972350`.
+  - Nearest-neighbor accuracy: `0.3299120235`.
+  - Frozen upper band: `0.36`; failures: 0.
+  - Frozen seed: `3003`; permutations: 200; pooled prediction-permutation p99: `0.3383954755`.
+- **Predictive-only lower bounds:** At full coverage, deterministic Accept, deterministic Reject, and randomized 50/50 terminal rules each incur 21,334 expected world errors and error rate `0.6666875`; escalate-both has zero terminal error at zero coverage. The retained frontier makes the coverage tradeoff explicit.
+- **Source/dependency gate:** Both generators contain no terminal label logic, no Phase 2 label dependency, and distinct source hashes. The reference generator imports neither the primary generator nor authorization functions.
+- **Source/config regression:** Both supplied source identities verified; 789/789 requirements, seven diagnostics, all claim boundaries, and all Phase 0/1 typed configuration remained valid.
+- **Console gate:** 21/21 Phase 3 calls have immediately preceding identifying comments, exact matching unique event IDs, and final line-number evidence in `PATH-0037`.
+- **Phase boundary:** Released claim-bank rows 0; trained scientific models 0; saved checkpoints 0; calibration/model-selection artifacts 0; benchmark outcomes 0; Phase 4 implementation 0. The validation manifest has `release_authority: none` and requires the Phase 9A final signature.
+- **Final evidence and SHA-256:**
+  - `results/audits/phase3/authorization_report.json`: `0B61D50DD905ED0D0811709EAA4177B90B69B8D8F254950AD728ABEF9064D24D`
+  - `results/audits/phase3/console_log_inventory.json`: `937A117987020B33E7ACED3A711EAEEE8692773590352691BA928B7588640A8B`
+  - `results/audits/phase3/equivalence_report.json`: `DF2C8E773B9416AE0D483A0ABCC386E7A863BBFDBA8E2DC62F490052D469F0A8`
+  - `results/audits/phase3/generation_summary.json`: `FFD524BB819F02ACF19DFF016A3BAFB6433C43714B70FA0431BF4C73D772DA13`
+  - `results/audits/phase3/generator_separation_report.json`: `277C0DB628858F63CFF040FBF6E7EE3A423A6D81F8D33834E774AFE10EB6DE1C`
+  - `results/audits/phase3/leakage_report.json`: `61FC833018AF15FCEBE501586C1E7D48FABC71147A99755FBE64DB321BA4C56A`
+  - `results/audits/phase3/phase3_compliance.json`: `7E390A0B36F66700F577CAA1629BA45B4E42FC3EBE7A6748C31853257E98531D`
+  - `results/audits/phase3/phase3_tests.json`: `67C19C4335366AF53F7E9AB162F5750F9A0B9EA78FC04468A2A379635DAF8DFD`
+  - `results/manifests/phase3/allocation_validation_manifest_v1.json`: `625AEA2C56BFBB2B2C0114EDD7789358AE10C261C7FD937C4DD176CC9A8868B5`
+- **Compliance gaps:** None detected.
+- **Scientific result:** Phase 3 establishes the causal benchmark construction and integrity properties. It does not yet estimate H1/H2 scientific performance and makes no deployment claim.
+- **Model/overfitting applicability:** No scientific model was trained. The only fitted components were five disposable leakage adversaries, evaluated exclusively on disjoint public-validation atomic groups with a frozen chance ceiling and 200 permutations. No adversary checkpoint was retained or used to tune generation after the final pass.
+- **Deviation:** None.
+- **Publication state:** Pending. Phase 3 becomes complete only after intentional staging, commit, push, and exact remote-SHA verification.
+
+### PATH-0040 - Final Phase 3 evidence identity refresh
+
+- **Timestamp:** 2026-07-30.
+- **Phase:** 3.
+- **Status:** Pass.
+- **Change ID:** `P3-EVIDENCE-FINAL-001`.
+- **Reason:** After `PATH-0039`, the exact-pair builder was hardened so its acceptance path itself rejects prediction-facing governance tokens, rather than relying only on the downstream complete-bank audit. Canonical latent serialization was also made explicitly deterministic for set-like values. The complete 89-test suite and complete 48,000-world audit were rerun and passed. This entry supersedes only the evidence-file hashes in `PATH-0039`; all scientific denominators and verdicts remain unchanged.
+- **Final retained evidence and SHA-256:**
+  - `results/audits/phase3/authorization_report.json`: `0B61D50DD905ED0D0811709EAA4177B90B69B8D8F254950AD728ABEF9064D24D`
+  - `results/audits/phase3/console_log_inventory.json`: `937A117987020B33E7ACED3A711EAEEE8692773590352691BA928B7588640A8B`
+  - `results/audits/phase3/equivalence_report.json`: `DF2C8E773B9416AE0D483A0ABCC386E7A863BBFDBA8E2DC62F490052D469F0A8`
+  - `results/audits/phase3/generation_summary.json`: `E1FB3D4FC0A6E20EE0565BEF1724D2004113D19E989A49442845A9C25C719200`
+  - `results/audits/phase3/generator_separation_report.json`: `277C0DB628858F63CFF040FBF6E7EE3A423A6D81F8D33834E774AFE10EB6DE1C`
+  - `results/audits/phase3/leakage_report.json`: `61FC833018AF15FCEBE501586C1E7D48FABC71147A99755FBE64DB321BA4C56A`
+  - `results/audits/phase3/phase3_compliance.json`: `B9E8F1A246E7AB680986EDFDE5689183C6A737C8677F5F954B5FF01CD1C2BB43`
+  - `results/audits/phase3/phase3_tests.json`: `917C77AAE2AA53E776480213547D105273FC1B7775EAF23CBFB414E859C5F52F`
+  - `results/manifests/phase3/allocation_validation_manifest_v1.json`: `625AEA2C56BFBB2B2C0114EDD7789358AE10C261C7FD937C4DD176CC9A8868B5`
+- **Final mechanical verification:** `compileall` passed, `git diff --check` passed, and the Phase 3 console inventory remained 21/21 unique and fully commented.
+- **Compliance gaps:** None.
+- **Deviation:** None.

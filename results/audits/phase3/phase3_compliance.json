@@ -1,0 +1,101 @@
+{
+  "boundary": {
+    "benchmark_outcomes_created": 0,
+    "checkpoints_created": 0,
+    "models_trained": 0,
+    "phase4_started": false,
+    "released_bank_rows": 0,
+    "status": "pass"
+  },
+  "completion_gates": {
+    "ambiguity_certificate_failures": 0,
+    "exact_divergent_adi_one": 12800,
+    "exact_pairs": 16000,
+    "exact_pei_one": 16000,
+    "exact_same_label_adi_zero": 3200,
+    "group_overlap": 0,
+    "leakage_failures": {},
+    "near_pairs": 8000,
+    "near_within_frozen_epsilon": 8000,
+    "released_unsigned_rows": 0
+  },
+  "compliance_gaps": [],
+  "console_events": 21,
+  "files": {
+    "required_files": 22,
+    "status": "pass"
+  },
+  "generation": {
+    "elapsed_seconds": 271.044868,
+    "exact_pairs_generated_in_memory": 16000,
+    "final_phase_9a_signature_required": true,
+    "leakage_samples_retained": 48000,
+    "near_pairs_generated_in_memory": 8000,
+    "release_authority": "none",
+    "released_claim_bank_rows": 0,
+    "schema_version": "1.0",
+    "status": "pass",
+    "validation_only": true,
+    "worlds_generated_in_memory": 48000
+  },
+  "ledger": {
+    "entries": [
+      "PATH-0031",
+      "PATH-0032",
+      "PATH-0033",
+      "PATH-0034",
+      "PATH-0035",
+      "PATH-0036",
+      "PATH-0037"
+    ],
+    "evidence_pointers": [
+      "authorization_report.json",
+      "console_log_inventory.json",
+      "equivalence_report.json",
+      "generation_summary.json",
+      "generator_separation_report.json",
+      "leakage_report.json",
+      "phase3_compliance.json",
+      "phase3_tests.json"
+    ],
+    "publication_state": "pending",
+    "status": "pass"
+  },
+  "manifest": {
+    "content_signature_verified": true,
+    "exact_pairs": 16000,
+    "near_pairs": 8000,
+    "phase9a_final_signature_required": true,
+    "release_authority": "none",
+    "status": "pass"
+  },
+  "phase": 3,
+  "schema_version": "1.0",
+  "status": "pass",
+  "tests": {
+    "errors": 0,
+    "failures": 0,
+    "status": "pass",
+    "stress_gates": {
+      "exact_allocations": 16000,
+      "exact_worlds": 32000,
+      "leakage_adversaries": 5,
+      "mechanisms": 12,
+      "near_allocations": 8000,
+      "near_epsilon_cells": 64,
+      "near_worlds": 16000
+    },
+    "tests_run": 89
+  },
+  "workplan_scope": {
+    "atomic_group_splitting": "pass",
+    "exact_twin_construction": "pass",
+    "independent_primary_reference_generation": "pass",
+    "latent_factorization": "pass",
+    "mechanism_registry_M01_M12": "pass",
+    "near_equivalence_registry": "pass",
+    "nuisance_and_same_label_controls": "pass",
+    "predictive_only_lower_bounds": "pass",
+    "static_and_empirical_leakage": "pass"
+  }
+}

@@ -78,6 +78,18 @@ The retained Phase 2 evidence reports exact dual-engine agreement, per-stratum
 Oracle rule accuracy, quarantine status, certificate completeness, evaluator
 source independence, and later-phase boundary exclusions.
 
+## Phase 3 verification
+
+Phase 3 constructs the frozen exact and near validation banks in memory, verifies
+independent primary/reference generation, enforces atomic lineage splits, checks
+typed near distances, and tests authorization leakage. It does not release final
+claim-bank rows; the signed Phase 9A allocation remains a mandatory release gate.
+
+```powershell
+.\.venv\Scripts\python.exe scripts\run_phase3_tests.py
+.\.venv\Scripts\python.exe scripts\audit_equivalence.py
+```
+
 ## Scientific boundaries
 
 The project does not claim universal prediction insufficiency, universal MAVS optimality, deployment readiness, certification, or zero risk. Negative scientific outcomes are publishable when integrity gates pass. Integrity failures invalidate affected results.

@@ -1,0 +1,915 @@
+{
+  "allocation_yaml_sha256": "07cc49e66c4be21bb7db480b45e7aac6a9965a3050a3dd36c2d48f7d0fb89164",
+  "content_sha256": "2228b4429751de3fe23966c9e0886085e719ff26bb7658b08208b2fbf0d78ea4",
+  "distance_registry_sha256": "318244c6f9cfdc566bb208dbe8306c8532df9b3c70627119cb38265ef5ac1873",
+  "domains": [
+    "D1",
+    "D2",
+    "D3",
+    "D4",
+    "D5",
+    "D6",
+    "D7",
+    "D8"
+  ],
+  "exact": {
+    "expanded_by_domain": {
+      "D1": {
+        "compositional": 1400,
+        "mechanisms": {
+          "M01": 167,
+          "M02": 167,
+          "M03": 167,
+          "M04": 167,
+          "M05": 167,
+          "M06": 167,
+          "M07": 167,
+          "M08": 167,
+          "M09": 166,
+          "M10": 166,
+          "M11": 166,
+          "M12": 166
+        },
+        "pairs": 2000,
+        "simple": 600,
+        "subbanks": {
+          "I-A": 800,
+          "I-B": 400,
+          "I-C": 400,
+          "I-N": 400
+        },
+        "three_or_more_facts": 800
+      },
+      "D2": {
+        "compositional": 1400,
+        "mechanisms": {
+          "M01": 167,
+          "M02": 167,
+          "M03": 167,
+          "M04": 167,
+          "M05": 167,
+          "M06": 167,
+          "M07": 167,
+          "M08": 167,
+          "M09": 166,
+          "M10": 166,
+          "M11": 166,
+          "M12": 166
+        },
+        "pairs": 2000,
+        "simple": 600,
+        "subbanks": {
+          "I-A": 800,
+          "I-B": 400,
+          "I-C": 400,
+          "I-N": 400
+        },
+        "three_or_more_facts": 800
+      },
+      "D3": {
+        "compositional": 1400,
+        "mechanisms": {
+          "M01": 167,
+          "M02": 167,
+          "M03": 167,
+          "M04": 167,
+          "M05": 167,
+          "M06": 167,
+          "M07": 167,
+          "M08": 167,
+          "M09": 166,
+          "M10": 166,
+          "M11": 166,
+          "M12": 166
+        },
+        "pairs": 2000,
+        "simple": 600,
+        "subbanks": {
+          "I-A": 800,
+          "I-B": 400,
+          "I-C": 400,
+          "I-N": 400
+        },
+        "three_or_more_facts": 800
+      },
+      "D4": {
+        "compositional": 1400,
+        "mechanisms": {
+          "M01": 167,
+          "M02": 167,
+          "M03": 167,
+          "M04": 167,
+          "M05": 167,
+          "M06": 167,
+          "M07": 167,
+          "M08": 167,
+          "M09": 166,
+          "M10": 166,
+          "M11": 166,
+          "M12": 166
+        },
+        "pairs": 2000,
+        "simple": 600,
+        "subbanks": {
+          "I-A": 800,
+          "I-B": 400,
+          "I-C": 400,
+          "I-N": 400
+        },
+        "three_or_more_facts": 800
+      },
+      "D5": {
+        "compositional": 1400,
+        "mechanisms": {
+          "M01": 167,
+          "M02": 167,
+          "M03": 167,
+          "M04": 167,
+          "M05": 167,
+          "M06": 167,
+          "M07": 167,
+          "M08": 167,
+          "M09": 166,
+          "M10": 166,
+          "M11": 166,
+          "M12": 166
+        },
+        "pairs": 2000,
+        "simple": 600,
+        "subbanks": {
+          "I-A": 800,
+          "I-B": 400,
+          "I-C": 400,
+          "I-N": 400
+        },
+        "three_or_more_facts": 800
+      },
+      "D6": {
+        "compositional": 1400,
+        "mechanisms": {
+          "M01": 167,
+          "M02": 167,
+          "M03": 167,
+          "M04": 167,
+          "M05": 167,
+          "M06": 167,
+          "M07": 167,
+          "M08": 167,
+          "M09": 166,
+          "M10": 166,
+          "M11": 166,
+          "M12": 166
+        },
+        "pairs": 2000,
+        "simple": 600,
+        "subbanks": {
+          "I-A": 800,
+          "I-B": 400,
+          "I-C": 400,
+          "I-N": 400
+        },
+        "three_or_more_facts": 800
+      },
+      "D7": {
+        "compositional": 1400,
+        "mechanisms": {
+          "M01": 167,
+          "M02": 167,
+          "M03": 167,
+          "M04": 167,
+          "M05": 167,
+          "M06": 167,
+          "M07": 167,
+          "M08": 167,
+          "M09": 166,
+          "M10": 166,
+          "M11": 166,
+          "M12": 166
+        },
+        "pairs": 2000,
+        "simple": 600,
+        "subbanks": {
+          "I-A": 800,
+          "I-B": 400,
+          "I-C": 400,
+          "I-N": 400
+        },
+        "three_or_more_facts": 800
+      },
+      "D8": {
+        "compositional": 1400,
+        "mechanisms": {
+          "M01": 167,
+          "M02": 167,
+          "M03": 167,
+          "M04": 167,
+          "M05": 167,
+          "M06": 167,
+          "M07": 167,
+          "M08": 167,
+          "M09": 166,
+          "M10": 166,
+          "M11": 166,
+          "M12": 166
+        },
+        "pairs": 2000,
+        "simple": 600,
+        "subbanks": {
+          "I-A": 800,
+          "I-B": 400,
+          "I-C": 400,
+          "I-N": 400
+        },
+        "three_or_more_facts": 800
+      }
+    },
+    "global_pairs": 16000,
+    "global_world_counts": {
+      "Accept": 10666,
+      "Escalate": 10668,
+      "Reject": 10666
+    }
+  },
+  "manifest_id": "phase3_allocation_validation_v1",
+  "manifest_kind": "phase3_implementation_validation",
+  "near": {
+    "epsilons": [
+      0.0,
+      1e-06,
+      1e-05,
+      0.0001,
+      0.001,
+      0.01,
+      0.05,
+      0.1
+    ],
+    "expanded_by_domain_epsilon": {
+      "D1": {
+        "0.000000": {
+          "pairs": 125,
+          "rotation": 0,
+          "subbanks": {
+            "I-A": 25,
+            "I-B": 25,
+            "I-C": 25,
+            "I-N": 50
+          }
+        },
+        "0.000001": {
+          "pairs": 125,
+          "rotation": 1,
+          "subbanks": {
+            "I-A": 25,
+            "I-B": 25,
+            "I-C": 25,
+            "I-N": 50
+          }
+        },
+        "0.000010": {
+          "pairs": 125,
+          "rotation": 2,
+          "subbanks": {
+            "I-A": 25,
+            "I-B": 25,
+            "I-C": 25,
+            "I-N": 50
+          }
+        },
+        "0.000100": {
+          "pairs": 125,
+          "rotation": 0,
+          "subbanks": {
+            "I-A": 25,
+            "I-B": 25,
+            "I-C": 25,
+            "I-N": 50
+          }
+        },
+        "0.001000": {
+          "pairs": 125,
+          "rotation": 1,
+          "subbanks": {
+            "I-A": 25,
+            "I-B": 25,
+            "I-C": 25,
+            "I-N": 50
+          }
+        },
+        "0.010000": {
+          "pairs": 125,
+          "rotation": 2,
+          "subbanks": {
+            "I-A": 25,
+            "I-B": 25,
+            "I-C": 25,
+            "I-N": 50
+          }
+        },
+        "0.050000": {
+          "pairs": 125,
+          "rotation": 0,
+          "subbanks": {
+            "I-A": 25,
+            "I-B": 25,
+            "I-C": 25,
+            "I-N": 50
+          }
+        },
+        "0.100000": {
+          "pairs": 125,
+          "rotation": 1,
+          "subbanks": {
+            "I-A": 25,
+            "I-B": 25,
+            "I-C": 25,
+            "I-N": 50
+          }
+        }
+      },
+      "D2": {
+        "0.000000": {
+          "pairs": 125,
+          "rotation": 2,
+          "subbanks": {
+            "I-A": 25,
+            "I-B": 25,
+            "I-C": 25,
+            "I-N": 50
+          }
+        },
+        "0.000001": {
+          "pairs": 125,
+          "rotation": 0,
+          "subbanks": {
+            "I-A": 25,
+            "I-B": 25,
+            "I-C": 25,
+            "I-N": 50
+          }
+        },
+        "0.000010": {
+          "pairs": 125,
+          "rotation": 1,
+          "subbanks": {
+            "I-A": 25,
+            "I-B": 25,
+            "I-C": 25,
+            "I-N": 50
+          }
+        },
+        "0.000100": {
+          "pairs": 125,
+          "rotation": 2,
+          "subbanks": {
+            "I-A": 25,
+            "I-B": 25,
+            "I-C": 25,
+            "I-N": 50
+          }
+        },
+        "0.001000": {
+          "pairs": 125,
+          "rotation": 0,
+          "subbanks": {
+            "I-A": 25,
+            "I-B": 25,
+            "I-C": 25,
+            "I-N": 50
+          }
+        },
+        "0.010000": {
+          "pairs": 125,
+          "rotation": 1,
+          "subbanks": {
+            "I-A": 25,
+            "I-B": 25,
+            "I-C": 25,
+            "I-N": 50
+          }
+        },
+        "0.050000": {
+          "pairs": 125,
+          "rotation": 2,
+          "subbanks": {
+            "I-A": 25,
+            "I-B": 25,
+            "I-C": 25,
+            "I-N": 50
+          }
+        },
+        "0.100000": {
+          "pairs": 125,
+          "rotation": 0,
+          "subbanks": {
+            "I-A": 25,
+            "I-B": 25,
+            "I-C": 25,
+            "I-N": 50
+          }
+        }
+      },
+      "D3": {
+        "0.000000": {
+          "pairs": 125,
+          "rotation": 1,
+          "subbanks": {
+            "I-A": 25,
+            "I-B": 25,
+            "I-C": 25,
+            "I-N": 50
+          }
+        },
+        "0.000001": {
+          "pairs": 125,
+          "rotation": 2,
+          "subbanks": {
+            "I-A": 25,
+            "I-B": 25,
+            "I-C": 25,
+            "I-N": 50
+          }
+        },
+        "0.000010": {
+          "pairs": 125,
+          "rotation": 0,
+          "subbanks": {
+            "I-A": 25,
+            "I-B": 25,
+            "I-C": 25,
+            "I-N": 50
+          }
+        },
+        "0.000100": {
+          "pairs": 125,
+          "rotation": 1,
+          "subbanks": {
+            "I-A": 25,
+            "I-B": 25,
+            "I-C": 25,
+            "I-N": 50
+          }
+        },
+        "0.001000": {
+          "pairs": 125,
+          "rotation": 2,
+          "subbanks": {
+            "I-A": 25,
+            "I-B": 25,
+            "I-C": 25,
+            "I-N": 50
+          }
+        },
+        "0.010000": {
+          "pairs": 125,
+          "rotation": 0,
+          "subbanks": {
+            "I-A": 25,
+            "I-B": 25,
+            "I-C": 25,
+            "I-N": 50
+          }
+        },
+        "0.050000": {
+          "pairs": 125,
+          "rotation": 1,
+          "subbanks": {
+            "I-A": 25,
+            "I-B": 25,
+            "I-C": 25,
+            "I-N": 50
+          }
+        },
+        "0.100000": {
+          "pairs": 125,
+          "rotation": 2,
+          "subbanks": {
+            "I-A": 25,
+            "I-B": 25,
+            "I-C": 25,
+            "I-N": 50
+          }
+        }
+      },
+      "D4": {
+        "0.000000": {
+          "pairs": 125,
+          "rotation": 0,
+          "subbanks": {
+            "I-A": 25,
+            "I-B": 25,
+            "I-C": 25,
+            "I-N": 50
+          }
+        },
+        "0.000001": {
+          "pairs": 125,
+          "rotation": 1,
+          "subbanks": {
+            "I-A": 25,
+            "I-B": 25,
+            "I-C": 25,
+            "I-N": 50
+          }
+        },
+        "0.000010": {
+          "pairs": 125,
+          "rotation": 2,
+          "subbanks": {
+            "I-A": 25,
+            "I-B": 25,
+            "I-C": 25,
+            "I-N": 50
+          }
+        },
+        "0.000100": {
+          "pairs": 125,
+          "rotation": 0,
+          "subbanks": {
+            "I-A": 25,
+            "I-B": 25,
+            "I-C": 25,
+            "I-N": 50
+          }
+        },
+        "0.001000": {
+          "pairs": 125,
+          "rotation": 1,
+          "subbanks": {
+            "I-A": 25,
+            "I-B": 25,
+            "I-C": 25,
+            "I-N": 50
+          }
+        },
+        "0.010000": {
+          "pairs": 125,
+          "rotation": 2,
+          "subbanks": {
+            "I-A": 25,
+            "I-B": 25,
+            "I-C": 25,
+            "I-N": 50
+          }
+        },
+        "0.050000": {
+          "pairs": 125,
+          "rotation": 0,
+          "subbanks": {
+            "I-A": 25,
+            "I-B": 25,
+            "I-C": 25,
+            "I-N": 50
+          }
+        },
+        "0.100000": {
+          "pairs": 125,
+          "rotation": 1,
+          "subbanks": {
+            "I-A": 25,
+            "I-B": 25,
+            "I-C": 25,
+            "I-N": 50
+          }
+        }
+      },
+      "D5": {
+        "0.000000": {
+          "pairs": 125,
+          "rotation": 2,
+          "subbanks": {
+            "I-A": 25,
+            "I-B": 25,
+            "I-C": 25,
+            "I-N": 50
+          }
+        },
+        "0.000001": {
+          "pairs": 125,
+          "rotation": 0,
+          "subbanks": {
+            "I-A": 25,
+            "I-B": 25,
+            "I-C": 25,
+            "I-N": 50
+          }
+        },
+        "0.000010": {
+          "pairs": 125,
+          "rotation": 1,
+          "subbanks": {
+            "I-A": 25,
+            "I-B": 25,
+            "I-C": 25,
+            "I-N": 50
+          }
+        },
+        "0.000100": {
+          "pairs": 125,
+          "rotation": 2,
+          "subbanks": {
+            "I-A": 25,
+            "I-B": 25,
+            "I-C": 25,
+            "I-N": 50
+          }
+        },
+        "0.001000": {
+          "pairs": 125,
+          "rotation": 0,
+          "subbanks": {
+            "I-A": 25,
+            "I-B": 25,
+            "I-C": 25,
+            "I-N": 50
+          }
+        },
+        "0.010000": {
+          "pairs": 125,
+          "rotation": 1,
+          "subbanks": {
+            "I-A": 25,
+            "I-B": 25,
+            "I-C": 25,
+            "I-N": 50
+          }
+        },
+        "0.050000": {
+          "pairs": 125,
+          "rotation": 2,
+          "subbanks": {
+            "I-A": 25,
+            "I-B": 25,
+            "I-C": 25,
+            "I-N": 50
+          }
+        },
+        "0.100000": {
+          "pairs": 125,
+          "rotation": 0,
+          "subbanks": {
+            "I-A": 25,
+            "I-B": 25,
+            "I-C": 25,
+            "I-N": 50
+          }
+        }
+      },
+      "D6": {
+        "0.000000": {
+          "pairs": 125,
+          "rotation": 1,
+          "subbanks": {
+            "I-A": 25,
+            "I-B": 25,
+            "I-C": 25,
+            "I-N": 50
+          }
+        },
+        "0.000001": {
+          "pairs": 125,
+          "rotation": 2,
+          "subbanks": {
+            "I-A": 25,
+            "I-B": 25,
+            "I-C": 25,
+            "I-N": 50
+          }
+        },
+        "0.000010": {
+          "pairs": 125,
+          "rotation": 0,
+          "subbanks": {
+            "I-A": 25,
+            "I-B": 25,
+            "I-C": 25,
+            "I-N": 50
+          }
+        },
+        "0.000100": {
+          "pairs": 125,
+          "rotation": 1,
+          "subbanks": {
+            "I-A": 25,
+            "I-B": 25,
+            "I-C": 25,
+            "I-N": 50
+          }
+        },
+        "0.001000": {
+          "pairs": 125,
+          "rotation": 2,
+          "subbanks": {
+            "I-A": 25,
+            "I-B": 25,
+            "I-C": 25,
+            "I-N": 50
+          }
+        },
+        "0.010000": {
+          "pairs": 125,
+          "rotation": 0,
+          "subbanks": {
+            "I-A": 25,
+            "I-B": 25,
+            "I-C": 25,
+            "I-N": 50
+          }
+        },
+        "0.050000": {
+          "pairs": 125,
+          "rotation": 1,
+          "subbanks": {
+            "I-A": 25,
+            "I-B": 25,
+            "I-C": 25,
+            "I-N": 50
+          }
+        },
+        "0.100000": {
+          "pairs": 125,
+          "rotation": 2,
+          "subbanks": {
+            "I-A": 25,
+            "I-B": 25,
+            "I-C": 25,
+            "I-N": 50
+          }
+        }
+      },
+      "D7": {
+        "0.000000": {
+          "pairs": 125,
+          "rotation": 0,
+          "subbanks": {
+            "I-A": 25,
+            "I-B": 25,
+            "I-C": 25,
+            "I-N": 50
+          }
+        },
+        "0.000001": {
+          "pairs": 125,
+          "rotation": 1,
+          "subbanks": {
+            "I-A": 25,
+            "I-B": 25,
+            "I-C": 25,
+            "I-N": 50
+          }
+        },
+        "0.000010": {
+          "pairs": 125,
+          "rotation": 2,
+          "subbanks": {
+            "I-A": 25,
+            "I-B": 25,
+            "I-C": 25,
+            "I-N": 50
+          }
+        },
+        "0.000100": {
+          "pairs": 125,
+          "rotation": 0,
+          "subbanks": {
+            "I-A": 25,
+            "I-B": 25,
+            "I-C": 25,
+            "I-N": 50
+          }
+        },
+        "0.001000": {
+          "pairs": 125,
+          "rotation": 1,
+          "subbanks": {
+            "I-A": 25,
+            "I-B": 25,
+            "I-C": 25,
+            "I-N": 50
+          }
+        },
+        "0.010000": {
+          "pairs": 125,
+          "rotation": 2,
+          "subbanks": {
+            "I-A": 25,
+            "I-B": 25,
+            "I-C": 25,
+            "I-N": 50
+          }
+        },
+        "0.050000": {
+          "pairs": 125,
+          "rotation": 0,
+          "subbanks": {
+            "I-A": 25,
+            "I-B": 25,
+            "I-C": 25,
+            "I-N": 50
+          }
+        },
+        "0.100000": {
+          "pairs": 125,
+          "rotation": 1,
+          "subbanks": {
+            "I-A": 25,
+            "I-B": 25,
+            "I-C": 25,
+            "I-N": 50
+          }
+        }
+      },
+      "D8": {
+        "0.000000": {
+          "pairs": 125,
+          "rotation": 2,
+          "subbanks": {
+            "I-A": 25,
+            "I-B": 25,
+            "I-C": 25,
+            "I-N": 50
+          }
+        },
+        "0.000001": {
+          "pairs": 125,
+          "rotation": 0,
+          "subbanks": {
+            "I-A": 25,
+            "I-B": 25,
+            "I-C": 25,
+            "I-N": 50
+          }
+        },
+        "0.000010": {
+          "pairs": 125,
+          "rotation": 1,
+          "subbanks": {
+            "I-A": 25,
+            "I-B": 25,
+            "I-C": 25,
+            "I-N": 50
+          }
+        },
+        "0.000100": {
+          "pairs": 125,
+          "rotation": 2,
+          "subbanks": {
+            "I-A": 25,
+            "I-B": 25,
+            "I-C": 25,
+            "I-N": 50
+          }
+        },
+        "0.001000": {
+          "pairs": 125,
+          "rotation": 0,
+          "subbanks": {
+            "I-A": 25,
+            "I-B": 25,
+            "I-C": 25,
+            "I-N": 50
+          }
+        },
+        "0.010000": {
+          "pairs": 125,
+          "rotation": 1,
+          "subbanks": {
+            "I-A": 25,
+            "I-B": 25,
+            "I-C": 25,
+            "I-N": 50
+          }
+        },
+        "0.050000": {
+          "pairs": 125,
+          "rotation": 2,
+          "subbanks": {
+            "I-A": 25,
+            "I-B": 25,
+            "I-C": 25,
+            "I-N": 50
+          }
+        },
+        "0.100000": {
+          "pairs": 125,
+          "rotation": 0,
+          "subbanks": {
+            "I-A": 25,
+            "I-B": 25,
+            "I-C": 25,
+            "I-N": 50
+          }
+        }
+      }
+    },
+    "global_pairs": 8000,
+    "global_world_counts": {
+      "Accept": 5334,
+      "Escalate": 5332,
+      "Reject": 5334
+    }
+  },
+  "phase9a_final_signature_required": true,
+  "release_authority": "none",
+  "schema_version": "1.0",
+  "signer": "phase3-deterministic-validation-compiler-v1"
+}

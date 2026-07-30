@@ -1,0 +1,39 @@
+{
+  "exact": {
+    "divergent_adi_one": 12800,
+    "pairs": 16000,
+    "pei_one": 16000,
+    "same_label_adi_zero": 3200
+  },
+  "gates": {
+    "atomic_groups_unique": true,
+    "exact_divergent_adi_one": true,
+    "exact_pairs": true,
+    "exact_pei_one": true,
+    "exact_same_label_adi_zero": true,
+    "generation_path_agreement": true,
+    "lineage_split_overlap_zero": true,
+    "near_governance_leaks": true,
+    "near_pairs": true,
+    "near_within_epsilon": true
+  },
+  "grouping": {
+    "atomic_groups": 24000,
+    "lineage_split_overlaps": {},
+    "split_pair_counts": {
+      "calibration_fit": 4815,
+      "calibration_policy": 4777,
+      "development_fit": 4825,
+      "development_selection": 4809,
+      "public_validation": 4774
+    }
+  },
+  "near": {
+    "governance_intervention_visible_in_predictive": 0,
+    "pairs": 8000,
+    "within_frozen_epsilon": 8000
+  },
+  "primary_reference_generation_disagreements": 0,
+  "schema_version": "1.0",
+  "status": "pass"
+}

@@ -1,0 +1,10 @@
+{
+  "forbidden_import_or_terminal_label_violations": [],
+  "generator_source_hashes": {
+    "generator_primary.py": "c7b3c01297a0427574c6c05aeba37809fab47a9ea86a7ff139c14a20332c164e",
+    "generator_reference.py": "4302daaa0337a85525cb63b1f313845b5f478da236747c98a8909ca47a413141"
+  },
+  "prohibited_generator_schema_fields": [],
+  "separate_primary_reference_sources": true,
+  "status": "pass"
+}

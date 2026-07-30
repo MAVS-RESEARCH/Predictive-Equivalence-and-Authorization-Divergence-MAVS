@@ -1,0 +1,66 @@
+schema_version: "1.0"
+registry_id: near_distance_registry_v1
+calibration_role: unlabeled_development_fit_only
+outcome_dependent_calibration_forbidden: true
+aggregate:
+  method: weighted_max
+  missing_missing_distance: 0.0
+fields:
+  shared_representation:
+    type: vector
+    metric: rms_normalized_component
+    scale: 1.0
+    weight: 1.0
+  specialist_outputs:
+    type: vector
+    metric: rms_normalized_component
+    scale: 1.0
+    weight: 1.0
+  signed_support:
+    type: vector
+    metric: rms_normalized_component
+    scale: 1.0
+    weight: 1.0
+  predicted_label:
+    type: categorical
+    metric: registered_mismatch
+    mismatch_cost: 1.0
+    weight: 1.0
+  confidence:
+    type: calibrated_probability
+    metric: clipped_logit_absolute
+    clipping: [0.000001, 0.999999]
+    scale: 4.0
+    weight: 1.0
+  uncertainty:
+    type: scalar
+    metric: absolute_over_robust_range
+    robust_range: 1.0
+    weight: 1.0
+  agreement:
+    type: set
+    metric: weighted_jaccard
+    weight: 1.0
+  calibration:
+    type: graph
+    metric: weighted_normalized_graph_edit
+    node_weight: 0.5
+    edge_weight: 0.5
+    weight: 1.0
+  candidate_action:
+    type: text
+    metric: max_cosine_and_token_edit
+    encoder_id: frozen_identity_token_encoder_v1
+    weight: 1.0
+missing_value:
+  mismatch_cost: 1.0
+epsilons: [0.0, 0.000001, 0.00001, 0.0001, 0.001, 0.01, 0.05, 0.1]
+allocation:
+  pairs_per_domain_epsilon: 125
+  divergent_each: {I-A: 25, I-B: 25, I-C: 25}
+  same_label: 50
+leakage:
+  permutation_seed: 3003
+  permutations: 200
+  frozen_accuracy_upper_band: 0.36
+  adversaries: [linear, gbdt, sequence, graph, nearest_neighbor]

@@ -22,6 +22,8 @@ pead-audit-phase1 = "pead.phase1.audit:main"
 pead-run-phase1-tests = "pead.phase1.test_runner:main"
 pead-audit-labels = "pead.phase2.audit:main"
 pead-run-phase2-tests = "pead.phase2.test_runner:main"
+pead-audit-phase3 = "pead.phase3.audit:main"
+pead-run-phase3-tests = "pead.phase3.test_runner:main"
 
 [tool.setuptools]
 package-dir = {"" = "src"}
