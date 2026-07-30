@@ -28,7 +28,7 @@ Rules:
 | Phase | Name | Status | Evidence |
 |---:|---|---|---|
 | 0 | Research charter, claim ledger, and execution controls | Complete | All local gates passed; implementation commit `8259d22e14cfd532185416795ba079448216540b` pushed and remotely verified |
-| 1 | Core immutable infrastructure and safe result hygiene | Local gates passed; publication pending | `results/audits/phase1/phase1_compliance.json`; 52/52 tests passed |
+| 1 | Core immutable infrastructure and safe result hygiene | Complete | 52/52 tests passed; implementation commit `01de85198fbaa1ffdc55591f6b303029299c92d5` pushed and remotely verified |
 | 2 | Independent authorization truth system | Not started | None |
 | 3 | Causal world registry, exact twins, and near twins | Not started | None |
 | 4 | Reversals, scope banks, and evidence sufficiency | Not started | None |
@@ -747,3 +747,31 @@ Copy this block for every meaningful action:
 - **Definition-of-done applicability:** Phase 1 establishes infrastructure and therefore does not assert any model or benchmark outcome. Training-specific anti-overfitting and entirely separate evaluation-bank gates begin only in later phases where training is authorized.
 - **Publication state:** Pending under WorkPlan Section 2.4. Phase 1 is not complete until its commit is pushed and the remote branch SHA is verified.
 - **Next permitted action:** Inspect the complete intended diff, stage only Phase 1 scope, rerun final checks, commit, push, verify the remote SHA, then append the publication record. Phase 2 remains prohibited without explicit user instruction.
+
+### PATH-0023 - Phase 1 GitHub publication and remote verification
+
+- **Timestamp:** 2026-07-30T18:12:34+05:00
+- **Phase:** 1
+- **Status:** Pass; Phase 1 complete.
+- **Change ID:** `P1-PUBLISH-001`.
+- **WorkPlan alignment:** Section 2.4 mandatory post-phase publication and Phase 1 completion.
+- **Scope review:** The staged tree contained exactly 42 Phase 1 files: immutable core modules, Phase 1 test/audit modules, required scripts, regression/property/stress tests, README/project entry points, cleanup manifest and receipts, final evidence artifacts, and this ledger. No unrelated file was staged.
+- **Pre-commit checks:**
+  - Source/config validation with source-hash verification: Pass.
+  - Complete regression/unit/property/stress suite: Pass, 52/52.
+  - Phase 1 strict compliance audit: Pass.
+  - `python -m compileall -q src scripts tests`: Pass.
+  - `git diff --check` and `git diff --cached --check`: Pass.
+- **Branch:** `agent/pead-workplan`.
+- **Implementation commit:** `01de85198fbaa1ffdc55591f6b303029299c92d5` - `phase-1: implement immutable core and result hygiene`.
+- **Push command:** `git push -u origin agent/pead-workplan`.
+- **Push result:** Pass.
+- **Remote verification command:** `git ls-remote origin refs/heads/agent/pead-workplan`.
+- **Remote verification result:** `01de85198fbaa1ffdc55591f6b303029299c92d5`, exactly equal to local implementation `HEAD` at verification time.
+- **Pull request:** Draft PR #1, `https://github.com/MAVS-RESEARCH/Predictive-Equivalence-and-Authorization-Divergence-MAVS/pull/1`, open; head branch and SHA verified through GitHub.
+- **Local/remote publication correction:** This publication entry is committed and pushed in a subsequent ledger-only close commit so the verified push result is itself retained on the remote branch. That close commit changes no implementation, test, evidence, benchmark, or claim content.
+- **Scientific effect:** None. Publication establishes provenance and does not change any scientific outcome.
+- **Deviation:** None.
+- **Phase verdict:** Complete. Every Phase 1 WorkPlan scope item, required file group, implementation method, verification gate, stress gate, evidence requirement, cleanup requirement, console documentation requirement, ledger requirement, and publication requirement is satisfied.
+- **Compliance gaps:** None detected.
+- **Next permitted action:** Stop. Phase 2 may begin only after a new explicit user instruction.
