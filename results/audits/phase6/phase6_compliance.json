@@ -44,7 +44,7 @@
       "representation_parity_report.json",
       "runtime_firewall_report.json"
     ],
-    "publication_state": "pending",
+    "publication_state": "complete",
     "status": "pass"
   },
   "phase": 6,

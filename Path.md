@@ -33,7 +33,7 @@ Rules:
 | 3 | Causal world registry, exact twins, and near twins | Complete | 89/89 tests passed; implementation commit `81bd52c825fd41c12dc5fb921c5c656fbf9d20bd` pushed and remotely verified |
 | 4 | Reversals, scope banks, and evidence sufficiency | Complete | None |
 | 5 | Six open adapters and held-out interfaces | Complete | None |
-| 6 | Projection layer, feature firewall, and parity | Local gates passed; publication pending | 122/122 tests; 3,600 worlds; 32,400 projections; zero compliance gaps |
+| 6 | Projection layer, feature firewall, and parity | Complete | 122/122 tests; implementation commit `a85318ce1c65f207461c9ee2dd9eb1119c020b5e` pushed and remotely verified |
 | 7 | Baseline suite and common training harness | Not started | None |
 | 8 | Frozen MAVS-GC, DS-CF, and ablations | Not started | None |
 | 9 | Metrics, audits, statistics, and reports | Not started | None |
@@ -1914,3 +1914,36 @@ Copy this block for every meaningful action:
 - **Scientific result boundary:** These are implementation-integrity results only. They do not establish H1, H2, method superiority, deployment safety, or release eligibility.
 - **Deviation:** None.
 - **Next permitted action:** Inspect the complete intended diff, rerun source/config/compile/diff gates, commit Phase 6, push the current branch, verify the exact remote SHA, append the publication record, and stop before Phase 7.
+
+### PATH-0066 - Phase 6 GitHub publication and exact remote verification
+
+- **Timestamp:** 2026-07-31.
+- **Phase:** 6.
+- **Status:** Pass; implementation published and remotely verified.
+- **Change ID:** `P6-PUBLISH-001`.
+- **Branch:** `agent/pead-workplan`.
+- **Implementation commit:** `a85318ce1c65f207461c9ee2dd9eb1119c020b5e` - `phase-6: implement projection firewall and parity`.
+- **Implementation push:** `git push origin agent/pead-workplan` passed without force, history rewrite, or branch replacement.
+- **Exact remote verification:** `git ls-remote origin refs/heads/agent/pead-workplan` returned `a85318ce1c65f207461c9ee2dd9eb1119c020b5e`, exactly matching local `HEAD`.
+- **Pull request:** Draft PR #1 remains open at `https://github.com/MAVS-RESEARCH/Predictive-Equivalence-and-Authorization-Divergence-MAVS/pull/1` on head branch `agent/pead-workplan`. The immediate PR metadata read retained the preceding cached head OID while the Git remote reference already returned the new exact SHA; remote-ref equality is the publication gate, and the PR cache will be rechecked during ledger close.
+- **Published scope:** 40 intended files comprising three access profiles, seven projection/rendering modules plus initialization, access/static/runtime audit code, Phase 6 orchestration, three scripts, blind-contract/integration/stress tests, eight retained audit/manifest artifacts, complete-world typed state linkage, README/project entry points, and this append-only ledger.
+- **Publication controls:** Credential-pattern scan returned no matches; GitHub CLI authentication passed; staged-name inspection included only Phase 6 scope; cached `git diff --check` passed; 122/122 tests passed; 3,600-world extreme audit and independent parity audit passed.
+- **Scientific effect:** Publication changes no frozen field dictionary, domain definition, authorization label, claim-bank allocation, model parameter, threshold, or scientific result.
+- **Deviation:** None.
+- **Next action:** Rerun the complete auditor against the `Complete` ledger state, retain the post-publication compliance evidence, commit/push the ledger close, verify the final remote SHA and PR head, and stop before Phase 7.
+
+### PATH-0067 - Phase 6 post-publication audit and ledger-close evidence
+
+- **Timestamp:** 2026-07-31.
+- **Phase:** 6.
+- **Status:** Pass; ledger close ready for publication.
+- **Change ID:** `P6-PUBLISH-CLOSE-001`.
+- **Post-publication audit:** `scripts/audit_access.py` regenerated the complete 3,600-world, 32,400-projection, 10,800 Raw-G parity, 10,800 Oracle reconstruction, 3,600-canary, and 800-forbidden-probe evidence after the Phase 6 table changed to `Complete`; `scripts/audit_representation_parity.py` independently revalidated the retained 54-cell matrix.
+- **Final compliance state:** `results/audits/phase6/phase6_compliance.json` reports `status=pass`, `ledger.publication_state=complete`, 122 tests, 168 Phase 6 requirements, 25 console call sites, and zero compliance gaps.
+- **Final complete-ledger compliance SHA-256:** `D8DAD7034BA03EA0103D99A93AAB25FCD163A620BDDCB098A3224EA9B7DC71FB`.
+- **Evidence replacement lineage:** The pending-publication compliance hash recorded in `PATH-0065` is retained as the pre-publication state. This complete-ledger compliance artifact is its final replacement; no test denominator, projection result, parity result, Oracle result, canary result, or scientific conclusion changed.
+- **Implementation identity:** `a85318ce1c65f207461c9ee2dd9eb1119c020b5e`, already present and exactly verified on the remote branch.
+- **Phase boundary:** Phase 7 remains not started. Models, fitted preprocessing, calibration, selection, checkpoints, and released claim-bank rows remain zero.
+- **Scientific effect:** None. The rerun confirms the publication state and reproduces all Phase 6 integrity evidence.
+- **Deviation:** None.
+- **Next action:** Commit and push this post-publication evidence and ledger close, verify the final remote branch SHA and PR head, then stop before Phase 7.
