@@ -26,7 +26,7 @@
     "status": "pass"
   },
   "generation": {
-    "elapsed_seconds": 271.044868,
+    "elapsed_seconds": 299.784559,
     "exact_pairs_generated_in_memory": 16000,
     "final_phase_9a_signature_required": true,
     "leakage_samples_retained": 48000,
@@ -58,7 +58,7 @@
       "phase3_compliance.json",
       "phase3_tests.json"
     ],
-    "publication_state": "pending",
+    "publication_state": "complete",
     "status": "pass"
   },
   "manifest": {

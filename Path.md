@@ -30,7 +30,7 @@ Rules:
 | 0 | Research charter, claim ledger, and execution controls | Complete | All local gates passed; implementation commit `8259d22e14cfd532185416795ba079448216540b` pushed and remotely verified |
 | 1 | Core immutable infrastructure and safe result hygiene | Complete | 52/52 tests passed; implementation commit `01de85198fbaa1ffdc55591f6b303029299c92d5` pushed and remotely verified |
 | 2 | Independent authorization truth system | Complete | 74/74 tests; implementation commit `629b18a7341cda0c44fa88f33c97c5869c3ae14e` pushed and remotely verified |
-| 3 | Causal world registry, exact twins, and near twins | Local gates passed; publication pending | 89/89 tests passed; complete 16,000 exact-pair and 8,000 near-pair audit pending publication |
+| 3 | Causal world registry, exact twins, and near twins | Complete | 89/89 tests passed; implementation commit `81bd52c825fd41c12dc5fb921c5c656fbf9d20bd` pushed and remotely verified |
 | 4 | Reversals, scope banks, and evidence sufficiency | Not started | None |
 | 5 | Eight domain adapters and validity review | Not started | None |
 | 6 | Projection layer, feature firewall, and parity | Not started | None |
@@ -1349,3 +1349,52 @@ Copy this block for every meaningful action:
 - **Final mechanical verification:** `compileall` passed, `git diff --check` passed, and the Phase 3 console inventory remained 21/21 unique and fully commented.
 - **Compliance gaps:** None.
 - **Deviation:** None.
+
+### PATH-0041 - Phase 3 GitHub implementation publication and remote verification
+
+- **Timestamp:** 2026-07-30.
+- **Phase:** 3.
+- **Status:** Pass; implementation published and remotely verified.
+- **Change ID:** `P3-PUBLISH-001`.
+- **WorkPlan alignment:** Section 2.4 mandatory post-phase publication and Phase 3 completion.
+- **Scope review:** The implementation commit contains exactly 45 intended Phase 3 files: six world modules plus initialization, three track modules plus initialization, three audit modules plus initialization, Phase 3 allocation/generation/audit/test modules, two frozen configuration files, four required operational scripts, seven required/additional test files, nine retained evidence/manifest files, README/project entry points, and this append-only ledger. `WorkPlan.md` is unchanged. No Phase 4 track, model, checkpoint, calibration artifact, released claim-bank row, or benchmark outcome is included.
+- **Pre-commit controls:**
+  - Complete regression/unit/property/metamorphic/stress suite: 89/89 passed.
+  - Complete 16,000 exact-pair plus 8,000 near-pair audit: Pass.
+  - Five leakage adversaries under frozen chance band: Pass.
+  - Source/config validation with both source hashes: Pass.
+  - `python -m compileall -q src scripts tests`: Pass.
+  - `git diff --check` and `git diff --cached --check`: Pass after removing redundant trailing blank lines.
+  - Credential-pattern scan across repository source scope: 0 matches.
+- **Branch:** `agent/pead-workplan`.
+- **Implementation commit:** `81bd52c825fd41c12dc5fb921c5c656fbf9d20bd` - `phase-3: construct exact and near causal twins`.
+- **Implementation push:** `git push origin agent/pead-workplan` passed.
+- **Remote verification:** `git ls-remote origin refs/heads/agent/pead-workplan` returned `81bd52c825fd41c12dc5fb921c5c656fbf9d20bd`, exactly equal to local `HEAD`.
+- **Pull request:** Draft PR #1 remains open at `https://github.com/MAVS-RESEARCH/Predictive-Equivalence-and-Authorization-Divergence-MAVS/pull/1`; GitHub reported head branch `agent/pead-workplan` and head SHA `81bd52c825fd41c12dc5fb921c5c656fbf9d20bd`.
+- **Result hygiene:** No previous-study result was introduced. Phase 0-2 evidence belongs to the same current implementation history. Superseded in-turn Phase 3 reports were overwritten before the implementation commit; the append-only ledger retains their incident descriptions, while only the final report files are tracked.
+- **Scientific effect:** None. Publication does not alter generated worlds, labels, distances, quota counts, certificates, leakage measurements, or claims.
+- **Deviation:** None.
+- **Next action:** Run the complete auditor against the `Complete` ledger state, retain the post-publication compliance evidence, commit the ledger close, push it, and verify the final remote SHA. Do not begin Phase 4.
+
+### PATH-0042 - Phase 3 post-publication audit and ledger-close evidence
+
+- **Timestamp:** 2026-07-30.
+- **Phase:** 3.
+- **Status:** Pass; ledger close ready for publication.
+- **Change ID:** `P3-PUBLISH-CLOSE-001`.
+- **Post-publication audit:** The complete 48,000-world audit was rerun after `PATH-0041` changed the phase state to `Complete`. It passed every generation, equivalence, authorization, grouping, source, leakage, test, phase-boundary, console, and ledger gate.
+- **Compliance state:** `results/audits/phase3/phase3_compliance.json` reports `status=pass`, `ledger.publication_state=complete`, and zero compliance gaps.
+- **Post-publication evidence SHA-256:**
+  - `results/audits/phase3/authorization_report.json`: `0B61D50DD905ED0D0811709EAA4177B90B69B8D8F254950AD728ABEF9064D24D`
+  - `results/audits/phase3/console_log_inventory.json`: `937A117987020B33E7ACED3A711EAEEE8692773590352691BA928B7588640A8B`
+  - `results/audits/phase3/equivalence_report.json`: `DF2C8E773B9416AE0D483A0ABCC386E7A863BBFDBA8E2DC62F490052D469F0A8`
+  - `results/audits/phase3/generation_summary.json`: `7A3A660863D5784FD377E673B1296FCF632A59F0BCDD94FE1C4FB39A137EBA0F`
+  - `results/audits/phase3/generator_separation_report.json`: `277C0DB628858F63CFF040FBF6E7EE3A423A6D81F8D33834E774AFE10EB6DE1C`
+  - `results/audits/phase3/leakage_report.json`: `61FC833018AF15FCEBE501586C1E7D48FABC71147A99755FBE64DB321BA4C56A`
+  - `results/audits/phase3/phase3_compliance.json`: `BE1558BC420D266B7069EBEC7BCB27A30C691BFD839E45BA0CEBFEDEF55E4B63`
+  - `results/audits/phase3/phase3_tests.json`: `917C77AAE2AA53E776480213547D105273FC1B7775EAF23CBFB414E859C5F52F`
+  - `results/manifests/phase3/allocation_validation_manifest_v1.json`: `625AEA2C56BFBB2B2C0114EDD7789358AE10C261C7FD937C4DD176CC9A8868B5`
+- **Implementation identity:** `81bd52c825fd41c12dc5fb921c5c656fbf9d20bd`, already present and verified on the remote branch.
+- **Scientific effect:** None. The post-publication run confirms reproducibility of the implementation commit and changes only elapsed-time metadata plus the ledger publication state.
+- **Deviation:** None.
+- **Next action:** Commit and push this ledger close and the post-publication evidence, then verify the final remote branch SHA. Stop before Phase 4.
