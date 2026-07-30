@@ -115,6 +115,20 @@ shapes; concrete implementations remain custody-only for Phase 9A.
 .\.venv\Scripts\python.exe scripts\audit_phase5.py
 ```
 
+## Phase 6 verification
+
+Phase 6 is the only WorldState-to-method projection boundary. It implements
+immutable P-only, Raw-G, and non-headline Oracle-G inputs; lossless canonical
+tabular, sequence, and graph renderings; static method dependency checks;
+runtime forbidden-access logging; and randomized hidden canaries. No model is
+trained in this phase.
+
+```powershell
+.\.venv\Scripts\python.exe scripts\run_phase6_tests.py
+.\.venv\Scripts\python.exe scripts\audit_access.py
+.\.venv\Scripts\python.exe scripts\audit_representation_parity.py
+```
+
 ## Scientific boundaries
 
 The project does not claim universal prediction insufficiency, universal MAVS optimality, deployment readiness, certification, or zero risk. Negative scientific outcomes are publishable when integrity gates pass. Integrity failures invalidate affected results.

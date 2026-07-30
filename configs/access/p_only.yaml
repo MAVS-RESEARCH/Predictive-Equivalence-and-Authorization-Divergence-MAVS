@@ -1,0 +1,38 @@
+schema_version: "1.0"
+profile_id: "P-only"
+frozen_in_phase: 6
+headline_eligible: true
+role: "information-necessity lower-bound condition"
+visible_state_dictionaries:
+  - "PEAD-PREDICTIVE-v1"
+visible_field_ids:
+  - "P-SHARED-v1"
+  - "P-SPECIALISTS-v1"
+  - "P-SUPPORT-v1"
+  - "P-LABEL-v1"
+  - "P-CONFIDENCE-v1"
+  - "P-UNCERTAINTY-v1"
+  - "P-AGREEMENT-v1"
+  - "P-CALIBRATION-v1"
+  - "P-ACTION-v1"
+canonical_renderings:
+  - "canonical-tabular-v1"
+  - "canonical-sequence-v1"
+  - "canonical-graph-v1"
+transformations:
+  - "frozen_predictive_field_selection_v1"
+  - "lossless_canonical_serialization_v1"
+truncation_allowed: false
+lossy_transformations: []
+forbidden_states:
+  - "GovernanceState"
+  - "OracleState"
+  - "AuthorizationLabel"
+  - "WorldState"
+forbidden_namespaces:
+  - "pead.world"
+  - "pead.labels"
+  - "pead.audits"
+  - "pead.projections.oracle"
+missing_values: "field-specific frozen dictionary rule"
+back_reference_allowed: false

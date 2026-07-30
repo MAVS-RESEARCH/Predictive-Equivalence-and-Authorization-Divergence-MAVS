@@ -61,6 +61,8 @@ class WorldState:
     nuisance_state: Mapping[str, Any]
     hidden_mechanism: str
     generator_lineage: Mapping[str, Any]
+    governance_state: GovernanceState | None = None
+    oracle_state: OracleState | None = None
 
     def __post_init__(self) -> None:
         if self.schema_version != SCHEMA_VERSION:
@@ -82,6 +84,18 @@ class WorldState:
             "generator_lineage",
         ):
             object.__setattr__(self, name, deep_freeze(getattr(self, name)))
+        if self.governance_state is not None and not isinstance(
+            self.governance_state, GovernanceState
+        ):
+            raise RecordValidationError(
+                "WorldState governance_state must be GovernanceState or None"
+            )
+        if self.oracle_state is not None and not isinstance(
+            self.oracle_state, OracleState
+        ):
+            raise RecordValidationError(
+                "WorldState oracle_state must be OracleState or None"
+            )
 
     @classmethod
     def create(cls, **fields: Any) -> "WorldState":

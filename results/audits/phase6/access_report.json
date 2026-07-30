@@ -1,0 +1,53 @@
+{
+  "access_configs": {
+    "declared_oracle_fields": 2,
+    "frozen_governance_fields": 9,
+    "frozen_predictive_fields": 9,
+    "profiles": {
+      "Oracle-G": {
+        "config": "configs/access/oracle_g.yaml",
+        "field_count": 20,
+        "field_mask_sha256": "eb4a933300f1dec5ab8b289b719fe7a92d76d426fe3c749e39363649d3db281c",
+        "headline_eligible": false,
+        "lossy_transformations": 0,
+        "truncation_allowed": false
+      },
+      "P-only": {
+        "config": "configs/access/p_only.yaml",
+        "field_count": 9,
+        "field_mask_sha256": "7ae6d22e3bb5db5f9a14dfb3d6d681675535f6a382fcc8585f285123e1ea9253",
+        "headline_eligible": true,
+        "lossy_transformations": 0,
+        "truncation_allowed": false
+      },
+      "Raw-G": {
+        "config": "configs/access/raw_g.yaml",
+        "field_count": 18,
+        "field_mask_sha256": "4768d758654879a07b832ad1f6859a79f260f190c53a64b51b22bcd0176cccc8",
+        "headline_eligible": true,
+        "lossy_transformations": 0,
+        "truncation_allowed": false
+      }
+    },
+    "status": "pass"
+  },
+  "cross_profile_identity": {
+    "comparisons": 10800,
+    "mismatches": 0,
+    "only_projection_differs": true,
+    "status": "pass"
+  },
+  "immutability": {
+    "sealed_inputs_examined": 32400,
+    "status": "pass",
+    "world_state_back_references": 0
+  },
+  "schema_version": "1.0",
+  "static_dependencies": {
+    "files_scanned": 0,
+    "roots": [],
+    "status": "pass",
+    "violations": {}
+  },
+  "status": "pass"
+}

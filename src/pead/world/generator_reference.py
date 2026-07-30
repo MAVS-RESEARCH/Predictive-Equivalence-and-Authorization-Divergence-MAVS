@@ -65,6 +65,8 @@ def generate_world_reference(request: WorldRequest) -> GeneratedWorld:
         nuisance_state=latent["nuisance"],
         hidden_mechanism=request.mechanism_id,
         generator_lineage=ancestry,
+        governance_state=g_state,
+        oracle_state=o_state,
     )
     return GeneratedWorld(
         schema_version="1.0",

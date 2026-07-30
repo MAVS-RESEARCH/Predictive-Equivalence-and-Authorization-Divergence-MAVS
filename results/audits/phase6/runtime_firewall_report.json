@@ -1,0 +1,40 @@
+{
+  "hidden_canaries": {
+    "accessible_canaries": 0,
+    "all_attempts_blocked": true,
+    "balance_class_0": 1800,
+    "balance_class_1": 1800,
+    "blocked_attempts": 800,
+    "canaries_inserted": 3600,
+    "correlation_detected": false,
+    "label_contingency": {
+      "Accept": {
+        "0": 900,
+        "1": 900
+      },
+      "Reject": {
+        "0": 900,
+        "1": 900
+      }
+    },
+    "label_independence_exact": true,
+    "payload_token_occurrences": 0,
+    "projection_hash_effects": 0,
+    "status": "pass",
+    "unique_tokens": 3600
+  },
+  "projection_event_log": {
+    "characters": 66850792,
+    "event_lines": 36800,
+    "sha256": "64d54c6a251f89bf2749d272b144cbdbff0caeb289c6c7fe9e4622ba4363e0ea"
+  },
+  "runtime_firewall": {
+    "allowed_forbidden_reads": 0,
+    "attempt_log_entries": 800,
+    "blocked_probes": 800,
+    "forbidden_probes": 800,
+    "status": "pass"
+  },
+  "schema_version": "1.0",
+  "status": "pass"
+}

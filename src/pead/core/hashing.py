@@ -190,9 +190,11 @@ def canonical_object(value: Any) -> Any:
 def restore_canonical_object(value: Any) -> Any:
     """Restore frozen tagged scalar/container values from canonical JSON."""
 
-    if isinstance(value, list):
+    if isinstance(value, Sequence) and not isinstance(
+        value, (str, bytes, bytearray)
+    ):
         return tuple(restore_canonical_object(item) for item in value)
-    if isinstance(value, dict):
+    if isinstance(value, Mapping):
         tag = value.get(_RESERVED_KEY)
         if tag == "decimal12" and set(value) == {_RESERVED_KEY, "value"}:
             return float(value["value"])

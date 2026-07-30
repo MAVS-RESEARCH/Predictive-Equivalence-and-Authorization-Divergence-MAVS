@@ -116,6 +116,16 @@ class GeneratedWorld:
             raise WorldSchemaError(
                 "world predictive outputs do not match PredictiveState"
             )
+        if canonical_hash(self.governance_state) != canonical_hash(
+            self.world_state.governance_state
+        ):
+            raise WorldSchemaError(
+                "world governance state does not match GovernanceState"
+            )
+        if canonical_hash(self.oracle_state) != canonical_hash(
+            self.world_state.oracle_state
+        ):
+            raise WorldSchemaError("world Oracle state does not match OracleState")
 
     @property
     def predictive_hash(self) -> str:

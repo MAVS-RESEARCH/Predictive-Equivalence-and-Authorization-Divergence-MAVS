@@ -1,0 +1,40 @@
+{
+  "content_sha256": "1cde03a6386ec57633a7b34f905d474787b902bbc26de028e88071ebc0aaad60",
+  "field_method_matrix_sha256": "eb4c5c1d2f367a0eefce2655930a0182f95a18b29838a2c256ec420e68cdba1a",
+  "phase": 6,
+  "profiles": {
+    "Oracle-G": {
+      "config": "configs/access/oracle_g.yaml",
+      "field_count": 20,
+      "field_mask_sha256": "eb4a933300f1dec5ab8b289b719fe7a92d76d426fe3c749e39363649d3db281c",
+      "headline_eligible": false,
+      "lossy_transformations": 0,
+      "truncation_allowed": false
+    },
+    "P-only": {
+      "config": "configs/access/p_only.yaml",
+      "field_count": 9,
+      "field_mask_sha256": "7ae6d22e3bb5db5f9a14dfb3d6d681675535f6a382fcc8585f285123e1ea9253",
+      "headline_eligible": true,
+      "lossy_transformations": 0,
+      "truncation_allowed": false
+    },
+    "Raw-G": {
+      "config": "configs/access/raw_g.yaml",
+      "field_count": 18,
+      "field_mask_sha256": "4768d758654879a07b832ad1f6859a79f260f190c53a64b51b22bcd0176cccc8",
+      "headline_eligible": true,
+      "lossy_transformations": 0,
+      "truncation_allowed": false
+    }
+  },
+  "registry_id": "PEAD-ACCESS-REGISTRY-v1",
+  "release_authority": "none",
+  "released_case_count": 0,
+  "renderings": [
+    "canonical-graph-v1",
+    "canonical-sequence-v1",
+    "canonical-tabular-v1"
+  ],
+  "schema_version": "1.0"
+}

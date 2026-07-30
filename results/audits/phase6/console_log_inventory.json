@@ -1,0 +1,180 @@
+{
+  "count": 25,
+  "entries": [
+    {
+      "comment": "Verify every WorkPlan-named Phase 6 source, config, script, test, and prerequisite artifact.",
+      "comment_line": 213,
+      "console_log_line": 214,
+      "event_id": "P6-AUDIT-001",
+      "file": "src/pead/phase6/audit.py"
+    },
+    {
+      "comment": "Execute the complete non-vacuous projection, parity, Oracle, firewall, and canary review.",
+      "comment_line": 216,
+      "console_log_line": 217,
+      "event_id": "P6-AUDIT-002",
+      "file": "src/pead/phase6/audit.py"
+    },
+    {
+      "comment": "Verify every Phase 6 source clause retains files, tests, evidence, and release-failure controls.",
+      "comment_line": 224,
+      "console_log_line": 225,
+      "event_id": "P6-AUDIT-003",
+      "file": "src/pead/phase6/audit.py"
+    },
+    {
+      "comment": "Verify complete regression, integration, blind-contract, and stress evidence.",
+      "comment_line": 227,
+      "console_log_line": 228,
+      "event_id": "P6-AUDIT-004",
+      "file": "src/pead/phase6/audit.py"
+    },
+    {
+      "comment": "Inventory every Phase 6 console call and its adjacent stable identifying comment.",
+      "comment_line": 230,
+      "console_log_line": 231,
+      "event_id": "P6-AUDIT-005",
+      "file": "src/pead/phase6/audit.py"
+    },
+    {
+      "comment": "Verify append-only ledger coverage and prohibit training, release, or Phase 7 outputs.",
+      "comment_line": 241,
+      "console_log_line": 242,
+      "event_id": "P6-AUDIT-006",
+      "file": "src/pead/phase6/audit.py"
+    },
+    {
+      "comment": "Retain the clause-level Phase 6 compliance verdict and signed access registry.",
+      "comment_line": 290,
+      "console_log_line": 291,
+      "event_id": "P6-AUDIT-007",
+      "file": "src/pead/phase6/audit.py"
+    },
+    {
+      "comment": "Report the final local Phase 6 hard-gate verdict.",
+      "comment_line": 303,
+      "console_log_line": 304,
+      "event_id": "P6-AUDIT-008",
+      "file": "src/pead/phase6/audit.py"
+    },
+    {
+      "comment": "Emit a hard failure with its unsuppressed cause.",
+      "comment_line": 307,
+      "console_log_line": 308,
+      "event_id": "P6-AUDIT-009",
+      "file": "src/pead/phase6/audit.py"
+    },
+    {
+      "comment": "Load the retained field-by-method and representation-oracle evidence.",
+      "comment_line": 18,
+      "console_log_line": 19,
+      "event_id": "P6-PARITY-001",
+      "file": "src/pead/phase6/parity.py"
+    },
+    {
+      "comment": "Emit the independent retained-evidence parity verdict.",
+      "comment_line": 33,
+      "console_log_line": 34,
+      "event_id": "P6-PARITY-002",
+      "file": "src/pead/phase6/parity.py"
+    },
+    {
+      "comment": "Validate the three access profiles against the frozen predictive and governance dictionaries.",
+      "comment_line": 134,
+      "console_log_line": 135,
+      "event_id": "P6-REVIEW-001",
+      "file": "src/pead/phase6/review.py"
+    },
+    {
+      "comment": "Construct the balanced D1-D6 exact-world stress corpus without releasing claim-bank rows.",
+      "comment_line": 137,
+      "console_log_line": 138,
+      "event_id": "P6-REVIEW-002",
+      "file": "src/pead/phase6/review.py"
+    },
+    {
+      "comment": "Project every stress world through all profiles and canonical representations.",
+      "comment_line": 159,
+      "console_log_line": 160,
+      "event_id": "P6-REVIEW-003",
+      "file": "src/pead/phase6/review.py"
+    },
+    {
+      "comment": "Report each completed 600-world stress boundary.",
+      "comment_line": 233,
+      "console_log_line": 234,
+      "event_id": "P6-REVIEW-004",
+      "file": "src/pead/phase6/review.py"
+    },
+    {
+      "comment": "Build the Raw-G field-by-method matrix from identical semantic facts.",
+      "comment_line": 242,
+      "console_log_line": 243,
+      "event_id": "P6-REVIEW-005",
+      "file": "src/pead/phase6/review.py"
+    },
+    {
+      "comment": "Execute runtime proxies, hidden canaries, and adversarial forbidden-access probes.",
+      "comment_line": 247,
+      "console_log_line": 248,
+      "event_id": "P6-REVIEW-006",
+      "file": "src/pead/phase6/review.py"
+    },
+    {
+      "comment": "Run static method dependency scanning and fail on any hidden namespace.",
+      "comment_line": 297,
+      "console_log_line": 298,
+      "event_id": "P6-REVIEW-007",
+      "file": "src/pead/phase6/review.py"
+    },
+    {
+      "comment": "Report the non-vacuous Phase 6 representation and access verdict.",
+      "comment_line": 379,
+      "console_log_line": 380,
+      "event_id": "P6-REVIEW-008",
+      "file": "src/pead/phase6/review.py"
+    },
+    {
+      "comment": "Discover the complete regression and Phase 6 verification suite.",
+      "comment_line": 29,
+      "console_log_line": 30,
+      "event_id": "P6-TEST-RUN-001",
+      "file": "src/pead/phase6/test_runner.py"
+    },
+    {
+      "comment": "Report the exact complete-suite denominator before execution.",
+      "comment_line": 36,
+      "console_log_line": 37,
+      "event_id": "P6-TEST-RUN-002",
+      "file": "src/pead/phase6/test_runner.py"
+    },
+    {
+      "comment": "Retain the complete regression, adversarial, and stress verdict.",
+      "comment_line": 85,
+      "console_log_line": 86,
+      "event_id": "P6-TEST-RUN-003",
+      "file": "src/pead/phase6/test_runner.py"
+    },
+    {
+      "comment": "Seal one projection behind a capability proxy and insert a hidden randomized canary.",
+      "comment_line": 215,
+      "console_log_line": 216,
+      "event_id": "P6-FIREWALL-001",
+      "file": "src/pead/projections/firewall.py"
+    },
+    {
+      "comment": "Record and reject one unregistered attribute or field read without disclosing its value.",
+      "comment_line": 246,
+      "console_log_line": 247,
+      "event_id": "P6-FIREWALL-002",
+      "file": "src/pead/projections/firewall.py"
+    },
+    {
+      "comment": "Log the complete field mask, transformation, truncation, missing-value, and projection-hash decision.",
+      "comment_line": 337,
+      "console_log_line": 338,
+      "event_id": "P6-PROJECT-001",
+      "file": "src/pead/projections/firewall.py"
+    }
+  ]
+}

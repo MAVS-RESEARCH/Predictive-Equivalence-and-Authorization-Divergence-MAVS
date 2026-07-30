@@ -63,6 +63,8 @@ def generate_world(request: WorldRequest) -> GeneratedWorld:
         nuisance_state=facts["nuisance"],
         hidden_mechanism=request.mechanism_id,
         generator_lineage=lineage,
+        governance_state=governance,
+        oracle_state=oracle,
     )
     return GeneratedWorld(
         schema_version="1.0",

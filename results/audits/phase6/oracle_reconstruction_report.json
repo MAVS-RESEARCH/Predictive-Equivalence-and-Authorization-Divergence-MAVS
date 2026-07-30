@@ -1,0 +1,9 @@
+{
+  "mismatches": 0,
+  "released_case_accuracy": "not_applicable_no_released_cases",
+  "released_cases": 0,
+  "schema_version": "1.0",
+  "status": "pass",
+  "validation_accuracy": 1.0,
+  "validation_round_trips": 10800
+}

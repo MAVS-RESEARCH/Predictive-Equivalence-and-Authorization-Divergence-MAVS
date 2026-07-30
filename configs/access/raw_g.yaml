@@ -1,0 +1,49 @@
+schema_version: "1.0"
+profile_id: "Raw-G"
+frozen_in_phase: 6
+headline_eligible: true
+role: "equal-information governance-architecture comparison"
+visible_state_dictionaries:
+  - "PEAD-PREDICTIVE-v1"
+  - "PEAD-GOVERNANCE-v1"
+visible_field_ids:
+  - "P-SHARED-v1"
+  - "P-SPECIALISTS-v1"
+  - "P-SUPPORT-v1"
+  - "P-LABEL-v1"
+  - "P-CONFIDENCE-v1"
+  - "P-UNCERTAINTY-v1"
+  - "P-AGREEMENT-v1"
+  - "P-CALIBRATION-v1"
+  - "P-ACTION-v1"
+  - "G-PROVENANCE-v1"
+  - "G-AUTHORITY-v1"
+  - "G-POLICY-v1"
+  - "G-TEMPORAL-v1"
+  - "G-REVERSIBILITY-v1"
+  - "G-CONSEQUENCE-v1"
+  - "G-EVIDENCE-v1"
+  - "G-DEPENDENCY-v1"
+  - "G-CFVIEW-v1"
+canonical_renderings:
+  - "canonical-tabular-v1"
+  - "canonical-sequence-v1"
+  - "canonical-graph-v1"
+transformations:
+  - "frozen_predictive_field_selection_v1"
+  - "frozen_raw_governance_field_selection_v1"
+  - "lossless_canonical_serialization_v1"
+truncation_allowed: false
+lossy_transformations: []
+forbidden_states:
+  - "OracleState"
+  - "AuthorizationLabel"
+  - "WorldState"
+forbidden_namespaces:
+  - "pead.world"
+  - "pead.labels"
+  - "pead.audits"
+  - "pead.projections.oracle"
+missing_values: "field-specific frozen dictionary rule"
+back_reference_allowed: false
+equal_information_required: true

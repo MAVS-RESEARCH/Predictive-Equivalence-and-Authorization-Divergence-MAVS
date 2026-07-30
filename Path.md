@@ -33,7 +33,7 @@ Rules:
 | 3 | Causal world registry, exact twins, and near twins | Complete | 89/89 tests passed; implementation commit `81bd52c825fd41c12dc5fb921c5c656fbf9d20bd` pushed and remotely verified |
 | 4 | Reversals, scope banks, and evidence sufficiency | Complete | None |
 | 5 | Six open adapters and held-out interfaces | Complete | None |
-| 6 | Projection layer, feature firewall, and parity | Not started | None |
+| 6 | Projection layer, feature firewall, and parity | Local gates passed; publication pending | 122/122 tests; 3,600 worlds; 32,400 projections; zero compliance gaps |
 | 7 | Baseline suite and common training harness | Not started | None |
 | 8 | Frozen MAVS-GC, DS-CF, and ablations | Not started | None |
 | 9 | Metrics, audits, statistics, and reports | Not started | None |
@@ -1727,3 +1727,190 @@ Copy this block for every meaningful action:
 - **Scientific effect:** None. The rerun confirms reproducibility and changes only the recorded ledger publication state.
 - **Deviation:** None.
 - **Next action:** Commit and push this post-publication evidence and ledger close, verify the final remote branch SHA, and stop before Phase 6.
+
+## 15. Phase 6 implementation record
+
+### PATH-0059 - Phase 6 source reconfirmation and execution boundary
+
+- **Timestamp:** 2026-07-31T01:24:44+05:00.
+- **Phase:** 6.
+- **Status:** Pass.
+- **Change ID:** `P6-SOURCE-001`.
+- **WorkPlan alignment:** Phase 6 lines 874-905; Sections 1.1, 4, 4.1, and requirement rows `ACCESS-001` through `ACCESS-005`, `STATE-P-001..009`, `STATE-G-001..009`, and `LABEL-006`.
+- **Sources reviewed:** `WorkPlan.md`, the complete frozen Phase 0 predictive and governance dictionaries, the Phase 6-tagged clause registry, and all 20 rendered pages plus extracted text of `MAVS-Diagnostic Sciences.pdf`.
+- **Source findings applied:** Prediction-facing support remains separate from governance evidence; Raw-G comparisons must receive identical visible facts; every transformation and influence path is declared; scope leakage, redundancy, instability, and harmful composition are treated as testable failures; Oracle-G is diagnostic/non-headline.
+- **Phase boundary:** Phase 6 projection and integrity controls only. Phase 7 baselines, training, tuning, calibration, model selection, and checkpoints were not started.
+- **Models trained:** 0.
+- **Training benchmarks:** None.
+- **Independent anti-overfitting benchmarks:** Not applicable because Phase 6 contains no fitted parameters; its validation corpus is integrity-only and grants no training or claim-release authority.
+- **Released claim-bank rows:** 0.
+- **Deviation:** None.
+
+### PATH-0060 - Frozen access profiles and complete WorldState projection source
+
+- **Timestamp:** 2026-07-31T01:24:44+05:00.
+- **Phase:** 6.
+- **Status:** Pass.
+- **Change ID:** `P6-ACCESS-001`.
+- **Files added:** `configs/access/p_only.yaml`, `configs/access/raw_g.yaml`, `configs/access/oracle_g.yaml`, `src/pead/projections/predictive.py`, `src/pead/projections/raw_governance.py`, `src/pead/projections/oracle.py`, and `src/pead/projections/__init__.py`.
+- **Files changed:** `src/pead/core/types.py`, `src/pead/world/generator_primary.py`, `src/pead/world/generator_reference.py`, and `src/pead/world/schema.py`.
+- **Implementation:**
+  - P-only exposes exactly the nine frozen `P-*` fields.
+  - Raw-G exposes the same nine `P-*` fields plus exactly the nine frozen `G-*` fields.
+  - Oracle-G adds only `O-LATENT-GOVERNANCE-v1` and `O-RULE-INPUTS-v1`, is explicitly non-headline, and requires exact round-trip reconstruction.
+  - Complete generated worlds now carry their typed raw `GovernanceState` and `OracleState`; `GeneratedWorld` construction hash-verifies that the separate typed views exactly match the complete `WorldState`.
+  - Projection extraction rejects missing or incorrectly typed state and never copies domain, mechanism, split, label, evaluator, or audit information into P-only/Raw-G payloads.
+  - Every access profile prohibits truncation, lossy transformations, hidden back-references, and undeclared fields.
+- **Frozen dictionary mutation:** None. `predictive_state_v1.yaml` and `governance_state_v1.yaml` remain byte-unchanged.
+- **Scientific effect:** Establishes the equal-information visibility contract; produces no method-performance result.
+- **Deviation:** None.
+
+### PATH-0061 - Immutable sealed inputs and lossless canonical renderings
+
+- **Timestamp:** 2026-07-31T01:24:44+05:00.
+- **Phase:** 6.
+- **Status:** Pass.
+- **Change ID:** `P6-REPRESENTATION-001`.
+- **Files added:** `src/pead/projections/firewall.py`, `src/pead/projections/tabular.py`, `src/pead/projections/sequence.py`, and `src/pead/projections/graph.py`.
+- **Implementation:**
+  - `SealedMethodInput` recursively freezes the method payload and contains no `WorldState`, evaluator, authorization label, source object, or hidden-state reference.
+  - `ProjectionTrace` records world identity for auditing outside the method payload, exact field mask, transformations, per-field truncation flags, per-field frozen missing-value rules, field hashes, semantic-fact hash, representation ID, projection hash, and loss status.
+  - Tabular rendering retains one complete stable-ID/value column per fact.
+  - Sequence rendering retains ordered `(stable field ID, canonical value)` tokens.
+  - Graph rendering retains one typed node per visible stable field and exact root-to-field containment edges.
+  - All three representations use already-canonical JSON bytes for rendered-payload hashing while semantic fields continue to use the frozen canonical hashing policy.
+  - All renderings reconstruct complete semantic facts; no summary, feature derivation, unknown conflation, dropped edge, token truncation, or graph truncation is permitted.
+- **Corrected implementation incident:** The first targeted run re-submitted already-canonical tagged rendering values to the semantic canonicalizer. The canonicalizer correctly rejected its reserved tag. The rendered-byte boundary was corrected to hash already-canonical JSON directly, while semantic facts remain governed by `canonical_hash`. The failed run produced no retained Phase 6 evidence or scientific result.
+- **Lossy transformations:** 0; therefore no scientific loss justification is required.
+- **Deviation:** None.
+
+### PATH-0062 - Static dependency enforcement, runtime firewall, and hidden canaries
+
+- **Timestamp:** 2026-07-31T01:24:44+05:00.
+- **Phase:** 6.
+- **Status:** Pass in targeted adversarial tests; full audit in progress.
+- **Change ID:** `P6-FIREWALL-001`.
+- **Files added:** `src/pead/audits/access.py` and `tests/blind_contract/test_hidden_truth_isolation.py`.
+- **Static enforcement:** AST scanning rejects method imports from `pead.world`, `pead.labels`, `pead.audits`, and the Oracle projection; rejects hidden symbols and attributes; and rejects reflection paths including `vars`, `globals`, `locals`, `eval`, `exec`, and `object.__getattribute__`.
+- **Runtime enforcement:** The capability proxy exposes only registered projection properties and registered field access. Every undeclared attribute or field request is logged, then raises `AccessViolation`; no hidden value is included in the event.
+- **Hidden canaries:** A seeded randomized 128-bit canary is created in the monitor-only namespace for every guarded input. Tokens are unique, absent from payload bytes, inaccessible through the proxy, and assigned with exact within-label balance in the full audit design.
+- **Adversarial targeted evidence:** Hidden attributes, label access, Oracle access, private storage, unregistered field IDs, malicious imports, hidden symbols, attributes, and reflection bypasses were all rejected.
+- **Permitted influence:** Runtime enforcement changes no projection fact or method score; it only blocks and records unauthorized access.
+- **Deviation:** None.
+
+### PATH-0063 - Integration, blind-contract, stress, and complete regression tests
+
+- **Timestamp:** 2026-07-31T01:24:44+05:00.
+- **Phase:** 6.
+- **Status:** Pass.
+- **Change ID:** `P6-TEST-001`.
+- **Files added:** `tests/integration/test_access_profiles.py`, `tests/stress/test_phase6_stress.py`, `src/pead/phase6/test_runner.py`, and `scripts/run_phase6_tests.py`.
+- **Targeted command:** `.\.venv\Scripts\python.exe -m unittest tests.integration.test_access_profiles tests.blind_contract.test_hidden_truth_isolation tests.stress.test_phase6_stress -v`.
+- **Targeted outcome:** 10/10 passed after correction of the retained-rendering byte boundary.
+- **Dedicated stress denominator:** 192 exact-track worlds across D1-D6; 576 Raw-G representation checks; 576 Oracle serialization/reconstruction checks; all passed with no truncation.
+- **Complete command:** `.\.venv\Scripts\python.exe scripts\run_phase6_tests.py`.
+- **Complete outcome:** 122/122 tests passed, failures 0, errors 0, skipped 0.
+- **Evidence:** `results/audits/phase6/phase6_tests.json`.
+- **Regression effect:** Phases 0-5 remain passing after the complete-world schema gained typed governance and Oracle members.
+- **Overfitting control:** No optimizer, fitted preprocessing, learned feature, threshold, parameter, checkpoint, or training benchmark exists in Phase 6.
+- **Deviation:** None.
+
+### PATH-0064 - Extreme-audit implementation and console trace preparation
+
+- **Timestamp:** 2026-07-31T01:24:44+05:00.
+- **Phase:** 6.
+- **Status:** Audit execution in progress.
+- **Change ID:** `P6-AUDIT-PREP-001`.
+- **Files added:** `src/pead/phase6/review.py`, `src/pead/phase6/audit.py`, `src/pead/phase6/parity.py`, `scripts/audit_access.py`, and `scripts/audit_representation_parity.py`.
+- **Audit design:** 3,600 exact-track validation worlds, 600 per open domain; three profiles by three renderings for 32,400 projection decisions; 10,800 Raw-G representation-oracle checks; 10,800 Oracle round trips; 3,600 runtime canaries; 800 forbidden-access probes; exact field-by-method matrix; complete source-requirement coverage; later-phase exclusion.
+- **Per-decision logging:** `P6-PROJECT-001` records field mask, transformations, all truncation declarations, all missing-value rules, projection hash, representation, profile, and world ID for every projection. `P6-FIREWALL-001` logs every guarded input/canary identity, and `P6-FIREWALL-002` logs every rejected access. The bounded digest stream retains exact event-line count, character count, and SHA-256 without storing hidden canary tokens or duplicating tens of thousands of trace lines.
+- **Line-level console documentation:** The final source line and adjacent-comment inventory will be retained in `results/audits/phase6/console_log_inventory.json` after code freeze and copied into the post-audit ledger entry.
+- **Expected evidence:** `access_report.json`, `representation_parity_report.json`, `oracle_reconstruction_report.json`, `runtime_firewall_report.json`, `console_log_inventory.json`, `phase6_compliance.json`, and `results/manifests/phase6/access_registry_v1.json`.
+- **Current publication state:** Local audit in progress.
+- **Deviation:** None.
+
+### PATH-0065 - Phase 6 extreme-rigor local completion audit
+
+- **Timestamp:** 2026-07-31T01:24:44+05:00.
+- **Phase:** 6.
+- **Status:** Local gates passed; publication pending.
+- **Change ID:** `P6-AUDIT-LOCAL-001`.
+- **Commands:**
+  - `.\.venv\Scripts\python.exe scripts\run_phase6_tests.py`
+  - `.\.venv\Scripts\python.exe scripts\audit_access.py`
+  - `.\.venv\Scripts\python.exe scripts\audit_representation_parity.py`
+  - `.\.venv\Scripts\python.exe -m unittest tests.blind_contract.test_hidden_truth_isolation -v`
+- **Complete regression:** 122/122 tests passed; failures 0; errors 0; skipped 0.
+- **Extreme stress evidence:**
+  - 3,600 validation worlds, exactly 600 from each open domain D1-D6.
+  - 32,400 WorldState-to-method projection decisions across three access profiles and three canonical renderings.
+  - 10,800/10,800 Raw-G representation-oracle reconstructions matched the same 18 visible semantic facts.
+  - 10,800/10,800 Oracle-G serializations reconstructed all 20 visible/Oracle facts; validation accuracy `1.0`.
+  - Released cases remain 0, so the released-case Oracle gate is correctly recorded as not applicable rather than claimed from an empty denominator; the non-vacuous validation gate is exact.
+  - 54/54 field-by-method matrix cells matched across tabular, sequence, and graph methods for all 3,600 worlds.
+  - 32,400/32,400 sealed inputs had no `WorldState` or hidden dataclass back-reference.
+  - 3,600 randomized hidden canaries were unique, inaccessible, absent from payload bytes, exactly balanced within each terminal-label stratum, and caused zero projection-hash effects.
+  - 800/800 adversarial forbidden reads were logged and blocked; successful forbidden reads 0.
+  - Forbidden imports, hidden symbols, label accesses, and static reflection bypasses in present method roots: 0.
+  - Lossy transformations: 0; truncations: 0.
+  - Phase 6 source clauses with complete control/test/evidence/failure semantics: 168/168.
+- **Access compliance:** `1.0`.
+- **Representation parity:** `1.0`.
+- **Oracle validation reconstruction accuracy:** `1.0`.
+- **Representation-oracle retention:** `1.0`.
+- **Models trained/checkpoints/calibration actions:** 0/0/0.
+- **Phase 7 files or released scientific results:** 0.
+- **Compliance gaps:** None.
+- **Retained evidence:**
+  - `results/audits/phase6/access_report.json`
+  - `results/audits/phase6/representation_parity_report.json`
+  - `results/audits/phase6/oracle_reconstruction_report.json`
+  - `results/audits/phase6/runtime_firewall_report.json`
+  - `results/audits/phase6/phase6_tests.json`
+  - `results/audits/phase6/console_log_inventory.json`
+  - `results/audits/phase6/phase6_compliance.json`
+  - `results/manifests/phase6/access_registry_v1.json`
+- **Console event execution:** The bounded operational trace contains exactly 36,800 event lines: 32,400 per-projection `P6-PROJECT-001` events, 3,600 per-proxy `P6-FIREWALL-001` events, and 800 rejected-read `P6-FIREWALL-002` events. Its SHA-256 is retained in `runtime_firewall_report.json`.
+- **Line-level `console.log` and adjacent identifying-comment inventory:**
+
+| File | Comment line | `console.log` line | Event ID | Adjacent identifying comment |
+|---|---:|---:|---|---|
+| `src/pead/phase6/audit.py` | 213 | 214 | `P6-AUDIT-001` | Verify every WorkPlan-named Phase 6 source, config, script, test, and prerequisite artifact. |
+| `src/pead/phase6/audit.py` | 216 | 217 | `P6-AUDIT-002` | Execute the complete non-vacuous projection, parity, Oracle, firewall, and canary review. |
+| `src/pead/phase6/audit.py` | 224 | 225 | `P6-AUDIT-003` | Verify every Phase 6 source clause retains files, tests, evidence, and release-failure controls. |
+| `src/pead/phase6/audit.py` | 227 | 228 | `P6-AUDIT-004` | Verify complete regression, integration, blind-contract, and stress evidence. |
+| `src/pead/phase6/audit.py` | 230 | 231 | `P6-AUDIT-005` | Inventory every Phase 6 console call and its adjacent stable identifying comment. |
+| `src/pead/phase6/audit.py` | 241 | 242 | `P6-AUDIT-006` | Verify append-only ledger coverage and prohibit training, release, or Phase 7 outputs. |
+| `src/pead/phase6/audit.py` | 290 | 291 | `P6-AUDIT-007` | Retain the clause-level Phase 6 compliance verdict and signed access registry. |
+| `src/pead/phase6/audit.py` | 303 | 304 | `P6-AUDIT-008` | Report the final local Phase 6 hard-gate verdict. |
+| `src/pead/phase6/audit.py` | 307 | 308 | `P6-AUDIT-009` | Emit a hard failure with its unsuppressed cause. |
+| `src/pead/phase6/parity.py` | 18 | 19 | `P6-PARITY-001` | Load the retained field-by-method and representation-oracle evidence. |
+| `src/pead/phase6/parity.py` | 33 | 34 | `P6-PARITY-002` | Emit the independent retained-evidence parity verdict. |
+| `src/pead/phase6/review.py` | 134 | 135 | `P6-REVIEW-001` | Validate the three access profiles against the frozen predictive and governance dictionaries. |
+| `src/pead/phase6/review.py` | 137 | 138 | `P6-REVIEW-002` | Construct the balanced D1-D6 exact-world stress corpus without releasing claim-bank rows. |
+| `src/pead/phase6/review.py` | 159 | 160 | `P6-REVIEW-003` | Project every stress world through all profiles and canonical representations. |
+| `src/pead/phase6/review.py` | 233 | 234 | `P6-REVIEW-004` | Report each completed 600-world stress boundary. |
+| `src/pead/phase6/review.py` | 242 | 243 | `P6-REVIEW-005` | Build the Raw-G field-by-method matrix from identical semantic facts. |
+| `src/pead/phase6/review.py` | 247 | 248 | `P6-REVIEW-006` | Execute runtime proxies, hidden canaries, and adversarial forbidden-access probes. |
+| `src/pead/phase6/review.py` | 297 | 298 | `P6-REVIEW-007` | Run static method dependency scanning and fail on any hidden namespace. |
+| `src/pead/phase6/review.py` | 379 | 380 | `P6-REVIEW-008` | Report the non-vacuous Phase 6 representation and access verdict. |
+| `src/pead/phase6/test_runner.py` | 29 | 30 | `P6-TEST-RUN-001` | Discover the complete regression and Phase 6 verification suite. |
+| `src/pead/phase6/test_runner.py` | 36 | 37 | `P6-TEST-RUN-002` | Report the exact complete-suite denominator before execution. |
+| `src/pead/phase6/test_runner.py` | 85 | 86 | `P6-TEST-RUN-003` | Retain the complete regression, adversarial, and stress verdict. |
+| `src/pead/projections/firewall.py` | 215 | 216 | `P6-FIREWALL-001` | Seal one projection behind a capability proxy and insert a hidden randomized canary. |
+| `src/pead/projections/firewall.py` | 246 | 247 | `P6-FIREWALL-002` | Record and reject one unregistered attribute or field read without disclosing its value. |
+| `src/pead/projections/firewall.py` | 337 | 338 | `P6-PROJECT-001` | Log the complete field mask, transformation, truncation, missing-value, and projection-hash decision. |
+
+- **Console inventory result:** 25/25 Phase 6 `console.log` call sites have an immediately adjacent exact-ID `STEP LOG` comment. Machine-readable evidence: `results/audits/phase6/console_log_inventory.json`.
+- **Final retained evidence SHA-256:**
+  - `results/audits/phase6/access_report.json`: `E25E5FCF850844FBCF320B85E8E26736CDD4265F50C8668C44F8A39780276284`
+  - `results/audits/phase6/representation_parity_report.json`: `327865D5059EED7A54CD7DEA5F615D3D898B8CC9160D373A0DF7C4067D13AF49`
+  - `results/audits/phase6/oracle_reconstruction_report.json`: `15B25177828371905A77D8B1DC18FF51C9AC4726002FCD9278E96C257F63C0E2`
+  - `results/audits/phase6/runtime_firewall_report.json`: `A7F3D725A5EB34DF62090ABB6CED9120B4A8338EB8C5DD17217689926412540E`
+  - `results/audits/phase6/phase6_compliance.json`: `322CD8D11CA08B648D6B14BFDDEF764839EF6C4E431B69171E4AD97FED7463A0`
+  - `results/audits/phase6/console_log_inventory.json`: `BDDF0C026DBA36B4DA09B97E6F6EB647768F149F50776444ED780254497566EA`
+  - `results/audits/phase6/phase6_tests.json`: `FBF74B65CA562CEF410B549CD6E3F1EE6267DA73CBAF4570226CE3FF7FD64270`
+  - `results/manifests/phase6/access_registry_v1.json`: `F83D0703DF0B8F4C5C73F7B4EACA98F7578AE598CBEBF2BF8CD7EC0C9406E5A4`
+- **Scientific result boundary:** These are implementation-integrity results only. They do not establish H1, H2, method superiority, deployment safety, or release eligibility.
+- **Deviation:** None.
+- **Next permitted action:** Inspect the complete intended diff, rerun source/config/compile/diff gates, commit Phase 6, push the current branch, verify the exact remote SHA, append the publication record, and stop before Phase 7.

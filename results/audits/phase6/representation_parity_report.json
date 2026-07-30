@@ -1,0 +1,138 @@
+{
+  "lossy_transformations": {
+    "count": 0,
+    "declared": [],
+    "scientific_justification_required": false
+  },
+  "raw_g_field_method_matrix": {
+    "case_count": 3600,
+    "field_method_hashes": {
+      "G-AUTHORITY-v1": {
+        "canonical-graph-v1": "ff16c5ffca6c27e93378e0a00e8c29727c1d40c8dea241a0ad359c9a42c302dd",
+        "canonical-sequence-v1": "ff16c5ffca6c27e93378e0a00e8c29727c1d40c8dea241a0ad359c9a42c302dd",
+        "canonical-tabular-v1": "ff16c5ffca6c27e93378e0a00e8c29727c1d40c8dea241a0ad359c9a42c302dd"
+      },
+      "G-CFVIEW-v1": {
+        "canonical-graph-v1": "b8fc58e376250ac6c8f05738b44382e994b0e9d605dd0f73788693b07edf870a",
+        "canonical-sequence-v1": "b8fc58e376250ac6c8f05738b44382e994b0e9d605dd0f73788693b07edf870a",
+        "canonical-tabular-v1": "b8fc58e376250ac6c8f05738b44382e994b0e9d605dd0f73788693b07edf870a"
+      },
+      "G-CONSEQUENCE-v1": {
+        "canonical-graph-v1": "f57af2745870d2b972d332f02e60be7638a84c1ff3143b5cd92a8972fadf4d27",
+        "canonical-sequence-v1": "f57af2745870d2b972d332f02e60be7638a84c1ff3143b5cd92a8972fadf4d27",
+        "canonical-tabular-v1": "f57af2745870d2b972d332f02e60be7638a84c1ff3143b5cd92a8972fadf4d27"
+      },
+      "G-DEPENDENCY-v1": {
+        "canonical-graph-v1": "f3de80ab7b9b527fb6edf765613bad21d6030df4eab980a74d6411b1ba4b5d5c",
+        "canonical-sequence-v1": "f3de80ab7b9b527fb6edf765613bad21d6030df4eab980a74d6411b1ba4b5d5c",
+        "canonical-tabular-v1": "f3de80ab7b9b527fb6edf765613bad21d6030df4eab980a74d6411b1ba4b5d5c"
+      },
+      "G-EVIDENCE-v1": {
+        "canonical-graph-v1": "0c75485cfeac07fecb3d97c76c8f9f2adbf922bfaa24b4e1b6036786583cdea9",
+        "canonical-sequence-v1": "0c75485cfeac07fecb3d97c76c8f9f2adbf922bfaa24b4e1b6036786583cdea9",
+        "canonical-tabular-v1": "0c75485cfeac07fecb3d97c76c8f9f2adbf922bfaa24b4e1b6036786583cdea9"
+      },
+      "G-POLICY-v1": {
+        "canonical-graph-v1": "9b24dab2b54a4784cf3ba30c93f982078627c9cb9fbc6c619dc260e1a3f9b827",
+        "canonical-sequence-v1": "9b24dab2b54a4784cf3ba30c93f982078627c9cb9fbc6c619dc260e1a3f9b827",
+        "canonical-tabular-v1": "9b24dab2b54a4784cf3ba30c93f982078627c9cb9fbc6c619dc260e1a3f9b827"
+      },
+      "G-PROVENANCE-v1": {
+        "canonical-graph-v1": "77bdcbb7bb4960f16142ba68b563b6824f0fb11b062b1b4cffca52913af65ca2",
+        "canonical-sequence-v1": "77bdcbb7bb4960f16142ba68b563b6824f0fb11b062b1b4cffca52913af65ca2",
+        "canonical-tabular-v1": "77bdcbb7bb4960f16142ba68b563b6824f0fb11b062b1b4cffca52913af65ca2"
+      },
+      "G-REVERSIBILITY-v1": {
+        "canonical-graph-v1": "4e4ce2f75722d12e0635446c8b68ccce8aec1a3a04e2d7f03a576f0a9269a5ac",
+        "canonical-sequence-v1": "4e4ce2f75722d12e0635446c8b68ccce8aec1a3a04e2d7f03a576f0a9269a5ac",
+        "canonical-tabular-v1": "4e4ce2f75722d12e0635446c8b68ccce8aec1a3a04e2d7f03a576f0a9269a5ac"
+      },
+      "G-TEMPORAL-v1": {
+        "canonical-graph-v1": "4403f5902dc8afb9c33255e9d5e4204fe3ff05b2f8d64b849c6558c475f905ed",
+        "canonical-sequence-v1": "4403f5902dc8afb9c33255e9d5e4204fe3ff05b2f8d64b849c6558c475f905ed",
+        "canonical-tabular-v1": "4403f5902dc8afb9c33255e9d5e4204fe3ff05b2f8d64b849c6558c475f905ed"
+      },
+      "P-ACTION-v1": {
+        "canonical-graph-v1": "00a486771b3675e59191ba03bcf48be78fe3a1025f54dbbe7b3e892b14d0ce94",
+        "canonical-sequence-v1": "00a486771b3675e59191ba03bcf48be78fe3a1025f54dbbe7b3e892b14d0ce94",
+        "canonical-tabular-v1": "00a486771b3675e59191ba03bcf48be78fe3a1025f54dbbe7b3e892b14d0ce94"
+      },
+      "P-AGREEMENT-v1": {
+        "canonical-graph-v1": "366dd0b233450e8163b7cb06573fe816f196b0a7d6247f64a18323dcf28bdd06",
+        "canonical-sequence-v1": "366dd0b233450e8163b7cb06573fe816f196b0a7d6247f64a18323dcf28bdd06",
+        "canonical-tabular-v1": "366dd0b233450e8163b7cb06573fe816f196b0a7d6247f64a18323dcf28bdd06"
+      },
+      "P-CALIBRATION-v1": {
+        "canonical-graph-v1": "9e0b66ae2d600128feffb7d4a0fdfb46aba4c5ab9d94b9ced2d15c319218f777",
+        "canonical-sequence-v1": "9e0b66ae2d600128feffb7d4a0fdfb46aba4c5ab9d94b9ced2d15c319218f777",
+        "canonical-tabular-v1": "9e0b66ae2d600128feffb7d4a0fdfb46aba4c5ab9d94b9ced2d15c319218f777"
+      },
+      "P-CONFIDENCE-v1": {
+        "canonical-graph-v1": "e8221922903be4fd33f1d6f3bc87f56ee3835cd30476811f08abeb665ac79e5a",
+        "canonical-sequence-v1": "e8221922903be4fd33f1d6f3bc87f56ee3835cd30476811f08abeb665ac79e5a",
+        "canonical-tabular-v1": "e8221922903be4fd33f1d6f3bc87f56ee3835cd30476811f08abeb665ac79e5a"
+      },
+      "P-LABEL-v1": {
+        "canonical-graph-v1": "07c493ab7b2d5d602f9b75bc777ea0bb63fae7425c7050dbfb00047f872211e5",
+        "canonical-sequence-v1": "07c493ab7b2d5d602f9b75bc777ea0bb63fae7425c7050dbfb00047f872211e5",
+        "canonical-tabular-v1": "07c493ab7b2d5d602f9b75bc777ea0bb63fae7425c7050dbfb00047f872211e5"
+      },
+      "P-SHARED-v1": {
+        "canonical-graph-v1": "d967f4b0f9a98170230ce02de2ad4d6fcbcc2eb1207dddadd83c726e10d4c50d",
+        "canonical-sequence-v1": "d967f4b0f9a98170230ce02de2ad4d6fcbcc2eb1207dddadd83c726e10d4c50d",
+        "canonical-tabular-v1": "d967f4b0f9a98170230ce02de2ad4d6fcbcc2eb1207dddadd83c726e10d4c50d"
+      },
+      "P-SPECIALISTS-v1": {
+        "canonical-graph-v1": "f0e24097316d956d23dcd81ded55330ef2979ae237392de9043b39d3b35ccb7e",
+        "canonical-sequence-v1": "f0e24097316d956d23dcd81ded55330ef2979ae237392de9043b39d3b35ccb7e",
+        "canonical-tabular-v1": "f0e24097316d956d23dcd81ded55330ef2979ae237392de9043b39d3b35ccb7e"
+      },
+      "P-SUPPORT-v1": {
+        "canonical-graph-v1": "9ace762ebb862765124bf99f8adde638033610a7d9289a9316dea3341706422a",
+        "canonical-sequence-v1": "9ace762ebb862765124bf99f8adde638033610a7d9289a9316dea3341706422a",
+        "canonical-tabular-v1": "9ace762ebb862765124bf99f8adde638033610a7d9289a9316dea3341706422a"
+      },
+      "P-UNCERTAINTY-v1": {
+        "canonical-graph-v1": "680bee843b51390f6d3ecaf80d6b7ae73c0e64e16f1ffc6286d0737ab232e1ca",
+        "canonical-sequence-v1": "680bee843b51390f6d3ecaf80d6b7ae73c0e64e16f1ffc6286d0737ab232e1ca",
+        "canonical-tabular-v1": "680bee843b51390f6d3ecaf80d6b7ae73c0e64e16f1ffc6286d0737ab232e1ca"
+      }
+    },
+    "fields": [
+      "G-AUTHORITY-v1",
+      "G-CFVIEW-v1",
+      "G-CONSEQUENCE-v1",
+      "G-DEPENDENCY-v1",
+      "G-EVIDENCE-v1",
+      "G-POLICY-v1",
+      "G-PROVENANCE-v1",
+      "G-REVERSIBILITY-v1",
+      "G-TEMPORAL-v1",
+      "P-ACTION-v1",
+      "P-AGREEMENT-v1",
+      "P-CALIBRATION-v1",
+      "P-CONFIDENCE-v1",
+      "P-LABEL-v1",
+      "P-SHARED-v1",
+      "P-SPECIALISTS-v1",
+      "P-SUPPORT-v1",
+      "P-UNCERTAINTY-v1"
+    ],
+    "matrix_cells": 54,
+    "methods": [
+      "canonical-graph-v1",
+      "canonical-sequence-v1",
+      "canonical-tabular-v1"
+    ],
+    "mismatches": [],
+    "status": "pass"
+  },
+  "representation_oracle": {
+    "mismatches": 0,
+    "raw_g_round_trips": 10800,
+    "status": "pass",
+    "truth_relevant_visible_fields_retained": 194400
+  },
+  "schema_version": "1.0",
+  "status": "pass"
+}
