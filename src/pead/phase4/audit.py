@@ -113,6 +113,7 @@ def main() -> int:
         # STEP LOG P4-AUDIT-005: Verify Phase 4 did not train models, release banks, or execute adaptive acquisition.
         console.log("P4-AUDIT-005", "Auditing Phase 4 boundary exclusions.")
         boundary = _audit_boundary(root)
+        ledger = _audit_ledger(root)
         tests = json.loads(
             (output / "phase4_tests.json").read_text(encoding="utf-8")
         )
@@ -136,6 +137,7 @@ def main() -> int:
                 "errors": len(tests["errors"]),
             },
             "boundary": boundary,
+            "ledger": ledger,
             "console_events": len(inventory),
             "completion_gates": {
                 "deterministic_reversal_chronology": "pass",
@@ -168,6 +170,34 @@ def main() -> int:
             details={"error": str(error)},
         )
         return 1
+
+
+def _audit_ledger(repo_root: Path) -> dict[str, Any]:
+    text = (repo_root / "Path.md").read_text(encoding="utf-8")
+    entries = {f"PATH-{index:04d}" for index in range(43, 49)}
+    evidence = {
+        "phase4_validation_manifest_v1.json",
+        "generation_summary.json",
+        "reversal_report.json",
+        "scope_report.json",
+        "evidence_sufficiency_report.json",
+        "phase4_tests.json",
+        "console_log_inventory.json",
+        "phase4_compliance.json",
+    }
+    missing = sorted((entries | evidence) - {item for item in entries | evidence if item in text})
+    if missing:
+        raise ValueError(f"Phase 4 Path ledger evidence is incomplete: {missing}")
+    pending = "Local gates passed; publication pending"
+    complete = "| 4 | Reversals, scope banks, and evidence sufficiency | Complete |"
+    if pending not in text and complete not in text:
+        raise ValueError("Phase 4 Path ledger has no valid publication state")
+    return {
+        "status": "pass",
+        "entries": sorted(entries),
+        "evidence_pointers": sorted(evidence),
+        "publication_state": "complete" if complete in text else "pending",
+    }
 
 
 if __name__ == "__main__":

@@ -150,6 +150,28 @@
     },
     "status": "pass"
   },
+  "ledger": {
+    "entries": [
+      "PATH-0043",
+      "PATH-0044",
+      "PATH-0045",
+      "PATH-0046",
+      "PATH-0047",
+      "PATH-0048"
+    ],
+    "evidence_pointers": [
+      "console_log_inventory.json",
+      "evidence_sufficiency_report.json",
+      "generation_summary.json",
+      "phase4_compliance.json",
+      "phase4_tests.json",
+      "phase4_validation_manifest_v1.json",
+      "reversal_report.json",
+      "scope_report.json"
+    ],
+    "publication_state": "complete",
+    "status": "pass"
+  },
   "manifest": {
     "content_sha256": "5ea3bb615f4480f5841f3db4786a1c3a3172bfaf2331e8c3739f5fc3cc5b1ae4",
     "phase9a_final_signature_required": true,

@@ -38,22 +38,22 @@
     },
     {
       "comment": "Retain the clause-level Phase 4 compliance verdict and evidence.",
-      "comment_line": 151,
-      "console_log_line": 152,
+      "comment_line": 153,
+      "console_log_line": 154,
       "event_id": "P4-AUDIT-006",
       "file": "src/pead/phase4/audit.py"
     },
     {
       "comment": "Report the final local Phase 4 hard-gate verdict.",
-      "comment_line": 159,
-      "console_log_line": 160,
+      "comment_line": 161,
+      "console_log_line": 162,
       "event_id": "P4-AUDIT-007",
       "file": "src/pead/phase4/audit.py"
     },
     {
       "comment": "Emit a hard failure with its unsuppressed cause.",
-      "comment_line": 163,
-      "console_log_line": 164,
+      "comment_line": 165,
+      "console_log_line": 166,
       "event_id": "P4-AUDIT-008",
       "file": "src/pead/phase4/audit.py"
     },

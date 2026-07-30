@@ -31,7 +31,7 @@ Rules:
 | 1 | Core immutable infrastructure and safe result hygiene | Complete | 52/52 tests passed; implementation commit `01de85198fbaa1ffdc55591f6b303029299c92d5` pushed and remotely verified |
 | 2 | Independent authorization truth system | Complete | 74/74 tests; implementation commit `629b18a7341cda0c44fa88f33c97c5869c3ae14e` pushed and remotely verified |
 | 3 | Causal world registry, exact twins, and near twins | Complete | 89/89 tests passed; implementation commit `81bd52c825fd41c12dc5fb921c5c656fbf9d20bd` pushed and remotely verified |
-| 4 | Reversals, scope banks, and evidence sufficiency | Local gates passed; publication pending | None |
+| 4 | Reversals, scope banks, and evidence sufficiency | Complete | None |
 | 5 | Eight domain adapters and validity review | Not started | None |
 | 6 | Projection layer, feature firewall, and parity | Not started | None |
 | 7 | Baseline suite and common training harness | Not started | None |
@@ -1497,9 +1497,9 @@ Copy this block for every meaningful action:
   - `P4-AUDIT-003`: same file, comment line 92, call line 93, `Generate and gate the complete reversal, scope, and evidence banks.`
   - `P4-AUDIT-004`: same file, comment line 102, call line 103, `Verify every Phase 4 console call has an adjacent stable identity comment.`
   - `P4-AUDIT-005`: same file, comment line 113, call line 114, `Verify Phase 4 did not train models, release banks, or execute adaptive acquisition.`
-  - `P4-AUDIT-006`: same file, comment line 151, call line 152, `Retain the clause-level Phase 4 compliance verdict and evidence.`
-  - `P4-AUDIT-007`: same file, comment line 159, call line 160, `Report the final local Phase 4 hard-gate verdict.`
-  - `P4-AUDIT-008`: same file, comment line 163, call line 164, `Emit a hard failure with its unsuppressed cause.`
+  - `P4-AUDIT-006`: same file, comment line 153, call line 154, `Retain the clause-level Phase 4 compliance verdict and evidence.`
+  - `P4-AUDIT-007`: same file, comment line 161, call line 162, `Report the final local Phase 4 hard-gate verdict.`
+  - `P4-AUDIT-008`: same file, comment line 165, call line 166, `Emit a hard failure with its unsuppressed cause.`
   - `P4-GENERATE-001`: `src/pead/phase4/generation.py`, comment line 34, call line 35, `Load and verify the signed Phase 4 denominators before constructing any case.`
   - `P4-GENERATE-002`: same file, comment line 44, call line 45, `Generate one complete domain of deterministic reversal sequences with dual-engine checks.`
   - `P4-GENERATE-003`: same file, comment line 67, call line 68, `Construct every frozen-registry scope case and verify authority-safe behavior.`
@@ -1511,10 +1511,10 @@ Copy this block for every meaningful action:
 - **Clause-level audit result:** `results/audits/phase4/phase4_compliance.json` reports `status=pass`, zero compliance gaps, all WorkPlan completion gates passed, release authority `none`, and the Phase 9A final signature still required.
 - **Signed-manifest hardening:** The final clause audit identified that the first implementation signed all Phase 4 track configuration but allowed bank modules to reread those YAML files. Section 5.9 requires bank generators to consume only the verified signed allocation JSON. The manifest compiler was therefore expanded to include exact family, timing, control, bank, boundary, class, channel, and proof inputs; all three generators now load those allocation inputs exclusively from `phase4_validation_manifest_v1.json`. A source-level regression test rejects allocation/config YAML imports or paths in the bank modules. All 103 tests and the complete-bank audit passed after this correction.
 - **Final retained evidence SHA-256:**
-  - `console_log_inventory.json`: `AE4CEE6A40395183C0DEEC6D913765B57F1F938BAD1D3ACBB21A09AA28421206`
+  - `console_log_inventory.json`: `A9795B81AF437B3976AA08BD15F8B506431363D6FE791D3E96830449797DAE6A`
   - `evidence_sufficiency_report.json`: `FF976128DDF6C0937C75F22B7F944E485F3E3EEB48D923DB3A8D758D4DB1EB5A`
   - `generation_summary.json`: `0BCBEC46B95E6F691DA9E632A454107F828A3D342C78FAF604461A76CE9F7D59`
-  - `phase4_compliance.json`: `D791F5EEE2B5BC4CC147C6B00199F28FF768CBA5F5AE105EFAA414198647C618`
+  - `phase4_compliance.json`: `C0DE7E66DF74C55A69742BC283A9DEF8E1E5826D20511DB3491373B98CEACF22`
   - `phase4_tests.json`: `021DF4362CDD7A400D41FE3CC73ED5CFEECED20731F6A5FE0E4AA65F1AE7217F`
   - `reversal_report.json`: `87DD937A0965B96DCDA4589AC16BB8EC4AE94E25FBD0D79B3E1D15BD9ED08207`
   - `scope_report.json`: `1B6F6D86CD9B7045E864C106EF8B9354E3B9C031D6AF1D0A43AA384B28574D01`
@@ -1524,3 +1524,24 @@ Copy this block for every meaningful action:
 - **Scientific result:** Phase 4 establishes deterministic reversal fixtures, authority-safe diagnostic scope fixtures, and exact fixed-method evidence boundaries. It does not estimate H1/H2 performance or make a deployment claim.
 - **Deviation:** None.
 - **Publication state:** Pending intentional staging, commit, push, and exact remote-SHA verification.
+
+### PATH-0049 - Phase 4 GitHub publication, remote verification, and ledger close
+
+- **Timestamp:** 2026-07-30.
+- **Phase:** 4.
+- **Status:** Pass; implementation published and remotely verified.
+- **Change ID:** `P4-PUBLISH-001`.
+- **WorkPlan alignment:** Section 2.4 mandatory post-phase publication and every Phase 4 completion gate.
+- **Branch:** `agent/pead-workplan`.
+- **Implementation commit:** `3c7ad9340ab553e3bf395ace8e710b14cca86f1f` - `phase-4: implement reversals scope and evidence boundaries`.
+- **Implementation push:** `git push origin agent/pead-workplan` passed.
+- **Exact remote verification:** `git ls-remote origin refs/heads/agent/pead-workplan` returned `3c7ad9340ab553e3bf395ace8e710b14cca86f1f`, exactly equal to the local implementation `HEAD`.
+- **Pull request:** Draft PR #1 remains open at `https://github.com/MAVS-RESEARCH/Predictive-Equivalence-and-Authorization-Divergence-MAVS/pull/1`; GitHub reported branch `agent/pead-workplan` and head SHA `3c7ad9340ab553e3bf395ace8e710b14cca86f1f`.
+- **Published scope:** 31 intended Phase 4 files comprising the three track configurations, signed validation manifest, typed diagnostic/scope core, three track implementations, allocation/generation/audit/test orchestration, three operational scripts, four test files, eight evidence files, README/project entry points, and the append-only ledger. `WorkPlan.md` and the seven frozen diagnostic YAML definitions are unchanged.
+- **Post-publication hardening:** The compliance auditor now verifies `PATH-0043` through `PATH-0048`, all eight evidence pointers, and a valid pending/complete publication state. The complete-bank audit was rerun after this addition and passed with ledger status `pending`; this close changes the table to `Complete`.
+- **Final publication controls:** 103/103 tests passed; complete generation of 24,000 reversal steps, 800 reversal controls, 28,000 scope cases, and 12,000 evidence proofs passed; source/config validation passed; console inventory 16/16 passed; `compileall`, staged diff check, and credential-pattern scan passed; compliance gaps 0.
+- **Result hygiene:** No previous-study output was added. The only retained Phase 4 outputs are the current validation manifest and final current-run audit evidence. The in-turn failed audit produced no passing compliance artifact and is documented in `PATH-0047`.
+- **Phase boundary:** No model, checkpoint, fitted calibration, released claim bank, adaptive acquisition, Phase 5 adapter, or deployment claim was created.
+- **Scientific effect:** Publication changes no allocation, case, label, chronology, authority path, compatible world, or proof.
+- **Deviation:** None.
+- **Next action:** Commit and push this ledger-close hardening and refreshed evidence, verify the new remote SHA, and stop before Phase 5.
