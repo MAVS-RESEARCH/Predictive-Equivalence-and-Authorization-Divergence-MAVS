@@ -28,7 +28,7 @@ Rules:
 | Phase | Name | Status | Evidence |
 |---:|---|---|---|
 | 0 | Research charter, claim ledger, and execution controls | Complete | All local gates passed; implementation commit `8259d22e14cfd532185416795ba079448216540b` pushed and remotely verified |
-| 1 | Core immutable infrastructure and safe result hygiene | Not started | None |
+| 1 | Core immutable infrastructure and safe result hygiene | Local gates passed; publication pending | `results/audits/phase1/phase1_compliance.json`; 52/52 tests passed |
 | 2 | Independent authorization truth system | Not started | None |
 | 3 | Causal world registry, exact twins, and near twins | Not started | None |
 | 4 | Reversals, scope banks, and evidence sufficiency | Not started | None |
@@ -471,3 +471,279 @@ Copy this block for every meaningful action:
 - **Deviation:** None.
 - **Phase verdict:** Complete. Every Phase 0 WorkPlan scope item, file group, implementation method, local verification gate, evidence requirement, ledger requirement, and publication requirement is satisfied.
 - **Next permitted action:** Phase 1 may begin only on explicit user instruction.
+
+### PATH-0016 - Phase 1 authorization, source reconfirmation, and implementation boundary
+
+- **Timestamp:** 2026-07-30T18:07:05+05:00
+- **Phase:** 1
+- **Status:** Pass.
+- **Change ID:** `P1-BOUNDARY-001`.
+- **User authorization:** Explicit instruction received to begin Phase 1 and no later phase.
+- **WorkPlan alignment:** Phase 1 scope at lines 706-737; data/access contracts in Section 4; result hygiene in Section 2.3; phase-close controls in Section 2.4; CORE-001 through CORE-004, DIAG-REG-001, APP-A-PAIR, APP-A-SCOPE, APP-A-METHOD, and APP-C-UNIT/STRESS coverage rows.
+- **Source actions:**
+  - Reverified `C:\Users\Saif malik\Downloads\MAVS-Diagnostic Sciences.pdf` as SHA-256 `B7CC77BF32558B042B8ECFA7C4BB9267B53910B0B84816198CF34A9E73EEE758`.
+  - Re-rendered and visually inspected PDF pages 12, 18, and 19. The review reconfirmed the formal evidence-state/diagnostic objects, final trace-audit boundary, no-training DS-CF policy, reproducibility cleanup/trace commands, and claim-to-artifact traceability.
+  - Re-read the frozen WorkPlan primary-record contracts, runner chronology, seed namespaces, strict trace requirements, Appendix A field mappings, and Phase 1 gates.
+  - Reused the complete Phase 0 clause extraction from the normative DOCX and revalidated its source identity during final configuration validation.
+- **Boundary decisions:**
+  - No Phase 2 policy DSL, truth evaluator, ambiguity proof, label bank, domain bank, model, checkpoint, training run, calibration, or scientific benchmark result was created.
+  - Phase 1 supplies infrastructure contracts only. It does not claim PEI, ADI, label accuracy, diagnostic effectiveness, H1, H2, safety, or architectural superiority.
+- **Files changed at this point:** None; this entry records the pre-implementation boundary and source review.
+- **Deviation:** None.
+- **Next permitted action:** Implement only Phase 1 immutable infrastructure and its tests.
+
+### PATH-0017 - Core immutable records, canonicalization, identities, seeds, registries, and chronology
+
+- **Timestamp:** 2026-07-30T18:07:05+05:00
+- **Phase:** 1
+- **Status:** Implemented and locally verified.
+- **Change ID:** `P1-CORE-001`.
+- **Files added:**
+  - `src/pead/core/__init__.py`
+  - `src/pead/core/types.py`
+  - `src/pead/core/hashing.py`
+  - `src/pead/core/ids.py`
+  - `src/pead/core/seeds.py`
+  - `src/pead/core/config.py`
+  - `src/pead/core/registry.py`
+  - `src/pead/core/diagnostic_registry.py`
+  - `src/pead/core/requirement_registry.py`
+  - `src/pead/core/runner.py`
+- **Record implementation:**
+  - Added frozen, explicitly versioned `WorldState`, `PredictiveState`, `GovernanceState`, `OracleState`, `AuthorizationLabel`, `CaseRecord`, `PairRecord`, `SequenceRecord`, `ScopeContract`, `MethodDecision`, and `AuditRecord` dataclasses.
+  - Implemented recursive deep freezing of mappings, sets, and sequences. Non-string mapping keys are rejected rather than coerced.
+  - Implemented all 12 Appendix A `PairRecord` field groups, all 10 `ScopeContract` field groups, and all eight `MethodDecision` field groups, with additional explicit `schema_version`, diagnostic authority, and version controls.
+  - Candidate actions are recursively Unicode-normalized and reject governance annotations at any nesting depth.
+- **Canonicalization and hashing:**
+  - Added canonical UTF-8 JSON identity `pead-canonical-json-decimal12-v1`.
+  - Added NFC text normalization, lexicographic mapping keys, half-even `1E-12` float quantization, nonfinite-float rejection, deterministic set ordering, stable graph node/edge ordering, reserved type tags, and canonical restoration for trace validation.
+  - Added top-level per-field SHA-256 hashes and complete-record SHA-256 hashes.
+- **Content identities:**
+  - Added full, untruncated, filesystem-safe SHA-256 identities for worlds, pairs, sequences, runs, and artifacts.
+  - Identifier parsing rejects malformed digests and kind mismatches.
+  - Run directory identities use `_` instead of `:` because `:` is illegal in Windows path components; this is an implementation portability correction, not a scientific deviation.
+- **Seed lineage:**
+  - Added deterministic SHA-256 derivation without global random state.
+  - Enforced the six frozen, pairwise-disjoint namespaces: development, calibration, public validation, structural holdout, domain holdout, and final blind.
+  - Every lineage records schema, namespace, root seed, component, index, derived seed, and derivation digest.
+- **Configuration and registries:**
+  - Configuration loading requires a repository-contained existing YAML file, a mapping root, and explicit schema version; it retains canonical bytes, canonical hash, safe relative path, and deeply frozen data.
+  - Generic registries reject empty and duplicate identities and expose a deterministic manifest.
+  - The diagnostic registry loads seven frozen DS-CF definitions and rejects missing scope, authority, version, influence, generator, or schema data, unknown authority levels, and influence-path overlap.
+  - The requirement registry loads all 789 clause-level entries and rejects missing/empty phases, files, tests, artifact, release-failure, or claim traceability.
+- **Runner chronology:**
+  - `SealedProjection` rejects `WorldState` and enforces the exact P-only, Raw-G, or Oracle-G payload shape.
+  - `run_committed_case` accepts only a sealed projection, validates the returned projection hash, computes the decision commitment before invoking label reveal, validates offset-aware chronology before disclosure, and constructs the immutable ordered trace.
+  - A frozen clock can be injected for byte-identical deterministic reproduction.
+- **Documentation changed:** `README.md`, `pyproject.toml`, and `scripts/validate_config.py`.
+- **Verification:** Covered by 52 passing regression/unit/property/stress tests and the Phase 1 audit.
+- **Scientific effect:** Infrastructure only; no data or model outcome.
+- **Deviation:** None.
+
+### PATH-0018 - Append-only traces, immutable run layout, and guarded result hygiene
+
+- **Timestamp:** 2026-07-30T18:07:05+05:00
+- **Phase:** 1
+- **Status:** Pass.
+- **Change ID:** `P1-HYGIENE-001`.
+- **Files added:**
+  - `src/pead/core/traces.py`
+  - `src/pead/core/paths.py`
+  - `scripts/clear_results.py`
+  - `results/manifests/cleanup/pead.json`
+  - `results/audits/cleanup/cleanup_03af34363b18b28b0b5d9ed31b559bcf64e51218c0f0487d038c8081d486d902.json`
+  - `results/audits/cleanup/cleanup_91c19ec49847df2e07c0f8c6fbf40d1be3961b88572800f3ac2e84ab433c56ec.json`
+- **Trace contract:**
+  - Requires 17 fields covering schema, study, run, config, commit, environment, world, atomic group, split, method, budget, projection, decision, decision-commit time, label, label-reveal time, and resource use.
+  - Rejects missing/extra fields, malformed or offset-free timestamps, reveal-before-commit chronology, malformed UTF-8/JSON, invalid envelope version, discontinuous indices, broken chain links, content tampering, empty final traces, overwrite attempts, and append-after-finalize.
+  - Writes exclusive `.jsonl.partial` files; every append is canonical, hash-chained, flushed, and `fsync`-synchronized; finalization uses `os.replace` and cannot overwrite a final artifact.
+  - Exposes a scalar-column Parquet-compatible row in which nested resource usage is canonical JSON, and records the compatibility schema in the finalization manifest. No claim is made that a physical Parquet file is written in Phase 1.
+- **Run layout:**
+  - Creates content-derived immutable paths under `results/{raw,processed,audits,reports,manifests}/<run_id>/`.
+  - Refuses any run identity that is malformed or any layout with an already existing member.
+- **Cleanup guards:**
+  - Requires exactly one explicit `--scope` or `--run-id` and exactly one `--dry-run` or `--confirm`.
+  - Requires the manifest to resolve below `results/manifests/`.
+  - Requires every target to be an existing regular file, repository-relative, below the resolved `results/` root, uniquely listed, and SHA-256-equal to the manifest.
+  - Revalidates containment and content immediately before action.
+  - Repository root, results root, absolute paths, traversal, unresolved paths, out-of-results paths, duplicate members, changed files, directories, and non-manifest files cannot be deleted.
+  - Cleanup receipts are written atomically under `results/audits/cleanup/`.
+- **Commands and exact outcomes:**
+  - `.\.venv\Scripts\python.exe scripts\clear_results.py --scope pead --dry-run` - pass; zero manifest members, zero deletions, dry-run receipt retained.
+  - `.\.venv\Scripts\python.exe scripts\clear_results.py --scope pead --confirm` - pass; zero manifest members, zero deletions, confirm receipt retained.
+  - `.\.venv\Scripts\python.exe scripts\clear_results.py --scope pead --dry-run --manifest WorkPlan.md` - correctly rejected with exit code 1 because the manifest is outside `results/manifests/`.
+- **Previous-result disposition:** The plan-creation repository contained no prior result artifacts. The explicit cleanup manifest therefore contains zero entries. Both dry-run and confirm prove that the required initial clearing operation is a verified no-op. Phase 0 evidence remains because it is new study evidence, not a pre-existing result.
+- **Recovery:** No file was deleted, so recovery is not applicable.
+- **Deviation:** None.
+
+### PATH-0019 - Phase 1 test, property, and scale-stress implementation
+
+- **Timestamp:** 2026-07-30T18:07:05+05:00
+- **Phase:** 1
+- **Status:** Pass; 52/52.
+- **Change ID:** `P1-TEST-001`.
+- **Files added:**
+  - `tests/phase1_fixtures.py`
+  - `tests/unit/test_types.py`
+  - `tests/unit/test_ids.py`
+  - `tests/unit/test_hashing.py`
+  - `tests/unit/test_seeds.py`
+  - `tests/unit/test_config.py`
+  - `tests/unit/test_paths.py`
+  - `tests/unit/test_traces.py`
+  - `tests/unit/test_registry.py`
+  - `tests/unit/test_runner.py`
+  - `tests/property/__init__.py`
+  - `tests/property/test_canonicalization.py`
+  - `tests/stress/test_phase1_stress.py`
+  - `src/pead/phase1/test_runner.py`
+  - `scripts/run_phase1_tests.py`
+- **Final command:** `.\.venv\Scripts\python.exe scripts\run_phase1_tests.py`.
+- **Final result:** Pass; 52 tests run, 52 successes, 0 failures, 0 errors, 0 skipped.
+- **Unit coverage:**
+  - schema versioning, completeness, deep immutability, Appendix A fields, sequence alignment, and nested action governance rejection;
+  - full content-ID kinds, malformed IDs, kind mismatch, order invariance, and content sensitivity;
+  - key/Unicode order, decimal12 boundary behavior, NaN/infinity rejection, graph/set canonicalization, graph-ID rejection, action normalization, per-field hashes, and complete hashes;
+  - seed determinism, namespace range, disjointness, and invalid namespace/index rejection;
+  - contained config loading, frozen data, stable identity, path escape, repository root, and unversioned config rejection;
+  - immutable run reuse rejection, dry-run retention, manifest-only deletion, root/traversal/outside/hash-change guards;
+  - complete trace write/finalize/revalidate, Parquet-compatible scalar row, overwrite/post-finalize rejection, missing/malformed/order rejection, and tamper detection;
+  - diagnostic/requirement denominators, missing authority/scope/version/generator/traceability, unknown authority, and duplicates;
+  - projection-profile shape, direct `WorldState` rejection, projection-hash mismatch before reveal, commit-before-reveal call order, and deterministic frozen-clock reproduction.
+- **Property stress:**
+  - All `5! = 120` top-level key permutations produced one canonical byte sequence and one hash.
+  - 2,000 seeded randomized nested mapping/graph/set reorderings produced one artifact identity.
+- **Scale stress:**
+  - 100,000 distinct deterministic world payloads produced 100,000 distinct full SHA-256 content IDs; observed collisions: 0.
+  - 10,000 trace records were exclusively written, individually flushed and `fsync`-synchronized, hash-chained, atomically finalized, re-read, and fully validated; missing records: 0; chain mismatch: 0.
+- **Regression:** All Phase 0 tests continued to pass in the same 52-test execution.
+- **Evidence:** `results/audits/phase1/phase1_tests.json`.
+- **Overfitting relevance:** No model was trained. The anti-overfitting training/independent-benchmark requirements are therefore not applicable to Phase 1. Property and stress fixtures test infrastructure behavior rather than model performance.
+- **Deviation:** None.
+
+### PATH-0020 - Preserved Phase 1 failures and corrective actions
+
+- **Timestamp:** 2026-07-30T18:07:05+05:00
+- **Phase:** 1
+- **Status:** Corrected and retested.
+- **Change ID:** `P1-INCIDENTS-001`.
+- **Incident `INC-P1-001` - initial regression defects:**
+  - Initial complete discovery ran 50 tests and returned three errors.
+  - Windows rejected colon-delimited run IDs as directory names.
+  - `dataclasses.asdict` could not deep-copy immutable `mappingproxy` fields in the Parquet compatibility path and one test fixture.
+  - Correction: switched content IDs to filesystem-safe `<kind>_<full-sha256>`, implemented explicit dataclass field extraction for Parquet rows, and corrected the test fixture conversion.
+  - Targeted retest: 17/17 affected path, trace, type, and ID tests passed.
+- **Incident `INC-P1-002` - test-runner evidence recorder:**
+  - The first Phase 1 evidence-runner invocation exited before executing the suite because Python's `TextTestResult.durations` attribute existed with value `None`; the recorder checked only attribute presence.
+  - Correction: initialize success/duration containers unless they are the required concrete type.
+  - Retest: the evidence runner completed and retained the full successful test inventory.
+- **Incident `INC-P1-003` - audit denominator:**
+  - The first Phase 1 compliance audit stopped at `P1-AUDIT-004` because the auditor expected 18 trace fields while the complete frozen schema contains 17.
+  - Correction: changed the audit denominator to 17 after enumerating every required field; no trace field was removed or weakened.
+  - Retest: all audit gates passed.
+- **Additional rigorous-audit hardening:**
+  - Nested governance keys in candidate actions are now rejected, not only top-level keys.
+  - Candidate-action floats remain source values until canonical serialization, avoiding double-tagging.
+  - Non-string frozen mapping keys are rejected.
+  - Diagnostic schema versions and authority vocabulary are validated.
+  - Raw-G/Oracle-G projection payload shapes are enforced.
+  - Reveal time is validated before invoking the label supplier.
+  - Trace envelope schema versions are validated.
+  - Requirement traceability rejection has direct tests.
+- **Invalidated run IDs:** None. The failures occurred before any scientific run or benchmark artifact existed.
+- **Scientific effect:** None. No data, labels, models, checkpoints, metrics, or claims were produced or changed.
+- **Reproducibility effect:** Positive; the fixes close portability, immutable-copy, audit-denominator, and validation gaps.
+- **Deviation:** None; all changes enforce the frozen Phase 1 contracts.
+
+### PATH-0021 - Phase 1 operational console inventory
+
+- **Timestamp:** 2026-07-30T18:07:05+05:00
+- **Phase:** 1
+- **Status:** Pass.
+- **Change ID:** `P1-CONSOLE-001`.
+- **Inventory denominator:** 32 `console.log(...)` statements, 32 immediately preceding identifying comments, 32 unique event IDs, 0 missing comments, 0 ID mismatches, 0 duplicates.
+- **Line-number convention:** Both columns are one-based source line numbers. The audit recomputes them from the final source.
+
+| Event ID | `console.log` file:line | Comment line | Exact identifying comment |
+|---|---|---:|---|
+| `P1-CLEANUP-001` | `scripts/clear_results.py:36` | 35 | Resolve and verify the repository and results roots. |
+| `P1-CLEANUP-002` | `scripts/clear_results.py:48` | 47 | Load the exact manifest selected by scope or run identity. |
+| `P1-CLEANUP-003` | `scripts/clear_results.py:59` | 58 | Execute the selected dry-run or confirmed cleanup mode. |
+| `P1-CLEANUP-008` | `scripts/clear_results.py:66` | 65 | Report successful guarded cleanup completion. |
+| `P1-CLEANUP-009` | `scripts/clear_results.py:75` | 74 | Report a rejected or failed cleanup without suppressing the cause. |
+| `P1-VALIDATE-001` | `scripts/validate_config.py:46` | 45 | Load the explicit immutable study configuration. |
+| `P1-VALIDATE-002` | `scripts/validate_config.py:53` | 52 | Construct and validate the typed diagnostic registry. |
+| `P1-VALIDATE-003` | `scripts/validate_config.py:56` | 55 | Construct and validate the clause-level requirement registry. |
+| `P1-VALIDATE-004` | `scripts/validate_config.py:59` | 58 | Report all immutable configuration and registry identities. |
+| `P1-VALIDATE-005` | `scripts/validate_config.py:72` | 71 | Report typed registry or configuration rejection. |
+| `P1-CLEANUP-004` | `src/pead/core/paths.py:172` | 171 | Revalidate every manifest member immediately before action. |
+| `P1-CLEANUP-005` | `src/pead/core/paths.py:185` | 184 | Delete only revalidated files listed in the manifest. |
+| `P1-CLEANUP-006` | `src/pead/core/paths.py:195` | 194 | Preserve every target during the dry run. |
+| `P1-CLEANUP-007` | `src/pead/core/paths.py:226` | 225 | Retain the cleanup receipt as referenced evidence. |
+| `P1-RUNNER-001` | `src/pead/core/runner.py:102` | 101 | Admit only a sealed registered method projection. |
+| `P1-RUNNER-002` | `src/pead/core/runner.py:117` | 116 | Commit the complete method decision before label access. |
+| `P1-RUNNER-003` | `src/pead/core/runner.py:142` | 141 | Reveal the hidden label only against the decision commitment. |
+| `P1-RUNNER-004` | `src/pead/core/runner.py:158` | 157 | Seal the ordered decision and reveal evidence into a trace. |
+| `P1-AUDIT-001` | `src/pead/phase1/audit.py:225` | 224 | Establish the exact Phase 1 source, test, and evidence boundary. |
+| `P1-AUDIT-002` | `src/pead/phase1/audit.py:228` | 227 | Verify duplicate deterministic objects remain byte-identical. |
+| `P1-AUDIT-003` | `src/pead/phase1/audit.py:231` | 230 | Verify typed diagnostic and requirement registry completeness. |
+| `P1-AUDIT-004` | `src/pead/phase1/audit.py:234` | 233 | Verify strict trace schema and decision-before-reveal fields. |
+| `P1-AUDIT-005` | `src/pead/phase1/audit.py:238` | 237 | Verify full regression, property, and scale-stress evidence. |
+| `P1-AUDIT-006` | `src/pead/phase1/audit.py:241` | 240 | Verify the initial cleanup was a manifest-bound no-op. |
+| `P1-AUDIT-007` | `src/pead/phase1/audit.py:244` | 243 | Verify every operational console call has an adjacent identity comment. |
+| `P1-AUDIT-008` | `src/pead/phase1/audit.py:259` | 258 | Confirm Phase 1 generated no bank, model, or benchmark outcome. |
+| `P1-AUDIT-009` | `src/pead/phase1/audit.py:300` | 299 | Retain the complete Phase 1 compliance verdict. |
+| `P1-AUDIT-010` | `src/pead/phase1/audit.py:311` | 310 | Report the final local Phase 1 gate verdict. |
+| `P1-AUDIT-011` | `src/pead/phase1/audit.py:319` | 318 | Emit the hard-gate failure without suppressing evidence. |
+| `P1-TEST-RUN-001` | `src/pead/phase1/test_runner.py:52` | 51 | Discover the complete regression and Phase 1 test suite. |
+| `P1-TEST-RUN-002` | `src/pead/phase1/test_runner.py:60` | 59 | Report the exact discovered-test denominator. |
+| `P1-TEST-RUN-003` | `src/pead/phase1/test_runner.py:109` | 108 | Retain the full test and stress verdict with denominators. |
+
+- **Evidence:** `results/audits/phase1/console_log_inventory.json`.
+- **Deviation:** None.
+
+### PATH-0022 - Phase 1 extreme-rigor local completion audit
+
+- **Timestamp:** 2026-07-30T18:07:05+05:00
+- **Phase:** 1
+- **Status:** Local gates passed; publication pending.
+- **Change ID:** `P1-AUDIT-LOCAL-001`.
+- **Audit implementation:** `src/pead/phase1/audit.py` and `scripts/audit_phase1.py`.
+- **Commands:**
+  - `.\.venv\Scripts\python.exe scripts\validate_config.py --study configs/study/pead_main_v1.yaml --verify-sources --source-root "C:\Users\Saif malik\Downloads" --report results/audits/phase1/phase1_validation.json`
+  - `.\.venv\Scripts\python.exe scripts\run_phase1_tests.py`
+  - `.\.venv\Scripts\python.exe scripts\audit_phase1.py`
+  - `.\.venv\Scripts\python.exe -m compileall -q src scripts tests`
+  - `git diff --check`
+- **Source/config validation:** Pass; both source identities verified; 789 source clauses, 7 diagnostics, 9 PredictiveState fields, 9 GovernanceState fields, 39 method entries, and all frozen Phase 0 controls remained valid.
+- **Phase 1 requirement traceability:** 143/789 clause-level entries explicitly map to Phase 1; 789/789 remain typed and traceable.
+- **Gate verdicts:**
+  - Typed frozen records with explicit versions: Pass.
+  - Canonical UTF-8/order/decimal12/graph/set/action behavior: Pass.
+  - Individual-field and complete-record hashes: Pass.
+  - World/pair/sequence/run/artifact content IDs: Pass.
+  - Seed lineage and namespace disjointness: Pass.
+  - Immutable configuration loading and repository containment: Pass.
+  - Typed diagnostic and requirement registries: Pass.
+  - Immutable non-overwriting run layout: Pass.
+  - Strict append-only, Parquet-compatible, atomically finalized traces: Pass.
+  - Decision commit before hidden-label reveal: Pass.
+  - Manifest membership, resolved containment, dry-run, confirmation, and adversarial cleanup guards: Pass.
+  - Duplicate deterministic records/IDs byte-identical: Pass.
+  - Serialization order invariant: Pass.
+  - Collision/property/trace scale stress: Pass.
+  - Malformed and incomplete traces rejected: Pass.
+  - Unversioned, duplicate, incomplete, unauthorized, or untraceable registry entries rejected: Pass.
+  - Console line/comment traceability: Pass, 32/32.
+  - No bank, model, training, checkpoint, calibration, holdout, metric, or scientific result: Pass.
+- **Retained evidence:**
+  - `results/audits/phase1/phase1_validation.json`
+  - `results/audits/phase1/phase1_tests.json`
+  - `results/audits/phase1/console_log_inventory.json`
+  - `results/audits/phase1/phase1_compliance.json`
+  - both cleanup receipts listed in PATH-0018.
+- **Compliance gaps:** None detected.
+- **Scientific deviations:** None.
+- **Definition-of-done applicability:** Phase 1 establishes infrastructure and therefore does not assert any model or benchmark outcome. Training-specific anti-overfitting and entirely separate evaluation-bank gates begin only in later phases where training is authorized.
+- **Publication state:** Pending under WorkPlan Section 2.4. Phase 1 is not complete until its commit is pushed and the remote branch SHA is verified.
+- **Next permitted action:** Inspect the complete intended diff, stage only Phase 1 scope, rerun final checks, commit, push, verify the remote SHA, then append the publication record. Phase 2 remains prohibited without explicit user instruction.

@@ -1,0 +1,25 @@
+{
+  "counts": {
+    "GovernanceState_fields": 9,
+    "PredictiveState_fields": 9,
+    "causal_rejection_concerns": 13,
+    "claims": 6,
+    "data_roles": 4,
+    "diagnostics": 7,
+    "failure_card_fields": 31,
+    "holdouts": 4,
+    "hypotheses": 3,
+    "mavs_conditions": 16,
+    "method_entries": 39,
+    "oracle_diagnostics": 2,
+    "p_only_method_families": 9,
+    "protected_objectives": 5,
+    "raw_g_method_families": 12,
+    "source_documents": 2,
+    "source_requirements": 789,
+    "stop_conditions": 7
+  },
+  "phase": 0,
+  "status": "pass",
+  "verified_sources": true
+}

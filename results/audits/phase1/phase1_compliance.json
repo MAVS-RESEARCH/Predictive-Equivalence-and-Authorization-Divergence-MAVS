@@ -1,0 +1,143 @@
+{
+  "artifact_hashes": {
+    "README.md": "6db71b8556d2b6e3fa6fd24cdb1d323b9328dac9964c494b40ab38b8c5c2f54a",
+    "pyproject.toml": "b8c3a7c0e013862a75f20fef78e1afa4a3b51dc92996b8199468360a0f11027a",
+    "results/manifests/cleanup/pead.json": "9c5ae468365b639caec39696d958f0962f4b398789cf331de7c438763e8dd577",
+    "scripts/audit_phase1.py": "3134f19544383964e441ee662063c161496460346481db44e942c54de7073f5d",
+    "scripts/clear_results.py": "5bff9a0c10b7d9dfcc29bcb62370fd0556aa4d29a1960ed86e2aafab3d7dd197",
+    "scripts/run_phase1_tests.py": "bc72b2f4bf1ce87a3c399327990bfc68c9cd68af3cad01fe9eb8b1a866b0ed1b",
+    "scripts/validate_config.py": "26576b44297c74c1bc37e208b9966ee534b068b080c3c76ae1697f29daa99588",
+    "src/pead/core/__init__.py": "591c714541674d8d0f884771be8bafcc02e3cf44c3c194c04052a6f1ae981a97",
+    "src/pead/core/config.py": "85296fe6e1cf67d7144e30eb04bd769b86731c6dd76ec68777da0656c19db1c6",
+    "src/pead/core/diagnostic_registry.py": "dab355d2a15b5bd60bc62af256ce36477077a35973d9b912ca6c4cdc7e78c047",
+    "src/pead/core/hashing.py": "d1b63beda4c90db0c6028bde527b160fc519053047ed12d322471b05253e4e37",
+    "src/pead/core/ids.py": "0e745049f3e55f8f914ee13c2a523c0b69ba899d66bef2ce2899e2c2d867f40a",
+    "src/pead/core/paths.py": "acaed21ffa990f515a775f06d4039bfd864551326eaab9f9690d7c6bff150504",
+    "src/pead/core/registry.py": "787577c63cafcbfd3264831e51341b69b0a560873bbe06905dfce1cb40c8b96f",
+    "src/pead/core/requirement_registry.py": "172902087f987333dc35cdaaf6f8effc505ba5775a4f8e779aef0e228e5480da",
+    "src/pead/core/runner.py": "8fe0a92f1e2c7f01aacfae85966772042c9d70febcc1fc42d1ac7d86ec4ec3cd",
+    "src/pead/core/seeds.py": "263850b579ce0fc36a2c6be38448a9cb2c4f5c0b1fdf1ef43c21edac7c3aa00b",
+    "src/pead/core/traces.py": "1a334a74373d883f3c66309d79a108310d97637ef35e945696164810267cf046",
+    "src/pead/core/types.py": "8ff5cd2b625f10361ded416e8de23d9dfc6e9f3f66dc3991658187f11f064f27",
+    "src/pead/phase1/__init__.py": "c4181e71890ccbeb6fe3a3d03e7c0ddf947e4d6fc5e2307be5c999ba05eee377",
+    "src/pead/phase1/audit.py": "a24f91217bf4046cab2d12e6528af4dff9952c3870aba1139a81b919964de7a5",
+    "src/pead/phase1/test_runner.py": "6138a6505e98721a59583d1437ca4d783de28613fb0ad008a58f25574e7c6bcb",
+    "tests/phase1_fixtures.py": "9fcd856f397f3c8e0a9f3453ac435dcfb1367ab1187fba54a0046131868fa7b3",
+    "tests/property/__init__.py": "ef7c14c3f59feeef0952ed528cd7a00d147a165beb8a029e64d869ad35c95952",
+    "tests/property/test_canonicalization.py": "db8406c8fe8097d3987eaa8ee6cc8eea907b062eca0f0892a35b5d4818870602",
+    "tests/stress/test_phase1_stress.py": "e10e6ad78d36a8dd220795c9f71bb0baa4c94ad7603b0f7956fddabdcd1e2992",
+    "tests/unit/test_config.py": "2d03087636235fef09ecf922cc8d3d165f05b4a4ad1229dbcf92e677ca4f14e4",
+    "tests/unit/test_hashing.py": "dda656d55ce4a6015e61717c2e80ea1e440936b0ab9ea9a3d2d3948e8acb8470",
+    "tests/unit/test_ids.py": "99982a7b0b01c4dbf31cf125b2d5679a43d7dcb0322782b60306f088561dc041",
+    "tests/unit/test_paths.py": "68d0ff1dd71193b9f21fec54b121a53b0ffb4e14f4cdf7be8b996b3d6e6ef916",
+    "tests/unit/test_registry.py": "9ff9d3553d909f45bda333f028b7dac501c78d1bb231ebcce68e3f10b229eb10",
+    "tests/unit/test_runner.py": "c70304fa6a52859d6dadf1b61e422b4e9bba104370c7ba19e7c88d0d98e1aea4",
+    "tests/unit/test_seeds.py": "3c8a14ebbb461048e2a1d08dcaf0c7ca2ee146a26dbd55271bf13be46a5c0980",
+    "tests/unit/test_traces.py": "96de5733f13d2c772ccae6059e31f45c9b375aa772d24cb75a0555c104513594",
+    "tests/unit/test_types.py": "b3e815f35580aa5194376d62d82b74e44eff74a2636977376b0b019750b55c2f"
+  },
+  "cleanup": {
+    "deleted": 0,
+    "manifest": "results/manifests/cleanup/pead.json",
+    "manifest_entries": 0,
+    "modes": [
+      "confirm",
+      "dry-run"
+    ],
+    "receipts": [
+      "results/audits/cleanup/cleanup_03af34363b18b28b0b5d9ed31b559bcf64e51218c0f0487d038c8081d486d902.json",
+      "results/audits/cleanup/cleanup_91c19ec49847df2e07c0f8c6fbf40d1be3961b88572800f3ac2e84ab433c56ec.json"
+    ],
+    "status": "pass"
+  },
+  "console_log_count": 32,
+  "determinism": {
+    "byte_length": 227,
+    "canonical_sha256": "eba618d7b91efdfb17bcb975665a15dbbec5aedb45d9bd899e62b60ac6e2bdb2",
+    "canonicalization_id": "pead-canonical-json-decimal12-v1",
+    "float_quantum": "1E-12",
+    "status": "pass"
+  },
+  "gates": {
+    "append_only_atomic_traces": "pass",
+    "canonical_serialization": "pass",
+    "cleanup_containment": "pass",
+    "commit_before_reveal": "pass",
+    "configuration_loading": "pass",
+    "console_traceability": "pass",
+    "content_derived_ids": "pass",
+    "field_and_record_hashing": "pass",
+    "immutable_run_layout": "pass",
+    "immutable_typed_records": "pass",
+    "no_training_or_benchmark_results": "pass",
+    "seed_lineage": "pass",
+    "typed_registries": "pass"
+  },
+  "phase": 1,
+  "registries": {
+    "diagnostic_count": 7,
+    "diagnostic_registry_sha256": "28253186eced52ca0c117344cc2c282225ee6a45b934a461880ccef4fb822329",
+    "phase1_requirement_count": 143,
+    "requirement_count": 789,
+    "requirement_registry_sha256": "447576760f7f1c3e77a0985e5e70cd55b131870491dd9280b718895e4ef56413",
+    "status": "pass"
+  },
+  "seed_namespaces": {
+    "calibration": [
+      2000000,
+      2499999
+    ],
+    "development": [
+      1000000,
+      1999999
+    ],
+    "domain_holdout": [
+      8000000,
+      8999999
+    ],
+    "final_blind": [
+      9000000,
+      9999999
+    ],
+    "public_validation": [
+      3000000,
+      3499999
+    ],
+    "structural_holdout": [
+      7000000,
+      7999999
+    ]
+  },
+  "status": "pass",
+  "tests": {
+    "error_count": 0,
+    "failure_count": 0,
+    "status": "pass",
+    "stress_gates": {
+      "canonical_exhaustive_key_permutations": 120,
+      "canonical_random_reorderings": 2000,
+      "id_collision_trials": 100000,
+      "trace_records": 10000
+    },
+    "tests_run": 52
+  },
+  "trace_schema_fields": [
+    "schema_version",
+    "study_id",
+    "run_id",
+    "config_hash",
+    "commit_hash",
+    "environment_hash",
+    "world_id",
+    "atomic_group_id",
+    "split_id",
+    "method_id",
+    "budget_id",
+    "projection_hash",
+    "decision_hash",
+    "decision_commit_time",
+    "label_hash",
+    "label_reveal_time",
+    "resource_usage"
+  ]
+}

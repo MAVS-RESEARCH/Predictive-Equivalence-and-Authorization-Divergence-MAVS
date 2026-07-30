@@ -1,0 +1,231 @@
+{
+  "count": 32,
+  "entries": [
+    {
+      "comment": "Resolve and verify the repository and results roots.",
+      "comment_line": 35,
+      "console_log_line": 36,
+      "event_id": "P1-CLEANUP-001",
+      "file": "scripts/clear_results.py"
+    },
+    {
+      "comment": "Load the exact manifest selected by scope or run identity.",
+      "comment_line": 47,
+      "console_log_line": 48,
+      "event_id": "P1-CLEANUP-002",
+      "file": "scripts/clear_results.py"
+    },
+    {
+      "comment": "Execute the selected dry-run or confirmed cleanup mode.",
+      "comment_line": 58,
+      "console_log_line": 59,
+      "event_id": "P1-CLEANUP-003",
+      "file": "scripts/clear_results.py"
+    },
+    {
+      "comment": "Report successful guarded cleanup completion.",
+      "comment_line": 65,
+      "console_log_line": 66,
+      "event_id": "P1-CLEANUP-008",
+      "file": "scripts/clear_results.py"
+    },
+    {
+      "comment": "Report a rejected or failed cleanup without suppressing the cause.",
+      "comment_line": 74,
+      "console_log_line": 75,
+      "event_id": "P1-CLEANUP-009",
+      "file": "scripts/clear_results.py"
+    },
+    {
+      "comment": "Load the explicit immutable study configuration.",
+      "comment_line": 45,
+      "console_log_line": 46,
+      "event_id": "P1-VALIDATE-001",
+      "file": "scripts/validate_config.py"
+    },
+    {
+      "comment": "Construct and validate the typed diagnostic registry.",
+      "comment_line": 52,
+      "console_log_line": 53,
+      "event_id": "P1-VALIDATE-002",
+      "file": "scripts/validate_config.py"
+    },
+    {
+      "comment": "Construct and validate the clause-level requirement registry.",
+      "comment_line": 55,
+      "console_log_line": 56,
+      "event_id": "P1-VALIDATE-003",
+      "file": "scripts/validate_config.py"
+    },
+    {
+      "comment": "Report all immutable configuration and registry identities.",
+      "comment_line": 58,
+      "console_log_line": 59,
+      "event_id": "P1-VALIDATE-004",
+      "file": "scripts/validate_config.py"
+    },
+    {
+      "comment": "Report typed registry or configuration rejection.",
+      "comment_line": 71,
+      "console_log_line": 72,
+      "event_id": "P1-VALIDATE-005",
+      "file": "scripts/validate_config.py"
+    },
+    {
+      "comment": "Revalidate every manifest member immediately before action.",
+      "comment_line": 171,
+      "console_log_line": 172,
+      "event_id": "P1-CLEANUP-004",
+      "file": "src/pead/core/paths.py"
+    },
+    {
+      "comment": "Delete only revalidated files listed in the manifest.",
+      "comment_line": 184,
+      "console_log_line": 185,
+      "event_id": "P1-CLEANUP-005",
+      "file": "src/pead/core/paths.py"
+    },
+    {
+      "comment": "Preserve every target during the dry run.",
+      "comment_line": 194,
+      "console_log_line": 195,
+      "event_id": "P1-CLEANUP-006",
+      "file": "src/pead/core/paths.py"
+    },
+    {
+      "comment": "Retain the cleanup receipt as referenced evidence.",
+      "comment_line": 225,
+      "console_log_line": 226,
+      "event_id": "P1-CLEANUP-007",
+      "file": "src/pead/core/paths.py"
+    },
+    {
+      "comment": "Admit only a sealed registered method projection.",
+      "comment_line": 101,
+      "console_log_line": 102,
+      "event_id": "P1-RUNNER-001",
+      "file": "src/pead/core/runner.py"
+    },
+    {
+      "comment": "Commit the complete method decision before label access.",
+      "comment_line": 116,
+      "console_log_line": 117,
+      "event_id": "P1-RUNNER-002",
+      "file": "src/pead/core/runner.py"
+    },
+    {
+      "comment": "Reveal the hidden label only against the decision commitment.",
+      "comment_line": 141,
+      "console_log_line": 142,
+      "event_id": "P1-RUNNER-003",
+      "file": "src/pead/core/runner.py"
+    },
+    {
+      "comment": "Seal the ordered decision and reveal evidence into a trace.",
+      "comment_line": 157,
+      "console_log_line": 158,
+      "event_id": "P1-RUNNER-004",
+      "file": "src/pead/core/runner.py"
+    },
+    {
+      "comment": "Establish the exact Phase 1 source, test, and evidence boundary.",
+      "comment_line": 224,
+      "console_log_line": 225,
+      "event_id": "P1-AUDIT-001",
+      "file": "src/pead/phase1/audit.py"
+    },
+    {
+      "comment": "Verify duplicate deterministic objects remain byte-identical.",
+      "comment_line": 227,
+      "console_log_line": 228,
+      "event_id": "P1-AUDIT-002",
+      "file": "src/pead/phase1/audit.py"
+    },
+    {
+      "comment": "Verify typed diagnostic and requirement registry completeness.",
+      "comment_line": 230,
+      "console_log_line": 231,
+      "event_id": "P1-AUDIT-003",
+      "file": "src/pead/phase1/audit.py"
+    },
+    {
+      "comment": "Verify strict trace schema and decision-before-reveal fields.",
+      "comment_line": 233,
+      "console_log_line": 234,
+      "event_id": "P1-AUDIT-004",
+      "file": "src/pead/phase1/audit.py"
+    },
+    {
+      "comment": "Verify full regression, property, and scale-stress evidence.",
+      "comment_line": 237,
+      "console_log_line": 238,
+      "event_id": "P1-AUDIT-005",
+      "file": "src/pead/phase1/audit.py"
+    },
+    {
+      "comment": "Verify the initial cleanup was a manifest-bound no-op.",
+      "comment_line": 240,
+      "console_log_line": 241,
+      "event_id": "P1-AUDIT-006",
+      "file": "src/pead/phase1/audit.py"
+    },
+    {
+      "comment": "Verify every operational console call has an adjacent identity comment.",
+      "comment_line": 243,
+      "console_log_line": 244,
+      "event_id": "P1-AUDIT-007",
+      "file": "src/pead/phase1/audit.py"
+    },
+    {
+      "comment": "Confirm Phase 1 generated no bank, model, or benchmark outcome.",
+      "comment_line": 258,
+      "console_log_line": 259,
+      "event_id": "P1-AUDIT-008",
+      "file": "src/pead/phase1/audit.py"
+    },
+    {
+      "comment": "Retain the complete Phase 1 compliance verdict.",
+      "comment_line": 299,
+      "console_log_line": 300,
+      "event_id": "P1-AUDIT-009",
+      "file": "src/pead/phase1/audit.py"
+    },
+    {
+      "comment": "Report the final local Phase 1 gate verdict.",
+      "comment_line": 310,
+      "console_log_line": 311,
+      "event_id": "P1-AUDIT-010",
+      "file": "src/pead/phase1/audit.py"
+    },
+    {
+      "comment": "Emit the hard-gate failure without suppressing evidence.",
+      "comment_line": 318,
+      "console_log_line": 319,
+      "event_id": "P1-AUDIT-011",
+      "file": "src/pead/phase1/audit.py"
+    },
+    {
+      "comment": "Discover the complete regression and Phase 1 test suite.",
+      "comment_line": 51,
+      "console_log_line": 52,
+      "event_id": "P1-TEST-RUN-001",
+      "file": "src/pead/phase1/test_runner.py"
+    },
+    {
+      "comment": "Report the exact discovered-test denominator.",
+      "comment_line": 59,
+      "console_log_line": 60,
+      "event_id": "P1-TEST-RUN-002",
+      "file": "src/pead/phase1/test_runner.py"
+    },
+    {
+      "comment": "Retain the full test and stress verdict with denominators.",
+      "comment_line": 108,
+      "console_log_line": 109,
+      "event_id": "P1-TEST-RUN-003",
+      "file": "src/pead/phase1/test_runner.py"
+    }
+  ],
+  "phase": 1,
+  "status": "pass"
+}

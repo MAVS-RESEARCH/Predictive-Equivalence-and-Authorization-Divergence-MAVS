@@ -7,7 +7,9 @@ The benchmark keeps two hypotheses separate:
 - H1 tests information necessity using matched predictive states and divergent authorization states.
 - H2 tests architectural value by comparing MAVS-GC with strong Raw-G methods under matched cases, evidence, budgets, and reporting.
 
-Phase 0 freezes the research charter, claim boundaries, access-state dictionaries, diagnostic identities, method inventory, holdout custody contract, protected operating-point objective, and clause-level requirements registry. It does not generate benchmark cases, train models, or report scientific results.
+Phase 0 freezes the research charter, claim boundaries, access-state dictionaries, diagnostic identities, method inventory, holdout custody contract, protected operating-point objective, and clause-level requirements registry.
+
+Phase 1 implements the immutable record, canonical serialization, hashing, content identity, seed lineage, typed registry, run-layout, decision chronology, trace, and result-cleanup contracts. Neither phase generates benchmark cases, trains models, or reports scientific results.
 
 ## Phase 0 validation
 
@@ -36,7 +38,29 @@ Run the independent unit and stress suites:
 .\.venv\Scripts\python.exe scripts\run_phase0_tests.py
 ```
 
-All commands emit structured JSON console events. Each `console.log(...)` call is paired with a stable `STEP LOG` source comment and is indexed by the Phase 0 audit.
+## Phase 1 verification
+
+Validate the source identities, frozen study, and typed registries:
+
+```powershell
+.\.venv\Scripts\python.exe scripts\validate_config.py --study configs/study/pead_main_v1.yaml --verify-sources
+```
+
+Verify and confirm the initial manifest-bound result cleanup:
+
+```powershell
+.\.venv\Scripts\python.exe scripts\clear_results.py --scope pead --dry-run
+.\.venv\Scripts\python.exe scripts\clear_results.py --scope pead --confirm
+```
+
+Run the complete regression, property, and stress suite and the Phase 1 audit:
+
+```powershell
+.\.venv\Scripts\python.exe scripts\run_phase1_tests.py
+.\.venv\Scripts\python.exe scripts\audit_phase1.py
+```
+
+All operational commands emit structured JSON console events. Each `console.log(...)` call is paired with a stable `STEP LOG` source comment and indexed by the applicable phase audit.
 
 ## Scientific boundaries
 
