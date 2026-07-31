@@ -1947,3 +1947,20 @@ Copy this block for every meaningful action:
 - **Scientific effect:** None. The rerun confirms the publication state and reproduces all Phase 6 integrity evidence.
 - **Deviation:** None.
 - **Next action:** Commit and push this post-publication evidence and ledger close, verify the final remote branch SHA and PR head, then stop before Phase 7.
+
+### PATH-0068 - Repository history consolidated onto main
+
+- **Timestamp:** 2026-07-31.
+- **Phase:** Repository publication administration after Phase 6.
+- **Status:** Pass; `main` is the sole local and remote branch containing the Phase 0-6 implementation.
+- **Change ID:** `REPO-MAIN-CONSOLIDATION-001`.
+- **Reason:** The user required the complete codebase to reside on `main` only instead of the prior study branch.
+- **History operation:** Local `main` was fast-forwarded from initial commit `9e6c1a7113f416c83aec4110c399273a2ded8b9b` to Phase 6 ledger-close commit `d98e66e37fdfadaed3081acb215dc812f4e95b53` using `git merge --ff-only agent/pead-workplan`. No merge commit, rebase, force push, history rewrite, or content change occurred.
+- **Main publication:** `git push origin main` passed. Local `main` and `refs/heads/main` both resolved to `d98e66e37fdfadaed3081acb215dc812f4e95b53` before this receipt commit.
+- **Pull request disposition:** GitHub marked draft PR #1 merged at `2026-07-31T11:12:11Z` because its complete head history became reachable from `main`.
+- **Redundant branch removal:** `git push origin --delete agent/pead-workplan` passed, and local branch `agent/pead-workplan` was deleted only after exact `main` publication was verified.
+- **Branch audit:** `git ls-remote --heads origin` returned only `refs/heads/main`; `git branch -vv` returned only local `main` tracking `origin/main`.
+- **Code and evidence effect:** None. All source, tests, results, manifests, audit evidence, commit identities, and Phase 0-6 chronology were preserved byte-for-byte through the fast-forward.
+- **Scientific effect:** None. No benchmark, label, projection, field dictionary, model, threshold, claim, or result changed.
+- **Deviation:** Repository publication topology changed at explicit user direction; scientific implementation remains fully aligned with `WorkPlan.md`.
+- **Next action:** Commit and push this branch-consolidation receipt on `main`, verify the final local and remote main SHA, and keep no secondary implementation branch.
