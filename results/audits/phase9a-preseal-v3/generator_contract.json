@@ -1,0 +1,14 @@
+{
+  "atomic_group_rows": 2000,
+  "atomic_groups": "pass",
+  "audit_events": 2,
+  "exact_allocation": "pass",
+  "preseal_id": "phase9a-preseal-v3",
+  "schema_version": "1.0",
+  "scientific_artifacts_changed": 0,
+  "signed_json_only": true,
+  "status": "pass",
+  "study_version": "pead-study-v3",
+  "typed_distance": "pass",
+  "yaml_input_rejected": true
+}

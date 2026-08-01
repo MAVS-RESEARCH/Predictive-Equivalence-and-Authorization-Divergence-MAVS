@@ -1,6 +1,6 @@
 {
   "adjacency_failures": 0,
-  "call_sites": 40,
+  "call_sites": 46,
   "duplicate_event_ids": 0,
   "inventory": [
     {
@@ -214,6 +214,48 @@
       "path": "scripts/finalize_phase9a_v3.py"
     },
     {
+      "comment_line": 66,
+      "comment_text": "Verify the published 309-event preseal, pristine state, unchanged ciphertexts, and zero Phase 10 artifacts before adapter correction.",
+      "console_log_line": 67,
+      "event_id": "P9A-V3-CORRECT-001",
+      "path": "scripts/correct_phase9a_v3_adapter.py"
+    },
+    {
+      "comment_line": 86,
+      "comment_text": "Add the missing strict signed-JSON verifier to the operational custody adapter without changing any scientific generator or design artifact.",
+      "console_log_line": 87,
+      "event_id": "P9A-V3-CORRECT-002",
+      "path": "scripts/correct_phase9a_v3_adapter.py"
+    },
+    {
+      "comment_line": 107,
+      "comment_text": "Execute the actual sealed allocator against signed JSON, reject YAML input, and verify exact quotas, atomic grouping, and typed distance.",
+      "console_log_line": 108,
+      "event_id": "P9A-V3-CORRECT-003",
+      "path": "scripts/correct_phase9a_v3_adapter.py"
+    },
+    {
+      "comment_line": 128,
+      "comment_text": "Append a signed gap-correction event and re-sign the complete design inventory with the corrected operational adapter identity.",
+      "console_log_line": 129,
+      "event_id": "P9A-V3-CORRECT-004",
+      "path": "scripts/correct_phase9a_v3_adapter.py"
+    },
+    {
+      "comment_line": 136,
+      "comment_text": "Re-encrypt only the corrected content bundle with a new nonce and retain labels, seeds, allocation, keys, and scientific source unchanged.",
+      "console_log_line": 137,
+      "event_id": "P9A-V3-CORRECT-005",
+      "path": "scripts/correct_phase9a_v3_adapter.py"
+    },
+    {
+      "comment_line": 160,
+      "comment_text": "Re-run the exact Phase 11 preflight and retain the operational gap correction with zero scientific, unlock, decryption, or materialization activity.",
+      "console_log_line": 161,
+      "event_id": "P9A-V3-CORRECT-006",
+      "path": "scripts/correct_phase9a_v3_adapter.py"
+    },
+    {
       "comment_line": 102,
       "comment_text": "Verify recovery topology, the Phase 9 anchor, blocked-v2 preservation, and corrected Phase 9A chronology.",
       "console_log_line": 103,
@@ -229,7 +271,7 @@
     },
     {
       "comment_line": 119,
-      "comment_text": "Verify all 309 custody events are individually signed, continuous, unique, ordered, and bound to the signed commitment from genesis.",
+      "comment_text": "Verify all 312 custody events are individually signed, continuous, unique, ordered, and bound to the signed commitment from genesis.",
       "console_log_line": 120,
       "event_id": "P9A-V3-AUDIT-003",
       "path": "scripts/audit_phase9a_v3.py"
@@ -270,16 +312,16 @@
       "path": "scripts/audit_phase9a_v3.py"
     },
     {
-      "comment_line": 163,
+      "comment_line": 167,
       "comment_text": "Inventory every v3 operational console.log with exact adjacent comment line, log line, event identity, and comment text.",
-      "console_log_line": 164,
+      "console_log_line": 168,
       "event_id": "P9A-V3-AUDIT-009",
       "path": "scripts/audit_phase9a_v3.py"
     },
     {
-      "comment_line": 176,
+      "comment_line": 181,
       "comment_text": "Emit pass only after every applicable WorkPlan clause has evidence and the exact compliance-gap set is empty.",
-      "console_log_line": 177,
+      "console_log_line": 182,
       "event_id": "P9A-V3-AUDIT-010",
       "path": "scripts/audit_phase9a_v3.py"
     }

@@ -15,9 +15,9 @@
   "decryption_attempted": false,
   "event_verification": {
     "all_events_signed": true,
-    "event_count": 309,
+    "event_count": 312,
     "genesis_sha256": "48c10233662bdd4117f93c281b7a3b7b9d0f2690896eaeb3a575822ac1aa53fc",
-    "head_sha256": "1b8ea6346cc17f03b2ba59208acf837242b98f328c1a89f6cdf50c9141324812",
+    "head_sha256": "99596559cfba043dc88c409bdaa84231c89242b1786d7ecb0b7e8b235ee744cd",
     "status": "pass",
     "unsigned_events": 0
   },

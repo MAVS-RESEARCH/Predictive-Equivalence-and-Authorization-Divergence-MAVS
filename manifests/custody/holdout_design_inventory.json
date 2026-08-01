@@ -64,8 +64,8 @@
     },
     {
       "artifact_id": "src/pead_holdout/custody.py",
-      "bytes": 111,
-      "sha256": "9bdae00041bc3692549eb40986cd5600a5ae4a1a1748c817d975cdd606166c76"
+      "bytes": 641,
+      "sha256": "9cab7924e067e6ac720df2fe391cffac6556377c76e091944bd125645b618ca8"
     },
     {
       "artifact_id": "src/pead_holdout/generator.py",
@@ -84,7 +84,7 @@
   "signature": {
     "algorithm": "Ed25519",
     "public_key_b64": "xBXAdbBs22nZWmgvj/fpeVxVFuhUNrSbVWYla/vYtEQ=",
-    "signature_b64": "CcWfY9CCJ/6CwYEs5U8/upNCXS4wqoxh9M9/12l0NLQiHE0WVNqCM7DEDFxaxNK5xiesbC+MFB1Jal6FsfadBQ==",
+    "signature_b64": "Gn8xiR4lwcXlZ0UT+GgrM4AcIRzfj/iue/F6KdjTlaxsDWL/f68sGtDBeOYcupU3IkuCcZbvQ/PHGDI9VRqMCg==",
     "signer_identity": "d70ecdb93256317342bc8f8fae6b2ccd3f0cbc7d6d2e11038e78cf77c739f1fd"
   },
   "signer_identity": "d70ecdb93256317342bc8f8fae6b2ccd3f0cbc7d6d2e11038e78cf77c739f1fd",

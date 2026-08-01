@@ -2,8 +2,8 @@
   "custody_workspace_identity": "a88c2de30921b76b532c7b00ff9add419d3d099a03d270524bad308b8be0ef8c",
   "denied_pre_freeze_attempts": 300,
   "event_genesis_sha256": "48c10233662bdd4117f93c281b7a3b7b9d0f2690896eaeb3a575822ac1aa53fc",
-  "event_head_sha256": "1b8ea6346cc17f03b2ba59208acf837242b98f328c1a89f6cdf50c9141324812",
-  "event_log_sha256": "e26eea4aa2c6a881819534bd5c946814b194e02abfaa1973b55483a3272f45c3",
+  "event_head_sha256": "99596559cfba043dc88c409bdaa84231c89242b1786d7ecb0b7e8b235ee744cd",
+  "event_log_sha256": "9fb85db4d91e6f7fc483a77b8a772b0e5ddff18c9c22a9f823b8a68c197aedad",
   "fresh_identity_hashes": {
     "cross_product_seed_selection_sha256": "0242e0bd075bbb20d8ceea5c6b0f933768aff67ff81b62d4bc357f4323c11e8f",
     "custody_log_genesis_sha256": "48c10233662bdd4117f93c281b7a3b7b9d0f2690896eaeb3a575822ac1aa53fc",
@@ -25,7 +25,7 @@
   "predecessor_seed_overlap": 0,
   "preseal_id": "phase9a-preseal-v3",
   "schema_version": "1.0",
-  "signed_event_count": 309,
+  "signed_event_count": 312,
   "status": "pass",
   "study_version": "pead-study-v3",
   "unsigned_event_count": 0

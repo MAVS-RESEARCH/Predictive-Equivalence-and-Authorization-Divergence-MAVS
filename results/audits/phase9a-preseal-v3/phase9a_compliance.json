@@ -2,7 +2,7 @@
   "boundary_scan": {
     "custody_scientific_source_leaks": [],
     "exact_hidden_seed_plaintext_leaks": [],
-    "files_scanned": 489,
+    "files_scanned": 492,
     "private_key_or_encryption_key_leaks": [],
     "prohibited_secret_paths": [],
     "status": "pass"
@@ -47,7 +47,7 @@
       },
       "total_records": 106400
     },
-    "ciphertext_index_sha256": "e10d8dd2749d20a961cf63fb06dbc47b485dd258c0adfafadfb866cce3f2d368",
+    "ciphertext_index_sha256": "5a142e9fe6fe1a9b38574ac7794eb0e22f9e27bd117e078ed69a817f0bd45b24",
     "five_formerly_missing_top_level_present": true,
     "nine_formerly_missing_package_fields_present": true,
     "required_package_fields_per_role": 13,
@@ -59,13 +59,13 @@
     ]
   },
   "compliance_gaps": [],
-  "console_call_sites": 40,
+  "console_call_sites": 46,
   "custody": {
     "all_events_signed": true,
     "denied_pre_freeze_attempts": 300,
-    "event_count": 309,
+    "event_count": 312,
     "genesis_sha256": "48c10233662bdd4117f93c281b7a3b7b9d0f2690896eaeb3a575822ac1aa53fc",
-    "head_sha256": "1b8ea6346cc17f03b2ba59208acf837242b98f328c1a89f6cdf50c9141324812",
+    "head_sha256": "99596559cfba043dc88c409bdaa84231c89242b1786d7ecb0b7e8b235ee744cd",
     "one_shot_state_consumed": false,
     "real_decryption_attempted": false,
     "real_materialization_attempted": false,
@@ -74,7 +74,22 @@
     "unsigned_events": 0
   },
   "failed_attempts_retained": 2,
+  "generator_contract": {
+    "atomic_group_rows": 2000,
+    "atomic_groups": "pass",
+    "audit_events": 2,
+    "exact_allocation": "pass",
+    "preseal_id": "phase9a-preseal-v3",
+    "schema_version": "1.0",
+    "scientific_artifacts_changed": 0,
+    "signed_json_only": true,
+    "status": "pass",
+    "study_version": "pead-study-v3",
+    "typed_distance": "pass",
+    "yaml_input_rejected": true
+  },
   "labels_separately_encrypted": true,
+  "operational_gap_corrections": 1,
   "phase": "9A",
   "phase10_artifact_count_at_seal": 0,
   "phase11_preflight": {
@@ -94,9 +109,9 @@
     "decryption_attempted": false,
     "event_verification": {
       "all_events_signed": true,
-      "event_count": 309,
+      "event_count": 312,
       "genesis_sha256": "48c10233662bdd4117f93c281b7a3b7b9d0f2690896eaeb3a575822ac1aa53fc",
-      "head_sha256": "1b8ea6346cc17f03b2ba59208acf837242b98f328c1a89f6cdf50c9141324812",
+      "head_sha256": "99596559cfba043dc88c409bdaa84231c89242b1786d7ecb0b7e8b235ee744cd",
       "status": "pass",
       "unsigned_events": 0
     },

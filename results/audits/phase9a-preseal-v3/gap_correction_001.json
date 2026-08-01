@@ -1,0 +1,22 @@
+{
+  "allocation_unchanged": true,
+  "decryption_attempted": false,
+  "gap": "sealed allocator imported verify_signed_json but the operational custody adapter omitted that function",
+  "keys_unchanged": true,
+  "labels_ciphertext_unchanged": true,
+  "materialization_attempted": false,
+  "new_adapter_sha256": "9cab7924e067e6ac720df2fe391cffac6556377c76e091944bd125645b618ca8",
+  "new_content_ciphertext_sha256": "6f94095efda7140f83b1d6d008ce01ead28cfea1c27c8a617631bdccc1c6f7ab",
+  "new_nonce_used": true,
+  "old_adapter_sha256": "9bdae00041bc3692549eb40986cd5600a5ae4a1a1748c817d975cdd606166c76",
+  "old_content_ciphertext_sha256": "76d6096f559b257b76b3e7dded30d482921895d5bf96d72985bf2fe3cf3514da",
+  "phase10_artifact_count": 0,
+  "preseal_id": "phase9a-preseal-v3",
+  "schema_version": "1.0",
+  "scientific_artifacts_changed": 0,
+  "seeds_ciphertext_unchanged": true,
+  "signed_event_count": 312,
+  "status": "corrected-before-phase10",
+  "study_version": "pead-study-v3",
+  "unlock_attempted": false
+}

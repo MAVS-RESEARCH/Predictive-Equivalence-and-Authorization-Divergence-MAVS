@@ -116,11 +116,11 @@ def main() -> int:
     public_preflight = verify_public_precommit(root, commitment_path, index_path, expected_study=STUDY, expected_preseal=PRESEAL)
     if set(commitment) != COMMITMENT_FIELDS or any(set(package) != PACKAGE_FIELDS for package in commitment["packages"]):
         raise RuntimeError("real commitment field sets differ from the strict shared schema")
-    # STEP LOG P9A-V3-AUDIT-003: Verify all 309 custody events are individually signed, continuous, unique, ordered, and bound to the signed commitment from genesis.
+    # STEP LOG P9A-V3-AUDIT-003: Verify all 312 custody events are individually signed, continuous, unique, ordered, and bound to the signed commitment from genesis.
     console.log("P9A-V3-AUDIT-003", "Auditing every custody event signature and chain link.")
     events = read_event_log(event_path)
     event_receipt = verify_event_log(events, study_version=STUDY, preseal_id=PRESEAL, expected_signer_identity=commitment["custody_public_key_identity"])
-    if event_receipt["event_count"] != 309 or event_receipt["unsigned_events"] != 0:
+    if event_receipt["event_count"] != 312 or event_receipt["unsigned_events"] != 0:
         raise RuntimeError("real custody chronology is incomplete or unsigned")
     if event_receipt["genesis_sha256"] != commitment["custody_log_genesis_sha256"] or event_receipt["head_sha256"] != commitment["custody_log_head_sha256"]:
         raise RuntimeError("real custody log identities differ from the commitment")
@@ -160,6 +160,10 @@ def main() -> int:
         raise RuntimeError("test or internal-review gate failed")
     if not (audit_root / "failed_attempt_001.json").is_file() or not (audit_root / "failed_attempt_002.json").is_file():
         raise RuntimeError("failed Phase 9A attempts were not retained")
+    generator_contract = json.loads((audit_root / "generator_contract.json").read_text(encoding="utf-8"))
+    gap_correction = json.loads((audit_root / "gap_correction_001.json").read_text(encoding="utf-8"))
+    if generator_contract["status"] != "pass" or gap_correction["status"] != "corrected-before-phase10" or generator_contract["scientific_artifacts_changed"] != 0:
+        raise RuntimeError("sealed generator allocation-consumer contract remains incomplete")
     # STEP LOG P9A-V3-AUDIT-009: Inventory every v3 operational console.log with exact adjacent comment line, log line, event identity, and comment text.
     console.log("P9A-V3-AUDIT-009", "Building the exact v3 console instrumentation inventory.")
     console_sources = [
@@ -168,6 +172,7 @@ def main() -> int:
         "scripts/preseal_phase9a_v3.py",
         "scripts/review_phase9a_v3.py",
         "scripts/finalize_phase9a_v3.py",
+        "scripts/correct_phase9a_v3_adapter.py",
         "scripts/audit_phase9a_v3.py",
     ]
     console_rows = _console_inventory(root, console_sources)
@@ -194,6 +199,8 @@ def main() -> int:
         "tests": {"tests_run": regression["tests_run"], "failures": len(regression["failures"]), "errors": len(regression["errors"]), "skipped": len(regression["skipped"])},
         "console_call_sites": len(console_rows),
         "failed_attempts_retained": 2,
+        "operational_gap_corrections": 1,
+        "generator_contract": generator_contract,
         "labels_separately_encrypted": True,
         "scientific_result_generated": False,
         "phase10_artifact_count_at_seal": 0,

@@ -42,7 +42,7 @@ class Phase9AV3PublicPreflightTests(unittest.TestCase):
             preseal_id="phase9a-preseal-v3",
             expected_signer_identity=self.commitment["custody_public_key_identity"],
         )
-        self.assertEqual(receipt["event_count"], 309)
+        self.assertEqual(receipt["event_count"], 312)
         self.assertEqual(receipt["unsigned_events"], 0)
         self.assertEqual(receipt["head_sha256"], self.commitment["custody_log_head_sha256"])
 
