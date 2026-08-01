@@ -34,7 +34,7 @@ Rules:
 | 4 | Reversals, scope banks, and evidence sufficiency | Complete | None |
 | 5 | Six open adapters and held-out interfaces | Complete | None |
 | 6 | Projection layer, feature firewall, and parity | Complete | 122/122 tests; implementation commit `a85318ce1c65f207461c9ee2dd9eb1119c020b5e` pushed and remotely verified |
-| 7 | Baseline suite and common training harness | Local gates passed; publication pending | 145/145 tests; 2,300 common-runner contract decisions; zero compliance gaps |
+| 7 | Baseline suite and common training harness | Complete | 145/145 tests; implementation commit `58bc41d1679b39eab49d7bc445a9f2716202875c` pushed to and verified on `main` |
 | 8 | Frozen MAVS-GC, DS-CF, and ablations | Not started | None |
 | 9 | Metrics, audits, statistics, and reports | Not started | None |
 | 10 | Development, training, calibration, and public validation | Not started | None |
@@ -2084,3 +2084,36 @@ Copy this block for every meaningful action:
 - **Compliance gaps:** None.
 - **Deviation:** None.
 - **Next action:** Inspect and stage only the Phase 7 scope, commit directly on `main`, push without force, verify local/remote SHA equality and sole-branch topology, append publication evidence, rerun compliance against the completed ledger, and stop before Phase 8.
+
+### PATH-0074 - Phase 7 publication to main and exact remote verification
+
+- **Timestamp:** 2026-08-01T12:24:56+05:00.
+- **Phase:** 7.
+- **Status:** Pass; implementation published and remotely verified.
+- **Change ID:** `P7-PUBLISH-001`.
+- **Branch:** `main`.
+- **Implementation commit:** `58bc41d1679b39eab49d7bc445a9f2716202875c` - `phase-7: implement baseline suite and training contracts`.
+- **Published scope:** 80 intended files, 3,897 insertions and one ledger-status deletion. Scope comprises eight method/partition configurations; 26 comparator/variant fidelity cards, the judge prompt, and MAVS design disclosure; all baseline modules; training/calibration/budget controls; Phase 7 suite/audit/test orchestration; five scripts; integration/stress tests; eleven retained audit/manifest artifacts; exact dependency pins; and this append-only implementation ledger.
+- **Stage controls:** cached `git diff --check` passed; staged file count was exactly 80; staged-name inspection contained only Phase 7 scope; credential-pattern scan found no credential-like assignment; current branch was `main`.
+- **Push:** `git push origin main` passed without force, rebase, history rewrite, merge commit, or secondary branch.
+- **Exact remote verification:** local `HEAD` and `refs/heads/main` both resolved to `58bc41d1679b39eab49d7bc445a9f2716202875c` immediately after publication.
+- **Branch topology:** `git ls-remote --heads origin` returned only `refs/heads/main`; `git branch -vv` returned only local `main` tracking `origin/main`.
+- **Pre-publication evidence:** 145/145 tests passed; 2,300/2,300 common-runner contract decisions passed; 5,000/5,000 group-cross-role attacks were rejected; 30/30 `console.log` call sites had exact adjacent comments; compliance gaps were empty.
+- **Scientific result boundary:** No model was trained, selected, calibrated, thresholded, or evaluated for scientific performance. Publication establishes the Phase 7 implementation contract only.
+- **Deviation:** None.
+- **Next action:** Rerun the Phase 7 compliance auditor after the table state is `Complete`, commit and push this publication receipt and any mechanically regenerated compliance evidence, verify final `main` equality, and stop before Phase 8.
+
+### PATH-0075 - Phase 7 post-publication compliance close
+
+- **Timestamp:** 2026-08-01T12:24:56+05:00.
+- **Phase:** 7.
+- **Status:** Pass; ledger close ready for publication.
+- **Change ID:** `P7-PUBLISH-CLOSE-001`.
+- **Command:** `.\.venv\Scripts\python.exe scripts\audit_phase7.py --repetitions 100` after the Phase 7 status table changed to `Complete` and the implementation commit was remotely verified.
+- **Outcome:** Pass. The auditor again validated all required files, exact inventory counts, exact architecture/grid/trial/seed contracts, five role volumes, equal-information identity parity, implementation hashes, frozen judge contract, 26 method cards, 2,300 common-runner decisions, complete 145-test evidence, unchanged holdout definitions, and all 30 logged-step comments.
+- **Regenerated tracked evidence:** None changed byte-for-byte; `git status --short` showed only `Path.md`. This proves the completed publication ledger did not change source/config identity, tests, stress outcomes, hashes, or compliance data.
+- **Final compliance state:** `status=pass`; `compliance_gaps=[]`; training runs 0; calibration runs 0; scientific results 0; holdout mutations 0.
+- **Implementation identity:** `58bc41d1679b39eab49d7bc445a9f2716202875c`, already present and exactly verified on remote `main`.
+- **Phase boundary:** Phase 8 has not started. No MAVS architecture/ablation implementation, model fit, development result, public-validation result, holdout release, or final evaluation was created.
+- **Deviation:** None.
+- **Next action:** Commit and push this ledger-close receipt directly to `main`, verify exact local/remote SHA equality and sole-branch topology, then stop.
