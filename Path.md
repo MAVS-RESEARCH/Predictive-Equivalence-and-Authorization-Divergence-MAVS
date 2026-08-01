@@ -35,7 +35,7 @@ Rules:
 | 5 | Six open adapters and held-out interfaces | Complete | None |
 | 6 | Projection layer, feature firewall, and parity | Complete | 122/122 tests; implementation commit `a85318ce1c65f207461c9ee2dd9eb1119c020b5e` pushed and remotely verified |
 | 7 | Baseline suite and common training harness | Complete | 146/146 tests; implementation `58bc41d1679b39eab49d7bc445a9f2716202875c`; exact-judge hardening `cd4726e8802610e6eb99dd9f0fb69b2af7e0bd78`, both verified on `main` |
-| 8 | Frozen MAVS-GC, DS-CF, and ablations | Local gates passed; publication pending | 167/167 tests; 279,936-vector exhaustive rule audit; zero compliance gaps |
+| 8 | Frozen MAVS-GC, DS-CF, and ablations | Complete | 167/167 tests; implementation commit `fd8e84af7d07526a6837a60c85105ece1ea8115a` pushed and remotely verified on sole branch `main` |
 | 9 | Metrics, audits, statistics, and reports | Not started | None |
 | 10 | Development, training, calibration, and public validation | Not started | None |
 | 11 | Sealed banks and signed freeze | Not started | None |
@@ -2293,3 +2293,22 @@ Copy this block for every meaningful action:
 - **Compliance gaps:** None.
 - **Deviation:** None in the final implementation. The failed local auditor attempt and its correction are disclosed above.
 - **Next action:** Inspect/stage only Phase 8 scope, commit directly on `main`, push without force, verify local/remote SHA equality and sole-branch topology, append the publication receipt, rerun the completed-ledger compliance audit, and stop before Phase 9.
+
+### PATH-0082 - Phase 8 publication to main and exact remote verification
+
+- **Timestamp:** 2026-08-01T13:02:35+05:00.
+- **Phase:** 8.
+- **Status:** Pass; implementation published and remotely verified.
+- **Change ID:** `P8-PUBLISH-001`.
+- **Branch:** `main`.
+- **Implementation commit:** `fd8e84af7d07526a6837a60c85105ece1ea8115a` - `phase-8: implement frozen MAVS governance`.
+- **Published scope:** 37 intended files, 4,216 insertions and one ledger-status deletion. Scope comprises four frozen MAVS method configurations; seven MAVS implementation modules plus package export; Phase 8 fixtures, independent review, test runner, and compliance auditor; two command scripts; four test modules; eleven audit reports; the Phase 8 registry manifest; command entry points; and this append-only implementation ledger.
+- **Stage controls:** cached `git diff --check` passed; staged-name inspection contained only Phase 8 scope; no credential-like token identifiers were found in the staged scope; current branch was `main`.
+- **Push:** `git push origin main` passed without force, rebase, history rewrite, merge commit, pull request, or secondary branch.
+- **Exact remote verification:** local `HEAD` and remote `refs/heads/main` both resolved to `fd8e84af7d07526a6837a60c85105ece1ea8115a` immediately after publication.
+- **Branch topology:** `git ls-remote --heads origin` returned only `refs/heads/main`; `git branch -vv` returned only local `main` tracking `origin/main`.
+- **Post-publication audit:** the complete Phase 8 compliance auditor was rerun after publication and again passed all ten gates with 167 retained tests, 279,936 vectors, 4,096 matched-ablation decisions, and `compliance_gaps=[]`; regenerated deterministic evidence produced no working-tree change.
+- **Scientific boundary:** no model was trained, selected, calibrated, thresholded, or evaluated for scientific performance. Publication establishes the fixed Phase 8 architecture, registry, invariants, and executable verification controls only.
+- **Compliance gaps:** None.
+- **Deviation:** None.
+- **Next action:** Stop before Phase 9. Phase 9 is not authorized by the current request.
