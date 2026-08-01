@@ -11,6 +11,7 @@ implementation_identity:
   source_file: src/pead/baselines/judge.py
 implementation_hashes:
   manifest: results/manifests/phase7/implementation_hashes.json
+  model_artifact_identity: manifests/model_identities/qwen2_5_7b_instruct.yaml
 fidelity_class: proxy comparator
 reproduced_elements:
   - registered mechanism or architecture

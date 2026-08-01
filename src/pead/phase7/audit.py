@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 from pathlib import Path
 from typing import Any
@@ -10,7 +11,10 @@ from typing import Any
 import yaml
 
 from pead.baselines import ensemble, graph, neural, scalar, sequence, tabular
-from pead.baselines.judge import BUDGET, DECODING, MODEL_ID, MODEL_REVISION, PROMPT, RETRY
+from pead.baselines.judge import (
+    BUDGET, DECODING, MODEL_ID, MODEL_REVISION, MODEL_VERSION, PROMPT, RETRY,
+    TOKENIZER_MANIFEST_SHA256, WEIGHT_MANIFEST_SHA256,
+)
 from pead.baselines.registry import MAVS_IDS, ORACLE_IDS, P_ONLY_IDS, RAW_G_IDS, load_inventory
 from pead.config.console import ResearchConsole
 from pead.core.hashing import canonical_hash
@@ -148,10 +152,19 @@ def _write_implementation_hashes(root: Path) -> dict[str, Any]:
 
 def _audit_judge(root: Path) -> dict[str, Any]:
     config = yaml.safe_load((root / "configs/methods/raw_g_judge.yaml").read_text(encoding="utf-8"))
+    identity_path = root / config["model"]["identity_manifest"]
+    identity = yaml.safe_load(identity_path.read_text(encoding="utf-8"))
+    def aggregate(values: dict[str, str]) -> str:
+        serialized = "\n".join(f"{name}:{values[name]}" for name in sorted(values))
+        return hashlib.sha256(serialized.encode("utf-8")).hexdigest()
     prompt = (root / "manifests/method_cards/judge_prompt_v1.txt").read_text(encoding="utf-8").strip()
     gates = {
-        "model": config["model"]["id"] == MODEL_ID and config["model"]["revision"] == MODEL_REVISION,
-        "hashes_required": config["model"]["weight_sha256"] == "REQUIRED_AT_PHASE10_FREEZE" and config["model"]["tokenizer_sha256"] == "REQUIRED_AT_PHASE10_FREEZE",
+        "model": config["model"]["id"] == MODEL_ID and config["model"]["version"] == MODEL_VERSION and config["model"]["substitution"] == "prohibited",
+        "immutable_revision": config["model"]["revision_commit"] == MODEL_REVISION == identity["revision_commit"],
+        "weight_components": len(identity["weight_shards"]) == 4 and all(len(value) == 64 for value in identity["weight_shards"].values()),
+        "weight_aggregate": aggregate(identity["weight_shards"]) == WEIGHT_MANIFEST_SHA256 == config["model"]["weight_manifest_sha256"],
+        "tokenizer_components": set(identity["tokenizer_files"]) == {"merges.txt", "tokenizer.json", "tokenizer_config.json", "vocab.json"},
+        "tokenizer_aggregate": aggregate(identity["tokenizer_files"]) == TOKENIZER_MANIFEST_SHA256 == config["model"]["tokenizer_manifest_sha256"],
         "prompt": prompt == PROMPT,
         "decoding": config["decoding"] == DECODING,
         "retry": config["retry"] == RETRY,
@@ -162,7 +175,12 @@ def _audit_judge(root: Path) -> dict[str, Any]:
     }
     if not all(gates.values()):
         raise ValueError(f"judge contract mismatch: {gates}")
-    return {"status": "pass", "gates": gates, "prompt_sha256": canonical_hash(PROMPT), "weights_resolved_at_phase10_freeze": True}
+    return {
+        "status": "pass", "gates": gates, "prompt_sha256": canonical_hash(PROMPT),
+        "revision_commit": MODEL_REVISION, "weight_manifest_sha256": WEIGHT_MANIFEST_SHA256,
+        "tokenizer_manifest_sha256": TOKENIZER_MANIFEST_SHA256,
+        "component_hashes_verified_before_training": True,
+    }
 
 
 def _audit_cards(root: Path) -> dict[str, Any]:
@@ -232,10 +250,10 @@ def main() -> int:
         # STEP LOG P7-AUDIT-004: Validate exact development volumes, role isolation, equal-information identities, and immutable holdout definitions.
         console.log("P7-AUDIT-004", "Auditing partition and equal-information contracts.")
         partitions = _audit_partitions_and_equal_information(root)
-        # STEP LOG P7-AUDIT-005: Retain exact source and configuration hashes while deferring environment and weight hashes to the pre-training freeze.
+        # STEP LOG P7-AUDIT-005: Retain exact source, configuration, immutable model revision, and component/aggregate artifact hashes.
         console.log("P7-AUDIT-005", "Retaining implementation identity hashes.")
         implementation_hashes = _write_implementation_hashes(root)
-        # STEP LOG P7-AUDIT-006: Audit frozen judge identity placeholders, prompt, parser, decoding, cache, retry, budgets, and tolerance.
+        # STEP LOG P7-AUDIT-006: Audit the frozen judge revision, weight/tokenizer hashes, prompt, parser, decoding, cache, retry, budgets, and tolerance.
         console.log("P7-AUDIT-006", "Auditing frozen judge contract.")
         judge = _audit_judge(root)
         # STEP LOG P7-AUDIT-007: Validate every comparator card, fidelity class, claim boundary, exact source hash, and separate MAVS design disclosure.

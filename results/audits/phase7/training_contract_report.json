@@ -1,5 +1,5 @@
 {
-  "configuration_hash": "12f4aa73656f835c3b39e328e94a7ebf343e14ef4217d58eafb5943928d3db64",
+  "configuration_hash": "bad75c9cd081866af8000ce829df2c9d71893a5c9c7f90b070e77b44b18554b7",
   "gates": {
     "ensemble_grouped_folds": true,
     "ensemble_trials": true,

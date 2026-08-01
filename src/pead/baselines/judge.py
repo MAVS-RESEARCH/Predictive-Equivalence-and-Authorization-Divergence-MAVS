@@ -9,7 +9,10 @@ from typing import Any, Mapping
 from pead.core.hashing import canonical_hash
 
 MODEL_ID = "Qwen/Qwen2.5-7B-Instruct"
-MODEL_REVISION = "v2.5"
+MODEL_VERSION = "2.5"
+MODEL_REVISION = "a09a35458c702b33eeacc393d103063234e8bc28"
+WEIGHT_MANIFEST_SHA256 = "291349c22595a174d997ab345601d1efebd3d1946fb58a8895a5576d7e6cab8a"
+TOKENIZER_MANIFEST_SHA256 = "aa30b25713fa6af6ed16468f1e89a4a2f1bfd40b8920018e40543cec46860270"
 DECODING = {
     "temperature": 0.0,
     "top_p": 1.0,
@@ -38,6 +41,7 @@ class JudgeContractError(ValueError):
 @dataclass(frozen=True)
 class JudgeIdentity:
     model_id: str
+    model_version: str
     revision: str
     weight_sha256: str
     tokenizer_sha256: str
@@ -49,6 +53,7 @@ def identity(*, weight_sha256: str, tokenizer_sha256: str) -> JudgeIdentity:
         raise JudgeContractError("judge weight and tokenizer SHA-256 values are required")
     return JudgeIdentity(
         model_id=MODEL_ID,
+        model_version=MODEL_VERSION,
         revision=MODEL_REVISION,
         weight_sha256=weight_sha256,
         tokenizer_sha256=tokenizer_sha256,

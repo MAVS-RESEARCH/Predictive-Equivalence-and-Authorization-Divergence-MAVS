@@ -1,17 +1,24 @@
 {
+  "component_hashes_verified_before_training": true,
   "gates": {
     "budget": true,
     "cache": true,
     "decoding": true,
-    "hashes_required": true,
+    "immutable_revision": true,
     "model": true,
     "parser_failure": true,
     "prompt": true,
     "reproduction": true,
-    "retry": true
+    "retry": true,
+    "tokenizer_aggregate": true,
+    "tokenizer_components": true,
+    "weight_aggregate": true,
+    "weight_components": true
   },
   "prompt_sha256": "bea0f69e94854355db95fe7c3c82aa8e22a01b158af5dfed85d6f55f94421d4f",
+  "revision_commit": "a09a35458c702b33eeacc393d103063234e8bc28",
   "schema_version": "1.0",
   "status": "pass",
-  "weights_resolved_at_phase10_freeze": true
+  "tokenizer_manifest_sha256": "aa30b25713fa6af6ed16468f1e89a4a2f1bfd40b8920018e40543cec46860270",
+  "weight_manifest_sha256": "291349c22595a174d997ab345601d1efebd3d1946fb58a8895a5576d7e6cab8a"
 }

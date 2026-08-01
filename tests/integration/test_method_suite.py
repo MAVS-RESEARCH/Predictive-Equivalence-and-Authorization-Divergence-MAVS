@@ -170,6 +170,14 @@ class Phase7MethodSuiteTests(unittest.TestCase):
         with self.assertRaises(JudgeContractError):
             parse_response("not json")
 
+    def test_judge_artifact_identity_is_immutable_and_exact(self) -> None:
+        from pead.baselines.judge import MODEL_REVISION, TOKENIZER_MANIFEST_SHA256, WEIGHT_MANIFEST_SHA256
+        identity = yaml.safe_load((ROOT / "manifests/model_identities/qwen2_5_7b_instruct.yaml").read_text(encoding="utf-8"))
+        self.assertEqual(identity["revision_commit"], MODEL_REVISION)
+        self.assertEqual(identity["weight_manifest_sha256"], WEIGHT_MANIFEST_SHA256)
+        self.assertEqual(identity["tokenizer_manifest_sha256"], TOKENIZER_MANIFEST_SHA256)
+        self.assertEqual(len(identity["weight_shards"]), 4)
+
     def test_grouped_ensemble_out_of_fold(self) -> None:
         assignments = grouped_fold_assignments((f"g{i}" for i in range(10)))
         self.assertEqual(set(assignments.values()), set(range(5)))

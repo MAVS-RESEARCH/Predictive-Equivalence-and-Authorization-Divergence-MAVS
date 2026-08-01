@@ -34,7 +34,7 @@ Rules:
 | 4 | Reversals, scope banks, and evidence sufficiency | Complete | None |
 | 5 | Six open adapters and held-out interfaces | Complete | None |
 | 6 | Projection layer, feature firewall, and parity | Complete | 122/122 tests; implementation commit `a85318ce1c65f207461c9ee2dd9eb1119c020b5e` pushed and remotely verified |
-| 7 | Baseline suite and common training harness | Complete | 145/145 tests; implementation commit `58bc41d1679b39eab49d7bc445a9f2716202875c` pushed to and verified on `main` |
+| 7 | Baseline suite and common training harness | Complete | 146/146 tests; implementation commit `58bc41d1679b39eab49d7bc445a9f2716202875c` plus exact-judge-identity hardening published on `main` |
 | 8 | Frozen MAVS-GC, DS-CF, and ablations | Not started | None |
 | 9 | Metrics, audits, statistics, and reports | Not started | None |
 | 10 | Development, training, calibration, and public validation | Not started | None |
@@ -2117,3 +2117,59 @@ Copy this block for every meaningful action:
 - **Phase boundary:** Phase 8 has not started. No MAVS architecture/ablation implementation, model fit, development result, public-validation result, holdout release, or final evaluation was created.
 - **Deviation:** None.
 - **Next action:** Commit and push this ledger-close receipt directly to `main`, verify exact local/remote SHA equality and sole-branch topology, then stop.
+
+### PATH-0076 - Exact judge artifact identity hardening and final re-audit
+
+- **Timestamp:** 2026-08-01T12:24:56+05:00.
+- **Phase:** 7.
+- **Status:** Pass; a stricter reading of the judge hash gate was implemented before final handoff.
+- **Change ID:** `P7-JUDGE-IDENTITY-001`.
+- **Reason:** After the initial Phase 7 publication, final manual review determined that `REQUIRED_AT_PHASE10_FREEZE` sentinels satisfied the no-training chronology but did not provide the strongest literal evidence for the Phase 7 gate requiring judge model and tokenizer hashes. The sentinels were therefore replaced by exact immutable artifact identities rather than being presented as final hashes.
+- **Official artifact resolution:** The official `Qwen/Qwen2.5-7B-Instruct` repository resolved to immutable commit `a09a35458c702b33eeacc393d103063234e8bc28`, last modified `2025-01-12T02:10:10Z`. No `v2.5` Git tag exists; `2.5` is retained as the model version, while the repository commit is now the actual revision.
+- **Weight identity:** Four official safetensor LFS SHA-256 values are retained in `manifests/model_identities/qwen2_5_7b_instruct.yaml`. Their registered sorted filename/hash aggregate is `291349c22595a174d997ab345601d1efebd3d1946fb58a8895a5576d7e6cab8a`.
+- **Tokenizer identity:** Raw `merges.txt`, `tokenizer.json`, `tokenizer_config.json`, and `vocab.json` bytes were fetched at the immutable commit and independently SHA-256 hashed. Their sorted filename/hash aggregate is `aa30b25713fa6af6ed16468f1e89a4a2f1bfd40b8920018e40543cec46860270`.
+- **Aggregation rule:** `sha256(UTF-8 sorted filename:sha256 lines joined by LF)`. The auditor recomputes both aggregate hashes from retained component hashes and rejects mutable-main resolution, component loss, substitution, or aggregate mismatch.
+- **Files corrected:** `configs/methods/raw_g_judge.yaml`, `src/pead/baselines/judge.py`, `src/pead/phase7/audit.py`, `manifests/method_cards/G10-JUDGE.yaml`, `manifests/model_identities/qwen2_5_7b_instruct.yaml`, `tests/integration/test_method_suite.py`, regenerated Phase 7 evidence, and this ledger.
+- **Testing:** 22/22 Phase 7 integration tests passed, including the new immutable artifact identity test. The complete repository suite then passed 146/146 with failures 0 and errors 0. The final 100-repetition audit again produced 2,300 valid common-runner decisions and `compliance_gaps=[]`.
+- **Final judge audit:** immutable revision, four weight components, weight aggregate, four tokenizer components, tokenizer aggregate, prompt, parser, decoding, cache, retry, budget, and reproduction gates all report `true` in `judge_contract_report.json`.
+- **Final retained SHA-256 updates:** console inventory `ADAE130418CD8A68B50654DE97EEB6D6B776784D5F735CCA1E0DC4A38E50B0B3`; judge contract `3B0B25A2063EE692E6B1FCBADF9145ED44CD83D5A3ADE070FDBA2C67EEBA2D81`; compliance `E50397D8DA31A55F99E66DF8BBC71525CE9860D4A802981CDB39EFAB8662AC25`; tests `B75854463BE15E508A610BDDBABA361C9AFFE26D582910827E9E0ED427C94140`; training contract `FD0AD6141265B77EB2F040228D3ED267F80BFD9636A66BBFD5AC7DA7D22D6B7D`; implementation manifest file `BFE9F026D6901E0ADA2DE13583AD9F2FE458ADE7B410CAB500A02329C1DCC18E`.
+- **Final line-level `console.log` and adjacent-comment inventory:**
+
+| File | Comment line | `console.log` line | Event ID | Adjacent identifying comment |
+|---|---:|---:|---|---|
+| `scripts/audit_budget.py` | 18 | 19 | `P7-BUDGET-SCRIPT-001` | Load immutable usage and ceiling records for independent comparison. |
+| `scripts/audit_budget.py` | 26 | 27 | `P7-BUDGET-SCRIPT-002` | Report budget parity only when all measured resources remain under their registered ceilings. |
+| `scripts/run_suite.py` | 23 | 24 | `P7-RUN-SCRIPT-001` | Start the explicitly non-scientific common-runner contract probe. |
+| `scripts/run_suite.py` | 29 | 30 | `P7-RUN-SCRIPT-002` | Retain the common-runner proof with zero scientific-result status. |
+| `scripts/train_suite.py` | 21 | 22 | `P7-TRAIN-SCRIPT-001` | Load an explicit training manifest without admitting any holdout content. |
+| `scripts/train_suite.py` | 31 | 32 | `P7-TRAIN-SCRIPT-002` | Close manifest validation only after role isolation and equal-identity projection parity pass. |
+| `src/pead/baselines/base.py` | 75 | 76 | `P7-BASELINE-001` | Execute one registered comparator against only its sealed visible projection. |
+| `src/pead/baselines/base.py` | 112 | 113 | `P7-BASELINE-002` | Commit a normalized three-outcome MethodDecision with explicit execution provenance. |
+| `src/pead/core/budgets.py` | 45 | 46 | `P7-BUDGET-001` | Record one external-model call before enforcing its per-case call and token ceilings. |
+| `src/pead/core/budgets.py` | 86 | 87 | `P7-BUDGET-002` | Close one resource account only after every registered ceiling passes. |
+| `src/pead/core/calibration.py` | 49 | 50 | `P7-CALIBRATION-001` | Fit the registered calibration transform on calibration_fit only. |
+| `src/pead/core/calibration.py` | 121 | 122 | `P7-CALIBRATION-002` | Select the headline threshold by the registered calibration_policy lexicographic objective. |
+| `src/pead/core/training.py` | 112 | 113 | `P7-TRAINING-001` | Freeze one checkpoint using only development_selection and the registered tie-break order. |
+| `src/pead/phase7/audit.py` | 241 | 242 | `P7-AUDIT-001` | Verify every WorkPlan-named Phase 7 implementation, configuration, card, script, and test exists. |
+| `src/pead/phase7/audit.py` | 244 | 245 | `P7-AUDIT-002` | Prove the frozen registry retains exactly 9 P-only, 12 Raw-G, 2 Oracle, and 16 MAVS identities. |
+| `src/pead/phase7/audit.py` | 247 | 248 | `P7-AUDIT-003` | Cross-check exact architectures, grids, trials, seeds, schedules, and partition contracts. |
+| `src/pead/phase7/audit.py` | 250 | 251 | `P7-AUDIT-004` | Validate exact development volumes, role isolation, equal-information identities, and immutable holdout definitions. |
+| `src/pead/phase7/audit.py` | 253 | 254 | `P7-AUDIT-005` | Retain exact source, configuration, immutable model revision, and component/aggregate artifact hashes. |
+| `src/pead/phase7/audit.py` | 256 | 257 | `P7-AUDIT-006` | Audit the frozen judge revision, weight/tokenizer hashes, prompt, parser, decoding, cache, retry, budgets, and tolerance. |
+| `src/pead/phase7/audit.py` | 259 | 260 | `P7-AUDIT-007` | Validate every comparator card, fidelity class, claim boundary, exact source hash, and separate MAVS design disclosure. |
+| `src/pead/phase7/audit.py` | 263 | 264 | `P7-AUDIT-008` | Stress every comparator through the same non-scientific three-outcome runner. |
+| `src/pead/phase7/audit.py` | 268 | 269 | `P7-AUDIT-009` | Verify the complete repository regression and independent Phase 7 stress evidence. |
+| `src/pead/phase7/audit.py` | 286 | 287 | `P7-AUDIT-010` | Inventory every Phase 7 console call and its immediately adjacent identifying comment. |
+| `src/pead/phase7/audit.py` | 299 | 300 | `P7-AUDIT-011` | Retain a zero-gap Phase 7 compliance verdict without asserting scientific performance. |
+| `src/pead/phase7/audit.py` | 306 | 307 | `P7-AUDIT-012` | Emit an unsuppressed hard failure and retain its exact cause. |
+| `src/pead/phase7/suite.py` | 29 | 30 | `P7-SUITE-001` | Admit the exact nine P-only, twelve Raw-G, and two Oracle diagnostic comparator contracts. |
+| `src/pead/phase7/suite.py` | 54 | 55 | `P7-SUITE-002` | Close the common-runner proof only after every comparator returns the frozen MethodDecision schema. |
+| `src/pead/phase7/test_runner.py` | 21 | 22 | `P7-TEST-RUN-001` | Discover the complete regression, integration, adversarial, and stress suite. |
+| `src/pead/phase7/test_runner.py` | 24 | 25 | `P7-TEST-RUN-002` | Retain the exact full-suite denominator before execution. |
+| `src/pead/phase7/test_runner.py` | 41 | 42 | `P7-TEST-RUN-003` | Retain the complete regression and Phase 7 stress verdict. |
+
+- **Console inventory result:** final source state is 30/30, with exact line/comment evidence retained in both this ledger entry and `results/audits/phase7/console_log_inventory.json`.
+- **Scientific effect:** None. Artifact identity hardening changes no prediction, label, threshold, bank, or model result; no model bytes were executed.
+- **Compliance gaps:** None.
+- **Deviation:** The prior future-resolution sentinel was strengthened to exact immutable identities before final handoff; this narrows ambiguity and does not change the registered model family or version.
+- **Next action:** Commit and push the exact-identity hardening and final evidence directly to `main`, verify local/remote equality and sole-branch topology, then stop before Phase 8.

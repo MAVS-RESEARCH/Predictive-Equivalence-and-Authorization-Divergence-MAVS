@@ -94,85 +94,85 @@
     },
     {
       "comment": "Verify every WorkPlan-named Phase 7 implementation, configuration, card, script, and test exists.",
-      "comment_line": 223,
-      "console_log_line": 224,
+      "comment_line": 241,
+      "console_log_line": 242,
       "event_id": "P7-AUDIT-001",
       "file": "src/pead/phase7/audit.py"
     },
     {
       "comment": "Prove the frozen registry retains exactly 9 P-only, 12 Raw-G, 2 Oracle, and 16 MAVS identities.",
-      "comment_line": 226,
-      "console_log_line": 227,
+      "comment_line": 244,
+      "console_log_line": 245,
       "event_id": "P7-AUDIT-002",
       "file": "src/pead/phase7/audit.py"
     },
     {
       "comment": "Cross-check exact architectures, grids, trials, seeds, schedules, and partition contracts.",
-      "comment_line": 229,
-      "console_log_line": 230,
+      "comment_line": 247,
+      "console_log_line": 248,
       "event_id": "P7-AUDIT-003",
       "file": "src/pead/phase7/audit.py"
     },
     {
       "comment": "Validate exact development volumes, role isolation, equal-information identities, and immutable holdout definitions.",
-      "comment_line": 232,
-      "console_log_line": 233,
+      "comment_line": 250,
+      "console_log_line": 251,
       "event_id": "P7-AUDIT-004",
       "file": "src/pead/phase7/audit.py"
     },
     {
-      "comment": "Retain exact source and configuration hashes while deferring environment and weight hashes to the pre-training freeze.",
-      "comment_line": 235,
-      "console_log_line": 236,
+      "comment": "Retain exact source, configuration, immutable model revision, and component/aggregate artifact hashes.",
+      "comment_line": 253,
+      "console_log_line": 254,
       "event_id": "P7-AUDIT-005",
       "file": "src/pead/phase7/audit.py"
     },
     {
-      "comment": "Audit frozen judge identity placeholders, prompt, parser, decoding, cache, retry, budgets, and tolerance.",
-      "comment_line": 238,
-      "console_log_line": 239,
+      "comment": "Audit the frozen judge revision, weight/tokenizer hashes, prompt, parser, decoding, cache, retry, budgets, and tolerance.",
+      "comment_line": 256,
+      "console_log_line": 257,
       "event_id": "P7-AUDIT-006",
       "file": "src/pead/phase7/audit.py"
     },
     {
       "comment": "Validate every comparator card, fidelity class, claim boundary, exact source hash, and separate MAVS design disclosure.",
-      "comment_line": 241,
-      "console_log_line": 242,
+      "comment_line": 259,
+      "console_log_line": 260,
       "event_id": "P7-AUDIT-007",
       "file": "src/pead/phase7/audit.py"
     },
     {
       "comment": "Stress every comparator through the same non-scientific three-outcome runner.",
-      "comment_line": 245,
-      "console_log_line": 246,
+      "comment_line": 263,
+      "console_log_line": 264,
       "event_id": "P7-AUDIT-008",
       "file": "src/pead/phase7/audit.py"
     },
     {
       "comment": "Verify the complete repository regression and independent Phase 7 stress evidence.",
-      "comment_line": 250,
-      "console_log_line": 251,
+      "comment_line": 268,
+      "console_log_line": 269,
       "event_id": "P7-AUDIT-009",
       "file": "src/pead/phase7/audit.py"
     },
     {
       "comment": "Inventory every Phase 7 console call and its immediately adjacent identifying comment.",
-      "comment_line": 268,
-      "console_log_line": 269,
+      "comment_line": 286,
+      "console_log_line": 287,
       "event_id": "P7-AUDIT-010",
       "file": "src/pead/phase7/audit.py"
     },
     {
       "comment": "Retain a zero-gap Phase 7 compliance verdict without asserting scientific performance.",
-      "comment_line": 281,
-      "console_log_line": 282,
+      "comment_line": 299,
+      "console_log_line": 300,
       "event_id": "P7-AUDIT-011",
       "file": "src/pead/phase7/audit.py"
     },
     {
       "comment": "Emit an unsuppressed hard failure and retain its exact cause.",
-      "comment_line": 288,
-      "console_log_line": 289,
+      "comment_line": 306,
+      "console_log_line": 307,
       "event_id": "P7-AUDIT-012",
       "file": "src/pead/phase7/audit.py"
     },

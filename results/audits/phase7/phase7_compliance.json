@@ -28,7 +28,7 @@
   },
   "compliance_gaps": [],
   "contracts": {
-    "configuration_hash": "12f4aa73656f835c3b39e328e94a7ebf343e14ef4217d58eafb5943928d3db64",
+    "configuration_hash": "bad75c9cd081866af8000ce829df2c9d71893a5c9c7f90b070e77b44b18554b7",
     "gates": {
       "ensemble_grouped_folds": true,
       "ensemble_trials": true,
@@ -53,7 +53,7 @@
   "holdout_mutations": 0,
   "implementation_hashes": {
     "files": 28,
-    "manifest_sha256": "29afa837c5c7cd9dd4920c7e60df8e18791cadd38cdffad93174094dce20e795",
+    "manifest_sha256": "ad586e556c860fe941141a359be65d9879f40ad36d686b2679dff04312e3400e",
     "status": "pass"
   },
   "inventory": {
@@ -67,20 +67,27 @@
     "unregistered_methods": []
   },
   "judge": {
+    "component_hashes_verified_before_training": true,
     "gates": {
       "budget": true,
       "cache": true,
       "decoding": true,
-      "hashes_required": true,
+      "immutable_revision": true,
       "model": true,
       "parser_failure": true,
       "prompt": true,
       "reproduction": true,
-      "retry": true
+      "retry": true,
+      "tokenizer_aggregate": true,
+      "tokenizer_components": true,
+      "weight_aggregate": true,
+      "weight_components": true
     },
     "prompt_sha256": "bea0f69e94854355db95fe7c3c82aa8e22a01b158af5dfed85d6f55f94421d4f",
+    "revision_commit": "a09a35458c702b33eeacc393d103063234e8bc28",
     "status": "pass",
-    "weights_resolved_at_phase10_freeze": true
+    "tokenizer_manifest_sha256": "aa30b25713fa6af6ed16468f1e89a4a2f1bfd40b8920018e40543cec46860270",
+    "weight_manifest_sha256": "291349c22595a174d997ab345601d1efebd3d1946fb58a8895a5576d7e6cab8a"
   },
   "partitions": {
     "domains": 6,
@@ -144,7 +151,7 @@
       "contract_probe_decisions": 2300,
       "scientific_results": 0
     },
-    "tests_run": 145
+    "tests_run": 146
   },
   "training_runs": 0
 }

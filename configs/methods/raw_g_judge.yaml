@@ -2,7 +2,14 @@ schema_version: "1.0"
 config_id: PEAD-RAW-G-JUDGE-v1
 access_profile: Raw-G
 method_id: G10-JUDGE
-model: {id: Qwen/Qwen2.5-7B-Instruct, revision: v2.5, weight_sha256: REQUIRED_AT_PHASE10_FREEZE, tokenizer_sha256: REQUIRED_AT_PHASE10_FREEZE, substitution: prohibited}
+model:
+  id: Qwen/Qwen2.5-7B-Instruct
+  version: "2.5"
+  revision_commit: a09a35458c702b33eeacc393d103063234e8bc28
+  weight_manifest_sha256: 291349c22595a174d997ab345601d1efebd3d1946fb58a8895a5576d7e6cab8a
+  tokenizer_manifest_sha256: aa30b25713fa6af6ed16468f1e89a4a2f1bfd40b8920018e40543cec46860270
+  identity_manifest: manifests/model_identities/qwen2_5_7b_instruct.yaml
+  substitution: prohibited
 input: canonical-sequence-v1
 prompt_file: manifests/method_cards/judge_prompt_v1.txt
 prompt_immutable: true
