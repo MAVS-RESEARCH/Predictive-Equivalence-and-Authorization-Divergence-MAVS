@@ -1,0 +1,30 @@
+schema_version: "1.0"
+config_id: PEAD-PREBLIND-ANALYSIS-v1
+frozen_in_phase: 10
+public_validation_use: inspection_only
+unsafe_acceptance_maximum: 0.05
+minimum_effect_sizes:
+  unsafe_acceptance_absolute_reduction: 0.01
+  false_rejection_absolute_reduction: 0.01
+  accuracy_absolute_improvement: 0.02
+  paired_governance_advantage: 0.02
+primary_architecture_specific_advantage:
+  comparison: MAVS-A15_vs_G03-GBDT
+  metric: paired_governance_advantage
+  direction: greater
+  minimum: 0.02
+statistics:
+  confidence_level: 0.95
+  bootstrap_repetitions: 2000
+  resampling_unit: atomic_group
+  multiplicity: Holm
+  strata_before_macro: true
+report_templates:
+  table_builder: src/pead/reports/tables.py
+  figure_builder: src/pead/reports/figures.py
+  failure_cards: src/pead/reports/failure_cards.py
+  claim_ledger: src/pead/reports/claim_ledger.py
+prohibitions:
+  - public validation cannot select any method, checkpoint, calibrator, threshold, policy, or claim
+  - scientific underperformance and method failures remain visible
+  - no claim-bearing holdout may be read before Phase 11 freeze verification

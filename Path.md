@@ -2602,3 +2602,154 @@ Copy this block for every meaningful action:
 - **Compliance gaps:** None.
 - **Deviation:** None beyond the fully documented and policy-compliant invalidation/repetition.
 - **Next action:** Rerun installed v2 verification and compliance, commit this final receipt, push `main`, prove clean local/remote equality, and stop before Phase 10.
+
+## Phase 10 - Development banks, training, calibration, and public validation
+
+### PATH-0096 - Scope, chronology, and exact open-bank implementation
+
+- **Timestamp:** 2026-08-01T20:32:58+05:00.
+- **Phase:** 10.
+- **Status:** Pass.
+- **Change ID:** `P10-BANKS-V2-001`.
+- **Authorized scope:** Phase 10 only. The implementation generated open development, calibration, and public-validation banks; executed registered methods; selected checkpoints and operating points; inspected public validation; produced power/effect-size evidence; and created a candidate freeze. It did not unlock, decrypt, materialize, inspect, or execute a claim-bearing sealed bank. Phase 11 was not started.
+- **Pretraining chronology:** `verify_preseal` passed before fitting. Every training history row records Phase 9A commitment SHA-256 `52E29FFCF1C102356539AD058C40D9E387DB9D92907E38C5039375798D3196E6`. The commitment stayed byte-identical. The Phase 9A compatibility audit now tests the signed historical `phase10_artifact_count_at_seal=0` rather than incorrectly requiring later Phase 10 outputs to remain absent.
+- **Scientific source boundary:** The implementation preserves the Diagnostic Sciences distinction that prediction estimates support while governance determines authorization. P-only, Raw-G, and Oracle-G use identical case/world/group/role identities and differ only by the frozen projection slice. Negative results and unavailable-method failures remain visible; no performance value is imputed for a failed method.
+- **Files implemented:** `src/pead/phase10/{banks,training,validation,audit,preflight,repair,finalize,run,test_runner}.py`; Phase 10 execution/audit/test/repair/preflight/finalization scripts; `configs/phase10/preblind_analysis_v1.yaml`; Phase 10 unit/integration/stress tests; Phase 9A chronology compatibility correction; exact dependency locks; five bank roots; raw/processed/audit/report outputs; and `manifests/freeze_candidate_v1.json`.
+- **Current run:** `phase10-open-v2`; open-bank identity `phase10-open-banks-v2`. Only v2 Phase 10 results remain in the repository.
+- **Exact registered units per domain:** `development_fit=(3000 exact pairs,1500 near pairs,750 reversal sequences,2100 scope cases,1125 evidence cases)`; `development_selection=(1000,500,250,700,375)`; `calibration_fit=(500,250,125,350,188)`; `calibration_policy=(500,250,125,350,187)`; `public_validation=(1000,500,250,700,375)`.
+- **Materialized row totals:** development fit 100,350; development selection 33,450; calibration fit 16,728; calibration policy 16,722; public validation 33,450; total 200,700 rows in 150 domain-track shards.
+- **Identity and balance evidence:** 200,700 unique case IDs; 200,700 unique world IDs; 101,700 atomic groups; cross-role group overlap 0; duplicate cases/worlds 0; all 150 shards contain all three terminal labels. Aggregate labels are `(65,397 Accept, 65,431 Reject, 69,872 Escalate)`.
+- **Exact-pair evidence:** 36,000/36,000 pairs have byte-equal P-only features; 28,800 are authorization-divergent; 7,200 are same-label controls; exact control fraction `0.2`.
+- **Oracle evidence:** Oracle labels reconstruct 200,700/200,700 cases; reconstruction and deterministic rule accuracy `1.0`.
+- **Deviation:** None in the valid v2 lineage. Invalidated attempts are recorded separately below.
+
+### PATH-0097 - Registered training, calibration, and retained method outcomes
+
+- **Timestamp:** 2026-08-01T20:32:58+05:00.
+- **Phase:** 10.
+- **Status:** Pass with registered failures retained.
+- **Change ID:** `P10-TRAIN-V2-001`.
+- **Role isolation:** preprocessing and gradient/model fitting use only 100,350 `development_fit` rows; checkpoint/early-stop/pruning selection uses only 33,450 `development_selection` rows; calibration is fitted once on 16,728 `calibration_fit` rows; terminal policies are selected once on 16,722 `calibration_policy` rows. Public validation performs no selection.
+- **Seeds and complete grids:** all successful classical families use seeds `{101,211,307}`. `P08-TABULAR-logistic` and `G01-LOGREG` each retain 14 trials x 3 seeds = 42 attempts; `P08-TABULAR-gbdt` and `G03-GBDT` each retain 16 x 3 = 48; `G02-TREE` retains 12 x 3 = 36 with development-selection cost-complexity pruning. Total successful classical fit attempts: 216.
+- **Selected P08 logistic:** `penalty=l1,C=0.0001,seed=101`; mean/worst protected utility `0.3476233184`; temperature `0.85`; elapsed 1,079.832 seconds.
+- **Selected P08 GBDT:** `learning_rate=0.03,max_iter=200,max_leaf_nodes=15,l2=1,seed=101`; mean/worst utility `0.3434379671`; temperature `1.05`; elapsed 94.873 seconds.
+- **Selected G01:** `penalty=l2,C=1,seed=101`; mean utility `0.5949078226`, worst-seed utility `0.5948878924`; temperature `1.0`; elapsed 122.751 seconds.
+- **Selected G02:** `max_depth=8,min_samples_leaf=1,seed=101`; mean/worst utility `0.6246935725`; isotonic calibration because every class exceeds 1,000 calibration opportunities; elapsed 855.627 seconds. The bounded alpha set uses deterministic indices and threaded scheduling only; no registered grid cell or seed is omitted.
+- **Selected G03:** `learning_rate=0.03,max_iter=200,max_leaf_nodes=15,l2=0,seed=101`; mean/worst utility `0.6246935725`; temperature `0.55`; elapsed 138.272 seconds.
+- **Conformal methods:** P05 static uses finite-sample split-conformal quantiles at alphas `{0.01,0.025,0.05,0.1,0.2}` from `calibration_fit`; P06 adaptive uses alphas `{0.025,0.05,0.1}`, windows `{256,1024}`, and causal past-label-only updates. Neither retrains its frozen base checkpoint.
+- **Inventory coverage:** all 39 method-inventory rows are present. The audit counts 20 trained/calibrated/failure attempt records, five successfully trained checkpoint variants, and thirteen retained failed variants. No architecture/provider substitution and no budget expansion occurred.
+- **Resource-preflight evidence:** exact backend and accelerator probing found CPU-only Torch, CUDA device count 0, missing active `pgmpy` and `transformers` installations, and no pinned local Qwen weights. Frozen P-only, Raw-G, Oracle-G MLP and scalar-bottleneck architectures instantiated successfully, separating architecture correctness from unavailable registered training compute.
+- **Retained failed variants:** `P07-REJECT`, `P08-TABULAR-mlp`, `P09-SEQUENCE`, `G04-MLP`, `G05-SEQUENCE`, `G06-GRAPH`, `G07-BAYES`, `G10-JUDGE`, `G11-SCALAR-trained`, `G12-ENSEMBLE`, `O02-ORACLE-MLP`, `MAVS-A12`, and `MAVS-A13`. These are resource/prerequisite failures, not scientific underperformance claims; their metrics are absent rather than estimated.
+- **Underperformance retention:** convergence warnings, all trial histories, public failure rows, and coverage-collapse results remain in raw/processed evidence. Successful execution does not imply a favorable scientific result.
+- **Evidence:** `results/raw/phase10-open-v2/training_trace.json`, five joblib checkpoints, the G02 calibrator checkpoint, five durable method-attempt receipts, and `results/audits/phase10-open-v2/resource_failure_evidence.json`.
+- **Deviation:** Registered unavailable methods failed at the environment-preflight stage and were retained without substitution as required.
+
+### PATH-0098 - Operating points, public validation, and power/effect-size evidence
+
+- **Timestamp:** 2026-08-01T20:32:58+05:00.
+- **Phase:** 10.
+- **Status:** Pass; inspection-only results retained.
+- **Change ID:** `P10-PUBLIC-V2-001`.
+- **Operating-point selection:** each ready method evaluates the frozen 36-cell accept/reject threshold sweep on `calibration_policy`; unsafe acceptance must be at most `0.05`; the lexicographic key then minimizes false rejection, unnecessary escalation, resource cost, model complexity, and threshold tie-breaks. Each method records `partition=calibration_policy`, one policy pass, and 16,722 policy rows.
+- **Public boundary:** 28 ready fixed/trained methods were executed once on 33,450 public rows; 11 inventory-level failures remain visible with zero public rows. Public selection events: 0. Every prediction archive hashes its decisions and carries labels/group IDs exactly aligned to the registered public bank.
+- **Primary public metrics:** `G01 accuracy=0.573333, unsafe_acceptance=0.036263, coverage=0.402960`; `G02 accuracy=0.629387, unsafe_acceptance=0.024066, coverage=0.400568`; `G03 accuracy=0.629387, unsafe_acceptance=0.023886, coverage=0.370942`; `MAVS-A15 accuracy=0.545082, unsafe_acceptance=0.045740, coverage=0.496233`; deterministic Oracle accuracy `1.0`, unsafe acceptance `0.0`.
+- **Coverage-collapse disclosure:** P05, P06, and the selected P08 aggregate escalated every public case (`coverage=0.0`). Their zero unsafe-acceptance observation is explicitly not described as a safety success.
+- **Power rehearsal:** 16,950 public atomic groups; 95% worst-case proportion margin `0.0075272`. Registered minimum effects are `0.02` accuracy improvement, `0.01` unsafe-acceptance reduction, `0.01` false-rejection reduction, and `0.02` paired governance advantage; all exceed the public margin.
+- **Frozen primary architecture comparison:** `MAVS-A15_vs_G03-GBDT`, paired governance advantage, greater direction, minimum effect `0.02`. The public result does not change this definition and cannot tune the method.
+- **Frozen analysis:** clustered 2,000-replicate bootstrap, Holm correction, stratum rules, report templates, prohibited interpretations, minimum effects, and primary comparison are recorded in `configs/phase10/preblind_analysis_v1.yaml` before the blind run.
+- **Claim boundary:** Public validation is an inspection/precision rehearsal, not the claim-bearing blind benchmark. The sealed bank remains fully distinct, encrypted, unmaterialized, and inaccessible until Phase 11.
+- **Evidence:** `results/processed/phase10-open-v2/public_validation.json`, 28 public prediction archives, `results/reports/phase10-open-v2/power_effect_size.json`, and `manifests/freeze_candidate_v1.json`.
+- **Deviation:** None.
+
+### PATH-0099 - Corrections, invalidations, and result hygiene
+
+- **Timestamp:** 2026-08-01T20:32:58+05:00.
+- **Phase:** 10.
+- **Status:** Pass; every defect retained and affected lineage invalidated.
+- **Change ID:** `P10-INVALIDATION-001`.
+- **Predictive missingness correction:** the first property test found exact twins received case-keyed predictive missingness. Missingness was changed to group-keyed for the P-only slice. The failing generation was not promoted; the corrected unit test passes.
+- **Initial G02 infrastructure defect:** unbounded cost-complexity alpha enumeration prevented a bounded complete receipt. All 154 incomplete bank/result files were moved outside the repository to `C:/Users/Saif malik/OneDrive/Documents/Desktop/Documents/PEAD_INVALIDATED_PHASE10_ATTEMPT1`. The implementation now selects a deterministic maximum of 64 fit-derived alpha candidates.
+- **Oracle interface defect:** the first validation encoded no lossless exact-control override in Oracle-G and passed labels directly to the deterministic Oracle. All 33 affected validation/report/audit/freeze artifacts were moved to `C:/Users/Saif malik/OneDrive/Documents/Desktop/Documents/PEAD_INVALIDATED_PHASE10_ORACLE_VALIDATION`. Oracle-G now carries a nonmissing label-reconstruction field; P-only/Raw-G byte digests were proven unchanged for that repair; Oracle accuracy is 1.0.
+- **v1 non-triviality defect:** the strengthened audit found 14 domain-track shards missing a class. The entire 196-file `phase10-open-v1` bank/training/calibration/validation/audit/report lineage was invalidated and moved to `C:/Users/Saif malik/OneDrive/Documents/Desktop/Documents/PEAD_INVALIDATED_PHASE10_NONTRIVIALITY_V1`. The valid lineage uses the new run ID `phase10-open-v2`; no v1 result remains in the repository.
+- **Audit self-match defect:** the first v2 audit scanner matched its own forbidden-token literals. This invalidated only that audit verdict, not any scientific artifact. Token construction was corrected; standalone audit, finalizer audit, integration audit, and post-regression audit all passed afterward.
+- **Test environment correction:** the first complete regression collected 198 tests and produced three import errors because locked `python-docx==1.2.0` was absent. No assertion ran or failed in those modules. The exact pinned dependency and its locked `lxml==6.1.1` dependency were installed; the rerun discovered and passed 207 tests.
+- **Recovery rule applied:** interface/infrastructure defects regenerated or reran their complete affected scope. The label non-triviality defect invalidated every label-dependent model and forced complete v2 retraining. Scientific results were never edited to make them favorable.
+- **Machine ledger:** `results/audits/phase10-open-v2/invalidation_ledger.json` records four entries, archive counts, classification, scope, and current-result hygiene. `previous_results_present_in_repository=false`.
+- **Deviation:** None from the WorkPlan invalidation policy.
+
+### PATH-0100 - Stress tests, extreme-rigor audit, and phase gate
+
+- **Timestamp:** 2026-08-01T20:32:58+05:00.
+- **Phase:** 10.
+- **Status:** Pass; zero compliance gaps.
+- **Change ID:** `P10-VERIFY-001`.
+- **Compilation:** `python -m compileall -q src/pead/phase10 scripts/run_phase10.py scripts/audit_phase10.py scripts/run_phase10_tests.py` passed.
+- **Final static checks:** complete `src`, `scripts`, and `tests` compilation passed; `git diff --check` passed; current-result hygiene found no Phase 10 run other than v2. Global `pip check` reported only an unrelated preinstalled `opencv-python` constraint against frozen `numpy==2.3.4`; OpenCV is not a PEAD dependency and was not removed or modified. The exact locked `python-docx==1.2.0`/`lxml==6.1.1` pair is installed. Missing registered PEAD backends remain explicit retained failures.
+- **Targeted bank tests:** 4/4 passed, covering exact predictive equality and 20% controls, role/domain ID disjointness, public nuisance shift shape, and all-track Oracle reconstruction.
+- **Phase 9A compatibility regression:** 3/3 passed, including ciphertext mutation rejection, signed chronology-at-seal, and zero-gap preseal verification with legitimate Phase 10 artifacts present.
+- **First complete regression:** 198 discovered; 0 assertion failures; 3 import errors from missing locked `python-docx`; status fail and retained.
+- **Final complete regression:** `python scripts/run_phase10_tests.py`; 207/207 passed in 110.557 seconds; failures 0; errors 0; skipped 0. It includes unit, property, metamorphic, integration, blind-contract, and stress suites plus a post-suite Phase 10 audit.
+- **Phase 10 stress:** the suite exercised 10,000 policy rows across the frozen threshold sweep, retained all method failures without substitution/budget expansion, and verified every freeze-candidate file hash. Repository stress also includes 100,000 ID collision trials, 10,000 trace records, 100,000 dual-engine evaluations, 279,936 DS-CF vectors, 5,000 role-crossing attacks, and prior-phase integrity regressions.
+- **Bank audit:** exact denominators and hashes pass; 150/150 shards; duplicate IDs 0; group-role overlaps 0; 36,000/36,000 exact predictive-equivalence pairs; exact controls 20%; every shard contains every label; Oracle reconstruction 200,700/200,700.
+- **Training audit:** inventory 39/39; successful classical variants exactly five; registered attempts and seed counts exact; calibrators use `calibration_fit` once; failure evidence 13/13; substitutions 0; budget expansions 0; checkpoint/attempt hashes pass.
+- **Validation audit:** evaluated ready methods 28; failed methods visible 11; policy role isolation pass; prediction/case alignment pass; public selection events 0; degeneracy disclosed; Oracle rule accuracy 1.0; power/effect-size pass.
+- **Security/chronology:** sealed-bank access count 0; forbidden sealed-access source references 0; Phase 11 started false; Phase 9A commitment unchanged true.
+- **Freeze candidate:** status `candidate_not_final_freeze`, not a Phase 11 freeze; 404 claim-relevant source/config/test/orchestration/method-card/commitment/checkpoint/raw/processed/report/lock files are content-addressed. Candidate content SHA-256 `043805E8B57B4DEB5AC469E2E6ABEAF1EBB7A95AE305AB1588A4289CF4E830CA`.
+- **Final settled-tree audit:** `python scripts/audit_phase10.py` passed after documentation and all code settled; console sites 39/39; integrity gates all pass; sealed accesses 0; Phase 11 false; `compliance_gaps=[]`.
+- **Gate verdict:** leakage pass; duplicates pass; budget pass; access parity pass; non-triviality pass; abstention disclosure pass; public validation pass; power/effect-size pass; result hygiene pass; `compliance_gaps=[]`.
+- **Deviation:** None.
+- **Next action:** Run final static/diff/dependency checks, rebuild the freeze candidate and compliance files against the settled tree, stage only Phase 10 scope, commit directly to `main`, push without force, verify sole-branch topology and exact remote SHA, append the publication receipt, and stop before Phase 11.
+
+### PATH-0101 - Exact Phase 10 `console.log` and identifying-comment inventory
+
+- **Timestamp:** 2026-08-01T20:32:58+05:00.
+- **Phase:** 10.
+- **Status:** Pass.
+- **Change ID:** `P10-LOGS-001`.
+- **Rule:** Every Phase 10 workflow `console.log` has an immediately adjacent preceding `STEP LOG` comment containing the same event ID. Machine inventory: 39/39.
+
+| Location | Comment line | `console.log` line | Event ID | Identifying comment |
+|---|---:|---:|---|---|
+| `src/pead/phase10/audit.py` | 153 | 154 | `P10-AUDIT-001` | Verify the signed Phase 9A commitment before auditing any Phase 10 output. |
+| `src/pead/phase10/audit.py` | 156 | 157 | `P10-AUDIT-002` | Prove exact open-bank denominators, hashes, role disjointness, grouping, and projection parity. |
+| `src/pead/phase10/audit.py` | 159 | 160 | `P10-AUDIT-003` | Prove complete method attempts, registered grids/seeds, calibration chronology, budgets, and failure retention. |
+| `src/pead/phase10/audit.py` | 162 | 163 | `P10-AUDIT-004` | Prove public validation was inspection-only and all integrity, abstention, and power evidence is retained. |
+| `src/pead/phase10/audit.py` | 179 | 180 | `P10-AUDIT-005` | Build the content-addressed freeze candidate from all claim-relevant code, configs, methods, and checkpoints. |
+| `src/pead/phase10/audit.py` | 181 | 182 | `P10-AUDIT-006` | Emit the zero-gap Phase 10 verdict only after every WorkPlan gate passes. |
+| `src/pead/phase10/audit.py` | 191 | 192 | `P10-AUDIT-FAIL` | Retain the exact blocking cause of any Phase 10 compliance failure. |
+| `src/pead/phase10/banks.py` | 104 | 105 | `P10-BANK-001` | Load exact Section 5.1.2 volumes and create only registered open-bank roots. |
+| `src/pead/phase10/banks.py` | 118 | 119 | `P10-BANK-002` | Seal one complete role after all six domains and five tracks reach exact denominators. |
+| `src/pead/phase10/banks.py` | 129 | 130 | `P10-BANK-003` | Retain hashes, counts, role isolation, and cross-profile identity alignment for every open-bank shard. |
+| `src/pead/phase10/finalize.py` | 15 | 16 | `P10-FINALIZE-001` | Load only the complete v2 bank, training, and validation receipts without executing or selecting a method again. |
+| `src/pead/phase10/finalize.py` | 20 | 21 | `P10-FINALIZE-002` | Re-execute the strengthened audit after the audit-scanner correction and before writing the run summary. |
+| `src/pead/phase10/finalize.py` | 26 | 27 | `P10-FINALIZE-003` | Retain the final zero-gap verdict and stop before Phase 11. |
+| `src/pead/phase10/preflight.py` | 28 | 29 | `P10-PREFLIGHT-001` | Probe the exact locked backends and accelerator without installing or substituting a method. |
+| `src/pead/phase10/preflight.py` | 33 | 34 | `P10-PREFLIGHT-002` | Instantiate the frozen MLP and scalar architectures to distinguish architecture defects from unavailable training compute. |
+| `src/pead/phase10/preflight.py` | 42 | 43 | `P10-PREFLIGHT-003` | Bind every retained failure to a concrete registered-resource or prerequisite failure. |
+| `src/pead/phase10/preflight.py` | 72 | 73 | `P10-PREFLIGHT-004` | Retain the non-substitution evidence and prohibit imputed scientific metrics for failed methods. |
+| `src/pead/phase10/repair.py` | 36 | 37 | `P10-REPAIR-001` | Hash every P-only and Raw-G identity, label, and feature byte before regenerating the Oracle-only representation. |
+| `src/pead/phase10/repair.py` | 40 | 41 | `P10-REPAIR-002` | Regenerate every open-bank container with lossless Oracle labels and no change to P-only or Raw-G projections. |
+| `src/pead/phase10/repair.py` | 69 | 70 | `P10-REPAIR-003` | Retain the byte-equivalence and full Oracle reconstruction proof before downstream reruns. |
+| `src/pead/phase10/run.py` | 20 | 21 | `P10-RUN-001` | Generate all five exact-volume open roles before any training attempt. |
+| `src/pead/phase10/run.py` | 23 | 24 | `P10-RUN-001A` | Prove the corrected Oracle representation leaves P-only and Raw-G identities, labels, and features unchanged under regeneration. |
+| `src/pead/phase10/run.py` | 26 | 27 | `P10-RUN-001B` | Record exact backend and compute availability before any registered method attempt. |
+| `src/pead/phase10/run.py` | 29 | 30 | `P10-RUN-002` | Execute registered training/fixed readiness and retain every success or failure. |
+| `src/pead/phase10/run.py` | 32 | 33 | `P10-RUN-003` | Freeze calibration-policy choices and execute inspection-only public validation. |
+| `src/pead/phase10/run.py` | 35 | 36 | `P10-RUN-004` | Run the complete zero-gap audit and create the method-freeze candidate. |
+| `src/pead/phase10/run.py` | 40 | 41 | `P10-RUN-005` | Retain the complete Phase 10 outcome and stop before Phase 11. |
+| `src/pead/phase10/test_runner.py` | 18 | 19 | `P10-TEST-001` | Discover the complete repository regression and Phase 10 stress suite. |
+| `src/pead/phase10/test_runner.py` | 21 | 22 | `P10-TEST-002` | Replay Phase 10 integrity and freeze-candidate gates after all regression tests. |
+| `src/pead/phase10/test_runner.py` | 27 | 28 | `P10-TEST-003` | Retain exact regression denominators and the final compliance verdict. |
+| `src/pead/phase10/training.py` | 181 | 182 | `P10-TRAIN-001` | Verify the Phase 9A commitment before the first model or fixed-method execution. |
+| `src/pead/phase10/training.py` | 188 | 189 | `P10-TRAIN-002` | Load matched full-volume role-isolated projections for all three access profiles. |
+| `src/pead/phase10/training.py` | 192 | 193 | `P10-TRAIN-003` | Execute one complete registered CPU-compatible grid with all three seeds. |
+| `src/pead/phase10/training.py` | 205 | 206 | `P10-TRAIN-004` | Retain every unavailable accelerator or pinned-weight execution as an unsuppressed method failure. |
+| `src/pead/phase10/training.py` | 248 | 249 | `P10-TRAIN-005` | Fit each successful model calibrator exactly once on calibration_fit after selection freeze. |
+| `src/pead/phase10/training.py` | 252 | 253 | `P10-TRAIN-006` | Retain selected checkpoints, complete trial histories, failures, environment, and commitment identity. |
+| `src/pead/phase10/validation.py` | 100 | 101 | `P10-VALIDATE-001` | Select terminal policies once on calibration_policy with the frozen lexicographic constraint. |
+| `src/pead/phase10/validation.py` | 139 | 140 | `P10-VALIDATE-002` | Execute every ready fixed or trained method once on inspection-only public validation. |
+| `src/pead/phase10/validation.py` | 147 | 148 | `P10-VALIDATE-003` | Freeze public precision, minimum effects, statistical procedures, and the primary architecture comparison. |
+
+- **Machine evidence:** `results/audits/phase10-open-v2/console_inventory.json` retains the exact line inventory and passed adjacency validation.
+- **Compliance gaps:** None.
+- **Deviation:** None.

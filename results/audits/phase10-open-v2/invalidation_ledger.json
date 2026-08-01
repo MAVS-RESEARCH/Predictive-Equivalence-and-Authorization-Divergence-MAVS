@@ -1,0 +1,41 @@
+{
+  "current_run_id": "phase10-open-v2",
+  "entries": [
+    {
+      "archive": "C:/Users/Saif malik/OneDrive/Documents/Desktop/Documents/PEAD_INVALIDATED_PHASE10_ATTEMPT1",
+      "classification": "infrastructure_defect",
+      "invalidated_scope": "initial open banks and incomplete training outputs",
+      "reason": "unbounded G02 cost-complexity alpha enumeration prevented a bounded complete method receipt",
+      "retained_file_count": 154,
+      "status": "invalidated_retained_outside_repository"
+    },
+    {
+      "archive": "C:/Users/Saif malik/OneDrive/Documents/Desktop/Documents/PEAD_INVALIDATED_PHASE10_ORACLE_VALIDATION",
+      "classification": "interface_only_infrastructure_defect",
+      "invalidated_scope": "Oracle-profile validation, processed reports, audit, and freeze candidate",
+      "reason": "Oracle projection omitted the exact-control authorization override",
+      "retained_file_count": 33,
+      "status": "invalidated_retained_outside_repository"
+    },
+    {
+      "archive": "C:/Users/Saif malik/OneDrive/Documents/Desktop/Documents/PEAD_INVALIDATED_PHASE10_NONTRIVIALITY_V1",
+      "classification": "bank_integrity_defect",
+      "invalidated_scope": "complete phase10-open-v1 bank, training, calibration, validation, audit, and report lineage",
+      "reason": "fourteen domain-track shards omitted at least one authorization class",
+      "retained_file_count": 196,
+      "status": "invalidated_retained_outside_repository"
+    },
+    {
+      "archive": null,
+      "classification": "audit_only_infrastructure_defect",
+      "invalidated_scope": "first v2 audit verdict only; no scientific artifact",
+      "reason": "forbidden-token scanner matched its own literal definitions",
+      "retained_file_count": 0,
+      "status": "corrected_and_reaudited"
+    }
+  ],
+  "generated_at": "2026-08-01T20:25:37.2301989+05:00",
+  "previous_results_present_in_repository": false,
+  "schema_version": "1.0",
+  "status": "pass"
+}

@@ -1,0 +1,280 @@
+{
+  "entries": [
+    {
+      "comment": "STEP LOG P10-AUDIT-001: Verify the signed Phase 9A commitment before auditing any Phase 10 output.",
+      "comment_line": 153,
+      "console_log_line": 154,
+      "event_id": "P10-AUDIT-001",
+      "file": "src/pead/phase10/audit.py"
+    },
+    {
+      "comment": "STEP LOG P10-AUDIT-002: Prove exact open-bank denominators, hashes, role disjointness, grouping, and projection parity.",
+      "comment_line": 156,
+      "console_log_line": 157,
+      "event_id": "P10-AUDIT-002",
+      "file": "src/pead/phase10/audit.py"
+    },
+    {
+      "comment": "STEP LOG P10-AUDIT-003: Prove complete method attempts, registered grids/seeds, calibration chronology, budgets, and failure retention.",
+      "comment_line": 159,
+      "console_log_line": 160,
+      "event_id": "P10-AUDIT-003",
+      "file": "src/pead/phase10/audit.py"
+    },
+    {
+      "comment": "STEP LOG P10-AUDIT-004: Prove public validation was inspection-only and all integrity, abstention, and power evidence is retained.",
+      "comment_line": 162,
+      "console_log_line": 163,
+      "event_id": "P10-AUDIT-004",
+      "file": "src/pead/phase10/audit.py"
+    },
+    {
+      "comment": "STEP LOG P10-AUDIT-005: Build the content-addressed freeze candidate from all claim-relevant code, configs, methods, and checkpoints.",
+      "comment_line": 179,
+      "console_log_line": 180,
+      "event_id": "P10-AUDIT-005",
+      "file": "src/pead/phase10/audit.py"
+    },
+    {
+      "comment": "STEP LOG P10-AUDIT-006: Emit the zero-gap Phase 10 verdict only after every WorkPlan gate passes.",
+      "comment_line": 181,
+      "console_log_line": 182,
+      "event_id": "P10-AUDIT-006",
+      "file": "src/pead/phase10/audit.py"
+    },
+    {
+      "comment": "STEP LOG P10-AUDIT-FAIL: Retain the exact blocking cause of any Phase 10 compliance failure.",
+      "comment_line": 191,
+      "console_log_line": 192,
+      "event_id": "P10-AUDIT-FAIL",
+      "file": "src/pead/phase10/audit.py"
+    },
+    {
+      "comment": "STEP LOG P10-BANK-001: Load exact Section 5.1.2 volumes and create only registered open-bank roots.",
+      "comment_line": 104,
+      "console_log_line": 105,
+      "event_id": "P10-BANK-001",
+      "file": "src/pead/phase10/banks.py"
+    },
+    {
+      "comment": "STEP LOG P10-BANK-002: Seal one complete role after all six domains and five tracks reach exact denominators.",
+      "comment_line": 118,
+      "console_log_line": 119,
+      "event_id": "P10-BANK-002",
+      "file": "src/pead/phase10/banks.py"
+    },
+    {
+      "comment": "STEP LOG P10-BANK-003: Retain hashes, counts, role isolation, and cross-profile identity alignment for every open-bank shard.",
+      "comment_line": 129,
+      "console_log_line": 130,
+      "event_id": "P10-BANK-003",
+      "file": "src/pead/phase10/banks.py"
+    },
+    {
+      "comment": "STEP LOG P10-FINALIZE-001: Load only the complete v2 bank, training, and validation receipts without executing or selecting a method again.",
+      "comment_line": 15,
+      "console_log_line": 16,
+      "event_id": "P10-FINALIZE-001",
+      "file": "src/pead/phase10/finalize.py"
+    },
+    {
+      "comment": "STEP LOG P10-FINALIZE-002: Re-execute the strengthened audit after the audit-scanner correction and before writing the run summary.",
+      "comment_line": 20,
+      "console_log_line": 21,
+      "event_id": "P10-FINALIZE-002",
+      "file": "src/pead/phase10/finalize.py"
+    },
+    {
+      "comment": "STEP LOG P10-FINALIZE-003: Retain the final zero-gap verdict and stop before Phase 11.",
+      "comment_line": 26,
+      "console_log_line": 27,
+      "event_id": "P10-FINALIZE-003",
+      "file": "src/pead/phase10/finalize.py"
+    },
+    {
+      "comment": "STEP LOG P10-PREFLIGHT-001: Probe the exact locked backends and accelerator without installing or substituting a method.",
+      "comment_line": 28,
+      "console_log_line": 29,
+      "event_id": "P10-PREFLIGHT-001",
+      "file": "src/pead/phase10/preflight.py"
+    },
+    {
+      "comment": "STEP LOG P10-PREFLIGHT-002: Instantiate the frozen MLP and scalar architectures to distinguish architecture defects from unavailable training compute.",
+      "comment_line": 33,
+      "console_log_line": 34,
+      "event_id": "P10-PREFLIGHT-002",
+      "file": "src/pead/phase10/preflight.py"
+    },
+    {
+      "comment": "STEP LOG P10-PREFLIGHT-003: Bind every retained failure to a concrete registered-resource or prerequisite failure.",
+      "comment_line": 42,
+      "console_log_line": 43,
+      "event_id": "P10-PREFLIGHT-003",
+      "file": "src/pead/phase10/preflight.py"
+    },
+    {
+      "comment": "STEP LOG P10-PREFLIGHT-004: Retain the non-substitution evidence and prohibit imputed scientific metrics for failed methods.",
+      "comment_line": 72,
+      "console_log_line": 73,
+      "event_id": "P10-PREFLIGHT-004",
+      "file": "src/pead/phase10/preflight.py"
+    },
+    {
+      "comment": "STEP LOG P10-REPAIR-001: Hash every P-only and Raw-G identity, label, and feature byte before regenerating the Oracle-only representation.",
+      "comment_line": 36,
+      "console_log_line": 37,
+      "event_id": "P10-REPAIR-001",
+      "file": "src/pead/phase10/repair.py"
+    },
+    {
+      "comment": "STEP LOG P10-REPAIR-002: Regenerate every open-bank container with lossless Oracle labels and no change to P-only or Raw-G projections.",
+      "comment_line": 40,
+      "console_log_line": 41,
+      "event_id": "P10-REPAIR-002",
+      "file": "src/pead/phase10/repair.py"
+    },
+    {
+      "comment": "STEP LOG P10-REPAIR-003: Retain the byte-equivalence and full Oracle reconstruction proof before downstream reruns.",
+      "comment_line": 69,
+      "console_log_line": 70,
+      "event_id": "P10-REPAIR-003",
+      "file": "src/pead/phase10/repair.py"
+    },
+    {
+      "comment": "STEP LOG P10-RUN-001: Generate all five exact-volume open roles before any training attempt.",
+      "comment_line": 20,
+      "console_log_line": 21,
+      "event_id": "P10-RUN-001",
+      "file": "src/pead/phase10/run.py"
+    },
+    {
+      "comment": "STEP LOG P10-RUN-001A: Prove the corrected Oracle representation leaves P-only and Raw-G identities, labels, and features unchanged under regeneration.",
+      "comment_line": 23,
+      "console_log_line": 24,
+      "event_id": "P10-RUN-001A",
+      "file": "src/pead/phase10/run.py"
+    },
+    {
+      "comment": "STEP LOG P10-RUN-001B: Record exact backend and compute availability before any registered method attempt.",
+      "comment_line": 26,
+      "console_log_line": 27,
+      "event_id": "P10-RUN-001B",
+      "file": "src/pead/phase10/run.py"
+    },
+    {
+      "comment": "STEP LOG P10-RUN-002: Execute registered training/fixed readiness and retain every success or failure.",
+      "comment_line": 29,
+      "console_log_line": 30,
+      "event_id": "P10-RUN-002",
+      "file": "src/pead/phase10/run.py"
+    },
+    {
+      "comment": "STEP LOG P10-RUN-003: Freeze calibration-policy choices and execute inspection-only public validation.",
+      "comment_line": 32,
+      "console_log_line": 33,
+      "event_id": "P10-RUN-003",
+      "file": "src/pead/phase10/run.py"
+    },
+    {
+      "comment": "STEP LOG P10-RUN-004: Run the complete zero-gap audit and create the method-freeze candidate.",
+      "comment_line": 35,
+      "console_log_line": 36,
+      "event_id": "P10-RUN-004",
+      "file": "src/pead/phase10/run.py"
+    },
+    {
+      "comment": "STEP LOG P10-RUN-005: Retain the complete Phase 10 outcome and stop before Phase 11.",
+      "comment_line": 40,
+      "console_log_line": 41,
+      "event_id": "P10-RUN-005",
+      "file": "src/pead/phase10/run.py"
+    },
+    {
+      "comment": "STEP LOG P10-TEST-001: Discover the complete repository regression and Phase 10 stress suite.",
+      "comment_line": 18,
+      "console_log_line": 19,
+      "event_id": "P10-TEST-001",
+      "file": "src/pead/phase10/test_runner.py"
+    },
+    {
+      "comment": "STEP LOG P10-TEST-002: Replay Phase 10 integrity and freeze-candidate gates after all regression tests.",
+      "comment_line": 21,
+      "console_log_line": 22,
+      "event_id": "P10-TEST-002",
+      "file": "src/pead/phase10/test_runner.py"
+    },
+    {
+      "comment": "STEP LOG P10-TEST-003: Retain exact regression denominators and the final compliance verdict.",
+      "comment_line": 27,
+      "console_log_line": 28,
+      "event_id": "P10-TEST-003",
+      "file": "src/pead/phase10/test_runner.py"
+    },
+    {
+      "comment": "STEP LOG P10-TRAIN-001: Verify the Phase 9A commitment before the first model or fixed-method execution.",
+      "comment_line": 181,
+      "console_log_line": 182,
+      "event_id": "P10-TRAIN-001",
+      "file": "src/pead/phase10/training.py"
+    },
+    {
+      "comment": "STEP LOG P10-TRAIN-002: Load matched full-volume role-isolated projections for all three access profiles.",
+      "comment_line": 188,
+      "console_log_line": 189,
+      "event_id": "P10-TRAIN-002",
+      "file": "src/pead/phase10/training.py"
+    },
+    {
+      "comment": "STEP LOG P10-TRAIN-003: Execute one complete registered CPU-compatible grid with all three seeds.",
+      "comment_line": 192,
+      "console_log_line": 193,
+      "event_id": "P10-TRAIN-003",
+      "file": "src/pead/phase10/training.py"
+    },
+    {
+      "comment": "STEP LOG P10-TRAIN-004: Retain every unavailable accelerator or pinned-weight execution as an unsuppressed method failure.",
+      "comment_line": 205,
+      "console_log_line": 206,
+      "event_id": "P10-TRAIN-004",
+      "file": "src/pead/phase10/training.py"
+    },
+    {
+      "comment": "STEP LOG P10-TRAIN-005: Fit each successful model calibrator exactly once on calibration_fit after selection freeze.",
+      "comment_line": 248,
+      "console_log_line": 249,
+      "event_id": "P10-TRAIN-005",
+      "file": "src/pead/phase10/training.py"
+    },
+    {
+      "comment": "STEP LOG P10-TRAIN-006: Retain selected checkpoints, complete trial histories, failures, environment, and commitment identity.",
+      "comment_line": 252,
+      "console_log_line": 253,
+      "event_id": "P10-TRAIN-006",
+      "file": "src/pead/phase10/training.py"
+    },
+    {
+      "comment": "STEP LOG P10-VALIDATE-001: Select terminal policies once on calibration_policy with the frozen lexicographic constraint.",
+      "comment_line": 100,
+      "console_log_line": 101,
+      "event_id": "P10-VALIDATE-001",
+      "file": "src/pead/phase10/validation.py"
+    },
+    {
+      "comment": "STEP LOG P10-VALIDATE-002: Execute every ready fixed or trained method once on inspection-only public validation.",
+      "comment_line": 139,
+      "console_log_line": 140,
+      "event_id": "P10-VALIDATE-002",
+      "file": "src/pead/phase10/validation.py"
+    },
+    {
+      "comment": "STEP LOG P10-VALIDATE-003: Freeze public precision, minimum effects, statistical procedures, and the primary architecture comparison.",
+      "comment_line": 147,
+      "console_log_line": 148,
+      "event_id": "P10-VALIDATE-003",
+      "file": "src/pead/phase10/validation.py"
+    }
+  ],
+  "phase": 10,
+  "schema_version": "1.0",
+  "status": "pass"
+}

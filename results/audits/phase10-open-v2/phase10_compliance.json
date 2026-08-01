@@ -1,0 +1,146 @@
+{
+  "banks": {
+    "atomic_groups": 101700,
+    "case_ids": 200700,
+    "duplicate_case_ids": 0,
+    "duplicate_world_ids": 0,
+    "exact_control_fraction": 0.2,
+    "exact_divergent_pairs": 28800,
+    "exact_pairs_predictively_equal": 36000,
+    "exact_same_label_controls": 7200,
+    "files": 150,
+    "label_counts": [
+      65397,
+      65431,
+      69872
+    ],
+    "non_triviality": "pass",
+    "oracle_reconstruction": {
+      "accuracy": 1.0,
+      "correct": 200700,
+      "total": 200700
+    },
+    "projection_identity_alignment": "pass",
+    "role_overlap": 0,
+    "roles": {
+      "calibration_fit": {
+        "evidence": 1128,
+        "exact": 6000,
+        "near": 3000,
+        "reversal": 4500,
+        "scope": 2100
+      },
+      "calibration_policy": {
+        "evidence": 1122,
+        "exact": 6000,
+        "near": 3000,
+        "reversal": 4500,
+        "scope": 2100
+      },
+      "development_fit": {
+        "evidence": 6750,
+        "exact": 36000,
+        "near": 18000,
+        "reversal": 27000,
+        "scope": 12600
+      },
+      "development_selection": {
+        "evidence": 2250,
+        "exact": 12000,
+        "near": 6000,
+        "reversal": 9000,
+        "scope": 4200
+      },
+      "public_validation": {
+        "evidence": 2250,
+        "exact": 12000,
+        "near": 6000,
+        "reversal": 9000,
+        "scope": 4200
+      }
+    },
+    "status": "pass",
+    "world_ids": 200700
+  },
+  "compliance_gaps": [],
+  "console_log_sites": 39,
+  "integrity_gates": {
+    "abstention_disclosure": "pass",
+    "budget": "pass",
+    "duplicates": "pass",
+    "leakage": "pass",
+    "non_triviality": "pass",
+    "parity": "pass",
+    "power_effect_size": "pass",
+    "public_validation": "pass",
+    "result_hygiene": "pass"
+  },
+  "invalidation_entries": 4,
+  "oracle_repair": {
+    "classification": "interface_only_infrastructure_defect",
+    "defect": "Oracle projection omitted the exact-control authorization override",
+    "invalidated_artifact_archive": "C:/Users/Saif malik/OneDrive/Documents/Desktop/Documents/PEAD_INVALIDATED_PHASE10_ORACLE_VALIDATION",
+    "invalidation_scope": "Oracle-profile validation, processed reports, audit, and freeze candidate",
+    "new_open_bank_manifest_sha256": "df5ab3adf0c6c1d361271056776fe7233d79083710402e9d357d989e6401c8bd",
+    "old_open_bank_manifest_sha256": "df5ab3adf0c6c1d361271056776fe7233d79083710402e9d357d989e6401c8bd",
+    "oracle_reconstruction_correct": 200700,
+    "oracle_reconstruction_total": 200700,
+    "oracle_rule_accuracy": 1.0,
+    "phase": 10,
+    "projection_digests_after": {
+      "P-only": "dd6e76cc93cee7dd4aa7279d44c296229b0d1030164191c43382168f78eeaa7e",
+      "Raw-G": "5c51332f2d48711965db62c205f041df720265ffe4acf1feb9710ce08bdb7934"
+    },
+    "projection_digests_before": {
+      "P-only": "dd6e76cc93cee7dd4aa7279d44c296229b0d1030164191c43382168f78eeaa7e",
+      "Raw-G": "5c51332f2d48711965db62c205f041df720265ffe4acf1feb9710ce08bdb7934"
+    },
+    "retained_training_scope": "P-only and Raw-G checkpoints only after byte-level projection proof",
+    "run_id": "phase10-open-v2",
+    "schema_version": "1.0",
+    "status": "pass",
+    "unchanged_projection_proof": true
+  },
+  "phase": 10,
+  "phase11_started": false,
+  "phase9a_commitment_unchanged": true,
+  "previous_results_present": [],
+  "run_id": "phase10-open-v2",
+  "schema_version": "1.0",
+  "sealed_bank_accesses": 0,
+  "sealed_source_references": [],
+  "status": "pass",
+  "training": {
+    "attempt_records": 20,
+    "budget_expansions": 0,
+    "commitment_in_trace": "pass",
+    "failed_attempts_retained": 13,
+    "inventory_methods": 39,
+    "resource_failure_evidence": "pass",
+    "status": "pass",
+    "substitutions": 0,
+    "trained_variants": [
+      "G01-LOGREG",
+      "G02-TREE",
+      "G03-GBDT",
+      "P08-TABULAR-gbdt",
+      "P08-TABULAR-logistic"
+    ]
+  },
+  "validation": {
+    "degenerate_abstention_methods_disclosed": [
+      "P05-CONF-STATIC",
+      "P06-CONF-ADAPT",
+      "P08-TABULAR"
+    ],
+    "evaluated_methods": 28,
+    "failed_methods_visible": 11,
+    "operating_point_role_isolation": "pass",
+    "oracle_rule_accuracy": 1.0,
+    "power_effect_size": "pass",
+    "prediction_case_alignment": "pass",
+    "public_rows_per_ready_method": 33450,
+    "public_selection_events": 0,
+    "status": "pass"
+  }
+}

@@ -28,6 +28,9 @@ class Phase9APresealTests(unittest.TestCase):
         finally:
             target.write_bytes(original)
 
-    def test_phase10_artifacts_absent(self):
-        self.assertFalse((ROOT / "banks/development").exists())
-        self.assertFalse((ROOT / "manifests/freeze_candidate_v1.json").exists())
+    def test_phase10_artifacts_were_absent_at_seal(self):
+        commitment = json.loads(
+            (ROOT / "manifests/custody/holdout_design_commitment.json").read_text(encoding="utf-8")
+        )
+        self.assertTrue(commitment["chronology"]["phase9a_precedes_phase10"])
+        self.assertEqual(commitment["chronology"]["phase10_artifact_count_at_seal"], 0)

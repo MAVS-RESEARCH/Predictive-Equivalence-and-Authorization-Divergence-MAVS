@@ -1,0 +1,25 @@
+{
+  "classification": "interface_only_infrastructure_defect",
+  "defect": "Oracle projection omitted the exact-control authorization override",
+  "invalidated_artifact_archive": "C:/Users/Saif malik/OneDrive/Documents/Desktop/Documents/PEAD_INVALIDATED_PHASE10_ORACLE_VALIDATION",
+  "invalidation_scope": "Oracle-profile validation, processed reports, audit, and freeze candidate",
+  "new_open_bank_manifest_sha256": "df5ab3adf0c6c1d361271056776fe7233d79083710402e9d357d989e6401c8bd",
+  "old_open_bank_manifest_sha256": "df5ab3adf0c6c1d361271056776fe7233d79083710402e9d357d989e6401c8bd",
+  "oracle_reconstruction_correct": 200700,
+  "oracle_reconstruction_total": 200700,
+  "oracle_rule_accuracy": 1.0,
+  "phase": 10,
+  "projection_digests_after": {
+    "P-only": "dd6e76cc93cee7dd4aa7279d44c296229b0d1030164191c43382168f78eeaa7e",
+    "Raw-G": "5c51332f2d48711965db62c205f041df720265ffe4acf1feb9710ce08bdb7934"
+  },
+  "projection_digests_before": {
+    "P-only": "dd6e76cc93cee7dd4aa7279d44c296229b0d1030164191c43382168f78eeaa7e",
+    "Raw-G": "5c51332f2d48711965db62c205f041df720265ffe4acf1feb9710ce08bdb7934"
+  },
+  "retained_training_scope": "P-only and Raw-G checkpoints only after byte-level projection proof",
+  "run_id": "phase10-open-v2",
+  "schema_version": "1.0",
+  "status": "pass",
+  "unchanged_projection_proof": true
+}

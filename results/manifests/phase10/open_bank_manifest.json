@@ -1,0 +1,1560 @@
+{
+  "bank_id": "phase10-open-banks-v2",
+  "claim_bearing_content": false,
+  "files": [
+    {
+      "bytes": 409779,
+      "domain": "D1",
+      "path": "banks/development/development_fit/D1/exact.npz",
+      "role": "development_fit",
+      "rows": 6000,
+      "sha256": "f38e1dead8e844190ea582af479d0dbb20295ece48d3981c8a1135f6a49fb196",
+      "track": "exact",
+      "units": 3000
+    },
+    {
+      "bytes": 210031,
+      "domain": "D1",
+      "path": "banks/development/development_fit/D1/near.npz",
+      "role": "development_fit",
+      "rows": 3000,
+      "sha256": "2ed502d66b37035bd665dd56a6aec0dce6928ed144a9ba9b3019228ce8a0e3cd",
+      "track": "near",
+      "units": 1500
+    },
+    {
+      "bytes": 269996,
+      "domain": "D1",
+      "path": "banks/development/development_fit/D1/reversal.npz",
+      "role": "development_fit",
+      "rows": 4500,
+      "sha256": "eeba226ae5262f19c805b565f630ca095f5990da509ea9c354167ea37796427e",
+      "track": "reversal",
+      "units": 750
+    },
+    {
+      "bytes": 174838,
+      "domain": "D1",
+      "path": "banks/development/development_fit/D1/scope.npz",
+      "role": "development_fit",
+      "rows": 2100,
+      "sha256": "a72b31aa136e7dc9378a351d0256b317be60f3cecfd31c24d42931211a89494e",
+      "track": "scope",
+      "units": 2100
+    },
+    {
+      "bytes": 94616,
+      "domain": "D1",
+      "path": "banks/development/development_fit/D1/evidence.npz",
+      "role": "development_fit",
+      "rows": 1125,
+      "sha256": "db87a0765600081042b190a67f9e29abae3c90c197126615287a1d1ad5e8cee9",
+      "track": "evidence",
+      "units": 1125
+    },
+    {
+      "bytes": 409819,
+      "domain": "D2",
+      "path": "banks/development/development_fit/D2/exact.npz",
+      "role": "development_fit",
+      "rows": 6000,
+      "sha256": "dbf243541406f3c9f34d657fac56af5f87f8562f3a174671ccf719e89fd543ef",
+      "track": "exact",
+      "units": 3000
+    },
+    {
+      "bytes": 210059,
+      "domain": "D2",
+      "path": "banks/development/development_fit/D2/near.npz",
+      "role": "development_fit",
+      "rows": 3000,
+      "sha256": "96be7a7484aa61d37f80faf39a74c2037de97c32eb3b96202787f9f152c2bdd7",
+      "track": "near",
+      "units": 1500
+    },
+    {
+      "bytes": 269909,
+      "domain": "D2",
+      "path": "banks/development/development_fit/D2/reversal.npz",
+      "role": "development_fit",
+      "rows": 4500,
+      "sha256": "8bed0fab05c4148eb1e2cf9c7417cf4481d647e642129b18876a2fd7c75790e1",
+      "track": "reversal",
+      "units": 750
+    },
+    {
+      "bytes": 174681,
+      "domain": "D2",
+      "path": "banks/development/development_fit/D2/scope.npz",
+      "role": "development_fit",
+      "rows": 2100,
+      "sha256": "38051c78d67db6cb4a580a7a323579dbc37a18e666cb315866e1bc2cab654e55",
+      "track": "scope",
+      "units": 2100
+    },
+    {
+      "bytes": 94545,
+      "domain": "D2",
+      "path": "banks/development/development_fit/D2/evidence.npz",
+      "role": "development_fit",
+      "rows": 1125,
+      "sha256": "30eed78183a56935c6761c7f7d50f3e754da97c83b94bfb8a683baa7a37a084b",
+      "track": "evidence",
+      "units": 1125
+    },
+    {
+      "bytes": 409835,
+      "domain": "D3",
+      "path": "banks/development/development_fit/D3/exact.npz",
+      "role": "development_fit",
+      "rows": 6000,
+      "sha256": "4e467e5500b427152e387bf3b6872ced8bfcbd9c904cfc93bce39196aeba9e8f",
+      "track": "exact",
+      "units": 3000
+    },
+    {
+      "bytes": 210003,
+      "domain": "D3",
+      "path": "banks/development/development_fit/D3/near.npz",
+      "role": "development_fit",
+      "rows": 3000,
+      "sha256": "4a8bd67ad3905cb4400427579934b0080ce8ca0b6f5170aebe058a73972b5b1a",
+      "track": "near",
+      "units": 1500
+    },
+    {
+      "bytes": 269886,
+      "domain": "D3",
+      "path": "banks/development/development_fit/D3/reversal.npz",
+      "role": "development_fit",
+      "rows": 4500,
+      "sha256": "c72914dc810518b38bf0a2da0299bf5a83ab64aa9417b15bd975ec7b46cf16fa",
+      "track": "reversal",
+      "units": 750
+    },
+    {
+      "bytes": 174715,
+      "domain": "D3",
+      "path": "banks/development/development_fit/D3/scope.npz",
+      "role": "development_fit",
+      "rows": 2100,
+      "sha256": "5ff1177810173265da95b889bb98d6a76383bae4c28ddf1dc7e04fb6edbfd229",
+      "track": "scope",
+      "units": 2100
+    },
+    {
+      "bytes": 94518,
+      "domain": "D3",
+      "path": "banks/development/development_fit/D3/evidence.npz",
+      "role": "development_fit",
+      "rows": 1125,
+      "sha256": "9ef23e8c5f43d5234122f2236a0909faa0a9d766cbd58cc428be155a10ec0bd9",
+      "track": "evidence",
+      "units": 1125
+    },
+    {
+      "bytes": 409702,
+      "domain": "D4",
+      "path": "banks/development/development_fit/D4/exact.npz",
+      "role": "development_fit",
+      "rows": 6000,
+      "sha256": "16ac01cec979f6dafa9ddb9b747d26db91bce02659dabf5380732e400b086c3a",
+      "track": "exact",
+      "units": 3000
+    },
+    {
+      "bytes": 210151,
+      "domain": "D4",
+      "path": "banks/development/development_fit/D4/near.npz",
+      "role": "development_fit",
+      "rows": 3000,
+      "sha256": "3b73b984065142e29ddf586c12e0487150fd53ed0439ea3f5820112915c6492a",
+      "track": "near",
+      "units": 1500
+    },
+    {
+      "bytes": 269854,
+      "domain": "D4",
+      "path": "banks/development/development_fit/D4/reversal.npz",
+      "role": "development_fit",
+      "rows": 4500,
+      "sha256": "a8fba10935be66d341a504b340c9bf05a9c784a391cc15c8ff0f65c69db92528",
+      "track": "reversal",
+      "units": 750
+    },
+    {
+      "bytes": 174681,
+      "domain": "D4",
+      "path": "banks/development/development_fit/D4/scope.npz",
+      "role": "development_fit",
+      "rows": 2100,
+      "sha256": "616bd29c54c79d235b837eb39be3276df16875b1f809b16a1e2c202d4abf98f6",
+      "track": "scope",
+      "units": 2100
+    },
+    {
+      "bytes": 94530,
+      "domain": "D4",
+      "path": "banks/development/development_fit/D4/evidence.npz",
+      "role": "development_fit",
+      "rows": 1125,
+      "sha256": "e4204bfd89c0ddb977d2c9060b87c41d9c6d8cd03be8b9d42efc8e82a1e564b1",
+      "track": "evidence",
+      "units": 1125
+    },
+    {
+      "bytes": 409864,
+      "domain": "D5",
+      "path": "banks/development/development_fit/D5/exact.npz",
+      "role": "development_fit",
+      "rows": 6000,
+      "sha256": "01b73212f75f0ffb6c410370c27fee18eee3040dd5eba27e1c8cc10ccbad028f",
+      "track": "exact",
+      "units": 3000
+    },
+    {
+      "bytes": 210082,
+      "domain": "D5",
+      "path": "banks/development/development_fit/D5/near.npz",
+      "role": "development_fit",
+      "rows": 3000,
+      "sha256": "38a01ddd2cbc403ea9fa93c58e84c62dacc487d477e2fe2b4177fc97732b242a",
+      "track": "near",
+      "units": 1500
+    },
+    {
+      "bytes": 270041,
+      "domain": "D5",
+      "path": "banks/development/development_fit/D5/reversal.npz",
+      "role": "development_fit",
+      "rows": 4500,
+      "sha256": "2ddcc0d89079e2ea15bef79e922de0081d312061d5cbb5b7c1b82632a800d1b8",
+      "track": "reversal",
+      "units": 750
+    },
+    {
+      "bytes": 174781,
+      "domain": "D5",
+      "path": "banks/development/development_fit/D5/scope.npz",
+      "role": "development_fit",
+      "rows": 2100,
+      "sha256": "8ca3d3516b2ba27cfd3bd507fe406e5d47ef40f50f97aa599e9d5da650e2a660",
+      "track": "scope",
+      "units": 2100
+    },
+    {
+      "bytes": 94564,
+      "domain": "D5",
+      "path": "banks/development/development_fit/D5/evidence.npz",
+      "role": "development_fit",
+      "rows": 1125,
+      "sha256": "ea8d0bb8c510f6c01ff55cbce15aeb8cc28538b3011b3dcdbebe16bfa30639ab",
+      "track": "evidence",
+      "units": 1125
+    },
+    {
+      "bytes": 409732,
+      "domain": "D6",
+      "path": "banks/development/development_fit/D6/exact.npz",
+      "role": "development_fit",
+      "rows": 6000,
+      "sha256": "e946a85ed2db2df1aeec486da03844b9aa6bc46cee9cb1be2c4685babf284fc5",
+      "track": "exact",
+      "units": 3000
+    },
+    {
+      "bytes": 209972,
+      "domain": "D6",
+      "path": "banks/development/development_fit/D6/near.npz",
+      "role": "development_fit",
+      "rows": 3000,
+      "sha256": "a4832db88c4672c627f502cdfb6a92dacbdc22df48497384a4d34f74dfd2a6a8",
+      "track": "near",
+      "units": 1500
+    },
+    {
+      "bytes": 269979,
+      "domain": "D6",
+      "path": "banks/development/development_fit/D6/reversal.npz",
+      "role": "development_fit",
+      "rows": 4500,
+      "sha256": "fab859a591d979ae892b3415570b634223ef6c30a853291b5edd80ed360016be",
+      "track": "reversal",
+      "units": 750
+    },
+    {
+      "bytes": 174862,
+      "domain": "D6",
+      "path": "banks/development/development_fit/D6/scope.npz",
+      "role": "development_fit",
+      "rows": 2100,
+      "sha256": "87455a7ed9239d4a2b097b7875166be4d4a529cde2e0210919853e6aea2e1a4d",
+      "track": "scope",
+      "units": 2100
+    },
+    {
+      "bytes": 94601,
+      "domain": "D6",
+      "path": "banks/development/development_fit/D6/evidence.npz",
+      "role": "development_fit",
+      "rows": 1125,
+      "sha256": "7b9848786f17fdcdc4af77599ac293db2485ae4ced700826c9a69e812aa3fac8",
+      "track": "evidence",
+      "units": 1125
+    },
+    {
+      "bytes": 137911,
+      "domain": "D1",
+      "path": "banks/development/development_selection/D1/exact.npz",
+      "role": "development_selection",
+      "rows": 2000,
+      "sha256": "ebc27faccf9a270d65c0f5d1e91547214c1da4c541371930b6de84deb3b8993a",
+      "track": "exact",
+      "units": 1000
+    },
+    {
+      "bytes": 71378,
+      "domain": "D1",
+      "path": "banks/development/development_selection/D1/near.npz",
+      "role": "development_selection",
+      "rows": 1000,
+      "sha256": "ed97d441b1215a5c5f139f1a93211961d66f3ccfef1182f428cd7bd7a4d3dd98",
+      "track": "near",
+      "units": 500
+    },
+    {
+      "bytes": 91496,
+      "domain": "D1",
+      "path": "banks/development/development_selection/D1/reversal.npz",
+      "role": "development_selection",
+      "rows": 1500,
+      "sha256": "3a16b7e4452160dd3bde11ea832f611610d4b89e4826c3ee041f37da4a2c6fc6",
+      "track": "reversal",
+      "units": 250
+    },
+    {
+      "bytes": 59578,
+      "domain": "D1",
+      "path": "banks/development/development_selection/D1/scope.npz",
+      "role": "development_selection",
+      "rows": 700,
+      "sha256": "e771c9185d32a7d562736de0485162828451e4bcaaec0e85c623043f071fc523",
+      "track": "scope",
+      "units": 700
+    },
+    {
+      "bytes": 32859,
+      "domain": "D1",
+      "path": "banks/development/development_selection/D1/evidence.npz",
+      "role": "development_selection",
+      "rows": 375,
+      "sha256": "c7e375d9ddca3c54f3075a50809bdb75208e3668767fa3e79ab68632711137cc",
+      "track": "evidence",
+      "units": 375
+    },
+    {
+      "bytes": 137999,
+      "domain": "D2",
+      "path": "banks/development/development_selection/D2/exact.npz",
+      "role": "development_selection",
+      "rows": 2000,
+      "sha256": "388507999af19a771c276581757692dae0a5358fad32736090759b6c7d6ccc3f",
+      "track": "exact",
+      "units": 1000
+    },
+    {
+      "bytes": 71437,
+      "domain": "D2",
+      "path": "banks/development/development_selection/D2/near.npz",
+      "role": "development_selection",
+      "rows": 1000,
+      "sha256": "2f1dce5e7d77e7af27d6111559f181c0427e139bd34f34e537cffe425a7808c3",
+      "track": "near",
+      "units": 500
+    },
+    {
+      "bytes": 91415,
+      "domain": "D2",
+      "path": "banks/development/development_selection/D2/reversal.npz",
+      "role": "development_selection",
+      "rows": 1500,
+      "sha256": "720bbd438e87e3707f464b15ea07c2a7b69cd5849855f3c00cfb64425edda0dc",
+      "track": "reversal",
+      "units": 250
+    },
+    {
+      "bytes": 59564,
+      "domain": "D2",
+      "path": "banks/development/development_selection/D2/scope.npz",
+      "role": "development_selection",
+      "rows": 700,
+      "sha256": "493a3f38999ce870d00ec8bd8414434d6a56a46806b3660cc5e8d793b38cfbc6",
+      "track": "scope",
+      "units": 700
+    },
+    {
+      "bytes": 32834,
+      "domain": "D2",
+      "path": "banks/development/development_selection/D2/evidence.npz",
+      "role": "development_selection",
+      "rows": 375,
+      "sha256": "bf2cf4398137b01c21c2360a86050c2d3b8a86c042b154af323af8834adf4c40",
+      "track": "evidence",
+      "units": 375
+    },
+    {
+      "bytes": 138017,
+      "domain": "D3",
+      "path": "banks/development/development_selection/D3/exact.npz",
+      "role": "development_selection",
+      "rows": 2000,
+      "sha256": "91c2e29b22e1a72beceedfb23a3c69859e4579b5e6818f170513f32d1e2e95fe",
+      "track": "exact",
+      "units": 1000
+    },
+    {
+      "bytes": 71411,
+      "domain": "D3",
+      "path": "banks/development/development_selection/D3/near.npz",
+      "role": "development_selection",
+      "rows": 1000,
+      "sha256": "4c487c93d02c4be6e6607276b63903747a3b6a03a99b90d59bd1f1a41d2d5e63",
+      "track": "near",
+      "units": 500
+    },
+    {
+      "bytes": 91318,
+      "domain": "D3",
+      "path": "banks/development/development_selection/D3/reversal.npz",
+      "role": "development_selection",
+      "rows": 1500,
+      "sha256": "a04400736ccc7ff07734caeb7ea274f8bf88e45a315bb02b7c7a6e3be3e9e96d",
+      "track": "reversal",
+      "units": 250
+    },
+    {
+      "bytes": 59586,
+      "domain": "D3",
+      "path": "banks/development/development_selection/D3/scope.npz",
+      "role": "development_selection",
+      "rows": 700,
+      "sha256": "55f38a18808dd5393383cfc4765ca4afbf2481177f30adb356cfc7995a901c5b",
+      "track": "scope",
+      "units": 700
+    },
+    {
+      "bytes": 32872,
+      "domain": "D3",
+      "path": "banks/development/development_selection/D3/evidence.npz",
+      "role": "development_selection",
+      "rows": 375,
+      "sha256": "40da2fc902880e4cdf54033865a9e55ec1be234e2bc0f8206115ee9fcec22061",
+      "track": "evidence",
+      "units": 375
+    },
+    {
+      "bytes": 137961,
+      "domain": "D4",
+      "path": "banks/development/development_selection/D4/exact.npz",
+      "role": "development_selection",
+      "rows": 2000,
+      "sha256": "95804941c4239ff11fa1c5fae1db1bede2eba80249dc0e35153faaa0687c8e1d",
+      "track": "exact",
+      "units": 1000
+    },
+    {
+      "bytes": 71366,
+      "domain": "D4",
+      "path": "banks/development/development_selection/D4/near.npz",
+      "role": "development_selection",
+      "rows": 1000,
+      "sha256": "c85dca8155c926512ba7c346f1d96342580fd30093b3dca78a24a013297b28e7",
+      "track": "near",
+      "units": 500
+    },
+    {
+      "bytes": 91452,
+      "domain": "D4",
+      "path": "banks/development/development_selection/D4/reversal.npz",
+      "role": "development_selection",
+      "rows": 1500,
+      "sha256": "6a97fc025a189b77fefe35a67baa503ff7b99c30f5ed22d98d86a9758e2c8b39",
+      "track": "reversal",
+      "units": 250
+    },
+    {
+      "bytes": 59595,
+      "domain": "D4",
+      "path": "banks/development/development_selection/D4/scope.npz",
+      "role": "development_selection",
+      "rows": 700,
+      "sha256": "cfadfeb7e8b5465e5272019afedd9787df7fc98095f81412af45784c6e81183f",
+      "track": "scope",
+      "units": 700
+    },
+    {
+      "bytes": 32836,
+      "domain": "D4",
+      "path": "banks/development/development_selection/D4/evidence.npz",
+      "role": "development_selection",
+      "rows": 375,
+      "sha256": "bf2716a98917da8562c44599ffa3fc63e95138d866e8f435c11f6d6a15229b43",
+      "track": "evidence",
+      "units": 375
+    },
+    {
+      "bytes": 138014,
+      "domain": "D5",
+      "path": "banks/development/development_selection/D5/exact.npz",
+      "role": "development_selection",
+      "rows": 2000,
+      "sha256": "d6f7f1012ba5a1cc0cafc16a21b05845b40c19ac335012c4788ee944988f7473",
+      "track": "exact",
+      "units": 1000
+    },
+    {
+      "bytes": 71447,
+      "domain": "D5",
+      "path": "banks/development/development_selection/D5/near.npz",
+      "role": "development_selection",
+      "rows": 1000,
+      "sha256": "03dc7270632ffadc52b7821634b98ddc3ee6bada7e2b45b1ff119da14eca5e41",
+      "track": "near",
+      "units": 500
+    },
+    {
+      "bytes": 91435,
+      "domain": "D5",
+      "path": "banks/development/development_selection/D5/reversal.npz",
+      "role": "development_selection",
+      "rows": 1500,
+      "sha256": "beff3036e1064da1d1d2d79ae664cd091565a9c71a9f545b70d1ea8fb9a910c6",
+      "track": "reversal",
+      "units": 250
+    },
+    {
+      "bytes": 59556,
+      "domain": "D5",
+      "path": "banks/development/development_selection/D5/scope.npz",
+      "role": "development_selection",
+      "rows": 700,
+      "sha256": "bc239c6724d844f9dc9c53bc4799c67ee6519892d2e1cf6db0ebed573c9d8757",
+      "track": "scope",
+      "units": 700
+    },
+    {
+      "bytes": 32850,
+      "domain": "D5",
+      "path": "banks/development/development_selection/D5/evidence.npz",
+      "role": "development_selection",
+      "rows": 375,
+      "sha256": "24e7b0e12c190829adec5729c57f60bc241e78b66166c03284f0189b9dd2915b",
+      "track": "evidence",
+      "units": 375
+    },
+    {
+      "bytes": 137971,
+      "domain": "D6",
+      "path": "banks/development/development_selection/D6/exact.npz",
+      "role": "development_selection",
+      "rows": 2000,
+      "sha256": "35399fa9b918070b712b79932f4f0d4393b48272129cfa05ebd5ed98d981cb47",
+      "track": "exact",
+      "units": 1000
+    },
+    {
+      "bytes": 71370,
+      "domain": "D6",
+      "path": "banks/development/development_selection/D6/near.npz",
+      "role": "development_selection",
+      "rows": 1000,
+      "sha256": "f3d00c7b3e1f695ab5eb7a3f0d5f860c35b153daa3e25a715b2d3b2970c80726",
+      "track": "near",
+      "units": 500
+    },
+    {
+      "bytes": 91406,
+      "domain": "D6",
+      "path": "banks/development/development_selection/D6/reversal.npz",
+      "role": "development_selection",
+      "rows": 1500,
+      "sha256": "09f0eb07075db2568daa2e00e76f837d1d855b5a0bd53a44b3ad822db1e3c74e",
+      "track": "reversal",
+      "units": 250
+    },
+    {
+      "bytes": 59594,
+      "domain": "D6",
+      "path": "banks/development/development_selection/D6/scope.npz",
+      "role": "development_selection",
+      "rows": 700,
+      "sha256": "44fafd157ce3b313363b20640c444b120f5d683d603d629a8ed915a915277ceb",
+      "track": "scope",
+      "units": 700
+    },
+    {
+      "bytes": 32888,
+      "domain": "D6",
+      "path": "banks/development/development_selection/D6/evidence.npz",
+      "role": "development_selection",
+      "rows": 375,
+      "sha256": "4df7e6efb73aca6c5141ae06753736b53d958330cc606ed5b6beeb5e3cf5fdf5",
+      "track": "evidence",
+      "units": 375
+    },
+    {
+      "bytes": 70003,
+      "domain": "D1",
+      "path": "banks/calibration/calibration_fit/D1/exact.npz",
+      "role": "calibration_fit",
+      "rows": 1000,
+      "sha256": "884c8e79ab4a35f60edaf8cb0f9d879348d5cbf34e42bc56efc5cbadc433c435",
+      "track": "exact",
+      "units": 500
+    },
+    {
+      "bytes": 36722,
+      "domain": "D1",
+      "path": "banks/calibration/calibration_fit/D1/near.npz",
+      "role": "calibration_fit",
+      "rows": 500,
+      "sha256": "d9723a482a2908b1ed64f0f75cc1b327a52d44fdc11d95d9261f741ae0fb9c16",
+      "track": "near",
+      "units": 250
+    },
+    {
+      "bytes": 46683,
+      "domain": "D1",
+      "path": "banks/calibration/calibration_fit/D1/reversal.npz",
+      "role": "calibration_fit",
+      "rows": 750,
+      "sha256": "672226aea39cc148d42217a57cacfeb1ec782d3a45471a21aef2493549f28596",
+      "track": "reversal",
+      "units": 125
+    },
+    {
+      "bytes": 30796,
+      "domain": "D1",
+      "path": "banks/calibration/calibration_fit/D1/scope.npz",
+      "role": "calibration_fit",
+      "rows": 350,
+      "sha256": "c4ae3bfb08de0479bad469886f342cc04f43aa477aaac8ae8372391e860fe90c",
+      "track": "scope",
+      "units": 350
+    },
+    {
+      "bytes": 17420,
+      "domain": "D1",
+      "path": "banks/calibration/calibration_fit/D1/evidence.npz",
+      "role": "calibration_fit",
+      "rows": 188,
+      "sha256": "600dc00cf98dab6f8c2d0a1c10ce4676c29723bba22b67df5a589deee45a651e",
+      "track": "evidence",
+      "units": 188
+    },
+    {
+      "bytes": 69984,
+      "domain": "D2",
+      "path": "banks/calibration/calibration_fit/D2/exact.npz",
+      "role": "calibration_fit",
+      "rows": 1000,
+      "sha256": "fb35c112ec674acddd86def06927d5c6e551933189c105cccde0abd2967f165e",
+      "track": "exact",
+      "units": 500
+    },
+    {
+      "bytes": 36744,
+      "domain": "D2",
+      "path": "banks/calibration/calibration_fit/D2/near.npz",
+      "role": "calibration_fit",
+      "rows": 500,
+      "sha256": "5a9066a236bfa1de20a202c8da316ac731b99c726bb694e7de9b3f72b011a53b",
+      "track": "near",
+      "units": 250
+    },
+    {
+      "bytes": 46649,
+      "domain": "D2",
+      "path": "banks/calibration/calibration_fit/D2/reversal.npz",
+      "role": "calibration_fit",
+      "rows": 750,
+      "sha256": "c60c1a95e2188a611d96259902b42c12d3870bc2c38560e71508ba084ff01b3d",
+      "track": "reversal",
+      "units": 125
+    },
+    {
+      "bytes": 30778,
+      "domain": "D2",
+      "path": "banks/calibration/calibration_fit/D2/scope.npz",
+      "role": "calibration_fit",
+      "rows": 350,
+      "sha256": "8cc18da60f06ffc0255ff027f1fe412291b97e694622947ed2720c4b5f7f1fe0",
+      "track": "scope",
+      "units": 350
+    },
+    {
+      "bytes": 17388,
+      "domain": "D2",
+      "path": "banks/calibration/calibration_fit/D2/evidence.npz",
+      "role": "calibration_fit",
+      "rows": 188,
+      "sha256": "58d032f0f389f449fea6da2216c91f5ef5774639ede781a32213161507fc34af",
+      "track": "evidence",
+      "units": 188
+    },
+    {
+      "bytes": 69993,
+      "domain": "D3",
+      "path": "banks/calibration/calibration_fit/D3/exact.npz",
+      "role": "calibration_fit",
+      "rows": 1000,
+      "sha256": "85451f11787c9192141d5f82e8d4bba3fb039e407257c15b5d1a94900c34074a",
+      "track": "exact",
+      "units": 500
+    },
+    {
+      "bytes": 36716,
+      "domain": "D3",
+      "path": "banks/calibration/calibration_fit/D3/near.npz",
+      "role": "calibration_fit",
+      "rows": 500,
+      "sha256": "e288f9b28c0c27ce30c01391ab9266703f47cc8ad4987ee54117bf55d79ea99e",
+      "track": "near",
+      "units": 250
+    },
+    {
+      "bytes": 46644,
+      "domain": "D3",
+      "path": "banks/calibration/calibration_fit/D3/reversal.npz",
+      "role": "calibration_fit",
+      "rows": 750,
+      "sha256": "9b5e21c8ec9aec17b89b0b5cffc9122f63d40a37e6bd5b6ecbc4745a3912262c",
+      "track": "reversal",
+      "units": 125
+    },
+    {
+      "bytes": 30828,
+      "domain": "D3",
+      "path": "banks/calibration/calibration_fit/D3/scope.npz",
+      "role": "calibration_fit",
+      "rows": 350,
+      "sha256": "a23d1fdb3598390cb0fa727705ef0f8cdf6fbec952dba96088361604c0283a44",
+      "track": "scope",
+      "units": 350
+    },
+    {
+      "bytes": 17432,
+      "domain": "D3",
+      "path": "banks/calibration/calibration_fit/D3/evidence.npz",
+      "role": "calibration_fit",
+      "rows": 188,
+      "sha256": "f914baf0b3590e40baf6bb88db9ea3705622bf512b7ddf7427416057227e0b6c",
+      "track": "evidence",
+      "units": 188
+    },
+    {
+      "bytes": 70039,
+      "domain": "D4",
+      "path": "banks/calibration/calibration_fit/D4/exact.npz",
+      "role": "calibration_fit",
+      "rows": 1000,
+      "sha256": "1d4f878e9140e0e8e80c99400cfdd6a1ace1cc91bba4f4f74e7c8b37469d2e0a",
+      "track": "exact",
+      "units": 500
+    },
+    {
+      "bytes": 36711,
+      "domain": "D4",
+      "path": "banks/calibration/calibration_fit/D4/near.npz",
+      "role": "calibration_fit",
+      "rows": 500,
+      "sha256": "835f45d631c4298ddc970f73c3140a89991dac2d8ce7300c885a806b822abd6c",
+      "track": "near",
+      "units": 250
+    },
+    {
+      "bytes": 46642,
+      "domain": "D4",
+      "path": "banks/calibration/calibration_fit/D4/reversal.npz",
+      "role": "calibration_fit",
+      "rows": 750,
+      "sha256": "b5865c8a28aeced395e2d78162bac0c517b770cb4e41215173e5c78a2a43f026",
+      "track": "reversal",
+      "units": 125
+    },
+    {
+      "bytes": 30783,
+      "domain": "D4",
+      "path": "banks/calibration/calibration_fit/D4/scope.npz",
+      "role": "calibration_fit",
+      "rows": 350,
+      "sha256": "701acefdac1af1fefeb415c236ec84b222d40ec549c3ba6873e8c94b9b367603",
+      "track": "scope",
+      "units": 350
+    },
+    {
+      "bytes": 17415,
+      "domain": "D4",
+      "path": "banks/calibration/calibration_fit/D4/evidence.npz",
+      "role": "calibration_fit",
+      "rows": 188,
+      "sha256": "f6386787820d69bc40712ed0ee60f8031ceb50becf713bb119faf420d667bf20",
+      "track": "evidence",
+      "units": 188
+    },
+    {
+      "bytes": 70033,
+      "domain": "D5",
+      "path": "banks/calibration/calibration_fit/D5/exact.npz",
+      "role": "calibration_fit",
+      "rows": 1000,
+      "sha256": "f8b604a8863bbe9dce6bc41217189c133f24e586952e717c061018e2b46eb3fa",
+      "track": "exact",
+      "units": 500
+    },
+    {
+      "bytes": 36685,
+      "domain": "D5",
+      "path": "banks/calibration/calibration_fit/D5/near.npz",
+      "role": "calibration_fit",
+      "rows": 500,
+      "sha256": "416ea9fae6d8fa9c7dc40f40cbea73bfd8a4d9b9d4074e002522670b1d75041d",
+      "track": "near",
+      "units": 250
+    },
+    {
+      "bytes": 46667,
+      "domain": "D5",
+      "path": "banks/calibration/calibration_fit/D5/reversal.npz",
+      "role": "calibration_fit",
+      "rows": 750,
+      "sha256": "54bd284a4efabb17639e0084e51ccf535e8c925a35e3a9313cd7427079349552",
+      "track": "reversal",
+      "units": 125
+    },
+    {
+      "bytes": 30833,
+      "domain": "D5",
+      "path": "banks/calibration/calibration_fit/D5/scope.npz",
+      "role": "calibration_fit",
+      "rows": 350,
+      "sha256": "5bae527e0aeca49fd33754a83229aeffa4d97360ef50cb23ab40f01f396f0858",
+      "track": "scope",
+      "units": 350
+    },
+    {
+      "bytes": 17379,
+      "domain": "D5",
+      "path": "banks/calibration/calibration_fit/D5/evidence.npz",
+      "role": "calibration_fit",
+      "rows": 188,
+      "sha256": "226361b3fc3faed0d097e8a3e2d008d1f6730cb3c4c482d6012f00d1668fd15a",
+      "track": "evidence",
+      "units": 188
+    },
+    {
+      "bytes": 70013,
+      "domain": "D6",
+      "path": "banks/calibration/calibration_fit/D6/exact.npz",
+      "role": "calibration_fit",
+      "rows": 1000,
+      "sha256": "970b5a4eeb49d93b82bf6cbc143617d4ff5b58ddcb06ca1fccc2a9d9f83634c2",
+      "track": "exact",
+      "units": 500
+    },
+    {
+      "bytes": 36688,
+      "domain": "D6",
+      "path": "banks/calibration/calibration_fit/D6/near.npz",
+      "role": "calibration_fit",
+      "rows": 500,
+      "sha256": "d0157d688c0a5f07e1834ad5d902595488d3a28dd47b1b503d7dd1637790ca12",
+      "track": "near",
+      "units": 250
+    },
+    {
+      "bytes": 46638,
+      "domain": "D6",
+      "path": "banks/calibration/calibration_fit/D6/reversal.npz",
+      "role": "calibration_fit",
+      "rows": 750,
+      "sha256": "13c90f594e5ea1761ab3a606b34ca74fbe0085ee38ba7359a69aaab295ddc296",
+      "track": "reversal",
+      "units": 125
+    },
+    {
+      "bytes": 30810,
+      "domain": "D6",
+      "path": "banks/calibration/calibration_fit/D6/scope.npz",
+      "role": "calibration_fit",
+      "rows": 350,
+      "sha256": "c16aa310a649fa94541f2f80a9d70181ab707bab46ae5f96604747a2493957e5",
+      "track": "scope",
+      "units": 350
+    },
+    {
+      "bytes": 17436,
+      "domain": "D6",
+      "path": "banks/calibration/calibration_fit/D6/evidence.npz",
+      "role": "calibration_fit",
+      "rows": 188,
+      "sha256": "24e4d69b31701c0fb7dde6419e3df3640f7263a013582e68d93e62d3f47af019",
+      "track": "evidence",
+      "units": 188
+    },
+    {
+      "bytes": 69996,
+      "domain": "D1",
+      "path": "banks/calibration/calibration_policy/D1/exact.npz",
+      "role": "calibration_policy",
+      "rows": 1000,
+      "sha256": "7418d65e4d070af5482b0d92edb568cba7070a30e7e4482f17e1089ced1516be",
+      "track": "exact",
+      "units": 500
+    },
+    {
+      "bytes": 36677,
+      "domain": "D1",
+      "path": "banks/calibration/calibration_policy/D1/near.npz",
+      "role": "calibration_policy",
+      "rows": 500,
+      "sha256": "1123099e72f7a0e9fe13d5463021257b5c09312fd0365ab7b29206e0812ecae3",
+      "track": "near",
+      "units": 250
+    },
+    {
+      "bytes": 46647,
+      "domain": "D1",
+      "path": "banks/calibration/calibration_policy/D1/reversal.npz",
+      "role": "calibration_policy",
+      "rows": 750,
+      "sha256": "9c76a7ed72e000a3da1143104153e2e7a8b8321a8132852445de1fd74747c8d1",
+      "track": "reversal",
+      "units": 125
+    },
+    {
+      "bytes": 30763,
+      "domain": "D1",
+      "path": "banks/calibration/calibration_policy/D1/scope.npz",
+      "role": "calibration_policy",
+      "rows": 350,
+      "sha256": "4fcd6342c8a994dcda757c7a30e8bc6020e07bd584b154e9ad0a631b37000afa",
+      "track": "scope",
+      "units": 350
+    },
+    {
+      "bytes": 17335,
+      "domain": "D1",
+      "path": "banks/calibration/calibration_policy/D1/evidence.npz",
+      "role": "calibration_policy",
+      "rows": 187,
+      "sha256": "3efc934282a99aff5061c4d18cb39494abb706534f00386908149367d6eb0cbf",
+      "track": "evidence",
+      "units": 187
+    },
+    {
+      "bytes": 70003,
+      "domain": "D2",
+      "path": "banks/calibration/calibration_policy/D2/exact.npz",
+      "role": "calibration_policy",
+      "rows": 1000,
+      "sha256": "27db56c6acb82e6b3ade44e85730471d2854194208d5e3990f7e557ee1b1a841",
+      "track": "exact",
+      "units": 500
+    },
+    {
+      "bytes": 36702,
+      "domain": "D2",
+      "path": "banks/calibration/calibration_policy/D2/near.npz",
+      "role": "calibration_policy",
+      "rows": 500,
+      "sha256": "97ed71a2cedb80c9162d3649dee293f415b97c909be1548c5d40c261ea42fbc8",
+      "track": "near",
+      "units": 250
+    },
+    {
+      "bytes": 46659,
+      "domain": "D2",
+      "path": "banks/calibration/calibration_policy/D2/reversal.npz",
+      "role": "calibration_policy",
+      "rows": 750,
+      "sha256": "d221fe83d2f977bc35ab96d6f97dbb868da2a6cf552e0c2ba26188956b26d4b2",
+      "track": "reversal",
+      "units": 125
+    },
+    {
+      "bytes": 30786,
+      "domain": "D2",
+      "path": "banks/calibration/calibration_policy/D2/scope.npz",
+      "role": "calibration_policy",
+      "rows": 350,
+      "sha256": "ea6db75296808d46dd8ccae4c62b5252d157dde0a6103a4e06462cd92e611095",
+      "track": "scope",
+      "units": 350
+    },
+    {
+      "bytes": 17297,
+      "domain": "D2",
+      "path": "banks/calibration/calibration_policy/D2/evidence.npz",
+      "role": "calibration_policy",
+      "rows": 187,
+      "sha256": "218128ae130ef76b5ddd047ab6e7ae5ce516516c2bdcdb4e4b47e5dfbe6bf152",
+      "track": "evidence",
+      "units": 187
+    },
+    {
+      "bytes": 70003,
+      "domain": "D3",
+      "path": "banks/calibration/calibration_policy/D3/exact.npz",
+      "role": "calibration_policy",
+      "rows": 1000,
+      "sha256": "66efacb401286198dbffc5fb9c405123ed723f2bac9b4548c7f3a6b05b954a20",
+      "track": "exact",
+      "units": 500
+    },
+    {
+      "bytes": 36759,
+      "domain": "D3",
+      "path": "banks/calibration/calibration_policy/D3/near.npz",
+      "role": "calibration_policy",
+      "rows": 500,
+      "sha256": "b600674d23df66650b87978ade8520d16fc29fc4a1bda945d8bd3579b6d927b9",
+      "track": "near",
+      "units": 250
+    },
+    {
+      "bytes": 46673,
+      "domain": "D3",
+      "path": "banks/calibration/calibration_policy/D3/reversal.npz",
+      "role": "calibration_policy",
+      "rows": 750,
+      "sha256": "364d5483bb540c283a6a87aa14a1c9f092f57c02dc95cec3bc7cbf78acdf79f5",
+      "track": "reversal",
+      "units": 125
+    },
+    {
+      "bytes": 30790,
+      "domain": "D3",
+      "path": "banks/calibration/calibration_policy/D3/scope.npz",
+      "role": "calibration_policy",
+      "rows": 350,
+      "sha256": "99c0194821d26021585de94e641f7030aefe858cc2c8457125b4073f8daf2b00",
+      "track": "scope",
+      "units": 350
+    },
+    {
+      "bytes": 17309,
+      "domain": "D3",
+      "path": "banks/calibration/calibration_policy/D3/evidence.npz",
+      "role": "calibration_policy",
+      "rows": 187,
+      "sha256": "2f957bc5f03726ad75029b79ec71bab8e6c87a435d2b1bf22123be97e8687cd3",
+      "track": "evidence",
+      "units": 187
+    },
+    {
+      "bytes": 70007,
+      "domain": "D4",
+      "path": "banks/calibration/calibration_policy/D4/exact.npz",
+      "role": "calibration_policy",
+      "rows": 1000,
+      "sha256": "78d6d1e9c98249a66cac179ec2e63fc4f1cd4b1204bf8bdb8777c2472a1f35a3",
+      "track": "exact",
+      "units": 500
+    },
+    {
+      "bytes": 36669,
+      "domain": "D4",
+      "path": "banks/calibration/calibration_policy/D4/near.npz",
+      "role": "calibration_policy",
+      "rows": 500,
+      "sha256": "2e3fee517e7dca1cee15dd82c9b45ea60a30eb079567c25b35292d4fe8d5cd77",
+      "track": "near",
+      "units": 250
+    },
+    {
+      "bytes": 46645,
+      "domain": "D4",
+      "path": "banks/calibration/calibration_policy/D4/reversal.npz",
+      "role": "calibration_policy",
+      "rows": 750,
+      "sha256": "d04925b30ad398f73781c38ae5b4c1d6ba56b734eb150c9996e92daaa558b92c",
+      "track": "reversal",
+      "units": 125
+    },
+    {
+      "bytes": 30830,
+      "domain": "D4",
+      "path": "banks/calibration/calibration_policy/D4/scope.npz",
+      "role": "calibration_policy",
+      "rows": 350,
+      "sha256": "b4041bc7e68424e2263b0a9a5e677d6acc7e793ac77cc54dd1e560d2bd116595",
+      "track": "scope",
+      "units": 350
+    },
+    {
+      "bytes": 17320,
+      "domain": "D4",
+      "path": "banks/calibration/calibration_policy/D4/evidence.npz",
+      "role": "calibration_policy",
+      "rows": 187,
+      "sha256": "7d795ea667fb94d9f065b4f9fbdd6fe04f7fdced3a3dc63909264dc1134e0ab2",
+      "track": "evidence",
+      "units": 187
+    },
+    {
+      "bytes": 70027,
+      "domain": "D5",
+      "path": "banks/calibration/calibration_policy/D5/exact.npz",
+      "role": "calibration_policy",
+      "rows": 1000,
+      "sha256": "644590c158d1398f1864ecebeff2237a862e670152e022729a168cf537b9898c",
+      "track": "exact",
+      "units": 500
+    },
+    {
+      "bytes": 36722,
+      "domain": "D5",
+      "path": "banks/calibration/calibration_policy/D5/near.npz",
+      "role": "calibration_policy",
+      "rows": 500,
+      "sha256": "100c3f04519ac2614444b81c88a736bdab725d2838a7b5465d99a3fe5c4b63c2",
+      "track": "near",
+      "units": 250
+    },
+    {
+      "bytes": 46606,
+      "domain": "D5",
+      "path": "banks/calibration/calibration_policy/D5/reversal.npz",
+      "role": "calibration_policy",
+      "rows": 750,
+      "sha256": "ba6d2f48432b4be7a5a52e0d189c120fcad75059361092236ad44d4d0bd0c22c",
+      "track": "reversal",
+      "units": 125
+    },
+    {
+      "bytes": 30780,
+      "domain": "D5",
+      "path": "banks/calibration/calibration_policy/D5/scope.npz",
+      "role": "calibration_policy",
+      "rows": 350,
+      "sha256": "364e9a6170b2174dec615d04376daab451e80fab7e76f48035cab61b8f5c8a53",
+      "track": "scope",
+      "units": 350
+    },
+    {
+      "bytes": 17357,
+      "domain": "D5",
+      "path": "banks/calibration/calibration_policy/D5/evidence.npz",
+      "role": "calibration_policy",
+      "rows": 187,
+      "sha256": "9a8003b12c696099a223904bcba526ad779e7a7855cc719ac5fa3c225eaec988",
+      "track": "evidence",
+      "units": 187
+    },
+    {
+      "bytes": 70010,
+      "domain": "D6",
+      "path": "banks/calibration/calibration_policy/D6/exact.npz",
+      "role": "calibration_policy",
+      "rows": 1000,
+      "sha256": "3b87703b849cb5f11b26c024e994b960d255491cf35691265c5124219c10daa4",
+      "track": "exact",
+      "units": 500
+    },
+    {
+      "bytes": 36722,
+      "domain": "D6",
+      "path": "banks/calibration/calibration_policy/D6/near.npz",
+      "role": "calibration_policy",
+      "rows": 500,
+      "sha256": "2dd31e2f214041b3906ef9d36c9f78d60d05531cc5f1f596bb611365e31a6824",
+      "track": "near",
+      "units": 250
+    },
+    {
+      "bytes": 46668,
+      "domain": "D6",
+      "path": "banks/calibration/calibration_policy/D6/reversal.npz",
+      "role": "calibration_policy",
+      "rows": 750,
+      "sha256": "50237a8094079b077ca25dddf12501fb2d2c501085762e319e8b16199546b921",
+      "track": "reversal",
+      "units": 125
+    },
+    {
+      "bytes": 30822,
+      "domain": "D6",
+      "path": "banks/calibration/calibration_policy/D6/scope.npz",
+      "role": "calibration_policy",
+      "rows": 350,
+      "sha256": "f6b9593db8a66bad780cd56ee61f9b7410e0a8c16b8c6bd7fb5db2a22a611584",
+      "track": "scope",
+      "units": 350
+    },
+    {
+      "bytes": 17320,
+      "domain": "D6",
+      "path": "banks/calibration/calibration_policy/D6/evidence.npz",
+      "role": "calibration_policy",
+      "rows": 187,
+      "sha256": "b09013f11ff7275bb49e738e72f5d6e349c5a5ec9218b4b15b53a47b031beeb2",
+      "track": "evidence",
+      "units": 187
+    },
+    {
+      "bytes": 137921,
+      "domain": "D1",
+      "path": "banks/public_validation/public_validation/D1/exact.npz",
+      "role": "public_validation",
+      "rows": 2000,
+      "sha256": "1467f6f929dd99e03e1edab7a5d7652dd92a0d1af666f14faa95dbcf51ca4003",
+      "track": "exact",
+      "units": 1000
+    },
+    {
+      "bytes": 71364,
+      "domain": "D1",
+      "path": "banks/public_validation/public_validation/D1/near.npz",
+      "role": "public_validation",
+      "rows": 1000,
+      "sha256": "f9ff811977cbb2154bb27e18c6c4f726e4e70a10284c8d4de706e591d0b4ef55",
+      "track": "near",
+      "units": 500
+    },
+    {
+      "bytes": 91390,
+      "domain": "D1",
+      "path": "banks/public_validation/public_validation/D1/reversal.npz",
+      "role": "public_validation",
+      "rows": 1500,
+      "sha256": "825c55572be2b58781cf40d9d464f7d3dbf5226a64680da134f024435116749a",
+      "track": "reversal",
+      "units": 250
+    },
+    {
+      "bytes": 59579,
+      "domain": "D1",
+      "path": "banks/public_validation/public_validation/D1/scope.npz",
+      "role": "public_validation",
+      "rows": 700,
+      "sha256": "3ffcbfae5d3ab04eb75399c7c544b02375c6818008360a3e0081128bedbc4261",
+      "track": "scope",
+      "units": 700
+    },
+    {
+      "bytes": 32817,
+      "domain": "D1",
+      "path": "banks/public_validation/public_validation/D1/evidence.npz",
+      "role": "public_validation",
+      "rows": 375,
+      "sha256": "a51d58cf025f84227d9f5c011b83b458e6b32a1dd4e848ef9e5bb9121addbbc2",
+      "track": "evidence",
+      "units": 375
+    },
+    {
+      "bytes": 137865,
+      "domain": "D2",
+      "path": "banks/public_validation/public_validation/D2/exact.npz",
+      "role": "public_validation",
+      "rows": 2000,
+      "sha256": "ba91a2541b65dd6eea65ef0a827616a7e198ca5fda84dc32b3b5557e6b656e8e",
+      "track": "exact",
+      "units": 1000
+    },
+    {
+      "bytes": 71327,
+      "domain": "D2",
+      "path": "banks/public_validation/public_validation/D2/near.npz",
+      "role": "public_validation",
+      "rows": 1000,
+      "sha256": "1cf3afcbd3a91918377b56e8e23a53a5b787e69ce172eb32b2f337dd74390d93",
+      "track": "near",
+      "units": 500
+    },
+    {
+      "bytes": 91313,
+      "domain": "D2",
+      "path": "banks/public_validation/public_validation/D2/reversal.npz",
+      "role": "public_validation",
+      "rows": 1500,
+      "sha256": "d0c3947435dde9e162e4725391d9753e4aa37d1a908fed15379a375a777ac5cb",
+      "track": "reversal",
+      "units": 250
+    },
+    {
+      "bytes": 59586,
+      "domain": "D2",
+      "path": "banks/public_validation/public_validation/D2/scope.npz",
+      "role": "public_validation",
+      "rows": 700,
+      "sha256": "0f017b92189596e3ddb10760760ff6514d9f434ec2af08a3f771b034a229f4d6",
+      "track": "scope",
+      "units": 700
+    },
+    {
+      "bytes": 32820,
+      "domain": "D2",
+      "path": "banks/public_validation/public_validation/D2/evidence.npz",
+      "role": "public_validation",
+      "rows": 375,
+      "sha256": "3956a02de80235a86337134304920b4ae777574a846a684e6b15fad52c9705a2",
+      "track": "evidence",
+      "units": 375
+    },
+    {
+      "bytes": 137880,
+      "domain": "D3",
+      "path": "banks/public_validation/public_validation/D3/exact.npz",
+      "role": "public_validation",
+      "rows": 2000,
+      "sha256": "e36af9391f89bc1d4da65ed9348df17028cf9875ec52d3da66ab35a4413e8574",
+      "track": "exact",
+      "units": 1000
+    },
+    {
+      "bytes": 71357,
+      "domain": "D3",
+      "path": "banks/public_validation/public_validation/D3/near.npz",
+      "role": "public_validation",
+      "rows": 1000,
+      "sha256": "78e0856d49195b1e9ef572fad1a50ec9411ec277b447be6291f3e596b0ed046e",
+      "track": "near",
+      "units": 500
+    },
+    {
+      "bytes": 91394,
+      "domain": "D3",
+      "path": "banks/public_validation/public_validation/D3/reversal.npz",
+      "role": "public_validation",
+      "rows": 1500,
+      "sha256": "6bb0ffdaf7a8dced37b27e8b24bb42a246d30ab1feb2ca12522cf8acb83da46c",
+      "track": "reversal",
+      "units": 250
+    },
+    {
+      "bytes": 59585,
+      "domain": "D3",
+      "path": "banks/public_validation/public_validation/D3/scope.npz",
+      "role": "public_validation",
+      "rows": 700,
+      "sha256": "bdc21d34c9bf7778c3cf216a21f027b8012b531fd8283587903a796175beb501",
+      "track": "scope",
+      "units": 700
+    },
+    {
+      "bytes": 32832,
+      "domain": "D3",
+      "path": "banks/public_validation/public_validation/D3/evidence.npz",
+      "role": "public_validation",
+      "rows": 375,
+      "sha256": "a41aa82b1c7a337542648ec31a8744be5b7d6b2580ddce88b838159be46fc531",
+      "track": "evidence",
+      "units": 375
+    },
+    {
+      "bytes": 137853,
+      "domain": "D4",
+      "path": "banks/public_validation/public_validation/D4/exact.npz",
+      "role": "public_validation",
+      "rows": 2000,
+      "sha256": "f8ea6a00b34b123f822a19650736dc3e80fd415ea954e2c8f7f3861eac8f9348",
+      "track": "exact",
+      "units": 1000
+    },
+    {
+      "bytes": 71289,
+      "domain": "D4",
+      "path": "banks/public_validation/public_validation/D4/near.npz",
+      "role": "public_validation",
+      "rows": 1000,
+      "sha256": "5272bded38a3623738fedf4090712a2da4e9cab0ca223de472ff898f170c7c35",
+      "track": "near",
+      "units": 500
+    },
+    {
+      "bytes": 91347,
+      "domain": "D4",
+      "path": "banks/public_validation/public_validation/D4/reversal.npz",
+      "role": "public_validation",
+      "rows": 1500,
+      "sha256": "e55e16ba1994c3cfac5db9c625ae006cd445b664e1381c15a815c0390ffff693",
+      "track": "reversal",
+      "units": 250
+    },
+    {
+      "bytes": 59523,
+      "domain": "D4",
+      "path": "banks/public_validation/public_validation/D4/scope.npz",
+      "role": "public_validation",
+      "rows": 700,
+      "sha256": "68c49bb29d4922ec07af90195a240a0f2f3976bb03b5318634ae3d584ac6985d",
+      "track": "scope",
+      "units": 700
+    },
+    {
+      "bytes": 32832,
+      "domain": "D4",
+      "path": "banks/public_validation/public_validation/D4/evidence.npz",
+      "role": "public_validation",
+      "rows": 375,
+      "sha256": "be8fe8d6ccfa091e50d0dfb36d06630122240f6d16436bcfe0d391c5fe884a63",
+      "track": "evidence",
+      "units": 375
+    },
+    {
+      "bytes": 137849,
+      "domain": "D5",
+      "path": "banks/public_validation/public_validation/D5/exact.npz",
+      "role": "public_validation",
+      "rows": 2000,
+      "sha256": "433db8b34e734f859cac50714e6d8d7d62edd1794cabdb512d7519e6f2569e36",
+      "track": "exact",
+      "units": 1000
+    },
+    {
+      "bytes": 71299,
+      "domain": "D5",
+      "path": "banks/public_validation/public_validation/D5/near.npz",
+      "role": "public_validation",
+      "rows": 1000,
+      "sha256": "63ac0528af1c13437cd19e68ff3605cf3ba3766d2d90c85698ce25d1612d1b6e",
+      "track": "near",
+      "units": 500
+    },
+    {
+      "bytes": 91306,
+      "domain": "D5",
+      "path": "banks/public_validation/public_validation/D5/reversal.npz",
+      "role": "public_validation",
+      "rows": 1500,
+      "sha256": "97fe6a444c97b77a764702adc72d88fcd6307673220537556f85d8441348be39",
+      "track": "reversal",
+      "units": 250
+    },
+    {
+      "bytes": 59551,
+      "domain": "D5",
+      "path": "banks/public_validation/public_validation/D5/scope.npz",
+      "role": "public_validation",
+      "rows": 700,
+      "sha256": "0117cc8bafb7894894258fbbe75b5824ad799b1d0e6059cf687c0dec10ba62a1",
+      "track": "scope",
+      "units": 700
+    },
+    {
+      "bytes": 32856,
+      "domain": "D5",
+      "path": "banks/public_validation/public_validation/D5/evidence.npz",
+      "role": "public_validation",
+      "rows": 375,
+      "sha256": "4071dc6d501459056c231ac315195d33da41f4aeac942b22238cabac5e30750f",
+      "track": "evidence",
+      "units": 375
+    },
+    {
+      "bytes": 137892,
+      "domain": "D6",
+      "path": "banks/public_validation/public_validation/D6/exact.npz",
+      "role": "public_validation",
+      "rows": 2000,
+      "sha256": "685c1b36611b13b2a9a311e44374800cfbde6eaf730b837cbfd1f324882f00bf",
+      "track": "exact",
+      "units": 1000
+    },
+    {
+      "bytes": 71266,
+      "domain": "D6",
+      "path": "banks/public_validation/public_validation/D6/near.npz",
+      "role": "public_validation",
+      "rows": 1000,
+      "sha256": "78ef8fcbacc847de35d497568a38161fc30a0d31c30417446ac83b97cff4c574",
+      "track": "near",
+      "units": 500
+    },
+    {
+      "bytes": 91321,
+      "domain": "D6",
+      "path": "banks/public_validation/public_validation/D6/reversal.npz",
+      "role": "public_validation",
+      "rows": 1500,
+      "sha256": "791870189e511f2b1d7243e72e045ea41b0118f79b57210d9d00eea0669e9b25",
+      "track": "reversal",
+      "units": 250
+    },
+    {
+      "bytes": 59565,
+      "domain": "D6",
+      "path": "banks/public_validation/public_validation/D6/scope.npz",
+      "role": "public_validation",
+      "rows": 700,
+      "sha256": "600e49ed00b7361addb42baec7d00f01d162a903782425da0272f541dedf3be3",
+      "track": "scope",
+      "units": 700
+    },
+    {
+      "bytes": 32837,
+      "domain": "D6",
+      "path": "banks/public_validation/public_validation/D6/evidence.npz",
+      "role": "public_validation",
+      "rows": 375,
+      "sha256": "870e47115f8a457e4cbc6e28f71194b9113149e19a4ba65dc647a6b64834dd62",
+      "track": "evidence",
+      "units": 375
+    }
+  ],
+  "identity_alignment": "same case/world/group/role; only projection slice differs",
+  "projection_contract": {
+    "Oracle-G": [
+      0,
+      24
+    ],
+    "P-only": [
+      0,
+      8
+    ],
+    "Raw-G": [
+      0,
+      16
+    ]
+  },
+  "public_validation": "inspection-only",
+  "roles": {
+    "calibration_fit": {
+      "evidence": 1128,
+      "exact": 6000,
+      "near": 3000,
+      "reversal": 4500,
+      "scope": 2100
+    },
+    "calibration_policy": {
+      "evidence": 1122,
+      "exact": 6000,
+      "near": 3000,
+      "reversal": 4500,
+      "scope": 2100
+    },
+    "development_fit": {
+      "evidence": 6750,
+      "exact": 36000,
+      "near": 18000,
+      "reversal": 27000,
+      "scope": 12600
+    },
+    "development_selection": {
+      "evidence": 2250,
+      "exact": 12000,
+      "near": 6000,
+      "reversal": 9000,
+      "scope": 4200
+    },
+    "public_validation": {
+      "evidence": 2250,
+      "exact": 12000,
+      "near": 6000,
+      "reversal": 9000,
+      "scope": 4200
+    }
+  },
+  "schema_version": "1.0"
+}

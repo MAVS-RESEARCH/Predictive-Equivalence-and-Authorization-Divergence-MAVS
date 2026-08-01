@@ -94,12 +94,12 @@ def run_audit(root: Path, console: ResearchConsole) -> dict[str, Any]:
     if violations:
         raise ValueError(f"custody content exposed in development: {violations}")
     # STEP LOG P9A-AUDIT-005: Prove commitment chronology predates all Phase 10 training, calibration, and public-validation artifacts.
-    console.log("P9A-AUDIT-005", "Checking Phase 9A chronology and Phase 10 absence.")
+    console.log("P9A-AUDIT-005", "Checking the signed Phase 9A chronology receipt.")
     phase10_paths = [root / "banks/development", root / "banks/calibration", root / "banks/public_validation", root / "manifests/freeze_candidate_v1.json"]
     phase10_artifacts = sum(1 for path in phase10_paths if path.exists())
     commitment = json.loads((root / "manifests/custody/holdout_design_commitment.json").read_text(encoding="utf-8"))
     verify_signed_mapping(commitment)
-    if phase10_artifacts or not commitment["chronology"]["phase9a_precedes_phase10"] or commitment["chronology"]["phase10_artifact_count_at_seal"] != 0:
+    if not commitment["chronology"]["phase9a_precedes_phase10"] or commitment["chronology"]["phase10_artifact_count_at_seal"] != 0:
         raise ValueError("Phase 9A chronology gate failed")
     # STEP LOG P9A-AUDIT-006: Inventory every repository Phase 9A console.log and its immediately adjacent identifying comment.
     console.log("P9A-AUDIT-006", "Inventorying Phase 9A line instrumentation.")
@@ -111,7 +111,9 @@ def run_audit(root: Path, console: ResearchConsole) -> dict[str, Any]:
         "schema_version": "1.0", "phase": "9A", "preseal_id": PRESEAL_ID, "status": "pass",
         "verified_ciphertexts": list(receipt.verified_ciphertexts), "design_artifacts_signed": commitment["design_artifact_count"],
         "allocation_semantic_equality": "pass", "custody_gates": sorted(required_gates),
-        "repository_scan_files": len(scan_paths), "repository_scan_violations": [], "phase10_artifact_count": phase10_artifacts,
+        "repository_scan_files": len(scan_paths), "repository_scan_violations": [],
+        "phase10_artifact_count_at_audit": phase10_artifacts,
+        "phase10_artifact_count_at_seal": commitment["chronology"]["phase10_artifact_count_at_seal"],
         "console_log_sites": len(inventory), "change_policy": commitment["change_policy"], "compliance_gaps": [],
     }
     # STEP LOG P9A-AUDIT-007: Emit the zero-gap verdict only after every Phase 9A completion gate passes.

@@ -1,0 +1,24 @@
+{
+  "confidence_level": 0.95,
+  "interpretation": "Public validation is an inspection-only precision rehearsal; final power is determined by precommitted claim-bank denominators and clustered analysis.",
+  "minimum_effect_above_margin": {
+    "accuracy_absolute_improvement": true,
+    "false_rejection_absolute_reduction": true,
+    "paired_governance_advantage": true,
+    "unsafe_acceptance_absolute_reduction": true
+  },
+  "primary_architecture_specific_advantage": {
+    "comparison": "MAVS-A15_vs_G03-GBDT",
+    "direction": "greater",
+    "metric": "paired_governance_advantage",
+    "minimum": 0.02
+  },
+  "public_atomic_groups": 16950,
+  "registered_minimum_effect_sizes": {
+    "accuracy_absolute_improvement": 0.02,
+    "false_rejection_absolute_reduction": 0.01,
+    "paired_governance_advantage": 0.02,
+    "unsafe_acceptance_absolute_reduction": 0.01
+  },
+  "worst_case_proportion_margin": 0.0075271963353565315
+}

@@ -48,6 +48,9 @@ pead-run-phase9-tests = "pead.phase9.test_runner:main"
 pead-verify-holdout-commitment = "pead.holdouts.commitment_verifier:main"
 pead-audit-phase9a = "pead.phase9a.audit:main"
 pead-run-phase9a-tests = "pead.phase9a.test_runner:main"
+pead-run-phase10 = "pead.phase10.run:main"
+pead-audit-phase10 = "pead.phase10.audit:main"
+pead-run-phase10-tests = "pead.phase10.test_runner:main"
 
 [tool.setuptools]
 package-dir = {"" = "src"}

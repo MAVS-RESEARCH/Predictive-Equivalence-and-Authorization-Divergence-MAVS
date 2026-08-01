@@ -1,0 +1,110 @@
+{
+  "budget_expanded": false,
+  "environment": {
+    "cuda": {
+      "available": false,
+      "device_count": 0
+    },
+    "logical_cpus": 12,
+    "packages": {
+      "pgmpy": {
+        "available": false,
+        "version": null
+      },
+      "sklearn": {
+        "available": true,
+        "version": null
+      },
+      "torch": {
+        "available": true,
+        "version": "2.9.1"
+      },
+      "transformers": {
+        "available": false,
+        "version": null
+      }
+    },
+    "platform": "Windows-11-10.0.26200-SP0",
+    "python": "3.13.7",
+    "qwen_weight_root_present": false
+  },
+  "frozen_architecture_instantiation": {
+    "oracle_g_mlp_parameters": 179203,
+    "p_only_mlp_parameters": 171011,
+    "raw_g_mlp_parameters": 175107,
+    "scalar_bottleneck_parameters": 174849
+  },
+  "interpretation": "These are retained registered-environment failures, not scientific performance results. No metric is imputed for a failed method.",
+  "methods": {
+    "G04-MLP": {
+      "attempt_stage": "registered_environment_preflight",
+      "outcome": "failed_retained",
+      "reason_code": "cuda_unavailable_and_no_predeclared_cpu_equivalent_ceiling"
+    },
+    "G05-SEQUENCE": {
+      "attempt_stage": "registered_environment_preflight",
+      "outcome": "failed_retained",
+      "reason_code": "registered_cuda_accelerator_unavailable"
+    },
+    "G06-GRAPH": {
+      "attempt_stage": "registered_environment_preflight",
+      "outcome": "failed_retained",
+      "reason_code": "registered_cuda_accelerator_unavailable"
+    },
+    "G07-BAYES": {
+      "attempt_stage": "registered_environment_preflight",
+      "outcome": "failed_retained",
+      "reason_code": "locked_pgmpy_backend_not_installed_in_active_environment"
+    },
+    "G10-JUDGE": {
+      "attempt_stage": "registered_environment_preflight",
+      "outcome": "failed_retained",
+      "reason_code": "pinned_qwen_weights_and_transformers_backend_unavailable"
+    },
+    "G11-SCALAR-trained": {
+      "attempt_stage": "registered_environment_preflight",
+      "outcome": "failed_retained",
+      "reason_code": "cuda_unavailable_and_no_predeclared_cpu_equivalent_ceiling"
+    },
+    "G12-ENSEMBLE": {
+      "attempt_stage": "registered_environment_preflight",
+      "outcome": "failed_retained",
+      "reason_code": "registered_oof_constituent_families_incomplete_after_retained_failures"
+    },
+    "MAVS-A12": {
+      "attempt_stage": "registered_environment_preflight",
+      "outcome": "failed_retained",
+      "reason_code": "cuda_unavailable_and_no_predeclared_cpu_equivalent_ceiling"
+    },
+    "MAVS-A13": {
+      "attempt_stage": "registered_environment_preflight",
+      "outcome": "failed_retained",
+      "reason_code": "cuda_unavailable_and_no_predeclared_cpu_equivalent_ceiling"
+    },
+    "O02-ORACLE-MLP": {
+      "attempt_stage": "registered_environment_preflight",
+      "outcome": "failed_retained",
+      "reason_code": "cuda_unavailable_and_no_predeclared_cpu_equivalent_ceiling"
+    },
+    "P07-REJECT": {
+      "attempt_stage": "registered_environment_preflight",
+      "outcome": "failed_retained",
+      "reason_code": "cuda_unavailable_and_no_predeclared_cpu_equivalent_ceiling"
+    },
+    "P08-TABULAR-mlp": {
+      "attempt_stage": "registered_environment_preflight",
+      "outcome": "failed_retained",
+      "reason_code": "cuda_unavailable_and_no_predeclared_cpu_equivalent_ceiling"
+    },
+    "P09-SEQUENCE": {
+      "attempt_stage": "registered_environment_preflight",
+      "outcome": "failed_retained",
+      "reason_code": "registered_cuda_accelerator_unavailable"
+    }
+  },
+  "phase": 10,
+  "run_id": "phase10-open-v2",
+  "schema_version": "1.0",
+  "status": "pass",
+  "substitution_used": false
+}

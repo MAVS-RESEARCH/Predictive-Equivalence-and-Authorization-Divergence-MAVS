@@ -58,15 +58,15 @@
     },
     {
       "comment": "STEP LOG P9A-AUDIT-007: Emit the zero-gap verdict only after every Phase 9A completion gate passes.",
-      "comment_line": 117,
-      "console_log_line": 118,
+      "comment_line": 119,
+      "console_log_line": 120,
       "event_id": "P9A-AUDIT-007",
       "file": "src/pead/phase9a/audit.py"
     },
     {
       "comment": "STEP LOG P9A-AUDIT-FAIL: Retain the exact release-blocking Phase 9A compliance failure.",
-      "comment_line": 130,
-      "console_log_line": 131,
+      "comment_line": 132,
+      "console_log_line": 133,
       "event_id": "P9A-AUDIT-FAIL",
       "file": "src/pead/phase9a/audit.py"
     },
