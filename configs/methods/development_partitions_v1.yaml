@@ -1,0 +1,13 @@
+schema_version: "1.0"
+config_id: PEAD-DEVELOPMENT-PARTITIONS-v1
+domains: [D1, D2, D3, D4, D5, D6]
+roles:
+  development_fit: {exact_pairs_per_domain: 3000, near_pairs_per_domain: 1500, reversal_sequences_per_domain: 750, scope_cases_per_domain: 2100, evidence_cases_per_domain: 1125, permitted_use: gradient_preprocessing_vocabulary}
+  development_selection: {exact_pairs_per_domain: 1000, near_pairs_per_domain: 500, reversal_sequences_per_domain: 250, scope_cases_per_domain: 700, evidence_cases_per_domain: 375, permitted_use: model_checkpoint_hyperparameter_early_stopping}
+  calibration_fit: {exact_pairs_per_domain: 500, near_pairs_per_domain: 250, reversal_sequences_per_domain: 125, scope_cases_per_domain: 350, evidence_cases_per_domain: 188, permitted_use: calibration_transform_and_conformal_quantile}
+  calibration_policy: {exact_pairs_per_domain: 500, near_pairs_per_domain: 250, reversal_sequences_per_domain: 125, scope_cases_per_domain: 350, evidence_cases_per_domain: 187, permitted_use: terminal_threshold_and_lexicographic_policy}
+  public_validation: {exact_pairs_per_domain: 1000, near_pairs_per_domain: 500, reversal_sequences_per_domain: 250, scope_cases_per_domain: 700, evidence_cases_per_domain: 375, permitted_use: inspection_only}
+isolation:
+  mutually_disjoint: true
+  group_atomic_by: [pair, sequence, latent_world_family, surface_template_family, intervention_lineage, provenance_graph_lineage]
+  public_selection_prohibited: true

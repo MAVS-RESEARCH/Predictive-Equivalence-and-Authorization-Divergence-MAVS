@@ -1,0 +1,36 @@
+schema_version: "1.0"
+method_id: G08-POLICY
+family: "policy engine"
+access_profile: Raw-G
+source_reference:
+  - PEAD WorkPlan section 5.1.1
+  - PEAD WorkPlan section 5.1.3
+implementation_identity:
+  package: pead-bench
+  version: "0.1.0"
+  source_file: src/pead/baselines/policy.py
+implementation_hashes:
+  manifest: results/manifests/phase7/implementation_hashes.json
+fidelity_class: mechanism-level adaptation
+reproduced_elements:
+  - registered mechanism or architecture
+  - registered three-outcome decision interface
+  - registered partition and budget controls
+adapted_elements:
+  - canonical PEAD projection and authorization labels
+required_information:
+  - Raw-G visible projection
+deviations: []
+limitations:
+  - Comparator evidence applies only to registered PEAD conditions.
+  - Contract-probe output is implementation evidence and is not a scientific benchmark result.
+training_budget:
+  status: fixed
+  ceiling_source: configs/methods
+inference_budget:
+  ceiling_source: configs/methods
+eligible_claims:
+  - registered comparator result after Phase 10 selection and calibration
+claim_boundary:
+  - Do not describe this comparator as an official external implementation.
+  - Do not infer deployment safety or universal validity.

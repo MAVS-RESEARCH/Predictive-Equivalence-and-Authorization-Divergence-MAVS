@@ -1,0 +1,32 @@
+schema_version: "1.0"
+config_id: PEAD-RAW-G-NEURAL-v1
+access_profile: Raw-G
+methods:
+  G04-MLP: &mlp
+    architecture: [d_in, 512, 256, 128, 3]
+    blocks: [Linear, LayerNorm, GELU, Dropout-0.10]
+    optimizer: AdamW
+    grid: {learning_rate: [0.0001, 0.0003, 0.001], weight_decay: [0.00001, 0.0001]}
+    trials: 6
+    schedule: {batch_size: 256, max_epochs: 100, patience: 10, gradient_clip: 1.0, early_stop_partition: development_selection}
+    calibration: temperature
+    budget: {gpu_hours: 8, accelerator_memory_gib: 24, cpu_fallback_must_be_declared: true}
+    stress: [exact, near, reversal, scope, evidence, structural, domain, seed_dispersion, nuisance_shift, calibration_shift]
+  O02-ORACLE-MLP:
+    <<: *mlp
+    access_profile: Oracle-G
+    reporting_role: non_headline_diagnostic_only
+    failure_rule: diagnostic_if_O01_and_lossless_reconstruction_pass
+  G05-SEQUENCE:
+    representation: canonical-sequence-v1
+    architecture: {layers: 4, d_model: 256, heads: 8, feed_forward: 1024, dropout: 0.10, pooling: CLS, classes: 3}
+    vocabulary: {size: 32768, type: unigram, fit_partition: development_fit, normalization: NFC, numeric_buckets: development_fit, unknown: UNK}
+    truncation: {maximum_tokens: 512, policy: deterministic_head_plus_tail, manifest_required: true}
+    optimizer: AdamW
+    grid: {learning_rate: [0.0001, 0.0003], weight_decay: [0.01, 0.1], warmup_fraction: [0.05, 0.10]}
+    trials: 8
+    schedule: {batch_size: 128, max_epochs: 60, patience: 8, gradient_clip: 1.0, early_stop_partition: development_selection}
+    calibration: temperature
+    budget: {gpu_hours: 16, accelerator_memory_gib: 24}
+    stress: [unseen_template, unseen_grammar, lexical_leakage, truncation_parity, structural, domain]
+seeds: [101, 211, 307]

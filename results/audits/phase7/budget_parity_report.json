@@ -1,0 +1,9 @@
+{
+  "actual_scientific_runs": 0,
+  "budget_expansions_after_results": 0,
+  "cards_with_inference_budget": 26,
+  "cards_with_training_budget": 26,
+  "same_accounting_interface": true,
+  "schema_version": "1.0",
+  "status": "pass"
+}

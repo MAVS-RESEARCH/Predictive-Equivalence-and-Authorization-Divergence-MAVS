@@ -1,0 +1,11 @@
+{
+  "inventory_rows": 39,
+  "mavs_conditions": 16,
+  "omitted_required_comparators": [],
+  "oracle_diagnostics": 2,
+  "p_only_families": 9,
+  "raw_g_families": 12,
+  "schema_version": "1.0",
+  "status": "pass",
+  "unregistered_methods": []
+}

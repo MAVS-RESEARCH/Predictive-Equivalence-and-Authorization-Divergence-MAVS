@@ -1,0 +1,31 @@
+schema_version: "1.0"
+config_id: PEAD-RAW-G-FIXED-v1
+access_profile: Raw-G
+methods:
+  G08-POLICY:
+    implementation: mechanism_level_policy_engine
+    training: fixed
+    stress: [exact, near, reversal, scope, evidence, structural, domain]
+  G09-VALIDATOR:
+    implementation: simplified_validator_stack
+    stages: [schema, provenance, authority, policy, temporal, evidence]
+    training: fixed
+    stress: [exact, near, reversal, scope, evidence, structural, domain]
+  G11-SCALAR:
+    variants:
+      fixed: {reduction: declared_mean_scalar, thresholds_partition: calibration_policy}
+      trained:
+        architecture: registered_MLP_single_scalar_bottleneck_two_thresholds
+        grid: {mlp_trials: 6, monotonic_penalty: [0.0, 0.1]}
+        trials: 12
+        scalar_calibration_partition: calibration_fit
+        thresholds_partition: calibration_policy
+    stress: [exact, near, reversal, scope, evidence, structural, domain, central_reduction_holdout]
+  G12-ENSEMBLE:
+    base_constituents: [G01-LOGREG, G03-GBDT, G04-MLP, G05-SEQUENCE, G06-GRAPH]
+    out_of_fold: {folds: 5, grouping: atomic_group, development_fit_only: true}
+    meta_learner: {type: logistic, C: [0.01, 0.1, 1.0, 10.0], trials: 4}
+    seeds: [101, 211, 307]
+    refit_then_calibrate: true
+    required_comparison: best_constituent
+    stress: [exact, near, reversal, scope, evidence, structural, domain]

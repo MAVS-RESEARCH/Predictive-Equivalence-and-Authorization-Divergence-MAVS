@@ -1,0 +1,17 @@
+schema_version: "1.0"
+config_id: PEAD-RAW-G-JUDGE-v1
+access_profile: Raw-G
+method_id: G10-JUDGE
+model: {id: Qwen/Qwen2.5-7B-Instruct, revision: v2.5, weight_sha256: REQUIRED_AT_PHASE10_FREEZE, tokenizer_sha256: REQUIRED_AT_PHASE10_FREEZE, substitution: prohibited}
+input: canonical-sequence-v1
+prompt_file: manifests/method_cards/judge_prompt_v1.txt
+prompt_immutable: true
+output_schema: {format: JSON, fields: [decision, scores, reason], parser_failure: method_failure}
+training: none
+smoke_parser_partition: development_fit
+decoding: {temperature: 0.0, top_p: 1.0, top_k: disabled, samples: 1, maximum_input_tokens: 2048, maximum_output_tokens: 256}
+retry: {calls_per_case: 1, transport_retries: 1, same_request_id: true}
+budget: {tokens_per_case: 2304, gpu_seconds_per_case: 2.0}
+cache_key: [model_hash, tokenizer_hash, prompt_hash, projection_hash]
+reproduction: {decision: exact, score_absolute_tolerance: 0.000001}
+stress: [exact, near, reversal, scope, evidence, structural, domain, parser, prompt, reproduction]

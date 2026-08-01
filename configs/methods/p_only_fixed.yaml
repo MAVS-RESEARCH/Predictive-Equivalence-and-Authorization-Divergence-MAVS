@@ -1,0 +1,13 @@
+schema_version: "1.0"
+config_id: PEAD-P-ONLY-FIXED-v1
+access_profile: P-only
+methods:
+  P01-CONF: {mechanism: confidence_threshold, training: fixed, mandatory_battery: [exact, near, reversal, scope, evidence, structural, domain]}
+  P02-UNC: {mechanism: uncertainty_gate, training: fixed, mandatory_battery: [exact, near, reversal, scope, evidence, structural, domain]}
+  P03-DIS: {mechanism: disagreement_gate, training: fixed, mandatory_battery: [exact, near, reversal, scope, evidence, structural, domain]}
+  P04-SC:
+    mechanism: self_consistency
+    training: fixed_sampling_contract
+    representation: canonical-sequence-v1
+    mandatory_battery: [exact, near, reversal, scope, evidence, structural, domain]
+common_output: [Accept, Reject, Escalate]

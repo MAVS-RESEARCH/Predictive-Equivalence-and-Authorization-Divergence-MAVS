@@ -1,0 +1,9 @@
+schema_version: "1.0"
+disclosure_id: MAVS-HUMAN-DESIGN-v1
+reported_separately_from_compute: true
+human_inputs:
+  - governance architecture design
+  - diagnostic design
+  - scope-contract authorship
+  - authorization rule construction
+claim_boundary: Equal information and compute do not imply equal human design cost.

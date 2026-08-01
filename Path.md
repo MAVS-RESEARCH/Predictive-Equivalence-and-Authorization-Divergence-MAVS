@@ -34,7 +34,7 @@ Rules:
 | 4 | Reversals, scope banks, and evidence sufficiency | Complete | None |
 | 5 | Six open adapters and held-out interfaces | Complete | None |
 | 6 | Projection layer, feature firewall, and parity | Complete | 122/122 tests; implementation commit `a85318ce1c65f207461c9ee2dd9eb1119c020b5e` pushed and remotely verified |
-| 7 | Baseline suite and common training harness | Not started | None |
+| 7 | Baseline suite and common training harness | Local gates passed; publication pending | 145/145 tests; 2,300 common-runner contract decisions; zero compliance gaps |
 | 8 | Frozen MAVS-GC, DS-CF, and ablations | Not started | None |
 | 9 | Metrics, audits, statistics, and reports | Not started | None |
 | 10 | Development, training, calibration, and public validation | Not started | None |
@@ -1964,3 +1964,123 @@ Copy this block for every meaningful action:
 - **Scientific effect:** None. No benchmark, label, projection, field dictionary, model, threshold, claim, or result changed.
 - **Deviation:** Repository publication topology changed at explicit user direction; scientific implementation remains fully aligned with `WorkPlan.md`.
 - **Next action:** Commit and push this branch-consolidation receipt on `main`, verify the final local and remote main SHA, and keep no secondary implementation branch.
+
+### PATH-0069 - Phase 7 source reconciliation and scientific chronology
+
+- **Timestamp:** 2026-08-01T12:24:56+05:00.
+- **Phase:** 7.
+- **Status:** Pass.
+- **Change ID:** `P7-SOURCE-REVIEW-001`.
+- **Sources reconciled:** `WorkPlan.md` sections 5.1.1-5.4 and Phase 7; the frozen method inventory; Phase 6 access/rendering contracts; and `C:\Users\Saif malik\Downloads\MAVS-Diagnostic Sciences.pdf`.
+- **MAVS constraints retained:** prediction evidence remains distinct from governance evidence until authorization; confidence is not treated as a terminal authorization rule; every comparator returns `Accept`, `Reject`, or `Escalate`; and comparator code receives only its registered projection. The PDF's scoped-diagnostic authority applies to Phase 8 MAVS code and was not prematurely embedded in flat Phase 7 comparators.
+- **Chronology decision:** Phase 7 implements executable model, training, calibration, budget, checkpoint, and runner contracts. Phase 10 remains the first permitted scientific fitting/calibration/public-validation phase. Phase 7 therefore uses an explicitly labeled `contract_probe` mode to exercise interfaces, and production execution of an unselected trainable method fails closed.
+- **Anti-overfitting boundary:** No training rows, fitted preprocessing state, selected checkpoints, calibrators, thresholds, public metrics, holdout outputs, or model-performance claims were created. Claim-bearing structural/domain/final banks remain entirely outside Phase 7 execution.
+- **Corrective audit history:** A provisional local audit exposed four manual-review gaps that were corrected before completion: the logistic `C` grid was extended from the erroneous truncated range to the exact `{1e-4,1e-3,1e-2,1e-1,1,10,100}` range; the frozen judge prompt gained the complete role/evidence/action/hidden-field contract; Platt/isotonic and finite conformal calibration support was added; and exact development/calibration/public volumes were materialized. The final auditor now hard-checks these controls.
+- **Deviation:** None in the final implementation. The provisional pass was not used as completion evidence.
+
+### PATH-0070 - Complete comparator implementations and shared MethodDecision adapter
+
+- **Timestamp:** 2026-08-01T12:24:56+05:00.
+- **Phase:** 7.
+- **Status:** Pass.
+- **Change ID:** `P7-BASELINES-001`.
+- **Files added:** all twelve WorkPlan-named modules under `src/pead/baselines/`, plus `registry.py` and `run.py` for frozen inventory loading and one common execution path.
+- **Common interface:** `BaselineAdapter` validates access profile and representation, normalizes exactly three scores, creates the frozen `MethodDecision`, attaches projection identity and execution provenance, and refuses production execution for an unselected trained method. `run_adapter_case` is the sole production/probe entry path.
+- **P-only implementations:** fixed confidence, uncertainty, and disagreement gates; self-consistency contract; static and adaptive conformal grids; causal delayed-label rolling windows; reject-option contract; mandatory P08 logistic/GBDT/MLP variants; and the canonical-record Transformer contract.
+- **Raw-G implementations:** exact logistic/tree/three-head GBDT factories; tabular preprocessing; MLP; typed-record Transformer; relational four-layer graph network; pgmpy fail-closed backend contract; fixed policy engine; staged validator; frozen local judge parser/cache/reproduction contract; fixed and learned scalar reductions; and five-fold grouped stacked ensemble controls.
+- **Oracle diagnostic:** O01 remains the deterministic rule evaluator and O02 uses the frozen MLP architecture as a non-headline diagnostic. O02 failure cannot invalidate labels when O01 and lossless reconstruction pass.
+- **Architecture/trial evidence:** logistic 14, tree 12, GBDT 16, MLP 6, Transformer 8, graph 8, Bayesian 6, reject option 18, adaptive conformal 6, learned scalar 12, and ensemble meta-learner 4. Neural/group seeds are exactly `101`, `211`, and `307`.
+- **Critical comparator inclusion:** GBDT, graph, scalar-risk, policy, validator, judge, and ensemble families are present and independently inventoried.
+- **Scientific result effect:** None. Contract probes are marked `scientific_result=false`.
+- **Deviation:** None.
+
+### PATH-0071 - Deterministic training, calibration, budgets, and anti-overfitting controls
+
+- **Timestamp:** 2026-08-01T12:24:56+05:00.
+- **Phase:** 7.
+- **Status:** Pass.
+- **Change ID:** `P7-HARNESS-001`.
+- **Files added:** `src/pead/core/training.py`, `src/pead/core/calibration.py`, `src/pead/core/budgets.py`, `scripts/train_suite.py`, `scripts/run_suite.py`, and `scripts/audit_budget.py`.
+- **Role isolation:** loaders accept only the five registered open roles and reject case, world, or atomic-group identities crossing roles. Group shuffling is seed-stable and preserves group adjacency.
+- **Equal information:** P-only, Raw-G, and Oracle-G manifests must contain identical `(world_id, case_id, atomic_group_id, partition)` sets; projection hashes/features may differ. The retained parity proof covers all five open roles.
+- **Selection chronology:** checkpoint selection accepts `development_selection` candidates only and applies mean protected utility, worst-seed utility, lower parameter count, lower resource cost, then stable checkpoint identity. Preprocessing/gradient fitting is restricted to `development_fit` by configuration.
+- **Calibration chronology:** temperature, isotonic, Platt, and conformal quantiles fit on `calibration_fit`; isotonic is permitted only when all three class counts are at least 1,000; terminal operating points are selected only on `calibration_policy`; sensitivity sweeps explicitly cannot replace the headline operating point.
+- **Volumes:** exact per-domain volumes for `development_fit`, `development_selection`, `calibration_fit`, `calibration_policy`, and public validation are retained in `configs/methods/development_partitions_v1.yaml`, including the distinct evidence counts `188` and `187`.
+- **Resource evidence:** the common accountant records wall time, resident memory, calls, input/output tokens, exact package versions, Python/platform/processor identity, and raises `BudgetExceeded` on any registered ceiling. Cards contain both training and inference budget pointers.
+- **Checkpoint evidence:** selected checkpoint identity, seed, development-selection utilities, parameters, resource cost, payload hash, complete hyperparameter history, and environment identity are content-addressed. No checkpoint bytes were created in Phase 7.
+- **Holdout protection:** the final audit hashes holdout/allocation definitions before and after the 2,300-decision stress run; the hash remained `e5066bd5b677ce23caa4b0a4f25fe22f637a9790142a9fbb664e18dea170b593`.
+- **Public-validation protection:** configuration marks public validation inspection-only and prohibits model, checkpoint, hyperparameter, calibrator, threshold, or operating-point selection.
+- **Deviation:** None.
+
+### PATH-0072 - Frozen configurations, judge contract, fidelity cards, and identity manifests
+
+- **Timestamp:** 2026-08-01T12:24:56+05:00.
+- **Phase:** 7.
+- **Status:** Pass.
+- **Change ID:** `P7-CONFIG-CARDS-001`.
+- **Configurations added:** `p_only_fixed.yaml`, `p_only_learned.yaml`, `raw_g_tabular.yaml`, `raw_g_neural.yaml`, `raw_g_structured.yaml`, `raw_g_fixed.yaml`, `raw_g_judge.yaml`, and `development_partitions_v1.yaml`.
+- **Frozen inventory audit:** exactly 39 registered rows remain: 9 P-only comparator families, 12 Raw-G comparator families, 2 Oracle diagnostics, and 16 MAVS conditions. Missing and unregistered counts are both zero. No identity, role, access profile, or family was changed.
+- **Judge/verifier:** frozen model identity is `Qwen/Qwen2.5-7B-Instruct` revision `v2.5`; substitution is prohibited; exact weight/tokenizer hashes are hard-required immediately before the first Phase 10 training run; prompt hash is `bea0f69e94854355db95fe7c3c82aa8e22a01b158af5dfed85d6f55f94421d4f`; greedy decoding, 2,048 input/256 output token limits, one call, one same-request transport retry, 2,304 total tokens, two GPU seconds, exact parsed decision, and `1e-6` score tolerance all passed audit.
+- **Cards:** 26 complete comparator/variant cards cover the 23 families plus separate P08 logistic/GBDT/MLP and G11 fixed/trained variants. All contain source/reference, implementation identity and hash pointer, one of the five valid fidelity classes, reproduced/adapted elements, required information, deviations, limitations, training/inference budgets, eligible claims, and explicit claim boundaries.
+- **MAVS effort disclosure:** governance architecture design, diagnostic design, scope-contract authorship, and rule construction are reported separately from compute. Equal information/compute is not represented as equal human design cost.
+- **Implementation identity:** 28 source/config files are individually hashed in `results/manifests/phase7/implementation_hashes.json`; manifest identity is `29afa837c5c7cd9dd4920c7e60df8e18791cadd38cdffad93174094dce20e795`.
+- **Exact pins added:** NumPy `2.3.4`, scikit-learn `1.7.1`, PyTorch `2.9.1`, pgmpy `1.0.0`, Transformers `4.55.4`, and psutil `7.0.0`, alongside existing exact pins. Container, accelerator, and judge weight hashes remain explicitly deferred to the mandatory pre-training freeze rather than invented in Phase 7.
+- **Deviation:** None.
+
+### PATH-0073 - Phase 7 stress testing and zero-gap compliance audit
+
+- **Timestamp:** 2026-08-01T12:24:56+05:00.
+- **Phase:** 7.
+- **Status:** Local gates passed; publication pending.
+- **Change ID:** `P7-AUDIT-LOCAL-001`.
+- **Targeted command:** `.\.venv\Scripts\python.exe -m unittest tests.integration.test_method_suite tests.stress.test_phase7_stress -v`.
+- **Targeted outcome:** 23/23 tests passed. The run included 2,300 deterministic comparator decisions and 5,000 generated cross-role atomic-group attacks; every attack was rejected.
+- **Complete command:** `.\.venv\Scripts\python.exe scripts\run_phase7_tests.py`.
+- **Complete outcome:** 145/145 repository tests passed; failures 0; errors 0; skipped 0. Phases 0-6 remain passing.
+- **Final audit command:** `.\.venv\Scripts\python.exe scripts\audit_phase7.py --repetitions 100`.
+- **Common-runner stress:** all 9 P-only, 12 Raw-G, and 2 Oracle diagnostic contracts produced 2,300/2,300 valid normalized three-outcome decisions through the same runner. Repeated-run decision hash is `65da4172e292490048ad131a575cc551ccecbd371dca68d5d287b1f3d272c52c`.
+- **Budget/equal-information:** 26/26 cards contain training and inference budget records; no budget was expanded after results; five-role cross-profile identity parity passed; actual scientific runs remain zero.
+- **Anti-overfitting evidence:** no training/calibration/threshold run occurred; production use of an unselected trained comparator fails; public selection is prohibited; holdout definitions were unchanged; mandatory structural/domain/adversarial batteries are pre-registered in method configurations for later Phase 10/12 execution.
+- **Compliance verdict:** `results/audits/phase7/phase7_compliance.json` reports `status=pass`, 145 tests, 2,300 contract decisions, 26 valid cards, 39 exact inventory rows, zero holdout mutations, zero scientific results, and `compliance_gaps=[]`.
+- **Retained evidence:** `method_inventory_report.json`, `training_contract_report.json`, `equal_information_report.json`, `budget_parity_report.json`, `judge_contract_report.json`, `method_cards_report.json`, `common_runner_report.json`, `phase7_tests.json`, `console_log_inventory.json`, `phase7_compliance.json`, and `results/manifests/phase7/implementation_hashes.json`.
+- **Evidence SHA-256:** budget parity `56C6F67621186015B215EB01DF8AC5910C13AF7F740410428F94EDD791E133DD`; common runner `B75C1D645A7CBB76AB814A69ADE2CDCE8A51382636FA4E35BE3F22CB755052FE`; console inventory `34BEC2CF194A32A4272889DA3FE0A75D377F2B6428E0346EB9C1959A890035E0`; equal information `D90921C77B57D6FF4EBF3BB4FC543F82D49573AE44ABEC8A72746FE7FB2C1491`; judge `E9238794C890B3A0AE25D89A7B5D4D5DCCC1E8C7C979F8D96E91196535619A54`; cards `7826C4A95A4B91EE4E6B10C35E4E50C7A7532CEBD107EC2513DFD7FD13A47F79`; inventory `E81D4CC487AB66790E98882625B451E5F94E4A73D664A97CFB34D7F18815C5D0`; compliance `67D8419A0EE90DCF829D66C90E5660E4B04E88C5F9805CEABD8BD951A15CA2A8`; tests `5C4E3222D7DE6F4188A2609F626535D1F84ACCCA17B7262016E12C25048E73C0`; training contract `892C6E7E1F640635046EA2AE8FF5D62D618DF93E72B040A4BD8071752E72344A`; implementation manifest file `93D11471759C0E243F70B6CD4369E9DD7721DD20689971DEBF0BD2E338821D1E`.
+- **Line-level `console.log` and adjacent identifying-comment inventory:**
+
+| File | Comment line | `console.log` line | Event ID | Adjacent identifying comment |
+|---|---:|---:|---|---|
+| `scripts/audit_budget.py` | 18 | 19 | `P7-BUDGET-SCRIPT-001` | Load immutable usage and ceiling records for independent comparison. |
+| `scripts/audit_budget.py` | 26 | 27 | `P7-BUDGET-SCRIPT-002` | Report budget parity only when all measured resources remain under their registered ceilings. |
+| `scripts/run_suite.py` | 23 | 24 | `P7-RUN-SCRIPT-001` | Start the explicitly non-scientific common-runner contract probe. |
+| `scripts/run_suite.py` | 29 | 30 | `P7-RUN-SCRIPT-002` | Retain the common-runner proof with zero scientific-result status. |
+| `scripts/train_suite.py` | 21 | 22 | `P7-TRAIN-SCRIPT-001` | Load an explicit training manifest without admitting any holdout content. |
+| `scripts/train_suite.py` | 31 | 32 | `P7-TRAIN-SCRIPT-002` | Close manifest validation only after role isolation and equal-identity projection parity pass. |
+| `src/pead/baselines/base.py` | 75 | 76 | `P7-BASELINE-001` | Execute one registered comparator against only its sealed visible projection. |
+| `src/pead/baselines/base.py` | 112 | 113 | `P7-BASELINE-002` | Commit a normalized three-outcome MethodDecision with explicit execution provenance. |
+| `src/pead/core/budgets.py` | 45 | 46 | `P7-BUDGET-001` | Record one external-model call before enforcing its per-case call and token ceilings. |
+| `src/pead/core/budgets.py` | 86 | 87 | `P7-BUDGET-002` | Close one resource account only after every registered ceiling passes. |
+| `src/pead/core/calibration.py` | 49 | 50 | `P7-CALIBRATION-001` | Fit the registered calibration transform on calibration_fit only. |
+| `src/pead/core/calibration.py` | 121 | 122 | `P7-CALIBRATION-002` | Select the headline threshold by the registered calibration_policy lexicographic objective. |
+| `src/pead/core/training.py` | 112 | 113 | `P7-TRAINING-001` | Freeze one checkpoint using only development_selection and the registered tie-break order. |
+| `src/pead/phase7/audit.py` | 223 | 224 | `P7-AUDIT-001` | Verify every WorkPlan-named Phase 7 implementation, configuration, card, script, and test exists. |
+| `src/pead/phase7/audit.py` | 226 | 227 | `P7-AUDIT-002` | Prove the frozen registry retains exactly 9 P-only, 12 Raw-G, 2 Oracle, and 16 MAVS identities. |
+| `src/pead/phase7/audit.py` | 229 | 230 | `P7-AUDIT-003` | Cross-check exact architectures, grids, trials, seeds, schedules, and partition contracts. |
+| `src/pead/phase7/audit.py` | 232 | 233 | `P7-AUDIT-004` | Validate exact development volumes, role isolation, equal-information identities, and immutable holdout definitions. |
+| `src/pead/phase7/audit.py` | 235 | 236 | `P7-AUDIT-005` | Retain exact source and configuration hashes while deferring environment and weight hashes to the pre-training freeze. |
+| `src/pead/phase7/audit.py` | 238 | 239 | `P7-AUDIT-006` | Audit frozen judge identity placeholders, prompt, parser, decoding, cache, retry, budgets, and tolerance. |
+| `src/pead/phase7/audit.py` | 241 | 242 | `P7-AUDIT-007` | Validate every comparator card, fidelity class, claim boundary, exact source hash, and separate MAVS design disclosure. |
+| `src/pead/phase7/audit.py` | 245 | 246 | `P7-AUDIT-008` | Stress every comparator through the same non-scientific three-outcome runner. |
+| `src/pead/phase7/audit.py` | 250 | 251 | `P7-AUDIT-009` | Verify the complete repository regression and independent Phase 7 stress evidence. |
+| `src/pead/phase7/audit.py` | 268 | 269 | `P7-AUDIT-010` | Inventory every Phase 7 console call and its immediately adjacent identifying comment. |
+| `src/pead/phase7/audit.py` | 281 | 282 | `P7-AUDIT-011` | Retain a zero-gap Phase 7 compliance verdict without asserting scientific performance. |
+| `src/pead/phase7/audit.py` | 288 | 289 | `P7-AUDIT-012` | Emit an unsuppressed hard failure and retain its exact cause. |
+| `src/pead/phase7/suite.py` | 29 | 30 | `P7-SUITE-001` | Admit the exact nine P-only, twelve Raw-G, and two Oracle diagnostic comparator contracts. |
+| `src/pead/phase7/suite.py` | 54 | 55 | `P7-SUITE-002` | Close the common-runner proof only after every comparator returns the frozen MethodDecision schema. |
+| `src/pead/phase7/test_runner.py` | 21 | 22 | `P7-TEST-RUN-001` | Discover the complete regression, integration, adversarial, and stress suite. |
+| `src/pead/phase7/test_runner.py` | 24 | 25 | `P7-TEST-RUN-002` | Retain the exact full-suite denominator before execution. |
+| `src/pead/phase7/test_runner.py` | 41 | 42 | `P7-TEST-RUN-003` | Retain the complete regression and Phase 7 stress verdict. |
+
+- **Console inventory result:** 30/30 Phase 7 `console.log` call sites have an immediately adjacent exact-ID `STEP LOG` comment.
+- **Scientific claim boundary:** Phase 7 proves implementation integrity, not model accuracy, H1/H2, architecture superiority, deployment safety, or claim-bank performance.
+- **Compliance gaps:** None.
+- **Deviation:** None.
+- **Next action:** Inspect and stage only the Phase 7 scope, commit directly on `main`, push without force, verify local/remote SHA equality and sole-branch topology, append publication evidence, rerun compliance against the completed ledger, and stop before Phase 8.

@@ -1,0 +1,32 @@
+schema_version: "1.0"
+config_id: PEAD-P-ONLY-LEARNED-v1
+access_profile: P-only
+methods:
+  P05-CONF-STATIC:
+    base_frozen_before_conformal: true
+    nonconformity: 1-p_y
+    alpha_grid: [0.01, 0.025, 0.05, 0.1, 0.2]
+    quantile_partition: calibration_fit
+    alpha_policy_partition: calibration_policy
+    retraining: prohibited
+    stress: [coverage_shift, near, structural, domain]
+  P06-CONF-ADAPT:
+    base: P05-CONF-STATIC
+    alpha_grid: [0.025, 0.05, 0.1]
+    window_grid: [256, 1024]
+    trials: 6
+    causality: past_delayed_labels_only
+    stress: [reversal, drift, delayed_labels, no_labels, structural, domain]
+  P07-REJECT:
+    architecture: frozen_registered_mlp_plus_explicit_three_class_coverage_penalty
+    mlp_grid_trials: 6
+    penalty_grid: [0.1, 1.0, 10.0]
+    trials: 18
+    stress: [full_error_coverage, forced_certainty, escalate_all]
+  P08-TABULAR:
+    mandatory_variants: [logistic, gbdt, mlp]
+    contracts: [PEAD-RAW-G-TABULAR-v1, PEAD-RAW-G-NEURAL-v1]
+  P09-SEQUENCE:
+    contract: PEAD-RAW-G-NEURAL-v1.sequence
+common_output: [Accept, Reject, Escalate]
+seeds: [101, 211, 307]

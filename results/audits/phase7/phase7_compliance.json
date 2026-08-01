@@ -1,0 +1,150 @@
+{
+  "budget_parity": {
+    "actual_scientific_runs": 0,
+    "budget_expansions_after_results": 0,
+    "cards_with_inference_budget": 26,
+    "cards_with_training_budget": 26,
+    "same_accounting_interface": true,
+    "status": "pass"
+  },
+  "calibration_runs": 0,
+  "cards": {
+    "cards": 26,
+    "claim_boundaries": 26,
+    "human_design_separate": true,
+    "status": "pass",
+    "valid_fidelity": 26
+  },
+  "common_runner": {
+    "comparators": 23,
+    "decision_hash": "65da4172e292490048ad131a575cc551ccecbd371dca68d5d287b1f3d272c52c",
+    "decisions": 2300,
+    "execution_mode": "contract_probe",
+    "oracle_diagnostics": 2,
+    "p_only_families": 9,
+    "raw_g_families": 12,
+    "scientific_results": 0,
+    "status": "pass"
+  },
+  "compliance_gaps": [],
+  "contracts": {
+    "configuration_hash": "12f4aa73656f835c3b39e328e94a7ebf343e14ef4217d58eafb5943928d3db64",
+    "gates": {
+      "ensemble_grouped_folds": true,
+      "ensemble_trials": true,
+      "gbdt_trials": true,
+      "graph_trials": true,
+      "logistic_C_grid": true,
+      "logistic_trials": true,
+      "mlp_trials": true,
+      "neural_seeds": true,
+      "partition_roles_registered": true,
+      "scalar_trials": true,
+      "sequence_trials": true,
+      "tree_trials": true
+    },
+    "status": "pass"
+  },
+  "files": {
+    "method_configs": 7,
+    "required_files": 20,
+    "status": "pass"
+  },
+  "holdout_mutations": 0,
+  "implementation_hashes": {
+    "files": 28,
+    "manifest_sha256": "29afa837c5c7cd9dd4920c7e60df8e18791cadd38cdffad93174094dce20e795",
+    "status": "pass"
+  },
+  "inventory": {
+    "inventory_rows": 39,
+    "mavs_conditions": 16,
+    "omitted_required_comparators": [],
+    "oracle_diagnostics": 2,
+    "p_only_families": 9,
+    "raw_g_families": 12,
+    "status": "pass",
+    "unregistered_methods": []
+  },
+  "judge": {
+    "gates": {
+      "budget": true,
+      "cache": true,
+      "decoding": true,
+      "hashes_required": true,
+      "model": true,
+      "parser_failure": true,
+      "prompt": true,
+      "reproduction": true,
+      "retry": true
+    },
+    "prompt_sha256": "bea0f69e94854355db95fe7c3c82aa8e22a01b158af5dfed85d6f55f94421d4f",
+    "status": "pass",
+    "weights_resolved_at_phase10_freeze": true
+  },
+  "partitions": {
+    "domains": 6,
+    "equal_information": {
+      "identities": 5,
+      "only_projection_differs": true,
+      "status": "pass"
+    },
+    "holdout_definition_sha256": "e5066bd5b677ce23caa4b0a4f25fe22f637a9790142a9fbb664e18dea170b593",
+    "public_selection_prohibited": true,
+    "roles": 5,
+    "status": "pass",
+    "volumes": {
+      "calibration_fit": [
+        500,
+        250,
+        125,
+        350,
+        188
+      ],
+      "calibration_policy": [
+        500,
+        250,
+        125,
+        350,
+        187
+      ],
+      "development_fit": [
+        3000,
+        1500,
+        750,
+        2100,
+        1125
+      ],
+      "development_selection": [
+        1000,
+        500,
+        250,
+        700,
+        375
+      ],
+      "public_validation": [
+        1000,
+        500,
+        250,
+        700,
+        375
+      ]
+    }
+  },
+  "phase": 7,
+  "schema_version": "1.0",
+  "scientific_results": 0,
+  "status": "pass",
+  "tests": {
+    "errors": 0,
+    "failures": 0,
+    "status": "pass",
+    "stress_gates": {
+      "comparator_contracts": 23,
+      "contract_probe_decisions": 2300,
+      "scientific_results": 0
+    },
+    "tests_run": 145
+  },
+  "training_runs": 0
+}

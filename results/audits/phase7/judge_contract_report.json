@@ -1,0 +1,17 @@
+{
+  "gates": {
+    "budget": true,
+    "cache": true,
+    "decoding": true,
+    "hashes_required": true,
+    "model": true,
+    "parser_failure": true,
+    "prompt": true,
+    "reproduction": true,
+    "retry": true
+  },
+  "prompt_sha256": "bea0f69e94854355db95fe7c3c82aa8e22a01b158af5dfed85d6f55f94421d4f",
+  "schema_version": "1.0",
+  "status": "pass",
+  "weights_resolved_at_phase10_freeze": true
+}

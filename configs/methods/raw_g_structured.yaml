@@ -1,0 +1,27 @@
+schema_version: "1.0"
+config_id: PEAD-RAW-G-STRUCTURED-v1
+access_profile: Raw-G
+methods:
+  G06-GRAPH:
+    representation: canonical-graph-v1
+    architecture: {type: relational_GCN, layers: 4, hidden: 256, relation_embedding: 64, residual: true, normalization: LayerNorm, activation: ReLU, dropout: 0.10, pooling: attention_global, context_head: two_layer_MLP_3class}
+    preprocessing: {normalization_fit: development_fit, unknown_node_edge_types: explicit, truncation: none}
+    grid: {learning_rate: [0.0001, 0.0003], weight_decay: [0.00001, 0.0001], hidden: [128, 256]}
+    trials: 8
+    schedule: {batch_size: 64, max_epochs: 80, patience: 10, early_stop_partition: development_selection}
+    calibration: temperature
+    budget: {gpu_hours: 24, accelerator_memory_gib: 24}
+    stress: [unseen_topology, unseen_depth, unseen_source_sharing, graph_canary, domain]
+  G07-BAYES:
+    implementation: pgmpy
+    structure: {search: hill_climb, score: BIC, maximum_indegree: 4, maximum_operations: 100000}
+    parameters: Bayesian
+    preprocessing: {quantile_discretization_fit: development_fit, missing: explicit}
+    grid: {bins: [8, 16], BDeu_equivalent_sample_size: [1, 5, 10]}
+    trials: 6
+    seeds: three_group_bootstrap_seeds
+    calibration: posterior_calibration
+    selection_tie_break: lowest_edge_count
+    budget: {cpu_hours: 8, memory_gib: 32}
+    stress: [heldout_policy, heldout_dependency, ambiguity, representation_sanity]
+seeds: [101, 211, 307]

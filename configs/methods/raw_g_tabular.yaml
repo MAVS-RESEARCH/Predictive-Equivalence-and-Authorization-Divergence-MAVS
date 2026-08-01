@@ -1,0 +1,35 @@
+schema_version: "1.0"
+config_id: PEAD-RAW-G-TABULAR-v1
+access_profile: Raw-G
+preprocessing:
+  fit_partition: development_fit
+  numeric: [median_imputation, missing_indicators, standardization]
+  categorical: [one_hot, explicit_unknown]
+methods:
+  G01-LOGREG:
+    implementation: sklearn.linear_model.LogisticRegression
+    parameters: {multi_class: multinomial, solver: saga, max_iter: 5000}
+    grid: {penalty: [l1, l2], C: [0.0001, 0.001, 0.01, 0.1, 1, 10, 100]}
+    trials: 14
+    calibration: temperature
+    budget: {cpu_hours: 1, memory_gib: 8}
+    stress: [exact, near, reversal, scope, evidence, structural, domain]
+  G02-TREE:
+    implementation: sklearn.tree.DecisionTreeClassifier
+    grid: {max_depth: [4, 8, 16, null], min_samples_leaf: [1, 10, 50]}
+    trials: 12
+    pruning: {method: cost_complexity_alpha, selection_partition: development_selection}
+    calibration: {default: isotonic, fallback: Platt, isotonic_minimum_per_class: 1000}
+    budget: {cpu_hours: 1, memory_gib: 8}
+    stress: [exact, near, reversal, scope, evidence, structural, domain, depth, unstable_splits]
+  G03-GBDT:
+    implementation: sklearn.ensemble.HistGradientBoostingClassifier
+    multiclass: three_one_vs_rest_normalized
+    native: [numeric, categorical, missing]
+    grid: {learning_rate: [0.03, 0.1], max_iter: [200, 500], max_leaf_nodes: [15, 31], l2_regularization: [0, 1]}
+    trials: 16
+    early_stopping: {patience: 20, minimum_improvement: 0.001, partition: development_selection}
+    calibration: temperature
+    budget: {cpu_hours: 4, memory_gib: 16}
+    stress: [exact, near, reversal, scope, evidence, structural, domain, prior_shift, nonlinear_leakage]
+seeds: [101, 211, 307]

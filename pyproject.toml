@@ -11,8 +11,14 @@ requires-python = ">=3.11,<3.14"
 license = {file = "LICENSE"}
 authors = [{name = "MAVS Research"}]
 dependencies = [
+  "numpy==2.3.4",
+  "pgmpy==1.0.0",
+  "psutil==7.0.0",
   "PyYAML==6.0.2",
   "python-docx==1.2.0",
+  "scikit-learn==1.7.1",
+  "torch==2.9.1",
+  "transformers==4.55.4",
 ]
 
 [project.scripts]
@@ -31,6 +37,8 @@ pead-run-phase5-tests = "pead.phase5.test_runner:main"
 pead-audit-access = "pead.phase6.audit:main"
 pead-audit-representation-parity = "pead.phase6.parity:main"
 pead-run-phase6-tests = "pead.phase6.test_runner:main"
+pead-audit-phase7 = "pead.phase7.audit:main"
+pead-run-phase7-tests = "pead.phase7.test_runner:main"
 
 [tool.setuptools]
 package-dir = {"" = "src"}
