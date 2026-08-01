@@ -2546,3 +2546,21 @@ Copy this block for every meaningful action:
 - **Compliance gaps:** None.
 - **Deviation:** None.
 - **Next action:** Stage only Phase 9A nonrevealing development artifacts and ciphertext, scan the staged content for credentials/custody plaintext, commit directly to `main`, push without force, verify sole-branch topology and remote SHA equality, record publication evidence, rerun the final audit, and stop before Phase 10.
+
+### PATH-0093 - Phase 9A publication to main and remote chronology proof
+
+- **Timestamp:** 2026-08-01T13:57:54+05:00.
+- **Phase:** 9A.
+- **Status:** Pass; implementation published and remotely verified.
+- **Change ID:** `P9A-PUBLISH-001`.
+- **Branch:** `main`.
+- **Implementation commit:** `00f5358d5eb5dbcbda48f41419b3001b15f5bb50` - `phase-9a: preseal claim-bearing holdouts`.
+- **Published scope:** 27 intended files, 1,044 insertions. Scope consists only of public interfaces/verifiers, the signed allocation manifest, signed design commitment, signed encrypted-package index, three ciphertext packages, nonrevealing custody/audit/test receipts, Phase 9A audit/test scripts, three test modules, dependency/ignore controls, and this implementation ledger.
+- **Stage controls:** Cached `git diff --check` passed. Staged-name inspection contained only Phase 9A scope. The staged credential/custody-source scan found no private key, exact hidden seed plaintext, custody generator implementation, or D7/D8 implementation.
+- **Push:** `git push origin main` passed without force, rebase, history rewrite, merge commit, pull request, or secondary branch.
+- **Exact remote verification:** Local `HEAD` and remote `refs/heads/main` both resolved to `00f5358d5eb5dbcbda48f41419b3001b15f5bb50` immediately after publication.
+- **Branch topology:** `git ls-remote --heads origin` returned only `refs/heads/main`; `git branch -vv` returned only local `main` tracking `origin/main`.
+- **Chronology consequence:** The remote Phase 9A commit now immutably predates every Phase 10 training, calibration, and public-validation artifact; their audited count at publication is zero.
+- **Compliance gaps:** None.
+- **Deviation:** None.
+- **Next action:** Rerun Phase 9A compliance with this completed publication receipt, commit and push the receipt to `main`, verify exact remote equality and clean worktree, and stop before Phase 10.
