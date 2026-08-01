@@ -2753,3 +2753,21 @@ Copy this block for every meaningful action:
 - **Machine evidence:** `results/audits/phase10-open-v2/console_inventory.json` retains the exact line inventory and passed adjacency validation.
 - **Compliance gaps:** None.
 - **Deviation:** None.
+
+### PATH-0102 - Phase 10 publication to sole main branch
+
+- **Timestamp:** 2026-08-01T20:38:14+05:00.
+- **Phase:** 10.
+- **Status:** Pass; implementation published and remotely verified.
+- **Change ID:** `P10-PUBLISH-001`.
+- **Branch:** `main`; no working or publication branch was created.
+- **Implementation commit:** `31b3af4f70e022b4286f3ca90d8e7905aedfea1a` - `phase-10: train and validate open benchmark suite`.
+- **Published scope:** 227 intended files; 40,736 insertions and 10 deletions. It includes 150 open-bank shards, 50 Phase 10 result/audit files, Phase 10 implementation/config/scripts/tests, the v2 training/checkpoint/public evidence, chronology compatibility, dependency locks, freeze candidate, invalidation ledger, and the detailed Phase 10 execution ledger.
+- **Stage controls:** cached `git diff --check` passed; additions-only credential/custody-plaintext scan passed; sealed paths staged 0; invalid v1 result paths staged 0.
+- **Push:** `git push origin main` passed without force, rebase, history rewrite, merge commit, pull request, or secondary branch.
+- **Exact remote verification:** local `HEAD` and remote `refs/heads/main` both resolved to `31b3af4f70e022b4286f3ca90d8e7905aedfea1a` immediately after publication.
+- **Branch topology:** `git ls-remote --heads origin` returned exactly one head, `refs/heads/main`; local Git exposes exactly one branch, `main`.
+- **Worktree after implementation push:** clean.
+- **Compliance gaps:** None.
+- **Deviation:** None.
+- **Next action:** Commit and push this publication receipt on `main`, verify the receipt commit against the remote, rerun the installed Phase 10 audit without starting Phase 11, and stop.
