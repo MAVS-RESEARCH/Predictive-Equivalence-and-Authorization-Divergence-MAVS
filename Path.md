@@ -2584,3 +2584,21 @@ Copy this block for every meaningful action:
 - **Compliance gaps:** None after correction and complete Phase 9A repetition.
 - **Deviation:** The incomplete v1 preseal was invalidated rather than silently amended. This is the exact remediation required by the WorkPlan change policy.
 - **Next action:** Replace v1 current-tree artifacts with v2 artifacts, commit and push the corrected study directly to `main`, append the v2 remote receipt, verify exact remote equality and sole-branch topology, and stop before Phase 10.
+
+### PATH-0095 - Corrected v2 publication and final remote proof
+
+- **Timestamp:** 2026-08-01T14:08:00+05:00.
+- **Phase:** 9A.
+- **Status:** Pass; final v2 study published and remotely verified.
+- **Change ID:** `P9A-V2-PUBLISH-001`.
+- **Branch:** `main`.
+- **Corrected implementation commit:** `2b857eba2d42f4660e5dcb94bddc7cb536fc7c42` - `phase-9a: replace incomplete preseal with study v2`.
+- **Published correction:** 19 current-tree files changed; 124 insertions and 91 deletions. The v1 ciphertext/current audit set was removed, v2 ciphertext/audit evidence installed, signed manifests replaced, the thirteen-gate auditor committed, and the detailed correction record retained.
+- **Stage controls:** Cached `git diff --check` passed. The staged credential/custody-source scan found no private key, exact hidden seed plaintext, custody generator implementation, D7/D8 implementation, or concrete claim-bearing content.
+- **Push:** `git push origin main` passed without force, rebase, history rewrite, merge commit, pull request, or secondary branch.
+- **Exact remote verification:** Local `HEAD` and remote `refs/heads/main` both resolved to `2b857eba2d42f4660e5dcb94bddc7cb536fc7c42` immediately after corrected publication.
+- **Branch topology:** The remote exposes only `refs/heads/main`; local Git exposes only `main` tracking `origin/main`.
+- **Chronology proof:** Corrected v2 is remotely committed while the audited Phase 10 artifact count remains zero. Therefore the final usable commitment predates all model training, calibration, and public validation.
+- **Compliance gaps:** None.
+- **Deviation:** None beyond the fully documented and policy-compliant invalidation/repetition.
+- **Next action:** Rerun installed v2 verification and compliance, commit this final receipt, push `main`, prove clean local/remote equality, and stop before Phase 10.
