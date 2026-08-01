@@ -1,0 +1,291 @@
+{
+  "adjacency_failures": 0,
+  "call_sites": 40,
+  "duplicate_event_ids": 0,
+  "inventory": [
+    {
+      "comment_line": 45,
+      "comment_text": "Verify the recovery branch, Phase 9 ancestry, blocked-v2 tag, and immutable main topology.",
+      "console_log_line": 46,
+      "event_id": "P9A-V3-BOOT-001",
+      "path": "scripts/run_study_v3_bootstrap.py"
+    },
+    {
+      "comment_line": 53,
+      "comment_text": "Verify the machine-readable scientific boundary and shared producer-consumer schema identities.",
+      "console_log_line": 54,
+      "event_id": "P9A-V3-BOOT-002",
+      "path": "scripts/run_study_v3_bootstrap.py"
+    },
+    {
+      "comment_line": 63,
+      "comment_text": "Execute the first complete deterministic synthetic producer-consumer rehearsal.",
+      "console_log_line": 64,
+      "event_id": "P9A-V3-BOOT-003",
+      "path": "scripts/run_study_v3_bootstrap.py"
+    },
+    {
+      "comment_line": 68,
+      "comment_text": "Regenerate the complete synthetic evidence and require byte-identical deterministic output.",
+      "console_log_line": 69,
+      "event_id": "P9A-V3-BOOT-004",
+      "path": "scripts/run_study_v3_bootstrap.py"
+    },
+    {
+      "comment_line": 74,
+      "comment_text": "Scan the development tree for private keys, exact seeds, and custody plaintext boundary violations.",
+      "console_log_line": 75,
+      "event_id": "P9A-V3-BOOT-005",
+      "path": "scripts/run_study_v3_bootstrap.py"
+    },
+    {
+      "comment_line": 111,
+      "comment_text": "Retain the bootstrap compliance verdict with zero scientific output and zero Phase 10 execution.",
+      "console_log_line": 112,
+      "event_id": "P9A-V3-BOOT-006",
+      "path": "scripts/run_study_v3_bootstrap.py"
+    },
+    {
+      "comment_line": 90,
+      "comment_text": "Produce deterministic non-claim-bearing content, label, and seed packages with the production Phase 9A contract.",
+      "console_log_line": 91,
+      "event_id": "P9A-V3-SYN-001",
+      "path": "src/pead/custody/rehearsal.py"
+    },
+    {
+      "comment_line": 112,
+      "comment_text": "Run the exact future Phase 11 preflight against the synthetic Phase 9A producer output.",
+      "console_log_line": 113,
+      "event_id": "P9A-V3-SYN-002",
+      "path": "src/pead/custody/rehearsal.py"
+    },
+    {
+      "comment_line": 123,
+      "comment_text": "Perform exactly one authenticated synthetic materialization through the production one-shot materializer.",
+      "console_log_line": 124,
+      "event_id": "P9A-V3-SYN-003",
+      "path": "src/pead/custody/rehearsal.py"
+    },
+    {
+      "comment_line": 138,
+      "comment_text": "Verify that a repeated synthetic unlock or materialization is rejected by consumed one-shot state.",
+      "console_log_line": 139,
+      "event_id": "P9A-V3-SYN-004",
+      "path": "src/pead/custody/rehearsal.py"
+    },
+    {
+      "comment_line": 232,
+      "comment_text": "Execute the complete field, cryptographic, chain, identity, substitution, and one-shot mutation program.",
+      "console_log_line": 233,
+      "event_id": "P9A-V3-SYN-005",
+      "path": "src/pead/custody/rehearsal.py"
+    },
+    {
+      "comment_line": 260,
+      "comment_text": "Retain machine-readable rehearsal denominators, mutation verdicts, and non-claim-bearing artifact hashes.",
+      "console_log_line": 261,
+      "event_id": "P9A-V3-SYN-006",
+      "path": "src/pead/custody/rehearsal.py"
+    },
+    {
+      "comment_line": 128,
+      "comment_text": "Verify unused v3 preseal artifacts, the published bootstrap, clean branch state, and zero Phase 10 artifacts before custody creation.",
+      "console_log_line": 129,
+      "event_id": "P9A-V3-SEAL-001",
+      "path": "scripts/preseal_phase9a_v3.py"
+    },
+    {
+      "comment_line": 158,
+      "comment_text": "Create the new external custody workspace and copy only the frozen v2 semantic reference artifacts byte-for-byte.",
+      "console_log_line": 159,
+      "event_id": "P9A-V3-SEAL-002",
+      "path": "scripts/preseal_phase9a_v3.py"
+    },
+    {
+      "comment_line": 176,
+      "comment_text": "Generate new disjoint structural, domain, and cross-product hidden seed lists, new AES/Ed25519 keys, and pristine one-shot state outside Git.",
+      "console_log_line": 177,
+      "event_id": "P9A-V3-SEAL-003",
+      "path": "scripts/preseal_phase9a_v3.py"
+    },
+    {
+      "comment_line": 220,
+      "comment_text": "Prove semantic identity for frozen scientific artifacts and nonreuse of predecessor seeds, keys, state, and log identities.",
+      "console_log_line": 221,
+      "event_id": "P9A-V3-SEAL-004",
+      "path": "scripts/preseal_phase9a_v3.py"
+    },
+    {
+      "comment_line": 243,
+      "comment_text": "Canonicalize and sign the normative allocation without changing any frozen quota, then verify the signed JSON as the sole custody input.",
+      "console_log_line": 244,
+      "event_id": "P9A-V3-SEAL-005",
+      "path": "scripts/preseal_phase9a_v3.py"
+    },
+    {
+      "comment_line": 269,
+      "comment_text": "Execute the separate internal review process over allocation, D7/D8 meaning, ambiguity, separation, and frozen semantic hashes before sealing.",
+      "console_log_line": 270,
+      "event_id": "P9A-V3-SEAL-006",
+      "path": "scripts/preseal_phase9a_v3.py"
+    },
+    {
+      "comment_line": 301,
+      "comment_text": "Create and immediately verify every signed custody event from genesis, including 300 denied pre-freeze access attempts.",
+      "console_log_line": 302,
+      "event_id": "P9A-V3-SEAL-007",
+      "path": "scripts/preseal_phase9a_v3.py"
+    },
+    {
+      "comment_line": 323,
+      "comment_text": "Sign the complete design inventory and encrypt content, labels, and seeds separately under one signed allocation binding.",
+      "console_log_line": 324,
+      "event_id": "P9A-V3-SEAL-008",
+      "path": "scripts/preseal_phase9a_v3.py"
+    },
+    {
+      "comment_line": 396,
+      "comment_text": "Run the exact future Phase 11 preflight against real public v3 artifacts without unlock, decryption, or materialization.",
+      "console_log_line": 397,
+      "event_id": "P9A-V3-SEAL-009",
+      "path": "scripts/preseal_phase9a_v3.py"
+    },
+    {
+      "comment_line": 412,
+      "comment_text": "Retain nonrevealing counts, identities, reviews, separation, freshness, chronology, and zero-gap compliance evidence.",
+      "console_log_line": 413,
+      "event_id": "P9A-V3-SEAL-010",
+      "path": "scripts/preseal_phase9a_v3.py"
+    },
+    {
+      "comment_line": 38,
+      "comment_text": "Verify the signed JSON allocation, frozen quota arithmetic, and YAML-to-JSON source binding without reading method outcomes.",
+      "console_log_line": 39,
+      "event_id": "P9A-V3-REVIEW-001",
+      "path": "scripts/review_phase9a_v3.py"
+    },
+    {
+      "comment_line": 55,
+      "comment_text": "Independently verify D7/D8 meaning, ambiguity completeness fixtures, generator-label separation, and scientific semantic identities inside custody.",
+      "console_log_line": 56,
+      "event_id": "P9A-V3-REVIEW-002",
+      "path": "scripts/review_phase9a_v3.py"
+    },
+    {
+      "comment_line": 105,
+      "comment_text": "Retain the internal review receipt with explicit non-external-validation and zero-method-outcome disclosures.",
+      "console_log_line": 106,
+      "event_id": "P9A-V3-REVIEW-003",
+      "path": "scripts/review_phase9a_v3.py"
+    },
+    {
+      "comment_line": 62,
+      "comment_text": "Verify the stopped post-index state contains exactly the retained signed events, ciphertexts, index, design inventory, and pristine one-shot state.",
+      "console_log_line": 63,
+      "event_id": "P9A-V3-FINALIZE-001",
+      "path": "scripts/finalize_phase9a_v3.py"
+    },
+    {
+      "comment_line": 82,
+      "comment_text": "Reverify every retained signature, allocation binding, ciphertext identity, and design-inventory identity without regenerating any package.",
+      "console_log_line": 83,
+      "event_id": "P9A-V3-FINALIZE-002",
+      "path": "scripts/finalize_phase9a_v3.py"
+    },
+    {
+      "comment_line": 100,
+      "comment_text": "Append a signed correction event for the Git-object validator defect and create the top-level commitment from unchanged retained packages.",
+      "console_log_line": 101,
+      "event_id": "P9A-V3-FINALIZE-003",
+      "path": "scripts/finalize_phase9a_v3.py"
+    },
+    {
+      "comment_line": 131,
+      "comment_text": "Run the exact future Phase 11 public preflight without reading keys, decrypting ciphertext, materializing content, or consuming one-shot state.",
+      "console_log_line": 132,
+      "event_id": "P9A-V3-FINALIZE-004",
+      "path": "scripts/finalize_phase9a_v3.py"
+    },
+    {
+      "comment_line": 164,
+      "comment_text": "Retain both stopped attempts and the complete nonrevealing corrected-Phase-9A compliance evidence.",
+      "console_log_line": 165,
+      "event_id": "P9A-V3-FINALIZE-005",
+      "path": "scripts/finalize_phase9a_v3.py"
+    },
+    {
+      "comment_line": 102,
+      "comment_text": "Verify recovery topology, the Phase 9 anchor, blocked-v2 preservation, and corrected Phase 9A chronology.",
+      "console_log_line": 103,
+      "event_id": "P9A-V3-AUDIT-001",
+      "path": "scripts/audit_phase9a_v3.py"
+    },
+    {
+      "comment_line": 112,
+      "comment_text": "Validate every exact top-level and package commitment, signature, allocation, bank count, ciphertext, and authenticated-metadata identity.",
+      "console_log_line": 113,
+      "event_id": "P9A-V3-AUDIT-002",
+      "path": "scripts/audit_phase9a_v3.py"
+    },
+    {
+      "comment_line": 119,
+      "comment_text": "Verify all 309 custody events are individually signed, continuous, unique, ordered, and bound to the signed commitment from genesis.",
+      "console_log_line": 120,
+      "event_id": "P9A-V3-AUDIT-003",
+      "path": "scripts/audit_phase9a_v3.py"
+    },
+    {
+      "comment_line": 127,
+      "comment_text": "Execute the exact future Phase 11 consumer against the real commitment while preserving pristine one-shot state and unopened ciphertext.",
+      "console_log_line": 128,
+      "event_id": "P9A-V3-AUDIT-004",
+      "path": "scripts/audit_phase9a_v3.py"
+    },
+    {
+      "comment_line": 130,
+      "comment_text": "Recompute all custody design identities and prove frozen semantic equality plus intentional seed and operational differences.",
+      "console_log_line": 131,
+      "event_id": "P9A-V3-AUDIT-005",
+      "path": "scripts/audit_phase9a_v3.py"
+    },
+    {
+      "comment_line": 142,
+      "comment_text": "Prove new hidden seeds, encryption key, signing key, one-shot state, and signed log identities do not reuse predecessor material.",
+      "console_log_line": 143,
+      "event_id": "P9A-V3-AUDIT-006",
+      "path": "scripts/audit_phase9a_v3.py"
+    },
+    {
+      "comment_line": 147,
+      "comment_text": "Scan development files against exact custody keys, hidden seeds, scientific source, plaintext, traversal, and private-key exposure.",
+      "console_log_line": 148,
+      "event_id": "P9A-V3-AUDIT-007",
+      "path": "scripts/audit_phase9a_v3.py"
+    },
+    {
+      "comment_line": 152,
+      "comment_text": "Reconcile synthetic mutations, complete regression, deterministic reproduction, internal review, and stopped-attempt retention.",
+      "console_log_line": 153,
+      "event_id": "P9A-V3-AUDIT-008",
+      "path": "scripts/audit_phase9a_v3.py"
+    },
+    {
+      "comment_line": 163,
+      "comment_text": "Inventory every v3 operational console.log with exact adjacent comment line, log line, event identity, and comment text.",
+      "console_log_line": 164,
+      "event_id": "P9A-V3-AUDIT-009",
+      "path": "scripts/audit_phase9a_v3.py"
+    },
+    {
+      "comment_line": 176,
+      "comment_text": "Emit pass only after every applicable WorkPlan clause has evidence and the exact compliance-gap set is empty.",
+      "console_log_line": 177,
+      "event_id": "P9A-V3-AUDIT-010",
+      "path": "scripts/audit_phase9a_v3.py"
+    }
+  ],
+  "preseal_id": "phase9a-preseal-v3",
+  "schema_version": "1.0",
+  "status": "pass",
+  "study_version": "pead-study-v3"
+}

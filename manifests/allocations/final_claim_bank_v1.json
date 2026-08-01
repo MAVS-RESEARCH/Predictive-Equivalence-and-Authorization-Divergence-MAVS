@@ -1,0 +1,180 @@
+{
+  "allocation_id": "final_claim_bank_v1",
+  "canonicalization_id": "pead-canonical-json-v1",
+  "domains": [
+    "D1",
+    "D2",
+    "D3",
+    "D4",
+    "D5",
+    "D6",
+    "D7",
+    "D8"
+  ],
+  "exact": {
+    "complexity": {
+      "compositional_fraction": 0.7,
+      "minimum_three_factor_fraction": 0.4,
+      "simple_fraction": 0.3
+    },
+    "global_world_counts": {
+      "Accept": 10666,
+      "Escalate": 10668,
+      "Reject": 10666
+    },
+    "mechanism_pairs_per_domain": {
+      "M01": 167,
+      "M02": 167,
+      "M03": 167,
+      "M04": 167,
+      "M05": 167,
+      "M06": 167,
+      "M07": 167,
+      "M08": 167,
+      "M09": 166,
+      "M10": 166,
+      "M11": 166,
+      "M12": 166
+    },
+    "orientations": {
+      "I-A": {
+        "forward": 400,
+        "reverse": 400
+      },
+      "I-B": {
+        "forward": 200,
+        "reverse": 200
+      },
+      "I-C": {
+        "forward": 200,
+        "reverse": 200
+      }
+    },
+    "pairs_per_domain": 2000,
+    "same_label_by_domain_group": {
+      "D1-D3": {
+        "Accept": 66,
+        "Escalate": 267,
+        "Reject": 67
+      },
+      "D4-D6": {
+        "Accept": 67,
+        "Escalate": 267,
+        "Reject": 66
+      },
+      "D7-D8": {
+        "Accept": 67,
+        "Escalate": 266,
+        "Reject": 67
+      }
+    },
+    "subbanks": {
+      "I-A": 800,
+      "I-B": 400,
+      "I-C": 400,
+      "I-N": 400
+    },
+    "substitution_rules": [
+      {
+        "constraint": "M11 is allocated only to I-N scope-boundary controls.",
+        "replacement_cycle": [
+          "M01",
+          "M02",
+          "M03",
+          "M04",
+          "M05",
+          "M06",
+          "M07",
+          "M08",
+          "M09",
+          "M10",
+          "M12"
+        ],
+        "rule_id": "SUB-M11-DIVERGENT"
+      }
+    ]
+  },
+  "final_signature": {
+    "phase": "9A",
+    "required_output": "manifests/allocations/final_claim_bank_v1.json",
+    "status": "signed"
+  },
+  "future_tracks": {
+    "evidence_sufficiency": {
+      "cases_per_class_domain": 500,
+      "global_cases": 12000
+    },
+    "reversal": {
+      "global_steps": 24000,
+      "sequences_per_domain": 500
+    },
+    "scope": {
+      "cases_per_diagnostic_domain_bank": 100,
+      "global_cases": 22400
+    }
+  },
+  "matched_controls": {
+    "minimum_fraction": 0.2,
+    "required": [
+      "composition",
+      "nuisance",
+      "prior_shift",
+      "label_permutation"
+    ]
+  },
+  "near": {
+    "epsilons": [
+      0.0,
+      1e-06,
+      1e-05,
+      0.0001,
+      0.001,
+      0.01,
+      0.05,
+      0.1
+    ],
+    "global_world_counts": {
+      "Accept": 5334,
+      "Escalate": 5332,
+      "Reject": 5334
+    },
+    "pairs_per_domain": 1000,
+    "pairs_per_domain_epsilon": 125,
+    "per_cell": {
+      "I-A": 25,
+      "I-B": 25,
+      "I-C": 25,
+      "I-N": 50
+    },
+    "rotation_rule": "(domain_index * 8 + epsilon_index) mod 3",
+    "same_label_rotations": [
+      {
+        "Accept": 17,
+        "Escalate": 16,
+        "Reject": 17
+      },
+      {
+        "Accept": 17,
+        "Escalate": 17,
+        "Reject": 16
+      },
+      {
+        "Accept": 16,
+        "Escalate": 17,
+        "Reject": 17
+      }
+    ]
+  },
+  "normative_status": "signed_phase_9a_v3",
+  "normative_yaml_sha256": "b8eb1eec64f962498c58d3d3f1b9ece3c1d58ad92daf8d58e793fcf1a99d3c09",
+  "preseal_id": "phase9a-preseal-v3",
+  "schema_version": "1.0",
+  "signature": {
+    "algorithm": "Ed25519",
+    "public_key_b64": "xBXAdbBs22nZWmgvj/fpeVxVFuhUNrSbVWYla/vYtEQ=",
+    "signature_b64": "r6C00QiTrYZ5/MwBmytFZRdl9I8C/XQm5xxaRQLOhedxlbqd/K1NMy/Z+OccbLAR4tDAEPgmKo0Ec4JUuqmoBw==",
+    "signer_identity": "d70ecdb93256317342bc8f8fae6b2ccd3f0cbc7d6d2e11038e78cf77c739f1fd"
+  },
+  "signer_identity": "d70ecdb93256317342bc8f8fae6b2ccd3f0cbc7d6d2e11038e78cf77c739f1fd",
+  "study_version": "pead-study-v3"
+}

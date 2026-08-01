@@ -1,0 +1,61 @@
+{
+  "allocation_sha256": "30171d4be8726c39e69ed4505b15f0a811b6c100408fdc8e193252c22c13fc8d",
+  "canonicalization_id": "pead-canonical-json-v1",
+  "packages": [
+    {
+      "allocation_sha256": "30171d4be8726c39e69ed4505b15f0a811b6c100408fdc8e193252c22c13fc8d",
+      "associated_data_sha256": "ecfa9a5b548efefa00833a56dd57225365ddaba0450ba465b97e8578df6f2f76",
+      "canonicalization_id": "pead-canonical-json-v1",
+      "ciphertext_byte_count": 14230,
+      "ciphertext_sha256": "76d6096f559b257b76b3e7dded30d482921895d5bf96d72985bf2fe3cf3514da",
+      "encryption_algorithm": "AES-256-GCM",
+      "nonce_b64": "/h1t5FpMlIXIQvdk",
+      "path": "artifacts/custody/phase9a-preseal-v3/holdout-content-v3.aesgcm",
+      "plaintext_sha256": "62aa1deabb5ffc2b03ece39981f2c4a87b72b83aa9a9ce2f279a109e7fe25f1c",
+      "record_count": 1,
+      "role": "content",
+      "schema_version": "3.0",
+      "signed_inclusion": true
+    },
+    {
+      "allocation_sha256": "30171d4be8726c39e69ed4505b15f0a811b6c100408fdc8e193252c22c13fc8d",
+      "associated_data_sha256": "c60fb8315b7ac5cac4063bc8525c42d7cee69205b4bb7bbb40e681b4c8844d6f",
+      "canonicalization_id": "pead-canonical-json-v1",
+      "ciphertext_byte_count": 2123,
+      "ciphertext_sha256": "bfd937e54e567e7b755cb61261ec93497ec87250b9280ef445ff31e3b22e9295",
+      "encryption_algorithm": "AES-256-GCM",
+      "nonce_b64": "TYKHnuRC4rMdB3YW",
+      "path": "artifacts/custody/phase9a-preseal-v3/holdout-labels-v3.aesgcm",
+      "plaintext_sha256": "e4c904688dc1decadac30d8dfbaf7bb4f4df001039b0ebdbad3eb3ec60724365",
+      "record_count": 1,
+      "role": "labels",
+      "schema_version": "3.0",
+      "signed_inclusion": true
+    },
+    {
+      "allocation_sha256": "30171d4be8726c39e69ed4505b15f0a811b6c100408fdc8e193252c22c13fc8d",
+      "associated_data_sha256": "70ec2e076832c46564e200905044beda566890256ca27cc718c13e8ab512749a",
+      "canonicalization_id": "pead-canonical-json-v1",
+      "ciphertext_byte_count": 1420,
+      "ciphertext_sha256": "312628492d395bd6c3b5ab938d9460434d027be1bfdf84628d922d5269d554b7",
+      "encryption_algorithm": "AES-256-GCM",
+      "nonce_b64": "7NBNCqsm8uFVu8dA",
+      "path": "artifacts/custody/phase9a-preseal-v3/holdout-seeds-v3.aesgcm",
+      "plaintext_sha256": "ca69d1ec3b7edb1f70caa500850a62a0db3f76a076ee35bf05a2980b21b4142e",
+      "record_count": 1,
+      "role": "seeds",
+      "schema_version": "3.0",
+      "signed_inclusion": true
+    }
+  ],
+  "preseal_id": "phase9a-preseal-v3",
+  "schema_version": "3.0",
+  "signature": {
+    "algorithm": "Ed25519",
+    "public_key_b64": "xBXAdbBs22nZWmgvj/fpeVxVFuhUNrSbVWYla/vYtEQ=",
+    "signature_b64": "uUTLcK9GW2GsMYxfVWYeYVrJMVaSuxnExe58bCozTG8TcYUUcKxnqi5A9l0mmKb8G28xinYVwyDlwLd69m7TBw==",
+    "signer_identity": "d70ecdb93256317342bc8f8fae6b2ccd3f0cbc7d6d2e11038e78cf77c739f1fd"
+  },
+  "signer_identity": "d70ecdb93256317342bc8f8fae6b2ccd3f0cbc7d6d2e11038e78cf77c739f1fd",
+  "study_version": "pead-study-v3"
+}

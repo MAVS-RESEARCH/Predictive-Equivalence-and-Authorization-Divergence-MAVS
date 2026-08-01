@@ -1,0 +1,12 @@
+{
+  "design_inventory_sha256": "799dc2ebd89efb72da919b9b0ca847156a729fea7eb64248400c5a91dbb19644",
+  "performance_inputs_used": [],
+  "preseal_id": "phase9a-preseal-v3",
+  "schema_version": "1.0",
+  "seed_artifact_intentionally_changed": true,
+  "semantic_mismatches": [],
+  "semantic_reference_artifacts": 12,
+  "signed_design_artifacts": 15,
+  "status": "pass",
+  "study_version": "pead-study-v3"
+}

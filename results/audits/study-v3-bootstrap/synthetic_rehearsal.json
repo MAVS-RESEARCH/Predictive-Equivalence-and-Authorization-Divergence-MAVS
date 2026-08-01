@@ -1,7 +1,7 @@
 {
   "accepted_invalid_mutations": 0,
   "artifact_hashes": {
-    "commitment_sha256": "1b4339277cfbd3448558fc00993a912a2a76eecf212894ef574c59c0738c5e67",
+    "commitment_sha256": "a0ff651bb2b2f427da1de2685a0652505a1c1d1f1e4766d7b0380d90f0c2d319",
     "event_log_sha256": "f3c01ffb854090a20559f8305ac9c78ec8d2a7325be25244e5bcaee406a61d2d",
     "index_sha256": "1fe111f8d9d0af56b906d5cd18accaec00af94d76e7fd07eb73dea780b939baa"
   },

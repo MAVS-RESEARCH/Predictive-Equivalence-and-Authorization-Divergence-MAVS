@@ -94,7 +94,7 @@ def run_synthetic_rehearsal(output_path: Path, console: ResearchConsole) -> dict
         custody_root=custody_root,
         study_version="synthetic-study-v3",
         preseal_id="synthetic-preseal-v3",
-        phase9_anchor_sha="a" * 64,
+        phase9_anchor_sha="a" * 40,
         allocation_sha256=allocation_sha256,
         bank_counts=_synthetic_counts(),
         role_records=role_records,

@@ -1,0 +1,163 @@
+{
+  "boundary_scan": {
+    "custody_scientific_source_leaks": [],
+    "exact_hidden_seed_plaintext_leaks": [],
+    "files_scanned": 489,
+    "private_key_or_encryption_key_leaks": [],
+    "prohibited_secret_paths": [],
+    "status": "pass"
+  },
+  "commitment": {
+    "allocation_sha256": "30171d4be8726c39e69ed4505b15f0a811b6c100408fdc8e193252c22c13fc8d",
+    "bank_counts": {
+      "per_bank": {
+        "domains": 26600,
+        "final_blind": 53200,
+        "structural": 26600
+      },
+      "per_bank_track": {
+        "domains": {
+          "evidence": 3000,
+          "exact": 8000,
+          "near": 4000,
+          "reversal": 6000,
+          "scope": 5600
+        },
+        "final_blind": {
+          "evidence": 6000,
+          "exact": 16000,
+          "near": 8000,
+          "reversal": 12000,
+          "scope": 11200
+        },
+        "structural": {
+          "evidence": 3000,
+          "exact": 8000,
+          "near": 4000,
+          "reversal": 6000,
+          "scope": 5600
+        }
+      },
+      "per_track": {
+        "evidence": 12000,
+        "exact": 32000,
+        "near": 16000,
+        "reversal": 24000,
+        "scope": 22400
+      },
+      "total_records": 106400
+    },
+    "ciphertext_index_sha256": "e10d8dd2749d20a961cf63fb06dbc47b485dd258c0adfafadfb866cce3f2d368",
+    "five_formerly_missing_top_level_present": true,
+    "nine_formerly_missing_package_fields_present": true,
+    "required_package_fields_per_role": 13,
+    "required_top_level_fields": 20,
+    "roles": [
+      "content",
+      "labels",
+      "seeds"
+    ]
+  },
+  "compliance_gaps": [],
+  "console_call_sites": 40,
+  "custody": {
+    "all_events_signed": true,
+    "denied_pre_freeze_attempts": 300,
+    "event_count": 309,
+    "genesis_sha256": "48c10233662bdd4117f93c281b7a3b7b9d0f2690896eaeb3a575822ac1aa53fc",
+    "head_sha256": "1b8ea6346cc17f03b2ba59208acf837242b98f328c1a89f6cdf50c9141324812",
+    "one_shot_state_consumed": false,
+    "real_decryption_attempted": false,
+    "real_materialization_attempted": false,
+    "real_unlock_attempted": false,
+    "status": "pass",
+    "unsigned_events": 0
+  },
+  "failed_attempts_retained": 2,
+  "labels_separately_encrypted": true,
+  "phase": "9A",
+  "phase10_artifact_count_at_seal": 0,
+  "phase11_preflight": {
+    "allocation_sha256": "30171d4be8726c39e69ed4505b15f0a811b6c100408fdc8e193252c22c13fc8d",
+    "bank_counts": {
+      "bank:domains": 26600,
+      "bank:final_blind": 53200,
+      "bank:structural": 26600,
+      "total_records": 106400,
+      "track:evidence": 12000,
+      "track:exact": 32000,
+      "track:near": 16000,
+      "track:reversal": 24000,
+      "track:scope": 22400
+    },
+    "consumer_invented_values": [],
+    "decryption_attempted": false,
+    "event_verification": {
+      "all_events_signed": true,
+      "event_count": 309,
+      "genesis_sha256": "48c10233662bdd4117f93c281b7a3b7b9d0f2690896eaeb3a575822ac1aa53fc",
+      "head_sha256": "1b8ea6346cc17f03b2ba59208acf837242b98f328c1a89f6cdf50c9141324812",
+      "status": "pass",
+      "unsigned_events": 0
+    },
+    "materialization_attempted": false,
+    "missing_commitments": [],
+    "one_shot_state_consumed": false,
+    "package_roles": [
+      "content",
+      "labels",
+      "seeds"
+    ],
+    "preseal_id": "phase9a-preseal-v3",
+    "status": "pass",
+    "study_version": "pead-study-v3",
+    "unlock_attempted": false
+  },
+  "preseal_id": "phase9a-preseal-v3",
+  "schema_version": "1.0",
+  "scientific_invariance": {
+    "design_artifacts": 15,
+    "performance_inputs_used": [],
+    "semantic_mismatches": [],
+    "semantic_reference_artifacts": 12
+  },
+  "scientific_result_generated": false,
+  "status": "pass",
+  "study_version": "pead-study-v3",
+  "synthetic": {
+    "accepted_invalid_mutations": 0,
+    "deterministic_reproduction": true,
+    "mutation_denominator": 92,
+    "repeat_materializations_accepted": 0,
+    "valid_materializations_accepted": 1
+  },
+  "tests": {
+    "errors": 0,
+    "failures": 0,
+    "skipped": 0,
+    "tests_run": 199
+  },
+  "topology": {
+    "anchor_is_ancestor": true,
+    "blocked_tag_sha": "cea7ba439de271ab054d959ec7e1571d98315d80",
+    "branch": "pead-study-v3",
+    "main_sha": "cea7ba439de271ab054d959ec7e1571d98315d80"
+  },
+  "workplan_clauses": {
+    "2.1": "pass",
+    "2.2": "pass",
+    "2.3": "pass",
+    "2.4": "pass",
+    "5.12": "pass",
+    "5.13": "pass",
+    "5.15": "pass",
+    "5.2": "pass",
+    "5.4": "pass",
+    "5.8": "pass",
+    "5.9": "pass",
+    "Phase 10 boundary": "pass",
+    "Phase 11 producer-consumer contract": "pass",
+    "Phase 12 boundary": "pass",
+    "Phase 9A": "pass"
+  }
+}

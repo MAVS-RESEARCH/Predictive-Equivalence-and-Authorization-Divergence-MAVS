@@ -1,0 +1,92 @@
+{
+  "artifact_count": 15,
+  "canonicalization_id": "pead-canonical-json-v1",
+  "design_artifacts": [
+    {
+      "artifact_id": "configs/holdouts/d7_clinical.yaml",
+      "bytes": 1871,
+      "sha256": "febd14599b56aad3a6127f868a7587fac8cedd0e6b439ea1a5370ce0face4087"
+    },
+    {
+      "artifact_id": "configs/holdouts/d8_content.yaml",
+      "bytes": 1755,
+      "sha256": "ffb95460bf77193c23140a786a8a0047f0b3470cf76f80da3b0d8eef5229e315"
+    },
+    {
+      "artifact_id": "configs/holdouts/graph_topologies.yaml",
+      "bytes": 234,
+      "sha256": "98120f30f9e08d18be262506c2bcf79b36f87876b8a8ec3101989a3aa57e7de7"
+    },
+    {
+      "artifact_id": "configs/holdouts/interventions.yaml",
+      "bytes": 219,
+      "sha256": "fad35ad5e9ec46ed9638c4bed12e54ee78cbcbd7ae27cd183efc1ec830b836a9"
+    },
+    {
+      "artifact_id": "configs/holdouts/mechanisms.yaml",
+      "bytes": 1572,
+      "sha256": "d350390dc3437dc3863f8cbe76025890514f8f94b1caf699792c370e9594f08b"
+    },
+    {
+      "artifact_id": "configs/holdouts/nuisance.yaml",
+      "bytes": 272,
+      "sha256": "53aa51d249da7bbece287bba5cb5d30c08fd702226977c78e33efe72ecdf75fd"
+    },
+    {
+      "artifact_id": "configs/holdouts/policy_forms.yaml",
+      "bytes": 332,
+      "sha256": "9717f7c08eace3aaaf9d5cd5002ec822fa2f99694e590936ee9224f9e37ded4a"
+    },
+    {
+      "artifact_id": "configs/holdouts/scope_interactions.yaml",
+      "bytes": 249,
+      "sha256": "cae3f3a6259b158accac7a20b52e074ce569ad383443f137f5a1c8d5437f5177"
+    },
+    {
+      "artifact_id": "configs/holdouts/seeds.yaml",
+      "bytes": 1000,
+      "sha256": "16ebcd20bad88d30184ffbf561b0e20afad21d83919e3af7ec2bd3515bc0b975"
+    },
+    {
+      "artifact_id": "src/pead_holdout/__init__.py",
+      "bytes": 48,
+      "sha256": "3d5dea730eaa87e42a01cec2453b09c70446a2c76baae46f6c93a2d76d18aa37"
+    },
+    {
+      "artifact_id": "src/pead_holdout/allocator.py",
+      "bytes": 2223,
+      "sha256": "bc2bca7238f979d34b64fbc274dc1dbbfa9edd74a2594c195f708d361a6d648b"
+    },
+    {
+      "artifact_id": "src/pead_holdout/ambiguity.py",
+      "bytes": 1527,
+      "sha256": "58b43e82c3e1cd67da402a221fe76da355f5ec6386649a2703bb5e61d8979bb4"
+    },
+    {
+      "artifact_id": "src/pead_holdout/custody.py",
+      "bytes": 111,
+      "sha256": "9bdae00041bc3692549eb40986cd5600a5ae4a1a1748c817d975cdd606166c76"
+    },
+    {
+      "artifact_id": "src/pead_holdout/generator.py",
+      "bytes": 1237,
+      "sha256": "e51757f57e13387f7acc62b03c52944c61da8ff80545570167127d8841a2defd"
+    },
+    {
+      "artifact_id": "src/pead_holdout/packager.py",
+      "bytes": 134,
+      "sha256": "d5dd45fd9a235488b43b2b4eca0c78fe17029b39490975668270cfddcdfd75fc"
+    }
+  ],
+  "preseal_id": "phase9a-preseal-v3",
+  "schema_version": "3.0",
+  "scientific_config_sha256": "e4f05d64e413d9f325e0adcbcd553b4eae6945bb4fb58c01220fbac2e4a3b83a",
+  "signature": {
+    "algorithm": "Ed25519",
+    "public_key_b64": "xBXAdbBs22nZWmgvj/fpeVxVFuhUNrSbVWYla/vYtEQ=",
+    "signature_b64": "CcWfY9CCJ/6CwYEs5U8/upNCXS4wqoxh9M9/12l0NLQiHE0WVNqCM7DEDFxaxNK5xiesbC+MFB1Jal6FsfadBQ==",
+    "signer_identity": "d70ecdb93256317342bc8f8fae6b2ccd3f0cbc7d6d2e11038e78cf77c739f1fd"
+  },
+  "signer_identity": "d70ecdb93256317342bc8f8fae6b2ccd3f0cbc7d6d2e11038e78cf77c739f1fd",
+  "study_version": "pead-study-v3"
+}

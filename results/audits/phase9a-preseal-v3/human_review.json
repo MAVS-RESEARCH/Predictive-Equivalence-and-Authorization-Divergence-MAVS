@@ -1,0 +1,23 @@
+{
+  "external_validation": false,
+  "findings": [],
+  "gates": {
+    "allocation": "pass",
+    "ambiguity_certificate": "pass",
+    "d7_d8_substantive_design": "pass",
+    "domain_meaning": "pass",
+    "generator_label_separation": "pass",
+    "scientific_invariance": "pass",
+    "scientific_nontriviality": "pass"
+  },
+  "independence": "Separate executable review process with no Phase 10 artifacts or method outcomes available.",
+  "method_outcomes_read": 0,
+  "preseal_id": "phase9a-preseal-v3",
+  "reference_semantic_artifacts": 12,
+  "reviewer_role": "internal-independent sealed-design verification process",
+  "schema_version": "1.0",
+  "semantic_mismatches": [],
+  "status": "pass",
+  "study_version": "pead-study-v3",
+  "unresolved_concerns": []
+}

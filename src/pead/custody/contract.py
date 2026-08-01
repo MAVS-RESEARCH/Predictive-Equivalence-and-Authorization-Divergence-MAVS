@@ -134,6 +134,12 @@ def _hash(value: Any, name: str) -> str:
     return value
 
 
+def _git_oid(value: Any, name: str) -> str:
+    if not isinstance(value, str) or re.fullmatch(r"[0-9a-f]{40}", value) is None:
+        raise CustodyContractError(f"{name} must be a lowercase 40-character Git object identity")
+    return value
+
+
 def _positive_int(value: Any, name: str) -> int:
     if isinstance(value, bool) or not isinstance(value, int) or value <= 0:
         raise CustodyContractError(f"{name} must be a positive integer")
@@ -312,7 +318,7 @@ def validate_commitment(commitment: Any, *, expected_study: str, expected_presea
         raise CustodyContractError("all_events_signed must be true")
     chronology = _mapping(value["phase9a_chronology_proof"], "phase9a_chronology_proof")
     _exact_fields(chronology, CHRONOLOGY_FIELDS, "phase9a_chronology_proof")
-    _hash(chronology["phase9_anchor_sha"], "phase9_anchor_sha")
+    _git_oid(chronology["phase9_anchor_sha"], "phase9_anchor_sha")
     if chronology["phase9a_precedes_phase10"] is not True or chronology["phase10_artifact_count_at_seal"] != 0:
         raise CustodyContractError("Phase 9A chronology does not precede Phase 10")
     for field in ("unlock_attempted", "decryption_attempted", "materialization_attempted", "one_shot_state_consumed"):

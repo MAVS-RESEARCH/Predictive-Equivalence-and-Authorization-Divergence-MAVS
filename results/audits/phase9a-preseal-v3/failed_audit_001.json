@@ -1,0 +1,14 @@
+{
+  "correction": "Construct the prohibited PEM marker from two byte literals so the scanner source does not contain the exact secret marker it detects.",
+  "custody_scientific_source_leaks": 0,
+  "exact_hidden_seed_plaintext_leaks": 0,
+  "failed_gate": "development-boundary-scan",
+  "finding": "The scanner source contained its own exact PEM marker literal and correctly matched itself; no private key bytes were present.",
+  "preseal_id": "phase9a-preseal-v3",
+  "real_decryption_attempted": false,
+  "real_materialization_attempted": false,
+  "real_unlock_attempted": false,
+  "schema_version": "1.0",
+  "status": "audit-stopped",
+  "study_version": "pead-study-v3"
+}

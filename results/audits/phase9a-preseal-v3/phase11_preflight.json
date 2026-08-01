@@ -1,0 +1,36 @@
+{
+  "allocation_sha256": "30171d4be8726c39e69ed4505b15f0a811b6c100408fdc8e193252c22c13fc8d",
+  "bank_counts": {
+    "bank:domains": 26600,
+    "bank:final_blind": 53200,
+    "bank:structural": 26600,
+    "total_records": 106400,
+    "track:evidence": 12000,
+    "track:exact": 32000,
+    "track:near": 16000,
+    "track:reversal": 24000,
+    "track:scope": 22400
+  },
+  "consumer_invented_values": [],
+  "decryption_attempted": false,
+  "event_verification": {
+    "all_events_signed": true,
+    "event_count": 309,
+    "genesis_sha256": "48c10233662bdd4117f93c281b7a3b7b9d0f2690896eaeb3a575822ac1aa53fc",
+    "head_sha256": "1b8ea6346cc17f03b2ba59208acf837242b98f328c1a89f6cdf50c9141324812",
+    "status": "pass",
+    "unsigned_events": 0
+  },
+  "materialization_attempted": false,
+  "missing_commitments": [],
+  "one_shot_state_consumed": false,
+  "package_roles": [
+    "content",
+    "labels",
+    "seeds"
+  ],
+  "preseal_id": "phase9a-preseal-v3",
+  "status": "pass",
+  "study_version": "pead-study-v3",
+  "unlock_attempted": false
+}

@@ -1,0 +1,15 @@
+{
+  "ciphertext_package_count": 0,
+  "commitment_created": false,
+  "correction": "validate required exact_pairs and near_pairs keys while retaining and reviewing frozen subbank metadata",
+  "custody_event_count": 0,
+  "decryption_attempted": false,
+  "failed_gate": "internal-independent-domain-allocation-review",
+  "materialization_attempted": false,
+  "preseal_id": "phase9a-preseal-v3",
+  "reason": "reviewer required exact allocation mapping equality and rejected permitted frozen subbank metadata",
+  "schema_version": "1.0",
+  "status": "stopped-before-genesis",
+  "study_version": "pead-study-v3",
+  "unlock_attempted": false
+}
