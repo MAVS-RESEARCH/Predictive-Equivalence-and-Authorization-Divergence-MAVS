@@ -1,0 +1,196 @@
+{
+  "entries": [
+    {
+      "comment": "Materialize one registered ablation as an explicit delta from a frozen shared profile.",
+      "comment_line": 58,
+      "console_log_line": 59,
+      "event_id": "P8-ABLATION-001",
+      "file": "src/pead/mavs/ablations.py"
+    },
+    {
+      "comment": "Admit one sealed projection under the exact registered A00-A15 access profile and chronology.",
+      "comment_line": 80,
+      "console_log_line": 81,
+      "event_id": "P8-ADAPTER-001",
+      "file": "src/pead/mavs/adapter.py"
+    },
+    {
+      "comment": "Commit the complete governed-consensus trace into the common three-outcome MethodDecision.",
+      "comment_line": 124,
+      "console_log_line": 125,
+      "event_id": "P8-ADAPTER-002",
+      "file": "src/pead/mavs/adapter.py"
+    },
+    {
+      "comment": "Evaluate all seven scoped DS-CF signals from only their registered stable visible fields.",
+      "comment_line": 189,
+      "console_log_line": 190,
+      "event_id": "P8-DSCF-001",
+      "file": "src/pead/mavs/ds_cf.py"
+    },
+    {
+      "comment": "Apply severity, contextual weights, bounded mitigation, threshold, veto, ambiguity, and terminal authorization in order.",
+      "comment_line": 97,
+      "console_log_line": 98,
+      "event_id": "P8-GOVERN-001",
+      "file": "src/pead/mavs/governed_consensus.py"
+    },
+    {
+      "comment": "Verify every WorkPlan-named Phase 8 source, configuration, and test file exists.",
+      "comment_line": 162,
+      "console_log_line": 163,
+      "event_id": "P8-AUDIT-001",
+      "file": "src/pead/phase8/audit.py"
+    },
+    {
+      "comment": "Prove prediction-only, original, and DS-CF profiles are exact, frozen, and versioned.",
+      "comment_line": 165,
+      "console_log_line": 166,
+      "event_id": "P8-AUDIT-002",
+      "file": "src/pead/phase8/audit.py"
+    },
+    {
+      "comment": "Prove A00-A15 identity, access parity, single deltas, stable IDs, and four open-data roles.",
+      "comment_line": 168,
+      "console_log_line": 169,
+      "event_id": "P8-AUDIT-003",
+      "file": "src/pead/phase8/audit.py"
+    },
+    {
+      "comment": "Verify learned scalar identity/budget parity and executable structural/domain compression holdouts.",
+      "comment_line": 171,
+      "console_log_line": 172,
+      "event_id": "P8-AUDIT-004",
+      "file": "src/pead/phase8/audit.py"
+    },
+    {
+      "comment": "Independently execute semantic, exhaustive-veto, trace, monotonicity, scalar, and dependency reviews.",
+      "comment_line": 174,
+      "console_log_line": 175,
+      "event_id": "P8-AUDIT-005",
+      "file": "src/pead/phase8/audit.py"
+    },
+    {
+      "comment": "Validate the complete repository regression and retained high-volume Phase 8 test evidence.",
+      "comment_line": 177,
+      "console_log_line": 178,
+      "event_id": "P8-AUDIT-006",
+      "file": "src/pead/phase8/audit.py"
+    },
+    {
+      "comment": "Prove Phase 8 produced no training, model-selection, released-bank, or scientific-result artifact.",
+      "comment_line": 180,
+      "console_log_line": 181,
+      "event_id": "P8-AUDIT-007",
+      "file": "src/pead/phase8/audit.py"
+    },
+    {
+      "comment": "Freeze exact MAVS source, configuration, profile, diagnostic, and ablation identities.",
+      "comment_line": 183,
+      "console_log_line": 184,
+      "event_id": "P8-AUDIT-008",
+      "file": "src/pead/phase8/audit.py"
+    },
+    {
+      "comment": "Inventory every Phase 8 console.log with its adjacent identifying STEP LOG comment and exact line.",
+      "comment_line": 186,
+      "console_log_line": 187,
+      "event_id": "P8-AUDIT-009",
+      "file": "src/pead/phase8/audit.py"
+    },
+    {
+      "comment": "Emit the zero-gap Phase 8 completion verdict only after every independent gate passes.",
+      "comment_line": 198,
+      "console_log_line": 199,
+      "event_id": "P8-AUDIT-010",
+      "file": "src/pead/phase8/audit.py"
+    },
+    {
+      "comment": "Retain the release-blocking Phase 8 compliance failure.",
+      "comment_line": 206,
+      "console_log_line": 207,
+      "event_id": "P8-AUDIT-FAIL",
+      "file": "src/pead/phase8/audit.py"
+    },
+    {
+      "comment": "Bind the live seven-signal implementation to the signed pre-Phase-4 semantic hashes.",
+      "comment_line": 233,
+      "console_log_line": 234,
+      "event_id": "P8-REVIEW-001",
+      "file": "src/pead/phase8/review.py"
+    },
+    {
+      "comment": "Exhaust all 279,936 discretized vectors and prove exact conjunction fidelity.",
+      "comment_line": 236,
+      "console_log_line": 237,
+      "event_id": "P8-REVIEW-002",
+      "file": "src/pead/phase8/review.py"
+    },
+    {
+      "comment": "Stress every A00-A15 condition on matched visible projections with complete traces.",
+      "comment_line": 239,
+      "console_log_line": 240,
+      "event_id": "P8-REVIEW-003",
+      "file": "src/pead/phase8/review.py"
+    },
+    {
+      "comment": "Verify certified severity monotonicity over 1,000 paired interventions.",
+      "comment_line": 242,
+      "console_log_line": 243,
+      "event_id": "P8-REVIEW-004",
+      "file": "src/pead/phase8/review.py"
+    },
+    {
+      "comment": "Execute the central scalar-compression collision test on structural and domain holdouts.",
+      "comment_line": 245,
+      "console_log_line": 246,
+      "event_id": "P8-REVIEW-005",
+      "file": "src/pead/phase8/review.py"
+    },
+    {
+      "comment": "Prove bidirectional dependency isolation between MAVS and generator/label engines.",
+      "comment_line": 248,
+      "console_log_line": 249,
+      "event_id": "P8-REVIEW-006",
+      "file": "src/pead/phase8/review.py"
+    },
+    {
+      "comment": "Report the complete non-scientific Phase 8 rule and architecture verdict.",
+      "comment_line": 251,
+      "console_log_line": 252,
+      "event_id": "P8-REVIEW-007",
+      "file": "src/pead/phase8/review.py"
+    },
+    {
+      "comment": "Discover the complete repository regression, invariant, property, integration, and stress suite.",
+      "comment_line": 22,
+      "console_log_line": 23,
+      "event_id": "P8-TEST-RUN-001",
+      "file": "src/pead/phase8/test_runner.py"
+    },
+    {
+      "comment": "Retain the exact complete-suite denominator before any test executes.",
+      "comment_line": 25,
+      "console_log_line": 26,
+      "event_id": "P8-TEST-RUN-002",
+      "file": "src/pead/phase8/test_runner.py"
+    },
+    {
+      "comment": "Independently re-execute every high-volume Phase 8 semantic and architecture stress gate.",
+      "comment_line": 29,
+      "console_log_line": 30,
+      "event_id": "P8-TEST-RUN-003",
+      "file": "src/pead/phase8/test_runner.py"
+    },
+    {
+      "comment": "Retain the complete regression and independent Phase 8 verdict with exact denominators.",
+      "comment_line": 45,
+      "console_log_line": 46,
+      "event_id": "P8-TEST-RUN-004",
+      "file": "src/pead/phase8/test_runner.py"
+    }
+  ],
+  "events": 27,
+  "schema_version": "1.0",
+  "status": "pass"
+}

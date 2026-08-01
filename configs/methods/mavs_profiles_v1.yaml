@@ -1,0 +1,62 @@
+schema_version: "1.0"
+registry_id: PEAD-MAVS-PROFILES-v1
+profiles:
+  - schema_version: "1.0"
+    profile_id: MAVS-PREDICTION-ONLY-v1
+    version: "1.0.0"
+    architecture: prediction_only_governed_consensus
+    access_profile: P-only
+    enabled_diagnostics: []
+    severity_weights: {z_c: 0.05, z_h: 1.0, z_s: 0.0, z_m: 0.0, z_p: 0.0, z_o: 0.0, z_f: 0.0}
+    base_threshold: 0.5
+    severity_multiplier: 0.25
+    mitigation_multiplier: 0.15
+    mitigation_bound: 1.0
+    contextual_weights: false
+    hard_veto: false
+    escalation: false
+    scope_enforced: true
+    scalarization: prediction_only
+    thresholds: {tau_h: 0.7, tau_s: 0.4, tau_f: 0.5, tau_m: 0.5, tau_p: 0.5, ambiguity: 0.5, soft_h_low: 0.3, scalar_accept: 0.35, scalar_reject: 0.65}
+    status: frozen
+  - schema_version: "1.0"
+    profile_id: MAVS-GC-ORIGINAL-v1
+    version: "1.0.0"
+    architecture: original_mavs_gc
+    access_profile: Raw-G
+    enabled_diagnostics: [z_c, z_o, mitigation]
+    severity_weights: {z_c: 0.15, z_h: 1.0, z_s: 0.0, z_m: 0.0, z_p: 0.0, z_o: 0.35, z_f: 0.0}
+    base_threshold: 0.5
+    severity_multiplier: 0.25
+    mitigation_multiplier: 0.15
+    mitigation_bound: 1.0
+    contextual_weights: true
+    hard_veto: false
+    escalation: true
+    scope_enforced: true
+    scalarization: structured
+    thresholds: {tau_h: 0.7, tau_s: 0.4, tau_f: 0.5, tau_m: 0.5, tau_p: 0.5, ambiguity: 0.5, soft_h_low: 0.3, scalar_accept: 0.35, scalar_reject: 0.65}
+    status: frozen
+  - schema_version: "1.0"
+    profile_id: MAVS-GC-DSCF-v1
+    version: "1.0.0"
+    architecture: mavs_gc_plus_ds_cf
+    access_profile: Raw-G
+    enabled_diagnostics: [z_c, z_h, z_s, z_m, z_p, z_o, z_f, mitigation]
+    severity_weights: {z_c: 0.05, z_h: 1.0, z_s: 0.0, z_m: 0.7, z_p: 0.8, z_o: 0.3, z_f: 0.6}
+    base_threshold: 0.5
+    severity_multiplier: 0.25
+    mitigation_multiplier: 0.15
+    mitigation_bound: 1.0
+    contextual_weights: true
+    hard_veto: true
+    escalation: true
+    scope_enforced: true
+    scalarization: structured
+    thresholds: {tau_h: 0.7, tau_s: 0.4, tau_f: 0.5, tau_m: 0.5, tau_p: 0.5, ambiguity: 0.5, soft_h_low: 0.3, scalar_accept: 0.35, scalar_reject: 0.65}
+    status: frozen
+constraints:
+  - Answer evidence and condition evidence remain separate until authorization.
+  - Raw z_c alone has no hard-veto authority.
+  - Safe consistency mitigation is bounded and cannot override hard veto.
+  - Every terminal decision retains the complete governed trace.

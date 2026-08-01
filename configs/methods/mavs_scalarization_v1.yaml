@@ -1,0 +1,18 @@
+schema_version: "1.0"
+config_id: PEAD-MAVS-SCALARIZATION-v1
+fixed:
+  input: [z_c, z_h, z_s, z_m, z_p, z_o, z_f]
+  weights: {z_c: 0.05, z_h: 0.30, z_s: -0.15, z_m: 0.15, z_p: 0.15, z_o: 0.08, z_f: 0.12}
+  intercept: 0.5
+  clipping: [0.0, 1.0]
+  terminal_thresholds: {accept_at_or_below: 0.35, reject_at_or_above: 0.65, otherwise: Escalate}
+learned:
+  architecture: registered_MLP_single_scalar_bottleneck_two_thresholds
+  comparable_raw_g_method: G11-SCALAR-trained
+  budget_policy: PEAD-RAW-G-FIXED-v1.G11-SCALAR.trained
+  identity_roles: [development_fit, development_selection, calibration_fit, calibration_policy]
+  production_requires_selected_phase10_artifact: true
+central_compression_test:
+  required_holdouts: [structural, domain]
+  collision_definition: equal_scalar_with_different_structured_terminal_decisions
+  executable: true

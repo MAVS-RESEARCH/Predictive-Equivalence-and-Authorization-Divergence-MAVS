@@ -1,0 +1,13 @@
+schema_version: "1.0"
+config_id: PEAD-MAVS-ADAPTER-v1
+input_contract:
+  A00: {access_profile: P-only, representation: canonical-tabular-v1}
+  A01_A15: {access_profile: Raw-G, representation: canonical-tabular-v1, identical_visible_fields: true}
+output_contract: MethodDecision-v1
+trace_fields: [supports, diagnostic_vector, severity, contextual_weights, mitigation, threshold, veto, ambiguity, consensus, terminal_decision]
+dependency_firewall:
+  mavs_forbidden_imports: [pead.world, pead.labels]
+  generator_and_label_forbidden_import: pead.mavs
+execution:
+  fixed_profiles: production_ready
+  learned_profiles: selected_phase10_artifact_required

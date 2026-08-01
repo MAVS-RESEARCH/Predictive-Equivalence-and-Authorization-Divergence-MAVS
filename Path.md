@@ -35,7 +35,7 @@ Rules:
 | 5 | Six open adapters and held-out interfaces | Complete | None |
 | 6 | Projection layer, feature firewall, and parity | Complete | 122/122 tests; implementation commit `a85318ce1c65f207461c9ee2dd9eb1119c020b5e` pushed and remotely verified |
 | 7 | Baseline suite and common training harness | Complete | 146/146 tests; implementation `58bc41d1679b39eab49d7bc445a9f2716202875c`; exact-judge hardening `cd4726e8802610e6eb99dd9f0fb69b2af7e0bd78`, both verified on `main` |
-| 8 | Frozen MAVS-GC, DS-CF, and ablations | Not started | None |
+| 8 | Frozen MAVS-GC, DS-CF, and ablations | Local gates passed; publication pending | 167/167 tests; 279,936-vector exhaustive rule audit; zero compliance gaps |
 | 9 | Metrics, audits, statistics, and reports | Not started | None |
 | 10 | Development, training, calibration, and public validation | Not started | None |
 | 11 | Sealed banks and signed freeze | Not started | None |
@@ -2189,3 +2189,107 @@ Copy this block for every meaningful action:
 - **Compliance gaps:** None.
 - **Deviation:** None remaining. The earlier sentinel ambiguity is preserved in PATH-0076 and fully resolved by this published commit.
 - **Next action:** Commit and push this final publication receipt, verify the receipt commit on remote `main`, and stop before Phase 8.
+
+### PATH-0078 - Phase 8 source reconciliation and implementation boundary
+
+- **Timestamp:** 2026-08-01T13:02:35+05:00.
+- **Phase:** 8.
+- **Status:** Pass.
+- **Change ID:** `P8-SOURCE-REVIEW-001`.
+- **Sources reconciled:** `WorkPlan.md` Phase 8; the frozen Phase 0 method inventory; the seven pre-Phase-4 `configs/diagnostics/ds_cf_*.yaml` definitions; the signed Phase 4 validation manifest; Phase 6 projection/firewall contracts; Phase 7 common `MethodDecision`; and `C:\Users\Saif malik\Downloads\MAVS-Diagnostic Sciences.pdf`.
+- **MAVS semantics retained:** specialist predictive supports remain distinct from DS-CF condition evidence until the governed authorization step. The implemented trace follows the source order `supports -> diagnostic vector -> severity -> contextual weights -> bounded mitigation -> threshold -> veto -> ambiguity -> consensus -> terminal decision`.
+- **Terminal policy:** a registered hard veto returns `Reject`; otherwise registered ambiguity returns `Escalate`; otherwise governed consensus against the contextual threshold returns `Accept` or `Reject`. Confidence is one scoped soft signal and never a terminal authorization rule by itself.
+- **DS-CF binding:** `z_c`, `z_h`, `z_s`, `z_m`, `z_p`, `z_o`, and `z_f` are bound to the exact signed `DSCF-ZC-v1`, `DSCF-ZH-v1`, `DSCF-ZS-v1`, `DSCF-ZM-v1`, `DSCF-ZP-v1`, `DSCF-ZO-v1`, and `DSCF-ZF-v1` definitions. The audit checks exact definition hashes, semantic names, version `1.0.0`, frozen status, authority ceiling, four scope-generator classes, six interaction partners, influence paths, and non-empty monotonicity contracts.
+- **Chronology and anti-overfitting boundary:** Phase 8 implements fixed architectures and executable interfaces only. A12 learned scalarization and A13 flat Raw-G production execution fail closed without selected Phase 10 artifacts. No training, checkpoint selection, calibration, threshold selection, public-validation inspection, structural/domain result inspection, blind release, or scientific comparison occurred.
+- **Semantic-change rule:** any mismatch from the signed Phase 4 registry is a hard audit failure and explicitly reopens Phases 0, 4, 8, and every dependent bank.
+- **Deviation:** None.
+
+### PATH-0079 - Frozen MAVS profiles, governed consensus, DS-CF, ablations, and traces
+
+- **Timestamp:** 2026-08-01T13:02:35+05:00.
+- **Phase:** 8.
+- **Status:** Pass.
+- **Change ID:** `P8-MAVS-IMPLEMENTATION-001`.
+- **WorkPlan-named source files added:** `src/pead/mavs/adapter.py`, `governed_consensus.py`, `ds_cf.py`, `profiles.py`, `scalarization.py`, `ablations.py`, and `traces.py`; package export file `src/pead/mavs/__init__.py` was added for explicit public identities.
+- **Profiles:** `MAVS-PREDICTION-ONLY-v1`, `MAVS-GC-ORIGINAL-v1`, and `MAVS-GC-DSCF-v1` are schema `1.0`, version `1.0.0`, status `frozen`, and content-addressed. A00 uses P-only; A01-A15 use Raw-G.
+- **Evidence separation:** `MAVSAdapter` admits only a sealed registered projection. It obtains specialist supports and a separate immutable `DSCFVector`, then passes both objects independently into `govern`. They are joined only for terminal authorization and retained as separate trace fields.
+- **DS-CF implementation:** the sensor layer reconstructs only the nine registered visible stable IDs, rejects incomplete/non-Raw-G inputs, masks only ablation-registered stable IDs, enforces per-signal scope, evaluates all seven bounded signals, and attaches all seven signed definition hashes plus signal-level evidence-field provenance.
+- **Authority controls:** raw `z_c` correlation has observation-only authority and cannot veto. `z_h` is computed only with a danger witness and lack of safe independent consistency. A hard veto requires `z_h >= tau_h`, `z_s < tau_s`, and at least one of `z_f >= tau_f`, `z_m >= tau_m`, or `z_p >= tau_p`. Bounded `z_s` mitigation is applied to the threshold but the terminal policy checks a certified veto first, so mitigation cannot override it.
+- **Governed composition:** severity uses only enabled registered signals; contextual all-speak weights are non-negative and normalized; mitigation is clipped by the profile bound; threshold pressure is explicit; ambiguity is typed; scalar branches retain three terminal outcomes; every decision is normalized to the shared `MethodDecision-v1` schema.
+- **Trace completeness:** immutable `MAVSTrace` contains supports, all seven diagnostic values and hashes, severity, contextual weights, mitigation, threshold, veto, ambiguity, consensus, terminal decision, access/profile identity, enabled components, ablation delta, scope status, and projection hash. Construction rejects missing/misaligned support weights, non-unit weights, incomplete signals, out-of-range signals/mitigation, veto non-dominance, and incomplete traces.
+- **Ablations:** A00-A15 are executed through one code path. Each record contains exactly one declared architectural delta; A01-A15 receive the same sealed Raw-G projection identity. A01 removes provenance diagnostics; A02 policy; A03 authority field; A04 evidence availability; A05 counterfactual fragility; A06 contextual weights; A07 mitigation; A08 hard veto; A09 escalation; A10 scope enforcement; A11 fixed scalar; A12 learned scalar; A13 flat Raw-G classifier; A14 original MAVS-GC; and A15 full MAVS-GC plus DS-CF.
+- **Scalarization:** A11 uses a frozen seven-signal scalar and two thresholds. A12 declares the same stable IDs across `development_fit`, `development_selection`, `calibration_fit`, and `calibration_policy`, the same `PEAD-RAW-G-FIXED-v1.G11-SCALAR.trained` budget policy as `G11-SCALAR-trained`, and mandatory Phase 10 selected-artifact custody. The central compression collision test is executable on both structural and domain holdout roles.
+- **Dependency firewall:** MAVS imports from `pead.world` or `pead.labels` are prohibited, and generator/label modules importing `pead.mavs` are prohibited. The final bidirectional AST/text audit found zero violations.
+- **Deviation:** None.
+
+### PATH-0080 - Phase 8 configurations, verification programs, and frozen identities
+
+- **Timestamp:** 2026-08-01T13:02:35+05:00.
+- **Phase:** 8.
+- **Status:** Pass.
+- **Change ID:** `P8-CONFIG-VERIFY-001`.
+- **Configurations added:** `configs/methods/mavs_profiles_v1.yaml`, `mavs_ablations_v1.yaml`, `mavs_scalarization_v1.yaml`, and `mavs_adapter_v1.yaml`. The seven existing `configs/diagnostics/ds_cf_*.yaml` files were consumed read-only and remained unchanged.
+- **Verification implementation added:** `src/pead/phase8/fixtures.py`, `review.py`, `test_runner.py`, and `audit.py`; `scripts/run_phase8_tests.py` and `scripts/audit_phase8.py`; WorkPlan-named unit, integration, and property tests; and an independent high-volume `tests/stress/test_phase8_stress.py`.
+- **Command interfaces:** `pead-run-phase8-tests` and `pead-audit-phase8` were registered in `pyproject.toml`.
+- **Implementation identity:** `results/manifests/phase8/mavs_registry_v1.json` freezes 19 MAVS source/configuration/diagnostic files, all three profile hashes, all seven Phase 4 diagnostic-definition hashes, the signed Phase 4 registry identity, and the exact A00-A15 list. Manifest content identity is `634a743c9698cc870d41b0931988cf3dc28c4f756c0ed3862715b681029dc7b0`.
+- **Scientific result boundary:** the manifest declares zero released rows. Phase 8 audit directories contain implementation/test evidence only, not benchmark outcome tables.
+- **Deviation:** None.
+
+### PATH-0081 - Phase 8 stress tests and zero-gap compliance audit
+
+- **Timestamp:** 2026-08-01T13:02:35+05:00.
+- **Phase:** 8.
+- **Status:** Local gates passed; publication pending.
+- **Change ID:** `P8-AUDIT-LOCAL-001`.
+- **Targeted command:** `.\.venv\Scripts\python.exe -m unittest tests.unit.test_ds_cf_invariants tests.integration.test_mavs_adapter tests.property.test_mavs_scope_and_veto tests.stress.test_phase8_stress -v`.
+- **Targeted result:** 21/21 tests passed in 16.738 seconds with zero failures and zero errors.
+- **Complete command:** `.\.venv\Scripts\python.exe scripts\run_phase8_tests.py`.
+- **Complete result:** 167/167 repository tests passed in 159.8 seconds with failures 0, errors 0, and skipped 0. Every Phase 0-7 regression remained passing.
+- **Exhaustive veto audit:** all `6^7 = 279,936` seven-signal vectors on levels `{0.0,0.2,0.4,0.6,0.8,1.0}` were evaluated. Exactly 27,216 vectors satisfied the frozen conjunction; registered-rule violations 0; raw-correlation-only vetoes 0; safe-consistency veto overrides 0.
+- **Matched-ablation stress:** 256 deterministic scenarios were sent through all 16 conditions for 4,096 decisions. Complete traces 4,096; Raw-G projection mismatches 0; mitigation bound violations 0; veto-dominance violations 0. The bounded operational event stream retains 16,144 event lines, 4,471,702 characters, and SHA-256 `38939e6ba61e52dcaec0e7506e98eafb49c67cd0cfd42349ecd78171a7da7b92`.
+- **Monotonicity stress:** 1,000 paired certified-severity interventions produced zero threshold/terminal monotonicity violations.
+- **Scalar-compression holdouts:** the executable structural and domain fixtures each contain an equal-scalar/different-structured-decision collision; holdouts present are exactly `domain` and `structural`, collision count 2.
+- **Registry audit:** seven of seven live definition hashes exactly equal the signed Phase 4 hashes; semantic changes 0. Every stable ID, semantic name, scope-generator set, authority ceiling, interaction set, influence contract, and monotonicity contract passed.
+- **Dependency audit:** both forbidden directions were checked; violations 0.
+- **Boundary audit:** trained models 0; scientific results 0; released rows 0; forbidden Phase 8 result/model/checkpoint artifacts 0.
+- **Failed-attempt retention:** the first final-audit execution stopped at the ablation/equal-information gate because the new auditor used attribute access on validated mapping records. This audit implementation defect produced no MAVS decision or scientific artifact. The mapping accessor was corrected, the audit restarted from gate 1, and the replacement run passed all gates. The failed attempt is not represented as successful evidence.
+- **Final audit command:** `.\.venv\Scripts\python.exe scripts\audit_phase8.py`.
+- **Final compliance verdict:** `results/audits/phase8/phase8_compliance.json` reports `status=pass`, `compliance_gaps=[]`, 167 passing tests, 279,936 exhaustive vectors, 27,216 active valid conjunctions, 4,096 complete matched-ablation traces, 1,000 monotonic pairs, zero semantic changes, and zero scientific results.
+- **Retained evidence SHA-256:** ablations `1AD26642AB3BFF4A5397C44ED8CE0CE99AA6A041AC3DB07F061303254F28E6A4`; console inventory `E632EA6D44FEC55872FDA8A4629FFE337DF092A26B8F888D2965A0D1EBB21FFD`; implementation manifest report `0B0B047A34E55FFE3B18157BE64F89DB3ED16FAC3404689FC2F6A5763506765B`; implementation review `787AF5EDB43F3B7EEA88605B7902E911014B0292F26649EA90FEB00C47B8EACF`; compliance `A177E53F7556BACC646CE871BC49F1788745B813DFB9A8E92186A23B99BF0BAF`; tests `87184F2E26575381C82B6EDDA84F4EA773D8B19601DE9BF4BC18CFFC1F0923B8`; boundary `D76D486A65E640486EEA5EC76441E4F11DDD8268742D2FA2DC76A613225F1217`; profiles `B0C0C830FF8D2AD8F4205C43866E72945786C3788AB64A3DED280F5FD8C3196D`; required files `6AFD7F679A1C6CF3D8E7B18F26A64782B2762C41042E5A21EAA941B3F5580569`; scalarization `7B21C1E8B4529757AC2F52DA2D39C1A2DD049BF50E59F7A91EB5C064F7C9462F`; test evidence `55B6398FBA839F6DD178F78D5293BD7DABDB8E3413FA83DE5E2356468A88D746`; registry manifest file `35907B9E0E97C650C2A192C3E5CB912C29FC5F5222784F45463532929F11D276`.
+- **Line-level `console.log` and immediately adjacent identifying-comment inventory:**
+
+| File | Comment line | `console.log` line | Event ID | Adjacent identifying comment |
+|---|---:|---:|---|---|
+| `src/pead/mavs/ablations.py` | 58 | 59 | `P8-ABLATION-001` | Materialize one registered ablation as an explicit delta from a frozen shared profile. |
+| `src/pead/mavs/adapter.py` | 80 | 81 | `P8-ADAPTER-001` | Admit one sealed projection under the exact registered A00-A15 access profile and chronology. |
+| `src/pead/mavs/adapter.py` | 124 | 125 | `P8-ADAPTER-002` | Commit the complete governed-consensus trace into the common three-outcome MethodDecision. |
+| `src/pead/mavs/ds_cf.py` | 189 | 190 | `P8-DSCF-001` | Evaluate all seven scoped DS-CF signals from only their registered stable visible fields. |
+| `src/pead/mavs/governed_consensus.py` | 97 | 98 | `P8-GOVERN-001` | Apply severity, contextual weights, bounded mitigation, threshold, veto, ambiguity, and terminal authorization in order. |
+| `src/pead/phase8/audit.py` | 162 | 163 | `P8-AUDIT-001` | Verify every WorkPlan-named Phase 8 source, configuration, and test file exists. |
+| `src/pead/phase8/audit.py` | 165 | 166 | `P8-AUDIT-002` | Prove prediction-only, original, and DS-CF profiles are exact, frozen, and versioned. |
+| `src/pead/phase8/audit.py` | 168 | 169 | `P8-AUDIT-003` | Prove A00-A15 identity, access parity, single deltas, stable IDs, and four open-data roles. |
+| `src/pead/phase8/audit.py` | 171 | 172 | `P8-AUDIT-004` | Verify learned scalar identity/budget parity and executable structural/domain compression holdouts. |
+| `src/pead/phase8/audit.py` | 174 | 175 | `P8-AUDIT-005` | Independently execute semantic, exhaustive-veto, trace, monotonicity, scalar, and dependency reviews. |
+| `src/pead/phase8/audit.py` | 177 | 178 | `P8-AUDIT-006` | Validate the complete repository regression and retained high-volume Phase 8 test evidence. |
+| `src/pead/phase8/audit.py` | 180 | 181 | `P8-AUDIT-007` | Prove Phase 8 produced no training, model-selection, released-bank, or scientific-result artifact. |
+| `src/pead/phase8/audit.py` | 183 | 184 | `P8-AUDIT-008` | Freeze exact MAVS source, configuration, profile, diagnostic, and ablation identities. |
+| `src/pead/phase8/audit.py` | 186 | 187 | `P8-AUDIT-009` | Inventory every Phase 8 console.log with its adjacent identifying STEP LOG comment and exact line. |
+| `src/pead/phase8/audit.py` | 198 | 199 | `P8-AUDIT-010` | Emit the zero-gap Phase 8 completion verdict only after every independent gate passes. |
+| `src/pead/phase8/audit.py` | 206 | 207 | `P8-AUDIT-FAIL` | Retain the release-blocking Phase 8 compliance failure. |
+| `src/pead/phase8/review.py` | 233 | 234 | `P8-REVIEW-001` | Bind the live seven-signal implementation to the signed pre-Phase-4 semantic hashes. |
+| `src/pead/phase8/review.py` | 236 | 237 | `P8-REVIEW-002` | Exhaust all 279,936 discretized vectors and prove exact conjunction fidelity. |
+| `src/pead/phase8/review.py` | 239 | 240 | `P8-REVIEW-003` | Stress every A00-A15 condition on matched visible projections with complete traces. |
+| `src/pead/phase8/review.py` | 242 | 243 | `P8-REVIEW-004` | Verify certified severity monotonicity over 1,000 paired interventions. |
+| `src/pead/phase8/review.py` | 245 | 246 | `P8-REVIEW-005` | Execute the central scalar-compression collision test on structural and domain holdouts. |
+| `src/pead/phase8/review.py` | 248 | 249 | `P8-REVIEW-006` | Prove bidirectional dependency isolation between MAVS and generator/label engines. |
+| `src/pead/phase8/review.py` | 251 | 252 | `P8-REVIEW-007` | Report the complete non-scientific Phase 8 rule and architecture verdict. |
+| `src/pead/phase8/test_runner.py` | 22 | 23 | `P8-TEST-RUN-001` | Discover the complete repository regression, invariant, property, integration, and stress suite. |
+| `src/pead/phase8/test_runner.py` | 25 | 26 | `P8-TEST-RUN-002` | Retain the exact complete-suite denominator before any test executes. |
+| `src/pead/phase8/test_runner.py` | 29 | 30 | `P8-TEST-RUN-003` | Independently re-execute every high-volume Phase 8 semantic and architecture stress gate. |
+| `src/pead/phase8/test_runner.py` | 45 | 46 | `P8-TEST-RUN-004` | Retain the complete regression and independent Phase 8 verdict with exact denominators. |
+
+- **Console inventory result:** 27/27 Phase 8 `console.log` call sites have an immediately adjacent exact-ID `STEP LOG` comment. Exact paths, comment lines, log lines, IDs, and comments are retained in `results/audits/phase8/console_inventory.json` and above.
+- **WorkPlan gate-by-gate verdict:** original and DS-CF profiles frozen/versioned: pass; implementation-to-registry semantics: pass; any-change reopening policy: enforced; exhaustive/discretized veto fidelity: pass with zero violations; scope: pass; ambiguity: pass; mitigation: pass; monotonicity: pass; trace completeness: pass; central scalar-compression structural/domain execution: pass.
+- **Compliance gaps:** None.
+- **Deviation:** None in the final implementation. The failed local auditor attempt and its correction are disclosed above.
+- **Next action:** Inspect/stage only Phase 8 scope, commit directly on `main`, push without force, verify local/remote SHA equality and sole-branch topology, append the publication receipt, rerun the completed-ledger compliance audit, and stop before Phase 9.

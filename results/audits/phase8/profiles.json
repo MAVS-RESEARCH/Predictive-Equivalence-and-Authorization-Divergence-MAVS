@@ -1,0 +1,26 @@
+{
+  "profile_hashes": {
+    "MAVS-GC-DSCF-v1": "acade418db998014aaee2fe53ad94c7ca3cc720c4a51cb94a54be6e711d572eb",
+    "MAVS-GC-ORIGINAL-v1": "9c173a5c81ed81fc73749a3a70dcaddb69af609e30ee3aef9e81db86d2eb85e2",
+    "MAVS-PREDICTION-ONLY-v1": "c8719467cfa17c28f2c473228baef5f65f5b719efc6922375165ff2e95e8f98d"
+  },
+  "profiles": {
+    "MAVS-GC-DSCF-v1": {
+      "diagnostic_separation": true,
+      "frozen": true,
+      "versioned": true
+    },
+    "MAVS-GC-ORIGINAL-v1": {
+      "diagnostic_separation": true,
+      "frozen": true,
+      "versioned": true
+    },
+    "MAVS-PREDICTION-ONLY-v1": {
+      "diagnostic_separation": true,
+      "frozen": true,
+      "versioned": true
+    }
+  },
+  "schema_version": "1.0",
+  "status": "pass"
+}

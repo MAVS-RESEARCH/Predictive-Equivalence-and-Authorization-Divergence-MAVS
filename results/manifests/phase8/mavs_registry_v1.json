@@ -1,0 +1,61 @@
+{
+  "ablation_ids": [
+    "MAVS-A00",
+    "MAVS-A01",
+    "MAVS-A02",
+    "MAVS-A03",
+    "MAVS-A04",
+    "MAVS-A05",
+    "MAVS-A06",
+    "MAVS-A07",
+    "MAVS-A08",
+    "MAVS-A09",
+    "MAVS-A10",
+    "MAVS-A11",
+    "MAVS-A12",
+    "MAVS-A13",
+    "MAVS-A14",
+    "MAVS-A15"
+  ],
+  "diagnostic_definition_hashes": {
+    "DSCF-ZC-v1": "dd7abed0d83c8d337465512b4ed88549327e5f026d08fe6ce45cb87163080619",
+    "DSCF-ZF-v1": "e420f9325e2857d33204f94cd030f044d2963267d00f4eee6e66dd5ad17fa614",
+    "DSCF-ZH-v1": "368e9b2ee493726036d49ca68565651b46177326721c6a566da5a0b0b00dfb1a",
+    "DSCF-ZM-v1": "c0de53196f7393ed875fa358db59012064dca54be91898c53d53f6204928b1e5",
+    "DSCF-ZO-v1": "844196e7cd9d21af6ffef0583eafa36f071f0f196a4566ae4417af93ad0ed385",
+    "DSCF-ZP-v1": "b6e44137cd2c869948ad2a0f8a00d1b4c87b61c9a117ee87996f9816a548d2ee",
+    "DSCF-ZS-v1": "91a066a46375d0557eb88c38694ed6222c06c2886a1b236b270f42552e7e0222"
+  },
+  "files": {
+    "configs/diagnostics/ds_cf_zc.yaml": "1466ca0d9a13007a2aaf6b588749f4014584fcde6f620857441443a18f1c72b7",
+    "configs/diagnostics/ds_cf_zf.yaml": "af682acc5feee35dfad619a4b5c50399314814458549f516db2f1b7791b8c38c",
+    "configs/diagnostics/ds_cf_zh.yaml": "b0e46ddbdee8aa458456a6873d567cf59a4b836629b63a32d3708784c95b67ee",
+    "configs/diagnostics/ds_cf_zm.yaml": "ad67ae6695d549273db47482862ab8a2a6d02e7c874782e028cc6db1053aed50",
+    "configs/diagnostics/ds_cf_zo.yaml": "019ae09c28639919bb278fc9ddec5a5708500894af135561187af019fb35282d",
+    "configs/diagnostics/ds_cf_zp.yaml": "1bb8873fdac8b6975f5fba4ee4ce123e4717b8e541d961eb97e6bb97354be42a",
+    "configs/diagnostics/ds_cf_zs.yaml": "a5afd0085ca727fb1ad7b6f0070bb6754dd65aafd2424e965c4a87ad2c472366",
+    "configs/methods/mavs_ablations_v1.yaml": "2a1e7f01d08aaf6796782bbade3178e66777138ef4326a5b9ada344d009ffd53",
+    "configs/methods/mavs_adapter_v1.yaml": "e323c2bea4a3986cd9872a4acdcf419ad63efdcc713d3a1dbf734a3c4ce6ad62",
+    "configs/methods/mavs_profiles_v1.yaml": "2c983d692d97e1f3ee6c6b71459123fbeb1f99afdde180d94ad08871b310bd4c",
+    "configs/methods/mavs_scalarization_v1.yaml": "78c78052de8faae8634245d106ace83984a11932e076c4bf3ca0b7aa374a33f5",
+    "src/pead/mavs/__init__.py": "938b70821d9802cab027e9e162b012faac785726ddba2f51e25ed64716679409",
+    "src/pead/mavs/ablations.py": "c4ff4015173abe9e757c153fb4035d3c6d81034bc6d80d376895f19c3faefa7e",
+    "src/pead/mavs/adapter.py": "0af713a4d162e152c46a2ed0c7a0b27f45c6486ff299fee7fa34c63c784e1121",
+    "src/pead/mavs/ds_cf.py": "2c687ab390d87ddc259df6a66d6638644595d266e3f70d8329055bd2ea3b31aa",
+    "src/pead/mavs/governed_consensus.py": "553890abc81278758ab852f1ef166b3550d88a9dd68f534a8c651a2c47a05005",
+    "src/pead/mavs/profiles.py": "45eb068e0c9ceb24f9bc0da1f86dfce008493bebdfea85763fed366dbdd3a08e",
+    "src/pead/mavs/scalarization.py": "b457531202b92bb91302d0091fc29e306b97f2d0228d7dc33f11f58b9f5e1b73",
+    "src/pead/mavs/traces.py": "67aff33de9d60f382d3b6a02656bcab2bf74c587384bea3549e91613f0c89f30"
+  },
+  "manifest_sha256": "634a743c9698cc870d41b0931988cf3dc28c4f756c0ed3862715b681029dc7b0",
+  "phase": 8,
+  "phase4_registry_sha256": "3e8a91aa68dc42a40af59a6a43ee61f1cbddded42a6795df70e47076c829cc39",
+  "profile_hashes": {
+    "MAVS-GC-DSCF-v1": "acade418db998014aaee2fe53ad94c7ca3cc720c4a51cb94a54be6e711d572eb",
+    "MAVS-GC-ORIGINAL-v1": "9c173a5c81ed81fc73749a3a70dcaddb69af609e30ee3aef9e81db86d2eb85e2",
+    "MAVS-PREDICTION-ONLY-v1": "c8719467cfa17c28f2c473228baef5f65f5b719efc6922375165ff2e95e8f98d"
+  },
+  "registry_id": "PEAD-MAVS-IMPLEMENTATION-v1",
+  "released_rows": 0,
+  "schema_version": "1.0"
+}

@@ -1,0 +1,12 @@
+{
+  "gates": {
+    "comparable_raw_g_learner": true,
+    "executable": true,
+    "phase10_artifact_required": true,
+    "same_budget_policy": true,
+    "same_four_roles": true,
+    "structural_domain_holdouts": true
+  },
+  "schema_version": "1.0",
+  "status": "pass"
+}

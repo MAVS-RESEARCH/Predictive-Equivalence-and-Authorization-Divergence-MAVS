@@ -1,0 +1,33 @@
+{
+  "conditions": [
+    "MAVS-A00",
+    "MAVS-A01",
+    "MAVS-A02",
+    "MAVS-A03",
+    "MAVS-A04",
+    "MAVS-A05",
+    "MAVS-A06",
+    "MAVS-A07",
+    "MAVS-A08",
+    "MAVS-A09",
+    "MAVS-A10",
+    "MAVS-A11",
+    "MAVS-A12",
+    "MAVS-A13",
+    "MAVS-A14",
+    "MAVS-A15"
+  ],
+  "gates": {
+    "all_raw_g_listed": true,
+    "exact_inventory": true,
+    "exact_registry": true,
+    "four_open_roles": true,
+    "one_registered_delta": true,
+    "only_registered_delta": true,
+    "prediction_only_A00": true,
+    "raw_g_A01_A15": true,
+    "same_underlying_ids": true
+  },
+  "schema_version": "1.0",
+  "status": "pass"
+}
