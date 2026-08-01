@@ -2698,3 +2698,17 @@ Copy this block for every meaningful action:
 
 - **Next phase:** Phase 11 - method freeze, precommitment verification, and bank unlock. It requires a new explicit user instruction and has not begun.
 - **Next action:** stage only Phase 10 scope, pass cached diff/secret/boundary checks, commit and push `pead-study-v3` without force, verify exact remote equality while preserving `main` and `pead-study-v2-blocked`, append a publication receipt, and stop before Phase 11.
+
+### PATH-0095 - Phase 10 Git publication and remote verification
+
+- **Timestamp:** 2026-08-02T02:39:35+05:00.
+- **Implementation commit:** `72924d914f3ce0af2ef1fd0fd5049b59d4355f13` - `phase-10: execute development and public validation`.
+- **Published scope:** 97 intended Phase 10 paths, 18,498 inserted lines, five exact open-bank roles, five CPU checkpoint files, all retained method failures and public decisions, Phase 10 source/config/scripts/tests, the stable 1,036-file freeze candidate, machine audits, reports, and PATH-0094.
+- **Prepublication controls:** `git diff --check` and cached `git diff --check` passed; compileall passed; suspicious key/plaintext filename count 0; credential/private-key pattern hits 0; staged paths 97; unstaged paths 0; untracked paths 0; targeted tests 8/8; complete regression 207/207; independent stress 1,000,000 decisions with zero collision/mismatch; two consecutive compliance audits passed without an intervening refresh and each reported `compliance_gaps=[]`.
+- **Push:** `git push origin pead-study-v3` passed without force, reset, rebase, amend, squash, history rewrite, branch deletion, or tag deletion.
+- **Exact remote verification:** local `HEAD`, remote-tracking `origin/pead-study-v3`, and remote `refs/heads/pead-study-v3` all resolve to `72924d914f3ce0af2ef1fd0fd5049b59d4355f13` after the implementation push.
+- **Preserved history:** remote `main` remains `cea7ba439de271ab054d959ec7e1571d98315d80`; peeled `pead-study-v2-blocked^{}` remains the same SHA. No merge to main occurred.
+- **Scientific and custody boundary:** Phase 9A remains byte-identical; unlock, decryption, materialization, sealed/final-bank access, and Phase 11 start all remain false. Public validation remains inspection-only and was not used for selection.
+- **Current Phase 10 verdict:** pass with all gates `pass` and `compliance_gaps=[]`.
+- **Next permitted phase:** Phase 11 - method freeze, precommitment verification, and bank unlock. It has not begun and requires a new explicit user instruction.
+- **Next action:** publish this ledger-only close record, verify final local/remote equality, rerun the stable Phase 10 audit without changing the freeze candidate, and stop.
