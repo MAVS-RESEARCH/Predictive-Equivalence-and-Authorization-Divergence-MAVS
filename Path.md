@@ -2887,3 +2887,19 @@ Copy this block for every meaningful action:
 - **Machine evidence:** `results/audits/freeze-01685e173019cece2e83/console_inventory.json` passes repository adjacency and exact-line validation. Custody lines were independently enumerated after the operator hash was frozen.
 - **Compliance gaps:** None in console instrumentation. The scientific Phase 11 gate remains blocked for the separate materialization-commitment and historical-log-signature findings.
 - **Next action:** Publish the factual blocked Phase 11 implementation and evidence on the sole `main` branch. Do not start Phase 12. A successful bank unlock requires explicit authorization for a new study version beginning again at Phase 9A.
+
+### PATH-0107 - Phase 11 publication to sole main branch
+
+- **Timestamp:** 2026-08-01T22:50:15+05:00.
+- **Phase:** 11.
+- **Status:** Published; scientific phase gate remains blocked.
+- **Change ID:** `P11-PUBLISH-001`.
+- **Branch:** `main`; no working branch, publication branch, merge, or pull request was created.
+- **Implementation commit:** `ea99aba754803c28b1617c05e1ec769901732d30` - `phase-11: freeze methods and block invalid bank unlock`.
+- **Published scope:** 25 intended files; 3,433 insertions. It includes Phase 11 freeze/unlock/audit/test controls, three non-materialization status records, signed freeze, blocked blind-bank manifest, audit/test evidence, stress tests, and the factual implementation ledger. It contains no custody plaintext, private key, exact hidden seeds, claim-bearing generator source, materialized case, or label plaintext.
+- **Stage controls:** cached `git diff --check` passed. Staged secret/path scan passed. The Phase 10 candidate remained byte-identical to its published 404-file identity.
+- **Push:** `git push origin main` passed without force, rebase, history rewrite, merge commit, pull request, or secondary branch.
+- **Exact remote verification:** local `HEAD` and remote `refs/heads/main` both resolved to `ea99aba754803c28b1617c05e1ec769901732d30` immediately after implementation publication.
+- **Branch topology:** `git ls-remote --heads origin` returned exactly one head, `refs/heads/main`; local Git exposes exactly one branch, `main`.
+- **Scientific boundary:** publication does not change the blocked verdict. Unlock, decryption, materialization, duplicate/overlap analysis, blind execution, aggregate inspection, and Phase 12 remain prohibited.
+- **Next action:** Commit and push this publication receipt on `main`, verify exact remote equality and a clean worktree, rerun the installed Phase 11 audit without another custody access, and stop.
