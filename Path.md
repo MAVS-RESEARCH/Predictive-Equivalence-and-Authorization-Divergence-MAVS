@@ -2625,3 +2625,16 @@ Copy this block for every meaningful action:
 
 - **Compliance status:** corrected local implementation passes all applicable WorkPlan gates with `compliance_gaps=[]`. PATH-0091's prior remote completion is superseded until this correction is committed, pushed, remotely verified, and closed by a new ledger receipt.
 - **Next action:** publish the adapter correction without force, verify v3 remote equality and preserved main/tag, append a new publication-close record, push it, rerun the final audit from the final remote-equivalent tree, and stop before Phase 10.
+
+### PATH-0093 - Allocation-adapter correction publication and final Phase 9A-v3 close
+
+- **Timestamp:** 2026-08-02T00:30:45+05:00.
+- **Correction commit:** `ce0ca6425287de36af12958d0a84ddd48dfb7c8e` - `phase-9a: correct sealed allocation adapter`.
+- **Published scope:** 17 intended files; operational adapter correction script; actual sealed-generator contract evidence; gap receipt; updated content ciphertext, design inventory, index, commitment, signed event log, real preflight, complete test/audit evidence, public integration expectation, console inventory, and append-only Path record.
+- **Pre-push gates:** cached `git diff --check` passed; compileall passed; 10/10 targeted tests passed; 199/199 complete tests passed; 92/92 mutations rejected; boundary scan passed across 492 files with zero secret/key/seed/source findings; current exact Phase 11 preflight passed; `compliance_gaps=[]`.
+- **Push and remote verification:** `git push origin pead-study-v3` passed without force. Local and remote `pead-study-v3` both resolved to `ce0ca6425287de36af12958d0a84ddd48dfb7c8e` immediately after publication.
+- **Preserved history:** remote `main` and peeled `pead-study-v2-blocked` remained exactly `cea7ba439de271ab054d959ec7e1571d98315d80`. No main merge, history rewrite, branch deletion, tag deletion, reset, rebase, amend, or squash occurred.
+- **Post-publication audit:** all ten Phase 9A audit gates were rerun from the published correction and passed; generator signed-JSON/YAML-denial/atomic/distance gates passed; event signatures 312/312; exact consumer missing/invented values both empty; real one-shot state unconsumed; Phase 10 artifacts 0. The audit produced no working-tree change.
+- **Current corrected Phase 9A verdict:** Pass with `compliance_gaps=[]`.
+- **Scientific boundary:** scientific semantic changes 0; performance inputs used `[]`; real unlock/decryption/materialization false; scientific results 0; Phase 10 not started.
+- **Next permitted action:** only a new explicit user instruction may authorize Phase 10. Stop after this ledger-only publication close.
