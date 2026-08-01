@@ -1,0 +1,98 @@
+{
+  "entries": [
+    {
+      "comment": "STEP LOG P9A-VERIFY-001: Load only public commitments, signatures, allocation metadata, and ciphertext identities.",
+      "comment_line": 86,
+      "console_log_line": 87,
+      "event_id": "P9A-VERIFY-001",
+      "file": "src/pead/holdouts/commitment_verifier.py"
+    },
+    {
+      "comment": "STEP LOG P9A-VERIFY-002: Verify every registered signature, public artifact hash, and encrypted package hash.",
+      "comment_line": 89,
+      "console_log_line": 90,
+      "event_id": "P9A-VERIFY-002",
+      "file": "src/pead/holdouts/commitment_verifier.py"
+    },
+    {
+      "comment": "STEP LOG P9A-AUDIT-001: Verify all public signatures, ciphertext hashes, and separated package roles.",
+      "comment_line": 54,
+      "console_log_line": 55,
+      "event_id": "P9A-AUDIT-001",
+      "file": "src/pead/phase9a/audit.py"
+    },
+    {
+      "comment": "STEP LOG P9A-AUDIT-002: Prove normative YAML hash identity and YAML-to-signed-JSON semantic equality.",
+      "comment_line": 61,
+      "console_log_line": 62,
+      "event_id": "P9A-AUDIT-002",
+      "file": "src/pead/phase9a/audit.py"
+    },
+    {
+      "comment": "STEP LOG P9A-AUDIT-003: Require custody test evidence for allocation, groups, distance, ambiguity, separation, and access denial.",
+      "comment_line": 69,
+      "console_log_line": 70,
+      "event_id": "P9A-AUDIT-003",
+      "file": "src/pead/phase9a/audit.py"
+    },
+    {
+      "comment": "STEP LOG P9A-AUDIT-004: Scan tracked development files for private keys, exact seeds, D7/D8 implementations, and generators.",
+      "comment_line": 78,
+      "console_log_line": 79,
+      "event_id": "P9A-AUDIT-004",
+      "file": "src/pead/phase9a/audit.py"
+    },
+    {
+      "comment": "STEP LOG P9A-AUDIT-005: Prove commitment chronology predates all Phase 10 training, calibration, and public-validation artifacts.",
+      "comment_line": 91,
+      "console_log_line": 92,
+      "event_id": "P9A-AUDIT-005",
+      "file": "src/pead/phase9a/audit.py"
+    },
+    {
+      "comment": "STEP LOG P9A-AUDIT-006: Inventory every repository Phase 9A console.log and its immediately adjacent identifying comment.",
+      "comment_line": 99,
+      "console_log_line": 100,
+      "event_id": "P9A-AUDIT-006",
+      "file": "src/pead/phase9a/audit.py"
+    },
+    {
+      "comment": "STEP LOG P9A-AUDIT-007: Emit the zero-gap verdict only after every Phase 9A completion gate passes.",
+      "comment_line": 112,
+      "console_log_line": 113,
+      "event_id": "P9A-AUDIT-007",
+      "file": "src/pead/phase9a/audit.py"
+    },
+    {
+      "comment": "STEP LOG P9A-AUDIT-FAIL: Retain the exact release-blocking Phase 9A compliance failure.",
+      "comment_line": 125,
+      "console_log_line": 126,
+      "event_id": "P9A-AUDIT-FAIL",
+      "file": "src/pead/phase9a/audit.py"
+    },
+    {
+      "comment": "STEP LOG P9A-TEST-001: Discover every repository regression and Phase 9A mutation test.",
+      "comment_line": 20,
+      "console_log_line": 21,
+      "event_id": "P9A-TEST-001",
+      "file": "src/pead/phase9a/test_runner.py"
+    },
+    {
+      "comment": "STEP LOG P9A-TEST-002: Replay the complete Phase 9A zero-gap audit after all regression tests.",
+      "comment_line": 24,
+      "console_log_line": 25,
+      "event_id": "P9A-TEST-002",
+      "file": "src/pead/phase9a/test_runner.py"
+    },
+    {
+      "comment": "STEP LOG P9A-TEST-003: Retain exact complete-suite and compliance verdicts without exposing custody content.",
+      "comment_line": 30,
+      "console_log_line": 31,
+      "event_id": "P9A-TEST-003",
+      "file": "src/pead/phase9a/test_runner.py"
+    }
+  ],
+  "phase": "9A",
+  "schema_version": "1.0",
+  "status": "pass"
+}

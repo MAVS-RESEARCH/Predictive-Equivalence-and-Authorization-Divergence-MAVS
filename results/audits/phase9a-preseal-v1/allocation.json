@@ -1,0 +1,14 @@
+{
+  "exact_pairs_per_domain": 2000,
+  "gates": {
+    "allocation": "pass",
+    "atomic_groups": "pass",
+    "signed_json_only": "pass",
+    "typed_distance": "pass"
+  },
+  "near_pairs_per_domain": 1000,
+  "preseal_id": "phase9a-preseal-v1",
+  "schema_version": "1.0",
+  "status": "pass",
+  "stress_atomic_rows": 2000
+}

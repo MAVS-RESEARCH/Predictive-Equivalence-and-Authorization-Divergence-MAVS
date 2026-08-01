@@ -1,0 +1,39 @@
+{
+  "algorithm": "AES-256-GCM",
+  "associated_data_contract": "package-id+preseal-id+study-version",
+  "packages": [
+    {
+      "bytes": 12970,
+      "nonce_b64": "ccBbTv8ed6PeM2Wf",
+      "package_id": "holdout-content-v1",
+      "path": "artifacts/custody/phase9a-preseal-v1/holdout-content-v1.aesgcm",
+      "role": "content",
+      "sha256": "bc8c106bfc9284855317b25698f47a170c46cdb91ca7b310f3c185437c197224"
+    },
+    {
+      "bytes": 1524,
+      "nonce_b64": "7P/VvsDDGNU+0ibw",
+      "package_id": "holdout-labels-v1",
+      "path": "artifacts/custody/phase9a-preseal-v1/holdout-labels-v1.aesgcm",
+      "role": "labels",
+      "sha256": "6f6a7984788cca669d18a20d58abda27cf401eb3374edb90192dda70037880b8"
+    },
+    {
+      "bytes": 438,
+      "nonce_b64": "ED6M2ZCigjC+gh8H",
+      "package_id": "holdout-seeds-v1",
+      "path": "artifacts/custody/phase9a-preseal-v1/holdout-seeds-v1.aesgcm",
+      "role": "seeds",
+      "sha256": "69ac8b46572a93d49ee2429a7bfff8588c9b31963204ebd344d69094bb853291"
+    }
+  ],
+  "preseal_id": "phase9a-preseal-v1",
+  "public_key_b64": "dFlNnWMWsVglm+aA1ba14erDKCm+TyHrGDwS85SkkTc=",
+  "schema_version": "1.0",
+  "signature": {
+    "algorithm": "Ed25519",
+    "public_key_b64": "dFlNnWMWsVglm+aA1ba14erDKCm+TyHrGDwS85SkkTc=",
+    "signature_b64": "P7rotHP0torwAmcrs4EymGmRPsovfwoL/JjVIdckG9LIrjcH7gehVanvTS5AitF59jE1YUIo+nwjaQZrdzwcDw=="
+  },
+  "study_version": "pead-study-v1"
+}

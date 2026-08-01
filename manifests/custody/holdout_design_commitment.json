@@ -1,0 +1,108 @@
+{
+  "boundary": {
+    "claim_bearing_source_in_development": false,
+    "decryption_key_in_development": false,
+    "exact_seed_plaintext_in_development": false
+  },
+  "change_policy": "Any scientific holdout-design change requires a new study version and complete Phase 9A repetition before training.",
+  "chronology": {
+    "phase10_artifact_count_at_seal": 0,
+    "phase9a_precedes_phase10": true
+  },
+  "design_artifact_count": 15,
+  "design_artifacts": [
+    {
+      "artifact_id": "configs/holdouts/d7_clinical.yaml",
+      "bytes": 274,
+      "sha256": "1fee02a8e379a4c5e3abdbcc3d6234cc74861b12c597e7eaf4fe30888fa143ca"
+    },
+    {
+      "artifact_id": "configs/holdouts/d8_content.yaml",
+      "bytes": 257,
+      "sha256": "e3e3f4412c017fd55d10efedb8c0d77c4259c1ec65225501fe14feb6b20f0cac"
+    },
+    {
+      "artifact_id": "configs/holdouts/graph_topologies.yaml",
+      "bytes": 234,
+      "sha256": "98120f30f9e08d18be262506c2bcf79b36f87876b8a8ec3101989a3aa57e7de7"
+    },
+    {
+      "artifact_id": "configs/holdouts/interventions.yaml",
+      "bytes": 219,
+      "sha256": "fad35ad5e9ec46ed9638c4bed12e54ee78cbcbd7ae27cd183efc1ec830b836a9"
+    },
+    {
+      "artifact_id": "configs/holdouts/mechanisms.yaml",
+      "bytes": 910,
+      "sha256": "a5f6fc75b1302f955f1439c88aa4056081ce4502a11fa4f2808bd023fdc81acf"
+    },
+    {
+      "artifact_id": "configs/holdouts/nuisance.yaml",
+      "bytes": 272,
+      "sha256": "53aa51d249da7bbece287bba5cb5d30c08fd702226977c78e33efe72ecdf75fd"
+    },
+    {
+      "artifact_id": "configs/holdouts/policy_forms.yaml",
+      "bytes": 332,
+      "sha256": "9717f7c08eace3aaaf9d5cd5002ec822fa2f99694e590936ee9224f9e37ded4a"
+    },
+    {
+      "artifact_id": "configs/holdouts/scope_interactions.yaml",
+      "bytes": 249,
+      "sha256": "cae3f3a6259b158accac7a20b52e074ce569ad383443f137f5a1c8d5437f5177"
+    },
+    {
+      "artifact_id": "configs/holdouts/seeds.yaml",
+      "bytes": 290,
+      "sha256": "19d180d0be8de9b2073b5b65d4dc0b0ae906ec6932309a9b7e5091a61d2e101b"
+    },
+    {
+      "artifact_id": "src/pead_holdout/__init__.py",
+      "bytes": 48,
+      "sha256": "3d5dea730eaa87e42a01cec2453b09c70446a2c76baae46f6c93a2d76d18aa37"
+    },
+    {
+      "artifact_id": "src/pead_holdout/allocator.py",
+      "bytes": 2223,
+      "sha256": "bc2bca7238f979d34b64fbc274dc1dbbfa9edd74a2594c195f708d361a6d648b"
+    },
+    {
+      "artifact_id": "src/pead_holdout/ambiguity.py",
+      "bytes": 1103,
+      "sha256": "4e6acd707f4919b7fab0e7ad8592e8fc907f5e9ac2e69fb339d6afa320395d9d"
+    },
+    {
+      "artifact_id": "src/pead_holdout/custody.py",
+      "bytes": 2396,
+      "sha256": "ecd188a3812cc19ea6373543b37e1808c06db6c1abc42e862b4cd9768528db10"
+    },
+    {
+      "artifact_id": "src/pead_holdout/generator.py",
+      "bytes": 1172,
+      "sha256": "e699dc8ad751fe68d7265ce4df73ca8f1add4dc76945e1b0f9d1096f7a7cefc6"
+    },
+    {
+      "artifact_id": "src/pead_holdout/packager.py",
+      "bytes": 748,
+      "sha256": "d44b0fa19bbea4cf38e03a91505fec5be6b428b0e787c96273e9c34dbae4c87d"
+    }
+  ],
+  "preseal_id": "phase9a-preseal-v1",
+  "public_artifacts": [
+    {
+      "artifact_id": "allocation_manifest",
+      "sha256": "1a7c7fd50fe0446d7adb03015e8c5f982492e7a56a991b3bf7e0883a1f1509d2"
+    },
+    {
+      "artifact_id": "encrypted_package_index",
+      "sha256": "8e02ae79de8472031402c0c49266b4708fd4284423ea6ff2d199f9f471580c32"
+    }
+  ],
+  "schema_version": "1.0",
+  "signature": {
+    "algorithm": "Ed25519",
+    "public_key_b64": "dFlNnWMWsVglm+aA1ba14erDKCm+TyHrGDwS85SkkTc=",
+    "signature_b64": "0jteaVaVP2xjVpCXzPk5XsRJPQMULgVO2FhOvrSC4eUptQLoJEK1RxIh1IezdBQIdpbk0Ugms1lU1fqperSaDg=="
+  },
+  "study_version": "pead-study-v1"
+}

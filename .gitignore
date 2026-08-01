@@ -5,3 +5,6 @@ __pycache__/
 .pytest_cache/
 .coverage
 tmp/
+.sealed/
+SEALED_WORKSPACE/
+*SEALED_CUSTODY*/

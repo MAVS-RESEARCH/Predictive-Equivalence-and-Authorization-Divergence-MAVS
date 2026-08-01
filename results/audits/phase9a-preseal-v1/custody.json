@@ -1,0 +1,12 @@
+{
+  "denied_pre_freeze_attempts": 300,
+  "gates": {
+    "append_only_log": "pass",
+    "development_access_denial": "pass"
+  },
+  "keys_in_development": 0,
+  "log_chain_events": 302,
+  "preseal_id": "phase9a-preseal-v1",
+  "schema_version": "1.0",
+  "status": "pass"
+}

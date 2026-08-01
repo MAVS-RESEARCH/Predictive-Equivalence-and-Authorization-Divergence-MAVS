@@ -1,0 +1,29 @@
+{
+  "allocation_semantic_equality": "pass",
+  "change_policy": "Any scientific holdout-design change requires a new study version and complete Phase 9A repetition before training.",
+  "compliance_gaps": [],
+  "console_log_sites": 13,
+  "custody_gates": [
+    "allocation",
+    "ambiguity_certificate",
+    "append_only_log",
+    "atomic_groups",
+    "development_access_denial",
+    "generator_label_separation",
+    "signed_json_only",
+    "typed_distance"
+  ],
+  "design_artifacts_signed": 15,
+  "phase": "9A",
+  "phase10_artifact_count": 0,
+  "preseal_id": "phase9a-preseal-v1",
+  "repository_scan_files": 453,
+  "repository_scan_violations": [],
+  "schema_version": "1.0",
+  "status": "pass",
+  "verified_ciphertexts": [
+    "holdout-content-v1",
+    "holdout-labels-v1",
+    "holdout-seeds-v1"
+  ]
+}
