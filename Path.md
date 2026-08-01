@@ -2903,3 +2903,46 @@ Copy this block for every meaningful action:
 - **Branch topology:** `git ls-remote --heads origin` returned exactly one head, `refs/heads/main`; local Git exposes exactly one branch, `main`.
 - **Scientific boundary:** publication does not change the blocked verdict. Unlock, decryption, materialization, duplicate/overlap analysis, blind execution, aggregate inspection, and Phase 12 remain prohibited.
 - **Next action:** Commit and push this publication receipt on `main`, verify exact remote equality and a clean worktree, rerun the installed Phase 11 audit without another custody access, and stop.
+
+## Phase 12 - One-pass blind evaluation and brutal generalization audit
+
+### PATH-0108 - Phase 12 start-request prerequisite adjudication
+
+- **Timestamp:** 2026-08-01T23:00:36+05:00.
+- **Phase:** 12 start gate only.
+- **Status:** Not started; blocked by the signed Phase 11 result.
+- **Change ID:** `P12-START-BLOCK-001`.
+- **Requested scope:** verify the Phase 11 immutable materialization, stream each sealed case once, execute every valid method once, commit decisions before label reveal, run all release-blocking audits before aggregate inspection, classify incidents, retain every outcome, and produce raw, processed, audit, report, and manifest lineages.
+- **Normative prerequisite:** Phase 12 must stream from Phase 11's verified immutable materialization and must perform no unlock or rematerialization. The Phase 11 manifest instead records `status=blocked-not-materialized`, `materialization_id=null`, `content_objects=0`, and `phase12_authorized=false`. The Phase 11 compliance report records `materialization_complete=false` and `phase12_authorized=false`.
+- **Hard-stop decision:** no Phase 12 command was executed. No sealed case was opened, streamed, projected, scored, aggregated, or inspected. No method decision was made and no hidden label was revealed. Starting the requested run would violate both the Phase 12 scope and the dependency rule that a Phase 11 custody failure invalidates the blind run.
+- **Frozen-code finding:** the signed 420-file Phase 11 inventory contains the generic projection-only committed-case runner and blind-contract tests, but contains no `scripts/run_blind_suite.py` and no Phase 12 orchestration module. Adding that executable, audit orchestration, or report code after the signed method freeze would be a post-freeze code change. It therefore cannot be implemented for `pead-study-v2` without invalidating the freeze.
+- **Custody state preservation:** the custody log remains at 303 events. The last event is the Phase 11 signed design-hash verification with SHA-256 `26a557a6bf065d2eed01aaf127b62c54e796e2e2ca8be6da1ada2394d4cd81a7`. The Phase 12 start audit appended no event and invoked no unlock, decryption, materialization, projection, decision, or label-reveal operation.
+- **Result hygiene:** no Phase 12 or blind-run directory exists under `results/raw/`, `results/processed/`, `results/audits/`, `results/reports/`, or `results/manifests/`. No run ID was allocated. Phase 10 and Phase 11 evidence was preserved because it is prerequisite evidence, not a stale Phase 12 result.
+- **Code and files created:** no Phase 12 code, test, config, raw result, processed result, audit result, report, manifest, case, prediction, trace, failure card, or incident artifact was created. Only this required `Path.md` adjudication entry was added.
+- **`console.log` inventory:** 0 Phase 12 workflow calls and 0 Phase 12 `STEP LOG` comments. This is intentional evidence that Phase 12 did not begin. Adding executable logging code after freeze merely to simulate progress would itself violate the freeze. The already-frozen generic runner retains its Phase 1 `P1-RUNNER-001` through `P1-RUNNER-004` comments and calls, but none was invoked and none is relabeled as Phase 12 evidence.
+- **Testing and stress status:** no scientific Phase 12 stress test can run without a materialized bank. Read-only gate checks confirmed the signed freeze and remote state are unchanged, the materialization identity is null, Phase 12 authorization is false, the canonical `run_blind_suite.py` entrypoint is absent, blind result directories are absent, and the custody log did not advance. The previously completed 217/217 regression remains valid evidence for frozen preflight controls, not evidence of a blind evaluation.
+- **Models and benchmarks:** models trained 0; methods executed 0; cases streamed 0; decisions committed 0; labels revealed 0; scientific metrics computed 0; benchmark comparisons produced 0. Consequently there is no Phase 12 overfitting, selection, or aggregate-inspection event, and no generalization claim.
+
+| Phase 12 WorkPlan requirement or gate | Observed evidence | Verdict |
+|---|---|---|
+| Verify signed freeze | Existing Phase 11 signature and 420-file inventory remain valid | Pass as prerequisite evidence |
+| Verify Phase 11 materialization identity | `materialization_id=null`, content objects 0 | Blocked |
+| Verify preserved encrypted-label stream | Ciphertext identity exists, but no valid materialization binds it to cases/counts/allocations | Blocked |
+| Perform no unlock or rematerialization | No Phase 12 custody event; log remains sequence 303 | Pass |
+| Stream cases once | No immutable materialization exists | Blocked |
+| Decision commit before label reveal | No case or method execution occurred | Not exercised |
+| Projection-only method access | No method execution occurred | Preserved, not exercised |
+| Execute exact, near, reversal, scope, evidence, structural, and domain holdouts | Materialized holdout objects 0 | Blocked |
+| Audit leakage, access, trace, budget, holdout, abstention, failures, non-triviality, and manifests | No valid blind-run denominator or trace lineage exists | Blocked |
+| Classify infrastructure, contamination, and scientific events | Phase 11 prerequisite failure remains a custody/integrity blocker; no Phase 12 incident exists | Pass for start adjudication only |
+| No post-freeze method/feature/threshold/representation change | No executable or scientific file changed | Pass |
+| Every release-blocking audit passes | Phase 11 materialization and custody-log gates do not pass | Blocked |
+| Oracle and serialization accuracy equal 1.0 on every released case | Released cases 0; cannot be evaluated | Blocked |
+| Report all registered generalization outcomes | No valid run exists; reporting values would be fabricated | Blocked |
+| Retain every failure and negative result | This hard-stop and its causes are retained without suppression | Pass |
+| Preserve invalidated run references | No Phase 12 run ID was created or invalidated | Not applicable |
+
+- **Compliance conclusion:** Phase 12 cannot be called started or finished. The zero-gap action is the hard stop itself. Completing the missing gates inside Phase 12 would require prohibited unlock/rematerialization, post-freeze code creation, or post-Phase9A scientific commitments.
+- **Required remediation:** create a new study version beginning at Phase 9A; precommit materialized content/label/seed hashes, counts, allocation bindings, and signed custody logging; repeat Phase 10 under that commitment; freeze the complete Phase 12 runner/audits/reports in a valid Phase 11; successfully materialize the bank; then begin a new one-pass Phase 12 run.
+- **Nominal next phase:** Phase 13 - Evidence package, clean reproduction, and bounded release. Phase 13 is not reachable until a valid Phase 12 completes with every release-blocking audit passed.
+- **Deviation:** None. The refusal to execute is required by the WorkPlan dependency and invalidation rules.
