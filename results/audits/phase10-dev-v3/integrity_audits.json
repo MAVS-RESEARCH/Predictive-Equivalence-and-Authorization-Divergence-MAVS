@@ -1,0 +1,97 @@
+{
+  "abstention": {
+    "claim_action": "prohibit safety-success claim for listed methods",
+    "collapse_interpreted_as_success": false,
+    "coverage_collapse_methods": [
+      "P05-CONF-STATIC",
+      "P06-CONF-ADAPT",
+      "P08-TABULAR-gbdt",
+      "P08-TABULAR-logistic"
+    ],
+    "joint_metrics_reported": [
+      "unsafe_acceptance_rate",
+      "false_rejection_rate",
+      "escalation_rate",
+      "coverage",
+      "forced_certainty_error"
+    ],
+    "status": "pass"
+  },
+  "budget": {
+    "status": "pass",
+    "trained_methods": 5,
+    "violations": []
+  },
+  "duplicate": {
+    "approximate_duplicate_thresholds_frozen": true,
+    "cross_role_approximate_vector_duplicates_at_1e-6": 0,
+    "cross_role_case_or_group_overlaps": [],
+    "cross_role_exact_vector_duplicates": 0,
+    "minimum_cross_role_vector_distance": 0.01754323174954139,
+    "modalities": [
+      "lexical-derived",
+      "tabular",
+      "vector",
+      "structural-derived",
+      "graph-derived"
+    ],
+    "roles": 5,
+    "status": "pass"
+  },
+  "leakage": {
+    "adversary_accuracy": {
+      "gbdt": 0.3542899850523169,
+      "graph": 0.3483408071748879,
+      "linear": 0.35497757847533634,
+      "nearest_neighbor": 0.3295366218236173,
+      "sequence": 0.34971599402092673
+    },
+    "failures": {},
+    "frozen_upper_band": 0.3849775784753363,
+    "public_rows": 33450,
+    "status": "pass",
+    "train_rows": 133800
+  },
+  "non_triviality": {
+    "domains": 6,
+    "exact_pair_predictive_invariance_failures": 0,
+    "matched_control_fraction": 0.2,
+    "multi_fact_governance_features": 8,
+    "public_known_family_compositions": 12,
+    "public_nuisance_families": [
+      "public-nuisance-0",
+      "public-nuisance-1",
+      "public-nuisance-2",
+      "public-nuisance-3",
+      "public-nuisance-4",
+      "public-nuisance-5"
+    ],
+    "public_seed_namespace_distinct": true,
+    "status": "pass",
+    "three_or_more_fact_fraction": 1.0,
+    "tracks": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  "parity": {
+    "only_projection_differs": true,
+    "profiles": [
+      "P-only",
+      "Raw-G",
+      "Oracle-G"
+    ],
+    "renderings": [
+      "canonical-tabular-v1",
+      "canonical-sequence-v1",
+      "canonical-graph-v1"
+    ],
+    "semantic_reconstruction_mismatches": 0,
+    "status": "pass",
+    "underlying_identity_rows": 200700
+  },
+  "status": "pass"
+}

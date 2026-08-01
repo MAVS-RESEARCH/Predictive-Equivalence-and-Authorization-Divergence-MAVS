@@ -1,0 +1,47 @@
+{
+  "atomic_groups": 50850,
+  "bank_id": "PEAD-OPEN-development_fit-v1",
+  "case_rows": 100350,
+  "domains": [
+    "D1",
+    "D2",
+    "D3",
+    "D4",
+    "D5",
+    "D6"
+  ],
+  "files": {
+    "banks/development/development_fit/case_ids.npy": "726bd76609cbf770443c7c09bfab504260dff1a9fe04f8aaf4df6a1e8d53ba9f",
+    "banks/development/development_fit/domains.npy": "09b7619475f08a2a050204eb4ef1d37762094a01c2f0312a67b450597c23e6a8",
+    "banks/development/development_fit/g_features.npy": "ad8317142c459dbb03e6b484007f5f186957db614e5e94940c31734f0df4da72",
+    "banks/development/development_fit/group_ids.npy": "0e881482f0b7a850156d284c8799517e5533c20a6aecb0dbf9be84dcffe0b17f",
+    "banks/development/development_fit/labels.npy": "d03e6207f6f93bdbac67fc9fbdce290988607604c9c1c1e61b49f8955fe0e673",
+    "banks/development/development_fit/p_features.npy": "007e6ba6ad700a4bcd87d3160bd3df06e8246d4befdb491abb3a583a8e596031",
+    "banks/development/development_fit/tracks.npy": "16388891e2e431b4d75c334d335bf52646e45233204b97b55446ccf626eeb15d"
+  },
+  "group_atomic_keys": [
+    "pair",
+    "sequence",
+    "latent_world_family",
+    "surface_template_family",
+    "intervention_lineage",
+    "provenance_graph_lineage"
+  ],
+  "label_counts": {
+    "0": 33450,
+    "1": 31200,
+    "2": 35700
+  },
+  "opportunity_counts": {
+    "evidence": 6750,
+    "exact": 18000,
+    "near": 9000,
+    "reversal": 4500,
+    "scope": 12600
+  },
+  "opportunity_total": 50850,
+  "public_selection_prohibited": true,
+  "role": "development_fit",
+  "schema_version": "1.0",
+  "study_version": "pead-study-v3"
+}

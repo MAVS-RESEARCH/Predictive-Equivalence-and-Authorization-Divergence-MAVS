@@ -1,0 +1,11 @@
+{
+  "affected_partial_bank_regenerated": true,
+  "calibration_artifacts_created": 0,
+  "exception": "OSError: [Errno 22] Invalid argument",
+  "failure": "command wrapper terminated stdout during first development_fit bank materialization",
+  "freeze_candidate_created": false,
+  "model_artifacts_created": 0,
+  "public_validation_artifacts_created": 0,
+  "schema_version": "1.0",
+  "status": "invalidated-before-training"
+}

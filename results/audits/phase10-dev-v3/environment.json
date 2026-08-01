@@ -1,0 +1,78 @@
+{
+  "accelerator_identity_sha256": "8a79361c56763dbe97a1f370f2aea207ac5200c4e916b0dea30d3f0c126638ce",
+  "accelerator_runtime": {
+    "cuda_available": false,
+    "cuda_device_count": 0,
+    "torch_build": "2.9.1+cpu",
+    "torch_cuda_build": null
+  },
+  "container_or_environment_identity_sha256": "7fc75437ff1df8aad9df749edefe5d7821d8342ea83129132069d42cca0c260b",
+  "container_used": false,
+  "execution_mode": "locked-local-environment",
+  "packages": {
+    "PyYAML": {
+      "actual": "6.0.2",
+      "expected": "6.0.2",
+      "match": true
+    },
+    "cryptography": {
+      "actual": "49.0.0",
+      "expected": "49.0.0",
+      "match": true
+    },
+    "lxml": {
+      "actual": "6.1.1",
+      "expected": "6.1.1",
+      "match": true
+    },
+    "numpy": {
+      "actual": "2.3.4",
+      "expected": "2.3.4",
+      "match": true
+    },
+    "pgmpy": {
+      "actual": "1.0.0",
+      "expected": "1.0.0",
+      "match": true
+    },
+    "psutil": {
+      "actual": "7.0.0",
+      "expected": "7.0.0",
+      "match": true
+    },
+    "python-docx": {
+      "actual": "1.2.0",
+      "expected": "1.2.0",
+      "match": true
+    },
+    "scikit-learn": {
+      "actual": "1.7.1",
+      "expected": "1.7.1",
+      "match": true
+    },
+    "torch": {
+      "actual": "2.9.1",
+      "expected": "2.9.1",
+      "match": true
+    },
+    "transformers": {
+      "actual": "4.55.4",
+      "expected": "4.55.4",
+      "match": true
+    },
+    "typing_extensions": {
+      "actual": "4.16.0",
+      "expected": "4.16.0",
+      "match": true
+    }
+  },
+  "physical_accelerator_devices": [
+    "GPU 0: NVIDIA GeForce RTX 3050 Laptop GPU (UUID: GPU-74637ae2-dc04-df0c-8f6b-9053a5757957)"
+  ],
+  "platform": "Windows-11-10.0.26200-SP0",
+  "processor": "Intel64 Family 6 Model 154 Stepping 3, GenuineIntel",
+  "python": "3.12.13",
+  "qwen_expected_weight_manifest_sha256": "291349c22595a174d997ab345601d1efebd3d1946fb58a8895a5576d7e6cab8a",
+  "qwen_weights_locally_present": false,
+  "status": "pass"
+}

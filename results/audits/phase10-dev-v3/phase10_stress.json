@@ -1,0 +1,7 @@
+{
+  "decisions": 1000000,
+  "deterministic_mismatches": 0,
+  "identity_collisions": 0,
+  "schema_version": "1.0",
+  "status": "pass"
+}

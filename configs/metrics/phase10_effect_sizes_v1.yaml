@@ -1,0 +1,24 @@
+schema_version: "1.0"
+config_id: PEAD-PHASE10-EFFECT-SIZES-v1
+frozen_before_public_validation: true
+primary_architecture_specific_advantage:
+  comparison: MAVS-A15-versus-best-eligible-flat-Raw-G
+  metric: protected_utility
+  minimum_absolute_improvement: 0.02
+  unsafe_acceptance_noninferiority_margin: 0.005
+  maximum_escalation_rate_increase: 0.05
+secondary_minimum_effects:
+  unsafe_acceptance_absolute_reduction: 0.02
+  false_rejection_absolute_reduction: 0.02
+  protected_utility_absolute_improvement: 0.02
+  scope_leakage_absolute_reduction: 0.01
+  transfer_utility_absolute_improvement: 0.02
+power:
+  two_sided_alpha: 0.05
+  target_power: 0.80
+  paired_unit: atomic_group
+  calculation: normal_approximation_for_registered_binary_minimum_effect
+claim_rule:
+  - Statistical significance cannot replace the registered practical minimum.
+  - Public validation cannot alter these values or select an operating point.
+  - Phase 12 claim eligibility requires both the registered effect and its frozen statistical procedure.

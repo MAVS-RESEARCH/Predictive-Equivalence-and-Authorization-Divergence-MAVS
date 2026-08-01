@@ -1,0 +1,61 @@
+{
+  "checkpoint_corrections": {
+    "G01-LOGREG": {
+      "all_original_trials_retained": true,
+      "corrected_configuration_index": 0,
+      "prior_configuration_index": 9,
+      "public_validation_used": false,
+      "reason": "parameter-count and deterministic registered-resource tie-break correction"
+    },
+    "G02-TREE": {
+      "all_original_trials_retained": true,
+      "corrected_configuration_index": 0,
+      "prior_configuration_index": 5,
+      "public_validation_used": false,
+      "reason": "parameter-count and deterministic registered-resource tie-break correction"
+    },
+    "G03-GBDT": {
+      "all_original_trials_retained": true,
+      "corrected_configuration_index": 1,
+      "prior_configuration_index": 5,
+      "public_validation_used": false,
+      "reason": "parameter-count and deterministic registered-resource tie-break correction"
+    },
+    "P08-TABULAR-gbdt": {
+      "all_original_trials_retained": true,
+      "corrected_configuration_index": 0,
+      "prior_configuration_index": 4,
+      "public_validation_used": false,
+      "reason": "parameter-count and deterministic registered-resource tie-break correction"
+    },
+    "P08-TABULAR-logistic": {
+      "all_original_trials_retained": true,
+      "corrected_configuration_index": 1,
+      "prior_configuration_index": 1,
+      "public_validation_used": false,
+      "reason": "parameter-count and deterministic registered-resource tie-break correction"
+    }
+  },
+  "conformal_methods_corrected": [
+    "P05-CONF-STATIC",
+    "P06-CONF-ADAPT"
+  ],
+  "decryption_attempted": false,
+  "gaps": [
+    "conformal calibration/policy traces absent",
+    "checkpoint parameter/resource tie-break used observed elapsed time"
+  ],
+  "materialization_attempted": false,
+  "original_trial_histories_retained": true,
+  "phase9a_byte_identical": true,
+  "prior_invalidated_artifacts": {
+    "decision_sha256": "d269d7d8701b71d332357cc8a64c297ead069e3fb205cf0a6cb3b0db2521973e",
+    "freeze_candidate_sha256": "3506c630d68e8427f713029aafee53311b3b04e1ff74d78703101469d8892efc",
+    "report_sha256": "a417bab8dbf9a702dcb3302be8c90493b9c9de4e9e85b5bc0ca7ce95f7ff663f"
+  },
+  "public_validation_used_for_correction_selection": false,
+  "schema_version": "1.0",
+  "scientific_underperformance_removed": false,
+  "status": "pass",
+  "unlock_attempted": false
+}

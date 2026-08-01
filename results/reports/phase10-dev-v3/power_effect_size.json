@@ -1,0 +1,84 @@
+{
+  "alpha": 0.05,
+  "claim_bearing_atomic_group_counts": {
+    "domains": 15600,
+    "final_blind": 31200,
+    "structural": 15600
+  },
+  "claim_bearing_record_counts": {
+    "domains": 26600,
+    "final_blind": 53200,
+    "structural": 26600
+  },
+  "effects": {
+    "false_rejection_absolute_reduction": {
+      "adequate": true,
+      "adequate_by_claim_bank": {
+        "domains": true,
+        "final_blind": true,
+        "structural": true
+      },
+      "claim_bank_atomic_groups": {
+        "domains": 15600,
+        "final_blind": 31200,
+        "structural": 15600
+      },
+      "minimum_effect": 0.02,
+      "public_available_atomic_groups": 16950,
+      "required_paired_units": 9812
+    },
+    "primary_architecture_specific_advantage": {
+      "adequate": true,
+      "adequate_by_claim_bank": {
+        "domains": true,
+        "final_blind": true,
+        "structural": true
+      },
+      "claim_bank_atomic_groups": {
+        "domains": 15600,
+        "final_blind": 31200,
+        "structural": 15600
+      },
+      "minimum_effect": 0.02,
+      "public_available_atomic_groups": 16950,
+      "required_paired_units": 9812
+    },
+    "protected_utility_absolute_improvement": {
+      "adequate": true,
+      "adequate_by_claim_bank": {
+        "domains": true,
+        "final_blind": true,
+        "structural": true
+      },
+      "claim_bank_atomic_groups": {
+        "domains": 15600,
+        "final_blind": 31200,
+        "structural": 15600
+      },
+      "minimum_effect": 0.02,
+      "public_available_atomic_groups": 16950,
+      "required_paired_units": 9812
+    },
+    "unsafe_acceptance_absolute_reduction": {
+      "adequate": true,
+      "adequate_by_claim_bank": {
+        "domains": true,
+        "final_blind": true,
+        "structural": true
+      },
+      "claim_bank_atomic_groups": {
+        "domains": 15600,
+        "final_blind": 31200,
+        "structural": 15600
+      },
+      "minimum_effect": 0.02,
+      "public_available_atomic_groups": 16950,
+      "required_paired_units": 9812
+    }
+  },
+  "method": "registered conservative normal approximation over paired atomic groups",
+  "public_validation_is_rehearsal_only": true,
+  "schema_version": "1.0",
+  "status": "pass",
+  "target_power": 0.8
+}

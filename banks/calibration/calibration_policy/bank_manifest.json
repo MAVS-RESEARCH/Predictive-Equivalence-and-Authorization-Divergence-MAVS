@@ -1,0 +1,47 @@
+{
+  "atomic_groups": 8472,
+  "bank_id": "PEAD-OPEN-calibration_policy-v1",
+  "case_rows": 16722,
+  "domains": [
+    "D1",
+    "D2",
+    "D3",
+    "D4",
+    "D5",
+    "D6"
+  ],
+  "files": {
+    "banks/calibration/calibration_policy/case_ids.npy": "f97b9e6a4f77d774e94352563b60d135373547ec098e1947577447faa4cd3710",
+    "banks/calibration/calibration_policy/domains.npy": "f1986f5f4bb14ae4ba03eb639449d657f37141d192ddf1ce0d9c0b7fd72a1eee",
+    "banks/calibration/calibration_policy/g_features.npy": "d2dd350db1b25c97f5a0e4bbf05c241cd2cf3fd11182d53273cc6674db020cd0",
+    "banks/calibration/calibration_policy/group_ids.npy": "2976f0c5bc162146446a4528dab79aeb6467fe5a008161e05b5fe91b835fb3be",
+    "banks/calibration/calibration_policy/labels.npy": "dc5ac09ce4faabe9859e623def7921aaa5e57f07bf713347474db457bfbaddf5",
+    "banks/calibration/calibration_policy/p_features.npy": "5f456fd1a024fb7aea506b24ca733be98e5183e817f06e711bbef1dd28ad8dd5",
+    "banks/calibration/calibration_policy/tracks.npy": "770727bf6436b9b39646871379061d5b0a29105c277b0b3a180c2213b3f041b9"
+  },
+  "group_atomic_keys": [
+    "pair",
+    "sequence",
+    "latent_world_family",
+    "surface_template_family",
+    "intervention_lineage",
+    "provenance_graph_lineage"
+  ],
+  "label_counts": {
+    "0": 5610,
+    "1": 5196,
+    "2": 5916
+  },
+  "opportunity_counts": {
+    "evidence": 1122,
+    "exact": 3000,
+    "near": 1500,
+    "reversal": 750,
+    "scope": 2100
+  },
+  "opportunity_total": 8472,
+  "public_selection_prohibited": true,
+  "role": "calibration_policy",
+  "schema_version": "1.0",
+  "study_version": "pead-study-v3"
+}

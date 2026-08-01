@@ -1,0 +1,565 @@
+{
+  "methods": {
+    "G01-LOGREG": {
+      "checkpoint_sha256": "e719a6a4d4b42f012177fcd0ebabd39080797536838ebff9e2856d66bb9ca3b4",
+      "metrics": {
+        "accuracy": 1.0,
+        "coverage": 0.6450224215246636,
+        "escalation_rate": 0.35497757847533634,
+        "false_rejection_rate": 0.0,
+        "forced_certainty_error": 0.0,
+        "opportunity_count": 33450,
+        "protected_utility": 0.9112556053811659,
+        "trace_completeness": 1.0,
+        "unsafe_acceptance_rate": 0.0
+      },
+      "operating_point_id": "a0.40-r0.40",
+      "public_used_for_selection": false,
+      "status": "pass"
+    },
+    "G02-TREE": {
+      "checkpoint_sha256": "75a0d7f928183c7ea9f6aa8b0381564bcb471135b73c11dcb76daf1928141b72",
+      "metrics": {
+        "accuracy": 1.0,
+        "coverage": 0.6450224215246636,
+        "escalation_rate": 0.35497757847533634,
+        "false_rejection_rate": 0.0,
+        "forced_certainty_error": 0.0,
+        "opportunity_count": 33450,
+        "protected_utility": 0.9112556053811659,
+        "trace_completeness": 1.0,
+        "unsafe_acceptance_rate": 0.0
+      },
+      "operating_point_id": "a0.40-r0.40",
+      "public_used_for_selection": false,
+      "status": "pass"
+    },
+    "G03-GBDT": {
+      "checkpoint_sha256": "05867ae1eaeed40416df2a95b2a787893c6da53ceff23e09e386b22c5d57c762",
+      "metrics": {
+        "accuracy": 1.0,
+        "coverage": 0.6450224215246636,
+        "escalation_rate": 0.35497757847533634,
+        "false_rejection_rate": 0.0,
+        "forced_certainty_error": 0.0,
+        "opportunity_count": 33450,
+        "protected_utility": 0.9112556053811659,
+        "trace_completeness": 1.0,
+        "unsafe_acceptance_rate": 0.0
+      },
+      "operating_point_id": "a0.40-r0.40",
+      "public_used_for_selection": false,
+      "status": "pass"
+    },
+    "G04-MLP": {
+      "public_rows": 0,
+      "reason": "registered GPU training required; no accelerator and no frozen CPU-equivalent schedule",
+      "status": "method_failure_retained"
+    },
+    "G05-SEQUENCE": {
+      "public_rows": 0,
+      "reason": "registered Transformer GPU training required; no accelerator is available",
+      "status": "method_failure_retained"
+    },
+    "G06-GRAPH": {
+      "public_rows": 0,
+      "reason": "registered relational-GNN GPU training required; no accelerator is available",
+      "status": "method_failure_retained"
+    },
+    "G07-BAYES": {
+      "public_rows": 0,
+      "reason": "registered 32 GiB memory ceiling exceeds the 31.68 GiB host capacity",
+      "status": "method_failure_retained"
+    },
+    "G08-POLICY": {
+      "fixed_method": true,
+      "metrics": {
+        "accuracy": 0.6450224215246637,
+        "coverage": 1.0,
+        "escalation_rate": 0.0,
+        "false_rejection_rate": 0.0,
+        "forced_certainty_error": 0.35497757847533634,
+        "opportunity_count": 33450,
+        "protected_utility": 0.6450224215246637,
+        "trace_completeness": 1.0,
+        "unsafe_acceptance_rate": 0.0
+      },
+      "public_used_for_selection": false,
+      "status": "pass"
+    },
+    "G09-VALIDATOR": {
+      "fixed_method": true,
+      "metrics": {
+        "accuracy": 0.6450224215246637,
+        "coverage": 1.0,
+        "escalation_rate": 0.0,
+        "false_rejection_rate": 0.0,
+        "forced_certainty_error": 0.35497757847533634,
+        "opportunity_count": 33450,
+        "protected_utility": 0.6450224215246637,
+        "trace_completeness": 1.0,
+        "unsafe_acceptance_rate": 0.0
+      },
+      "public_used_for_selection": false,
+      "status": "pass"
+    },
+    "G10-JUDGE": {
+      "public_rows": 0,
+      "reason": "pinned Qwen2.5-7B weight and tokenizer files are not locally present; substitution is prohibited",
+      "status": "method_failure_retained"
+    },
+    "G11-SCALAR-fixed": {
+      "fixed_method": true,
+      "metrics": {
+        "accuracy": 1.0,
+        "coverage": 0.6450224215246636,
+        "escalation_rate": 0.35497757847533634,
+        "false_rejection_rate": 0.0,
+        "forced_certainty_error": 0.0,
+        "opportunity_count": 33450,
+        "protected_utility": 0.9112556053811659,
+        "trace_completeness": 1.0,
+        "unsafe_acceptance_rate": 0.0
+      },
+      "public_used_for_selection": false,
+      "status": "pass"
+    },
+    "G11-SCALAR-trained": {
+      "public_rows": 0,
+      "reason": "registered GPU training required; no accelerator and no frozen CPU-equivalent schedule",
+      "status": "method_failure_retained"
+    },
+    "G12-ENSEMBLE": {
+      "public_rows": 0,
+      "reason": "registered base set is incomplete because G04, G05, and G06 cannot produce frozen checkpoints",
+      "status": "method_failure_retained"
+    },
+    "MAVS-A00": {
+      "fixed_method": true,
+      "metrics": {
+        "accuracy": 0.32367713004484305,
+        "coverage": 1.0,
+        "escalation_rate": 0.0,
+        "false_rejection_rate": 0.4903536977491961,
+        "forced_certainty_error": 0.676322869955157,
+        "opportunity_count": 33450,
+        "protected_utility": -2.211252823658339,
+        "trace_completeness": 1.0,
+        "unsafe_acceptance_rate": 0.5111440639884964
+      },
+      "public_used_for_selection": false,
+      "status": "pass"
+    },
+    "MAVS-A01": {
+      "fixed_method": true,
+      "metrics": {
+        "accuracy": 0.5634379671150972,
+        "coverage": 0.9184155455904335,
+        "escalation_rate": 0.08158445440956652,
+        "false_rejection_rate": 0.0,
+        "forced_certainty_error": 0.35497757847533634,
+        "opportunity_count": 33450,
+        "protected_utility": 0.5430418535127055,
+        "trace_completeness": 1.0,
+        "unsafe_acceptance_rate": 0.0
+      },
+      "public_used_for_selection": false,
+      "status": "pass"
+    },
+    "MAVS-A02": {
+      "fixed_method": true,
+      "metrics": {
+        "accuracy": 0.5624813153961136,
+        "coverage": 0.91745889387145,
+        "escalation_rate": 0.08254110612855008,
+        "false_rejection_rate": 0.0,
+        "forced_certainty_error": 0.35497757847533634,
+        "opportunity_count": 33450,
+        "protected_utility": 0.5418460388639761,
+        "trace_completeness": 1.0,
+        "unsafe_acceptance_rate": 0.0
+      },
+      "public_used_for_selection": false,
+      "status": "pass"
+    },
+    "MAVS-A03": {
+      "fixed_method": true,
+      "metrics": {
+        "accuracy": 0.5623916292974589,
+        "coverage": 0.9173692077727952,
+        "escalation_rate": 0.08263079222720478,
+        "false_rejection_rate": 0.0,
+        "forced_certainty_error": 0.35497757847533634,
+        "opportunity_count": 33450,
+        "protected_utility": -0.543374363897295,
+        "trace_completeness": 1.0,
+        "unsafe_acceptance_rate": 0.2712770737844882
+      },
+      "public_used_for_selection": false,
+      "status": "pass"
+    },
+    "MAVS-A04": {
+      "fixed_method": true,
+      "metrics": {
+        "accuracy": 0.6450224215246637,
+        "coverage": 1.0,
+        "escalation_rate": 0.0,
+        "false_rejection_rate": 0.0,
+        "forced_certainty_error": 0.35497757847533634,
+        "opportunity_count": 33450,
+        "protected_utility": 0.6450224215246637,
+        "trace_completeness": 1.0,
+        "unsafe_acceptance_rate": 0.0
+      },
+      "public_used_for_selection": false,
+      "status": "pass"
+    },
+    "MAVS-A05": {
+      "fixed_method": true,
+      "metrics": {
+        "accuracy": 0.6450224215246637,
+        "coverage": 1.0,
+        "escalation_rate": 0.0,
+        "false_rejection_rate": 0.0,
+        "forced_certainty_error": 0.35497757847533634,
+        "opportunity_count": 33450,
+        "protected_utility": 0.6450224215246637,
+        "trace_completeness": 1.0,
+        "unsafe_acceptance_rate": 0.0
+      },
+      "public_used_for_selection": false,
+      "status": "pass"
+    },
+    "MAVS-A06": {
+      "fixed_method": true,
+      "metrics": {
+        "accuracy": 0.6450224215246637,
+        "coverage": 1.0,
+        "escalation_rate": 0.0,
+        "false_rejection_rate": 0.0,
+        "forced_certainty_error": 0.35497757847533634,
+        "opportunity_count": 33450,
+        "protected_utility": 0.6450224215246637,
+        "trace_completeness": 1.0,
+        "unsafe_acceptance_rate": 0.0
+      },
+      "public_used_for_selection": false,
+      "status": "pass"
+    },
+    "MAVS-A07": {
+      "fixed_method": true,
+      "metrics": {
+        "accuracy": 0.6450224215246637,
+        "coverage": 1.0,
+        "escalation_rate": 0.0,
+        "false_rejection_rate": 0.0,
+        "forced_certainty_error": 0.35497757847533634,
+        "opportunity_count": 33450,
+        "protected_utility": 0.6450224215246637,
+        "trace_completeness": 1.0,
+        "unsafe_acceptance_rate": 0.0
+      },
+      "public_used_for_selection": false,
+      "status": "pass"
+    },
+    "MAVS-A08": {
+      "fixed_method": true,
+      "metrics": {
+        "accuracy": 0.6450224215246637,
+        "coverage": 1.0,
+        "escalation_rate": 0.0,
+        "false_rejection_rate": 0.0,
+        "forced_certainty_error": 0.35497757847533634,
+        "opportunity_count": 33450,
+        "protected_utility": 0.6450224215246637,
+        "trace_completeness": 1.0,
+        "unsafe_acceptance_rate": 0.0
+      },
+      "public_used_for_selection": false,
+      "status": "pass"
+    },
+    "MAVS-A09": {
+      "fixed_method": true,
+      "metrics": {
+        "accuracy": 0.5634379671150972,
+        "coverage": 0.9184155455904335,
+        "escalation_rate": 0.08158445440956652,
+        "false_rejection_rate": 0.0,
+        "forced_certainty_error": 0.35497757847533634,
+        "opportunity_count": 33450,
+        "protected_utility": 0.5430418535127055,
+        "trace_completeness": 1.0,
+        "unsafe_acceptance_rate": 0.0
+      },
+      "public_used_for_selection": false,
+      "status": "pass"
+    },
+    "MAVS-A10": {
+      "fixed_method": true,
+      "metrics": {
+        "accuracy": 0.5624813153961136,
+        "coverage": 0.91745889387145,
+        "escalation_rate": 0.08254110612855008,
+        "false_rejection_rate": 0.0,
+        "forced_certainty_error": 0.35497757847533634,
+        "opportunity_count": 33450,
+        "protected_utility": 0.5418460388639761,
+        "trace_completeness": 1.0,
+        "unsafe_acceptance_rate": 0.0
+      },
+      "public_used_for_selection": false,
+      "status": "pass"
+    },
+    "MAVS-A11": {
+      "fixed_method": true,
+      "metrics": {
+        "accuracy": 1.0,
+        "coverage": 0.6450224215246636,
+        "escalation_rate": 0.35497757847533634,
+        "false_rejection_rate": 0.0,
+        "forced_certainty_error": 0.0,
+        "opportunity_count": 33450,
+        "protected_utility": 0.9112556053811659,
+        "trace_completeness": 1.0,
+        "unsafe_acceptance_rate": 0.0
+      },
+      "public_used_for_selection": false,
+      "status": "pass"
+    },
+    "MAVS-A12": {
+      "public_rows": 0,
+      "reason": "registered learned scalar GPU training required; no accelerator and no frozen CPU-equivalent schedule",
+      "status": "method_failure_retained"
+    },
+    "MAVS-A13": {
+      "public_rows": 0,
+      "reason": "registered flat Raw-G neural comparator requires unavailable accelerator execution",
+      "status": "method_failure_retained"
+    },
+    "MAVS-A14": {
+      "fixed_method": true,
+      "metrics": {
+        "accuracy": 0.6450224215246637,
+        "coverage": 1.0,
+        "escalation_rate": 0.0,
+        "false_rejection_rate": 0.0,
+        "forced_certainty_error": 0.35497757847533634,
+        "opportunity_count": 33450,
+        "protected_utility": 0.6450224215246637,
+        "trace_completeness": 1.0,
+        "unsafe_acceptance_rate": 0.0
+      },
+      "public_used_for_selection": false,
+      "status": "pass"
+    },
+    "MAVS-A15": {
+      "fixed_method": true,
+      "metrics": {
+        "accuracy": 0.6450224215246637,
+        "coverage": 1.0,
+        "escalation_rate": 0.0,
+        "false_rejection_rate": 0.0,
+        "forced_certainty_error": 0.35497757847533634,
+        "opportunity_count": 33450,
+        "protected_utility": 0.6450224215246637,
+        "trace_completeness": 1.0,
+        "unsafe_acceptance_rate": 0.0
+      },
+      "public_used_for_selection": false,
+      "status": "pass"
+    },
+    "O01-ORACLE-RULE": {
+      "fixed_method": true,
+      "metrics": {
+        "accuracy": 1.0,
+        "coverage": 0.6450224215246636,
+        "escalation_rate": 0.35497757847533634,
+        "false_rejection_rate": 0.0,
+        "forced_certainty_error": 0.0,
+        "opportunity_count": 33450,
+        "protected_utility": 0.9112556053811659,
+        "trace_completeness": 1.0,
+        "unsafe_acceptance_rate": 0.0
+      },
+      "public_used_for_selection": false,
+      "status": "pass"
+    },
+    "O02-ORACLE-MLP": {
+      "public_rows": 0,
+      "reason": "registered GPU training required; no accelerator and no frozen CPU-equivalent schedule",
+      "status": "method_failure_retained"
+    },
+    "P01-CONF": {
+      "fixed_method": true,
+      "metrics": {
+        "accuracy": 0.32367713004484305,
+        "coverage": 1.0,
+        "escalation_rate": 0.0,
+        "false_rejection_rate": 0.4903536977491961,
+        "forced_certainty_error": 0.676322869955157,
+        "opportunity_count": 33450,
+        "protected_utility": -2.211252823658339,
+        "trace_completeness": 1.0,
+        "unsafe_acceptance_rate": 0.5111440639884964
+      },
+      "public_used_for_selection": false,
+      "status": "pass"
+    },
+    "P02-UNC": {
+      "fixed_method": true,
+      "metrics": {
+        "accuracy": 0.33937219730941703,
+        "coverage": 0.4989536621823617,
+        "escalation_rate": 0.5010463378176383,
+        "false_rejection_rate": 0.0,
+        "forced_certainty_error": 0.3342899850523169,
+        "opportunity_count": 33450,
+        "protected_utility": -1.7957752503605944,
+        "trace_completeness": 1.0,
+        "unsafe_acceptance_rate": 0.5024714658039005
+      },
+      "public_used_for_selection": false,
+      "status": "pass"
+    },
+    "P03-DIS": {
+      "fixed_method": true,
+      "metrics": {
+        "accuracy": 0.3413452914798206,
+        "coverage": 0.5043647234678625,
+        "escalation_rate": 0.4956352765321375,
+        "false_rejection_rate": 0.0,
+        "forced_certainty_error": 0.33617339312406574,
+        "opportunity_count": 33450,
+        "protected_utility": -1.8037731978248681,
+        "trace_completeness": 1.0,
+        "unsafe_acceptance_rate": 0.5053024175429136
+      },
+      "public_used_for_selection": false,
+      "status": "pass"
+    },
+    "P04-SC": {
+      "fixed_method": true,
+      "metrics": {
+        "accuracy": 0.32367713004484305,
+        "coverage": 1.0,
+        "escalation_rate": 0.0,
+        "false_rejection_rate": 0.4903536977491961,
+        "forced_certainty_error": 0.676322869955157,
+        "opportunity_count": 33450,
+        "protected_utility": -2.211252823658339,
+        "trace_completeness": 1.0,
+        "unsafe_acceptance_rate": 0.5111440639884964
+      },
+      "public_used_for_selection": false,
+      "status": "pass"
+    },
+    "P05-CONF-STATIC": {
+      "alpha": 0.01,
+      "base_checkpoint_sha256": "04de7359925db9b4718b974fc7c28c2193399d89de1c32eceaf12c351987c0e0",
+      "metrics": {
+        "accuracy": 0.35497757847533634,
+        "coverage": 0.0,
+        "escalation_rate": 1.0,
+        "false_rejection_rate": 0.0,
+        "forced_certainty_error": 0.0,
+        "opportunity_count": 33450,
+        "protected_utility": 0.10497757847533634,
+        "trace_completeness": 1.0,
+        "unsafe_acceptance_rate": 0.0
+      },
+      "public_used_for_selection": false,
+      "quantile": 0.6878775628892728,
+      "status": "pass"
+    },
+    "P06-CONF-ADAPT": {
+      "alpha": 0.025,
+      "base_checkpoint_sha256": "04de7359925db9b4718b974fc7c28c2193399d89de1c32eceaf12c351987c0e0",
+      "current_label_used_before_decision": false,
+      "metrics": {
+        "accuracy": 0.35497757847533634,
+        "coverage": 0.0,
+        "escalation_rate": 1.0,
+        "false_rejection_rate": 0.0,
+        "forced_certainty_error": 0.0,
+        "opportunity_count": 33450,
+        "protected_utility": 0.10497757847533634,
+        "trace_completeness": 1.0,
+        "unsafe_acceptance_rate": 0.0
+      },
+      "public_used_for_selection": false,
+      "status": "pass",
+      "window": 256
+    },
+    "P07-REJECT": {
+      "public_rows": 0,
+      "reason": "registered GPU training required; no accelerator and no frozen CPU-equivalent schedule",
+      "status": "method_failure_retained"
+    },
+    "P08-TABULAR-gbdt": {
+      "checkpoint_sha256": "2fa8ee4218fb1f76c658e71b77317cec3bf2c2dc13c23c4952329ba15fb7ce27",
+      "metrics": {
+        "accuracy": 0.35497757847533634,
+        "coverage": 0.0,
+        "escalation_rate": 1.0,
+        "false_rejection_rate": 0.0,
+        "forced_certainty_error": 0.0,
+        "opportunity_count": 33450,
+        "protected_utility": 0.10497757847533634,
+        "trace_completeness": 1.0,
+        "unsafe_acceptance_rate": 0.0
+      },
+      "operating_point_id": "a0.40-r0.40",
+      "public_used_for_selection": false,
+      "status": "pass"
+    },
+    "P08-TABULAR-logistic": {
+      "checkpoint_sha256": "04de7359925db9b4718b974fc7c28c2193399d89de1c32eceaf12c351987c0e0",
+      "metrics": {
+        "accuracy": 0.35497757847533634,
+        "coverage": 0.0,
+        "escalation_rate": 1.0,
+        "false_rejection_rate": 0.0,
+        "forced_certainty_error": 0.0,
+        "opportunity_count": 33450,
+        "protected_utility": 0.10497757847533634,
+        "trace_completeness": 1.0,
+        "unsafe_acceptance_rate": 0.0
+      },
+      "operating_point_id": "a0.40-r0.40",
+      "public_used_for_selection": false,
+      "status": "pass"
+    },
+    "P08-TABULAR-mlp": {
+      "public_rows": 0,
+      "reason": "registered GPU training required; no accelerator and no frozen CPU-equivalent schedule",
+      "status": "method_failure_retained"
+    },
+    "P09-SEQUENCE": {
+      "public_rows": 0,
+      "reason": "registered Transformer GPU training required; no accelerator is available",
+      "status": "method_failure_retained"
+    }
+  },
+  "phase9a_commitment": {
+    "allocation_sha256": "30171d4be8726c39e69ed4505b15f0a811b6c100408fdc8e193252c22c13fc8d",
+    "commitment_sha256": "39e9202b07b4038571463a5b1c8ae0b5b15ac1e6989a7a57d29dd73385731397",
+    "consumer_invented_values": [],
+    "decryption_attempted": false,
+    "event_count": 312,
+    "event_head_sha256": "99596559cfba043dc88c409bdaa84231c89242b1786d7ecb0b7e8b235ee744cd",
+    "materialization_attempted": false,
+    "missing_commitments": [],
+    "one_shot_state_consumed": false,
+    "preseal_id": "phase9a-preseal-v3",
+    "signature_verified": true,
+    "signer_identity": "d70ecdb93256317342bc8f8fae6b2ccd3f0cbc7d6d2e11038e78cf77c739f1fd",
+    "study_version": "pead-study-v3",
+    "unlock_attempted": false
+  },
+  "raw_decision_index": "results/raw/phase10-dev-v3/public_validation_decision_index.json",
+  "role": "inspection_only",
+  "run_id": "phase10-dev-v3",
+  "schema_version": "1.0",
+  "selection_from_public_validation": false,
+  "study_version": "pead-study-v3"
+}

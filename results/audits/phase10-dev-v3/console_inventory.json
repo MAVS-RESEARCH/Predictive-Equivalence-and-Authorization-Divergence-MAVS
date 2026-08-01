@@ -1,0 +1,232 @@
+{
+  "adjacency_failures": [],
+  "call_sites": 32,
+  "duplicate_callsite_ids": [],
+  "rows": [
+    {
+      "comment": "# STEP LOG P10-AUDIT-001: Verify the corrected Phase 9A signature, chronology receipt, public ciphertext commitments, and pristine one-shot state.",
+      "comment_line": 124,
+      "console_line": 125,
+      "event_id": "P10-AUDIT-001",
+      "file": "src/pead/phase10/audit.py"
+    },
+    {
+      "comment": "# STEP LOG P10-AUDIT-002: Reconcile every registered open-bank quota, group-atomic role, array identity, and cross-profile matched case.",
+      "comment_line": 128,
+      "console_line": 129,
+      "event_id": "P10-AUDIT-002",
+      "file": "src/pead/phase10/audit.py"
+    },
+    {
+      "comment": "# STEP LOG P10-AUDIT-003: Verify every frozen method family is trained, calibrated, fixed-executed, or retained as an exact resource failure with complete traces.",
+      "comment_line": 133,
+      "console_line": 134,
+      "event_id": "P10-AUDIT-003",
+      "file": "src/pead/phase10/audit.py"
+    },
+    {
+      "comment": "# STEP LOG P10-AUDIT-004: Prove public validation was inspection-only and jointly retain protected errors, escalation, coverage, failures, power, and minimum effects.",
+      "comment_line": 139,
+      "console_line": 140,
+      "event_id": "P10-AUDIT-004",
+      "file": "src/pead/phase10/audit.py"
+    },
+    {
+      "comment": "# STEP LOG P10-AUDIT-005: Verify all claim-relevant code, checkpoints, configs, banks, templates, statistics, reports, and audits are hash-bound in the freeze candidate.",
+      "comment_line": 142,
+      "console_line": 143,
+      "event_id": "P10-AUDIT-005",
+      "file": "src/pead/phase10/audit.py"
+    },
+    {
+      "comment": "# STEP LOG P10-AUDIT-006: Inventory every Phase 10 console.log callsite with its exact adjacent identifying comment and unique event identity.",
+      "comment_line": 145,
+      "console_line": 146,
+      "event_id": "P10-AUDIT-006",
+      "file": "src/pead/phase10/audit.py"
+    },
+    {
+      "comment": "# STEP LOG P10-AUDIT-007: Emit pass only when every Phase 10 WorkPlan clause has executable evidence and the compliance-gap set is empty.",
+      "comment_line": 155,
+      "console_line": 156,
+      "event_id": "P10-AUDIT-007",
+      "file": "src/pead/phase10/audit.py"
+    },
+    {
+      "comment": "# STEP LOG P10-BANK-001: Admit only the frozen five-role open-bank allocation before constructing any training case.",
+      "comment_line": 125,
+      "console_line": 126,
+      "event_id": "P10-BANK-001",
+      "file": "src/pead/phase10/banks.py"
+    },
+    {
+      "comment": "# STEP LOG P10-BANK-002: Materialize one complete group-atomic role across D1-D6 and all five registered tracks.",
+      "comment_line": 131,
+      "console_line": 132,
+      "event_id": "P10-BANK-002",
+      "file": "src/pead/phase10/banks.py"
+    },
+    {
+      "comment": "# STEP LOG P10-BANK-003: Close generation only after count, collision, atomic isolation, and cross-profile identity gates pass.",
+      "comment_line": 193,
+      "console_line": 194,
+      "event_id": "P10-BANK-003",
+      "file": "src/pead/phase10/banks.py"
+    },
+    {
+      "comment": "# STEP LOG P10-EXEC-001: Verify branch chronology, corrected Phase 9A signature, and pristine one-shot custody state before bank generation or training.",
+      "comment_line": 268,
+      "console_line": 269,
+      "event_id": "P10-EXEC-001",
+      "file": "src/pead/phase10/execution.py"
+    },
+    {
+      "comment": "# STEP LOG P10-EXEC-002: Run all six required integrity audits and retain public-validation failures without scientific retuning.",
+      "comment_line": 280,
+      "console_line": 281,
+      "event_id": "P10-EXEC-002",
+      "file": "src/pead/phase10/execution.py"
+    },
+    {
+      "comment": "# STEP LOG P10-EXEC-003: Close scientific execution only after the freeze candidate covers every claim-relevant file and Phase 9A remains byte-identical.",
+      "comment_line": 309,
+      "console_line": 310,
+      "event_id": "P10-EXEC-003",
+      "file": "src/pead/phase10/execution.py"
+    },
+    {
+      "comment": "# STEP LOG P10-TRAIN-001: Start model development only after the corrected Phase 9A signature and pristine one-shot state are verified.",
+      "comment_line": 232,
+      "console_line": 233,
+      "event_id": "P10-TRAIN-001",
+      "file": "src/pead/phase10/training.py"
+    },
+    {
+      "comment": "# STEP LOG P10-TRAIN-002: Execute one complete registered hyperparameter grid across all three frozen seeds and full role-isolated data.",
+      "comment_line": 236,
+      "console_line": 237,
+      "event_id": "P10-TRAIN-002",
+      "file": "src/pead/phase10/training.py"
+    },
+    {
+      "comment": "# STEP LOG P10-TRAIN-003: Retain every exact-implementation resource or asset failure without substitution, omission, or budget expansion.",
+      "comment_line": 290,
+      "console_line": 291,
+      "event_id": "P10-TRAIN-003",
+      "file": "src/pead/phase10/training.py"
+    },
+    {
+      "comment": "# STEP LOG P10-PUBLIC-001: Execute only already-selected checkpoints and fixed methods on inspection-only public validation.",
+      "comment_line": 468,
+      "console_line": 469,
+      "event_id": "P10-PUBLIC-001",
+      "file": "src/pead/phase10/training.py"
+    },
+    {
+      "comment": "# STEP LOG P10-PUBLIC-002: Retain all public outcomes, failures, coverage tradeoffs, and raw decision lineage without tuning.",
+      "comment_line": 525,
+      "console_line": 526,
+      "event_id": "P10-PUBLIC-002",
+      "file": "src/pead/phase10/training.py"
+    },
+    {
+      "comment": "# STEP LOG P10-SCRIPT-001: Enter the one-shot Phase 10 orchestrator without permitting Phase 11 unlock behavior.",
+      "comment_line": 18,
+      "console_line": 19,
+      "event_id": "P10-SCRIPT-001",
+      "file": "scripts/run_phase10.py"
+    },
+    {
+      "comment": "# STEP LOG P10-CORRECT-001: Reopen completion while Phase 9A is pristine and retain the pre-training wrapper failure plus affected public artifact identities.",
+      "comment_line": 33,
+      "console_line": 34,
+      "event_id": "P10-CORRECT-001",
+      "file": "scripts/correct_phase10_completion.py"
+    },
+    {
+      "comment": "# STEP LOG P10-CORRECT-002: Reconstruct selected CPU checkpoints using mean, worst-seed, parameter-count, deterministic-resource, and stable-index tie-breaks without public input.",
+      "comment_line": 47,
+      "console_line": 48,
+      "event_id": "P10-CORRECT-002",
+      "file": "scripts/correct_phase10_completion.py"
+    },
+    {
+      "comment": "# STEP LOG P10-CORRECT-003: Fit conformal quantiles on calibration_fit and select static alpha plus adaptive alpha/window on calibration_policy using past labels only.",
+      "comment_line": 50,
+      "console_line": 51,
+      "event_id": "P10-CORRECT-003",
+      "file": "scripts/correct_phase10_completion.py"
+    },
+    {
+      "comment": "# STEP LOG P10-CORRECT-004: Regenerate only affected public, audit, report, and freeze artifacts and prove no public outcome selected any checkpoint or policy.",
+      "comment_line": 53,
+      "console_line": 54,
+      "event_id": "P10-CORRECT-004",
+      "file": "scripts/correct_phase10_completion.py"
+    },
+    {
+      "comment": "# STEP LOG P10-CORRECT-005: Close the correction only after all affected identities are replaced, the old attempt remains visible, and every Phase 10 gate passes.",
+      "comment_line": 92,
+      "console_line": 93,
+      "event_id": "P10-CORRECT-005",
+      "file": "scripts/correct_phase10_completion.py"
+    },
+    {
+      "comment": "# STEP LOG P10-REFRESH-001: Re-run the five-family leakage adversary, duplicate, budget, parity, non-triviality, and abstention audits after correction.",
+      "comment_line": 26,
+      "console_line": 27,
+      "event_id": "P10-REFRESH-001",
+      "file": "scripts/refresh_phase10_audits.py"
+    },
+    {
+      "comment": "# STEP LOG P10-REFRESH-002: Rebuild the freeze candidate over every claim-relevant source, config, test, bank, checkpoint, trace, audit, and report hash.",
+      "comment_line": 40,
+      "console_line": 41,
+      "event_id": "P10-REFRESH-002",
+      "file": "scripts/refresh_phase10_audits.py"
+    },
+    {
+      "comment": "# STEP LOG P10-REFRESH-003: Close refresh only after all expanded integrity adversaries and freeze hash inputs pass.",
+      "comment_line": 45,
+      "console_line": 46,
+      "event_id": "P10-REFRESH-003",
+      "file": "scripts/refresh_phase10_audits.py"
+    },
+    {
+      "comment": "# STEP LOG P10-AUDIT-SCRIPT-001: Execute the complete Phase 10 WorkPlan audit from retained test and stress evidence.",
+      "comment_line": 22,
+      "console_line": 23,
+      "event_id": "P10-AUDIT-SCRIPT-001",
+      "file": "scripts/audit_phase10.py"
+    },
+    {
+      "comment": "# STEP LOG P10-TEST-001: Run all targeted Phase 10 unit, integration, and million-decision stress tests.",
+      "comment_line": 27,
+      "console_line": 28,
+      "event_id": "P10-TEST-001",
+      "file": "scripts/run_phase10_tests.py"
+    },
+    {
+      "comment": "# STEP LOG P10-TEST-002: Run the complete repository regression after the corrected scientific artifacts are frozen.",
+      "comment_line": 30,
+      "console_line": 31,
+      "event_id": "P10-TEST-002",
+      "file": "scripts/run_phase10_tests.py"
+    },
+    {
+      "comment": "# STEP LOG P10-TEST-003: Independently replay one million deterministic decisions and require zero 64-bit identity collisions.",
+      "comment_line": 33,
+      "console_line": 34,
+      "event_id": "P10-TEST-003",
+      "file": "scripts/run_phase10_tests.py"
+    },
+    {
+      "comment": "# STEP LOG P10-TEST-004: Retain exact targeted, complete-regression, and independent stress denominators with zero failures.",
+      "comment_line": 44,
+      "console_line": 45,
+      "event_id": "P10-TEST-004",
+      "file": "scripts/run_phase10_tests.py"
+    }
+  ],
+  "status": "pass"
+}

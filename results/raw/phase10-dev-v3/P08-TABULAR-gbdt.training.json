@@ -1,0 +1,2500 @@
+{
+  "calibration": {
+    "fit_partition": "calibration_fit",
+    "method": "temperature",
+    "rows": 16728,
+    "temperature": 1.15
+  },
+  "checkpoint_sha256": "2fa8ee4218fb1f76c658e71b77317cec3bf2c2dc13c23c4952329ba15fb7ce27",
+  "history": [
+    {
+      "configuration": {
+        "l2_regularization": 0.0,
+        "learning_rate": 0.03,
+        "max_iter": 200,
+        "max_leaf_nodes": 15
+      },
+      "configuration_index": 0,
+      "diagnostics": {
+        "early_stopped": true,
+        "iterations": 22,
+        "minimum_improvement": 0.001,
+        "patience": 20
+      },
+      "elapsed_seconds": 12.502048599999398,
+      "fit_partition": "development_fit",
+      "fit_rows": 100350,
+      "method_id": "P08-TABULAR-gbdt",
+      "phase9a_commitment": {
+        "allocation_sha256": "30171d4be8726c39e69ed4505b15f0a811b6c100408fdc8e193252c22c13fc8d",
+        "commitment_sha256": "39e9202b07b4038571463a5b1c8ae0b5b15ac1e6989a7a57d29dd73385731397",
+        "consumer_invented_values": [],
+        "decryption_attempted": false,
+        "event_count": 312,
+        "event_head_sha256": "99596559cfba043dc88c409bdaa84231c89242b1786d7ecb0b7e8b235ee744cd",
+        "materialization_attempted": false,
+        "missing_commitments": [],
+        "one_shot_state_consumed": false,
+        "preseal_id": "phase9a-preseal-v3",
+        "signature_verified": true,
+        "signer_identity": "d70ecdb93256317342bc8f8fae6b2ccd3f0cbc7d6d2e11038e78cf77c739f1fd",
+        "study_version": "pead-study-v3",
+        "unlock_attempted": false
+      },
+      "protected_utility": 0.0826326843644978,
+      "seed": 101,
+      "selection_partition": "development_selection",
+      "selection_rows": 33450
+    },
+    {
+      "configuration": {
+        "l2_regularization": 0.0,
+        "learning_rate": 0.03,
+        "max_iter": 200,
+        "max_leaf_nodes": 15
+      },
+      "configuration_index": 0,
+      "diagnostics": {
+        "early_stopped": true,
+        "iterations": 22,
+        "minimum_improvement": 0.001,
+        "patience": 20
+      },
+      "elapsed_seconds": 3.1845744000020204,
+      "fit_partition": "development_fit",
+      "fit_rows": 100350,
+      "method_id": "P08-TABULAR-gbdt",
+      "phase9a_commitment": {
+        "allocation_sha256": "30171d4be8726c39e69ed4505b15f0a811b6c100408fdc8e193252c22c13fc8d",
+        "commitment_sha256": "39e9202b07b4038571463a5b1c8ae0b5b15ac1e6989a7a57d29dd73385731397",
+        "consumer_invented_values": [],
+        "decryption_attempted": false,
+        "event_count": 312,
+        "event_head_sha256": "99596559cfba043dc88c409bdaa84231c89242b1786d7ecb0b7e8b235ee744cd",
+        "materialization_attempted": false,
+        "missing_commitments": [],
+        "one_shot_state_consumed": false,
+        "preseal_id": "phase9a-preseal-v3",
+        "signature_verified": true,
+        "signer_identity": "d70ecdb93256317342bc8f8fae6b2ccd3f0cbc7d6d2e11038e78cf77c739f1fd",
+        "study_version": "pead-study-v3",
+        "unlock_attempted": false
+      },
+      "protected_utility": 0.0826326843644978,
+      "seed": 211,
+      "selection_partition": "development_selection",
+      "selection_rows": 33450
+    },
+    {
+      "configuration": {
+        "l2_regularization": 0.0,
+        "learning_rate": 0.03,
+        "max_iter": 200,
+        "max_leaf_nodes": 15
+      },
+      "configuration_index": 0,
+      "diagnostics": {
+        "early_stopped": true,
+        "iterations": 22,
+        "minimum_improvement": 0.001,
+        "patience": 20
+      },
+      "elapsed_seconds": 2.9347062000015285,
+      "fit_partition": "development_fit",
+      "fit_rows": 100350,
+      "method_id": "P08-TABULAR-gbdt",
+      "phase9a_commitment": {
+        "allocation_sha256": "30171d4be8726c39e69ed4505b15f0a811b6c100408fdc8e193252c22c13fc8d",
+        "commitment_sha256": "39e9202b07b4038571463a5b1c8ae0b5b15ac1e6989a7a57d29dd73385731397",
+        "consumer_invented_values": [],
+        "decryption_attempted": false,
+        "event_count": 312,
+        "event_head_sha256": "99596559cfba043dc88c409bdaa84231c89242b1786d7ecb0b7e8b235ee744cd",
+        "materialization_attempted": false,
+        "missing_commitments": [],
+        "one_shot_state_consumed": false,
+        "preseal_id": "phase9a-preseal-v3",
+        "signature_verified": true,
+        "signer_identity": "d70ecdb93256317342bc8f8fae6b2ccd3f0cbc7d6d2e11038e78cf77c739f1fd",
+        "study_version": "pead-study-v3",
+        "unlock_attempted": false
+      },
+      "protected_utility": 0.0826326843644978,
+      "seed": 307,
+      "selection_partition": "development_selection",
+      "selection_rows": 33450
+    },
+    {
+      "configuration": {
+        "l2_regularization": 1.0,
+        "learning_rate": 0.03,
+        "max_iter": 200,
+        "max_leaf_nodes": 15
+      },
+      "configuration_index": 1,
+      "diagnostics": {
+        "early_stopped": true,
+        "iterations": 22,
+        "minimum_improvement": 0.001,
+        "patience": 20
+      },
+      "elapsed_seconds": 3.006130199995823,
+      "fit_partition": "development_fit",
+      "fit_rows": 100350,
+      "method_id": "P08-TABULAR-gbdt",
+      "phase9a_commitment": {
+        "allocation_sha256": "30171d4be8726c39e69ed4505b15f0a811b6c100408fdc8e193252c22c13fc8d",
+        "commitment_sha256": "39e9202b07b4038571463a5b1c8ae0b5b15ac1e6989a7a57d29dd73385731397",
+        "consumer_invented_values": [],
+        "decryption_attempted": false,
+        "event_count": 312,
+        "event_head_sha256": "99596559cfba043dc88c409bdaa84231c89242b1786d7ecb0b7e8b235ee744cd",
+        "materialization_attempted": false,
+        "missing_commitments": [],
+        "one_shot_state_consumed": false,
+        "preseal_id": "phase9a-preseal-v3",
+        "signature_verified": true,
+        "signer_identity": "d70ecdb93256317342bc8f8fae6b2ccd3f0cbc7d6d2e11038e78cf77c739f1fd",
+        "study_version": "pead-study-v3",
+        "unlock_attempted": false
+      },
+      "protected_utility": 0.07680580021690059,
+      "seed": 101,
+      "selection_partition": "development_selection",
+      "selection_rows": 33450
+    },
+    {
+      "configuration": {
+        "l2_regularization": 1.0,
+        "learning_rate": 0.03,
+        "max_iter": 200,
+        "max_leaf_nodes": 15
+      },
+      "configuration_index": 1,
+      "diagnostics": {
+        "early_stopped": true,
+        "iterations": 22,
+        "minimum_improvement": 0.001,
+        "patience": 20
+      },
+      "elapsed_seconds": 3.2052370000019437,
+      "fit_partition": "development_fit",
+      "fit_rows": 100350,
+      "method_id": "P08-TABULAR-gbdt",
+      "phase9a_commitment": {
+        "allocation_sha256": "30171d4be8726c39e69ed4505b15f0a811b6c100408fdc8e193252c22c13fc8d",
+        "commitment_sha256": "39e9202b07b4038571463a5b1c8ae0b5b15ac1e6989a7a57d29dd73385731397",
+        "consumer_invented_values": [],
+        "decryption_attempted": false,
+        "event_count": 312,
+        "event_head_sha256": "99596559cfba043dc88c409bdaa84231c89242b1786d7ecb0b7e8b235ee744cd",
+        "materialization_attempted": false,
+        "missing_commitments": [],
+        "one_shot_state_consumed": false,
+        "preseal_id": "phase9a-preseal-v3",
+        "signature_verified": true,
+        "signer_identity": "d70ecdb93256317342bc8f8fae6b2ccd3f0cbc7d6d2e11038e78cf77c739f1fd",
+        "study_version": "pead-study-v3",
+        "unlock_attempted": false
+      },
+      "protected_utility": 0.07680580021690059,
+      "seed": 211,
+      "selection_partition": "development_selection",
+      "selection_rows": 33450
+    },
+    {
+      "configuration": {
+        "l2_regularization": 1.0,
+        "learning_rate": 0.03,
+        "max_iter": 200,
+        "max_leaf_nodes": 15
+      },
+      "configuration_index": 1,
+      "diagnostics": {
+        "early_stopped": true,
+        "iterations": 22,
+        "minimum_improvement": 0.001,
+        "patience": 20
+      },
+      "elapsed_seconds": 3.672821499996644,
+      "fit_partition": "development_fit",
+      "fit_rows": 100350,
+      "method_id": "P08-TABULAR-gbdt",
+      "phase9a_commitment": {
+        "allocation_sha256": "30171d4be8726c39e69ed4505b15f0a811b6c100408fdc8e193252c22c13fc8d",
+        "commitment_sha256": "39e9202b07b4038571463a5b1c8ae0b5b15ac1e6989a7a57d29dd73385731397",
+        "consumer_invented_values": [],
+        "decryption_attempted": false,
+        "event_count": 312,
+        "event_head_sha256": "99596559cfba043dc88c409bdaa84231c89242b1786d7ecb0b7e8b235ee744cd",
+        "materialization_attempted": false,
+        "missing_commitments": [],
+        "one_shot_state_consumed": false,
+        "preseal_id": "phase9a-preseal-v3",
+        "signature_verified": true,
+        "signer_identity": "d70ecdb93256317342bc8f8fae6b2ccd3f0cbc7d6d2e11038e78cf77c739f1fd",
+        "study_version": "pead-study-v3",
+        "unlock_attempted": false
+      },
+      "protected_utility": 0.07680580021690059,
+      "seed": 307,
+      "selection_partition": "development_selection",
+      "selection_rows": 33450
+    },
+    {
+      "configuration": {
+        "l2_regularization": 0.0,
+        "learning_rate": 0.03,
+        "max_iter": 200,
+        "max_leaf_nodes": 31
+      },
+      "configuration_index": 2,
+      "diagnostics": {
+        "early_stopped": true,
+        "iterations": 22,
+        "minimum_improvement": 0.001,
+        "patience": 20
+      },
+      "elapsed_seconds": 5.522021299999324,
+      "fit_partition": "development_fit",
+      "fit_rows": 100350,
+      "method_id": "P08-TABULAR-gbdt",
+      "phase9a_commitment": {
+        "allocation_sha256": "30171d4be8726c39e69ed4505b15f0a811b6c100408fdc8e193252c22c13fc8d",
+        "commitment_sha256": "39e9202b07b4038571463a5b1c8ae0b5b15ac1e6989a7a57d29dd73385731397",
+        "consumer_invented_values": [],
+        "decryption_attempted": false,
+        "event_count": 312,
+        "event_head_sha256": "99596559cfba043dc88c409bdaa84231c89242b1786d7ecb0b7e8b235ee744cd",
+        "materialization_attempted": false,
+        "missing_commitments": [],
+        "one_shot_state_consumed": false,
+        "preseal_id": "phase9a-preseal-v3",
+        "signature_verified": true,
+        "signer_identity": "d70ecdb93256317342bc8f8fae6b2ccd3f0cbc7d6d2e11038e78cf77c739f1fd",
+        "study_version": "pead-study-v3",
+        "unlock_attempted": false
+      },
+      "protected_utility": 0.05912749096146769,
+      "seed": 101,
+      "selection_partition": "development_selection",
+      "selection_rows": 33450
+    },
+    {
+      "configuration": {
+        "l2_regularization": 0.0,
+        "learning_rate": 0.03,
+        "max_iter": 200,
+        "max_leaf_nodes": 31
+      },
+      "configuration_index": 2,
+      "diagnostics": {
+        "early_stopped": true,
+        "iterations": 22,
+        "minimum_improvement": 0.001,
+        "patience": 20
+      },
+      "elapsed_seconds": 4.106984099998954,
+      "fit_partition": "development_fit",
+      "fit_rows": 100350,
+      "method_id": "P08-TABULAR-gbdt",
+      "phase9a_commitment": {
+        "allocation_sha256": "30171d4be8726c39e69ed4505b15f0a811b6c100408fdc8e193252c22c13fc8d",
+        "commitment_sha256": "39e9202b07b4038571463a5b1c8ae0b5b15ac1e6989a7a57d29dd73385731397",
+        "consumer_invented_values": [],
+        "decryption_attempted": false,
+        "event_count": 312,
+        "event_head_sha256": "99596559cfba043dc88c409bdaa84231c89242b1786d7ecb0b7e8b235ee744cd",
+        "materialization_attempted": false,
+        "missing_commitments": [],
+        "one_shot_state_consumed": false,
+        "preseal_id": "phase9a-preseal-v3",
+        "signature_verified": true,
+        "signer_identity": "d70ecdb93256317342bc8f8fae6b2ccd3f0cbc7d6d2e11038e78cf77c739f1fd",
+        "study_version": "pead-study-v3",
+        "unlock_attempted": false
+      },
+      "protected_utility": 0.05912749096146769,
+      "seed": 211,
+      "selection_partition": "development_selection",
+      "selection_rows": 33450
+    },
+    {
+      "configuration": {
+        "l2_regularization": 0.0,
+        "learning_rate": 0.03,
+        "max_iter": 200,
+        "max_leaf_nodes": 31
+      },
+      "configuration_index": 2,
+      "diagnostics": {
+        "early_stopped": true,
+        "iterations": 22,
+        "minimum_improvement": 0.001,
+        "patience": 20
+      },
+      "elapsed_seconds": 4.692967000002682,
+      "fit_partition": "development_fit",
+      "fit_rows": 100350,
+      "method_id": "P08-TABULAR-gbdt",
+      "phase9a_commitment": {
+        "allocation_sha256": "30171d4be8726c39e69ed4505b15f0a811b6c100408fdc8e193252c22c13fc8d",
+        "commitment_sha256": "39e9202b07b4038571463a5b1c8ae0b5b15ac1e6989a7a57d29dd73385731397",
+        "consumer_invented_values": [],
+        "decryption_attempted": false,
+        "event_count": 312,
+        "event_head_sha256": "99596559cfba043dc88c409bdaa84231c89242b1786d7ecb0b7e8b235ee744cd",
+        "materialization_attempted": false,
+        "missing_commitments": [],
+        "one_shot_state_consumed": false,
+        "preseal_id": "phase9a-preseal-v3",
+        "signature_verified": true,
+        "signer_identity": "d70ecdb93256317342bc8f8fae6b2ccd3f0cbc7d6d2e11038e78cf77c739f1fd",
+        "study_version": "pead-study-v3",
+        "unlock_attempted": false
+      },
+      "protected_utility": 0.05912749096146769,
+      "seed": 307,
+      "selection_partition": "development_selection",
+      "selection_rows": 33450
+    },
+    {
+      "configuration": {
+        "l2_regularization": 1.0,
+        "learning_rate": 0.03,
+        "max_iter": 200,
+        "max_leaf_nodes": 31
+      },
+      "configuration_index": 3,
+      "diagnostics": {
+        "early_stopped": true,
+        "iterations": 22,
+        "minimum_improvement": 0.001,
+        "patience": 20
+      },
+      "elapsed_seconds": 3.825738799998362,
+      "fit_partition": "development_fit",
+      "fit_rows": 100350,
+      "method_id": "P08-TABULAR-gbdt",
+      "phase9a_commitment": {
+        "allocation_sha256": "30171d4be8726c39e69ed4505b15f0a811b6c100408fdc8e193252c22c13fc8d",
+        "commitment_sha256": "39e9202b07b4038571463a5b1c8ae0b5b15ac1e6989a7a57d29dd73385731397",
+        "consumer_invented_values": [],
+        "decryption_attempted": false,
+        "event_count": 312,
+        "event_head_sha256": "99596559cfba043dc88c409bdaa84231c89242b1786d7ecb0b7e8b235ee744cd",
+        "materialization_attempted": false,
+        "missing_commitments": [],
+        "one_shot_state_consumed": false,
+        "preseal_id": "phase9a-preseal-v3",
+        "signature_verified": true,
+        "signer_identity": "d70ecdb93256317342bc8f8fae6b2ccd3f0cbc7d6d2e11038e78cf77c739f1fd",
+        "study_version": "pead-study-v3",
+        "unlock_attempted": false
+      },
+      "protected_utility": 0.05963157527784596,
+      "seed": 101,
+      "selection_partition": "development_selection",
+      "selection_rows": 33450
+    },
+    {
+      "configuration": {
+        "l2_regularization": 1.0,
+        "learning_rate": 0.03,
+        "max_iter": 200,
+        "max_leaf_nodes": 31
+      },
+      "configuration_index": 3,
+      "diagnostics": {
+        "early_stopped": true,
+        "iterations": 22,
+        "minimum_improvement": 0.001,
+        "patience": 20
+      },
+      "elapsed_seconds": 3.6248080000004848,
+      "fit_partition": "development_fit",
+      "fit_rows": 100350,
+      "method_id": "P08-TABULAR-gbdt",
+      "phase9a_commitment": {
+        "allocation_sha256": "30171d4be8726c39e69ed4505b15f0a811b6c100408fdc8e193252c22c13fc8d",
+        "commitment_sha256": "39e9202b07b4038571463a5b1c8ae0b5b15ac1e6989a7a57d29dd73385731397",
+        "consumer_invented_values": [],
+        "decryption_attempted": false,
+        "event_count": 312,
+        "event_head_sha256": "99596559cfba043dc88c409bdaa84231c89242b1786d7ecb0b7e8b235ee744cd",
+        "materialization_attempted": false,
+        "missing_commitments": [],
+        "one_shot_state_consumed": false,
+        "preseal_id": "phase9a-preseal-v3",
+        "signature_verified": true,
+        "signer_identity": "d70ecdb93256317342bc8f8fae6b2ccd3f0cbc7d6d2e11038e78cf77c739f1fd",
+        "study_version": "pead-study-v3",
+        "unlock_attempted": false
+      },
+      "protected_utility": 0.05963157527784596,
+      "seed": 211,
+      "selection_partition": "development_selection",
+      "selection_rows": 33450
+    },
+    {
+      "configuration": {
+        "l2_regularization": 1.0,
+        "learning_rate": 0.03,
+        "max_iter": 200,
+        "max_leaf_nodes": 31
+      },
+      "configuration_index": 3,
+      "diagnostics": {
+        "early_stopped": true,
+        "iterations": 22,
+        "minimum_improvement": 0.001,
+        "patience": 20
+      },
+      "elapsed_seconds": 3.4164200000013807,
+      "fit_partition": "development_fit",
+      "fit_rows": 100350,
+      "method_id": "P08-TABULAR-gbdt",
+      "phase9a_commitment": {
+        "allocation_sha256": "30171d4be8726c39e69ed4505b15f0a811b6c100408fdc8e193252c22c13fc8d",
+        "commitment_sha256": "39e9202b07b4038571463a5b1c8ae0b5b15ac1e6989a7a57d29dd73385731397",
+        "consumer_invented_values": [],
+        "decryption_attempted": false,
+        "event_count": 312,
+        "event_head_sha256": "99596559cfba043dc88c409bdaa84231c89242b1786d7ecb0b7e8b235ee744cd",
+        "materialization_attempted": false,
+        "missing_commitments": [],
+        "one_shot_state_consumed": false,
+        "preseal_id": "phase9a-preseal-v3",
+        "signature_verified": true,
+        "signer_identity": "d70ecdb93256317342bc8f8fae6b2ccd3f0cbc7d6d2e11038e78cf77c739f1fd",
+        "study_version": "pead-study-v3",
+        "unlock_attempted": false
+      },
+      "protected_utility": 0.05963157527784596,
+      "seed": 307,
+      "selection_partition": "development_selection",
+      "selection_rows": 33450
+    },
+    {
+      "configuration": {
+        "l2_regularization": 0.0,
+        "learning_rate": 0.03,
+        "max_iter": 500,
+        "max_leaf_nodes": 15
+      },
+      "configuration_index": 4,
+      "diagnostics": {
+        "early_stopped": true,
+        "iterations": 22,
+        "minimum_improvement": 0.001,
+        "patience": 20
+      },
+      "elapsed_seconds": 2.8969734999991488,
+      "fit_partition": "development_fit",
+      "fit_rows": 100350,
+      "method_id": "P08-TABULAR-gbdt",
+      "phase9a_commitment": {
+        "allocation_sha256": "30171d4be8726c39e69ed4505b15f0a811b6c100408fdc8e193252c22c13fc8d",
+        "commitment_sha256": "39e9202b07b4038571463a5b1c8ae0b5b15ac1e6989a7a57d29dd73385731397",
+        "consumer_invented_values": [],
+        "decryption_attempted": false,
+        "event_count": 312,
+        "event_head_sha256": "99596559cfba043dc88c409bdaa84231c89242b1786d7ecb0b7e8b235ee744cd",
+        "materialization_attempted": false,
+        "missing_commitments": [],
+        "one_shot_state_consumed": false,
+        "preseal_id": "phase9a-preseal-v3",
+        "signature_verified": true,
+        "signer_identity": "d70ecdb93256317342bc8f8fae6b2ccd3f0cbc7d6d2e11038e78cf77c739f1fd",
+        "study_version": "pead-study-v3",
+        "unlock_attempted": false
+      },
+      "protected_utility": 0.0826326843644978,
+      "seed": 101,
+      "selection_partition": "development_selection",
+      "selection_rows": 33450
+    },
+    {
+      "configuration": {
+        "l2_regularization": 0.0,
+        "learning_rate": 0.03,
+        "max_iter": 500,
+        "max_leaf_nodes": 15
+      },
+      "configuration_index": 4,
+      "diagnostics": {
+        "early_stopped": true,
+        "iterations": 22,
+        "minimum_improvement": 0.001,
+        "patience": 20
+      },
+      "elapsed_seconds": 2.8636390999963623,
+      "fit_partition": "development_fit",
+      "fit_rows": 100350,
+      "method_id": "P08-TABULAR-gbdt",
+      "phase9a_commitment": {
+        "allocation_sha256": "30171d4be8726c39e69ed4505b15f0a811b6c100408fdc8e193252c22c13fc8d",
+        "commitment_sha256": "39e9202b07b4038571463a5b1c8ae0b5b15ac1e6989a7a57d29dd73385731397",
+        "consumer_invented_values": [],
+        "decryption_attempted": false,
+        "event_count": 312,
+        "event_head_sha256": "99596559cfba043dc88c409bdaa84231c89242b1786d7ecb0b7e8b235ee744cd",
+        "materialization_attempted": false,
+        "missing_commitments": [],
+        "one_shot_state_consumed": false,
+        "preseal_id": "phase9a-preseal-v3",
+        "signature_verified": true,
+        "signer_identity": "d70ecdb93256317342bc8f8fae6b2ccd3f0cbc7d6d2e11038e78cf77c739f1fd",
+        "study_version": "pead-study-v3",
+        "unlock_attempted": false
+      },
+      "protected_utility": 0.0826326843644978,
+      "seed": 211,
+      "selection_partition": "development_selection",
+      "selection_rows": 33450
+    },
+    {
+      "configuration": {
+        "l2_regularization": 0.0,
+        "learning_rate": 0.03,
+        "max_iter": 500,
+        "max_leaf_nodes": 15
+      },
+      "configuration_index": 4,
+      "diagnostics": {
+        "early_stopped": true,
+        "iterations": 22,
+        "minimum_improvement": 0.001,
+        "patience": 20
+      },
+      "elapsed_seconds": 3.0140750999999,
+      "fit_partition": "development_fit",
+      "fit_rows": 100350,
+      "method_id": "P08-TABULAR-gbdt",
+      "phase9a_commitment": {
+        "allocation_sha256": "30171d4be8726c39e69ed4505b15f0a811b6c100408fdc8e193252c22c13fc8d",
+        "commitment_sha256": "39e9202b07b4038571463a5b1c8ae0b5b15ac1e6989a7a57d29dd73385731397",
+        "consumer_invented_values": [],
+        "decryption_attempted": false,
+        "event_count": 312,
+        "event_head_sha256": "99596559cfba043dc88c409bdaa84231c89242b1786d7ecb0b7e8b235ee744cd",
+        "materialization_attempted": false,
+        "missing_commitments": [],
+        "one_shot_state_consumed": false,
+        "preseal_id": "phase9a-preseal-v3",
+        "signature_verified": true,
+        "signer_identity": "d70ecdb93256317342bc8f8fae6b2ccd3f0cbc7d6d2e11038e78cf77c739f1fd",
+        "study_version": "pead-study-v3",
+        "unlock_attempted": false
+      },
+      "protected_utility": 0.0826326843644978,
+      "seed": 307,
+      "selection_partition": "development_selection",
+      "selection_rows": 33450
+    },
+    {
+      "configuration": {
+        "l2_regularization": 1.0,
+        "learning_rate": 0.03,
+        "max_iter": 500,
+        "max_leaf_nodes": 15
+      },
+      "configuration_index": 5,
+      "diagnostics": {
+        "early_stopped": true,
+        "iterations": 22,
+        "minimum_improvement": 0.001,
+        "patience": 20
+      },
+      "elapsed_seconds": 2.9784779000037815,
+      "fit_partition": "development_fit",
+      "fit_rows": 100350,
+      "method_id": "P08-TABULAR-gbdt",
+      "phase9a_commitment": {
+        "allocation_sha256": "30171d4be8726c39e69ed4505b15f0a811b6c100408fdc8e193252c22c13fc8d",
+        "commitment_sha256": "39e9202b07b4038571463a5b1c8ae0b5b15ac1e6989a7a57d29dd73385731397",
+        "consumer_invented_values": [],
+        "decryption_attempted": false,
+        "event_count": 312,
+        "event_head_sha256": "99596559cfba043dc88c409bdaa84231c89242b1786d7ecb0b7e8b235ee744cd",
+        "materialization_attempted": false,
+        "missing_commitments": [],
+        "one_shot_state_consumed": false,
+        "preseal_id": "phase9a-preseal-v3",
+        "signature_verified": true,
+        "signer_identity": "d70ecdb93256317342bc8f8fae6b2ccd3f0cbc7d6d2e11038e78cf77c739f1fd",
+        "study_version": "pead-study-v3",
+        "unlock_attempted": false
+      },
+      "protected_utility": 0.07680580021690059,
+      "seed": 101,
+      "selection_partition": "development_selection",
+      "selection_rows": 33450
+    },
+    {
+      "configuration": {
+        "l2_regularization": 1.0,
+        "learning_rate": 0.03,
+        "max_iter": 500,
+        "max_leaf_nodes": 15
+      },
+      "configuration_index": 5,
+      "diagnostics": {
+        "early_stopped": true,
+        "iterations": 22,
+        "minimum_improvement": 0.001,
+        "patience": 20
+      },
+      "elapsed_seconds": 3.9169522000011057,
+      "fit_partition": "development_fit",
+      "fit_rows": 100350,
+      "method_id": "P08-TABULAR-gbdt",
+      "phase9a_commitment": {
+        "allocation_sha256": "30171d4be8726c39e69ed4505b15f0a811b6c100408fdc8e193252c22c13fc8d",
+        "commitment_sha256": "39e9202b07b4038571463a5b1c8ae0b5b15ac1e6989a7a57d29dd73385731397",
+        "consumer_invented_values": [],
+        "decryption_attempted": false,
+        "event_count": 312,
+        "event_head_sha256": "99596559cfba043dc88c409bdaa84231c89242b1786d7ecb0b7e8b235ee744cd",
+        "materialization_attempted": false,
+        "missing_commitments": [],
+        "one_shot_state_consumed": false,
+        "preseal_id": "phase9a-preseal-v3",
+        "signature_verified": true,
+        "signer_identity": "d70ecdb93256317342bc8f8fae6b2ccd3f0cbc7d6d2e11038e78cf77c739f1fd",
+        "study_version": "pead-study-v3",
+        "unlock_attempted": false
+      },
+      "protected_utility": 0.07680580021690059,
+      "seed": 211,
+      "selection_partition": "development_selection",
+      "selection_rows": 33450
+    },
+    {
+      "configuration": {
+        "l2_regularization": 1.0,
+        "learning_rate": 0.03,
+        "max_iter": 500,
+        "max_leaf_nodes": 15
+      },
+      "configuration_index": 5,
+      "diagnostics": {
+        "early_stopped": true,
+        "iterations": 22,
+        "minimum_improvement": 0.001,
+        "patience": 20
+      },
+      "elapsed_seconds": 3.2291068000049563,
+      "fit_partition": "development_fit",
+      "fit_rows": 100350,
+      "method_id": "P08-TABULAR-gbdt",
+      "phase9a_commitment": {
+        "allocation_sha256": "30171d4be8726c39e69ed4505b15f0a811b6c100408fdc8e193252c22c13fc8d",
+        "commitment_sha256": "39e9202b07b4038571463a5b1c8ae0b5b15ac1e6989a7a57d29dd73385731397",
+        "consumer_invented_values": [],
+        "decryption_attempted": false,
+        "event_count": 312,
+        "event_head_sha256": "99596559cfba043dc88c409bdaa84231c89242b1786d7ecb0b7e8b235ee744cd",
+        "materialization_attempted": false,
+        "missing_commitments": [],
+        "one_shot_state_consumed": false,
+        "preseal_id": "phase9a-preseal-v3",
+        "signature_verified": true,
+        "signer_identity": "d70ecdb93256317342bc8f8fae6b2ccd3f0cbc7d6d2e11038e78cf77c739f1fd",
+        "study_version": "pead-study-v3",
+        "unlock_attempted": false
+      },
+      "protected_utility": 0.07680580021690059,
+      "seed": 307,
+      "selection_partition": "development_selection",
+      "selection_rows": 33450
+    },
+    {
+      "configuration": {
+        "l2_regularization": 0.0,
+        "learning_rate": 0.03,
+        "max_iter": 500,
+        "max_leaf_nodes": 31
+      },
+      "configuration_index": 6,
+      "diagnostics": {
+        "early_stopped": true,
+        "iterations": 22,
+        "minimum_improvement": 0.001,
+        "patience": 20
+      },
+      "elapsed_seconds": 3.83882309999899,
+      "fit_partition": "development_fit",
+      "fit_rows": 100350,
+      "method_id": "P08-TABULAR-gbdt",
+      "phase9a_commitment": {
+        "allocation_sha256": "30171d4be8726c39e69ed4505b15f0a811b6c100408fdc8e193252c22c13fc8d",
+        "commitment_sha256": "39e9202b07b4038571463a5b1c8ae0b5b15ac1e6989a7a57d29dd73385731397",
+        "consumer_invented_values": [],
+        "decryption_attempted": false,
+        "event_count": 312,
+        "event_head_sha256": "99596559cfba043dc88c409bdaa84231c89242b1786d7ecb0b7e8b235ee744cd",
+        "materialization_attempted": false,
+        "missing_commitments": [],
+        "one_shot_state_consumed": false,
+        "preseal_id": "phase9a-preseal-v3",
+        "signature_verified": true,
+        "signer_identity": "d70ecdb93256317342bc8f8fae6b2ccd3f0cbc7d6d2e11038e78cf77c739f1fd",
+        "study_version": "pead-study-v3",
+        "unlock_attempted": false
+      },
+      "protected_utility": 0.05912749096146769,
+      "seed": 101,
+      "selection_partition": "development_selection",
+      "selection_rows": 33450
+    },
+    {
+      "configuration": {
+        "l2_regularization": 0.0,
+        "learning_rate": 0.03,
+        "max_iter": 500,
+        "max_leaf_nodes": 31
+      },
+      "configuration_index": 6,
+      "diagnostics": {
+        "early_stopped": true,
+        "iterations": 22,
+        "minimum_improvement": 0.001,
+        "patience": 20
+      },
+      "elapsed_seconds": 4.337542799999937,
+      "fit_partition": "development_fit",
+      "fit_rows": 100350,
+      "method_id": "P08-TABULAR-gbdt",
+      "phase9a_commitment": {
+        "allocation_sha256": "30171d4be8726c39e69ed4505b15f0a811b6c100408fdc8e193252c22c13fc8d",
+        "commitment_sha256": "39e9202b07b4038571463a5b1c8ae0b5b15ac1e6989a7a57d29dd73385731397",
+        "consumer_invented_values": [],
+        "decryption_attempted": false,
+        "event_count": 312,
+        "event_head_sha256": "99596559cfba043dc88c409bdaa84231c89242b1786d7ecb0b7e8b235ee744cd",
+        "materialization_attempted": false,
+        "missing_commitments": [],
+        "one_shot_state_consumed": false,
+        "preseal_id": "phase9a-preseal-v3",
+        "signature_verified": true,
+        "signer_identity": "d70ecdb93256317342bc8f8fae6b2ccd3f0cbc7d6d2e11038e78cf77c739f1fd",
+        "study_version": "pead-study-v3",
+        "unlock_attempted": false
+      },
+      "protected_utility": 0.05912749096146769,
+      "seed": 211,
+      "selection_partition": "development_selection",
+      "selection_rows": 33450
+    },
+    {
+      "configuration": {
+        "l2_regularization": 0.0,
+        "learning_rate": 0.03,
+        "max_iter": 500,
+        "max_leaf_nodes": 31
+      },
+      "configuration_index": 6,
+      "diagnostics": {
+        "early_stopped": true,
+        "iterations": 22,
+        "minimum_improvement": 0.001,
+        "patience": 20
+      },
+      "elapsed_seconds": 3.8679110999946715,
+      "fit_partition": "development_fit",
+      "fit_rows": 100350,
+      "method_id": "P08-TABULAR-gbdt",
+      "phase9a_commitment": {
+        "allocation_sha256": "30171d4be8726c39e69ed4505b15f0a811b6c100408fdc8e193252c22c13fc8d",
+        "commitment_sha256": "39e9202b07b4038571463a5b1c8ae0b5b15ac1e6989a7a57d29dd73385731397",
+        "consumer_invented_values": [],
+        "decryption_attempted": false,
+        "event_count": 312,
+        "event_head_sha256": "99596559cfba043dc88c409bdaa84231c89242b1786d7ecb0b7e8b235ee744cd",
+        "materialization_attempted": false,
+        "missing_commitments": [],
+        "one_shot_state_consumed": false,
+        "preseal_id": "phase9a-preseal-v3",
+        "signature_verified": true,
+        "signer_identity": "d70ecdb93256317342bc8f8fae6b2ccd3f0cbc7d6d2e11038e78cf77c739f1fd",
+        "study_version": "pead-study-v3",
+        "unlock_attempted": false
+      },
+      "protected_utility": 0.05912749096146769,
+      "seed": 307,
+      "selection_partition": "development_selection",
+      "selection_rows": 33450
+    },
+    {
+      "configuration": {
+        "l2_regularization": 1.0,
+        "learning_rate": 0.03,
+        "max_iter": 500,
+        "max_leaf_nodes": 31
+      },
+      "configuration_index": 7,
+      "diagnostics": {
+        "early_stopped": true,
+        "iterations": 22,
+        "minimum_improvement": 0.001,
+        "patience": 20
+      },
+      "elapsed_seconds": 3.5611450000069453,
+      "fit_partition": "development_fit",
+      "fit_rows": 100350,
+      "method_id": "P08-TABULAR-gbdt",
+      "phase9a_commitment": {
+        "allocation_sha256": "30171d4be8726c39e69ed4505b15f0a811b6c100408fdc8e193252c22c13fc8d",
+        "commitment_sha256": "39e9202b07b4038571463a5b1c8ae0b5b15ac1e6989a7a57d29dd73385731397",
+        "consumer_invented_values": [],
+        "decryption_attempted": false,
+        "event_count": 312,
+        "event_head_sha256": "99596559cfba043dc88c409bdaa84231c89242b1786d7ecb0b7e8b235ee744cd",
+        "materialization_attempted": false,
+        "missing_commitments": [],
+        "one_shot_state_consumed": false,
+        "preseal_id": "phase9a-preseal-v3",
+        "signature_verified": true,
+        "signer_identity": "d70ecdb93256317342bc8f8fae6b2ccd3f0cbc7d6d2e11038e78cf77c739f1fd",
+        "study_version": "pead-study-v3",
+        "unlock_attempted": false
+      },
+      "protected_utility": 0.05963157527784596,
+      "seed": 101,
+      "selection_partition": "development_selection",
+      "selection_rows": 33450
+    },
+    {
+      "configuration": {
+        "l2_regularization": 1.0,
+        "learning_rate": 0.03,
+        "max_iter": 500,
+        "max_leaf_nodes": 31
+      },
+      "configuration_index": 7,
+      "diagnostics": {
+        "early_stopped": true,
+        "iterations": 22,
+        "minimum_improvement": 0.001,
+        "patience": 20
+      },
+      "elapsed_seconds": 3.3505530999973416,
+      "fit_partition": "development_fit",
+      "fit_rows": 100350,
+      "method_id": "P08-TABULAR-gbdt",
+      "phase9a_commitment": {
+        "allocation_sha256": "30171d4be8726c39e69ed4505b15f0a811b6c100408fdc8e193252c22c13fc8d",
+        "commitment_sha256": "39e9202b07b4038571463a5b1c8ae0b5b15ac1e6989a7a57d29dd73385731397",
+        "consumer_invented_values": [],
+        "decryption_attempted": false,
+        "event_count": 312,
+        "event_head_sha256": "99596559cfba043dc88c409bdaa84231c89242b1786d7ecb0b7e8b235ee744cd",
+        "materialization_attempted": false,
+        "missing_commitments": [],
+        "one_shot_state_consumed": false,
+        "preseal_id": "phase9a-preseal-v3",
+        "signature_verified": true,
+        "signer_identity": "d70ecdb93256317342bc8f8fae6b2ccd3f0cbc7d6d2e11038e78cf77c739f1fd",
+        "study_version": "pead-study-v3",
+        "unlock_attempted": false
+      },
+      "protected_utility": 0.05963157527784596,
+      "seed": 211,
+      "selection_partition": "development_selection",
+      "selection_rows": 33450
+    },
+    {
+      "configuration": {
+        "l2_regularization": 1.0,
+        "learning_rate": 0.03,
+        "max_iter": 500,
+        "max_leaf_nodes": 31
+      },
+      "configuration_index": 7,
+      "diagnostics": {
+        "early_stopped": true,
+        "iterations": 22,
+        "minimum_improvement": 0.001,
+        "patience": 20
+      },
+      "elapsed_seconds": 3.3039121000037994,
+      "fit_partition": "development_fit",
+      "fit_rows": 100350,
+      "method_id": "P08-TABULAR-gbdt",
+      "phase9a_commitment": {
+        "allocation_sha256": "30171d4be8726c39e69ed4505b15f0a811b6c100408fdc8e193252c22c13fc8d",
+        "commitment_sha256": "39e9202b07b4038571463a5b1c8ae0b5b15ac1e6989a7a57d29dd73385731397",
+        "consumer_invented_values": [],
+        "decryption_attempted": false,
+        "event_count": 312,
+        "event_head_sha256": "99596559cfba043dc88c409bdaa84231c89242b1786d7ecb0b7e8b235ee744cd",
+        "materialization_attempted": false,
+        "missing_commitments": [],
+        "one_shot_state_consumed": false,
+        "preseal_id": "phase9a-preseal-v3",
+        "signature_verified": true,
+        "signer_identity": "d70ecdb93256317342bc8f8fae6b2ccd3f0cbc7d6d2e11038e78cf77c739f1fd",
+        "study_version": "pead-study-v3",
+        "unlock_attempted": false
+      },
+      "protected_utility": 0.05963157527784596,
+      "seed": 307,
+      "selection_partition": "development_selection",
+      "selection_rows": 33450
+    },
+    {
+      "configuration": {
+        "l2_regularization": 0.0,
+        "learning_rate": 0.1,
+        "max_iter": 200,
+        "max_leaf_nodes": 15
+      },
+      "configuration_index": 8,
+      "diagnostics": {
+        "early_stopped": true,
+        "iterations": 22,
+        "minimum_improvement": 0.001,
+        "patience": 20
+      },
+      "elapsed_seconds": 2.797661700002209,
+      "fit_partition": "development_fit",
+      "fit_rows": 100350,
+      "method_id": "P08-TABULAR-gbdt",
+      "phase9a_commitment": {
+        "allocation_sha256": "30171d4be8726c39e69ed4505b15f0a811b6c100408fdc8e193252c22c13fc8d",
+        "commitment_sha256": "39e9202b07b4038571463a5b1c8ae0b5b15ac1e6989a7a57d29dd73385731397",
+        "consumer_invented_values": [],
+        "decryption_attempted": false,
+        "event_count": 312,
+        "event_head_sha256": "99596559cfba043dc88c409bdaa84231c89242b1786d7ecb0b7e8b235ee744cd",
+        "materialization_attempted": false,
+        "missing_commitments": [],
+        "one_shot_state_consumed": false,
+        "preseal_id": "phase9a-preseal-v3",
+        "signature_verified": true,
+        "signer_identity": "d70ecdb93256317342bc8f8fae6b2ccd3f0cbc7d6d2e11038e78cf77c739f1fd",
+        "study_version": "pead-study-v3",
+        "unlock_attempted": false
+      },
+      "protected_utility": -0.03773997068306925,
+      "seed": 101,
+      "selection_partition": "development_selection",
+      "selection_rows": 33450
+    },
+    {
+      "configuration": {
+        "l2_regularization": 0.0,
+        "learning_rate": 0.1,
+        "max_iter": 200,
+        "max_leaf_nodes": 15
+      },
+      "configuration_index": 8,
+      "diagnostics": {
+        "early_stopped": true,
+        "iterations": 22,
+        "minimum_improvement": 0.001,
+        "patience": 20
+      },
+      "elapsed_seconds": 2.9102734999978566,
+      "fit_partition": "development_fit",
+      "fit_rows": 100350,
+      "method_id": "P08-TABULAR-gbdt",
+      "phase9a_commitment": {
+        "allocation_sha256": "30171d4be8726c39e69ed4505b15f0a811b6c100408fdc8e193252c22c13fc8d",
+        "commitment_sha256": "39e9202b07b4038571463a5b1c8ae0b5b15ac1e6989a7a57d29dd73385731397",
+        "consumer_invented_values": [],
+        "decryption_attempted": false,
+        "event_count": 312,
+        "event_head_sha256": "99596559cfba043dc88c409bdaa84231c89242b1786d7ecb0b7e8b235ee744cd",
+        "materialization_attempted": false,
+        "missing_commitments": [],
+        "one_shot_state_consumed": false,
+        "preseal_id": "phase9a-preseal-v3",
+        "signature_verified": true,
+        "signer_identity": "d70ecdb93256317342bc8f8fae6b2ccd3f0cbc7d6d2e11038e78cf77c739f1fd",
+        "study_version": "pead-study-v3",
+        "unlock_attempted": false
+      },
+      "protected_utility": -0.03773997068306925,
+      "seed": 211,
+      "selection_partition": "development_selection",
+      "selection_rows": 33450
+    },
+    {
+      "configuration": {
+        "l2_regularization": 0.0,
+        "learning_rate": 0.1,
+        "max_iter": 200,
+        "max_leaf_nodes": 15
+      },
+      "configuration_index": 8,
+      "diagnostics": {
+        "early_stopped": true,
+        "iterations": 22,
+        "minimum_improvement": 0.001,
+        "patience": 20
+      },
+      "elapsed_seconds": 2.7976651999997557,
+      "fit_partition": "development_fit",
+      "fit_rows": 100350,
+      "method_id": "P08-TABULAR-gbdt",
+      "phase9a_commitment": {
+        "allocation_sha256": "30171d4be8726c39e69ed4505b15f0a811b6c100408fdc8e193252c22c13fc8d",
+        "commitment_sha256": "39e9202b07b4038571463a5b1c8ae0b5b15ac1e6989a7a57d29dd73385731397",
+        "consumer_invented_values": [],
+        "decryption_attempted": false,
+        "event_count": 312,
+        "event_head_sha256": "99596559cfba043dc88c409bdaa84231c89242b1786d7ecb0b7e8b235ee744cd",
+        "materialization_attempted": false,
+        "missing_commitments": [],
+        "one_shot_state_consumed": false,
+        "preseal_id": "phase9a-preseal-v3",
+        "signature_verified": true,
+        "signer_identity": "d70ecdb93256317342bc8f8fae6b2ccd3f0cbc7d6d2e11038e78cf77c739f1fd",
+        "study_version": "pead-study-v3",
+        "unlock_attempted": false
+      },
+      "protected_utility": -0.03773997068306925,
+      "seed": 307,
+      "selection_partition": "development_selection",
+      "selection_rows": 33450
+    },
+    {
+      "configuration": {
+        "l2_regularization": 1.0,
+        "learning_rate": 0.1,
+        "max_iter": 200,
+        "max_leaf_nodes": 15
+      },
+      "configuration_index": 9,
+      "diagnostics": {
+        "early_stopped": true,
+        "iterations": 22,
+        "minimum_improvement": 0.001,
+        "patience": 20
+      },
+      "elapsed_seconds": 2.867109300001175,
+      "fit_partition": "development_fit",
+      "fit_rows": 100350,
+      "method_id": "P08-TABULAR-gbdt",
+      "phase9a_commitment": {
+        "allocation_sha256": "30171d4be8726c39e69ed4505b15f0a811b6c100408fdc8e193252c22c13fc8d",
+        "commitment_sha256": "39e9202b07b4038571463a5b1c8ae0b5b15ac1e6989a7a57d29dd73385731397",
+        "consumer_invented_values": [],
+        "decryption_attempted": false,
+        "event_count": 312,
+        "event_head_sha256": "99596559cfba043dc88c409bdaa84231c89242b1786d7ecb0b7e8b235ee744cd",
+        "materialization_attempted": false,
+        "missing_commitments": [],
+        "one_shot_state_consumed": false,
+        "preseal_id": "phase9a-preseal-v3",
+        "signature_verified": true,
+        "signer_identity": "d70ecdb93256317342bc8f8fae6b2ccd3f0cbc7d6d2e11038e78cf77c739f1fd",
+        "study_version": "pead-study-v3",
+        "unlock_attempted": false
+      },
+      "protected_utility": -0.046554423013050766,
+      "seed": 101,
+      "selection_partition": "development_selection",
+      "selection_rows": 33450
+    },
+    {
+      "configuration": {
+        "l2_regularization": 1.0,
+        "learning_rate": 0.1,
+        "max_iter": 200,
+        "max_leaf_nodes": 15
+      },
+      "configuration_index": 9,
+      "diagnostics": {
+        "early_stopped": true,
+        "iterations": 22,
+        "minimum_improvement": 0.001,
+        "patience": 20
+      },
+      "elapsed_seconds": 3.194236200004525,
+      "fit_partition": "development_fit",
+      "fit_rows": 100350,
+      "method_id": "P08-TABULAR-gbdt",
+      "phase9a_commitment": {
+        "allocation_sha256": "30171d4be8726c39e69ed4505b15f0a811b6c100408fdc8e193252c22c13fc8d",
+        "commitment_sha256": "39e9202b07b4038571463a5b1c8ae0b5b15ac1e6989a7a57d29dd73385731397",
+        "consumer_invented_values": [],
+        "decryption_attempted": false,
+        "event_count": 312,
+        "event_head_sha256": "99596559cfba043dc88c409bdaa84231c89242b1786d7ecb0b7e8b235ee744cd",
+        "materialization_attempted": false,
+        "missing_commitments": [],
+        "one_shot_state_consumed": false,
+        "preseal_id": "phase9a-preseal-v3",
+        "signature_verified": true,
+        "signer_identity": "d70ecdb93256317342bc8f8fae6b2ccd3f0cbc7d6d2e11038e78cf77c739f1fd",
+        "study_version": "pead-study-v3",
+        "unlock_attempted": false
+      },
+      "protected_utility": -0.046554423013050766,
+      "seed": 211,
+      "selection_partition": "development_selection",
+      "selection_rows": 33450
+    },
+    {
+      "configuration": {
+        "l2_regularization": 1.0,
+        "learning_rate": 0.1,
+        "max_iter": 200,
+        "max_leaf_nodes": 15
+      },
+      "configuration_index": 9,
+      "diagnostics": {
+        "early_stopped": true,
+        "iterations": 22,
+        "minimum_improvement": 0.001,
+        "patience": 20
+      },
+      "elapsed_seconds": 3.4168037999988883,
+      "fit_partition": "development_fit",
+      "fit_rows": 100350,
+      "method_id": "P08-TABULAR-gbdt",
+      "phase9a_commitment": {
+        "allocation_sha256": "30171d4be8726c39e69ed4505b15f0a811b6c100408fdc8e193252c22c13fc8d",
+        "commitment_sha256": "39e9202b07b4038571463a5b1c8ae0b5b15ac1e6989a7a57d29dd73385731397",
+        "consumer_invented_values": [],
+        "decryption_attempted": false,
+        "event_count": 312,
+        "event_head_sha256": "99596559cfba043dc88c409bdaa84231c89242b1786d7ecb0b7e8b235ee744cd",
+        "materialization_attempted": false,
+        "missing_commitments": [],
+        "one_shot_state_consumed": false,
+        "preseal_id": "phase9a-preseal-v3",
+        "signature_verified": true,
+        "signer_identity": "d70ecdb93256317342bc8f8fae6b2ccd3f0cbc7d6d2e11038e78cf77c739f1fd",
+        "study_version": "pead-study-v3",
+        "unlock_attempted": false
+      },
+      "protected_utility": -0.046554423013050766,
+      "seed": 307,
+      "selection_partition": "development_selection",
+      "selection_rows": 33450
+    },
+    {
+      "configuration": {
+        "l2_regularization": 0.0,
+        "learning_rate": 0.1,
+        "max_iter": 200,
+        "max_leaf_nodes": 31
+      },
+      "configuration_index": 10,
+      "diagnostics": {
+        "early_stopped": true,
+        "iterations": 22,
+        "minimum_improvement": 0.001,
+        "patience": 20
+      },
+      "elapsed_seconds": 3.7782220000008238,
+      "fit_partition": "development_fit",
+      "fit_rows": 100350,
+      "method_id": "P08-TABULAR-gbdt",
+      "phase9a_commitment": {
+        "allocation_sha256": "30171d4be8726c39e69ed4505b15f0a811b6c100408fdc8e193252c22c13fc8d",
+        "commitment_sha256": "39e9202b07b4038571463a5b1c8ae0b5b15ac1e6989a7a57d29dd73385731397",
+        "consumer_invented_values": [],
+        "decryption_attempted": false,
+        "event_count": 312,
+        "event_head_sha256": "99596559cfba043dc88c409bdaa84231c89242b1786d7ecb0b7e8b235ee744cd",
+        "materialization_attempted": false,
+        "missing_commitments": [],
+        "one_shot_state_consumed": false,
+        "preseal_id": "phase9a-preseal-v3",
+        "signature_verified": true,
+        "signer_identity": "d70ecdb93256317342bc8f8fae6b2ccd3f0cbc7d6d2e11038e78cf77c739f1fd",
+        "study_version": "pead-study-v3",
+        "unlock_attempted": false
+      },
+      "protected_utility": -0.17293545039757857,
+      "seed": 101,
+      "selection_partition": "development_selection",
+      "selection_rows": 33450
+    },
+    {
+      "configuration": {
+        "l2_regularization": 0.0,
+        "learning_rate": 0.1,
+        "max_iter": 200,
+        "max_leaf_nodes": 31
+      },
+      "configuration_index": 10,
+      "diagnostics": {
+        "early_stopped": true,
+        "iterations": 22,
+        "minimum_improvement": 0.001,
+        "patience": 20
+      },
+      "elapsed_seconds": 3.545740100002149,
+      "fit_partition": "development_fit",
+      "fit_rows": 100350,
+      "method_id": "P08-TABULAR-gbdt",
+      "phase9a_commitment": {
+        "allocation_sha256": "30171d4be8726c39e69ed4505b15f0a811b6c100408fdc8e193252c22c13fc8d",
+        "commitment_sha256": "39e9202b07b4038571463a5b1c8ae0b5b15ac1e6989a7a57d29dd73385731397",
+        "consumer_invented_values": [],
+        "decryption_attempted": false,
+        "event_count": 312,
+        "event_head_sha256": "99596559cfba043dc88c409bdaa84231c89242b1786d7ecb0b7e8b235ee744cd",
+        "materialization_attempted": false,
+        "missing_commitments": [],
+        "one_shot_state_consumed": false,
+        "preseal_id": "phase9a-preseal-v3",
+        "signature_verified": true,
+        "signer_identity": "d70ecdb93256317342bc8f8fae6b2ccd3f0cbc7d6d2e11038e78cf77c739f1fd",
+        "study_version": "pead-study-v3",
+        "unlock_attempted": false
+      },
+      "protected_utility": -0.17293545039757857,
+      "seed": 211,
+      "selection_partition": "development_selection",
+      "selection_rows": 33450
+    },
+    {
+      "configuration": {
+        "l2_regularization": 0.0,
+        "learning_rate": 0.1,
+        "max_iter": 200,
+        "max_leaf_nodes": 31
+      },
+      "configuration_index": 10,
+      "diagnostics": {
+        "early_stopped": true,
+        "iterations": 22,
+        "minimum_improvement": 0.001,
+        "patience": 20
+      },
+      "elapsed_seconds": 3.7510428999958094,
+      "fit_partition": "development_fit",
+      "fit_rows": 100350,
+      "method_id": "P08-TABULAR-gbdt",
+      "phase9a_commitment": {
+        "allocation_sha256": "30171d4be8726c39e69ed4505b15f0a811b6c100408fdc8e193252c22c13fc8d",
+        "commitment_sha256": "39e9202b07b4038571463a5b1c8ae0b5b15ac1e6989a7a57d29dd73385731397",
+        "consumer_invented_values": [],
+        "decryption_attempted": false,
+        "event_count": 312,
+        "event_head_sha256": "99596559cfba043dc88c409bdaa84231c89242b1786d7ecb0b7e8b235ee744cd",
+        "materialization_attempted": false,
+        "missing_commitments": [],
+        "one_shot_state_consumed": false,
+        "preseal_id": "phase9a-preseal-v3",
+        "signature_verified": true,
+        "signer_identity": "d70ecdb93256317342bc8f8fae6b2ccd3f0cbc7d6d2e11038e78cf77c739f1fd",
+        "study_version": "pead-study-v3",
+        "unlock_attempted": false
+      },
+      "protected_utility": -0.17293545039757857,
+      "seed": 307,
+      "selection_partition": "development_selection",
+      "selection_rows": 33450
+    },
+    {
+      "configuration": {
+        "l2_regularization": 1.0,
+        "learning_rate": 0.1,
+        "max_iter": 200,
+        "max_leaf_nodes": 31
+      },
+      "configuration_index": 11,
+      "diagnostics": {
+        "early_stopped": true,
+        "iterations": 22,
+        "minimum_improvement": 0.001,
+        "patience": 20
+      },
+      "elapsed_seconds": 3.2471516000005067,
+      "fit_partition": "development_fit",
+      "fit_rows": 100350,
+      "method_id": "P08-TABULAR-gbdt",
+      "phase9a_commitment": {
+        "allocation_sha256": "30171d4be8726c39e69ed4505b15f0a811b6c100408fdc8e193252c22c13fc8d",
+        "commitment_sha256": "39e9202b07b4038571463a5b1c8ae0b5b15ac1e6989a7a57d29dd73385731397",
+        "consumer_invented_values": [],
+        "decryption_attempted": false,
+        "event_count": 312,
+        "event_head_sha256": "99596559cfba043dc88c409bdaa84231c89242b1786d7ecb0b7e8b235ee744cd",
+        "materialization_attempted": false,
+        "missing_commitments": [],
+        "one_shot_state_consumed": false,
+        "preseal_id": "phase9a-preseal-v3",
+        "signature_verified": true,
+        "signer_identity": "d70ecdb93256317342bc8f8fae6b2ccd3f0cbc7d6d2e11038e78cf77c739f1fd",
+        "study_version": "pead-study-v3",
+        "unlock_attempted": false
+      },
+      "protected_utility": -0.1720990335420136,
+      "seed": 101,
+      "selection_partition": "development_selection",
+      "selection_rows": 33450
+    },
+    {
+      "configuration": {
+        "l2_regularization": 1.0,
+        "learning_rate": 0.1,
+        "max_iter": 200,
+        "max_leaf_nodes": 31
+      },
+      "configuration_index": 11,
+      "diagnostics": {
+        "early_stopped": true,
+        "iterations": 22,
+        "minimum_improvement": 0.001,
+        "patience": 20
+      },
+      "elapsed_seconds": 3.4652343000052497,
+      "fit_partition": "development_fit",
+      "fit_rows": 100350,
+      "method_id": "P08-TABULAR-gbdt",
+      "phase9a_commitment": {
+        "allocation_sha256": "30171d4be8726c39e69ed4505b15f0a811b6c100408fdc8e193252c22c13fc8d",
+        "commitment_sha256": "39e9202b07b4038571463a5b1c8ae0b5b15ac1e6989a7a57d29dd73385731397",
+        "consumer_invented_values": [],
+        "decryption_attempted": false,
+        "event_count": 312,
+        "event_head_sha256": "99596559cfba043dc88c409bdaa84231c89242b1786d7ecb0b7e8b235ee744cd",
+        "materialization_attempted": false,
+        "missing_commitments": [],
+        "one_shot_state_consumed": false,
+        "preseal_id": "phase9a-preseal-v3",
+        "signature_verified": true,
+        "signer_identity": "d70ecdb93256317342bc8f8fae6b2ccd3f0cbc7d6d2e11038e78cf77c739f1fd",
+        "study_version": "pead-study-v3",
+        "unlock_attempted": false
+      },
+      "protected_utility": -0.1720990335420136,
+      "seed": 211,
+      "selection_partition": "development_selection",
+      "selection_rows": 33450
+    },
+    {
+      "configuration": {
+        "l2_regularization": 1.0,
+        "learning_rate": 0.1,
+        "max_iter": 200,
+        "max_leaf_nodes": 31
+      },
+      "configuration_index": 11,
+      "diagnostics": {
+        "early_stopped": true,
+        "iterations": 22,
+        "minimum_improvement": 0.001,
+        "patience": 20
+      },
+      "elapsed_seconds": 3.572514499996032,
+      "fit_partition": "development_fit",
+      "fit_rows": 100350,
+      "method_id": "P08-TABULAR-gbdt",
+      "phase9a_commitment": {
+        "allocation_sha256": "30171d4be8726c39e69ed4505b15f0a811b6c100408fdc8e193252c22c13fc8d",
+        "commitment_sha256": "39e9202b07b4038571463a5b1c8ae0b5b15ac1e6989a7a57d29dd73385731397",
+        "consumer_invented_values": [],
+        "decryption_attempted": false,
+        "event_count": 312,
+        "event_head_sha256": "99596559cfba043dc88c409bdaa84231c89242b1786d7ecb0b7e8b235ee744cd",
+        "materialization_attempted": false,
+        "missing_commitments": [],
+        "one_shot_state_consumed": false,
+        "preseal_id": "phase9a-preseal-v3",
+        "signature_verified": true,
+        "signer_identity": "d70ecdb93256317342bc8f8fae6b2ccd3f0cbc7d6d2e11038e78cf77c739f1fd",
+        "study_version": "pead-study-v3",
+        "unlock_attempted": false
+      },
+      "protected_utility": -0.1720990335420136,
+      "seed": 307,
+      "selection_partition": "development_selection",
+      "selection_rows": 33450
+    },
+    {
+      "configuration": {
+        "l2_regularization": 0.0,
+        "learning_rate": 0.1,
+        "max_iter": 500,
+        "max_leaf_nodes": 15
+      },
+      "configuration_index": 12,
+      "diagnostics": {
+        "early_stopped": true,
+        "iterations": 22,
+        "minimum_improvement": 0.001,
+        "patience": 20
+      },
+      "elapsed_seconds": 3.2949327000023914,
+      "fit_partition": "development_fit",
+      "fit_rows": 100350,
+      "method_id": "P08-TABULAR-gbdt",
+      "phase9a_commitment": {
+        "allocation_sha256": "30171d4be8726c39e69ed4505b15f0a811b6c100408fdc8e193252c22c13fc8d",
+        "commitment_sha256": "39e9202b07b4038571463a5b1c8ae0b5b15ac1e6989a7a57d29dd73385731397",
+        "consumer_invented_values": [],
+        "decryption_attempted": false,
+        "event_count": 312,
+        "event_head_sha256": "99596559cfba043dc88c409bdaa84231c89242b1786d7ecb0b7e8b235ee744cd",
+        "materialization_attempted": false,
+        "missing_commitments": [],
+        "one_shot_state_consumed": false,
+        "preseal_id": "phase9a-preseal-v3",
+        "signature_verified": true,
+        "signer_identity": "d70ecdb93256317342bc8f8fae6b2ccd3f0cbc7d6d2e11038e78cf77c739f1fd",
+        "study_version": "pead-study-v3",
+        "unlock_attempted": false
+      },
+      "protected_utility": -0.03773997068306925,
+      "seed": 101,
+      "selection_partition": "development_selection",
+      "selection_rows": 33450
+    },
+    {
+      "configuration": {
+        "l2_regularization": 0.0,
+        "learning_rate": 0.1,
+        "max_iter": 500,
+        "max_leaf_nodes": 15
+      },
+      "configuration_index": 12,
+      "diagnostics": {
+        "early_stopped": true,
+        "iterations": 22,
+        "minimum_improvement": 0.001,
+        "patience": 20
+      },
+      "elapsed_seconds": 2.8121187999931863,
+      "fit_partition": "development_fit",
+      "fit_rows": 100350,
+      "method_id": "P08-TABULAR-gbdt",
+      "phase9a_commitment": {
+        "allocation_sha256": "30171d4be8726c39e69ed4505b15f0a811b6c100408fdc8e193252c22c13fc8d",
+        "commitment_sha256": "39e9202b07b4038571463a5b1c8ae0b5b15ac1e6989a7a57d29dd73385731397",
+        "consumer_invented_values": [],
+        "decryption_attempted": false,
+        "event_count": 312,
+        "event_head_sha256": "99596559cfba043dc88c409bdaa84231c89242b1786d7ecb0b7e8b235ee744cd",
+        "materialization_attempted": false,
+        "missing_commitments": [],
+        "one_shot_state_consumed": false,
+        "preseal_id": "phase9a-preseal-v3",
+        "signature_verified": true,
+        "signer_identity": "d70ecdb93256317342bc8f8fae6b2ccd3f0cbc7d6d2e11038e78cf77c739f1fd",
+        "study_version": "pead-study-v3",
+        "unlock_attempted": false
+      },
+      "protected_utility": -0.03773997068306925,
+      "seed": 211,
+      "selection_partition": "development_selection",
+      "selection_rows": 33450
+    },
+    {
+      "configuration": {
+        "l2_regularization": 0.0,
+        "learning_rate": 0.1,
+        "max_iter": 500,
+        "max_leaf_nodes": 15
+      },
+      "configuration_index": 12,
+      "diagnostics": {
+        "early_stopped": true,
+        "iterations": 22,
+        "minimum_improvement": 0.001,
+        "patience": 20
+      },
+      "elapsed_seconds": 2.828844099996786,
+      "fit_partition": "development_fit",
+      "fit_rows": 100350,
+      "method_id": "P08-TABULAR-gbdt",
+      "phase9a_commitment": {
+        "allocation_sha256": "30171d4be8726c39e69ed4505b15f0a811b6c100408fdc8e193252c22c13fc8d",
+        "commitment_sha256": "39e9202b07b4038571463a5b1c8ae0b5b15ac1e6989a7a57d29dd73385731397",
+        "consumer_invented_values": [],
+        "decryption_attempted": false,
+        "event_count": 312,
+        "event_head_sha256": "99596559cfba043dc88c409bdaa84231c89242b1786d7ecb0b7e8b235ee744cd",
+        "materialization_attempted": false,
+        "missing_commitments": [],
+        "one_shot_state_consumed": false,
+        "preseal_id": "phase9a-preseal-v3",
+        "signature_verified": true,
+        "signer_identity": "d70ecdb93256317342bc8f8fae6b2ccd3f0cbc7d6d2e11038e78cf77c739f1fd",
+        "study_version": "pead-study-v3",
+        "unlock_attempted": false
+      },
+      "protected_utility": -0.03773997068306925,
+      "seed": 307,
+      "selection_partition": "development_selection",
+      "selection_rows": 33450
+    },
+    {
+      "configuration": {
+        "l2_regularization": 1.0,
+        "learning_rate": 0.1,
+        "max_iter": 500,
+        "max_leaf_nodes": 15
+      },
+      "configuration_index": 13,
+      "diagnostics": {
+        "early_stopped": true,
+        "iterations": 22,
+        "minimum_improvement": 0.001,
+        "patience": 20
+      },
+      "elapsed_seconds": 3.1353267000013147,
+      "fit_partition": "development_fit",
+      "fit_rows": 100350,
+      "method_id": "P08-TABULAR-gbdt",
+      "phase9a_commitment": {
+        "allocation_sha256": "30171d4be8726c39e69ed4505b15f0a811b6c100408fdc8e193252c22c13fc8d",
+        "commitment_sha256": "39e9202b07b4038571463a5b1c8ae0b5b15ac1e6989a7a57d29dd73385731397",
+        "consumer_invented_values": [],
+        "decryption_attempted": false,
+        "event_count": 312,
+        "event_head_sha256": "99596559cfba043dc88c409bdaa84231c89242b1786d7ecb0b7e8b235ee744cd",
+        "materialization_attempted": false,
+        "missing_commitments": [],
+        "one_shot_state_consumed": false,
+        "preseal_id": "phase9a-preseal-v3",
+        "signature_verified": true,
+        "signer_identity": "d70ecdb93256317342bc8f8fae6b2ccd3f0cbc7d6d2e11038e78cf77c739f1fd",
+        "study_version": "pead-study-v3",
+        "unlock_attempted": false
+      },
+      "protected_utility": -0.046554423013050766,
+      "seed": 101,
+      "selection_partition": "development_selection",
+      "selection_rows": 33450
+    },
+    {
+      "configuration": {
+        "l2_regularization": 1.0,
+        "learning_rate": 0.1,
+        "max_iter": 500,
+        "max_leaf_nodes": 15
+      },
+      "configuration_index": 13,
+      "diagnostics": {
+        "early_stopped": true,
+        "iterations": 22,
+        "minimum_improvement": 0.001,
+        "patience": 20
+      },
+      "elapsed_seconds": 2.8704997999957413,
+      "fit_partition": "development_fit",
+      "fit_rows": 100350,
+      "method_id": "P08-TABULAR-gbdt",
+      "phase9a_commitment": {
+        "allocation_sha256": "30171d4be8726c39e69ed4505b15f0a811b6c100408fdc8e193252c22c13fc8d",
+        "commitment_sha256": "39e9202b07b4038571463a5b1c8ae0b5b15ac1e6989a7a57d29dd73385731397",
+        "consumer_invented_values": [],
+        "decryption_attempted": false,
+        "event_count": 312,
+        "event_head_sha256": "99596559cfba043dc88c409bdaa84231c89242b1786d7ecb0b7e8b235ee744cd",
+        "materialization_attempted": false,
+        "missing_commitments": [],
+        "one_shot_state_consumed": false,
+        "preseal_id": "phase9a-preseal-v3",
+        "signature_verified": true,
+        "signer_identity": "d70ecdb93256317342bc8f8fae6b2ccd3f0cbc7d6d2e11038e78cf77c739f1fd",
+        "study_version": "pead-study-v3",
+        "unlock_attempted": false
+      },
+      "protected_utility": -0.046554423013050766,
+      "seed": 211,
+      "selection_partition": "development_selection",
+      "selection_rows": 33450
+    },
+    {
+      "configuration": {
+        "l2_regularization": 1.0,
+        "learning_rate": 0.1,
+        "max_iter": 500,
+        "max_leaf_nodes": 15
+      },
+      "configuration_index": 13,
+      "diagnostics": {
+        "early_stopped": true,
+        "iterations": 22,
+        "minimum_improvement": 0.001,
+        "patience": 20
+      },
+      "elapsed_seconds": 2.8426075000024866,
+      "fit_partition": "development_fit",
+      "fit_rows": 100350,
+      "method_id": "P08-TABULAR-gbdt",
+      "phase9a_commitment": {
+        "allocation_sha256": "30171d4be8726c39e69ed4505b15f0a811b6c100408fdc8e193252c22c13fc8d",
+        "commitment_sha256": "39e9202b07b4038571463a5b1c8ae0b5b15ac1e6989a7a57d29dd73385731397",
+        "consumer_invented_values": [],
+        "decryption_attempted": false,
+        "event_count": 312,
+        "event_head_sha256": "99596559cfba043dc88c409bdaa84231c89242b1786d7ecb0b7e8b235ee744cd",
+        "materialization_attempted": false,
+        "missing_commitments": [],
+        "one_shot_state_consumed": false,
+        "preseal_id": "phase9a-preseal-v3",
+        "signature_verified": true,
+        "signer_identity": "d70ecdb93256317342bc8f8fae6b2ccd3f0cbc7d6d2e11038e78cf77c739f1fd",
+        "study_version": "pead-study-v3",
+        "unlock_attempted": false
+      },
+      "protected_utility": -0.046554423013050766,
+      "seed": 307,
+      "selection_partition": "development_selection",
+      "selection_rows": 33450
+    },
+    {
+      "configuration": {
+        "l2_regularization": 0.0,
+        "learning_rate": 0.1,
+        "max_iter": 500,
+        "max_leaf_nodes": 31
+      },
+      "configuration_index": 14,
+      "diagnostics": {
+        "early_stopped": true,
+        "iterations": 22,
+        "minimum_improvement": 0.001,
+        "patience": 20
+      },
+      "elapsed_seconds": 3.7405676000053063,
+      "fit_partition": "development_fit",
+      "fit_rows": 100350,
+      "method_id": "P08-TABULAR-gbdt",
+      "phase9a_commitment": {
+        "allocation_sha256": "30171d4be8726c39e69ed4505b15f0a811b6c100408fdc8e193252c22c13fc8d",
+        "commitment_sha256": "39e9202b07b4038571463a5b1c8ae0b5b15ac1e6989a7a57d29dd73385731397",
+        "consumer_invented_values": [],
+        "decryption_attempted": false,
+        "event_count": 312,
+        "event_head_sha256": "99596559cfba043dc88c409bdaa84231c89242b1786d7ecb0b7e8b235ee744cd",
+        "materialization_attempted": false,
+        "missing_commitments": [],
+        "one_shot_state_consumed": false,
+        "preseal_id": "phase9a-preseal-v3",
+        "signature_verified": true,
+        "signer_identity": "d70ecdb93256317342bc8f8fae6b2ccd3f0cbc7d6d2e11038e78cf77c739f1fd",
+        "study_version": "pead-study-v3",
+        "unlock_attempted": false
+      },
+      "protected_utility": -0.17293545039757857,
+      "seed": 101,
+      "selection_partition": "development_selection",
+      "selection_rows": 33450
+    },
+    {
+      "configuration": {
+        "l2_regularization": 0.0,
+        "learning_rate": 0.1,
+        "max_iter": 500,
+        "max_leaf_nodes": 31
+      },
+      "configuration_index": 14,
+      "diagnostics": {
+        "early_stopped": true,
+        "iterations": 22,
+        "minimum_improvement": 0.001,
+        "patience": 20
+      },
+      "elapsed_seconds": 3.160762600004091,
+      "fit_partition": "development_fit",
+      "fit_rows": 100350,
+      "method_id": "P08-TABULAR-gbdt",
+      "phase9a_commitment": {
+        "allocation_sha256": "30171d4be8726c39e69ed4505b15f0a811b6c100408fdc8e193252c22c13fc8d",
+        "commitment_sha256": "39e9202b07b4038571463a5b1c8ae0b5b15ac1e6989a7a57d29dd73385731397",
+        "consumer_invented_values": [],
+        "decryption_attempted": false,
+        "event_count": 312,
+        "event_head_sha256": "99596559cfba043dc88c409bdaa84231c89242b1786d7ecb0b7e8b235ee744cd",
+        "materialization_attempted": false,
+        "missing_commitments": [],
+        "one_shot_state_consumed": false,
+        "preseal_id": "phase9a-preseal-v3",
+        "signature_verified": true,
+        "signer_identity": "d70ecdb93256317342bc8f8fae6b2ccd3f0cbc7d6d2e11038e78cf77c739f1fd",
+        "study_version": "pead-study-v3",
+        "unlock_attempted": false
+      },
+      "protected_utility": -0.17293545039757857,
+      "seed": 211,
+      "selection_partition": "development_selection",
+      "selection_rows": 33450
+    },
+    {
+      "configuration": {
+        "l2_regularization": 0.0,
+        "learning_rate": 0.1,
+        "max_iter": 500,
+        "max_leaf_nodes": 31
+      },
+      "configuration_index": 14,
+      "diagnostics": {
+        "early_stopped": true,
+        "iterations": 22,
+        "minimum_improvement": 0.001,
+        "patience": 20
+      },
+      "elapsed_seconds": 3.2006541000009747,
+      "fit_partition": "development_fit",
+      "fit_rows": 100350,
+      "method_id": "P08-TABULAR-gbdt",
+      "phase9a_commitment": {
+        "allocation_sha256": "30171d4be8726c39e69ed4505b15f0a811b6c100408fdc8e193252c22c13fc8d",
+        "commitment_sha256": "39e9202b07b4038571463a5b1c8ae0b5b15ac1e6989a7a57d29dd73385731397",
+        "consumer_invented_values": [],
+        "decryption_attempted": false,
+        "event_count": 312,
+        "event_head_sha256": "99596559cfba043dc88c409bdaa84231c89242b1786d7ecb0b7e8b235ee744cd",
+        "materialization_attempted": false,
+        "missing_commitments": [],
+        "one_shot_state_consumed": false,
+        "preseal_id": "phase9a-preseal-v3",
+        "signature_verified": true,
+        "signer_identity": "d70ecdb93256317342bc8f8fae6b2ccd3f0cbc7d6d2e11038e78cf77c739f1fd",
+        "study_version": "pead-study-v3",
+        "unlock_attempted": false
+      },
+      "protected_utility": -0.17293545039757857,
+      "seed": 307,
+      "selection_partition": "development_selection",
+      "selection_rows": 33450
+    },
+    {
+      "configuration": {
+        "l2_regularization": 1.0,
+        "learning_rate": 0.1,
+        "max_iter": 500,
+        "max_leaf_nodes": 31
+      },
+      "configuration_index": 15,
+      "diagnostics": {
+        "early_stopped": true,
+        "iterations": 22,
+        "minimum_improvement": 0.001,
+        "patience": 20
+      },
+      "elapsed_seconds": 3.148600599997735,
+      "fit_partition": "development_fit",
+      "fit_rows": 100350,
+      "method_id": "P08-TABULAR-gbdt",
+      "phase9a_commitment": {
+        "allocation_sha256": "30171d4be8726c39e69ed4505b15f0a811b6c100408fdc8e193252c22c13fc8d",
+        "commitment_sha256": "39e9202b07b4038571463a5b1c8ae0b5b15ac1e6989a7a57d29dd73385731397",
+        "consumer_invented_values": [],
+        "decryption_attempted": false,
+        "event_count": 312,
+        "event_head_sha256": "99596559cfba043dc88c409bdaa84231c89242b1786d7ecb0b7e8b235ee744cd",
+        "materialization_attempted": false,
+        "missing_commitments": [],
+        "one_shot_state_consumed": false,
+        "preseal_id": "phase9a-preseal-v3",
+        "signature_verified": true,
+        "signer_identity": "d70ecdb93256317342bc8f8fae6b2ccd3f0cbc7d6d2e11038e78cf77c739f1fd",
+        "study_version": "pead-study-v3",
+        "unlock_attempted": false
+      },
+      "protected_utility": -0.1720990335420136,
+      "seed": 101,
+      "selection_partition": "development_selection",
+      "selection_rows": 33450
+    },
+    {
+      "configuration": {
+        "l2_regularization": 1.0,
+        "learning_rate": 0.1,
+        "max_iter": 500,
+        "max_leaf_nodes": 31
+      },
+      "configuration_index": 15,
+      "diagnostics": {
+        "early_stopped": true,
+        "iterations": 22,
+        "minimum_improvement": 0.001,
+        "patience": 20
+      },
+      "elapsed_seconds": 3.531913600003463,
+      "fit_partition": "development_fit",
+      "fit_rows": 100350,
+      "method_id": "P08-TABULAR-gbdt",
+      "phase9a_commitment": {
+        "allocation_sha256": "30171d4be8726c39e69ed4505b15f0a811b6c100408fdc8e193252c22c13fc8d",
+        "commitment_sha256": "39e9202b07b4038571463a5b1c8ae0b5b15ac1e6989a7a57d29dd73385731397",
+        "consumer_invented_values": [],
+        "decryption_attempted": false,
+        "event_count": 312,
+        "event_head_sha256": "99596559cfba043dc88c409bdaa84231c89242b1786d7ecb0b7e8b235ee744cd",
+        "materialization_attempted": false,
+        "missing_commitments": [],
+        "one_shot_state_consumed": false,
+        "preseal_id": "phase9a-preseal-v3",
+        "signature_verified": true,
+        "signer_identity": "d70ecdb93256317342bc8f8fae6b2ccd3f0cbc7d6d2e11038e78cf77c739f1fd",
+        "study_version": "pead-study-v3",
+        "unlock_attempted": false
+      },
+      "protected_utility": -0.1720990335420136,
+      "seed": 211,
+      "selection_partition": "development_selection",
+      "selection_rows": 33450
+    },
+    {
+      "configuration": {
+        "l2_regularization": 1.0,
+        "learning_rate": 0.1,
+        "max_iter": 500,
+        "max_leaf_nodes": 31
+      },
+      "configuration_index": 15,
+      "diagnostics": {
+        "early_stopped": true,
+        "iterations": 22,
+        "minimum_improvement": 0.001,
+        "patience": 20
+      },
+      "elapsed_seconds": 3.390574099998048,
+      "fit_partition": "development_fit",
+      "fit_rows": 100350,
+      "method_id": "P08-TABULAR-gbdt",
+      "phase9a_commitment": {
+        "allocation_sha256": "30171d4be8726c39e69ed4505b15f0a811b6c100408fdc8e193252c22c13fc8d",
+        "commitment_sha256": "39e9202b07b4038571463a5b1c8ae0b5b15ac1e6989a7a57d29dd73385731397",
+        "consumer_invented_values": [],
+        "decryption_attempted": false,
+        "event_count": 312,
+        "event_head_sha256": "99596559cfba043dc88c409bdaa84231c89242b1786d7ecb0b7e8b235ee744cd",
+        "materialization_attempted": false,
+        "missing_commitments": [],
+        "one_shot_state_consumed": false,
+        "preseal_id": "phase9a-preseal-v3",
+        "signature_verified": true,
+        "signer_identity": "d70ecdb93256317342bc8f8fae6b2ccd3f0cbc7d6d2e11038e78cf77c739f1fd",
+        "study_version": "pead-study-v3",
+        "unlock_attempted": false
+      },
+      "protected_utility": -0.1720990335420136,
+      "seed": 307,
+      "selection_partition": "development_selection",
+      "selection_rows": 33450
+    }
+  ],
+  "method_id": "P08-TABULAR-gbdt",
+  "operating_point": {
+    "public_validation_used": false,
+    "selected": {
+      "accept_threshold": 0.4,
+      "metrics": {
+        "accuracy": 0.3537854323645497,
+        "coverage": 0.0,
+        "escalation_rate": 1.0,
+        "false_rejection_rate": 0.0,
+        "forced_certainty_error": 0.0,
+        "opportunity_count": 16722,
+        "protected_utility": 0.10378543236454968,
+        "trace_completeness": 1.0,
+        "unsafe_acceptance_rate": 0.0
+      },
+      "objective": [
+        -0.0,
+        -0.0,
+        -1.0,
+        -0.8
+      ],
+      "operating_point_id": "a0.40-r0.40",
+      "reject_threshold": 0.4
+    },
+    "selection_partition": "calibration_policy",
+    "sensitivity_panel": [
+      {
+        "accept_threshold": 0.4,
+        "metrics": {
+          "accuracy": 0.3537854323645497,
+          "coverage": 0.0,
+          "escalation_rate": 1.0,
+          "false_rejection_rate": 0.0,
+          "forced_certainty_error": 0.0,
+          "opportunity_count": 16722,
+          "protected_utility": 0.10378543236454968,
+          "trace_completeness": 1.0,
+          "unsafe_acceptance_rate": 0.0
+        },
+        "objective": [
+          -0.0,
+          -0.0,
+          -1.0,
+          -0.8
+        ],
+        "operating_point_id": "a0.40-r0.40",
+        "reject_threshold": 0.4
+      },
+      {
+        "accept_threshold": 0.4,
+        "metrics": {
+          "accuracy": 0.3537854323645497,
+          "coverage": 0.0,
+          "escalation_rate": 1.0,
+          "false_rejection_rate": 0.0,
+          "forced_certainty_error": 0.0,
+          "opportunity_count": 16722,
+          "protected_utility": 0.10378543236454968,
+          "trace_completeness": 1.0,
+          "unsafe_acceptance_rate": 0.0
+        },
+        "objective": [
+          -0.0,
+          -0.0,
+          -1.0,
+          -0.9
+        ],
+        "operating_point_id": "a0.40-r0.50",
+        "reject_threshold": 0.5
+      },
+      {
+        "accept_threshold": 0.4,
+        "metrics": {
+          "accuracy": 0.3537854323645497,
+          "coverage": 0.0,
+          "escalation_rate": 1.0,
+          "false_rejection_rate": 0.0,
+          "forced_certainty_error": 0.0,
+          "opportunity_count": 16722,
+          "protected_utility": 0.10378543236454968,
+          "trace_completeness": 1.0,
+          "unsafe_acceptance_rate": 0.0
+        },
+        "objective": [
+          -0.0,
+          -0.0,
+          -1.0,
+          -1.0
+        ],
+        "operating_point_id": "a0.40-r0.60",
+        "reject_threshold": 0.6
+      },
+      {
+        "accept_threshold": 0.4,
+        "metrics": {
+          "accuracy": 0.3537854323645497,
+          "coverage": 0.0,
+          "escalation_rate": 1.0,
+          "false_rejection_rate": 0.0,
+          "forced_certainty_error": 0.0,
+          "opportunity_count": 16722,
+          "protected_utility": 0.10378543236454968,
+          "trace_completeness": 1.0,
+          "unsafe_acceptance_rate": 0.0
+        },
+        "objective": [
+          -0.0,
+          -0.0,
+          -1.0,
+          -1.1
+        ],
+        "operating_point_id": "a0.40-r0.70",
+        "reject_threshold": 0.7
+      },
+      {
+        "accept_threshold": 0.4,
+        "metrics": {
+          "accuracy": 0.3537854323645497,
+          "coverage": 0.0,
+          "escalation_rate": 1.0,
+          "false_rejection_rate": 0.0,
+          "forced_certainty_error": 0.0,
+          "opportunity_count": 16722,
+          "protected_utility": 0.10378543236454968,
+          "trace_completeness": 1.0,
+          "unsafe_acceptance_rate": 0.0
+        },
+        "objective": [
+          -0.0,
+          -0.0,
+          -1.0,
+          -1.2000000000000002
+        ],
+        "operating_point_id": "a0.40-r0.80",
+        "reject_threshold": 0.8
+      },
+      {
+        "accept_threshold": 0.5,
+        "metrics": {
+          "accuracy": 0.3537854323645497,
+          "coverage": 0.0,
+          "escalation_rate": 1.0,
+          "false_rejection_rate": 0.0,
+          "forced_certainty_error": 0.0,
+          "opportunity_count": 16722,
+          "protected_utility": 0.10378543236454968,
+          "trace_completeness": 1.0,
+          "unsafe_acceptance_rate": 0.0
+        },
+        "objective": [
+          -0.0,
+          -0.0,
+          -1.0,
+          -0.9
+        ],
+        "operating_point_id": "a0.50-r0.40",
+        "reject_threshold": 0.4
+      },
+      {
+        "accept_threshold": 0.5,
+        "metrics": {
+          "accuracy": 0.3537854323645497,
+          "coverage": 0.0,
+          "escalation_rate": 1.0,
+          "false_rejection_rate": 0.0,
+          "forced_certainty_error": 0.0,
+          "opportunity_count": 16722,
+          "protected_utility": 0.10378543236454968,
+          "trace_completeness": 1.0,
+          "unsafe_acceptance_rate": 0.0
+        },
+        "objective": [
+          -0.0,
+          -0.0,
+          -1.0,
+          -1.0
+        ],
+        "operating_point_id": "a0.50-r0.50",
+        "reject_threshold": 0.5
+      },
+      {
+        "accept_threshold": 0.5,
+        "metrics": {
+          "accuracy": 0.3537854323645497,
+          "coverage": 0.0,
+          "escalation_rate": 1.0,
+          "false_rejection_rate": 0.0,
+          "forced_certainty_error": 0.0,
+          "opportunity_count": 16722,
+          "protected_utility": 0.10378543236454968,
+          "trace_completeness": 1.0,
+          "unsafe_acceptance_rate": 0.0
+        },
+        "objective": [
+          -0.0,
+          -0.0,
+          -1.0,
+          -1.1
+        ],
+        "operating_point_id": "a0.50-r0.60",
+        "reject_threshold": 0.6
+      },
+      {
+        "accept_threshold": 0.5,
+        "metrics": {
+          "accuracy": 0.3537854323645497,
+          "coverage": 0.0,
+          "escalation_rate": 1.0,
+          "false_rejection_rate": 0.0,
+          "forced_certainty_error": 0.0,
+          "opportunity_count": 16722,
+          "protected_utility": 0.10378543236454968,
+          "trace_completeness": 1.0,
+          "unsafe_acceptance_rate": 0.0
+        },
+        "objective": [
+          -0.0,
+          -0.0,
+          -1.0,
+          -1.2
+        ],
+        "operating_point_id": "a0.50-r0.70",
+        "reject_threshold": 0.7
+      },
+      {
+        "accept_threshold": 0.5,
+        "metrics": {
+          "accuracy": 0.3537854323645497,
+          "coverage": 0.0,
+          "escalation_rate": 1.0,
+          "false_rejection_rate": 0.0,
+          "forced_certainty_error": 0.0,
+          "opportunity_count": 16722,
+          "protected_utility": 0.10378543236454968,
+          "trace_completeness": 1.0,
+          "unsafe_acceptance_rate": 0.0
+        },
+        "objective": [
+          -0.0,
+          -0.0,
+          -1.0,
+          -1.3
+        ],
+        "operating_point_id": "a0.50-r0.80",
+        "reject_threshold": 0.8
+      },
+      {
+        "accept_threshold": 0.6,
+        "metrics": {
+          "accuracy": 0.3537854323645497,
+          "coverage": 0.0,
+          "escalation_rate": 1.0,
+          "false_rejection_rate": 0.0,
+          "forced_certainty_error": 0.0,
+          "opportunity_count": 16722,
+          "protected_utility": 0.10378543236454968,
+          "trace_completeness": 1.0,
+          "unsafe_acceptance_rate": 0.0
+        },
+        "objective": [
+          -0.0,
+          -0.0,
+          -1.0,
+          -1.0
+        ],
+        "operating_point_id": "a0.60-r0.40",
+        "reject_threshold": 0.4
+      },
+      {
+        "accept_threshold": 0.6,
+        "metrics": {
+          "accuracy": 0.3537854323645497,
+          "coverage": 0.0,
+          "escalation_rate": 1.0,
+          "false_rejection_rate": 0.0,
+          "forced_certainty_error": 0.0,
+          "opportunity_count": 16722,
+          "protected_utility": 0.10378543236454968,
+          "trace_completeness": 1.0,
+          "unsafe_acceptance_rate": 0.0
+        },
+        "objective": [
+          -0.0,
+          -0.0,
+          -1.0,
+          -1.1
+        ],
+        "operating_point_id": "a0.60-r0.50",
+        "reject_threshold": 0.5
+      },
+      {
+        "accept_threshold": 0.6,
+        "metrics": {
+          "accuracy": 0.3537854323645497,
+          "coverage": 0.0,
+          "escalation_rate": 1.0,
+          "false_rejection_rate": 0.0,
+          "forced_certainty_error": 0.0,
+          "opportunity_count": 16722,
+          "protected_utility": 0.10378543236454968,
+          "trace_completeness": 1.0,
+          "unsafe_acceptance_rate": 0.0
+        },
+        "objective": [
+          -0.0,
+          -0.0,
+          -1.0,
+          -1.2
+        ],
+        "operating_point_id": "a0.60-r0.60",
+        "reject_threshold": 0.6
+      },
+      {
+        "accept_threshold": 0.6,
+        "metrics": {
+          "accuracy": 0.3537854323645497,
+          "coverage": 0.0,
+          "escalation_rate": 1.0,
+          "false_rejection_rate": 0.0,
+          "forced_certainty_error": 0.0,
+          "opportunity_count": 16722,
+          "protected_utility": 0.10378543236454968,
+          "trace_completeness": 1.0,
+          "unsafe_acceptance_rate": 0.0
+        },
+        "objective": [
+          -0.0,
+          -0.0,
+          -1.0,
+          -1.2999999999999998
+        ],
+        "operating_point_id": "a0.60-r0.70",
+        "reject_threshold": 0.7
+      },
+      {
+        "accept_threshold": 0.6,
+        "metrics": {
+          "accuracy": 0.3537854323645497,
+          "coverage": 0.0,
+          "escalation_rate": 1.0,
+          "false_rejection_rate": 0.0,
+          "forced_certainty_error": 0.0,
+          "opportunity_count": 16722,
+          "protected_utility": 0.10378543236454968,
+          "trace_completeness": 1.0,
+          "unsafe_acceptance_rate": 0.0
+        },
+        "objective": [
+          -0.0,
+          -0.0,
+          -1.0,
+          -1.4
+        ],
+        "operating_point_id": "a0.60-r0.80",
+        "reject_threshold": 0.8
+      },
+      {
+        "accept_threshold": 0.7,
+        "metrics": {
+          "accuracy": 0.3537854323645497,
+          "coverage": 0.0,
+          "escalation_rate": 1.0,
+          "false_rejection_rate": 0.0,
+          "forced_certainty_error": 0.0,
+          "opportunity_count": 16722,
+          "protected_utility": 0.10378543236454968,
+          "trace_completeness": 1.0,
+          "unsafe_acceptance_rate": 0.0
+        },
+        "objective": [
+          -0.0,
+          -0.0,
+          -1.0,
+          -1.1
+        ],
+        "operating_point_id": "a0.70-r0.40",
+        "reject_threshold": 0.4
+      },
+      {
+        "accept_threshold": 0.7,
+        "metrics": {
+          "accuracy": 0.3537854323645497,
+          "coverage": 0.0,
+          "escalation_rate": 1.0,
+          "false_rejection_rate": 0.0,
+          "forced_certainty_error": 0.0,
+          "opportunity_count": 16722,
+          "protected_utility": 0.10378543236454968,
+          "trace_completeness": 1.0,
+          "unsafe_acceptance_rate": 0.0
+        },
+        "objective": [
+          -0.0,
+          -0.0,
+          -1.0,
+          -1.2
+        ],
+        "operating_point_id": "a0.70-r0.50",
+        "reject_threshold": 0.5
+      },
+      {
+        "accept_threshold": 0.7,
+        "metrics": {
+          "accuracy": 0.3537854323645497,
+          "coverage": 0.0,
+          "escalation_rate": 1.0,
+          "false_rejection_rate": 0.0,
+          "forced_certainty_error": 0.0,
+          "opportunity_count": 16722,
+          "protected_utility": 0.10378543236454968,
+          "trace_completeness": 1.0,
+          "unsafe_acceptance_rate": 0.0
+        },
+        "objective": [
+          -0.0,
+          -0.0,
+          -1.0,
+          -1.2999999999999998
+        ],
+        "operating_point_id": "a0.70-r0.60",
+        "reject_threshold": 0.6
+      },
+      {
+        "accept_threshold": 0.7,
+        "metrics": {
+          "accuracy": 0.3537854323645497,
+          "coverage": 0.0,
+          "escalation_rate": 1.0,
+          "false_rejection_rate": 0.0,
+          "forced_certainty_error": 0.0,
+          "opportunity_count": 16722,
+          "protected_utility": 0.10378543236454968,
+          "trace_completeness": 1.0,
+          "unsafe_acceptance_rate": 0.0
+        },
+        "objective": [
+          -0.0,
+          -0.0,
+          -1.0,
+          -1.4
+        ],
+        "operating_point_id": "a0.70-r0.70",
+        "reject_threshold": 0.7
+      },
+      {
+        "accept_threshold": 0.7,
+        "metrics": {
+          "accuracy": 0.3537854323645497,
+          "coverage": 0.0,
+          "escalation_rate": 1.0,
+          "false_rejection_rate": 0.0,
+          "forced_certainty_error": 0.0,
+          "opportunity_count": 16722,
+          "protected_utility": 0.10378543236454968,
+          "trace_completeness": 1.0,
+          "unsafe_acceptance_rate": 0.0
+        },
+        "objective": [
+          -0.0,
+          -0.0,
+          -1.0,
+          -1.5
+        ],
+        "operating_point_id": "a0.70-r0.80",
+        "reject_threshold": 0.8
+      },
+      {
+        "accept_threshold": 0.8,
+        "metrics": {
+          "accuracy": 0.3537854323645497,
+          "coverage": 0.0,
+          "escalation_rate": 1.0,
+          "false_rejection_rate": 0.0,
+          "forced_certainty_error": 0.0,
+          "opportunity_count": 16722,
+          "protected_utility": 0.10378543236454968,
+          "trace_completeness": 1.0,
+          "unsafe_acceptance_rate": 0.0
+        },
+        "objective": [
+          -0.0,
+          -0.0,
+          -1.0,
+          -1.2000000000000002
+        ],
+        "operating_point_id": "a0.80-r0.40",
+        "reject_threshold": 0.4
+      },
+      {
+        "accept_threshold": 0.8,
+        "metrics": {
+          "accuracy": 0.3537854323645497,
+          "coverage": 0.0,
+          "escalation_rate": 1.0,
+          "false_rejection_rate": 0.0,
+          "forced_certainty_error": 0.0,
+          "opportunity_count": 16722,
+          "protected_utility": 0.10378543236454968,
+          "trace_completeness": 1.0,
+          "unsafe_acceptance_rate": 0.0
+        },
+        "objective": [
+          -0.0,
+          -0.0,
+          -1.0,
+          -1.3
+        ],
+        "operating_point_id": "a0.80-r0.50",
+        "reject_threshold": 0.5
+      },
+      {
+        "accept_threshold": 0.8,
+        "metrics": {
+          "accuracy": 0.3537854323645497,
+          "coverage": 0.0,
+          "escalation_rate": 1.0,
+          "false_rejection_rate": 0.0,
+          "forced_certainty_error": 0.0,
+          "opportunity_count": 16722,
+          "protected_utility": 0.10378543236454968,
+          "trace_completeness": 1.0,
+          "unsafe_acceptance_rate": 0.0
+        },
+        "objective": [
+          -0.0,
+          -0.0,
+          -1.0,
+          -1.4
+        ],
+        "operating_point_id": "a0.80-r0.60",
+        "reject_threshold": 0.6
+      },
+      {
+        "accept_threshold": 0.8,
+        "metrics": {
+          "accuracy": 0.3537854323645497,
+          "coverage": 0.0,
+          "escalation_rate": 1.0,
+          "false_rejection_rate": 0.0,
+          "forced_certainty_error": 0.0,
+          "opportunity_count": 16722,
+          "protected_utility": 0.10378543236454968,
+          "trace_completeness": 1.0,
+          "unsafe_acceptance_rate": 0.0
+        },
+        "objective": [
+          -0.0,
+          -0.0,
+          -1.0,
+          -1.5
+        ],
+        "operating_point_id": "a0.80-r0.70",
+        "reject_threshold": 0.7
+      },
+      {
+        "accept_threshold": 0.8,
+        "metrics": {
+          "accuracy": 0.3537854323645497,
+          "coverage": 0.0,
+          "escalation_rate": 1.0,
+          "false_rejection_rate": 0.0,
+          "forced_certainty_error": 0.0,
+          "opportunity_count": 16722,
+          "protected_utility": 0.10378543236454968,
+          "trace_completeness": 1.0,
+          "unsafe_acceptance_rate": 0.0
+        },
+        "objective": [
+          -0.0,
+          -0.0,
+          -1.0,
+          -1.6
+        ],
+        "operating_point_id": "a0.80-r0.80",
+        "reject_threshold": 0.8
+      }
+    ]
+  },
+  "phase9a_commitment": {
+    "allocation_sha256": "30171d4be8726c39e69ed4505b15f0a811b6c100408fdc8e193252c22c13fc8d",
+    "commitment_sha256": "39e9202b07b4038571463a5b1c8ae0b5b15ac1e6989a7a57d29dd73385731397",
+    "consumer_invented_values": [],
+    "decryption_attempted": false,
+    "event_count": 312,
+    "event_head_sha256": "99596559cfba043dc88c409bdaa84231c89242b1786d7ecb0b7e8b235ee744cd",
+    "materialization_attempted": false,
+    "missing_commitments": [],
+    "one_shot_state_consumed": false,
+    "preseal_id": "phase9a-preseal-v3",
+    "signature_verified": true,
+    "signer_identity": "d70ecdb93256317342bc8f8fae6b2ccd3f0cbc7d6d2e11038e78cf77c739f1fd",
+    "study_version": "pead-study-v3",
+    "unlock_attempted": false
+  },
+  "schema_version": "1.0",
+  "selection": {
+    "configuration": {
+      "l2_regularization": 0.0,
+      "learning_rate": 0.03,
+      "max_iter": 200,
+      "max_leaf_nodes": 15
+    },
+    "configuration_index": 0,
+    "mean_utility": 0.0826326843644978,
+    "parameters": 1914,
+    "resource_cost": 990.0,
+    "worst_seed_utility": 0.0826326843644978
+  },
+  "selection_correction": {
+    "all_original_trials_retained": true,
+    "corrected_configuration_index": 0,
+    "prior_configuration_index": 4,
+    "public_validation_used": false,
+    "reason": "parameter-count and deterministic registered-resource tie-break correction"
+  },
+  "status": "trained"
+}

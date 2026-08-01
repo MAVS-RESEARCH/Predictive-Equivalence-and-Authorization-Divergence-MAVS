@@ -1,0 +1,47 @@
+{
+  "atomic_groups": 16950,
+  "bank_id": "PEAD-OPEN-public_validation-v1",
+  "case_rows": 33450,
+  "domains": [
+    "D1",
+    "D2",
+    "D3",
+    "D4",
+    "D5",
+    "D6"
+  ],
+  "files": {
+    "banks/public_validation/case_ids.npy": "c48a8a4c999791e6b89c5793b3a64b5cd98bc0058f12708eb0b8a55667930b1c",
+    "banks/public_validation/domains.npy": "0bcc44924e03ab7d567bc882ae6a4993a5fa57cf29725d8353316aeb92e4680e",
+    "banks/public_validation/g_features.npy": "6b1c1a641b08b95eaee59a4e515eba927531ffffcb6c422fdd182ed6287bf22d",
+    "banks/public_validation/group_ids.npy": "4d981b084223502b1cd9fcbd7e8a9a5d40d0a61c635ad3091e49878fb3a66e25",
+    "banks/public_validation/labels.npy": "a3ca9faefb2ab059c84006d96df98eef2c018a569d8f89fd9b84d098ce356992",
+    "banks/public_validation/p_features.npy": "8baab4fee82724606908092d370d0a64fc58f11985b40687b7c2c9c65d656ee4",
+    "banks/public_validation/tracks.npy": "b1a679603610a06069653984f56c2a9c70a15170ede3a7f5cd0fe514eaf50779"
+  },
+  "group_atomic_keys": [
+    "pair",
+    "sequence",
+    "latent_world_family",
+    "surface_template_family",
+    "intervention_lineage",
+    "provenance_graph_lineage"
+  ],
+  "label_counts": {
+    "0": 11196,
+    "1": 10380,
+    "2": 11874
+  },
+  "opportunity_counts": {
+    "evidence": 2250,
+    "exact": 6000,
+    "near": 3000,
+    "reversal": 1500,
+    "scope": 4200
+  },
+  "opportunity_total": 16950,
+  "public_selection_prohibited": true,
+  "role": "public_validation",
+  "schema_version": "1.0",
+  "study_version": "pead-study-v3"
+}

@@ -1,0 +1,25 @@
+{
+  "budget_expanded": false,
+  "failure_class": "registered_resource_or_asset_unavailable",
+  "method_id": "G05-SEQUENCE",
+  "phase9a_commitment": {
+    "allocation_sha256": "30171d4be8726c39e69ed4505b15f0a811b6c100408fdc8e193252c22c13fc8d",
+    "commitment_sha256": "39e9202b07b4038571463a5b1c8ae0b5b15ac1e6989a7a57d29dd73385731397",
+    "consumer_invented_values": [],
+    "decryption_attempted": false,
+    "event_count": 312,
+    "event_head_sha256": "99596559cfba043dc88c409bdaa84231c89242b1786d7ecb0b7e8b235ee744cd",
+    "materialization_attempted": false,
+    "missing_commitments": [],
+    "one_shot_state_consumed": false,
+    "preseal_id": "phase9a-preseal-v3",
+    "signature_verified": true,
+    "signer_identity": "d70ecdb93256317342bc8f8fae6b2ccd3f0cbc7d6d2e11038e78cf77c739f1fd",
+    "study_version": "pead-study-v3",
+    "unlock_attempted": false
+  },
+  "reason": "registered Transformer GPU training required; no accelerator is available",
+  "schema_version": "1.0",
+  "status": "method_failure",
+  "substitution_attempted": false
+}
