@@ -2568,3 +2568,21 @@ Copy this block for every meaningful action:
 
 - **Compliance gaps:** None in the completed local implementation/audit. Git publication remains a procedural completion gate and is the next action, not yet claimed here.
 - **Next action:** inspect/stage only corrected Phase 9A-v3 scope, run `git diff --check`, compile/secret/plaintext scans, commit as `phase-9a: preseal corrected study-v3 holdouts`, push `pead-study-v3` without force, verify exact remote equality while `main` and the blocked tag remain unchanged, append the publication receipt, push that ledger-only close record, and stop. Phase 10 remains unauthorized.
+
+### PATH-0091 - Corrected Phase 9A-v3 Git publication and remote verification
+
+- **Timestamp:** 2026-08-02T00:20:51+05:00.
+- **Branch:** `pead-study-v3`; no merge to `main` occurred.
+- **Recovery lineage commit:** `2bdde7288ff7ad568272597a6ccf33f7fd2684ca` - `study-v3: record recovery lineage bootstrap`.
+- **Shared-contract commit:** `961432db6b34de2a30dbe83fc3502a04c0a10119` - `study-v3: establish shared custody materialization contract`.
+- **Corrected Phase 9A commit:** `6d7c209d2c14b72015bd5bebe579864f03da6abc` - `phase-9a: preseal corrected study-v3 holdouts`.
+- **Publication controls:** 29 intended corrected-Phase-9A files were staged. Cached `git diff --check` passed; compileall passed; staged secret-pattern scan found no credentials/private-key headers; exact custody key/seed/source boundary scan passed with zero findings; targeted tests were 10/10; complete regression was 199/199; final compliance had `compliance_gaps=[]`.
+- **Push:** `git push origin pead-study-v3` passed without force, reset, rebase, amend, squash, branch deletion, or history rewrite.
+- **Exact remote verification:** immediately after the implementation push, local `HEAD` and remote `refs/heads/pead-study-v3` both resolved to `6d7c209d2c14b72015bd5bebe579864f03da6abc`.
+- **Preserved main:** remote `refs/heads/main` remained `cea7ba439de271ab054d959ec7e1571d98315d80`; it was not modified or merged.
+- **Preserved blocked tag:** remote peeled `refs/tags/pead-study-v2-blocked^{}` remained `cea7ba439de271ab054d959ec7e1571d98315d80`; annotated tag object `deefc2c1ce54612bb2e80fe7be170452aa6fd8ef` remained present.
+- **Remote branch topology:** exactly `main` at blocked v2 and `pead-study-v3` at corrected Phase 9A were present. No branch was deleted.
+- **Post-publication audit:** all ten corrected Phase 9A audit gates were rerun from the published implementation and passed. The rerun produced no working-tree change; local/remote equality remained exact.
+- **Scientific boundary:** no real unlock, decryption, materialization, method execution, label reveal, scientific metric, or Phase 10/12 artifact occurred during publication or post-publication verification.
+- **Compliance gaps:** None.
+- **Next permitted action:** Phase 10 may begin only after a new explicit user instruction. This instruction stops after corrected Phase 9A publication and remote verification.
