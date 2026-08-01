@@ -1,0 +1,49 @@
+{
+  "canonicalization_id": "pead-canonical-json-v1",
+  "commitment_fields": [
+    "allocation_sha256",
+    "all_events_signed",
+    "bank_counts",
+    "canonicalization_id",
+    "ciphertext_index_sha256",
+    "content_plaintext_sha256",
+    "custody_event_count",
+    "custody_log_genesis_sha256",
+    "custody_log_head_sha256",
+    "custody_public_key_identity",
+    "design_commitment_sha256",
+    "label_plaintext_sha256",
+    "packages",
+    "phase9a_chronology_proof",
+    "preseal_id",
+    "schema_version",
+    "seed_selection_sha256",
+    "signature",
+    "signer_identity",
+    "study_version"
+  ],
+  "consumers": [
+    "src/pead/custody/consumer.py",
+    "src/pead/holdouts/commitment_verifier.py"
+  ],
+  "package_fields": [
+    "allocation_sha256",
+    "associated_data_sha256",
+    "canonicalization_id",
+    "ciphertext_byte_count",
+    "ciphertext_sha256",
+    "encryption_algorithm",
+    "nonce_b64",
+    "path",
+    "plaintext_sha256",
+    "record_count",
+    "role",
+    "schema_version",
+    "signed_inclusion"
+  ],
+  "producer": "src/pead/custody/producer.py",
+  "schema_module": "src/pead/custody/contract.py",
+  "schema_version": "3.0",
+  "shared_definition": true,
+  "study_version": "pead-study-v3"
+}

@@ -1,0 +1,779 @@
+{
+  "accepted_invalid_mutations": 0,
+  "artifact_hashes": {
+    "commitment_sha256": "1b4339277cfbd3448558fc00993a912a2a76eecf212894ef574c59c0738c5e67",
+    "event_log_sha256": "f3c01ffb854090a20559f8305ac9c78ec8d2a7325be25244e5bcaee406a61d2d",
+    "index_sha256": "1fe111f8d9d0af56b906d5cd18accaec00af94d76e7fd07eb73dea780b939baa"
+  },
+  "claim_bearing": false,
+  "consumer_invented_values": [],
+  "custody_events": {
+    "all_events_signed": true,
+    "event_count": 6,
+    "genesis_sha256": "d493b10f76e479ca6d3f40f1e6e8a16d28820f79f0234007c93784f6a0ad65c4",
+    "head_sha256": "e49b1a91462b81ffe95a2ade92d5b435aa709be9ab216600199d8c2006b2a8f1",
+    "status": "pass",
+    "unsigned_events": 0
+  },
+  "materialization": {
+    "content_sha256": "fa18c25da9fc066dc04846458748c39d8413546cf850cf063b6975914a0d75de",
+    "labels_evaluator_only": true,
+    "labels_sha256": "8ce509baf33b7b6b28fbf117d8be381d4f0186d8412297a17651577c67cc6416",
+    "materialization_count": 1,
+    "method_projection_fields": [
+      "case_id",
+      "visible"
+    ],
+    "method_projection_sha256": "5041eea78e631bf388177d6d5c22fc10f8951c353a79dca78bb8f7850d16c4f4",
+    "preflight": {
+      "allocation_sha256": "1773c8c2a1fa4ffa5a9c0e4b88965bbf8b3057077580296c0b5e7b2c6cdb865c",
+      "bank_counts": {
+        "bank:domains": 4,
+        "bank:final_blind": 4,
+        "bank:structural": 4,
+        "total_records": 12,
+        "track:evidence": 2,
+        "track:exact": 3,
+        "track:near": 3,
+        "track:reversal": 2,
+        "track:scope": 2
+      },
+      "consumer_invented_values": [],
+      "decryption_attempted": false,
+      "event_verification": {
+        "all_events_signed": true,
+        "event_count": 6,
+        "genesis_sha256": "d493b10f76e479ca6d3f40f1e6e8a16d28820f79f0234007c93784f6a0ad65c4",
+        "head_sha256": "e49b1a91462b81ffe95a2ade92d5b435aa709be9ab216600199d8c2006b2a8f1",
+        "status": "pass",
+        "unsigned_events": 0
+      },
+      "materialization_attempted": false,
+      "missing_commitments": [],
+      "one_shot_state_consumed": false,
+      "package_roles": [
+        "content",
+        "labels",
+        "seeds"
+      ],
+      "preseal_id": "synthetic-preseal-v3",
+      "status": "pass",
+      "study_version": "synthetic-study-v3",
+      "unlock_attempted": false
+    },
+    "seeds_sha256": "2dcb19061ae2613e17c2de4801e3b5f133fd41ae5d39130e7e27f35ea59af218",
+    "status": "pass"
+  },
+  "missing_commitments": [],
+  "mutation_denominator": 92,
+  "mutations": [
+    {
+      "error_type": "CustodyContractError",
+      "expected": "reject",
+      "mutation_id": "SYN-SECOND-MATERIALIZATION",
+      "observed": "reject",
+      "status": "pass"
+    },
+    {
+      "error_type": "CustodyContractError",
+      "expected": "reject",
+      "mutation_id": "TOP-MISSING-all_events_signed",
+      "observed": "reject",
+      "status": "pass"
+    },
+    {
+      "error_type": "CustodyContractError",
+      "expected": "reject",
+      "mutation_id": "TOP-MISSING-allocation_sha256",
+      "observed": "reject",
+      "status": "pass"
+    },
+    {
+      "error_type": "CustodyContractError",
+      "expected": "reject",
+      "mutation_id": "TOP-MISSING-bank_counts",
+      "observed": "reject",
+      "status": "pass"
+    },
+    {
+      "error_type": "CustodyContractError",
+      "expected": "reject",
+      "mutation_id": "TOP-MISSING-canonicalization_id",
+      "observed": "reject",
+      "status": "pass"
+    },
+    {
+      "error_type": "CustodyContractError",
+      "expected": "reject",
+      "mutation_id": "TOP-MISSING-ciphertext_index_sha256",
+      "observed": "reject",
+      "status": "pass"
+    },
+    {
+      "error_type": "CustodyContractError",
+      "expected": "reject",
+      "mutation_id": "TOP-MISSING-content_plaintext_sha256",
+      "observed": "reject",
+      "status": "pass"
+    },
+    {
+      "error_type": "CustodyContractError",
+      "expected": "reject",
+      "mutation_id": "TOP-MISSING-custody_event_count",
+      "observed": "reject",
+      "status": "pass"
+    },
+    {
+      "error_type": "CustodyContractError",
+      "expected": "reject",
+      "mutation_id": "TOP-MISSING-custody_log_genesis_sha256",
+      "observed": "reject",
+      "status": "pass"
+    },
+    {
+      "error_type": "CustodyContractError",
+      "expected": "reject",
+      "mutation_id": "TOP-MISSING-custody_log_head_sha256",
+      "observed": "reject",
+      "status": "pass"
+    },
+    {
+      "error_type": "CustodyContractError",
+      "expected": "reject",
+      "mutation_id": "TOP-MISSING-custody_public_key_identity",
+      "observed": "reject",
+      "status": "pass"
+    },
+    {
+      "error_type": "CustodyContractError",
+      "expected": "reject",
+      "mutation_id": "TOP-MISSING-design_commitment_sha256",
+      "observed": "reject",
+      "status": "pass"
+    },
+    {
+      "error_type": "CustodyContractError",
+      "expected": "reject",
+      "mutation_id": "TOP-MISSING-label_plaintext_sha256",
+      "observed": "reject",
+      "status": "pass"
+    },
+    {
+      "error_type": "CustodyContractError",
+      "expected": "reject",
+      "mutation_id": "TOP-MISSING-packages",
+      "observed": "reject",
+      "status": "pass"
+    },
+    {
+      "error_type": "CustodyContractError",
+      "expected": "reject",
+      "mutation_id": "TOP-MISSING-phase9a_chronology_proof",
+      "observed": "reject",
+      "status": "pass"
+    },
+    {
+      "error_type": "CustodyContractError",
+      "expected": "reject",
+      "mutation_id": "TOP-MISSING-preseal_id",
+      "observed": "reject",
+      "status": "pass"
+    },
+    {
+      "error_type": "CustodyContractError",
+      "expected": "reject",
+      "mutation_id": "TOP-MISSING-schema_version",
+      "observed": "reject",
+      "status": "pass"
+    },
+    {
+      "error_type": "CustodyContractError",
+      "expected": "reject",
+      "mutation_id": "TOP-MISSING-seed_selection_sha256",
+      "observed": "reject",
+      "status": "pass"
+    },
+    {
+      "error_type": "CustodyContractError",
+      "expected": "reject",
+      "mutation_id": "TOP-MISSING-signature",
+      "observed": "reject",
+      "status": "pass"
+    },
+    {
+      "error_type": "CustodyContractError",
+      "expected": "reject",
+      "mutation_id": "TOP-MISSING-signer_identity",
+      "observed": "reject",
+      "status": "pass"
+    },
+    {
+      "error_type": "CustodyContractError",
+      "expected": "reject",
+      "mutation_id": "TOP-MISSING-study_version",
+      "observed": "reject",
+      "status": "pass"
+    },
+    {
+      "error_type": "CustodyContractError",
+      "expected": "reject",
+      "mutation_id": "TOP-UNKNOWN-FIELD",
+      "observed": "reject",
+      "status": "pass"
+    },
+    {
+      "error_type": "CustodyContractError",
+      "expected": "reject",
+      "mutation_id": "PACKAGE-CONTENT-MISSING-allocation_sha256",
+      "observed": "reject",
+      "status": "pass"
+    },
+    {
+      "error_type": "CustodyContractError",
+      "expected": "reject",
+      "mutation_id": "PACKAGE-CONTENT-MISSING-associated_data_sha256",
+      "observed": "reject",
+      "status": "pass"
+    },
+    {
+      "error_type": "CustodyContractError",
+      "expected": "reject",
+      "mutation_id": "PACKAGE-CONTENT-MISSING-canonicalization_id",
+      "observed": "reject",
+      "status": "pass"
+    },
+    {
+      "error_type": "CustodyContractError",
+      "expected": "reject",
+      "mutation_id": "PACKAGE-CONTENT-MISSING-ciphertext_byte_count",
+      "observed": "reject",
+      "status": "pass"
+    },
+    {
+      "error_type": "CustodyContractError",
+      "expected": "reject",
+      "mutation_id": "PACKAGE-CONTENT-MISSING-ciphertext_sha256",
+      "observed": "reject",
+      "status": "pass"
+    },
+    {
+      "error_type": "CustodyContractError",
+      "expected": "reject",
+      "mutation_id": "PACKAGE-CONTENT-MISSING-encryption_algorithm",
+      "observed": "reject",
+      "status": "pass"
+    },
+    {
+      "error_type": "CustodyContractError",
+      "expected": "reject",
+      "mutation_id": "PACKAGE-CONTENT-MISSING-nonce_b64",
+      "observed": "reject",
+      "status": "pass"
+    },
+    {
+      "error_type": "CustodyContractError",
+      "expected": "reject",
+      "mutation_id": "PACKAGE-CONTENT-MISSING-path",
+      "observed": "reject",
+      "status": "pass"
+    },
+    {
+      "error_type": "CustodyContractError",
+      "expected": "reject",
+      "mutation_id": "PACKAGE-CONTENT-MISSING-plaintext_sha256",
+      "observed": "reject",
+      "status": "pass"
+    },
+    {
+      "error_type": "CustodyContractError",
+      "expected": "reject",
+      "mutation_id": "PACKAGE-CONTENT-MISSING-record_count",
+      "observed": "reject",
+      "status": "pass"
+    },
+    {
+      "error_type": "CustodyContractError",
+      "expected": "reject",
+      "mutation_id": "PACKAGE-CONTENT-MISSING-role",
+      "observed": "reject",
+      "status": "pass"
+    },
+    {
+      "error_type": "CustodyContractError",
+      "expected": "reject",
+      "mutation_id": "PACKAGE-CONTENT-MISSING-schema_version",
+      "observed": "reject",
+      "status": "pass"
+    },
+    {
+      "error_type": "CustodyContractError",
+      "expected": "reject",
+      "mutation_id": "PACKAGE-CONTENT-MISSING-signed_inclusion",
+      "observed": "reject",
+      "status": "pass"
+    },
+    {
+      "error_type": "CustodyContractError",
+      "expected": "reject",
+      "mutation_id": "PACKAGE-LABELS-MISSING-allocation_sha256",
+      "observed": "reject",
+      "status": "pass"
+    },
+    {
+      "error_type": "CustodyContractError",
+      "expected": "reject",
+      "mutation_id": "PACKAGE-LABELS-MISSING-associated_data_sha256",
+      "observed": "reject",
+      "status": "pass"
+    },
+    {
+      "error_type": "CustodyContractError",
+      "expected": "reject",
+      "mutation_id": "PACKAGE-LABELS-MISSING-canonicalization_id",
+      "observed": "reject",
+      "status": "pass"
+    },
+    {
+      "error_type": "CustodyContractError",
+      "expected": "reject",
+      "mutation_id": "PACKAGE-LABELS-MISSING-ciphertext_byte_count",
+      "observed": "reject",
+      "status": "pass"
+    },
+    {
+      "error_type": "CustodyContractError",
+      "expected": "reject",
+      "mutation_id": "PACKAGE-LABELS-MISSING-ciphertext_sha256",
+      "observed": "reject",
+      "status": "pass"
+    },
+    {
+      "error_type": "CustodyContractError",
+      "expected": "reject",
+      "mutation_id": "PACKAGE-LABELS-MISSING-encryption_algorithm",
+      "observed": "reject",
+      "status": "pass"
+    },
+    {
+      "error_type": "CustodyContractError",
+      "expected": "reject",
+      "mutation_id": "PACKAGE-LABELS-MISSING-nonce_b64",
+      "observed": "reject",
+      "status": "pass"
+    },
+    {
+      "error_type": "CustodyContractError",
+      "expected": "reject",
+      "mutation_id": "PACKAGE-LABELS-MISSING-path",
+      "observed": "reject",
+      "status": "pass"
+    },
+    {
+      "error_type": "CustodyContractError",
+      "expected": "reject",
+      "mutation_id": "PACKAGE-LABELS-MISSING-plaintext_sha256",
+      "observed": "reject",
+      "status": "pass"
+    },
+    {
+      "error_type": "CustodyContractError",
+      "expected": "reject",
+      "mutation_id": "PACKAGE-LABELS-MISSING-record_count",
+      "observed": "reject",
+      "status": "pass"
+    },
+    {
+      "error_type": "CustodyContractError",
+      "expected": "reject",
+      "mutation_id": "PACKAGE-LABELS-MISSING-role",
+      "observed": "reject",
+      "status": "pass"
+    },
+    {
+      "error_type": "CustodyContractError",
+      "expected": "reject",
+      "mutation_id": "PACKAGE-LABELS-MISSING-schema_version",
+      "observed": "reject",
+      "status": "pass"
+    },
+    {
+      "error_type": "CustodyContractError",
+      "expected": "reject",
+      "mutation_id": "PACKAGE-LABELS-MISSING-signed_inclusion",
+      "observed": "reject",
+      "status": "pass"
+    },
+    {
+      "error_type": "CustodyContractError",
+      "expected": "reject",
+      "mutation_id": "PACKAGE-SEEDS-MISSING-allocation_sha256",
+      "observed": "reject",
+      "status": "pass"
+    },
+    {
+      "error_type": "CustodyContractError",
+      "expected": "reject",
+      "mutation_id": "PACKAGE-SEEDS-MISSING-associated_data_sha256",
+      "observed": "reject",
+      "status": "pass"
+    },
+    {
+      "error_type": "CustodyContractError",
+      "expected": "reject",
+      "mutation_id": "PACKAGE-SEEDS-MISSING-canonicalization_id",
+      "observed": "reject",
+      "status": "pass"
+    },
+    {
+      "error_type": "CustodyContractError",
+      "expected": "reject",
+      "mutation_id": "PACKAGE-SEEDS-MISSING-ciphertext_byte_count",
+      "observed": "reject",
+      "status": "pass"
+    },
+    {
+      "error_type": "CustodyContractError",
+      "expected": "reject",
+      "mutation_id": "PACKAGE-SEEDS-MISSING-ciphertext_sha256",
+      "observed": "reject",
+      "status": "pass"
+    },
+    {
+      "error_type": "CustodyContractError",
+      "expected": "reject",
+      "mutation_id": "PACKAGE-SEEDS-MISSING-encryption_algorithm",
+      "observed": "reject",
+      "status": "pass"
+    },
+    {
+      "error_type": "CustodyContractError",
+      "expected": "reject",
+      "mutation_id": "PACKAGE-SEEDS-MISSING-nonce_b64",
+      "observed": "reject",
+      "status": "pass"
+    },
+    {
+      "error_type": "CustodyContractError",
+      "expected": "reject",
+      "mutation_id": "PACKAGE-SEEDS-MISSING-path",
+      "observed": "reject",
+      "status": "pass"
+    },
+    {
+      "error_type": "CustodyContractError",
+      "expected": "reject",
+      "mutation_id": "PACKAGE-SEEDS-MISSING-plaintext_sha256",
+      "observed": "reject",
+      "status": "pass"
+    },
+    {
+      "error_type": "CustodyContractError",
+      "expected": "reject",
+      "mutation_id": "PACKAGE-SEEDS-MISSING-record_count",
+      "observed": "reject",
+      "status": "pass"
+    },
+    {
+      "error_type": "CustodyContractError",
+      "expected": "reject",
+      "mutation_id": "PACKAGE-SEEDS-MISSING-role",
+      "observed": "reject",
+      "status": "pass"
+    },
+    {
+      "error_type": "CustodyContractError",
+      "expected": "reject",
+      "mutation_id": "PACKAGE-SEEDS-MISSING-schema_version",
+      "observed": "reject",
+      "status": "pass"
+    },
+    {
+      "error_type": "CustodyContractError",
+      "expected": "reject",
+      "mutation_id": "PACKAGE-SEEDS-MISSING-signed_inclusion",
+      "observed": "reject",
+      "status": "pass"
+    },
+    {
+      "error_type": "CustodyContractError",
+      "expected": "reject",
+      "mutation_id": "PACKAGE-UNKNOWN-FIELD",
+      "observed": "reject",
+      "status": "pass"
+    },
+    {
+      "error_type": "CustodyContractError",
+      "expected": "reject",
+      "mutation_id": "PLAINTEXT-HASH",
+      "observed": "reject",
+      "status": "pass"
+    },
+    {
+      "error_type": "CustodyContractError",
+      "expected": "reject",
+      "mutation_id": "CIPHERTEXT-HASH",
+      "observed": "reject",
+      "status": "pass"
+    },
+    {
+      "error_type": "CustodyContractError",
+      "expected": "reject",
+      "mutation_id": "RECORD-COUNT-ZERO",
+      "observed": "reject",
+      "status": "pass"
+    },
+    {
+      "error_type": "CustodyContractError",
+      "expected": "reject",
+      "mutation_id": "RECORD-COUNT-NEGATIVE",
+      "observed": "reject",
+      "status": "pass"
+    },
+    {
+      "error_type": "CustodyContractError",
+      "expected": "reject",
+      "mutation_id": "RECORD-COUNT-DISAGREEMENT",
+      "observed": "reject",
+      "status": "pass"
+    },
+    {
+      "error_type": "CustodyContractError",
+      "expected": "reject",
+      "mutation_id": "BANK-COUNT-ZERO-TOTAL",
+      "observed": "reject",
+      "status": "pass"
+    },
+    {
+      "error_type": "CustodyContractError",
+      "expected": "reject",
+      "mutation_id": "BANK-COUNT-NEGATIVE",
+      "observed": "reject",
+      "status": "pass"
+    },
+    {
+      "error_type": "CustodyContractError",
+      "expected": "reject",
+      "mutation_id": "BANK-COUNT-DISAGREEMENT",
+      "observed": "reject",
+      "status": "pass"
+    },
+    {
+      "error_type": "CustodyContractError",
+      "expected": "reject",
+      "mutation_id": "ALLOCATION-BINDING",
+      "observed": "reject",
+      "status": "pass"
+    },
+    {
+      "error_type": "CustodyContractError",
+      "expected": "reject",
+      "mutation_id": "PACKAGE-ROLE-SUBSTITUTION",
+      "observed": "reject",
+      "status": "pass"
+    },
+    {
+      "error_type": "CustodyContractError",
+      "expected": "reject",
+      "mutation_id": "UNSUPPORTED-ENCRYPTION",
+      "observed": "reject",
+      "status": "pass"
+    },
+    {
+      "error_type": "CustodyContractError",
+      "expected": "reject",
+      "mutation_id": "NONCE-REUSE",
+      "observed": "reject",
+      "status": "pass"
+    },
+    {
+      "error_type": "CustodyContractError",
+      "expected": "reject",
+      "mutation_id": "PATH-TRAVERSAL",
+      "observed": "reject",
+      "status": "pass"
+    },
+    {
+      "error_type": "CustodyContractError",
+      "expected": "reject",
+      "mutation_id": "COMMITMENT-SIGNATURE",
+      "observed": "reject",
+      "status": "pass"
+    },
+    {
+      "error_type": "CustodyContractError",
+      "expected": "reject",
+      "mutation_id": "INDEX-SIGNATURE",
+      "observed": "reject",
+      "status": "pass"
+    },
+    {
+      "error_type": "CustodyContractError",
+      "expected": "reject",
+      "mutation_id": "PUBLIC-KEY-SUBSTITUTION",
+      "observed": "reject",
+      "status": "pass"
+    },
+    {
+      "error_type": "CustodyContractError",
+      "expected": "reject",
+      "mutation_id": "OLD-STUDY-IDENTITY",
+      "observed": "reject",
+      "status": "pass"
+    },
+    {
+      "error_type": "CustodyContractError",
+      "expected": "reject",
+      "mutation_id": "EVENT-HASH",
+      "observed": "reject",
+      "status": "pass"
+    },
+    {
+      "error_type": "CustodyContractError",
+      "expected": "reject",
+      "mutation_id": "EVENT-SIGNATURE",
+      "observed": "reject",
+      "status": "pass"
+    },
+    {
+      "error_type": "CustodyContractError",
+      "expected": "reject",
+      "mutation_id": "EVENT-PREVIOUS-HASH",
+      "observed": "reject",
+      "status": "pass"
+    },
+    {
+      "error_type": "CustodyContractError",
+      "expected": "reject",
+      "mutation_id": "EVENT-SEQUENCE",
+      "observed": "reject",
+      "status": "pass"
+    },
+    {
+      "error_type": "CustodyContractError",
+      "expected": "reject",
+      "mutation_id": "EVENT-REORDER",
+      "observed": "reject",
+      "status": "pass"
+    },
+    {
+      "error_type": "CustodyContractError",
+      "expected": "reject",
+      "mutation_id": "EVENT-OMISSION",
+      "observed": "reject",
+      "status": "pass"
+    },
+    {
+      "error_type": "CustodyContractError",
+      "expected": "reject",
+      "mutation_id": "EVENT-DUPLICATION",
+      "observed": "reject",
+      "status": "pass"
+    },
+    {
+      "error_type": "CustodyContractError",
+      "expected": "reject",
+      "mutation_id": "EVENT-DUPLICATE-IDENTITY",
+      "observed": "reject",
+      "status": "pass"
+    },
+    {
+      "error_type": "CustodyContractError",
+      "expected": "reject",
+      "mutation_id": "EVENT-UNSIGNED",
+      "observed": "reject",
+      "status": "pass"
+    },
+    {
+      "error_type": "CustodyContractError",
+      "expected": "reject",
+      "mutation_id": "EVENT-MIXED-STUDY",
+      "observed": "reject",
+      "status": "pass"
+    },
+    {
+      "error_type": "CustodyContractError",
+      "expected": "reject",
+      "mutation_id": "REUSED-KEY-IDENTITY",
+      "observed": "reject",
+      "status": "pass"
+    },
+    {
+      "error_type": "CustodyContractError",
+      "expected": "reject",
+      "mutation_id": "REUSED-HIDDEN-SEED-IDENTITY",
+      "observed": "reject",
+      "status": "pass"
+    },
+    {
+      "error_type": "CustodyContractError",
+      "expected": "reject",
+      "mutation_id": "CIPHERTEXT-BYTE",
+      "observed": "reject",
+      "status": "pass"
+    }
+  ],
+  "producer_consumer_preflight": {
+    "allocation_sha256": "1773c8c2a1fa4ffa5a9c0e4b88965bbf8b3057077580296c0b5e7b2c6cdb865c",
+    "bank_counts": {
+      "bank:domains": 4,
+      "bank:final_blind": 4,
+      "bank:structural": 4,
+      "total_records": 12,
+      "track:evidence": 2,
+      "track:exact": 3,
+      "track:near": 3,
+      "track:reversal": 2,
+      "track:scope": 2
+    },
+    "consumer_invented_values": [],
+    "decryption_attempted": false,
+    "event_verification": {
+      "all_events_signed": true,
+      "event_count": 6,
+      "genesis_sha256": "d493b10f76e479ca6d3f40f1e6e8a16d28820f79f0234007c93784f6a0ad65c4",
+      "head_sha256": "e49b1a91462b81ffe95a2ade92d5b435aa709be9ab216600199d8c2006b2a8f1",
+      "status": "pass",
+      "unsigned_events": 0
+    },
+    "materialization_attempted": false,
+    "missing_commitments": [],
+    "one_shot_state_consumed": false,
+    "package_roles": [
+      "content",
+      "labels",
+      "seeds"
+    ],
+    "preseal_id": "synthetic-preseal-v3",
+    "status": "pass",
+    "study_version": "synthetic-study-v3",
+    "unlock_attempted": false
+  },
+  "producer_values_required": [
+    "all_events_signed",
+    "allocation_sha256",
+    "bank_counts",
+    "canonicalization_id",
+    "ciphertext_index_sha256",
+    "content_plaintext_sha256",
+    "custody_event_count",
+    "custody_log_genesis_sha256",
+    "custody_log_head_sha256",
+    "custody_public_key_identity",
+    "design_commitment_sha256",
+    "label_plaintext_sha256",
+    "packages",
+    "phase9a_chronology_proof",
+    "preseal_id",
+    "schema_version",
+    "seed_selection_sha256",
+    "signature",
+    "signer_identity",
+    "study_version"
+  ],
+  "real_bank_touched": false,
+  "repeat_materializations_accepted": 0,
+  "schema_version": "1.0",
+  "status": "pass",
+  "study_version": "synthetic-study-v3",
+  "valid_materializations_accepted": 1
+}

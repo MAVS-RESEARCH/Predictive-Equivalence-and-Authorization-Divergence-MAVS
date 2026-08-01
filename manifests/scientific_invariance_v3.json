@@ -1,0 +1,84 @@
+{
+  "comparison": {
+    "candidate_lineage": "pead-study-v3",
+    "reference_commit": "cea7ba439de271ab054d959ec7e1571d98315d80",
+    "reference_lineage": "pead-study-v2",
+    "reference_preseal": "phase9a-preseal-v2",
+    "reference_preservation_tag": "pead-study-v2-blocked"
+  },
+  "intentionally_changed": [
+    "study_version",
+    "preseal_id",
+    "structural_seed_selection",
+    "domain_seed_selection",
+    "cross_product_seed_selection",
+    "AES-256-GCM encryption key",
+    "Ed25519 custody signing key",
+    "package nonces",
+    "ciphertexts",
+    "signatures",
+    "custody event identities",
+    "custody event signing from genesis",
+    "one-shot state",
+    "materialization commitment schema",
+    "producer-consumer compatibility infrastructure"
+  ],
+  "must_remain_semantically_identical": {
+    "categories": [
+      "mechanisms and compositions",
+      "policy logical forms",
+      "provenance and dependency topology families",
+      "scope interactions",
+      "intervention classes",
+      "nuisance families",
+      "D7 and D8 semantic designs",
+      "domain templates and distributions",
+      "feature mappings",
+      "ambiguity grammar and proof rules",
+      "distance rules",
+      "allocation quotas",
+      "authorization truth rules",
+      "method inventory",
+      "access profiles",
+      "metrics",
+      "claim boundaries"
+    ],
+    "reference_artifacts": {
+      "configs/holdouts/d7_clinical.yaml": "febd14599b56aad3a6127f868a7587fac8cedd0e6b439ea1a5370ce0face4087",
+      "configs/holdouts/d8_content.yaml": "ffb95460bf77193c23140a786a8a0047f0b3470cf76f80da3b0d8eef5229e315",
+      "configs/holdouts/graph_topologies.yaml": "98120f30f9e08d18be262506c2bcf79b36f87876b8a8ec3101989a3aa57e7de7",
+      "configs/holdouts/interventions.yaml": "fad35ad5e9ec46ed9638c4bed12e54ee78cbcbd7ae27cd183efc1ec830b836a9",
+      "configs/holdouts/mechanisms.yaml": "d350390dc3437dc3863f8cbe76025890514f8f94b1caf699792c370e9594f08b",
+      "configs/holdouts/nuisance.yaml": "53aa51d249da7bbece287bba5cb5d30c08fd702226977c78e33efe72ecdf75fd",
+      "configs/holdouts/policy_forms.yaml": "9717f7c08eace3aaaf9d5cd5002ec822fa2f99694e590936ee9224f9e37ded4a",
+      "configs/holdouts/scope_interactions.yaml": "cae3f3a6259b158accac7a20b52e074ce569ad383443f137f5a1c8d5437f5177",
+      "src/pead_holdout/__init__.py": "3d5dea730eaa87e42a01cec2453b09c70446a2c76baae46f6c93a2d76d18aa37",
+      "src/pead_holdout/allocator.py": "bc2bca7238f979d34b64fbc274dc1dbbfa9edd74a2594c195f708d361a6d648b",
+      "src/pead_holdout/ambiguity.py": "58b43e82c3e1cd67da402a221fe76da355f5ec6386649a2703bb5e61d8979bb4",
+      "src/pead_holdout/generator.py": "e51757f57e13387f7acc62b03c52944c61da8ff80545570167127d8841a2defd"
+    }
+  },
+  "permitted_operational_replacements": [
+    "src/pead_holdout/custody.py",
+    "src/pead_holdout/packager.py",
+    "preseal.py",
+    "phase11_verify.py"
+  ],
+  "prohibited_performance_inputs": [
+    "previous G03 result",
+    "previous A15 result",
+    "public-validation accuracy",
+    "public-validation UAR",
+    "public-validation coverage",
+    "method rankings",
+    "any previous method outcome"
+  ],
+  "schema_version": "1.0",
+  "scientific_config": "configs/study/pead_main_v1.yaml",
+  "scientific_config_sha256": "e4f05d64e413d9f325e0adcbcd553b4eae6945bb4fb58c01220fbac2e4a3b83a",
+  "seed_reference_intentionally_not_reused": {
+    "artifact": "configs/holdouts/seeds.yaml",
+    "reference_sha256": "5b158cdaf4f5f9903568e9af0107750804fd3cfa42511eb810958127790a3a83"
+  },
+  "status": "frozen_before-v3-phase9a"
+}

@@ -1,0 +1,34 @@
+{
+  "blocked_v2_head": "cea7ba439de271ab054d959ec7e1571d98315d80",
+  "boundary_scan": {
+    "custody_plaintext_paths": [],
+    "private_key_or_secret_paths": [],
+    "status": "pass",
+    "tracked_files": 458
+  },
+  "branch": "pead-study-v3",
+  "compliance_gaps": [],
+  "phase": "study-v3-bootstrap",
+  "phase10_started": false,
+  "phase9_anchor": "be093b5d2639deb2ff76ad96785c918b5a2a9b92",
+  "real_bank_touched": false,
+  "schema_version": "1.0",
+  "scientific_result_generated": false,
+  "shared_schema": {
+    "commitment_required_fields": 20,
+    "package_required_fields_per_role": 13,
+    "roles": 3,
+    "single_definition": true
+  },
+  "status": "pass",
+  "synthetic_rehearsal": {
+    "accepted_invalid_mutations": 0,
+    "consumer_invented_values": [],
+    "deterministic_reproduction": true,
+    "missing_commitments": [],
+    "mutation_denominator": 92,
+    "repeat_materializations_accepted": 0,
+    "status": "pass",
+    "valid_materializations_accepted": 1
+  }
+}

@@ -11,6 +11,7 @@ requires-python = ">=3.11,<3.14"
 license = {file = "LICENSE"}
 authors = [{name = "MAVS Research"}]
 dependencies = [
+  "cryptography==49.0.0",
   "numpy==2.3.4",
   "pgmpy==1.0.0",
   "psutil==7.0.0",
