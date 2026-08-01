@@ -2771,3 +2771,119 @@ Copy this block for every meaningful action:
 - **Compliance gaps:** None.
 - **Deviation:** None.
 - **Next action:** Commit and push this publication receipt on `main`, verify the receipt commit against the remote, rerun the installed Phase 10 audit without starting Phase 11, and stop.
+
+## Phase 11 - Method freeze, precommitment verification, and bank unlock
+
+### PATH-0103 - Phase 11 scope, implementation, and chronology
+
+- **Timestamp:** 2026-08-01T22:47:16+05:00.
+- **Phase:** 11.
+- **Status:** Blocked at the mandatory pre-unlock gate; Phase 11 is not declared finished and Phase 12 is not authorized.
+- **Change ID:** `P11-IMPLEMENT-001`.
+- **Authorized scope:** Phase 11 only. The implementation verifies Phase 9A commitments, freezes and signs the complete method state, verifies custody-only design bytes in place, checks materialization prerequisites, preserves encrypted labels, audits development contamination, and retains a fail-closed result. It does not train, tune, select, calibrate, decrypt, materialize, evaluate, score, or inspect a claim-bearing case.
+- **Source reconciliation:** Phase 11 lines 1090-1123 of `WorkPlan.md`, Section 5.13, `docs/blind_custody_protocol.md`, the signed Phase 9A commitment/index/allocation, the Phase 10 freeze candidate, and the MAVS Diagnostic Sciences context were reconciled before implementation. Diagnostic Sciences informed the strict separation of hidden truth, method-visible projections, trace identity, and negative-outcome retention. No substantive holdout design was inferred from that document.
+- **Chronology:** Phase 10 candidate `043805e8b57b4deb5ac469e2e6abeaf1ebb7a95ae305ab1588a4289cf4e830ca` contained 404 files and was verified byte-for-byte before the final method freeze. Phase 11 added only operational freeze, custody-verification, unlock-preflight, audit, test, and blocked-status artifacts. The final signed freeze contains 420 repository files plus the signed hash and byte count of the external custody verifier.
+- **Freeze:** `manifests/freeze_manifest.json` is a valid Ed25519-signed final method freeze with ID `freeze-01685e173019cece2e83`. It freezes code, configs, the actual environment, truth engines, projections, metrics, audits, methods, checkpoints, hyperparameters, prompts, operating points, and report templates. Its SHA-256 is `35bb0010f90ccee93dbde2b6242cc61aed2034fb9389cc1045b0ea48ac6689e0`.
+- **Signing-key boundary:** the Phase 11 private signing key was generated and retained in an isolated authority directory outside the repository. The repository contains only the public key and signature. No custody encryption key or private signing key was copied, printed, or committed.
+- **Custody operator:** a non-scientific Phase 11 verifier was created outside the repository before freeze. Its signed freeze identity is SHA-256 `9970a2a9060d2a5afafd259bfb1ac0b088235c2b3e71bca8a48af92d634820c5`, 5,337 bytes. It hashes committed files in place, emits no scientific content, validates the existing hash chain, and appends a signed access event. It does not generate, alter, decrypt, or materialize a bank.
+- **Phase 9A byte verification:** the custody operator rehashed 15/15 committed mechanism, grammar, topology, interaction, intervention, nuisance, D7/D8 template/config, seed-list, generator, allocator/distance, ambiguity, and custody artifacts. Mismatches: 0. Public signatures and all three ciphertext byte identities also passed. The Phase 9A commitment remained SHA-256 `52e29ffcf1c102356539ad058c40d9e387db9d92907e38c5039375798d3196e6`.
+- **Logged access:** the in-place verification appended custody event sequence 303, SHA-256 `26a557a6bf065d2eed01aaf127b62c54e796e2e2ca8be6da1ada2394d4cd81a7`. Its Ed25519 signature was verified against the Phase 9A public key by the development-side preflight. The prior 302 events have a valid 302/302 event-hash audit and 301/301 link audit, but 0/302 carry signatures.
+- **One-shot state:** `unlock_attempted=false`, `decryption_attempted=false`, `materialization_attempted=false`, and `one_shot_state_consumed=false`. The Phase 9A ciphertext, hidden keys, and labels were not opened. There is no repeat unlock or rematerialization.
+- **Scientific holdout mutation:** 0. The 15 custody design artifacts match their signed Phase 9A hashes. The three `banks/sealed/*/STATUS.json` records are non-substantive, explicit `not-materialized` state markers; they contain no case facts, labels, seeds, templates, generators, or allocation realizations.
+- **Result hygiene:** no earlier Phase 11 result lineage existed. The only Phase 11 audit lineage is `results/audits/freeze-01685e173019cece2e83/`. Phase 10 evidence was retained because it is an input to the final freeze, not a stale Phase 11 result.
+- **Files implemented:** `src/pead/phase11/{__init__,contracts,freeze,unlock,audit,test_runner}.py`; `scripts/{freeze_study,unlock_blind_bank,audit_phase11,run_phase11_tests}.py`; Phase 11 unit/integration/stress tests; three sealed-bank status records; the external custody verifier; `manifests/freeze_manifest.json`; `manifests/blind_bank_manifest.json`; and the Phase 11 audit/test receipts.
+- **Model/training applicability:** Phase 11 trained no model and produced no benchmark performance. All Phase 10 method/checkpoint/operating-point bytes were frozen without tuning. The Phase 11 synthetic contract fixtures are entirely separate from training, calibration, public validation, and sealed scientific cases. They test security and integrity failures only, so they cannot overfit a benchmark result.
+- **Deviation:** The requested successful unlock/materialization could not be performed without violating the WorkPlan. The exact blockers are retained below; no replacement bank or post-precommit scientific design was created.
+
+### PATH-0104 - Release-blocking precommitment findings and gate audit
+
+- **Timestamp:** 2026-08-01T22:47:16+05:00.
+- **Phase:** 11.
+- **Status:** Blocked; nonzero audit verdict retained.
+- **Change ID:** `P11-BLOCK-001`.
+- **Materialization-commitment blocker:** the signed Phase 9A encrypted-package index does not commit `allocation_sha256`, `bank_counts`, `content_plaintext_sha256`, `label_plaintext_sha256`, or `seed_selection_sha256` at index level. Each of the content, label, and seed package entries also omits `allocation_sha256`, `plaintext_sha256`, and `record_count`. These are 14 missing signed fields across the index and three packages.
+- **Why it blocks:** without precommitted plaintext identities, record counts, per-bank counts, and an allocation binding, Phase 11 cannot prove that decrypted objects are the already-designed case bank, cannot cross-check content/label cardinality, cannot prove allocation equality, and cannot distinguish a valid materialization from a newly constructed or substituted bank. Adding those values now would be post-Phase9A scientific precommitment and is prohibited.
+- **Custody-log blocker:** all 302 events before the Phase 11 verification are hash-valid and correctly chained, but unsigned. Section 5.13 and the custody protocol require a signed append-only custody log. Phase 11 appended and verified one signed event, but it cannot retroactively cure the evidentiary status of earlier accesses.
+- **Required resolution:** create a new study version; repeat Phase 9A with new hidden seeds and key; sign plaintext content/label/seed identities, exact record and per-bank counts, and allocation bindings; use a signed custody log from its first event; repeat Phase 10 training/calibration/public validation under the new commitment; then issue a new final freeze. Editing the current v2 index or log in place is not compliant.
+- **Failure handling:** the preflight returned exit code 2 before decryption. The final audit returned exit code 2. Both outcomes are intentional release-blocking signals, not test failures.
+
+| Phase 11 WorkPlan requirement or gate | Evidence | Verdict |
+|---|---|---|
+| Verify every Phase 9A design hash without modification | 15/15 custody bytes match; three ciphertexts and all signatures pass | Pass |
+| Freeze/sign code, configs, environment, truth, projections, metrics, audits, methods, checkpoints, hyperparameters, prompts, operating points, reports | Ed25519 freeze; 420 repository files; external operator hash bound | Pass |
+| Submit signed freeze to custody | Freeze verified by the custody preflight; signed access event 303 retained | Pass |
+| Unlock and one-shot materialize precommitted ciphertext | Blocked before decryption because the required Phase 9A materialization commitments are absent | Blocked |
+| Cross-check materialized hashes, counts, and allocations | No materialization exists; the Phase 9A signed index lacks the necessary expected values | Blocked |
+| Keep labels separately encrypted | Label ciphertext remains byte-identical; no reveal/decrypt occurred | Pass |
+| Expose only registered projections | No method process or projection stream was started | Preserved, not exercised |
+| Duplicate/nearest-neighbor/structural/graph overlap audit | Cannot execute without a materialized case bank | Blocked |
+| Training/calibration/final template, grammar, and topology disjointness | Construction proof cannot be compared to absent final materialization | Blocked |
+| Phase 9A and Phase 11 design hashes exact | Commitment match true; custody artifacts 15/15; mismatches 0 | Pass |
+| Pre-freeze inaccessibility and every access logged/signed | Denials/accesses were logged and hash-chained, but 302 prior events are unsigned | Blocked |
+| Freeze complete and signed | Signature and 420-file inventory verification pass | Pass |
+| No substantive holdout created or changed in Phase 11 | Design mutations 0; content objects 0; explicit blocked status only | Pass |
+| Post-freeze method/report mutation | Frozen inventory reverified; none observed | Pass |
+| Phase 12 authorization | `false` in both compliance and blind-bank manifests | Blocked as required |
+
+- **Development contamination audit:** source/key/seed/D7/D8 exposure violations 0. The repository contains no custody plaintext or private key.
+- **Blind-bank manifest:** `manifests/blind_bank_manifest.json` has SHA-256 `b917ea663751fca734055ec4a38ee72c216f1828517a79d7d68b75da87fc25ec`, status `blocked-not-materialized`, content objects 0, materialization ID null, encrypted-label hash retained, and Phase 12 authorization false.
+- **Required directories:** `banks/sealed/structural/`, `banks/sealed/domains/`, and `banks/sealed/final_blind/` exist with factual non-materialization markers. They do not impersonate a bank.
+- **Audit evidence:** `holdout_hash.json` SHA-256 `16d0cdb9962ff8a450609aab2520d1449c21ff5656597b0cddfd9037578d3f04`; `contamination.json` `0fc959f28e055f5f2150324779e347de5b5bde0a9f2b0cfe0cf2914c76d93519`; `custody_unlock.json` `28546ac4cf64b23b1942556569134ed72a87992958a7bae80a2fa419d4255936`; `phase11_compliance.json` `ed40fb21087c4fc4ca7f0315740070d5528f9262b03ec028c2b801d20f6af001`.
+- **Compliance result:** `status=blocked`, `materialization_complete=false`, `phase12_authorized=false`, and the complete blocker text is retained. Phase 11 is not called finished.
+
+### PATH-0105 - Phase 11 brutal test and mutation-stress evidence
+
+- **Timestamp:** 2026-08-01T22:47:16+05:00.
+- **Phase:** 11.
+- **Status:** Test implementation pass; scientific phase gate remains blocked.
+- **Change ID:** `P11-TEST-001`.
+- **Compilation:** all Phase 11 repository modules, scripts, tests, and the custody-side verifier compiled successfully.
+- **Targeted suite:** 13/13 passed. It includes Phase 9A compatibility, valid freeze signature, tampered freeze rejection, verification without a private key, current ciphertext-only index rejection, a complete synthetic precommit pass, allocation substitution rejection, custody design-byte mutation rejection, removal of every required index field, removal of every required per-package field, and zero/negative record-count rejection.
+- **Complete exact-byte regression:** 217/217 tests passed in 157.856 seconds; failures 0; errors 0; skipped 0. Evidence SHA-256: `results/audits/phase11-prefreeze-tests.json` = `e26cd8bee5e325dddb8935a8191e88a82d02fca2df2e9f45b8facc8256f093dc`.
+- **Stress isolation:** all Phase 11 mutation/stress cases use synthetic temporary commitments and packages. They do not read training rows, calibration rows, public-validation predictions, sealed scientific content, hidden labels, or hidden seeds.
+- **Fail-closed stress:** every one of the five required index commitments and every one of the nine required package commitments was independently removed and rejected. Invalid package counts and changed allocation bindings were rejected. A committed custody file passed before mutation and failed immediately after one byte-content replacement.
+- **Regression breadth:** the complete suite includes all earlier unit, property, metamorphic, integration, blind-contract, and stress controls, including prior 100,000-ID, 100,000-label, 10,000-trace, 279,936-diagnostic-vector, role-crossing, allocation, access, audit, and report-builder stress programs.
+- **No benchmark result:** no scientific metric, leaderboard value, model comparison, or generalization claim was produced. The correct research outcome is the blocked release, not a fabricated success.
+- **Static checks:** `git diff --check` passed before freeze. The freeze verifier rehashed all frozen files after signing.
+- **Deviation:** None in test execution. The scientific completion gates remain blocked for the documented preexisting Phase 9A evidence gaps.
+
+### PATH-0106 - Exact Phase 11 `console.log` and identifying-comment inventory
+
+- **Timestamp:** 2026-08-01T22:47:16+05:00.
+- **Phase:** 11.
+- **Status:** Pass.
+- **Change ID:** `P11-LOGS-001`.
+- **Rule:** Every Phase 11 workflow `console.log` has an immediately adjacent preceding `STEP LOG` comment containing the same event ID. Repository machine inventory: 23/23. Custody operator inventory: 3/3. Total: 26/26.
+
+| Location | Comment line | `console.log` line | Event ID | Identifying comment |
+|---|---:|---:|---|---|
+| `scripts/audit_phase11.py` | 15 | 16 | `P11-AUDIT-SCRIPT-001` | Start the final Phase 11 clause and evidence audit. |
+| `scripts/freeze_study.py` | 20 | 21 | `P11-FREEZE-SCRIPT-001` | Resolve the registered study and isolated signing authority before freezing. |
+| `scripts/run_phase11_tests.py` | 11 | 12 | `P11-TEST-SCRIPT-001` | Start the full repository regression from the canonical Phase 11 entrypoint. |
+| `scripts/unlock_blind_bank.py` | 20 | 21 | `P11-UNLOCK-SCRIPT-001` | Validate that the separately controlled custody workspace exists without reading its hidden content. |
+| `src/pead/phase11/audit.py` | 65 | 66 | `P11-AUDIT-001` | Verify final freeze signature and byte identity of every frozen artifact. |
+| `src/pead/phase11/audit.py` | 69 | 70 | `P11-AUDIT-002` | Reconcile every public Phase 9A design, allocation, signature, and ciphertext hash. |
+| `src/pead/phase11/audit.py` | 90 | 91 | `P11-AUDIT-003` | Scan the development repository for custody-source, seed, key, or held-out-domain exposure. |
+| `src/pead/phase11/audit.py` | 95 | 96 | `P11-AUDIT-004` | Execute the custody preflight and preserve a blocked outcome without consuming the one-shot state. |
+| `src/pead/phase11/audit.py` | 132 | 133 | `P11-AUDIT-005` | Inventory every Phase 11 console event and its adjacent identifying comment with exact line numbers. |
+| `src/pead/phase11/audit.py` | 164 | 165 | `P11-AUDIT-BLOCK` | Retain a nonzero, zero-misrepresentation verdict for every unresolved Phase 11 gate. |
+| `src/pead/phase11/audit.py` | 167 | 168 | `P11-AUDIT-006` | Emit completion only after every WorkPlan gate has passed with immutable evidence. |
+| `src/pead/phase11/freeze.py` | 74 | 75 | `P11-FREEZE-001` | Verify the complete signed Phase 9A public commitment before constructing the method freeze. |
+| `src/pead/phase11/freeze.py` | 80 | 81 | `P11-FREEZE-002` | Prove every Phase 10 candidate file remains byte-identical before adding Phase 11 control code. |
+| `src/pead/phase11/freeze.py` | 137 | 138 | `P11-FREEZE-003` | Verify the final signature and every frozen file after writing the authoritative manifest. |
+| `src/pead/phase11/freeze.py` | 141 | 142 | `P11-FREEZE-004` | Retain the final method-freeze identity without authorizing a scientifically incomplete unlock. |
+| `src/pead/phase11/test_runner.py` | 14 | 15 | `P11-TEST-001` | Discover the complete repository unit, integration, property, and stress suite. |
+| `src/pead/phase11/test_runner.py` | 38 | 39 | `P11-TEST-002` | Retain the exact full-suite verdict without treating contract tests as a successful blind-bank release. |
+| `src/pead/phase11/unlock.py` | 79 | 80 | `P11-UNLOCK-001` | Verify the signed freeze and all frozen artifacts before any custody request. |
+| `src/pead/phase11/unlock.py` | 84 | 85 | `P11-UNLOCK-002` | Reverify the Phase 9A signature, public hashes, and ciphertext identities at the unlock boundary. |
+| `src/pead/phase11/unlock.py` | 96 | 97 | `P11-UNLOCK-002A` | Rehash every committed custody-only design artifact without exposing its bytes or scientific content. |
+| `src/pead/phase11/unlock.py` | 99 | 100 | `P11-UNLOCK-003` | Require signed plaintext identities, counts, bank allocations, and allocation binding before decryption. |
+| `src/pead/phase11/unlock.py` | 118 | 119 | `P11-UNLOCK-004` | Authorize exactly one custody submission only after every fail-closed precondition passes. |
+| `src/pead/phase11/unlock.py` | 127 | 128 | `P11-UNLOCK-BLOCK` | Record the exact pre-unlock failure while preserving ciphertext, keys, and one-shot custody state. |
+| custody `phase11_verify.py` | 90 | 91 | `P11-CUSTODY-001` | Hash each signed design artifact in place without emitting or copying its content. |
+| custody `phase11_verify.py` | 101 | 102 | `P11-CUSTODY-002` | Append a signed custody event for the complete hash-verification access. |
+| custody `phase11_verify.py` | 106 | 107 | `P11-CUSTODY-003` | Emit only nonrevealing counts and signed event identity to the development-side verifier. |
+
+- **Machine evidence:** `results/audits/freeze-01685e173019cece2e83/console_inventory.json` passes repository adjacency and exact-line validation. Custody lines were independently enumerated after the operator hash was frozen.
+- **Compliance gaps:** None in console instrumentation. The scientific Phase 11 gate remains blocked for the separate materialization-commitment and historical-log-signature findings.
+- **Next action:** Publish the factual blocked Phase 11 implementation and evidence on the sole `main` branch. Do not start Phase 12. A successful bank unlock requires explicit authorization for a new study version beginning again at Phase 9A.

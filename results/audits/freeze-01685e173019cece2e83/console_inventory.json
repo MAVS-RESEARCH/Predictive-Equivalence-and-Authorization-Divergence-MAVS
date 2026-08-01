@@ -1,0 +1,168 @@
+{
+  "entries": [
+    {
+      "comment": "STEP LOG P11-AUDIT-SCRIPT-001: Start the final Phase 11 clause and evidence audit.",
+      "comment_line": 15,
+      "console_log_line": 16,
+      "event_id": "P11-AUDIT-SCRIPT-001",
+      "file": "scripts/audit_phase11.py"
+    },
+    {
+      "comment": "STEP LOG P11-FREEZE-SCRIPT-001: Resolve the registered study and isolated signing authority before freezing.",
+      "comment_line": 20,
+      "console_log_line": 21,
+      "event_id": "P11-FREEZE-SCRIPT-001",
+      "file": "scripts/freeze_study.py"
+    },
+    {
+      "comment": "STEP LOG P11-TEST-SCRIPT-001: Start the full repository regression from the canonical Phase 11 entrypoint.",
+      "comment_line": 11,
+      "console_log_line": 12,
+      "event_id": "P11-TEST-SCRIPT-001",
+      "file": "scripts/run_phase11_tests.py"
+    },
+    {
+      "comment": "STEP LOG P11-UNLOCK-SCRIPT-001: Validate that the separately controlled custody workspace exists without reading its hidden content.",
+      "comment_line": 20,
+      "console_log_line": 21,
+      "event_id": "P11-UNLOCK-SCRIPT-001",
+      "file": "scripts/unlock_blind_bank.py"
+    },
+    {
+      "comment": "STEP LOG P11-AUDIT-001: Verify final freeze signature and byte identity of every frozen artifact.",
+      "comment_line": 65,
+      "console_log_line": 66,
+      "event_id": "P11-AUDIT-001",
+      "file": "src/pead/phase11/audit.py"
+    },
+    {
+      "comment": "STEP LOG P11-AUDIT-002: Reconcile every public Phase 9A design, allocation, signature, and ciphertext hash.",
+      "comment_line": 69,
+      "console_log_line": 70,
+      "event_id": "P11-AUDIT-002",
+      "file": "src/pead/phase11/audit.py"
+    },
+    {
+      "comment": "STEP LOG P11-AUDIT-003: Scan the development repository for custody-source, seed, key, or held-out-domain exposure.",
+      "comment_line": 90,
+      "console_log_line": 91,
+      "event_id": "P11-AUDIT-003",
+      "file": "src/pead/phase11/audit.py"
+    },
+    {
+      "comment": "STEP LOG P11-AUDIT-004: Execute the custody preflight and preserve a blocked outcome without consuming the one-shot state.",
+      "comment_line": 95,
+      "console_log_line": 96,
+      "event_id": "P11-AUDIT-004",
+      "file": "src/pead/phase11/audit.py"
+    },
+    {
+      "comment": "STEP LOG P11-AUDIT-005: Inventory every Phase 11 console event and its adjacent identifying comment with exact line numbers.",
+      "comment_line": 132,
+      "console_log_line": 133,
+      "event_id": "P11-AUDIT-005",
+      "file": "src/pead/phase11/audit.py"
+    },
+    {
+      "comment": "STEP LOG P11-AUDIT-BLOCK: Retain a nonzero, zero-misrepresentation verdict for every unresolved Phase 11 gate.",
+      "comment_line": 164,
+      "console_log_line": 165,
+      "event_id": "P11-AUDIT-BLOCK",
+      "file": "src/pead/phase11/audit.py"
+    },
+    {
+      "comment": "STEP LOG P11-AUDIT-006: Emit completion only after every WorkPlan gate has passed with immutable evidence.",
+      "comment_line": 167,
+      "console_log_line": 168,
+      "event_id": "P11-AUDIT-006",
+      "file": "src/pead/phase11/audit.py"
+    },
+    {
+      "comment": "STEP LOG P11-FREEZE-001: Verify the complete signed Phase 9A public commitment before constructing the method freeze.",
+      "comment_line": 74,
+      "console_log_line": 75,
+      "event_id": "P11-FREEZE-001",
+      "file": "src/pead/phase11/freeze.py"
+    },
+    {
+      "comment": "STEP LOG P11-FREEZE-002: Prove every Phase 10 candidate file remains byte-identical before adding Phase 11 control code.",
+      "comment_line": 80,
+      "console_log_line": 81,
+      "event_id": "P11-FREEZE-002",
+      "file": "src/pead/phase11/freeze.py"
+    },
+    {
+      "comment": "STEP LOG P11-FREEZE-003: Verify the final signature and every frozen file after writing the authoritative manifest.",
+      "comment_line": 137,
+      "console_log_line": 138,
+      "event_id": "P11-FREEZE-003",
+      "file": "src/pead/phase11/freeze.py"
+    },
+    {
+      "comment": "STEP LOG P11-FREEZE-004: Retain the final method-freeze identity without authorizing a scientifically incomplete unlock.",
+      "comment_line": 141,
+      "console_log_line": 142,
+      "event_id": "P11-FREEZE-004",
+      "file": "src/pead/phase11/freeze.py"
+    },
+    {
+      "comment": "STEP LOG P11-TEST-001: Discover the complete repository unit, integration, property, and stress suite.",
+      "comment_line": 14,
+      "console_log_line": 15,
+      "event_id": "P11-TEST-001",
+      "file": "src/pead/phase11/test_runner.py"
+    },
+    {
+      "comment": "STEP LOG P11-TEST-002: Retain the exact full-suite verdict without treating contract tests as a successful blind-bank release.",
+      "comment_line": 38,
+      "console_log_line": 39,
+      "event_id": "P11-TEST-002",
+      "file": "src/pead/phase11/test_runner.py"
+    },
+    {
+      "comment": "STEP LOG P11-UNLOCK-001: Verify the signed freeze and all frozen artifacts before any custody request.",
+      "comment_line": 79,
+      "console_log_line": 80,
+      "event_id": "P11-UNLOCK-001",
+      "file": "src/pead/phase11/unlock.py"
+    },
+    {
+      "comment": "STEP LOG P11-UNLOCK-002: Reverify the Phase 9A signature, public hashes, and ciphertext identities at the unlock boundary.",
+      "comment_line": 84,
+      "console_log_line": 85,
+      "event_id": "P11-UNLOCK-002",
+      "file": "src/pead/phase11/unlock.py"
+    },
+    {
+      "comment": "STEP LOG P11-UNLOCK-002A: Rehash every committed custody-only design artifact without exposing its bytes or scientific content.",
+      "comment_line": 96,
+      "console_log_line": 97,
+      "event_id": "P11-UNLOCK-002A",
+      "file": "src/pead/phase11/unlock.py"
+    },
+    {
+      "comment": "STEP LOG P11-UNLOCK-003: Require signed plaintext identities, counts, bank allocations, and allocation binding before decryption.",
+      "comment_line": 99,
+      "console_log_line": 100,
+      "event_id": "P11-UNLOCK-003",
+      "file": "src/pead/phase11/unlock.py"
+    },
+    {
+      "comment": "STEP LOG P11-UNLOCK-004: Authorize exactly one custody submission only after every fail-closed precondition passes.",
+      "comment_line": 118,
+      "console_log_line": 119,
+      "event_id": "P11-UNLOCK-004",
+      "file": "src/pead/phase11/unlock.py"
+    },
+    {
+      "comment": "STEP LOG P11-UNLOCK-BLOCK: Record the exact pre-unlock failure while preserving ciphertext, keys, and one-shot custody state.",
+      "comment_line": 127,
+      "console_log_line": 128,
+      "event_id": "P11-UNLOCK-BLOCK",
+      "file": "src/pead/phase11/unlock.py"
+    }
+  ],
+  "phase": 11,
+  "schema_version": "1.0",
+  "status": "pass"
+}

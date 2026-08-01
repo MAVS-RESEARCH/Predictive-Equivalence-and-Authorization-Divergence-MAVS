@@ -1,0 +1,21 @@
+{
+  "bank_roots": {
+    "domains": "banks/sealed/domains",
+    "final_blind": "banks/sealed/final_blind",
+    "structural": "banks/sealed/structural"
+  },
+  "blocking_receipt": "results/audits/freeze-01685e173019cece2e83/custody_unlock.json",
+  "content_objects": 0,
+  "freeze_id": "freeze-01685e173019cece2e83",
+  "labels": {
+    "ciphertext_path": "artifacts/custody/phase9a-preseal-v2/holdout-labels-v1.aesgcm",
+    "ciphertext_sha256": "a1f696b9629797c510ce415f1d2bdc146c698cba36c57ef047d18e46ae22d726",
+    "state": "separately-encrypted-not-revealed"
+  },
+  "materialization_id": null,
+  "phase": 11,
+  "phase12_authorized": false,
+  "projection_contract": "registered-access-profile-only",
+  "schema_version": "1.0",
+  "status": "blocked-not-materialized"
+}

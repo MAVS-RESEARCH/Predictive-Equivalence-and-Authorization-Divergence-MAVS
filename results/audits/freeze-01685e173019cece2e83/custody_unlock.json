@@ -1,0 +1,45 @@
+{
+  "custody_design": {
+    "custody_event": {
+      "action": "phase11-design-hash-verification",
+      "details": {
+        "freeze_id": "freeze-01685e173019cece2e83",
+        "mismatches": 0,
+        "verified_artifacts": 15
+      },
+      "event_sha256": "26a557a6bf065d2eed01aaf127b62c54e796e2e2ca8be6da1ada2394d4cd81a7",
+      "previous_sha256": "c4ee8556ad918982b5055e92712e66cc68d2be9d2ef7262cef233002d319d885",
+      "sequence": 303,
+      "signature": {
+        "algorithm": "Ed25519",
+        "signature_b64": "5HmPEFn8xUPhSt5x5NYwv2N+R+qjY+8m44Yrj/kTGS97DVBUv+788p9Ng9wUaTtY4VRE67bdwpRNmqNwhrsACw=="
+      },
+      "timestamp": "2026-08-01T17:46:16.278623+00:00",
+      "verdict": "allow"
+    },
+    "custody_event_sequence": 303,
+    "custody_event_sha256": "26a557a6bf065d2eed01aaf127b62c54e796e2e2ca8be6da1ada2394d4cd81a7",
+    "custody_event_signed": true,
+    "mismatches": 0,
+    "prior_log_audit": {
+      "chain_valid_links": 301,
+      "hash_chain_status": "pass",
+      "hash_valid_events": 302,
+      "prior_events": 302,
+      "signed_events": 0,
+      "unsigned_events": 302
+    },
+    "status": "pass",
+    "verified_artifacts": 15
+  },
+  "decryption_attempted": false,
+  "freeze_id": "freeze-01685e173019cece2e83",
+  "materialization_attempted": false,
+  "one_shot_state_consumed": false,
+  "phase": 11,
+  "reason": "Phase 9A lacks signed case-materialization commitments required for Phase 11: {\"missing_index_fields\":[\"allocation_sha256\",\"bank_counts\",\"content_plaintext_sha256\",\"label_plaintext_sha256\",\"seed_selection_sha256\"],\"missing_package_fields\":{\"content\":[\"allocation_sha256\",\"plaintext_sha256\",\"record_count\"],\"labels\":[\"allocation_sha256\",\"plaintext_sha256\",\"record_count\"],\"seeds\":[\"allocation_sha256\",\"plaintext_sha256\",\"record_count\"]}}; custody access log contains 302 unsigned pre-Phase11 events",
+  "required_resolution": "new-study-version-repeat-phase9a-before-retraining-and-refreeze",
+  "schema_version": "1.0",
+  "status": "blocked",
+  "unlock_attempted": false
+}

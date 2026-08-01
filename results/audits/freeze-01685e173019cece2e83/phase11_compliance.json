@@ -1,0 +1,19 @@
+{
+  "compliance_gaps": [
+    "Phase 9A lacks signed case-materialization commitments required for Phase 11: {\"missing_index_fields\":[\"allocation_sha256\",\"bank_counts\",\"content_plaintext_sha256\",\"label_plaintext_sha256\",\"seed_selection_sha256\"],\"missing_package_fields\":{\"content\":[\"allocation_sha256\",\"plaintext_sha256\",\"record_count\"],\"labels\":[\"allocation_sha256\",\"plaintext_sha256\",\"record_count\"],\"seeds\":[\"allocation_sha256\",\"plaintext_sha256\",\"record_count\"]}}; custody access log contains 302 unsigned pre-Phase11 events"
+  ],
+  "console_log_sites": 23,
+  "duplicate_overlap_audit": "not-executable-without-materialization",
+  "freeze_complete_and_signed": true,
+  "freeze_id": "freeze-01685e173019cece2e83",
+  "labels_separately_encrypted": true,
+  "materialization_complete": false,
+  "phase": 11,
+  "phase12_authorized": false,
+  "phase9a_design_hashes_match": true,
+  "registry_disjointness_audit": "not-executable-without-materialization",
+  "schema_version": "1.0",
+  "scientific_holdout_changes": 0,
+  "status": "blocked",
+  "unlock_attempted": false
+}

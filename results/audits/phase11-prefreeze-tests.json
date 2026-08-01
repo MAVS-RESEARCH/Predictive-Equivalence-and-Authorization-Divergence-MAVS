@@ -1,0 +1,11 @@
+{
+  "duration_seconds": 157.868,
+  "errors": 0,
+  "failures": 0,
+  "phase": 11,
+  "schema_version": "1.0",
+  "scientific_materialization_executed": false,
+  "skipped": 0,
+  "status": "pass",
+  "tests": 217
+}

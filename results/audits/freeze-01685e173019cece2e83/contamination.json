@@ -1,0 +1,10 @@
+{
+  "freeze_id": "freeze-01685e173019cece2e83",
+  "phase": 11,
+  "schema_version": "1.0",
+  "sealed_bank_duplicate_audit": "not-executable-without-materialization",
+  "source_exposure_violations": [],
+  "status": "pass",
+  "template_grammar_topology_disjointness": "not-executable-without-materialization",
+  "violations": 0
+}
