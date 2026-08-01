@@ -36,7 +36,7 @@ Rules:
 | 6 | Projection layer, feature firewall, and parity | Complete | 122/122 tests; implementation commit `a85318ce1c65f207461c9ee2dd9eb1119c020b5e` pushed and remotely verified |
 | 7 | Baseline suite and common training harness | Complete | 146/146 tests; implementation `58bc41d1679b39eab49d7bc445a9f2716202875c`; exact-judge hardening `cd4726e8802610e6eb99dd9f0fb69b2af7e0bd78`, both verified on `main` |
 | 8 | Frozen MAVS-GC, DS-CF, and ablations | Complete | 167/167 tests; implementation commit `fd8e84af7d07526a6837a60c85105ece1ea8115a` pushed and remotely verified on sole branch `main` |
-| 9 | Metrics, audits, statistics, and reports | Local gates passed; publication pending | 189/189 tests; 38 registered metrics; 13/13 release-blocking mutations rejected; zero compliance gaps |
+| 9 | Metrics, audits, statistics, and reports | Complete | 189/189 tests; implementation commit `be093b5d2639deb2ff76ad96785c918b5a2a9b92` pushed and remotely verified on sole branch `main` |
 | 10 | Development, training, calibration, and public validation | Not started | None |
 | 11 | Sealed banks and signed freeze | Not started | None |
 | 12 | One-pass blind evaluation | Not started | None |
@@ -2423,3 +2423,22 @@ Copy this block for every meaningful action:
 - **Compliance gaps:** None.
 - **Deviation:** None.
 - **Next action:** Inspect and stage only Phase 9 scope, commit directly on `main`, push without force, verify local/remote SHA equality and sole-branch topology, append publication evidence, rerun the completed-ledger compliance audit, and stop before Phase 9A.
+
+### PATH-0087 - Phase 9 publication to main and exact remote verification
+
+- **Timestamp:** 2026-08-01T13:33:26+05:00.
+- **Phase:** 9.
+- **Status:** Pass; implementation published and remotely verified.
+- **Change ID:** `P9-PUBLISH-001`.
+- **Branch:** `main`.
+- **Implementation commit:** `be093b5d2639deb2ff76ad96785c918b5a2a9b92` - `phase-9: implement metrics audits and reports`.
+- **Published scope:** 68 intended files, 3,279 insertions and one ledger-status deletion. Scope comprises metric/audit/report registries; six WorkPlan metric modules; nine new audit-family modules plus human/master orchestration integrated with four retained audit families; five WorkPlan report modules; Phase 9 review/audit/test/report orchestration; three scripts; five unit, two integration, and one stress test modules; seven signed internal checkpoint artifacts; retained audit/report/manifest evidence; CLI entries; and this append-only implementation ledger.
+- **Stage controls:** cached `git diff --check` passed; staged-name inspection contained only Phase 9 scope; credential-pattern scan found no credential-like token or private-key identifiers; current branch was `main`.
+- **Push:** `git push origin main` passed without force, rebase, history rewrite, merge commit, pull request, or secondary branch.
+- **Exact remote verification:** local `HEAD` and remote `refs/heads/main` both resolved to `be093b5d2639deb2ff76ad96785c918b5a2a9b92` immediately after publication.
+- **Branch topology:** `git ls-remote --heads origin` returned only `refs/heads/main`; `git branch -vv` returned only local `main` tracking `origin/main`.
+- **Post-publication audit:** the complete Phase 9 compliance auditor was rerun after publication and again passed all twelve gates with 38 metrics, 189 retained tests, thirteen blocked mutation families, seven signed checkpoints, 29 instrumented log sites, and `compliance_gaps=[]`; deterministic regeneration produced no working-tree change.
+- **Scientific boundary:** no model was trained, selected, calibrated, thresholded, or evaluated for scientific performance; no claim-bearing bank was accessed; no C1-C6 claim was emitted; and Phase 9A was not started.
+- **Compliance gaps:** None.
+- **Deviation:** None.
+- **Next action:** Stop before Phase 9A. Phase 9A is not authorized by the current request.
