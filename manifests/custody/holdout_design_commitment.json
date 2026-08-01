@@ -13,13 +13,13 @@
   "design_artifacts": [
     {
       "artifact_id": "configs/holdouts/d7_clinical.yaml",
-      "bytes": 274,
-      "sha256": "1fee02a8e379a4c5e3abdbcc3d6234cc74861b12c597e7eaf4fe30888fa143ca"
+      "bytes": 1871,
+      "sha256": "febd14599b56aad3a6127f868a7587fac8cedd0e6b439ea1a5370ce0face4087"
     },
     {
       "artifact_id": "configs/holdouts/d8_content.yaml",
-      "bytes": 257,
-      "sha256": "e3e3f4412c017fd55d10efedb8c0d77c4259c1ec65225501fe14feb6b20f0cac"
+      "bytes": 1755,
+      "sha256": "ffb95460bf77193c23140a786a8a0047f0b3470cf76f80da3b0d8eef5229e315"
     },
     {
       "artifact_id": "configs/holdouts/graph_topologies.yaml",
@@ -33,8 +33,8 @@
     },
     {
       "artifact_id": "configs/holdouts/mechanisms.yaml",
-      "bytes": 910,
-      "sha256": "a5f6fc75b1302f955f1439c88aa4056081ce4502a11fa4f2808bd023fdc81acf"
+      "bytes": 1572,
+      "sha256": "d350390dc3437dc3863f8cbe76025890514f8f94b1caf699792c370e9594f08b"
     },
     {
       "artifact_id": "configs/holdouts/nuisance.yaml",
@@ -53,8 +53,8 @@
     },
     {
       "artifact_id": "configs/holdouts/seeds.yaml",
-      "bytes": 290,
-      "sha256": "19d180d0be8de9b2073b5b65d4dc0b0ae906ec6932309a9b7e5091a61d2e101b"
+      "bytes": 293,
+      "sha256": "5b158cdaf4f5f9903568e9af0107750804fd3cfa42511eb810958127790a3a83"
     },
     {
       "artifact_id": "src/pead_holdout/__init__.py",
@@ -68,8 +68,8 @@
     },
     {
       "artifact_id": "src/pead_holdout/ambiguity.py",
-      "bytes": 1103,
-      "sha256": "4e6acd707f4919b7fab0e7ad8592e8fc907f5e9ac2e69fb339d6afa320395d9d"
+      "bytes": 1527,
+      "sha256": "58b43e82c3e1cd67da402a221fe76da355f5ec6386649a2703bb5e61d8979bb4"
     },
     {
       "artifact_id": "src/pead_holdout/custody.py",
@@ -78,8 +78,8 @@
     },
     {
       "artifact_id": "src/pead_holdout/generator.py",
-      "bytes": 1172,
-      "sha256": "e699dc8ad751fe68d7265ce4df73ca8f1add4dc76945e1b0f9d1096f7a7cefc6"
+      "bytes": 1237,
+      "sha256": "e51757f57e13387f7acc62b03c52944c61da8ff80545570167127d8841a2defd"
     },
     {
       "artifact_id": "src/pead_holdout/packager.py",
@@ -87,22 +87,22 @@
       "sha256": "d44b0fa19bbea4cf38e03a91505fec5be6b428b0e787c96273e9c34dbae4c87d"
     }
   ],
-  "preseal_id": "phase9a-preseal-v1",
+  "preseal_id": "phase9a-preseal-v2",
   "public_artifacts": [
     {
       "artifact_id": "allocation_manifest",
-      "sha256": "1a7c7fd50fe0446d7adb03015e8c5f982492e7a56a991b3bf7e0883a1f1509d2"
+      "sha256": "bff8e06f1a822763f08220402ac093f9e21839c9a8236c4a883a02d3901add1a"
     },
     {
       "artifact_id": "encrypted_package_index",
-      "sha256": "8e02ae79de8472031402c0c49266b4708fd4284423ea6ff2d199f9f471580c32"
+      "sha256": "7bc9b83beedc5f087179e865a49cebda006d45f1bed7f625fd86ced1404801e1"
     }
   ],
   "schema_version": "1.0",
   "signature": {
     "algorithm": "Ed25519",
-    "public_key_b64": "dFlNnWMWsVglm+aA1ba14erDKCm+TyHrGDwS85SkkTc=",
-    "signature_b64": "0jteaVaVP2xjVpCXzPk5XsRJPQMULgVO2FhOvrSC4eUptQLoJEK1RxIh1IezdBQIdpbk0Ugms1lU1fqperSaDg=="
+    "public_key_b64": "NB+EQRRXYpIywr2gCnNi/qLxlzKB1/EyXaNgHSG9OLI=",
+    "signature_b64": "F5ByLMGXosJ0uD6Y7WxUGVdWlLGvj+Yitq9rSqn4urudj8bz+XQFDxmkpsIPbaZvwbxdrNWivsMTooaPMATbCQ=="
   },
-  "study_version": "pead-study-v1"
+  "study_version": "pead-study-v2"
 }

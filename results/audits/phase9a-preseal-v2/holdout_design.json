@@ -1,0 +1,17 @@
+{
+  "domain_meaning_review": "pass",
+  "gates": {
+    "ambiguity_certificate": "pass",
+    "concrete_example_schemas": "pass",
+    "d7_d8_vocabularies": "pass",
+    "feature_mappings": "pass",
+    "generator_label_separation": "pass",
+    "nuisance_transforms": "pass",
+    "surface_distributions": "pass"
+  },
+  "preseal_id": "phase9a-preseal-v2",
+  "schema_version": "1.0",
+  "scientific_nontriviality_review": "pass",
+  "signed_design_artifacts": 15,
+  "status": "pass"
+}

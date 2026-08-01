@@ -37,36 +37,36 @@
     },
     {
       "comment": "STEP LOG P9A-AUDIT-004: Scan tracked development files for private keys, exact seeds, D7/D8 implementations, and generators.",
-      "comment_line": 78,
-      "console_log_line": 79,
+      "comment_line": 83,
+      "console_log_line": 84,
       "event_id": "P9A-AUDIT-004",
       "file": "src/pead/phase9a/audit.py"
     },
     {
       "comment": "STEP LOG P9A-AUDIT-005: Prove commitment chronology predates all Phase 10 training, calibration, and public-validation artifacts.",
-      "comment_line": 91,
-      "console_log_line": 92,
+      "comment_line": 96,
+      "console_log_line": 97,
       "event_id": "P9A-AUDIT-005",
       "file": "src/pead/phase9a/audit.py"
     },
     {
       "comment": "STEP LOG P9A-AUDIT-006: Inventory every repository Phase 9A console.log and its immediately adjacent identifying comment.",
-      "comment_line": 99,
-      "console_log_line": 100,
+      "comment_line": 104,
+      "console_log_line": 105,
       "event_id": "P9A-AUDIT-006",
       "file": "src/pead/phase9a/audit.py"
     },
     {
       "comment": "STEP LOG P9A-AUDIT-007: Emit the zero-gap verdict only after every Phase 9A completion gate passes.",
-      "comment_line": 112,
-      "console_log_line": 113,
+      "comment_line": 117,
+      "console_log_line": 118,
       "event_id": "P9A-AUDIT-007",
       "file": "src/pead/phase9a/audit.py"
     },
     {
       "comment": "STEP LOG P9A-AUDIT-FAIL: Retain the exact release-blocking Phase 9A compliance failure.",
-      "comment_line": 125,
-      "console_log_line": 126,
+      "comment_line": 130,
+      "console_log_line": 131,
       "event_id": "P9A-AUDIT-FAIL",
       "file": "src/pead/phase9a/audit.py"
     },

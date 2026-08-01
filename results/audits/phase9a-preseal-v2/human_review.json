@@ -4,12 +4,13 @@
   "gates": {
     "allocation": "pass",
     "custody_enforcement": "pass",
+    "d7_d8_substantive_design": "pass",
     "domain_meaning": "pass",
     "generator_label_separation": "pass",
     "scientific_nontriviality": "pass"
   },
   "independence": "Separate post-implementation review pass; no Phase 10 method behavior or results existed or were available.",
-  "preseal_id": "phase9a-preseal-v1",
+  "preseal_id": "phase9a-preseal-v2",
   "reviewer_role": "internal-independent sealed-design reviewer",
   "schema_version": "1.0",
   "status": "pass",

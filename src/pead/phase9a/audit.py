@@ -15,7 +15,7 @@ from pead.config.console import ResearchConsole
 from pead.holdouts.commitment_verifier import verify_preseal, verify_signed_mapping
 
 
-PRESEAL_ID = "phase9a-preseal-v1"
+PRESEAL_ID = "phase9a-preseal-v2"
 REQUIRED_CUSTODY_AUDITS = ("holdout_design", "allocation", "custody", "human_review")
 FORBIDDEN_REPOSITORY_PATTERNS = (
     r"exact_hidden_seeds_v1", r"phase9a_aes256\.key", r"phase9a_ed25519_private",
@@ -71,7 +71,12 @@ def run_audit(root: Path, console: ResearchConsole) -> dict[str, Any]:
     custody_audits = {name: json.loads((audit_root / f"{name}.json").read_text(encoding="utf-8")) for name in REQUIRED_CUSTODY_AUDITS}
     if any(value.get("status") != "pass" or value.get("preseal_id") != PRESEAL_ID for value in custody_audits.values()):
         raise ValueError("custody audit evidence is missing or failed")
-    required_gates = {"allocation", "atomic_groups", "typed_distance", "ambiguity_certificate", "generator_label_separation", "signed_json_only", "development_access_denial", "append_only_log"}
+    required_gates = {
+        "allocation", "atomic_groups", "typed_distance", "ambiguity_certificate",
+        "generator_label_separation", "signed_json_only", "development_access_denial",
+        "append_only_log", "d7_d8_vocabularies", "surface_distributions",
+        "feature_mappings", "nuisance_transforms", "concrete_example_schemas",
+    }
     observed_gates = {gate for value in custody_audits.values() for gate, status in value.get("gates", {}).items() if status == "pass"}
     if not required_gates.issubset(observed_gates):
         raise ValueError(f"custody gates absent: {sorted(required_gates - observed_gates)}")

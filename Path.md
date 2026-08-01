@@ -2089,7 +2089,7 @@ Copy this block for every meaningful action:
 
 - **Timestamp:** 2026-08-01T12:24:56+05:00.
 - **Phase:** 7.
-- **Status:** Pass; implementation published and remotely verified.
+- **Status:** Historical publication receipt; subsequently invalidated by `PATH-0094` before Phase 10.
 - **Change ID:** `P7-PUBLISH-001`.
 - **Branch:** `main`.
 - **Implementation commit:** `58bc41d1679b39eab49d7bc445a9f2716202875c` - `phase-7: implement baseline suite and training contracts`.
@@ -2470,7 +2470,7 @@ Copy this block for every meaningful action:
 - **Scientific content implemented:** Twelve mechanism families and compositional constraints; policy logical forms and precedence/temporal operators; seven topology families; actor/action/resource/purpose/jurisdiction/time/evidence scope interactions; single/paired/reversal/scope/evidence/nuisance interventions; nuisance invariance and matched controls; D7 and D8 domain-specific hidden template families and mappings; exact hidden seed streams; deterministic claim-bearing generation; typed mechanism/topology/scope distance; atomic grouping; ambiguity certificates; generator/label separation; exact allocation/substitution validation; authenticated packaging; authorization denial; and append-only hash-chain access logging.
 - **Allocation implementation:** The custody allocator accepts only a signed `.json` allocation. YAML input is denied and logged. It enforces 2,000 exact pairs per domain, exact sub-bank and mechanism totals, 1,000 near pairs per domain, eight epsilon cells, 125 pairs per domain-epsilon, 24,000 reversal steps, 22,400 scope cases, and 12,000 evidence-sufficiency cases. M11 substitution and the registered label/complexity/control allocations remain in the signed manifest.
 - **Cryptography:** A custody-only Ed25519 private key signs the allocation, ciphertext index, and design commitment. A separate custody-only AES-256-GCM key encrypts independently authenticated content, label, and exact-seed packages. Neither private key nor decryption key exists in development.
-- **Signed design coverage:** Fifteen custody artifacts were hashed and signed: nine holdout configurations plus six custody package files including the package initializer. Their source paths, byte counts, and SHA-256 identities are committed; their plaintext remains custody-only.
+- **Signed design coverage:** Fifteen custody artifacts were hashed and signed: nine holdout configurations plus six custody package files including the package initializer. Their source paths, byte counts, and SHA-256 identities are committed; their plaintext remains custody-only. The final commitment is `pead-study-v2` / `phase9a-preseal-v2`.
 - **Change rule:** Any later scientific design change requires a new study version, new commitment, and complete Phase 9A repetition before retraining.
 - **Deviation:** None.
 
@@ -2481,12 +2481,12 @@ Copy this block for every meaningful action:
 - **Status:** Pass.
 - **Change ID:** `P9A-PUBLIC-001`.
 - **Public code:** `src/pead/holdouts/interface.py` defines only strict non-generative package-index and verification-receipt contracts. `src/pead/holdouts/commitment_verifier.py` verifies Ed25519 signatures, public artifact hashes, repository-bounded ciphertext paths, byte counts, ciphertext SHA-256 values, package-role separation, signer identity, and preseal identity. It has no decryptor or generator.
-- **Allocation manifest:** The normative YAML is unchanged. Its generated JSON changes only the registered status/signature fields and adds the normative YAML hash, canonicalization identity, and Ed25519 envelope. Semantic equality and source hash equality pass. JSON SHA-256: `1A7C7FD50FE0446D7ADB03015E8C5F982492E7A56A991B3BF7E0883A1F1509D2`.
-- **Design commitment:** SHA-256 `791DB5294DD85EFE300BF0BB299FFB9696F55C2790D17C81597D6E751908119A`; signed design artifacts 15; private material in development false; exact seed plaintext in development false; Phase 10 artifact count at seal 0.
-- **Encrypted index:** SHA-256 `8E02AE79DE8472031402C0C49266B4708FD4284423EA6FF2D199F9F471580C32`; algorithm AES-256-GCM; package roles exactly `content`, `labels`, and `seeds`.
-- **Ciphertexts:** content SHA-256 `BC8C106BFC9284855317B25698F47A170C46CDB91CA7B310F3C185437C197224` (12,970 bytes); labels `6F6A7984788CCA669D18A20D58ABDA27CF401EB3374EDB90192DDA70037880B8` (1,524 bytes); seeds `69AC8B46572A93D49EE2429A7BFFF8588C9B31963204EBD344D69094BB853291` (438 bytes).
+- **Allocation manifest:** The normative YAML is unchanged. Its generated JSON changes only the registered status/signature fields and adds the normative YAML hash, canonicalization identity, and Ed25519 envelope. Semantic equality and source hash equality pass. JSON SHA-256: `BFF8E06F1A822763F08220402AC093F9E21839C9A8236C4A883A02D3901ADD1A`.
+- **Design commitment:** SHA-256 `52E29FFCF1C102356539AD058C40D9E387DB9D92907E38C5039375798D3196E6`; signed design artifacts 15; private material in development false; exact seed plaintext in development false; Phase 10 artifact count at seal 0.
+- **Encrypted index:** SHA-256 `7BC9B83BEEDC5F087179E865A49CEBDA006D45F1BED7F625FD86CED1404801E1`; algorithm AES-256-GCM; package roles exactly `content`, `labels`, and `seeds`.
+- **Ciphertexts:** content SHA-256 `893CF5434E94B2D6DEF7F1C106C71BBD2F986B5836BEF7CE516B800188354193` (18,062 bytes); labels `A1F696B9629797C510CE415F1D2BDC146C698CBA36C57EF047D18E46AE22D726` (2,088 bytes); seeds `DC181C9C1D71D79A2961620DF7F00E4E2F961F67849B3A97E7D23A38E2A438C2` (442 bytes).
 - **Dependency:** `cryptography==49.0.0` is pinned for Ed25519 and AES-256-GCM. New console commands verify commitments, run the Phase 9A audit, and run the complete Phase 9A regression.
-- **Development scan:** 452 text/configuration files were scanned for private-key identities, exact seed registry content, D7/D8 implementations, and claim-bearing generator definitions. Violations: 0.
+- **Development scan:** 451 text/configuration files were scanned for private-key identities, exact seed registry content, D7/D8 implementations, and claim-bearing generator definitions. Violations: 0.
 - **Deviation:** None.
 
 ### PATH-0091 - Custody review, stress tests, and zero-gap audit
@@ -2502,10 +2502,10 @@ Copy this block for every meaningful action:
 - **Targeted result:** 8/8 passed. Stress included 1,000/1,000 signed-allocation mutations rejected, ciphertext mutation rejected, signer mutation rejected, package-role collapse rejected, 15/15 signed design identities unique, Phase 10 absence, and a complete compliance replay.
 - **Corrective history:** The first targeted execution found one compliance gap: `P9A-VERIFY-002` had an intervening assignment between its identifying comment and `console.log`. The comment was moved immediately adjacent, and targeted tests plus the audit were rerun successfully before any completion claim.
 - **Complete command:** `.\.venv\Scripts\python.exe scripts\run_phase9a_tests.py`.
-- **Complete result:** 197/197 tests passed in 148.334 seconds; failures 0; errors 0; skipped 0. This includes all Phase 0-9 regressions plus Phase 9A tests.
+- **Complete result:** The final v2 run passed 197/197 tests in 156.515 seconds; failures 0; errors 0; skipped 0. This includes all Phase 0-9 regressions plus Phase 9A tests. No v1 test result is reused as v2 evidence.
 - **Final audit command:** `.\.venv\Scripts\python.exe scripts\audit_phase9a.py`.
-- **Final audit result:** status pass; three ciphertexts verified; 15 signed design artifacts; eight required custody gates passed; 452 repository files scanned; prohibited findings 0; Phase 10 artifacts 0; `compliance_gaps=[]`.
-- **Evidence SHA-256:** holdout design `D62184E66E1FA86270840EFB1C8183C2CC5F4F7DB202B59619619649A89D503E`; allocation `6339A1C09AB810FAB0C6B0E5CEEAD042017950854BE4C865A7A6A57911E4EF81`; custody `1335B6931C02E2B2BE23C701D17C6265611DD69F381F0ACE2036E88F1958A4F4`; internal review `7D03A61ACBDF5CEAF37E381FF59D705EE27319319BC5538B30B312B4E1FDC0EC`; compliance `99E1613A9B55252D05416021D5F4FD251933A75039FC353472D74CB532879A9D`; full tests `0F13C54206A1D4DD5004F41A7AE90B92D62BE1F724B8569689A0E844B8E1F0A7`; console inventory `A5769BC037C7667AC586005943161E4536FF2A8C66B93260EEB8BF1FFB8B2DE0`.
+- **Final audit result:** status pass; three ciphertexts verified; 15 signed design artifacts; thirteen required custody gates passed; 451 repository files scanned; prohibited findings 0; Phase 10 artifacts 0; `compliance_gaps=[]`.
+- **Evidence SHA-256:** holdout design `CF059BD7ED416C4C56404447BEA2F4B56996BA4F3759C0909FA1F47A917195E6`; allocation `38FC3B282F63BAEF8379DF283A58F088A89D89F568877080C215989123B01CD8`; custody `61169AAB5FD2522BAD8D36BFCB81A674FD2E38B7561A90F2A63691ADB4396A14`; internal review `43E4AF155B9AF57267A685414CB5173B5260A7BC0AB01EDA878E89C4C4CF3166`; compliance `B0962880B16015A8A0DFAC9000F51821224A50DA8CCB7CD01B04A751A71A41EE`; full tests `CC0D0832602A2A39EA68B706D19CA1175C73FE21192D50B5520A526EDB01B8D6`; console inventory `47A63CCB82F919D09A5ECF4CF0CFCD7DEF8CE7E60E6C5DE30715D9EEBD13FEF9`.
 - **Compliance gaps:** None.
 - **Deviation:** None.
 
@@ -2524,11 +2524,11 @@ Copy this block for every meaningful action:
 | `src/pead/phase9a/audit.py` | 54 | 55 | `P9A-AUDIT-001` | Verify all public signatures, ciphertext hashes, and separated package roles. |
 | `src/pead/phase9a/audit.py` | 61 | 62 | `P9A-AUDIT-002` | Prove normative YAML hash identity and YAML-to-signed-JSON semantic equality. |
 | `src/pead/phase9a/audit.py` | 69 | 70 | `P9A-AUDIT-003` | Require custody test evidence for allocation, groups, distance, ambiguity, separation, and access denial. |
-| `src/pead/phase9a/audit.py` | 78 | 79 | `P9A-AUDIT-004` | Scan tracked development files for private keys, exact seeds, D7/D8 implementations, and generators. |
-| `src/pead/phase9a/audit.py` | 91 | 92 | `P9A-AUDIT-005` | Prove commitment chronology predates all Phase 10 training, calibration, and public-validation artifacts. |
-| `src/pead/phase9a/audit.py` | 99 | 100 | `P9A-AUDIT-006` | Inventory every repository Phase 9A console.log and its immediately adjacent identifying comment. |
-| `src/pead/phase9a/audit.py` | 112 | 113 | `P9A-AUDIT-007` | Emit the zero-gap verdict only after every Phase 9A completion gate passes. |
-| `src/pead/phase9a/audit.py` | 125 | 126 | `P9A-AUDIT-FAIL` | Retain the exact release-blocking Phase 9A compliance failure. |
+| `src/pead/phase9a/audit.py` | 83 | 84 | `P9A-AUDIT-004` | Scan tracked development files for private keys, exact seeds, D7/D8 implementations, and generators. |
+| `src/pead/phase9a/audit.py` | 96 | 97 | `P9A-AUDIT-005` | Prove commitment chronology predates all Phase 10 training, calibration, and public-validation artifacts. |
+| `src/pead/phase9a/audit.py` | 104 | 105 | `P9A-AUDIT-006` | Inventory every repository Phase 9A console.log and its immediately adjacent identifying comment. |
+| `src/pead/phase9a/audit.py` | 117 | 118 | `P9A-AUDIT-007` | Emit the zero-gap verdict only after every Phase 9A completion gate passes. |
+| `src/pead/phase9a/audit.py` | 130 | 131 | `P9A-AUDIT-FAIL` | Retain the exact release-blocking Phase 9A compliance failure. |
 | `src/pead/phase9a/test_runner.py` | 20 | 21 | `P9A-TEST-001` | Discover every repository regression and Phase 9A mutation test. |
 | `src/pead/phase9a/test_runner.py` | 24 | 25 | `P9A-TEST-002` | Replay the complete Phase 9A zero-gap audit after all regression tests. |
 | `src/pead/phase9a/test_runner.py` | 30 | 31 | `P9A-TEST-003` | Retain exact complete-suite and compliance verdicts without exposing custody content. |
@@ -2537,12 +2537,12 @@ Copy this block for every meaningful action:
 | custody `preseal.py` | 95 | 96 | `P9A-SEAL-003` | Encrypt content, labels, and exact hidden seeds as three independently authenticated packages. |
 | custody `preseal.py` | 103 | 104 | `P9A-SEAL-004` | Sign the nonrevealing ciphertext index and retain only ciphertext metadata in development. |
 | custody `preseal.py` | 124 | 125 | `P9A-SEAL-005` | Sign every custody design and generator hash before any Phase 10 artifact exists. |
-| custody `review.py` | 28 | 29 | `P9A-REVIEW-001` | Verify signed-JSON-only allocation reads and reject the normative YAML as generator input. |
-| custody `review.py` | 36 | 37 | `P9A-REVIEW-002` | Prove ambiguity certificates and generator/label payload separation fail closed. |
-| custody `review.py` | 43 | 44 | `P9A-REVIEW-003` | Deny and append-log pre-freeze development, training, and method access attempts. |
-| custody `review.py` | 53 | 54 | `P9A-REVIEW-004` | Complete an internal-independent sealed-hash review without method-result access. |
+| custody `review.py` | 31 | 32 | `P9A-REVIEW-001` | Verify signed-JSON-only allocation reads and reject the normative YAML as generator input. |
+| custody `review.py` | 39 | 40 | `P9A-REVIEW-002` | Prove ambiguity certificates and generator/label payload separation fail closed. |
+| custody `review.py` | 56 | 57 | `P9A-REVIEW-003` | Deny and append-log pre-freeze development, training, and method access attempts. |
+| custody `review.py` | 66 | 67 | `P9A-REVIEW-004` | Complete an internal-independent sealed-hash review without method-result access. |
 
-- **Machine evidence:** `results/audits/phase9a-preseal-v1/console_inventory.json` retains the exact repository line inventory and passed adjacency validation.
+- **Machine evidence:** `results/audits/phase9a-preseal-v2/console_inventory.json` retains the exact repository line inventory and passed adjacency validation.
 - **Compliance gaps:** None.
 - **Deviation:** None.
 - **Next action:** Stage only Phase 9A nonrevealing development artifacts and ciphertext, scan the staged content for credentials/custody plaintext, commit directly to `main`, push without force, verify sole-branch topology and remote SHA equality, record publication evidence, rerun the final audit, and stop before Phase 10.
@@ -2560,7 +2560,27 @@ Copy this block for every meaningful action:
 - **Push:** `git push origin main` passed without force, rebase, history rewrite, merge commit, pull request, or secondary branch.
 - **Exact remote verification:** Local `HEAD` and remote `refs/heads/main` both resolved to `00f5358d5eb5dbcbda48f41419b3001b15f5bb50` immediately after publication.
 - **Branch topology:** `git ls-remote --heads origin` returned only `refs/heads/main`; `git branch -vv` returned only local `main` tracking `origin/main`.
-- **Chronology consequence:** The remote Phase 9A commit now immutably predates every Phase 10 training, calibration, and public-validation artifact; their audited count at publication is zero.
-- **Compliance gaps:** None.
+- **Chronology consequence:** This historical remote commit predates every Phase 10 artifact, but its scientific preseal is invalidated and cannot authorize Phase 10. The corrected v2 receipt supersedes it.
+- **Compliance gaps:** A later final reconciliation found the D7/D8 substantive-design gap documented in `PATH-0094`; v1 was invalidated and fully repeated as v2.
 - **Deviation:** None.
 - **Next action:** Rerun Phase 9A compliance with this completed publication receipt, commit and push the receipt to `main`, verify exact remote equality and clean worktree, and stop before Phase 10.
+
+### PATH-0094 - Final-reconciliation correction and complete Phase 9A repetition
+
+- **Timestamp:** 2026-08-01T14:08:00+05:00.
+- **Phase:** 9A.
+- **Status:** Pass; v1 invalidated, v2 complete locally, corrected publication pending.
+- **Change ID:** `P9A-V2-001`.
+- **Gap discovered:** The final clause-by-clause audit found that the first sealed D7/D8 files named template families but had not prebuilt the WorkPlan-required detailed vocabularies, surface distributions, feature mappings, nuisance transformations, allocation details, and concrete example schemas. The earlier zero-gap statement was withdrawn before handoff.
+- **Invalidation:** In accordance with the signed change policy, `pead-study-v1` / `phase9a-preseal-v1` is invalidated. Its keys, access log, and commitment snapshot were moved to a custody-only invalidated archive. Its current ciphertext and audit files were removed from the working tree; Git history retains the invalidated record. It must never be used for Phase 10 or a scientific claim.
+- **New study:** `pead-study-v2` / `phase9a-preseal-v2` was created with entirely fresh Ed25519 and AES-256-GCM keys and fresh exact hidden seed streams. No v1 key, seed, signature, ciphertext, or test receipt is reused.
+- **Completed D7/D8 design:** Both domains now contain five domain-specific vocabularies, explicit three-form surface distributions plus length bins, five typed feature mappings, five nuisance transformations, exact/near/sub-bank/same-label allocation details, and four concrete example schemas. These remain encrypted and custody-only.
+- **Generator/label separation correction:** The content generator returns only surface content and latent scientific state and has no label-engine import. Separate custody label code derives the label record and ambiguity proof. The review executes both sides separately and rejects label material embedded in content.
+- **Additional mandatory gates:** `d7_d8_vocabularies`, `surface_distributions`, `feature_mappings`, `nuisance_transforms`, and `concrete_example_schemas` were added to the fail-closed public compliance audit. Total mandatory custody gates increased from eight to thirteen.
+- **Repeated seal and review:** All 15 custody files were rehashed, all three packages re-encrypted, the allocation/index/commitment re-signed, the custody review repeated, and 300/300 fresh pre-freeze access attempts denied and hash-chain logged.
+- **Repeated targeted tests:** 8/8 passed, including 1,000 signature mutations, ciphertext mutation, role collapse, v2 identity, Phase 10 absence, and v2 zero-gap compliance.
+- **Repeated complete regression:** 197/197 passed in 156.515 seconds; failures 0; errors 0; skipped 0.
+- **Final v2 audit:** Three ciphertexts, 15 signed design artifacts, thirteen custody gates, 451 repository files, zero prohibited findings, zero Phase 10 artifacts, and `compliance_gaps=[]`.
+- **Compliance gaps:** None after correction and complete Phase 9A repetition.
+- **Deviation:** The incomplete v1 preseal was invalidated rather than silently amended. This is the exact remediation required by the WorkPlan change policy.
+- **Next action:** Replace v1 current-tree artifacts with v2 artifacts, commit and push the corrected study directly to `main`, append the v2 remote receipt, verify exact remote equality and sole-branch topology, and stop before Phase 10.

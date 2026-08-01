@@ -7,7 +7,7 @@
     "typed_distance": "pass"
   },
   "near_pairs_per_domain": 1000,
-  "preseal_id": "phase9a-preseal-v1",
+  "preseal_id": "phase9a-preseal-v2",
   "schema_version": "1.0",
   "status": "pass",
   "stress_atomic_rows": 2000

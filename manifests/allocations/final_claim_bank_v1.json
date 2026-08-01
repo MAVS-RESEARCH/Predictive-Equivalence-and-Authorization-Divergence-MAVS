@@ -170,7 +170,7 @@
   "schema_version": "1.0",
   "signature": {
     "algorithm": "Ed25519",
-    "public_key_b64": "dFlNnWMWsVglm+aA1ba14erDKCm+TyHrGDwS85SkkTc=",
-    "signature_b64": "7Bmo2xPiGDpNy//sLUD/t61VGJ3h/x4Wk1xJXrLHUj5unQMRBxlW3WLNw4/bFbmBHwhMR4/VSGM2+6eDQeOgDQ=="
+    "public_key_b64": "NB+EQRRXYpIywr2gCnNi/qLxlzKB1/EyXaNgHSG9OLI=",
+    "signature_b64": "qG+0U11XTav9Dg2AT2vJvMz9cZu8t8r25W4tSWqNCWQcImpB0nnN4jgOhXF1baJYvS0j79dIVmlMO/fodv6uDg=="
   }
 }
