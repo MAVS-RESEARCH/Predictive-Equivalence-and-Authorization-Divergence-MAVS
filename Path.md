@@ -2946,3 +2946,16 @@ Copy this block for every meaningful action:
 - **Required remediation:** create a new study version beginning at Phase 9A; precommit materialized content/label/seed hashes, counts, allocation bindings, and signed custody logging; repeat Phase 10 under that commitment; freeze the complete Phase 12 runner/audits/reports in a valid Phase 11; successfully materialize the bank; then begin a new one-pass Phase 12 run.
 - **Nominal next phase:** Phase 13 - Evidence package, clean reproduction, and bounded release. Phase 13 is not reachable until a valid Phase 12 completes with every release-blocking audit passed.
 - **Deviation:** None. The refusal to execute is required by the WorkPlan dependency and invalidation rules.
+
+### PATH-0109 - Phase 12 hard-stop publication
+
+- **Timestamp:** 2026-08-01T23:02:15+05:00.
+- **Phase:** 12 start gate only.
+- **Status:** Published; Phase 12 remains not started.
+- **Change ID:** `P12-PUBLISH-BLOCK-001`.
+- **Branch:** sole `main`; no secondary branch or pull request was created.
+- **Adjudication commit:** `3d4eb54deadd37dc7352395ff251736c4e1fe137` - `docs: retain phase 12 prerequisite hard stop`.
+- **Published scope:** one file, `Path.md`, with 43 inserted lines. No executable, config, manifest, result, bank, trace, prediction, report, or custody artifact was included.
+- **Push:** direct non-force push to `origin/main` passed.
+- **Remote verification:** local `HEAD` and `refs/heads/main` both resolved to `3d4eb54deadd37dc7352395ff251736c4e1fe137` immediately after publication. The remote exposes one branch, `main`.
+- **Next action:** commit and push this publication receipt, verify a clean worktree and exact local/remote equality, and stop. Do not begin Phase 13 or a blind run. The corrective workflow must restart with a new study version at Phase 9A.
