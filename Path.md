@@ -34,7 +34,7 @@ Rules:
 | 4 | Reversals, scope banks, and evidence sufficiency | Complete | None |
 | 5 | Six open adapters and held-out interfaces | Complete | None |
 | 6 | Projection layer, feature firewall, and parity | Complete | 122/122 tests; implementation commit `a85318ce1c65f207461c9ee2dd9eb1119c020b5e` pushed and remotely verified |
-| 7 | Baseline suite and common training harness | Complete | 146/146 tests; implementation commit `58bc41d1679b39eab49d7bc445a9f2716202875c` plus exact-judge-identity hardening published on `main` |
+| 7 | Baseline suite and common training harness | Complete | 146/146 tests; implementation `58bc41d1679b39eab49d7bc445a9f2716202875c`; exact-judge hardening `cd4726e8802610e6eb99dd9f0fb69b2af7e0bd78`, both verified on `main` |
 | 8 | Frozen MAVS-GC, DS-CF, and ablations | Not started | None |
 | 9 | Metrics, audits, statistics, and reports | Not started | None |
 | 10 | Development, training, calibration, and public validation | Not started | None |
@@ -2173,3 +2173,19 @@ Copy this block for every meaningful action:
 - **Compliance gaps:** None.
 - **Deviation:** The prior future-resolution sentinel was strengthened to exact immutable identities before final handoff; this narrows ambiguity and does not change the registered model family or version.
 - **Next action:** Commit and push the exact-identity hardening and final evidence directly to `main`, verify local/remote equality and sole-branch topology, then stop before Phase 8.
+
+### PATH-0077 - Exact judge identity publication and final Phase 7 close
+
+- **Timestamp:** 2026-08-01T12:24:56+05:00.
+- **Phase:** 7.
+- **Status:** Pass; exact-identity hardening published and remotely verified.
+- **Change ID:** `P7-JUDGE-IDENTITY-PUBLISH-001`.
+- **Commit:** `cd4726e8802610e6eb99dd9f0fb69b2af7e0bd78` - `phase-7: pin exact judge artifact identity`.
+- **Scope:** 13 files, comprising the immutable official artifact manifest, judge config/code/card, exact aggregate-verification audit, identity integration test, regenerated final evidence, and append-only corrective ledger.
+- **Push:** `git push origin main` passed without force or history rewrite.
+- **Exact remote verification:** local `HEAD` and remote `refs/heads/main` both resolved to `cd4726e8802610e6eb99dd9f0fb69b2af7e0bd78` immediately after publication.
+- **Branch topology:** the remote and local branch audits each returned only `main`; the working tree was clean and synchronized with `origin/main`.
+- **Final scientific boundary:** No training or scientific benchmark execution occurred. The exact artifact identity is ready for byte verification before the first Phase 10 judge execution.
+- **Compliance gaps:** None.
+- **Deviation:** None remaining. The earlier sentinel ambiguity is preserved in PATH-0076 and fully resolved by this published commit.
+- **Next action:** Commit and push this final publication receipt, verify the receipt commit on remote `main`, and stop before Phase 8.
