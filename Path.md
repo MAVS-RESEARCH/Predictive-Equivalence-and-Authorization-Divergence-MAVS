@@ -2423,3 +2423,24 @@ Copy this block for every meaningful action:
 - **Compliance gaps:** None.
 - **Deviation:** None.
 - **Next action:** Inspect and stage only Phase 9 scope, commit directly on `main`, push without force, verify local/remote SHA equality and sole-branch topology, append publication evidence, rerun the completed-ledger compliance audit, and stop before Phase 9A.
+
+## PEAD study-v3 recovery lineage
+
+### PATH-0087 - Blocked-v2 preservation and clean v3 branch bootstrap
+
+- **Timestamp:** 2026-08-01T23:34:17+05:00.
+- **Scope:** recovery lineage bootstrap before corrected Phase 9A; no custody implementation or scientific artifact was created in this step.
+- **Blocked-v2 head:** `cea7ba439de271ab054d959ec7e1571d98315d80` on remote `main`.
+- **Archival tag:** annotated tag `pead-study-v2-blocked` was created with a factual message stating that v2 stopped at Phase 11 before decryption/materialization, Phase 12 was unauthorized, Phase 9A materialization commitments were missing, historical custody events were unsigned, and no blind scientific result was generated.
+- **Remote tag verification:** remote peeled tag `refs/tags/pead-study-v2-blocked^{}` resolves exactly to `cea7ba439de271ab054d959ec7e1571d98315d80`.
+- **Main preservation:** remote `refs/heads/main` remained exactly `cea7ba439de271ab054d959ec7e1571d98315d80`. No reset, rebase, amend, squash, force-push, branch deletion, or history rewrite occurred.
+- **Phase 9 anchor:** `be093b5d2639deb2ff76ad96785c918b5a2a9b92`, subject `phase-9: implement metrics audits and reports`, is an ancestor of the remotely published blocked-v2 `main` history.
+- **Anchor evidence:** Phase 9 compliance status `pass`; `compliance_gaps=[]`; complete regression 189/189; failures 0; errors 0; released rows 0; trained models 0; scientific results 0; `phase9a_started=false`.
+- **Anchor absence proof:** the anchor tree contains zero Phase 9A paths, zero Phase 10/model/calibration/public-validation/freeze paths, and zero sealed-bank/custody-ciphertext paths.
+- **Identity availability:** local and remote branch `pead-study-v3`, execution-lineage ID `pead-study-v3`, and preseal-lineage ID `phase9a-preseal-v3` were verified unused before assignment.
+- **V3 branch creation:** branch `pead-study-v3` was created directly from the Phase 9 anchor and pushed without force. Initial local and remote v3 SHAs both equal `be093b5d2639deb2ff76ad96785c918b5a2a9b92`.
+- **Machine record:** `manifests/lineage/pead-study-v3.json` binds the scientific configuration `configs/study/pead_main_v1.yaml` at SHA-256 `e4f05d64e413d9f325e0adcbcd553b4eae6945bb4fb58c01220fbac2e4a3b83a`, the new execution/preseal IDs, anchor, blocked predecessor, archival tag, chronology, and knowledge boundary.
+- **Scientific meaning:** `pead-study-v3` is the third custody/execution lineage of the same frozen PEAD-Bench scientific design. It is not a new benchmark specification or performance-responsive redesign.
+- **Knowledge disclosure:** no human knowledge is claimed to have been erased. Prior v2 public-validation results are known historical facts but are prohibited from influencing v3 scientific design, methods, thresholds, diagnostics, allocations, claims, or reporting.
+- **Historical separation:** v2 remains visible on `main` and by archival tag. No v2 Phase 10/11 result, ciphertext identity, key, signature, custody receipt, freeze manifest, blocked-status artifact, or future Path entry was copied into the active v3 lineage.
+- **Next action:** publish this recovery record on `pead-study-v3`, verify exact remote equality, then implement only the shared custody/materialization infrastructure. Do not begin real Phase 9A or Phase 10 in this bootstrap commit.

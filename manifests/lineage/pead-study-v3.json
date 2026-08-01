@@ -1,0 +1,46 @@
+{
+  "blocked_predecessor": {
+    "archival_tag": "pead-study-v2-blocked",
+    "head_sha": "cea7ba439de271ab054d959ec7e1571d98315d80",
+    "phase11_status": "blocked-before-unlock-decryption-or-materialization",
+    "phase12_authorized": false,
+    "scientific_blind_result_generated": false
+  },
+  "branch": "pead-study-v3",
+  "chronology": {
+    "phase10_started": false,
+    "phase9_anchor_sha": "be093b5d2639deb2ff76ad96785c918b5a2a9b92",
+    "phase9_status": "pass",
+    "phase9_tests": 189,
+    "phase9a_started": false
+  },
+  "execution_lineage_id": "pead-study-v3",
+  "knowledge_boundary": {
+    "human_knowledge_erasure_claimed": false,
+    "prior_public_validation_may_influence_allocations": false,
+    "prior_public_validation_may_influence_claims": false,
+    "prior_public_validation_may_influence_diagnostics": false,
+    "prior_public_validation_may_influence_methods": false,
+    "prior_public_validation_may_influence_reporting": false,
+    "prior_public_validation_may_influence_scientific_design": false,
+    "prior_public_validation_may_influence_thresholds": false
+  },
+  "preseal_lineage_id": "phase9a-preseal-v3",
+  "predecessors": [
+    {
+      "execution_lineage_id": "pead-study-v1",
+      "status": "invalidated-phase9a-incomplete-d7-d8-custody-design"
+    },
+    {
+      "execution_lineage_id": "pead-study-v2",
+      "status": "blocked-phase11-incomplete-materialization-commitments-and-unsigned-historical-events"
+    }
+  ],
+  "schema_version": "1.0",
+  "scientific_design_relation": "same-frozen-pead-bench-study-new-custody-execution-lineage",
+  "scientific_study_config": {
+    "path": "configs/study/pead_main_v1.yaml",
+    "sha256": "e4f05d64e413d9f325e0adcbcd553b4eae6945bb4fb58c01220fbac2e4a3b83a"
+  },
+  "status": "pre-phase9a-recovery-bootstrap"
+}
