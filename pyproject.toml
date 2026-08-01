@@ -41,6 +41,9 @@ pead-audit-phase7 = "pead.phase7.audit:main"
 pead-run-phase7-tests = "pead.phase7.test_runner:main"
 pead-audit-phase8 = "pead.phase8.audit:main"
 pead-run-phase8-tests = "pead.phase8.test_runner:main"
+pead-audit-all = "pead.phase9.audit:main"
+pead-build-report = "pead.phase9.report_builder:main"
+pead-run-phase9-tests = "pead.phase9.test_runner:main"
 
 [tool.setuptools]
 package-dir = {"" = "src"}

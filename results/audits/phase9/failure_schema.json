@@ -1,0 +1,8 @@
+{
+  "additional_fields_allowed": false,
+  "bijection_required": true,
+  "fields": 31,
+  "qualifying_event_types": 7,
+  "schema_version": "1.0",
+  "status": "pass"
+}

@@ -1,0 +1,13 @@
+schema_version: "1.0"
+registry_id: PEAD-AUDITS-v1
+release_blocking_audits: [equivalence, authorization, leakage, access, holdouts, budget, traces, abstention, manifest, reproduction, claims, failure_retention, non_triviality]
+mandatory_human_checkpoints:
+  - label_engine_independence
+  - access_projection_raw_g_parity
+  - domain_mechanism_label_strata
+  - failures_and_quarantines
+  - benchmark_non_triviality
+  - baseline_fidelity
+  - negative_result_retention
+human_artifact_required_fields: [schema_version, checkpoint_id, reviewer_role, independence_relationship, reviewed_component_ids, checklist_version, findings, corrections, unresolved_concerns, status, signature_hash]
+release_rule: all_machine_and_human_audits_pass

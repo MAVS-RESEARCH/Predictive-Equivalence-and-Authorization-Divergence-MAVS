@@ -1,0 +1,7 @@
+{
+  "human_checkpoints": 7,
+  "machine_audits": 13,
+  "release_rule": "all_machine_and_human_audits_pass",
+  "schema_version": "1.0",
+  "status": "pass"
+}

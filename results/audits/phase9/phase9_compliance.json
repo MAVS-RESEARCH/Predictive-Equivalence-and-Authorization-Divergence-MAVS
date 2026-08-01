@@ -1,0 +1,542 @@
+{
+  "checks": {
+    "audit_registry": {
+      "human_checkpoints": 7,
+      "machine_audits": 13,
+      "release_rule": "all_machine_and_human_audits_pass",
+      "status": "pass"
+    },
+    "console_inventory": {
+      "entries": [
+        {
+          "comment": "Admit exactly the thirteen registered release and claim audit families.",
+          "comment_line": 18,
+          "console_log_line": 19,
+          "event_id": "P9-MASTER-001",
+          "file": "src/pead/audits/master.py"
+        },
+        {
+          "comment": "Reject every failed, missing, malformed, or evidence-free audit report.",
+          "comment_line": 22,
+          "console_log_line": 23,
+          "event_id": "P9-MASTER-002",
+          "file": "src/pead/audits/master.py"
+        },
+        {
+          "comment": "Emit a release-eligible machine-audit verdict only after all thirteen families pass.",
+          "comment_line": 27,
+          "console_log_line": 28,
+          "event_id": "P9-MASTER-003",
+          "file": "src/pead/audits/master.py"
+        },
+        {
+          "comment": "Verify every WorkPlan-named Phase 9 metric, audit, report, script, test, and human artifact exists.",
+          "comment_line": 150,
+          "console_log_line": 151,
+          "event_id": "P9-AUDIT-001",
+          "file": "src/pead/phase9/audit.py"
+        },
+        {
+          "comment": "Prove all metric identities, paired units, strata ordering, exact intervals, bootstrap, and multiplicity controls.",
+          "comment_line": 153,
+          "console_log_line": 154,
+          "event_id": "P9-AUDIT-002",
+          "file": "src/pead/phase9/audit.py"
+        },
+        {
+          "comment": "Prove the exact thirteen machine audits and seven mandatory human checkpoints are registered.",
+          "comment_line": 156,
+          "console_log_line": 157,
+          "event_id": "P9-AUDIT-003",
+          "file": "src/pead/phase9/audit.py"
+        },
+        {
+          "comment": "Prove the immutable 31-field FailureCard schema and seven-type bijection contract are exact.",
+          "comment_line": 159,
+          "console_log_line": 160,
+          "event_id": "P9-AUDIT-004",
+          "file": "src/pead/phase9/audit.py"
+        },
+        {
+          "comment": "Validate all signed internal checkpoint artifacts and explicit non-external-review disclosure.",
+          "comment_line": 162,
+          "console_log_line": 163,
+          "event_id": "P9-AUDIT-005",
+          "file": "src/pead/phase9/audit.py"
+        },
+        {
+          "comment": "Independently replay metrics, statistics, audit mutations, reports, failure cards, and human checkpoints.",
+          "comment_line": 165,
+          "console_log_line": 166,
+          "event_id": "P9-AUDIT-006",
+          "file": "src/pead/phase9/audit.py"
+        },
+        {
+          "comment": "Prove report builders retain failed methods, complete provenance, exact cards, and zero ineligible claims.",
+          "comment_line": 168,
+          "console_log_line": 169,
+          "event_id": "P9-AUDIT-007",
+          "file": "src/pead/phase9/audit.py"
+        },
+        {
+          "comment": "Validate the complete repository regression and retained high-volume Phase 9 evidence.",
+          "comment_line": 171,
+          "console_log_line": 172,
+          "event_id": "P9-AUDIT-008",
+          "file": "src/pead/phase9/audit.py"
+        },
+        {
+          "comment": "Prove Phase 9 produced no training, model, claim-bank, scientific-result, or Phase 9A artifact.",
+          "comment_line": 174,
+          "console_log_line": 175,
+          "event_id": "P9-AUDIT-009",
+          "file": "src/pead/phase9/audit.py"
+        },
+        {
+          "comment": "Freeze exact metric, audit, report, and registry source identities.",
+          "comment_line": 177,
+          "console_log_line": 178,
+          "event_id": "P9-AUDIT-010",
+          "file": "src/pead/phase9/audit.py"
+        },
+        {
+          "comment": "Inventory every Phase 9 console.log with its adjacent identifying comment and exact line.",
+          "comment_line": 180,
+          "console_log_line": 181,
+          "event_id": "P9-AUDIT-011",
+          "file": "src/pead/phase9/audit.py"
+        },
+        {
+          "comment": "Emit the zero-gap Phase 9 verdict only after every metric, audit, report, human, regression, and boundary gate passes.",
+          "comment_line": 186,
+          "console_log_line": 187,
+          "event_id": "P9-AUDIT-012",
+          "file": "src/pead/phase9/audit.py"
+        },
+        {
+          "comment": "Retain the release-blocking Phase 9 compliance failure and its exact cause.",
+          "comment_line": 191,
+          "console_log_line": 192,
+          "event_id": "P9-AUDIT-FAIL",
+          "file": "src/pead/phase9/audit.py"
+        },
+        {
+          "comment": "Build strict failure-card, unsuppressed-method, figure-point, provenance, and claim fixtures.",
+          "comment_line": 20,
+          "console_log_line": 21,
+          "event_id": "P9-REPORT-001",
+          "file": "src/pead/phase9/report_builder.py"
+        },
+        {
+          "comment": "Retain the report contract only when every method, event, provenance edge, and claim gate is represented.",
+          "comment_line": 23,
+          "console_log_line": 24,
+          "event_id": "P9-REPORT-002",
+          "file": "src/pead/phase9/report_builder.py"
+        },
+        {
+          "comment": "Publish the non-scientific report-builder proof with zero eligible scientific claims.",
+          "comment_line": 29,
+          "console_log_line": 30,
+          "event_id": "P9-REPORT-003",
+          "file": "src/pead/phase9/report_builder.py"
+        },
+        {
+          "comment": "Reconcile the live implementation with all registered metric identities and analytic fixtures.",
+          "comment_line": 129,
+          "console_log_line": 130,
+          "event_id": "P9-REVIEW-001",
+          "file": "src/pead/phase9/review.py"
+        },
+        {
+          "comment": "Stress deterministic paired cluster inference, exact zero-count intervals, and Holm correction.",
+          "comment_line": 132,
+          "console_log_line": 133,
+          "event_id": "P9-REVIEW-002",
+          "file": "src/pead/phase9/review.py"
+        },
+        {
+          "comment": "Execute all thirteen machine audits and independently inject one release blocker into each family.",
+          "comment_line": 135,
+          "console_log_line": 136,
+          "event_id": "P9-REVIEW-003",
+          "file": "src/pead/phase9/review.py"
+        },
+        {
+          "comment": "Prove strict failure-card bijection, unsuppressed methods, cell provenance, and claim fail-closure.",
+          "comment_line": 138,
+          "console_log_line": 139,
+          "event_id": "P9-REVIEW-004",
+          "file": "src/pead/phase9/review.py"
+        },
+        {
+          "comment": "Produce and validate all seven signed internal human-checkpoint contract artifacts.",
+          "comment_line": 141,
+          "console_log_line": 142,
+          "event_id": "P9-REVIEW-005",
+          "file": "src/pead/phase9/review.py"
+        },
+        {
+          "comment": "Report the complete non-scientific Phase 9 implementation verdict.",
+          "comment_line": 144,
+          "console_log_line": 145,
+          "event_id": "P9-REVIEW-006",
+          "file": "src/pead/phase9/review.py"
+        },
+        {
+          "comment": "Discover the complete repository metric, audit, reporting, regression, and stress suite.",
+          "comment_line": 22,
+          "console_log_line": 23,
+          "event_id": "P9-TEST-RUN-001",
+          "file": "src/pead/phase9/test_runner.py"
+        },
+        {
+          "comment": "Retain the exact complete-suite denominator before any test executes.",
+          "comment_line": 25,
+          "console_log_line": 26,
+          "event_id": "P9-TEST-RUN-002",
+          "file": "src/pead/phase9/test_runner.py"
+        },
+        {
+          "comment": "Independently replay all high-volume Phase 9 metric, mutation, report, and human-checkpoint gates.",
+          "comment_line": 29,
+          "console_log_line": 30,
+          "event_id": "P9-TEST-RUN-003",
+          "file": "src/pead/phase9/test_runner.py"
+        },
+        {
+          "comment": "Retain the complete regression and independent Phase 9 verdict with exact denominators.",
+          "comment_line": 44,
+          "console_log_line": 45,
+          "event_id": "P9-TEST-RUN-004",
+          "file": "src/pead/phase9/test_runner.py"
+        }
+      ],
+      "events": 29,
+      "status": "pass"
+    },
+    "failure_schema": {
+      "additional_fields_allowed": false,
+      "bijection_required": true,
+      "fields": 31,
+      "qualifying_event_types": 7,
+      "status": "pass"
+    },
+    "human_program": {
+      "checkpoints": 7,
+      "disclosure": "Internal contract-fixture review; not external human validation.",
+      "duplicates": [],
+      "external_human_validation": false,
+      "missing": [],
+      "status": "pass"
+    },
+    "implementation_manifest": {
+      "files": 33,
+      "manifest_sha256": "ae2968e06bd0c794275cdbf433c2a0133d76d4f01c8d45f1d0512fbf5f6fd9aa",
+      "status": "pass"
+    },
+    "implementation_review": {
+      "human_program": {
+        "checkpoints": 7,
+        "duplicates": [],
+        "external_human_validation": false,
+        "missing": [],
+        "status": "pass"
+      },
+      "master_audit": {
+        "blocked_audits": [
+          "equivalence",
+          "authorization",
+          "leakage",
+          "access",
+          "holdouts",
+          "budget",
+          "traces",
+          "abstention",
+          "manifest",
+          "reproduction",
+          "claims",
+          "failure_retention",
+          "non_triviality"
+        ],
+        "machine_audits": 13,
+        "positive_master": {
+          "audits": [
+            "equivalence",
+            "authorization",
+            "leakage",
+            "access",
+            "holdouts",
+            "budget",
+            "traces",
+            "abstention",
+            "manifest",
+            "reproduction",
+            "claims",
+            "failure_retention",
+            "non_triviality"
+          ],
+          "release_blockers": [],
+          "status": "pass"
+        },
+        "release_blocking_mutations": 13,
+        "status": "pass"
+      },
+      "metrics": {
+        "analytic_fixtures": 4,
+        "families": {
+          "causal": 3,
+          "diagnostic_sciences": 14,
+          "paradigm": 4,
+          "protected": 9,
+          "sequential": 8
+        },
+        "registered_metrics": 38,
+        "status": "pass"
+      },
+      "reporting": {
+        "claim_ledger": {
+          "audit": {
+            "emitted_claims": [],
+            "forbidden_wording": [],
+            "ineligible": [],
+            "missing_evidence": {},
+            "status": "pass"
+          },
+          "claims": [],
+          "eligibility": {
+            "C1": false,
+            "C2": false,
+            "C3": false,
+            "C4": false,
+            "C5": false,
+            "C6": false
+          },
+          "narrative": "No Phase 9 scientific claims emitted.",
+          "status": "pass"
+        },
+        "failure_card_bijection": {
+          "cards": 7,
+          "duplicates": [],
+          "events": 7,
+          "missing": [],
+          "orphaned": [],
+          "schema_invalid": [],
+          "status": "pass"
+        },
+        "failure_card_hashes": [
+          "6224a712c2486afffee31fb74f2aeb9245d3f968686186e37d00503f880fd740",
+          "74d07db104abc2d159c565e25de1ee4a36c7df74689786bda6a3dc6bebc75cac",
+          "2133347c0af7cd48c7ba251faf2706e03460d1363b30326d7d61fa11a8bf0ce8",
+          "0b9564dba91ea7578dee60721c1beed2bb80398f5952d3b30807034ff0d7e872",
+          "9c22dfed1a4fe70acac5c21d50078cf5f75290465e80d4a394022ad42b5b4e60",
+          "768cf24d8d13a723a4b97a46b0d743ab6be2b10300067c7c98e5b8c4c61d71d1",
+          "d6c88c47c8742c112af9ee11c62ad1c65a6fabe2e0077f5d940dffa5ad6a77c5"
+        ],
+        "figure_points": 39,
+        "status": "pass",
+        "table": {
+          "cells": 39,
+          "complete": 39,
+          "failed_methods_visible": true,
+          "methods": 39,
+          "status": "pass"
+        }
+      },
+      "scientific_results": 0,
+      "statistics": {
+        "bootstrap_repetitions": 2000,
+        "clusters": 24,
+        "deterministic_replays": 2,
+        "holm_hypotheses": 15,
+        "paired_units": 10000,
+        "status": "pass",
+        "zero_count_interval": [
+          0.0,
+          0.0003688199146187343
+        ],
+        "zero_count_trials": 10000
+      },
+      "status": "pass",
+      "trained_models": 0
+    },
+    "metric_contract": {
+      "analytic_fixtures": 4,
+      "families": {
+        "causal": 3,
+        "diagnostic_sciences": 14,
+        "paradigm": 4,
+        "protected": 9,
+        "sequential": 8
+      },
+      "registered_metrics": 38,
+      "registry_sha256": "67ba04bc800d942777d07f45e898b82589cae4f21668a93591baa2b45124c0de",
+      "statistical_gates": {
+        "exact_zero": true,
+        "holm": true,
+        "mechanism_domain": true,
+        "paired_bootstrap": true,
+        "strata_before_macro": true
+      },
+      "status": "pass"
+    },
+    "phase_boundary": {
+      "forbidden_artifacts": [],
+      "phase9a_started": false,
+      "released_rows": 0,
+      "scientific_results": 0,
+      "status": "pass",
+      "trained_models": 0
+    },
+    "report_contract": {
+      "failure_cards": 7,
+      "figure_points": 39,
+      "methods": 39,
+      "scientific_claims": 0,
+      "status": "pass",
+      "table_cells": 39
+    },
+    "required_files": {
+      "human_artifacts": 7,
+      "metric_test_files": 5,
+      "missing": [],
+      "required_files": 32,
+      "status": "pass"
+    },
+    "test_evidence": {
+      "errors": 0,
+      "failures": 0,
+      "status": "pass",
+      "stress_gates": {
+        "human_program": {
+          "checkpoints": 7,
+          "duplicates": [],
+          "external_human_validation": false,
+          "missing": [],
+          "status": "pass"
+        },
+        "master_audit": {
+          "blocked_audits": [
+            "equivalence",
+            "authorization",
+            "leakage",
+            "access",
+            "holdouts",
+            "budget",
+            "traces",
+            "abstention",
+            "manifest",
+            "reproduction",
+            "claims",
+            "failure_retention",
+            "non_triviality"
+          ],
+          "machine_audits": 13,
+          "positive_master": {
+            "audits": [
+              "equivalence",
+              "authorization",
+              "leakage",
+              "access",
+              "holdouts",
+              "budget",
+              "traces",
+              "abstention",
+              "manifest",
+              "reproduction",
+              "claims",
+              "failure_retention",
+              "non_triviality"
+            ],
+            "release_blockers": [],
+            "status": "pass"
+          },
+          "release_blocking_mutations": 13,
+          "status": "pass"
+        },
+        "metrics": {
+          "analytic_fixtures": 4,
+          "families": {
+            "causal": 3,
+            "diagnostic_sciences": 14,
+            "paradigm": 4,
+            "protected": 9,
+            "sequential": 8
+          },
+          "registered_metrics": 38,
+          "status": "pass"
+        },
+        "reporting": {
+          "claim_ledger": {
+            "audit": {
+              "emitted_claims": [],
+              "forbidden_wording": [],
+              "ineligible": [],
+              "missing_evidence": {},
+              "status": "pass"
+            },
+            "claims": [],
+            "eligibility": {
+              "C1": false,
+              "C2": false,
+              "C3": false,
+              "C4": false,
+              "C5": false,
+              "C6": false
+            },
+            "narrative": "No Phase 9 scientific claims emitted.",
+            "status": "pass"
+          },
+          "failure_card_bijection": {
+            "cards": 7,
+            "duplicates": [],
+            "events": 7,
+            "missing": [],
+            "orphaned": [],
+            "schema_invalid": [],
+            "status": "pass"
+          },
+          "failure_card_hashes": [
+            "6224a712c2486afffee31fb74f2aeb9245d3f968686186e37d00503f880fd740",
+            "74d07db104abc2d159c565e25de1ee4a36c7df74689786bda6a3dc6bebc75cac",
+            "2133347c0af7cd48c7ba251faf2706e03460d1363b30326d7d61fa11a8bf0ce8",
+            "0b9564dba91ea7578dee60721c1beed2bb80398f5952d3b30807034ff0d7e872",
+            "9c22dfed1a4fe70acac5c21d50078cf5f75290465e80d4a394022ad42b5b4e60",
+            "768cf24d8d13a723a4b97a46b0d743ab6be2b10300067c7c98e5b8c4c61d71d1",
+            "d6c88c47c8742c112af9ee11c62ad1c65a6fabe2e0077f5d940dffa5ad6a77c5"
+          ],
+          "figure_points": 39,
+          "status": "pass",
+          "table": {
+            "cells": 39,
+            "complete": 39,
+            "failed_methods_visible": true,
+            "methods": 39,
+            "status": "pass"
+          }
+        },
+        "scientific_results": 0,
+        "statistics": {
+          "bootstrap_repetitions": 2000,
+          "clusters": 24,
+          "deterministic_replays": 2,
+          "holm_hypotheses": 15,
+          "paired_units": 10000,
+          "status": "pass",
+          "zero_count_interval": [
+            0.0,
+            0.0003688199146187343
+          ],
+          "zero_count_trials": 10000
+        },
+        "status": "pass",
+        "trained_models": 0
+      },
+      "tests_run": 189
+    }
+  },
+  "compliance_gaps": [],
+  "phase": 9,
+  "schema_version": "1.0",
+  "status": "pass"
+}

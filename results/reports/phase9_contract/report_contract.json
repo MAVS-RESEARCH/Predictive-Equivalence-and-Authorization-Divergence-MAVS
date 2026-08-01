@@ -1,0 +1,52 @@
+{
+  "claim_ledger": {
+    "audit": {
+      "emitted_claims": [],
+      "forbidden_wording": [],
+      "ineligible": [],
+      "missing_evidence": {},
+      "status": "pass"
+    },
+    "claims": [],
+    "eligibility": {
+      "C1": false,
+      "C2": false,
+      "C3": false,
+      "C4": false,
+      "C5": false,
+      "C6": false
+    },
+    "narrative": "No Phase 9 scientific claims emitted.",
+    "status": "pass"
+  },
+  "failure_card_bijection": {
+    "cards": 7,
+    "duplicates": [],
+    "events": 7,
+    "missing": [],
+    "orphaned": [],
+    "schema_invalid": [],
+    "status": "pass"
+  },
+  "failure_card_hashes": [
+    "6224a712c2486afffee31fb74f2aeb9245d3f968686186e37d00503f880fd740",
+    "74d07db104abc2d159c565e25de1ee4a36c7df74689786bda6a3dc6bebc75cac",
+    "2133347c0af7cd48c7ba251faf2706e03460d1363b30326d7d61fa11a8bf0ce8",
+    "0b9564dba91ea7578dee60721c1beed2bb80398f5952d3b30807034ff0d7e872",
+    "9c22dfed1a4fe70acac5c21d50078cf5f75290465e80d4a394022ad42b5b4e60",
+    "768cf24d8d13a723a4b97a46b0d743ab6be2b10300067c7c98e5b8c4c61d71d1",
+    "d6c88c47c8742c112af9ee11c62ad1c65a6fabe2e0077f5d940dffa5ad6a77c5"
+  ],
+  "figure_points": 39,
+  "phase": 9,
+  "report_type": "implementation-contract-only",
+  "schema_version": "1.0",
+  "status": "pass",
+  "table": {
+    "cells": 39,
+    "complete": 39,
+    "failed_methods_visible": true,
+    "methods": 39,
+    "status": "pass"
+  }
+}

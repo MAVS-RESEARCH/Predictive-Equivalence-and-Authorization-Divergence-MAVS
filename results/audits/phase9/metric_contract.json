@@ -1,0 +1,21 @@
+{
+  "analytic_fixtures": 4,
+  "families": {
+    "causal": 3,
+    "diagnostic_sciences": 14,
+    "paradigm": 4,
+    "protected": 9,
+    "sequential": 8
+  },
+  "registered_metrics": 38,
+  "registry_sha256": "67ba04bc800d942777d07f45e898b82589cae4f21668a93591baa2b45124c0de",
+  "schema_version": "1.0",
+  "statistical_gates": {
+    "exact_zero": true,
+    "holm": true,
+    "mechanism_domain": true,
+    "paired_bootstrap": true,
+    "strata_before_macro": true
+  },
+  "status": "pass"
+}

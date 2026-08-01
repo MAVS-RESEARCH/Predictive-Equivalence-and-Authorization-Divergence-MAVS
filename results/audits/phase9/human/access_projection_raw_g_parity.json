@@ -1,0 +1,19 @@
+{
+  "checklist_version": "PEAD-HUMAN-v1",
+  "checkpoint_id": "access_projection_raw_g_parity",
+  "corrections": [],
+  "findings": [
+    "Raw-G field masks, runtime firewall evidence, and tabular/sequence/graph semantic parity were reviewed."
+  ],
+  "independence_relationship": "Post-implementation audit role using independent fixtures; internal review only, not external human validation.",
+  "reviewed_component_ids": [
+    "configs/access/raw_g.yaml",
+    "results/audits/phase6/access_report.json",
+    "results/audits/phase6/representation_parity_report.json"
+  ],
+  "reviewer_role": "Phase 9 internal contract auditor",
+  "schema_version": "1.0",
+  "signature_hash": "0be49da760fc0f220a5b7a37771ce6fde96999384216ac7b71140a4f7842ad0a",
+  "status": "pass",
+  "unresolved_concerns": []
+}

@@ -1,0 +1,8 @@
+{
+  "human_artifacts": 7,
+  "metric_test_files": 5,
+  "missing": [],
+  "required_files": 32,
+  "schema_version": "1.0",
+  "status": "pass"
+}

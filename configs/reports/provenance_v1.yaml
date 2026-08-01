@@ -1,0 +1,6 @@
+schema_version: "1.0"
+config_id: PEAD-REPORT-PROVENANCE-v1
+cell_required_fields: [cell_id, value, processed_data_id, raw_trace_ids, config_id, audit_ids]
+suppression_prohibited: [failed_methods, failed_cases, errors, quarantines, invalidations, negative_results]
+claim_emission_requires_eligibility: true
+artifact_levels: [table_cell, figure_point, failure_card, claim]

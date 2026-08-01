@@ -1,0 +1,30 @@
+schema_version: "1.0"
+registry_id: PEAD-METRICS-v1
+families:
+  paradigm:
+    metrics: [LBG, GIG, GAG, AFA]
+    unit: paired_world_or_pair
+  protected:
+    metrics: [unsafe_acceptance_rate, false_rejection_rate, escalation_rate, terminal_coverage, forced_certainty_error, unnecessary_escalation_rate, catastrophic_acceptance_rate, worst_world_loss, worst_decile_loss]
+    mandatory_joint_reporting: true
+  diagnostic_sciences:
+    metrics: [in_scope_sensitivity, scope_matched_specificity, conditional_perception_extension, intended_decision_influence_I_in, out_of_scope_influence_I_out, redundancy, nuisance_signal_instability, nuisance_decision_instability, pairwise_harmful_composition, set_level_harmful_composition, protected_error_delta, escalation_delta, scope_leakage, boundary_discontinuity]
+    report_separately: true
+  sequential:
+    metrics: [reversal_detection_latency, stale_authorization_rate, unsafe_continuation_rate, recovery_correctness, recovery_latency, decision_hysteresis, false_reversal_sensitivity, authorization_flip_accuracy_at_change_point]
+    unit: sequence
+  causal:
+    metrics: [paired_unit_effect, pair_effect, sequence_effect]
+    pairing_required: true
+statistics:
+  exact_zero_count_interval: clopper_pearson_two_sided
+  bootstrap: paired_cluster_by_evaluation_unit
+  generalization_bootstrap: mechanism_by_domain_cluster
+  repetitions: 2000
+  seed: 9107
+  primary_strata_order: [domain, mechanism, macro]
+  secondary_ablation_correction: Holm
+prohibitions:
+  - Zero observed unsafe acceptance is not certification.
+  - Macro averages cannot precede per-domain and per-mechanism effects.
+  - Ordinary row accuracy cannot replace a registered paired statistic.

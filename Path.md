@@ -36,7 +36,7 @@ Rules:
 | 6 | Projection layer, feature firewall, and parity | Complete | 122/122 tests; implementation commit `a85318ce1c65f207461c9ee2dd9eb1119c020b5e` pushed and remotely verified |
 | 7 | Baseline suite and common training harness | Complete | 146/146 tests; implementation `58bc41d1679b39eab49d7bc445a9f2716202875c`; exact-judge hardening `cd4726e8802610e6eb99dd9f0fb69b2af7e0bd78`, both verified on `main` |
 | 8 | Frozen MAVS-GC, DS-CF, and ablations | Complete | 167/167 tests; implementation commit `fd8e84af7d07526a6837a60c85105ece1ea8115a` pushed and remotely verified on sole branch `main` |
-| 9 | Metrics, audits, statistics, and reports | Not started | None |
+| 9 | Metrics, audits, statistics, and reports | Local gates passed; publication pending | 189/189 tests; 38 registered metrics; 13/13 release-blocking mutations rejected; zero compliance gaps |
 | 10 | Development, training, calibration, and public validation | Not started | None |
 | 11 | Sealed banks and signed freeze | Not started | None |
 | 12 | One-pass blind evaluation | Not started | None |
@@ -2312,3 +2312,114 @@ Copy this block for every meaningful action:
 - **Compliance gaps:** None.
 - **Deviation:** None.
 - **Next action:** Stop before Phase 9. Phase 9 is not authorized by the current request.
+
+### PATH-0083 - Phase 9 source reconciliation, scientific boundary, and metric registry
+
+- **Timestamp:** 2026-08-01T13:33:26+05:00.
+- **Phase:** 9.
+- **Status:** Pass.
+- **Change ID:** `P9-SOURCE-METRICS-001`.
+- **Sources reconciled:** `WorkPlan.md` Sections 5.7-5.15 and Phase 9; `CLAIMS.md`; frozen protected-objective, diagnostic, method, access, and failure-card registries; retained Phase 2/3/4/6/7/8 audit evidence; and `C:\Users\Saif malik\Downloads\MAVS-Diagnostic Sciences.pdf` pages 7-20 including metrics, Diagnostic Sciences estimators, trace audit, residual failures, reproducibility, and limitations.
+- **Scientific boundary:** Phase 9 implements metric, audit, failure-retention, claim-eligibility, and report-generation code using analytic and contract fixtures only. It does not train, select, calibrate, threshold, evaluate, or compare models scientifically; access claim-bearing holdouts; begin Phase 9A; or emit C1-C6.
+- **Metric registry:** `configs/metrics/metric_registry_v1.yaml` registers 38 unique metrics: 4 paradigm, 9 protected, 14 Diagnostic Sciences, 8 sequential, and 3 causal. It freezes paired evaluation units, two-level generalization clusters, 2,000 deterministic bootstrap repetitions with seed `9107`, domain/mechanism-before-macro reporting, exact Clopper-Pearson intervals, and Holm correction for 15 secondary ablations.
+- **Paradigm metrics:** LBG, GIG, GAG, and AFA are implemented using identity-aligned pairs. AFA rejects an empty divergent-pair denominator and mismatched pair identities.
+- **Protected metrics:** UAR, FRR, escalation, terminal coverage, forced-certainty error, unnecessary escalation, catastrophic acceptance, worst-world loss, and worst-decile loss retain numerator and denominator separately. Empty class denominators return an explicit `None`; the opportunity set itself cannot be empty.
+- **Diagnostic Sciences metrics:** in-scope sensitivity, scope-matched specificity, conditional perception extension, `I_in`, `I_out`, redundancy, nuisance signal instability, nuisance decision instability, pairwise harmful composition, set-level harmful composition, protected-error delta, escalation delta, scope leakage, and boundary discontinuity are separately keyed and individually tested.
+- **Sequential metrics:** reversal-detection latency, stale-authorization rate, unsafe-continuation rate, recovery correctness, recovery latency, decision hysteresis, false-reversal sensitivity, and authorization-flip accuracy at the known change point are separately keyed and individually tested.
+- **Causal/statistical metrics:** pair and sequence effects require exact identity alignment. Paired cluster bootstrap resamples evaluation clusters, mechanism/domain bootstrap uses joint domain-mechanism clusters, per-stratum effects are emitted before macro averages, and exact zero-count bounds are computed without an undeclared dependency.
+- **Integrity metrics:** the Phase 9 master suite consumes the already-executable Phase 3 PEI/ADI/equivalence, authorization, and leakage reports rather than duplicating or changing their signed definitions.
+- **Deviation:** None.
+
+### PATH-0084 - Complete audit suite, strict FailureCards, and signed checkpoint program
+
+- **Timestamp:** 2026-08-01T13:33:26+05:00.
+- **Phase:** 9.
+- **Status:** Pass.
+- **Change ID:** `P9-AUDIT-CARDS-001`.
+- **Audit inventory:** exactly thirteen release/claim gate families are registered: equivalence, authorization, leakage, access, holdouts, budget, traces, abstention, manifest, reproduction, claims, failure retention, and non-triviality.
+- **Existing audit integration:** the first four families reuse the signed, passing Phase 3 and Phase 6 implementations and reports. New audit modules implement group-atomic holdout/contamination checks, budget ceilings, trace completeness/chronology, abstention collapse, manifest equality, tolerance-aware reproduction with conclusion preservation, claim evidence/wording, negative/failure retention, and non-triviality controls.
+- **Master behavior:** `execute_master_audit` accepts only the exact thirteen identities and refuses missing, additional, or non-passing reports. Independent mutation review injected a release blocker into every audit family; all 13/13 injections raised a blocking error.
+- **FailureCard implementation:** immutable `FailureCard` contains exactly the frozen 31 fields; additional or missing fields are rejected. Expected/observed actions, identity strings, evidence/claim/tier/reference collections, and diagnostic state are validated. The card ID is a deterministic hash of the qualifying event identity/type and each complete card is content-addressed.
+- **Bijection:** all seven qualifying classes were exercised: protected error, scope anomaly, label disagreement, access violation, quarantine, invalidation, and reproduction mismatch. Seven events produced seven canonical cards; missing 0, duplicate 0, orphaned 0, schema-invalid 0. Missing and duplicate mutation fixtures failed closed.
+- **Human checkpoint registry:** exactly seven checkpoints exist: label-engine independence; access projection/Raw-G parity; domain x mechanism x label strata; failures/quarantines; benchmark non-triviality; baseline fidelity; and negative-result retention.
+- **Signed internal artifacts:** seven strict JSON artifacts under `results/audits/phase9/human/` name the reviewer role, independence relationship, actual reviewed component/evidence IDs, checklist version, findings, corrections, unresolved concerns, pass status, and a recomputed content signature hash.
+- **Review disclosure:** this is an internal post-implementation contract-fixture review performed by the Phase 9 audit role. It is explicitly recorded as not external human validation. D7/D8 remain custody-bound and no scientific headline result/failure exists before Phase 10.
+- **Checkpoint SHA-256:** access parity `241520F1A3355661A3BA0C37593403585E4034A2496511BDA4720E4350C4D3A7`; baseline fidelity `4D14FA12D731C086225DDD18948994B6886B8A0A80A0BF9551223D1BE32ACE2D`; non-triviality `C0E11A44C29C4500BB2F38C46A8E07664D2FEA4E191197B4B499AA22999753B5`; strata `DAB5E81C02B3A76138660A032851C8BAA0B1C5CA187DAD14A03EC88C3DFBA803`; failures/quarantines `EBB3A14323386614F1575E1ACABA8350F2B1D2A7CBD3767C2B7428B1C060E2D9`; label engines `8415D55BEB5A58AE893E452DE557C432702954EDF4FEFF7FF5E6FDC5217475AD`; negative retention `E4D709111376D7F1F5DA9B910F71CA768F351D1C3AF0763143B7964310C4DF3A`.
+- **Deviation:** None.
+
+### PATH-0085 - Report builders, provenance, claim closure, and retained contract artifact
+
+- **Timestamp:** 2026-08-01T13:33:26+05:00.
+- **Phase:** 9.
+- **Status:** Pass.
+- **Change ID:** `P9-REPORTS-001`.
+- **Report modules:** `tables.py`, `figures.py`, `failure_cards.py`, `failure_card_schema.py`, and `claim_ledger.py` implement the complete WorkPlan file set.
+- **Cell/point provenance:** every `ProvenanceCell` requires a cell identity, processed-data identity, one or more raw-trace IDs, config identity, and one or more audit IDs. Both table cells and figure points use this strict object.
+- **Selective-reporting prevention:** the table builder requires exact equality between expected method IDs, result rows, and statuses. A deliberately failed method remains visible. Removing it raises an error. Figure construction similarly requires the exact registered point set.
+- **Claim eligibility:** the claim ledger calls the claim audit before emission and refuses unknown/ineligible claims, missing evidence, or forbidden wording. All C1-C6 eligibility values remain false in Phase 9 and the retained report emits zero scientific claims.
+- **Builder execution:** `.\.venv\Scripts\python.exe scripts\build_report.py` produced `results/reports/phase9_contract/report_contract.json` as an explicitly non-scientific implementation contract.
+- **Retained report evidence:** all 39 method rows are present; provenance-complete table cells 39/39; figure points 39/39; failed methods visible; qualifying events/cards 7/7; scientific claims 0. Report SHA-256 is `21C750B0264E451920246E9D9850EF3EAB3F1E9E9B9C8E954EBC36470EE4E3D5`.
+- **Deviation:** None.
+
+### PATH-0086 - Phase 9 stress testing, line instrumentation, and zero-gap compliance
+
+- **Timestamp:** 2026-08-01T13:33:26+05:00.
+- **Phase:** 9.
+- **Status:** Local gates passed; publication pending.
+- **Change ID:** `P9-AUDIT-LOCAL-001`.
+- **Targeted metric command:** `.\.venv\Scripts\python.exe -m unittest tests.unit.test_metrics_paradigm tests.unit.test_metrics_protected tests.unit.test_metrics_diagnostic tests.unit.test_metrics_sequential tests.unit.test_metrics_statistics -v`.
+- **Targeted metric result:** 12/12 tests passed with failures 0 and errors 0, covering analytic values, identity mismatches, empty denominators, exact zero counts, all Diagnostic Sciences metrics, all sequential metrics, causal pairing, deterministic bootstrap, strata, and Holm correction.
+- **Targeted audit/report command:** `.\.venv\Scripts\python.exe -m unittest tests.integration.test_master_audit tests.integration.test_failure_card_bijection -v`.
+- **Targeted audit/report result:** 7/7 passed, including one independent release-blocking mutation per audit family, missing-audit closure, all seven FailureCard types, missing/duplicate/orphan rejection, method suppression rejection, provenance completeness, and ineligible-claim rejection.
+- **Combined Phase 9 command:** the five metric suites, two integration suites, and `tests.stress.test_phase9_stress` passed 22/22 in 2.815 seconds.
+- **Complete command:** `.\.venv\Scripts\python.exe scripts\run_phase9_tests.py`.
+- **Complete result:** 189/189 repository tests passed in the final 195.2-second builder/test/audit sequence; failures 0, errors 0, skipped 0. All Phase 0-8 regressions remained passing.
+- **Statistical stress:** 10,000 paired units across 24 domain-mechanism clusters; 2,000 bootstrap repetitions; two exact deterministic replays; zero-count denominator 10,000 with 95% exact interval `[0.0, 0.0003688199146187343]`; 15 Holm-adjusted secondary hypotheses.
+- **Master stress:** 13 machine audits passed in the positive fixture and 13/13 individually injected release blockers were rejected.
+- **Corrective audit history:** final manual reconciliation found that `P9-MASTER-002` stated evidence-free reports were rejected while the implementation initially checked only the report status. The master gate was strengthened to reject a status-only report, the existing missing-audit integration test gained that mutation, and the targeted test, complete 189-test suite, and compliance audit were rerun. No completion claim used the weaker state.
+- **Report/card stress:** 39/39 table cells, 39/39 figure points, seven events/cards, zero missing/duplicate/orphan/schema-invalid cards, failed method retained, emitted claims 0.
+- **Human program:** seven of seven signed internal checkpoint artifacts passed strict field, identity, status, completeness, uniqueness, and signature verification; missing 0, duplicates 0.
+- **Boundary:** trained models 0; scientific results 0; released rows 0; Phase 9A started false; Phase 9 raw/processed/model/checkpoint artifacts 0.
+- **Final audit command:** `.\.venv\Scripts\python.exe scripts\audit_all.py`.
+- **Final compliance:** `results/audits/phase9/phase9_compliance.json` reports `status=pass`, 38 metrics, 189 tests, 13 release-blocking mutations, seven human checkpoints, zero scientific results, and `compliance_gaps=[]`.
+- **Implementation manifest:** 33 metric/audit/report/configuration files are frozen in `results/manifests/phase9/metric_audit_report_registry_v1.json`; content identity `ae2968e06bd0c794275cdbf433c2a0133d76d4f01c8d45f1d0512fbf5f6fd9aa`; manifest file SHA-256 `6092DE4155C1C38941794051AEEE5E98A77924F3CB8AD24E773B82EBC8F8C533`.
+- **Retained evidence SHA-256:** audit registry `1236089727E547CA1BFCA0353F934F8BC6BD58DD1DDC3751A6EBA2857375BE7B`; console inventory `0A7000A0A9296A159BF92774F678FD32FCD646F3E53B5C2A61EDA8FCC6B6F883`; failure schema `85F9367672D6BF0B561855B9BA93FBDC06B9795082B12497B9059E86B90161CD`; human program `2E7BEDAA61D680D5D3CA34E4929A3B40CC688F91FAFE1CB561E385C78EF12D60`; implementation report `7ADB71079A2D40704352BAC2257022D4B904F45766529972040E80C68BEE93A1`; implementation review `2E549E20C72BF515234CB190E996AD78B515F41E83297A1C810D9E681D2C9054`; metric contract `F83FE23F69119BFB0DA1DFE46EE58A65C2C7E9C7C947D47E55101040F04AF6C6`; compliance `C2AEC316FFA91AFCA93D6CD0145D682BC53F4D2BA135D234240A64268DD519C9`; tests `C9F9848F85E4346D30C4FEAFF67D461CE337463B2CA549172370794E8EA0A93F`; boundary `423AD3B2AEA1BBADA54B83AD8924C82064650A275BAD7A5CA85EA832FAFB9043`; report-audit `674EC00F82124D067D0C295F3ED87DE6D0D8B094A76D1C397FEC3122CBBD6C58`; required files `A06777E4FC706B0F8D9FFE70EE53B94B316AA33FB4D2A8132753FD98CF0E7660`; test evidence `B46EB9B92450839A0D89850A1C10716DA7382512F8761DC3E899FF27E5853A85`.
+- **Line-level `console.log` and immediately adjacent identifying-comment inventory:**
+
+| File | Comment line | `console.log` line | Event ID | Adjacent identifying comment |
+|---|---:|---:|---|---|
+| `src/pead/audits/master.py` | 18 | 19 | `P9-MASTER-001` | Admit exactly the thirteen registered release and claim audit families. |
+| `src/pead/audits/master.py` | 22 | 23 | `P9-MASTER-002` | Reject every failed, missing, malformed, or evidence-free audit report. |
+| `src/pead/audits/master.py` | 27 | 28 | `P9-MASTER-003` | Emit a release-eligible machine-audit verdict only after all thirteen families pass. |
+| `src/pead/phase9/audit.py` | 150 | 151 | `P9-AUDIT-001` | Verify every WorkPlan-named Phase 9 metric, audit, report, script, test, and human artifact exists. |
+| `src/pead/phase9/audit.py` | 153 | 154 | `P9-AUDIT-002` | Prove all metric identities, paired units, strata ordering, exact intervals, bootstrap, and multiplicity controls. |
+| `src/pead/phase9/audit.py` | 156 | 157 | `P9-AUDIT-003` | Prove the exact thirteen machine audits and seven mandatory human checkpoints are registered. |
+| `src/pead/phase9/audit.py` | 159 | 160 | `P9-AUDIT-004` | Prove the immutable 31-field FailureCard schema and seven-type bijection contract are exact. |
+| `src/pead/phase9/audit.py` | 162 | 163 | `P9-AUDIT-005` | Validate all signed internal checkpoint artifacts and explicit non-external-review disclosure. |
+| `src/pead/phase9/audit.py` | 165 | 166 | `P9-AUDIT-006` | Independently replay metrics, statistics, audit mutations, reports, failure cards, and human checkpoints. |
+| `src/pead/phase9/audit.py` | 168 | 169 | `P9-AUDIT-007` | Prove report builders retain failed methods, complete provenance, exact cards, and zero ineligible claims. |
+| `src/pead/phase9/audit.py` | 171 | 172 | `P9-AUDIT-008` | Validate the complete repository regression and retained high-volume Phase 9 evidence. |
+| `src/pead/phase9/audit.py` | 174 | 175 | `P9-AUDIT-009` | Prove Phase 9 produced no training, model, claim-bank, scientific-result, or Phase 9A artifact. |
+| `src/pead/phase9/audit.py` | 177 | 178 | `P9-AUDIT-010` | Freeze exact metric, audit, report, and registry source identities. |
+| `src/pead/phase9/audit.py` | 180 | 181 | `P9-AUDIT-011` | Inventory every Phase 9 console.log with its adjacent identifying comment and exact line. |
+| `src/pead/phase9/audit.py` | 186 | 187 | `P9-AUDIT-012` | Emit the zero-gap Phase 9 verdict only after every metric, audit, report, human, regression, and boundary gate passes. |
+| `src/pead/phase9/audit.py` | 191 | 192 | `P9-AUDIT-FAIL` | Retain the release-blocking Phase 9 compliance failure and its exact cause. |
+| `src/pead/phase9/report_builder.py` | 20 | 21 | `P9-REPORT-001` | Build strict failure-card, unsuppressed-method, figure-point, provenance, and claim fixtures. |
+| `src/pead/phase9/report_builder.py` | 23 | 24 | `P9-REPORT-002` | Retain the report contract only when every method, event, provenance edge, and claim gate is represented. |
+| `src/pead/phase9/report_builder.py` | 29 | 30 | `P9-REPORT-003` | Publish the non-scientific report-builder proof with zero eligible scientific claims. |
+| `src/pead/phase9/review.py` | 129 | 130 | `P9-REVIEW-001` | Reconcile the live implementation with all registered metric identities and analytic fixtures. |
+| `src/pead/phase9/review.py` | 132 | 133 | `P9-REVIEW-002` | Stress deterministic paired cluster inference, exact zero-count intervals, and Holm correction. |
+| `src/pead/phase9/review.py` | 135 | 136 | `P9-REVIEW-003` | Execute all thirteen machine audits and independently inject one release blocker into each family. |
+| `src/pead/phase9/review.py` | 138 | 139 | `P9-REVIEW-004` | Prove strict failure-card bijection, unsuppressed methods, cell provenance, and claim fail-closure. |
+| `src/pead/phase9/review.py` | 141 | 142 | `P9-REVIEW-005` | Produce and validate all seven signed internal human-checkpoint contract artifacts. |
+| `src/pead/phase9/review.py` | 144 | 145 | `P9-REVIEW-006` | Report the complete non-scientific Phase 9 implementation verdict. |
+| `src/pead/phase9/test_runner.py` | 22 | 23 | `P9-TEST-RUN-001` | Discover the complete repository metric, audit, reporting, regression, and stress suite. |
+| `src/pead/phase9/test_runner.py` | 25 | 26 | `P9-TEST-RUN-002` | Retain the exact complete-suite denominator before any test executes. |
+| `src/pead/phase9/test_runner.py` | 29 | 30 | `P9-TEST-RUN-003` | Independently replay all high-volume Phase 9 metric, mutation, report, and human-checkpoint gates. |
+| `src/pead/phase9/test_runner.py` | 44 | 45 | `P9-TEST-RUN-004` | Retain the complete regression and independent Phase 9 verdict with exact denominators. |
+
+- **Console inventory result:** 29/29 Phase 9 `console.log` call sites have an immediately adjacent exact-ID `STEP LOG` comment. Exact paths, comment lines, log lines, IDs, and comments are retained in `results/audits/phase9/console_inventory.json` and above.
+- **WorkPlan gate verdict:** metric edge/empty/zero/analytic fixtures: pass; every diagnostic/sequential metric: pass; strict FailureCard bijection: pass; mandatory signed checkpoints: pass with internal-review disclosure; every release-blocking fixture: blocked; failed-method/case suppression: prohibited; ineligible claim emission: prohibited; every table/figure cell/point resolves to processed, raw, config, and audit identities: pass.
+- **Compliance gaps:** None.
+- **Deviation:** None.
+- **Next action:** Inspect and stage only Phase 9 scope, commit directly on `main`, push without force, verify local/remote SHA equality and sole-branch topology, append publication evidence, rerun the completed-ledger compliance audit, and stop before Phase 9A.
