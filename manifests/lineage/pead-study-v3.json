@@ -36,7 +36,7 @@
       "compliance_path": "results/audits/phase11-freeze-v3-d1f1d5da2443a86113fb/phase11_compliance.json",
       "decryption_attempted": true,
       "freeze_id": "phase11-freeze-v3-d1f1d5da2443a86113fb",
-      "implementation_commit": "pending-phase11-publication",
+      "implementation_commit": "92cb9e6da984dc3cced4a820b0db3f7e157b57ef",
       "materialization_attempted": true,
       "materialization_count": 1,
       "materialization_id": "materialization-db40269e60851be059eeb816",
@@ -112,6 +112,10 @@
     {
       "commit": "e184c71c4b24a6ba5035534105ef23ecf5f5fbda",
       "event": "phase10-ledger-close"
+    },
+    {
+      "commit": "92cb9e6da984dc3cced4a820b0db3f7e157b57ef",
+      "event": "phase11-freeze-and-one-shot-materialization"
     }
   ],
   "schema_version": "1.1",
@@ -135,9 +139,14 @@
       "PATH-0093",
       "PATH-0094",
       "PATH-0095",
-      "PATH-0096"
+      "PATH-0096",
+      "PATH-0097",
+      "PATH-0098",
+      "PATH-0099",
+      "PATH-0100",
+      "PATH-0101"
     ],
-    "state_basis_commit": "e184c71c4b24a6ba5035534105ef23ecf5f5fbda"
+    "state_basis_commit": "92cb9e6da984dc3cced4a820b0db3f7e157b57ef"
   },
   "status": "phase11-complete-phase12-authorized"
 }

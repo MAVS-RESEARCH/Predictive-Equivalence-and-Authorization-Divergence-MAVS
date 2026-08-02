@@ -2823,3 +2823,15 @@ Copy this block for every meaningful action:
 | `src/pead/phase11/test_runner.py` | 47 | 48 | `P11-TEST-002` | Retain the exact full-suite result without treating tests as blind scientific execution. |
 
 - **Next action:** stage only Phase 11 scope, verify no secret/private/plaintext label material is staged, pass cached diff checks, commit and push `pead-study-v3` without force, verify exact remote equality and preserved `main`/blocked tag, then record the implementation commit in the mutable lineage ledger and append the publication receipt. Phase 12 must remain unstarted.
+
+### PATH-0101 - Phase 11 publication and lineage-close receipt
+
+- **Timestamp:** 2026-08-02T15:07:05+05:00.
+- **Implementation commit:** `92cb9e6da984dc3cced4a820b0db3f7e157b57ef` - `phase-11: freeze and materialize blind banks`.
+- **Published scope:** 45 intended paths, 8,671 inserted lines, nine compressed registered projection objects, final/failed freeze manifests, corrected Phase 10 candidate and complete correction receipt, v3 custody continuation, blind-bank manifest, Phase 11 source/scripts/tests, pre/post regression evidence, six primary audits, Path documentation audit, machine lineage, and PATH-0098 through PATH-0100.
+- **Prepublication controls:** authoritative 472-file freeze signature/inventory pass; Phase 9A prefix/design/ciphertext/allocation pass; pre-freeze 214/214 tests; postmaterialization 217/217 tests; 1,200/1,200 mutations rejected; 319,200 projection rows; exact/near/reversal/scope/evidence and bank matrix counts exact; duplicate/contamination/disjointness pass; 41/41 console sites documented; `compliance_gaps=[]`; staged custody-secret/private-key findings 0; unstaged files 0; untracked files 0.
+- **Push and exact verification:** `git push origin pead-study-v3` passed without force. Local `HEAD`, remote-tracking branch, and remote `refs/heads/pead-study-v3` resolved to the implementation commit immediately after publication.
+- **Preserved history:** remote `main` and peeled `pead-study-v2-blocked^{}` remain `cea7ba439de271ab054d959ec7e1571d98315d80`. No main merge, force-push, reset, rebase, amend, squash, history rewrite, branch deletion, or tag deletion occurred.
+- **Lineage close:** `manifests/lineage/pead-study-v3.json` now binds the implementation commit, records the Phase 11 publication event, uses that commit as its state basis, marks Phase 11 complete/pass with one successful immutable materialization, and leaves Phase 12 authorized but unstarted. This ledger-close entry resolves its containing commit through Git history and does not assert an unknowable self-SHA.
+- **Final Phase 11 verdict:** complete, pushed, and machine/human lineage documented with no compliance gap. The authoritative freeze and sealed projections are unchanged by this ledger close.
+- **Next phase:** Phase 12 - one-pass blind evaluation and generalization. It is authorized by the Phase 11 gate but has not started and still requires a new explicit user instruction.
