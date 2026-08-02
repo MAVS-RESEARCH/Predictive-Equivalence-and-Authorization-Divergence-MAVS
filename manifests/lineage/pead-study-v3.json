@@ -6,13 +6,57 @@
     "phase12_authorized": false,
     "scientific_blind_result_generated": false
   },
+  "bootstrap_record": {
+    "chronology_at_creation": {
+      "phase10_started": false,
+      "phase9_anchor_sha": "be093b5d2639deb2ff76ad96785c918b5a2a9b92",
+      "phase9_status": "pass",
+      "phase9_tests": 189,
+      "phase9a_started": false
+    },
+    "record_commit": "2bdde7288ff7ad568272597a6ccf33f7fd2684ca",
+    "status_at_creation": "pre-phase9a-recovery-bootstrap"
+  },
   "branch": "pead-study-v3",
-  "chronology": {
-    "phase10_started": false,
-    "phase9_anchor_sha": "be093b5d2639deb2ff76ad96785c918b5a2a9b92",
-    "phase9_status": "pass",
-    "phase9_tests": 189,
-    "phase9a_started": false
+  "current_chronology": {
+    "phase10": {
+      "complete": true,
+      "compliance_gaps": [],
+      "compliance_path": "results/audits/phase10-dev-v3/phase10_compliance.json",
+      "implementation_commit": "72924d914f3ce0af2ef1fd0fd5049b59d4355f13",
+      "ledger_close_commit": "e184c71c4b24a6ba5035534105ef23ecf5f5fbda",
+      "public_validation_used_for_selection": false,
+      "run_id": "phase10-dev-v3",
+      "started": true,
+      "status": "pass"
+    },
+    "phase11": {
+      "decryption_attempted": false,
+      "materialization_attempted": false,
+      "started": false,
+      "unlock_attempted": false
+    },
+    "phase12": {
+      "authorized": false,
+      "started": false
+    },
+    "phase9": {
+      "anchor_sha": "be093b5d2639deb2ff76ad96785c918b5a2a9b92",
+      "status": "pass",
+      "tests": 189
+    },
+    "phase9a": {
+      "allocation_adapter_correction_commit": "ce0ca6425287de36af12958d0a84ddd48dfb7c8e",
+      "byte_identical_through_phase10": true,
+      "commitment_sha256": "39e9202b07b4038571463a5b1c8ae0b5b15ac1e6989a7a57d29dd73385731397",
+      "complete": true,
+      "event_count": 312,
+      "implementation_commit": "6d7c209d2c14b72015bd5bebe579864f03da6abc",
+      "preseal_lineage_id": "phase9a-preseal-v3",
+      "signature_verified": true,
+      "started": true,
+      "status": "pass"
+    }
   },
   "execution_lineage_id": "pead-study-v3",
   "knowledge_boundary": {
@@ -36,11 +80,54 @@
       "status": "blocked-phase11-incomplete-materialization-commitments-and-unsigned-historical-events"
     }
   ],
-  "schema_version": "1.0",
+  "publication_history": [
+    {
+      "commit": "2bdde7288ff7ad568272597a6ccf33f7fd2684ca",
+      "event": "recovery-lineage-bootstrap"
+    },
+    {
+      "commit": "961432db6b34de2a30dbe83fc3502a04c0a10119",
+      "event": "shared-custody-materialization-contract"
+    },
+    {
+      "commit": "6d7c209d2c14b72015bd5bebe579864f03da6abc",
+      "event": "corrected-phase9a-preseal"
+    },
+    {
+      "commit": "ce0ca6425287de36af12958d0a84ddd48dfb7c8e",
+      "event": "sealed-allocation-adapter-correction"
+    },
+    {
+      "commit": "72924d914f3ce0af2ef1fd0fd5049b59d4355f13",
+      "event": "phase10-development-and-public-validation"
+    },
+    {
+      "commit": "e184c71c4b24a6ba5035534105ef23ecf5f5fbda",
+      "event": "phase10-ledger-close"
+    }
+  ],
+  "schema_version": "1.1",
   "scientific_design_relation": "same-frozen-pead-bench-study-new-custody-execution-lineage",
   "scientific_study_config": {
     "path": "configs/study/pead_main_v1.yaml",
     "sha256": "e4f05d64e413d9f325e0adcbcd553b4eae6945bb4fb58c01220fbac2e4a3b83a"
   },
-  "status": "pre-phase9a-recovery-bootstrap"
+  "state_binding": {
+    "containing_commit_resolution": "git log -1 --format=%H -- manifests/lineage/pead-study-v3.json",
+    "freeze_candidate_path": "manifests/freeze_candidate_v1.json",
+    "path_ledger_entries": [
+      "PATH-0087",
+      "PATH-0088",
+      "PATH-0089",
+      "PATH-0090",
+      "PATH-0091",
+      "PATH-0092",
+      "PATH-0093",
+      "PATH-0094",
+      "PATH-0095",
+      "PATH-0096"
+    ],
+    "state_basis_commit": "e184c71c4b24a6ba5035534105ef23ecf5f5fbda"
+  },
+  "status": "phase10-complete-freeze-candidate-not-unlocked"
 }

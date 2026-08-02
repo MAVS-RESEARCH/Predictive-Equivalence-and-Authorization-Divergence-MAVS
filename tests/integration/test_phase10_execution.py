@@ -13,6 +13,16 @@ RUN = "phase10-dev-v3"
 
 
 class Phase10ExecutionTests(unittest.TestCase):
+    def test_study_v3_lineage_exposes_current_phase10_state(self) -> None:
+        lineage = json.loads((ROOT / "manifests/lineage/pead-study-v3.json").read_text(encoding="utf-8"))
+        self.assertEqual(lineage["execution_lineage_id"], "pead-study-v3")
+        self.assertEqual(lineage["preseal_lineage_id"], "phase9a-preseal-v3")
+        self.assertEqual(lineage["bootstrap_record"]["status_at_creation"], "pre-phase9a-recovery-bootstrap")
+        self.assertTrue(lineage["current_chronology"]["phase9a"]["complete"])
+        self.assertTrue(lineage["current_chronology"]["phase10"]["complete"])
+        self.assertFalse(lineage["current_chronology"]["phase11"]["started"])
+        self.assertEqual(lineage["status"], "phase10-complete-freeze-candidate-not-unlocked")
+
     def test_phase10_public_validation_is_inspection_only(self) -> None:
         report = json.loads((ROOT / f"results/processed/{RUN}/public_validation_metrics.json").read_text(encoding="utf-8"))
         self.assertFalse(report["selection_from_public_validation"])
