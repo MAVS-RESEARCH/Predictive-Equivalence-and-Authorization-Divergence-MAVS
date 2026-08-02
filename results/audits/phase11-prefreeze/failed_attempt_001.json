@@ -1,0 +1,23 @@
+{
+  "blind_label_revealed": false,
+  "case_generation_started": false,
+  "decryption_attempted": true,
+  "design_artifacts_verified": 15,
+  "event_log_head_sha256": "27825a2a44dd6002bab03d5df164181f46b84815addf8065477d93a4a2d66327",
+  "event_sequence": 313,
+  "event_sha256": "27825a2a44dd6002bab03d5df164181f46b84815addf8065477d93a4a2d66327",
+  "failed_freeze_id": "phase11-freeze-v3-755c6311c6f71d9afd7c",
+  "failure_class": "custody-consumer-dynamic-module-registration",
+  "freeze_manifest_sha256": "47d9cf75f513bff4f9d24c1ab3af211645a26d24f3fae0404902b35f15435ced",
+  "materialization_attempted": false,
+  "method_executed": false,
+  "method_or_report_changed": false,
+  "one_shot_state_consumed": false,
+  "phase": 11,
+  "preseal_id": "phase9a-preseal-v3",
+  "required_resolution": "correct-custody-consumer-register-module-run-full-regression-and-issue-superseding-signed-freeze",
+  "schema_version": "1.0",
+  "scientific_design_changed": false,
+  "status": "failed-closed-before-generation-or-materialization",
+  "study_version": "pead-study-v3"
+}

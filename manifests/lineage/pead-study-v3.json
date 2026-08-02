@@ -31,13 +31,21 @@
       "status": "pass"
     },
     "phase11": {
-      "decryption_attempted": false,
-      "materialization_attempted": false,
-      "started": false,
-      "unlock_attempted": false
+      "complete": true,
+      "compliance_gaps": [],
+      "compliance_path": "results/audits/phase11-freeze-v3-d1f1d5da2443a86113fb/phase11_compliance.json",
+      "decryption_attempted": true,
+      "freeze_id": "phase11-freeze-v3-d1f1d5da2443a86113fb",
+      "implementation_commit": "pending-phase11-publication",
+      "materialization_attempted": true,
+      "materialization_count": 1,
+      "materialization_id": "materialization-db40269e60851be059eeb816",
+      "started": true,
+      "status": "pass",
+      "unlock_attempted": true
     },
     "phase12": {
-      "authorized": false,
+      "authorized": true,
       "started": false
     },
     "phase9": {
@@ -69,7 +77,6 @@
     "prior_public_validation_may_influence_scientific_design": false,
     "prior_public_validation_may_influence_thresholds": false
   },
-  "preseal_lineage_id": "phase9a-preseal-v3",
   "predecessors": [
     {
       "execution_lineage_id": "pead-study-v1",
@@ -80,6 +87,7 @@
       "status": "blocked-phase11-incomplete-materialization-commitments-and-unsigned-historical-events"
     }
   ],
+  "preseal_lineage_id": "phase9a-preseal-v3",
   "publication_history": [
     {
       "commit": "2bdde7288ff7ad568272597a6ccf33f7fd2684ca",
@@ -113,8 +121,10 @@
     "sha256": "e4f05d64e413d9f325e0adcbcd553b4eae6945bb4fb58c01220fbac2e4a3b83a"
   },
   "state_binding": {
+    "blind_bank_manifest_path": "manifests/blind_bank_manifest.json",
     "containing_commit_resolution": "git log -1 --format=%H -- manifests/lineage/pead-study-v3.json",
     "freeze_candidate_path": "manifests/freeze_candidate_v1.json",
+    "freeze_manifest_path": "manifests/freeze_manifest.json",
     "path_ledger_entries": [
       "PATH-0087",
       "PATH-0088",
@@ -129,5 +139,5 @@
     ],
     "state_basis_commit": "e184c71c4b24a6ba5035534105ef23ecf5f5fbda"
   },
-  "status": "phase10-complete-freeze-candidate-not-unlocked"
+  "status": "phase11-complete-phase12-authorized"
 }

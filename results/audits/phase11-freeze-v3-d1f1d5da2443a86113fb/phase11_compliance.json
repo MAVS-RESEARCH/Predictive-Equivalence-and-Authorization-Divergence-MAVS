@@ -1,0 +1,27 @@
+{
+  "blind_label_reveals": 0,
+  "blind_method_executions": 0,
+  "compliance_gaps": [],
+  "console_log_sites": 41,
+  "duplicate_overlap_audit": "pass",
+  "freeze_complete_and_signed": true,
+  "freeze_id": "phase11-freeze-v3-d1f1d5da2443a86113fb",
+  "labels_separately_encrypted": true,
+  "materialization_id": "materialization-db40269e60851be059eeb816",
+  "one_shot_materialization_complete": true,
+  "phase": 11,
+  "phase12_authorized": true,
+  "phase9a_design_hashes_match": true,
+  "post_freeze_method_or_report_changes": 0,
+  "preseal_id": "phase9a-preseal-v3",
+  "registry_disjointness_audit": {
+    "domain_templates_disjoint": true,
+    "grammar_topology_disjoint_by_signed_registry": true,
+    "sealed_templates": 127,
+    "seed_namespaces_disjoint": true
+  },
+  "schema_version": "3.0",
+  "scientific_holdout_changes": 0,
+  "status": "pass",
+  "study_version": "pead-study-v3"
+}

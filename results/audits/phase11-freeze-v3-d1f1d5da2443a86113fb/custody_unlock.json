@@ -1,0 +1,31 @@
+{
+  "all_events_signed": true,
+  "blind_labels_revealed": false,
+  "event_log_head_sha256": "57a28250f8653066e3ab1169b8b27808cff31564080d05391c5742cb6dcab558",
+  "failed_pre_materialization_attempts": 1,
+  "freeze_id": "phase11-freeze-v3-d1f1d5da2443a86113fb",
+  "labels_separately_encrypted": true,
+  "materialization_count": 1,
+  "methods_executed": false,
+  "phase": 11,
+  "phase11_events": 25,
+  "phase9a_prefix_byte_identical": true,
+  "phase9a_prefix_events": 312,
+  "preseal_id": "phase9a-preseal-v3",
+  "required_actions_present": [
+    "authenticated-package-decryption",
+    "bank-materialization",
+    "custody-design-read",
+    "evaluator-label-object",
+    "method-freeze-accepted",
+    "one-shot-state-consumed",
+    "one-shot-unlock",
+    "registered-projection-export"
+  ],
+  "schema_version": "3.0",
+  "status": "pass",
+  "study_version": "pead-study-v3",
+  "successful_unlocks": 1,
+  "unlock_attempts": 2,
+  "unsigned_events": 0
+}

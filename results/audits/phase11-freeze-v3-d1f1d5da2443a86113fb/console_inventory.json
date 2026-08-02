@@ -1,0 +1,295 @@
+{
+  "call_sites": 41,
+  "entries": [
+    {
+      "comment": "STEP LOG P11-SCRIPT-AUDIT-001: Enter the Phase 11 audit without invoking any blind method or label consumer.",
+      "comment_line": 17,
+      "console_log_line": 18,
+      "event_id": "P11-SCRIPT-AUDIT-001",
+      "file": "scripts/audit_phase11.py"
+    },
+    {
+      "comment": "STEP LOG P11-CANDIDATE-001: Verify every nontransient Phase 10 candidate identity before removing runtime caches.",
+      "comment_line": 33,
+      "console_log_line": 34,
+      "event_id": "P11-CANDIDATE-001",
+      "file": "scripts/correct_phase11_freeze_candidate.py"
+    },
+    {
+      "comment": "STEP LOG P11-CANDIDATE-002: Rewrite only the generated candidate inventory while preserving every scientific, method, checkpoint, operating-point, metric, audit, and report hash.",
+      "comment_line": 45,
+      "console_log_line": 46,
+      "event_id": "P11-CANDIDATE-002",
+      "file": "scripts/correct_phase11_freeze_candidate.py"
+    },
+    {
+      "comment": "STEP LOG P11-CANDIDATE-003: Verify the corrected candidate and retain the complete removed-entry custody receipt.",
+      "comment_line": 71,
+      "console_log_line": 72,
+      "event_id": "P11-CANDIDATE-003",
+      "file": "scripts/correct_phase11_freeze_candidate.py"
+    },
+    {
+      "comment": "STEP LOG P11-SCRIPT-FREEZE-001: Enter the authoritative Phase 11 freeze command with an explicit external custody root.",
+      "comment_line": 18,
+      "console_log_line": 19,
+      "event_id": "P11-SCRIPT-FREEZE-001",
+      "file": "scripts/freeze_phase11.py"
+    },
+    {
+      "comment": "STEP LOG P11-SCRIPT-MATERIALIZE-001: Enter the only authorized pead-study-v3 scientific materialization command.",
+      "comment_line": 18,
+      "console_log_line": 19,
+      "event_id": "P11-SCRIPT-MATERIALIZE-001",
+      "file": "scripts/materialize_phase11.py"
+    },
+    {
+      "comment": "STEP LOG P11-INCIDENT-001: Append an individually signed event for the failed source-bundle access before any retry.",
+      "comment_line": 31,
+      "console_log_line": 32,
+      "event_id": "P11-INCIDENT-001",
+      "file": "scripts/record_phase11_failed_attempt.py"
+    },
+    {
+      "comment": "STEP LOG P11-INCIDENT-002: Verify the failure receipt, pristine one-shot state, and signed continuation head.",
+      "comment_line": 64,
+      "console_log_line": 65,
+      "event_id": "P11-INCIDENT-002",
+      "file": "scripts/record_phase11_failed_attempt.py"
+    },
+    {
+      "comment": "STEP LOG P11-ORCH-001: Run all tests before the signed freeze so later code repair cannot occur silently.",
+      "comment_line": 21,
+      "console_log_line": 22,
+      "event_id": "P11-ORCH-001",
+      "file": "scripts/run_phase11.py"
+    },
+    {
+      "comment": "STEP LOG P11-ORCH-002: Sign the final method/report freeze before any key access, decryption, or materialization.",
+      "comment_line": 24,
+      "console_log_line": 25,
+      "event_id": "P11-ORCH-002",
+      "file": "scripts/run_phase11.py"
+    },
+    {
+      "comment": "STEP LOG P11-ORCH-003: Execute exactly one custody unlock and materialization from the precommitted design.",
+      "comment_line": 27,
+      "console_log_line": 28,
+      "event_id": "P11-ORCH-003",
+      "file": "scripts/run_phase11.py"
+    },
+    {
+      "comment": "STEP LOG P11-ORCH-004: Re-run the complete regression suite against the immutable materialization.",
+      "comment_line": 30,
+      "console_log_line": 31,
+      "event_id": "P11-ORCH-004",
+      "file": "scripts/run_phase11.py"
+    },
+    {
+      "comment": "STEP LOG P11-ORCH-005: Run the final WorkPlan compliance audit before Phase 12 authorization.",
+      "comment_line": 33,
+      "console_log_line": 34,
+      "event_id": "P11-ORCH-005",
+      "file": "scripts/run_phase11.py"
+    },
+    {
+      "comment": "STEP LOG P11-SCRIPT-TEST-001: Enter the complete Phase 11 regression runner with an explicit custody stage.",
+      "comment_line": 18,
+      "console_log_line": 19,
+      "event_id": "P11-SCRIPT-TEST-001",
+      "file": "scripts/run_phase11_tests.py"
+    },
+    {
+      "comment": "STEP LOG P11-AUDIT-001: Verify the final custody signature, frozen inventory, and v3 lineage bindings.",
+      "comment_line": 179,
+      "console_log_line": 180,
+      "event_id": "P11-AUDIT-001",
+      "file": "src/pead/phase11/audit.py"
+    },
+    {
+      "comment": "STEP LOG P11-AUDIT-002: Verify Phase 9A and Phase 11 holdout hashes and prove zero scientific design mutations.",
+      "comment_line": 183,
+      "console_log_line": 184,
+      "event_id": "P11-AUDIT-002",
+      "file": "src/pead/phase11/audit.py"
+    },
+    {
+      "comment": "STEP LOG P11-AUDIT-003: Verify access-profile fields, label separation, hashes, counts, and cross-profile case identity.",
+      "comment_line": 205,
+      "console_log_line": 206,
+      "event_id": "P11-AUDIT-003",
+      "file": "src/pead/phase11/audit.py"
+    },
+    {
+      "comment": "STEP LOG P11-AUDIT-004: Execute exact, nearest-neighbor, structural, graph, registry, and custody-source contamination audits.",
+      "comment_line": 209,
+      "console_log_line": 210,
+      "event_id": "P11-AUDIT-004",
+      "file": "src/pead/phase11/audit.py"
+    },
+    {
+      "comment": "STEP LOG P11-AUDIT-005: Verify the signed append-only custody continuation and one-shot materialization receipt.",
+      "comment_line": 213,
+      "console_log_line": 214,
+      "event_id": "P11-AUDIT-005",
+      "file": "src/pead/phase11/audit.py"
+    },
+    {
+      "comment": "STEP LOG P11-AUDIT-006: Stress signed-freeze and bank-count mutations and reject every invalid variant.",
+      "comment_line": 243,
+      "console_log_line": 244,
+      "event_id": "P11-AUDIT-006",
+      "file": "src/pead/phase11/audit.py"
+    },
+    {
+      "comment": "STEP LOG P11-AUDIT-007: Inventory every operational console log and its exact adjacent comment line.",
+      "comment_line": 247,
+      "console_log_line": 248,
+      "event_id": "P11-AUDIT-007",
+      "file": "src/pead/phase11/audit.py"
+    },
+    {
+      "comment": "STEP LOG P11-AUDIT-BLOCK: Retain an explicit non-completion verdict for every unresolved Phase 11 gate.",
+      "comment_line": 282,
+      "console_log_line": 283,
+      "event_id": "P11-AUDIT-BLOCK",
+      "file": "src/pead/phase11/audit.py"
+    },
+    {
+      "comment": "STEP LOG P11-AUDIT-008: Record Phase 11 completion and Phase 12 authorization in the mutable v3 execution-lineage ledger.",
+      "comment_line": 285,
+      "console_log_line": 286,
+      "event_id": "P11-AUDIT-008",
+      "file": "src/pead/phase11/audit.py"
+    },
+    {
+      "comment": "STEP LOG P11-AUDIT-009: Authorize Phase 12 only after every WorkPlan Phase 11 gate passes.",
+      "comment_line": 308,
+      "console_log_line": 309,
+      "event_id": "P11-AUDIT-009",
+      "file": "src/pead/phase11/audit.py"
+    },
+    {
+      "comment": "STEP LOG P11-FREEZE-001: Verify every nontransient Phase 10 candidate byte before constructing the authoritative freeze.",
+      "comment_line": 75,
+      "console_log_line": 76,
+      "event_id": "P11-FREEZE-001",
+      "file": "src/pead/phase11/freeze.py"
+    },
+    {
+      "comment": "STEP LOG P11-FREEZE-002: Record and exclude ignored bytecode and cache products from the signed scientific freeze.",
+      "comment_line": 85,
+      "console_log_line": 86,
+      "event_id": "P11-FREEZE-002",
+      "file": "src/pead/phase11/freeze.py"
+    },
+    {
+      "comment": "STEP LOG P11-FREEZE-003: Reverify Phase 9A signatures, ciphertexts, counts, allocation, and pristine one-shot state.",
+      "comment_line": 122,
+      "console_log_line": 123,
+      "event_id": "P11-FREEZE-003",
+      "file": "src/pead/phase11/freeze.py"
+    },
+    {
+      "comment": "STEP LOG P11-FREEZE-004: Verify the custody signature and every final frozen byte before permitting unlock.",
+      "comment_line": 199,
+      "console_log_line": 200,
+      "event_id": "P11-FREEZE-004",
+      "file": "src/pead/phase11/freeze.py"
+    },
+    {
+      "comment": "STEP LOG P11-FREEZE-005: Close the method and reporting surface under the new-study-version mutation policy.",
+      "comment_line": 203,
+      "console_log_line": 204,
+      "event_id": "P11-FREEZE-005",
+      "file": "src/pead/phase11/freeze.py"
+    },
+    {
+      "comment": "STEP LOG P11-UNLOCK-001: Verify the custody-signed freeze and every frozen file before requesting access.",
+      "comment_line": 256,
+      "console_log_line": 257,
+      "event_id": "P11-UNLOCK-001",
+      "file": "src/pead/phase11/materialize.py"
+    },
+    {
+      "comment": "STEP LOG P11-UNLOCK-002: Re-run the exact public consumer and prove pristine one-shot state immediately before unlock.",
+      "comment_line": 272,
+      "console_log_line": 273,
+      "event_id": "P11-UNLOCK-002",
+      "file": "src/pead/phase11/materialize.py"
+    },
+    {
+      "comment": "STEP LOG P11-UNLOCK-003: Authenticated-decrypt the three independently encrypted source, label, and seed bundles in custody memory.",
+      "comment_line": 287,
+      "console_log_line": 288,
+      "event_id": "P11-UNLOCK-003",
+      "file": "src/pead/phase11/materialize.py"
+    },
+    {
+      "comment": "STEP LOG P11-UNLOCK-004: Verify every recovered mechanism, grammar, topology, interaction, intervention, nuisance, domain, seed, generator, allocation, distance, and ambiguity hash.",
+      "comment_line": 290,
+      "console_log_line": 291,
+      "event_id": "P11-UNLOCK-004",
+      "file": "src/pead/phase11/materialize.py"
+    },
+    {
+      "comment": "STEP LOG P11-MATERIALIZE-001: Generate the exact signed bank/track matrix once with hidden namespace-specific seeds.",
+      "comment_line": 311,
+      "console_log_line": 312,
+      "event_id": "P11-MATERIALIZE-001",
+      "file": "src/pead/phase11/materialize.py"
+    },
+    {
+      "comment": "STEP LOG P11-MATERIALIZE-002: Re-encrypt evaluator labels as a distinct post-materialization object and persist no label plaintext.",
+      "comment_line": 403,
+      "console_log_line": 404,
+      "event_id": "P11-MATERIALIZE-002",
+      "file": "src/pead/phase11/materialize.py"
+    },
+    {
+      "comment": "STEP LOG P11-MATERIALIZE-003: Publish only registered label-free method projections to the development repository.",
+      "comment_line": 427,
+      "console_log_line": 428,
+      "event_id": "P11-MATERIALIZE-003",
+      "file": "src/pead/phase11/materialize.py"
+    },
+    {
+      "comment": "STEP LOG P11-CUSTODY-001: Append signed custody events for freeze acceptance, unlock, every design read, every decryption, projection, label object, and one-shot consumption.",
+      "comment_line": 443,
+      "console_log_line": 444,
+      "event_id": "P11-CUSTODY-001",
+      "file": "src/pead/phase11/materialize.py"
+    },
+    {
+      "comment": "STEP LOG P11-MATERIALIZE-004: Verify the final bank counts, projection hashes, custody chain, and consumed one-shot state.",
+      "comment_line": 497,
+      "console_log_line": 498,
+      "event_id": "P11-MATERIALIZE-004",
+      "file": "src/pead/phase11/materialize.py"
+    },
+    {
+      "comment": "STEP LOG P11-MATERIALIZE-005: Close materialization without executing any model or revealing any blind label.",
+      "comment_line": 503,
+      "console_log_line": 504,
+      "event_id": "P11-MATERIALIZE-005",
+      "file": "src/pead/phase11/materialize.py"
+    },
+    {
+      "comment": "STEP LOG P11-TEST-001: Discover and execute the complete repository test suite in an isolated bytecode-free process.",
+      "comment_line": 17,
+      "console_log_line": 18,
+      "event_id": "P11-TEST-001",
+      "file": "src/pead/phase11/test_runner.py"
+    },
+    {
+      "comment": "STEP LOG P11-TEST-002: Retain the exact full-suite result without treating tests as blind scientific execution.",
+      "comment_line": 47,
+      "console_log_line": 48,
+      "event_id": "P11-TEST-002",
+      "file": "src/pead/phase11/test_runner.py"
+    }
+  ],
+  "phase": 11,
+  "schema_version": "1.0",
+  "status": "pass"
+}

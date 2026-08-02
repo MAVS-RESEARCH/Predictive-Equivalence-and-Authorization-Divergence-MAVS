@@ -1,0 +1,7 @@
+{
+  "accepted_invalid": 0,
+  "bank_count_mutations_rejected": 3,
+  "freeze_mutations": 1200,
+  "rejected": 1200,
+  "status": "pass"
+}

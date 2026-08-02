@@ -1,0 +1,30 @@
+{
+  "commitment_matches_freeze": true,
+  "commitment_sha256": "39e9202b07b4038571463a5b1c8ae0b5b15ac1e6989a7a57d29dd73385731397",
+  "design_artifacts_verified": 15,
+  "design_inventory_matches_freeze": true,
+  "design_inventory_sha256": "806c7d2157734846da26265c242dc74484b28b3696d26060aaabe62da86f3c90",
+  "freeze_id": "phase11-freeze-v3-d1f1d5da2443a86113fb",
+  "phase": 11,
+  "preseal_id": "phase9a-preseal-v3",
+  "required_artifact_classes": [
+    "mechanisms",
+    "policy_forms",
+    "graph_topologies",
+    "scope_interactions",
+    "interventions",
+    "nuisance",
+    "d7_clinical",
+    "d8_content",
+    "seeds",
+    "generator",
+    "allocator",
+    "ambiguity",
+    "custody",
+    "packager"
+  ],
+  "schema_version": "3.0",
+  "scientific_design_mutations": 0,
+  "status": "pass",
+  "study_version": "pead-study-v3"
+}

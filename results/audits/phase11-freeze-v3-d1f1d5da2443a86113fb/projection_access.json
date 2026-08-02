@@ -1,0 +1,10 @@
+{
+  "only_registered_fields": true,
+  "profile_rows": {
+    "Oracle-G": 106400,
+    "P-only": 106400,
+    "Raw-G": 106400
+  },
+  "status": "pass",
+  "violations": []
+}

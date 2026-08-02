@@ -1,0 +1,28 @@
+{
+  "atomic_group_overlap": [],
+  "custody_source_exposure": [],
+  "exact_case_id_overlap": [],
+  "graph": {
+    "duplicate_case_level_identities": 0,
+    "sealed_identities": 105
+  },
+  "nearest_neighbor": {
+    "exact_duplicates": 0,
+    "metric": "euclidean-registered-six-dimensional-predictive-rendering",
+    "minimum_distance": 0.021531856194274755,
+    "threshold": 1e-12
+  },
+  "open_case_ids": 200700,
+  "registries": {
+    "domain_templates_disjoint": true,
+    "grammar_topology_disjoint_by_signed_registry": true,
+    "sealed_templates": 127,
+    "seed_namespaces_disjoint": true
+  },
+  "sealed_case_ids": 106400,
+  "status": "pass",
+  "structural": {
+    "duplicate_case_level_identities": 0,
+    "sealed_identities": 7620
+  }
+}

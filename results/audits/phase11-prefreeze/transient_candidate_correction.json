@@ -1,0 +1,28 @@
+{
+  "blind_access_occurred": false,
+  "excluded_class": [
+    "*.pyc",
+    "**/__pycache__/**",
+    ".pytest_cache",
+    "tmp"
+  ],
+  "excluded_count": 0,
+  "excluded_paths": [],
+  "method_or_report_files_changed": 0,
+  "mutable_execution_ledger_starting_hashes": {
+    "manifests/lineage/pead-study-v3.json": "837a4bdc61d4b4822fbbd6b71e94caaef77f9af3a1b871e03b874e6a669111c5"
+  },
+  "mutable_execution_ledgers_excluded_from_method_freeze": [
+    "manifests/lineage/pead-study-v3.json"
+  ],
+  "phase": 11,
+  "phase10_candidate_correction_receipt_sha256": "9bc870ff6926fc80945d8520091c7de7086091cbc19bf806e45db87785503bfc",
+  "phase10_candidate_manifest_identity_retained": true,
+  "phase10_nontransient_inventory_verified": true,
+  "preseal_id": "phase9a-preseal-v3",
+  "schema_version": "1.0",
+  "scientific_files_changed": 0,
+  "status": "corrected-before-final-freeze-and-before-unlock",
+  "study_version": "pead-study-v3",
+  "transient_state_at_final_freeze": []
+}

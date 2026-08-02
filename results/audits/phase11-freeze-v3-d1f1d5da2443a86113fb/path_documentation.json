@@ -1,0 +1,30 @@
+{
+  "compliance_gaps": [],
+  "console_event_ids_documented": 41,
+  "console_event_ids_missing": [],
+  "freeze_id_documented": true,
+  "materialization_id_documented": true,
+  "next_phase_documented": "Phase 12 - one-pass blind evaluation and generalization",
+  "path_entries": [
+    "PATH-0098",
+    "PATH-0099",
+    "PATH-0100"
+  ],
+  "phase": 11,
+  "phase12_started": false,
+  "preseal_id": "phase9a-preseal-v3",
+  "required_topics": {
+    "code_and_files": true,
+    "console_comment_lines": true,
+    "custody_and_label_separation": true,
+    "failed_attempt_retention": true,
+    "freeze_and_hashes": true,
+    "mavs_scientific_boundary": true,
+    "model_training_and_overfitting": true,
+    "phase11_workplan_gates": true,
+    "stress_and_regression": true
+  },
+  "schema_version": "1.0",
+  "status": "pass",
+  "study_version": "pead-study-v3"
+}

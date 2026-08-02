@@ -1,0 +1,164 @@
+{
+  "bank_counts": {
+    "per_bank": {
+      "domains": 26600,
+      "final_blind": 53200,
+      "structural": 26600
+    },
+    "per_bank_track": {
+      "domains": {
+        "evidence": 3000,
+        "exact": 8000,
+        "near": 4000,
+        "reversal": 6000,
+        "scope": 5600
+      },
+      "final_blind": {
+        "evidence": 6000,
+        "exact": 16000,
+        "near": 8000,
+        "reversal": 12000,
+        "scope": 11200
+      },
+      "structural": {
+        "evidence": 3000,
+        "exact": 8000,
+        "near": 4000,
+        "reversal": 6000,
+        "scope": 5600
+      }
+    },
+    "per_track": {
+      "evidence": 12000,
+      "exact": 32000,
+      "near": 16000,
+      "reversal": 24000,
+      "scope": 22400
+    },
+    "total_records": 106400
+  },
+  "banks": {
+    "domains": {
+      "projections": {
+        "Oracle-G": {
+          "bytes": 1831998,
+          "path": "banks/sealed/domains/oracle_g.jsonl.gz",
+          "records": 26600,
+          "sha256": "55ce769e34d1c2c552e4ceb541dd77b94f229ee49a0d9fb17368a2deff14b5ca"
+        },
+        "P-only": {
+          "bytes": 1596355,
+          "path": "banks/sealed/domains/p_only.jsonl.gz",
+          "records": 26600,
+          "sha256": "47c3067c227ddf645b0757d8f208d3b56da1b4848620470ad45cb1a4093f7071"
+        },
+        "Raw-G": {
+          "bytes": 1715214,
+          "path": "banks/sealed/domains/raw_g.jsonl.gz",
+          "records": 26600,
+          "sha256": "6e1155e30dad37983ae8c6604bc22432cce2992525a62d4b841d6e5bd984d5f5"
+        }
+      },
+      "records": 26600
+    },
+    "final_blind": {
+      "projections": {
+        "Oracle-G": {
+          "bytes": 3662410,
+          "path": "banks/sealed/final_blind/oracle_g.jsonl.gz",
+          "records": 53200,
+          "sha256": "0ffd10f0ad73769a16bafc575a58379acc67affe840930ef788df1b967e37abe"
+        },
+        "P-only": {
+          "bytes": 3192601,
+          "path": "banks/sealed/final_blind/p_only.jsonl.gz",
+          "records": 53200,
+          "sha256": "0826c92ba6612bec52cda430e51fabf82be6dd7d12ad11ca5d9e146418dd5663"
+        },
+        "Raw-G": {
+          "bytes": 3431763,
+          "path": "banks/sealed/final_blind/raw_g.jsonl.gz",
+          "records": 53200,
+          "sha256": "371ea7f105f7f19871f13130c8779070220db54ee7c0558099f9ffdd2e69b60f"
+        }
+      },
+      "records": 53200
+    },
+    "structural": {
+      "projections": {
+        "Oracle-G": {
+          "bytes": 1902181,
+          "path": "banks/sealed/structural/oracle_g.jsonl.gz",
+          "records": 26600,
+          "sha256": "6f0711bd1e2125d50b2769bf4b5b94690c90afb630ba7859201872bcfeb9d54b"
+        },
+        "P-only": {
+          "bytes": 1678803,
+          "path": "banks/sealed/structural/p_only.jsonl.gz",
+          "records": 26600,
+          "sha256": "4ce78d383e7ef4d94df5104045431957b8609b4636fca66162ebbefa67ded1ce"
+        },
+        "Raw-G": {
+          "bytes": 1782224,
+          "path": "banks/sealed/structural/raw_g.jsonl.gz",
+          "records": 26600,
+          "sha256": "2c84980a52f47717b54cf48e13cb983027fb763fb7aa5f7a18a523de9b058f91"
+        }
+      },
+      "records": 26600
+    }
+  },
+  "custody_event_receipt": {
+    "all_events_signed": true,
+    "event_count": 337,
+    "genesis_sha256": "48c10233662bdd4117f93c281b7a3b7b9d0f2690896eaeb3a575822ac1aa53fc",
+    "head_sha256": "57a28250f8653066e3ab1169b8b27808cff31564080d05391c5742cb6dcab558",
+    "status": "pass",
+    "unsigned_events": 0
+  },
+  "design_artifacts_verified": 15,
+  "evaluator_label_allocation_verified": true,
+  "freeze_id": "phase11-freeze-v3-d1f1d5da2443a86113fb",
+  "graph_identities": 735,
+  "labels": {
+    "algorithm": "AES-256-GCM",
+    "associated_data_sha256": "e22d973ac81862472ae04865171f122b81b77cf26cf82c33dbd60f8d6454cb10",
+    "ciphertext_bytes": 15711748,
+    "ciphertext_sha256": "a8e3143ec1c92fcd91b02e46504d7a744be0e295e9ff211c1ac7923c1541be9a",
+    "evaluator_only": true,
+    "nonce_b64": "mE8MYYGXznHaOHWt",
+    "plaintext_sha256": "c1ecdcbad2f29a3bfe527ce209c6be772ef33443daf5c6c2fcef3466dc4410c7",
+    "records": 106400,
+    "state": "separately-encrypted-evaluator-only"
+  },
+  "materialization_count": 1,
+  "materialization_id": "materialization-db40269e60851be059eeb816",
+  "method_projection_fields": {
+    "Oracle-G": [
+      "identity",
+      "predictive_state",
+      "governance_state",
+      "oracle_state"
+    ],
+    "P-only": [
+      "identity",
+      "predictive_state"
+    ],
+    "Raw-G": [
+      "identity",
+      "predictive_state",
+      "governance_state"
+    ]
+  },
+  "one_shot_state_consumed": true,
+  "paired_label_allocation_verified": true,
+  "phase": 11,
+  "phase11_compliance_path": "results/audits/phase11-freeze-v3-d1f1d5da2443a86113fb/phase11_compliance.json",
+  "phase12_authorized": true,
+  "preseal_id": "phase9a-preseal-v3",
+  "schema_version": "3.0",
+  "scientific_design_mutations": 0,
+  "status": "materialized-read-only",
+  "structural_identities": 10500,
+  "study_version": "pead-study-v3"
+}
