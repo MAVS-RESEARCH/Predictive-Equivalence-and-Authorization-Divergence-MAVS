@@ -2942,3 +2942,16 @@ Copy this block for every meaningful action:
 - **Machine lineage:** `manifests/lineage/pead-study-v3.json` records Phase 12 started, attempt ID, blocked status, five gaps, zero method/decision/label/decryption/rematerialization activity, and Phase 13 unauthorized.
 - **Nominal next phase:** Phase 13 - evidence package, clean reproduction, and bounded release.
 - **Actually permitted next action:** do not begin Phase 13. Create an explicitly authorized new study version, correct and freeze the producer-consumer feature contract, implement a pre-frozen Oracle rule interface and blind custody/commitment/audit/report surface, regenerate all dependent Phase 10-11 artifacts, and repeat Phase 12 once. No such new lineage or scientific change was created in this instruction.
+
+### PATH-0103 - Phase 12 blocked-audit publication and v3 lineage-close receipt
+
+- **Timestamp:** 2026-08-08T17:42:00+05:00.
+- **Implementation commit:** `ed67809a5752de93487f9753b25233ee48b5298a` - `phase-12: retain blocked preblind compliance audit`.
+- **Published scope:** 21 intended paths and 1,848 insertions: fail-closed preflight code, regression runner, four integration tests, five result-area records, nine audit records, blocked report, machine lineage state, and PATH-0102.
+- **Publication controls:** staged diff check passed; staged secret/private-key scan passed with findings 0; all JSON evidence parsed; documentation-to-console reconciliation passed 18/18; WorkPlan Phase 12 token and clause audit passed; compileall passed; targeted tests passed 4/4. The complete regression remained deliberately failing at 219 pass, 2 fail, 92 subtests pass and is retained as `P12-GAP-005`.
+- **Push:** direct non-force push to `origin/pead-study-v3` passed. No reset, rebase, amend, squash, branch deletion, tag deletion, history rewrite, main merge, or pull request occurred.
+- **Remote verification:** local `HEAD`, remote-tracking `origin/pead-study-v3`, and remote `refs/heads/pead-study-v3` all resolved to `ed67809a5752de93487f9753b25233ee48b5298a` immediately after publication.
+- **Preserved history:** remote `main` and peeled `pead-study-v2-blocked^{}` remained exactly `cea7ba439de271ab054d959ec7e1571d98315d80`.
+- **Ledger close:** machine lineage records the Phase 12 attempt, blocked status, implementation commit, five gaps, zero method/decision/label/decryption/rematerialization activity, and Phase 13 unauthorized. This ledger-only close does not alter the signed freeze, immutable materialization, projection bytes, encrypted labels, model files, parameters, features, thresholds, representations, or scientific outcomes.
+- **Final published verdict:** Phase 12 remains blocked before blind execution and is not called finished. The pushed record is an audit result, not a blind benchmark result.
+- **Next phase:** nominally Phase 13, but Phase 13 is not authorized. The next permitted action is an explicitly authorized new study version that repairs and freezes all five blocking contracts before a new Phase 12 attempt.
