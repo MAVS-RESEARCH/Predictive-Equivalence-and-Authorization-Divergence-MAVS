@@ -1,0 +1,151 @@
+{
+  "attempt_id": "phase12-blind-v3-attempt-001",
+  "negative_outcomes_suppressed": 0,
+  "phase10_failures_retained": [
+    {
+      "failure_class": "registered_resource_or_asset_unavailable",
+      "method_id": "G04-MLP",
+      "reason": "registered GPU training required; no accelerator and no frozen CPU-equivalent schedule"
+    },
+    {
+      "failure_class": "registered_resource_or_asset_unavailable",
+      "method_id": "G05-SEQUENCE",
+      "reason": "registered Transformer GPU training required; no accelerator is available"
+    },
+    {
+      "failure_class": "registered_resource_or_asset_unavailable",
+      "method_id": "G06-GRAPH",
+      "reason": "registered relational-GNN GPU training required; no accelerator is available"
+    },
+    {
+      "failure_class": "registered_resource_or_asset_unavailable",
+      "method_id": "G07-BAYES",
+      "reason": "registered 32 GiB memory ceiling exceeds the 31.68 GiB host capacity"
+    },
+    {
+      "failure_class": "registered_resource_or_asset_unavailable",
+      "method_id": "G10-JUDGE",
+      "reason": "pinned Qwen2.5-7B weight and tokenizer files are not locally present; substitution is prohibited"
+    },
+    {
+      "failure_class": "registered_resource_or_asset_unavailable",
+      "method_id": "G11-SCALAR-trained",
+      "reason": "registered GPU training required; no accelerator and no frozen CPU-equivalent schedule"
+    },
+    {
+      "failure_class": "registered_resource_or_asset_unavailable",
+      "method_id": "G12-ENSEMBLE",
+      "reason": "registered base set is incomplete because G04, G05, and G06 cannot produce frozen checkpoints"
+    },
+    {
+      "failure_class": "registered_resource_or_asset_unavailable",
+      "method_id": "MAVS-A12",
+      "reason": "registered learned scalar GPU training required; no accelerator and no frozen CPU-equivalent schedule"
+    },
+    {
+      "failure_class": "registered_resource_or_asset_unavailable",
+      "method_id": "MAVS-A13",
+      "reason": "registered flat Raw-G neural comparator requires unavailable accelerator execution"
+    },
+    {
+      "failure_class": "registered_resource_or_asset_unavailable",
+      "method_id": "O02-ORACLE-MLP",
+      "reason": "registered GPU training required; no accelerator and no frozen CPU-equivalent schedule"
+    },
+    {
+      "failure_class": "registered_resource_or_asset_unavailable",
+      "method_id": "P07-REJECT",
+      "reason": "registered GPU training required; no accelerator and no frozen CPU-equivalent schedule"
+    },
+    {
+      "failure_class": "registered_resource_or_asset_unavailable",
+      "method_id": "P08-TABULAR-mlp",
+      "reason": "registered GPU training required; no accelerator and no frozen CPU-equivalent schedule"
+    },
+    {
+      "failure_class": "registered_resource_or_asset_unavailable",
+      "method_id": "P09-SEQUENCE",
+      "reason": "registered Transformer GPU training required; no accelerator is available"
+    }
+  ],
+  "phase12_incidents_retained": [
+    {
+      "affected_methods": [
+        "G01-LOGREG",
+        "G02-TREE",
+        "G03-GBDT"
+      ],
+      "classification": "scientific",
+      "gap_id": "P12-GAP-001",
+      "same_lineage_repair_permitted": false,
+      "summary": "Frozen Raw-G checkpoints require 14 total features, but Phase 11 provides six predictive plus four governance values."
+    },
+    {
+      "affected_methods": [
+        "G08-POLICY",
+        "G09-VALIDATOR",
+        "G11-SCALAR-fixed",
+        "MAVS-A01",
+        "MAVS-A02",
+        "MAVS-A03",
+        "MAVS-A04",
+        "MAVS-A05",
+        "MAVS-A06",
+        "MAVS-A07",
+        "MAVS-A08",
+        "MAVS-A09",
+        "MAVS-A10",
+        "MAVS-A11",
+        "MAVS-A14",
+        "MAVS-A15"
+      ],
+      "classification": "scientific",
+      "gap_id": "P12-GAP-002",
+      "same_lineage_repair_permitted": false,
+      "summary": "Frozen fixed Raw-G and MAVS evaluation code indexes an eight-column Phase 10 governance vector that Phase 11 did not materialize."
+    },
+    {
+      "affected_methods": [
+        "O01-ORACLE-RULE"
+      ],
+      "classification": "scientific",
+      "gap_id": "P12-GAP-003",
+      "same_lineage_repair_permitted": false,
+      "summary": "The frozen O01 implementation obtains the answer from bank.labels and its registered evaluator entry point cannot consume the Phase 11 Oracle projection before reveal."
+    },
+    {
+      "classification": "infrastructure",
+      "gap_id": "P12-GAP-004",
+      "reason_same_lineage_repair_prohibited": "Adding execution or reporting code after the signed method/code/report freeze would violate the no-post-freeze-change gate.",
+      "same_lineage_repair_permitted": false,
+      "summary": "No blind runner, custody stream, decision-commitment implementation, blind auditor, or blind report builder was included in the signed Phase 11 freeze."
+    },
+    {
+      "affected_tests": [
+        "tests/integration/test_phase10_execution.py::Phase10ExecutionTests::test_phase10_freeze_candidate_hashes_close",
+        "tests/integration/test_phase10_execution.py::Phase10ExecutionTests::test_study_v3_lineage_exposes_current_phase10_state"
+      ],
+      "classification": "infrastructure",
+      "gap_id": "P12-GAP-005",
+      "reason_same_lineage_repair_prohibited": "The stale tests and their expected freeze-candidate state are members of the signed Phase 11 frozen inventory.",
+      "same_lineage_repair_permitted": false,
+      "summary": "The complete regression retains frozen Phase 10 tests that require Phase 11 to be unstarted and the pre-Phase-11 lineage hashes to remain current after Phase 11 completion."
+    }
+  ],
+  "schema_version": "1.0",
+  "scientific_outcomes": {
+    "Ambiguity": "not_estimable_no_valid_blind_run",
+    "DomainTransfer": "not_estimable_no_valid_blind_run",
+    "MAVSVersusRawG": "not_estimable_no_valid_blind_run",
+    "OracleLosslessReconstruction": "not_estimable_no_valid_blind_run",
+    "OracleRuleAccuracy": "not_estimable_no_valid_blind_run",
+    "POnlyErrorCoverage": "not_estimable_no_valid_blind_run",
+    "POnlyLowerBound": "not_estimable_no_valid_blind_run",
+    "RawGEscape": "not_estimable_no_valid_blind_run",
+    "ReversalFidelity": "not_estimable_no_valid_blind_run",
+    "ScalarCompression": "not_estimable_no_valid_blind_run",
+    "ScopeLeakage": "not_estimable_no_valid_blind_run",
+    "WorstWorld": "not_estimable_no_valid_blind_run"
+  },
+  "status": "not-estimable-preblind-contract-block"
+}

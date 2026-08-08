@@ -1,0 +1,22 @@
+{
+  "categories": {
+    "checkpoint_dimension_mutation": 1000,
+    "encrypted_label_identity_mutation": 1000,
+    "lineage_identity_mutation": 1000,
+    "materialization_identity_mutation": 1000,
+    "projection_dimension_mutation": 1000,
+    "signed_freeze_mutation": 1000
+  },
+  "expected": {
+    "checkpoint_dimension_mutation": 1000,
+    "encrypted_label_identity_mutation": 1000,
+    "lineage_identity_mutation": 1000,
+    "materialization_identity_mutation": 1000,
+    "projection_dimension_mutation": 1000,
+    "signed_freeze_mutation": 1000
+  },
+  "label_access_during_stress": false,
+  "mutations_attempted": 6000,
+  "mutations_rejected": 6000,
+  "status": "pass"
+}

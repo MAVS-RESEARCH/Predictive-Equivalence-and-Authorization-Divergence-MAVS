@@ -1,0 +1,47 @@
+{
+  "domain_counts": {
+    "D1": 4438,
+    "D2": 4438,
+    "D3": 4432,
+    "D4": 4432,
+    "D5": 4430,
+    "D6": 4430,
+    "D7": 39900,
+    "D8": 39900
+  },
+  "governance_dimensions": 4,
+  "governance_fields": [
+    [
+      "evidence",
+      "mechanism",
+      "scope",
+      "topology"
+    ]
+  ],
+  "matched_case_identity": true,
+  "oracle_fields": [
+    [
+      "ambiguity_proof_available_to_evaluator",
+      "rule_inputs"
+    ]
+  ],
+  "predictive_renderer": {
+    "dimensions": 6,
+    "maximum": 1.0001001001001002,
+    "minimum": 0.0,
+    "source": "src/pead/phase11/audit.py:_contamination"
+  },
+  "projection_rows": {
+    "Oracle-G": 106400,
+    "P-only": 106400,
+    "Raw-G": 106400
+  },
+  "status": "pass",
+  "track_counts": {
+    "evidence": 12000,
+    "exact": 32000,
+    "near": 16000,
+    "reversal": 24000,
+    "scope": 22400
+  }
+}

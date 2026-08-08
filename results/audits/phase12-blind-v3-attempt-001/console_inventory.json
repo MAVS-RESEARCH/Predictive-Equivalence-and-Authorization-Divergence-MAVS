@@ -1,0 +1,132 @@
+{
+  "call_sites": [
+    {
+      "comment": "STEP LOG P12-PREFLIGHT-001: Bind the attempted Phase 12 execution to the exact v3 lineage, freeze, preseal, and immutable Phase 11 materialization.",
+      "comment_line": 549,
+      "console_log_line": 550,
+      "event_id": "P12-PREFLIGHT-001",
+      "file": "src/pead/phase12/preflight.py"
+    },
+    {
+      "comment": "STEP LOG P12-PREFLIGHT-002: Verify the Ed25519 freeze signature and every byte in the 472-file frozen inventory before inspecting a method contract.",
+      "comment_line": 564,
+      "console_log_line": 565,
+      "event_id": "P12-PREFLIGHT-002",
+      "file": "src/pead/phase12/preflight.py"
+    },
+    {
+      "comment": "STEP LOG P12-PREFLIGHT-003: Verify the Phase 11 materialization identity, one-shot count, read-only state, and Phase 12 authorization without invoking materialization.",
+      "comment_line": 577,
+      "console_log_line": 578,
+      "event_id": "P12-PREFLIGHT-003",
+      "file": "src/pead/phase12/preflight.py"
+    },
+    {
+      "comment": "STEP LOG P12-PREFLIGHT-004: Hash and reconcile only the preserved encrypted evaluator-label object and metadata; do not read any label key or plaintext.",
+      "comment_line": 587,
+      "console_log_line": 588,
+      "event_id": "P12-PREFLIGHT-004",
+      "file": "src/pead/phase12/preflight.py"
+    },
+    {
+      "comment": "STEP LOG P12-PREFLIGHT-005: Assert zero unlock, decryption, rematerialization, label reveal, decision execution, and aggregate inspection activity.",
+      "comment_line": 593,
+      "console_log_line": 594,
+      "event_id": "P12-PREFLIGHT-005",
+      "file": "src/pead/phase12/preflight.py"
+    },
+    {
+      "comment": "STEP LOG P12-PREFLIGHT-006: Stream every sealed projection and verify hashes, counts, registered fields, matched identities, tracks, domains, and frozen predictive rendering.",
+      "comment_line": 598,
+      "console_log_line": 599,
+      "event_id": "P12-PREFLIGHT-006",
+      "file": "src/pead/phase12/preflight.py"
+    },
+    {
+      "comment": "STEP LOG P12-PREFLIGHT-007: Compare every retained Phase 10 method and checkpoint against the exact Phase 11 projection and pre-reveal Oracle interfaces.",
+      "comment_line": 602,
+      "console_log_line": 603,
+      "event_id": "P12-PREFLIGHT-007",
+      "file": "src/pead/phase12/preflight.py"
+    },
+    {
+      "comment": "STEP LOG P12-PREFLIGHT-008: Verify that blind runner, custody stream, decision commitment, auditor, and reporting code were included in the signed freeze.",
+      "comment_line": 606,
+      "console_log_line": 607,
+      "event_id": "P12-PREFLIGHT-008",
+      "file": "src/pead/phase12/preflight.py"
+    },
+    {
+      "comment": "STEP LOG P12-PREFLIGHT-009: Classify every discovered event under the frozen infrastructure, contamination, or scientific incident taxonomy.",
+      "comment_line": 610,
+      "console_log_line": 611,
+      "event_id": "P12-PREFLIGHT-009",
+      "file": "src/pead/phase12/preflight.py"
+    },
+    {
+      "comment": "STEP LOG P12-PREFLIGHT-010: Reject 6,000 synthetic signature, lineage, materialization, ciphertext, projection, and checkpoint mutations without label access.",
+      "comment_line": 619,
+      "console_log_line": 620,
+      "event_id": "P12-PREFLIGHT-010",
+      "file": "src/pead/phase12/preflight.py"
+    },
+    {
+      "comment": "STEP LOG P12-PREFLIGHT-010-REGRESSION: Retain the complete regression verdict and classify any frozen stale-test expectation without editing the signed test surface.",
+      "comment_line": 625,
+      "console_log_line": 626,
+      "event_id": "P12-PREFLIGHT-010-REGRESSION",
+      "file": "src/pead/phase12/preflight.py"
+    },
+    {
+      "comment": "STEP LOG P12-PREFLIGHT-011: Inventory every Phase 12 console event and prove exact adjacent identifying comments and globally unique event identities.",
+      "comment_line": 628,
+      "console_log_line": 629,
+      "event_id": "P12-PREFLIGHT-011",
+      "file": "src/pead/phase12/preflight.py"
+    },
+    {
+      "comment": "STEP LOG P12-PREFLIGHT-012: Retain the blocked attempt, every prior failure, every new incident, every non-estimable outcome, and all pre-label evidence.",
+      "comment_line": 632,
+      "console_log_line": 633,
+      "event_id": "P12-PREFLIGHT-012",
+      "file": "src/pead/phase12/preflight.py"
+    },
+    {
+      "comment": "STEP LOG P12-PREFLIGHT-BLOCK: Stop before method execution and label reveal because release-blocking frozen-contract gaps cannot be repaired within pead-study-v3.",
+      "comment_line": 647,
+      "console_log_line": 648,
+      "event_id": "P12-PREFLIGHT-BLOCK",
+      "file": "src/pead/phase12/preflight.py"
+    },
+    {
+      "comment": "STEP LOG P12-SCRIPT-PREFLIGHT-001: Enter the Phase 12 preflight with an explicit custody root and execution timestamp.",
+      "comment_line": 19,
+      "console_log_line": 20,
+      "event_id": "P12-SCRIPT-PREFLIGHT-001",
+      "file": "scripts/preflight_phase12.py"
+    },
+    {
+      "comment": "STEP LOG P12-SCRIPT-PREFLIGHT-BLOCK: Return a nonzero blocked status after preserving all evidence and without crossing the hidden-label boundary.",
+      "comment_line": 22,
+      "console_log_line": 23,
+      "event_id": "P12-SCRIPT-PREFLIGHT-BLOCK",
+      "file": "scripts/preflight_phase12.py"
+    },
+    {
+      "comment": "STEP LOG P12-SCRIPT-TEST-001: Execute the complete test suite in a bytecode-free subprocess after the pre-label audit.",
+      "comment_line": 24,
+      "console_log_line": 25,
+      "event_id": "P12-SCRIPT-TEST-001",
+      "file": "scripts/run_phase12_tests.py"
+    },
+    {
+      "comment": "STEP LOG P12-SCRIPT-TEST-002: Retain the exact regression result without interpreting it as a blind scientific execution.",
+      "comment_line": 48,
+      "console_log_line": 49,
+      "event_id": "P12-SCRIPT-TEST-002",
+      "file": "scripts/run_phase12_tests.py"
+    }
+  ],
+  "schema_version": "1.0",
+  "status": "pass"
+}

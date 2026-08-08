@@ -1,0 +1,10 @@
+{
+  "attempt_id": "phase12-blind-v3-attempt-001",
+  "decisions": 0,
+  "encrypted_label_ciphertext_verified": true,
+  "label_reveals": 0,
+  "projection_rows_audited": 319200,
+  "schema_version": "1.0",
+  "status": "stopped-before-method-execution",
+  "traces": 0
+}

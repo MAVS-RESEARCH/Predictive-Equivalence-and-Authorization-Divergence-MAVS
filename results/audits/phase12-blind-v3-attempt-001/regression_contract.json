@@ -1,0 +1,20 @@
+{
+  "failed_tests": [
+    "tests/integration/test_phase10_execution.py::Phase10ExecutionTests::test_phase10_freeze_candidate_hashes_close",
+    "tests/integration/test_phase10_execution.py::Phase10ExecutionTests::test_study_v3_lineage_exposes_current_phase10_state"
+  ],
+  "gap": {
+    "affected_tests": [
+      "tests/integration/test_phase10_execution.py::Phase10ExecutionTests::test_phase10_freeze_candidate_hashes_close",
+      "tests/integration/test_phase10_execution.py::Phase10ExecutionTests::test_study_v3_lineage_exposes_current_phase10_state"
+    ],
+    "classification": "infrastructure",
+    "gap_id": "P12-GAP-005",
+    "reason_same_lineage_repair_prohibited": "The stale tests and their expected freeze-candidate state are members of the signed Phase 11 frozen inventory.",
+    "same_lineage_repair_permitted": false,
+    "summary": "The complete regression retains frozen Phase 10 tests that require Phase 11 to be unstarted and the pre-Phase-11 lineage hashes to remain current after Phase 11 completion."
+  },
+  "path": "results/audits/phase12-blind-v3-attempt-001/regression.json",
+  "returncode": 1,
+  "status": "fail"
+}

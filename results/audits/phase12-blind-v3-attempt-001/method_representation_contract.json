@@ -1,0 +1,221 @@
+{
+  "checkpoints": [
+    {
+      "available_dimensions": 10,
+      "dimension_compatible": false,
+      "expected_dimensions": 14,
+      "method_id": "G01-LOGREG",
+      "path": "results/raw/phase10-dev-v3/checkpoints/G01-LOGREG.pkl",
+      "phase9a_commitment_bound": true,
+      "profile": "Raw-G",
+      "representation_id": null,
+      "representation_identity_bound": false,
+      "sha256": "e719a6a4d4b42f012177fcd0ebabd39080797536838ebff9e2856d66bb9ca3b4"
+    },
+    {
+      "available_dimensions": 10,
+      "dimension_compatible": false,
+      "expected_dimensions": 14,
+      "method_id": "G02-TREE",
+      "path": "results/raw/phase10-dev-v3/checkpoints/G02-TREE.pkl",
+      "phase9a_commitment_bound": true,
+      "profile": "Raw-G",
+      "representation_id": null,
+      "representation_identity_bound": false,
+      "sha256": "75a0d7f928183c7ea9f6aa8b0381564bcb471135b73c11dcb76daf1928141b72"
+    },
+    {
+      "available_dimensions": 10,
+      "dimension_compatible": false,
+      "expected_dimensions": 14,
+      "method_id": "G03-GBDT",
+      "path": "results/raw/phase10-dev-v3/checkpoints/G03-GBDT.pkl",
+      "phase9a_commitment_bound": true,
+      "profile": "Raw-G",
+      "representation_id": null,
+      "representation_identity_bound": false,
+      "sha256": "05867ae1eaeed40416df2a95b2a787893c6da53ceff23e09e386b22c5d57c762"
+    },
+    {
+      "available_dimensions": 6,
+      "dimension_compatible": true,
+      "expected_dimensions": 6,
+      "method_id": "P08-TABULAR-gbdt",
+      "path": "results/raw/phase10-dev-v3/checkpoints/P08-TABULAR-gbdt.pkl",
+      "phase9a_commitment_bound": true,
+      "profile": "P-only",
+      "representation_id": null,
+      "representation_identity_bound": false,
+      "sha256": "2fa8ee4218fb1f76c658e71b77317cec3bf2c2dc13c23c4952329ba15fb7ce27"
+    },
+    {
+      "available_dimensions": 6,
+      "dimension_compatible": true,
+      "expected_dimensions": 6,
+      "method_id": "P08-TABULAR-logistic",
+      "path": "results/raw/phase10-dev-v3/checkpoints/P08-TABULAR-logistic.pkl",
+      "phase9a_commitment_bound": true,
+      "profile": "P-only",
+      "representation_id": null,
+      "representation_identity_bound": false,
+      "sha256": "04de7359925db9b4718b974fc7c28c2193399d89de1c32eceaf12c351987c0e0"
+    }
+  ],
+  "fixed_raw_g_requires_eight_columns": true,
+  "gaps": [
+    {
+      "affected_methods": [
+        "G01-LOGREG",
+        "G02-TREE",
+        "G03-GBDT"
+      ],
+      "classification": "scientific",
+      "gap_id": "P12-GAP-001",
+      "same_lineage_repair_permitted": false,
+      "summary": "Frozen Raw-G checkpoints require 14 total features, but Phase 11 provides six predictive plus four governance values."
+    },
+    {
+      "affected_methods": [
+        "G08-POLICY",
+        "G09-VALIDATOR",
+        "G11-SCALAR-fixed",
+        "MAVS-A01",
+        "MAVS-A02",
+        "MAVS-A03",
+        "MAVS-A04",
+        "MAVS-A05",
+        "MAVS-A06",
+        "MAVS-A07",
+        "MAVS-A08",
+        "MAVS-A09",
+        "MAVS-A10",
+        "MAVS-A11",
+        "MAVS-A14",
+        "MAVS-A15"
+      ],
+      "classification": "scientific",
+      "gap_id": "P12-GAP-002",
+      "same_lineage_repair_permitted": false,
+      "summary": "Frozen fixed Raw-G and MAVS evaluation code indexes an eight-column Phase 10 governance vector that Phase 11 did not materialize."
+    },
+    {
+      "affected_methods": [
+        "O01-ORACLE-RULE"
+      ],
+      "classification": "scientific",
+      "gap_id": "P12-GAP-003",
+      "same_lineage_repair_permitted": false,
+      "summary": "The frozen O01 implementation obtains the answer from bank.labels and its registered evaluator entry point cannot consume the Phase 11 Oracle projection before reveal."
+    }
+  ],
+  "oracle": {
+    "phase10_implementation_reads_label_before_decision": true,
+    "phase11_projection_fields": [
+      [
+        "ambiguity_proof_available_to_evaluator",
+        "rule_inputs"
+      ]
+    ],
+    "registered_implementation_accepts_phase11_projection": false,
+    "registered_implementation_file": "src/pead/labels/evaluator_dsl.py"
+  },
+  "phase10_fixed_method_variants": [
+    "P01-CONF",
+    "P02-UNC",
+    "P03-DIS",
+    "P04-SC",
+    "G08-POLICY",
+    "G09-VALIDATOR",
+    "G11-SCALAR-fixed",
+    "O01-ORACLE-RULE",
+    "MAVS-A00",
+    "MAVS-A01",
+    "MAVS-A02",
+    "MAVS-A03",
+    "MAVS-A04",
+    "MAVS-A05",
+    "MAVS-A06",
+    "MAVS-A07",
+    "MAVS-A08",
+    "MAVS-A09",
+    "MAVS-A10",
+    "MAVS-A11",
+    "MAVS-A14",
+    "MAVS-A15"
+  ],
+  "phase10_retained_training_failures": [
+    {
+      "failure_class": "registered_resource_or_asset_unavailable",
+      "method_id": "G04-MLP",
+      "reason": "registered GPU training required; no accelerator and no frozen CPU-equivalent schedule"
+    },
+    {
+      "failure_class": "registered_resource_or_asset_unavailable",
+      "method_id": "G05-SEQUENCE",
+      "reason": "registered Transformer GPU training required; no accelerator is available"
+    },
+    {
+      "failure_class": "registered_resource_or_asset_unavailable",
+      "method_id": "G06-GRAPH",
+      "reason": "registered relational-GNN GPU training required; no accelerator is available"
+    },
+    {
+      "failure_class": "registered_resource_or_asset_unavailable",
+      "method_id": "G07-BAYES",
+      "reason": "registered 32 GiB memory ceiling exceeds the 31.68 GiB host capacity"
+    },
+    {
+      "failure_class": "registered_resource_or_asset_unavailable",
+      "method_id": "G10-JUDGE",
+      "reason": "pinned Qwen2.5-7B weight and tokenizer files are not locally present; substitution is prohibited"
+    },
+    {
+      "failure_class": "registered_resource_or_asset_unavailable",
+      "method_id": "G11-SCALAR-trained",
+      "reason": "registered GPU training required; no accelerator and no frozen CPU-equivalent schedule"
+    },
+    {
+      "failure_class": "registered_resource_or_asset_unavailable",
+      "method_id": "G12-ENSEMBLE",
+      "reason": "registered base set is incomplete because G04, G05, and G06 cannot produce frozen checkpoints"
+    },
+    {
+      "failure_class": "registered_resource_or_asset_unavailable",
+      "method_id": "MAVS-A12",
+      "reason": "registered learned scalar GPU training required; no accelerator and no frozen CPU-equivalent schedule"
+    },
+    {
+      "failure_class": "registered_resource_or_asset_unavailable",
+      "method_id": "MAVS-A13",
+      "reason": "registered flat Raw-G neural comparator requires unavailable accelerator execution"
+    },
+    {
+      "failure_class": "registered_resource_or_asset_unavailable",
+      "method_id": "O02-ORACLE-MLP",
+      "reason": "registered GPU training required; no accelerator and no frozen CPU-equivalent schedule"
+    },
+    {
+      "failure_class": "registered_resource_or_asset_unavailable",
+      "method_id": "P07-REJECT",
+      "reason": "registered GPU training required; no accelerator and no frozen CPU-equivalent schedule"
+    },
+    {
+      "failure_class": "registered_resource_or_asset_unavailable",
+      "method_id": "P08-TABULAR-mlp",
+      "reason": "registered GPU training required; no accelerator and no frozen CPU-equivalent schedule"
+    },
+    {
+      "failure_class": "registered_resource_or_asset_unavailable",
+      "method_id": "P09-SEQUENCE",
+      "reason": "registered Transformer GPU training required; no accelerator is available"
+    }
+  ],
+  "raw_g_checkpoint_dimension_failures": [
+    "G01-LOGREG",
+    "G02-TREE",
+    "G03-GBDT"
+  ],
+  "raw_g_projection_dimensions": 4,
+  "registered_method_families": 39,
+  "status": "fail"
+}

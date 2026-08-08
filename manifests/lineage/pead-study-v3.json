@@ -46,7 +46,20 @@
     },
     "phase12": {
       "authorized": true,
-      "started": false
+      "attempt_id": "phase12-blind-v3-attempt-001",
+      "blind_run_id": null,
+      "complete": false,
+      "compliance_gap_count": 5,
+      "compliance_path": "results/audits/phase12-blind-v3-attempt-001/phase12_compliance.json",
+      "decisions_committed": 0,
+      "decryption_calls": 0,
+      "labels_revealed": 0,
+      "method_executions": 0,
+      "phase13_authorized": false,
+      "rematerialization_calls": 0,
+      "started": true,
+      "status": "blocked-before-blind-execution",
+      "unlock_calls": 0
     },
     "phase9": {
       "anchor_sha": "be093b5d2639deb2ff76ad96785c918b5a2a9b92",
@@ -144,9 +157,10 @@
       "PATH-0098",
       "PATH-0099",
       "PATH-0100",
-      "PATH-0101"
+      "PATH-0101",
+      "PATH-0102"
     ],
     "state_basis_commit": "92cb9e6da984dc3cced4a820b0db3f7e157b57ef"
   },
-  "status": "phase11-complete-phase12-authorized"
+  "status": "phase12-blocked-before-blind-execution"
 }

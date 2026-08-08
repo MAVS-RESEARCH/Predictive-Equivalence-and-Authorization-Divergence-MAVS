@@ -1,0 +1,8 @@
+{
+  "freeze_id": "phase11-freeze-v3-d1f1d5da2443a86113fb",
+  "frozen_files_verified": 472,
+  "post_freeze_change_policy": "new-study-version-and-complete-dependent-regeneration",
+  "signed": true,
+  "signer_identity": "d70ecdb93256317342bc8f8fae6b2ccd3f0cbc7d6d2e11038e78cf77c739f1fd",
+  "status": "pass"
+}

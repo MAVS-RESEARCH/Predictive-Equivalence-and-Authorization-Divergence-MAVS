@@ -1,0 +1,17 @@
+{
+  "attempt_id": "phase12-blind-v3-attempt-001",
+  "command": [
+    "C:\\Users\\Saif malik\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+    "-m",
+    "pytest",
+    "-q",
+    "--disable-warnings"
+  ],
+  "hidden_label_access": false,
+  "phase": 12,
+  "returncode": 1,
+  "schema_version": "1.0",
+  "status": "fail",
+  "stderr": "",
+  "stdout": ".....................................................F..F.. [ 26%]\n.................................................................................... [ 64%]\n..............................................................................                                                [100%]\n================================== FAILURES ===================================\n______ Phase10ExecutionTests.test_phase10_freeze_candidate_hashes_close _______\n\nself = <tests.integration.test_phase10_execution.Phase10ExecutionTests testMethod=test_phase10_freeze_candidate_hashes_close>\n\n    def test_phase10_freeze_candidate_hashes_close(self) -> None:\n        freeze = json.loads((ROOT / \"manifests/freeze_candidate_v1.json\").read_text(encoding=\"utf-8\"))\n        self.assertFalse(freeze[\"phase11_started\"])\n        self.assertFalse(freeze[\"unlock_attempted\"])\n        self.assertNotIn(f\"results/audits/{RUN}/phase10_compliance.json\", freeze[\"claim_relevant_files\"])\n>       self.assertTrue(all((ROOT / path).is_file() and sha256_file(ROOT / path) == digest for path, digest in freeze[\"claim_relevant_files\"].items()))\nE       AssertionError: False is not true\n\ntests\\integration\\test_phase10_execution.py:45: AssertionError\n__ Phase10ExecutionTests.test_study_v3_lineage_exposes_current_phase10_state __\n\nself = <tests.integration.test_phase10_execution.Phase10ExecutionTests testMethod=test_study_v3_lineage_exposes_current_phase10_state>\n\n    def test_study_v3_lineage_exposes_current_phase10_state(self) -> None:\n        lineage = json.loads((ROOT / \"manifests/lineage/pead-study-v3.json\").read_text(encoding=\"utf-8\"))\n        self.assertEqual(lineage[\"execution_lineage_id\"], \"pead-study-v3\")\n        self.assertEqual(lineage[\"preseal_lineage_id\"], \"phase9a-preseal-v3\")\n        self.assertEqual(lineage[\"bootstrap_record\"][\"status_at_creation\"], \"pre-phase9a-recovery-bootstrap\")\n        self.assertTrue(lineage[\"current_chronology\"][\"phase9a\"][\"complete\"])\n        self.assertTrue(lineage[\"current_chronology\"][\"phase10\"][\"complete\"])\n>       self.assertFalse(lineage[\"current_chronology\"][\"phase11\"][\"started\"])\nE       AssertionError: True is not false\n\ntests\\integration\\test_phase10_execution.py:23: AssertionError\n=========================== short test summary info ===========================\nFAILED tests/integration/test_phase10_execution.py::Phase10ExecutionTests::test_phase10_freeze_candidate_hashes_close\nFAILED tests/integration/test_phase10_execution.py::Phase10ExecutionTests::test_study_v3_lineage_exposes_current_phase10_state\n2 failed, 219 passed, 92 subtests passed in 125.87s (0:02:05)\n"
+}

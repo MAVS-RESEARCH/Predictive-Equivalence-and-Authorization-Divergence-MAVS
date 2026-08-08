@@ -1,0 +1,21 @@
+{
+  "checks": {
+    "associated_data_commitment": true,
+    "ciphertext_bytes": true,
+    "ciphertext_exists": true,
+    "ciphertext_sha256": true,
+    "nonce_commitment": true,
+    "plaintext_commitment": true,
+    "record_count": true
+  },
+  "ciphertext_path": "C:\\Users\\Saif malik\\OneDrive\\Documents\\Desktop\\Documents\\PEAD_SEALED_CUSTODY_V3\\materialized\\materialization-db40269e60851be059eeb816\\evaluator\\labels.materialized.aesgcm",
+  "ciphertext_sha256": "a8e3143ec1c92fcd91b02e46504d7a744be0e295e9ff211c1ac7923c1541be9a",
+  "decryption_calls": 0,
+  "key_paths_read": [],
+  "labels_revealed": 0,
+  "materialization_id": "materialization-db40269e60851be059eeb816",
+  "plaintext_persisted": false,
+  "rematerialization_calls": 0,
+  "status": "pass",
+  "unlock_calls": 0
+}

@@ -1,0 +1,25 @@
+{
+  "coverage": {
+    "blind_auditor": false,
+    "blind_report_builder": false,
+    "blind_runner": false,
+    "custody_stream": false,
+    "decision_commitment": false
+  },
+  "existing_phase9_report_builder_is_scientific_blind_builder": false,
+  "gap": {
+    "classification": "infrastructure",
+    "gap_id": "P12-GAP-004",
+    "reason_same_lineage_repair_prohibited": "Adding execution or reporting code after the signed method/code/report freeze would violate the no-post-freeze-change gate.",
+    "same_lineage_repair_permitted": false,
+    "summary": "No blind runner, custody stream, decision-commitment implementation, blind auditor, or blind report builder was included in the signed Phase 11 freeze."
+  },
+  "required_frozen_paths": {
+    "blind_auditor": "src/pead/phase12/audit.py",
+    "blind_report_builder": "src/pead/phase12/report.py",
+    "blind_runner": "scripts/run_blind_suite.py",
+    "custody_stream": "src/pead/phase12/custody_stream.py",
+    "decision_commitment": "src/pead/phase12/decision_commitment.py"
+  },
+  "status": "fail"
+}

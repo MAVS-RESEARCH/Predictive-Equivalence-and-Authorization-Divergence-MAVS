@@ -2835,3 +2835,110 @@ Copy this block for every meaningful action:
 - **Lineage close:** `manifests/lineage/pead-study-v3.json` now binds the implementation commit, records the Phase 11 publication event, uses that commit as its state basis, marks Phase 11 complete/pass with one successful immutable materialization, and leaves Phase 12 authorized but unstarted. This ledger-close entry resolves its containing commit through Git history and does not assert an unknowable self-SHA.
 - **Final Phase 11 verdict:** complete, pushed, and machine/human lineage documented with no compliance gap. The authoritative freeze and sealed projections are unchanged by this ledger close.
 - **Next phase:** Phase 12 - one-pass blind evaluation and generalization. It is authorized by the Phase 11 gate but has not started and still requires a new explicit user instruction.
+
+### PATH-0102 - Phase 12 preblind admission audit and blocked execution adjudication
+
+- **Timestamp:** 2026-08-08T17:37:24.9923151+05:00.
+- **User authorization:** begin Phase 12, follow WorkPlan.md exactly, preserve an identifying adjacent comment for every operational `console.log`, stress test, retain complete Path evidence, close every compliance gap before declaring the phase finished, and report the next phase.
+- **Attempt identity:** `phase12-blind-v3-attempt-001` is an execution attempt, not a valid scientific `blind_run_id`. `blind_run_id` remains null because the scientific run never started.
+- **Lineage binding:** `pead-study-v3`; preseal `phase9a-preseal-v3`; freeze `phase11-freeze-v3-d1f1d5da2443a86113fb`; immutable materialization `materialization-db40269e60851be059eeb816`.
+- **MAVS source review:** the 20-page `MAVS-Diagnostic Sciences.pdf` was rendered and visually inspected at pages 7, 10, 12-15, and 17-20. The applicable controls were matched opportunities, identical schedules, one record per decision, explicit UAR/FRR/escalation and opportunity counts, trace completeness, no threshold retuning after final validation, retained residual failures, scoped claims, and separation of hard-veto behavior from deployment or safety certification. No prior PDF result was imported as a PEAD result.
+
+#### Execution boundary and chronology
+
+1. The first CLI launch stopped before module import because `PYTHONPATH` was not set. It performed no repository write through Phase 12 code, no custody access, no method execution, no decision, and no label access. The invocation was corrected only by exposing the existing `src` package path; no scientific parameter or representation changed.
+2. The preflight verified the Ed25519 freeze signature and all 472 frozen files, the v3 lineage and Phase 12 authorization, the one-shot/read-only Phase 11 materialization, and the exact external encrypted evaluator-label object.
+3. The preflight streamed and validated 319,200 projection records: 106,400 P-only, 106,400 Raw-G, and 106,400 Oracle-G. All profile hashes, counts, registered fields, cross-profile case identities, five track counts, bank counts, and domain identities passed.
+4. Before any method was admitted, the preflight compared every Phase 10 checkpoint, fixed method, retained training failure, registered implementation entry point, and Phase 11 projection interface.
+5. The preflight found four frozen-contract gaps and stopped with exit code 2 before blind execution. It wrote a blocked attempt receipt, not a scientific result.
+6. The complete regression then ran in a bytecode-free subprocess. It retained 219 passing tests and 92 passing subtests, but failed two frozen Phase 10 tests whose assertions still require Phase 11 to be unstarted and the pre-Phase-11 lineage hashes to remain current.
+7. The final preflight rerun incorporated that regression defect as a fifth incident, reverified every pre-label gate, rejected 6,000/6,000 mutations, passed the four targeted Phase 12 tests, and retained the final blocked verdict.
+
+#### Hidden-label and one-pass custody proof
+
+- Encrypted-label ciphertext SHA-256 `a8e3143ec1c92fcd91b02e46504d7a744be0e295e9ff211c1ac7923c1541be9a`, byte count 15,711,748, plaintext commitment, AAD commitment, nonce commitment, and 106,400-record count agree across the Phase 11 blind manifest and external materialization metadata.
+- The diagnostic module imports no AES-GCM implementation and has no decrypt operation. Recorded key paths read `[]`; unlock calls 0; decryption calls 0; rematerialization calls 0; labels revealed 0; plaintext persisted false.
+- Method executions 0; decisions committed 0; traces committed 0; aggregate metrics inspected false. Therefore no decision could have been influenced by a hidden label and the one-pass opportunity remains scientifically unconsumed.
+- No invalid scientific run exists to rerun or suppress. `invalidated_run_ids=[]`; the attempt ID remains visible as blocked-before-execution and cannot be mistaken for a valid release run.
+
+#### Incident classification and exact adjudication
+
+| Gap | Class | Evidence | Adjudication |
+|---|---|---|---|
+| `P12-GAP-001` | Scientific | G01, G02, and G03 checkpoints require 14 inputs. Phase 11 provides the frozen six-dimensional predictive rendering plus four typed governance fields, for 10 inputs. | No synthetic eight-dimensional Raw-G vector was invented. Repair within v3 is prohibited because it would change the frozen representation/method contract. |
+| `P12-GAP-002` | Scientific | Frozen Phase 10 fixed Raw-G/MAVS evaluation indexes governance columns 4 and 6 and otherwise assumes eight governance columns; Phase 11 materialized four named governance fields. | G08, G09, G11-fixed, MAVS-A01-A11, A14, and A15 were not executed through an unregistered adapter. Same-lineage repair is prohibited. |
+| `P12-GAP-003` | Scientific | Frozen Phase 10 O01 obtains its output from `bank.labels`; the registered `src/pead/labels/evaluator_dsl.py` entry point accepts a parsed policy plus serialized fact bytes, not the Phase 11 Oracle projection. | O01 was not allowed to inspect the label before decision commitment. `OracleRuleAccuracy` and Oracle reconstruction remain not estimable. Same-lineage repair is prohibited. |
+| `P12-GAP-004` | Infrastructure | The signed freeze contains no `scripts/run_blind_suite.py`, custody-stream implementation, decision-commitment implementation, blind auditor, or scientific blind report builder. The existing report builder is explicitly Phase 9 non-scientific infrastructure. | Adding the missing scientific execution/reporting surface after freeze would violate the no-post-freeze-change gate. No runner was improvised. |
+| `P12-GAP-005` | Infrastructure | Complete regression: 219 pass, 2 fail, 92 subtests pass. The failures are `test_phase10_freeze_candidate_hashes_close` and `test_study_v3_lineage_exposes_current_phase10_state`; both retain pre-Phase-11 expectations after Phase 11 completion. | The frozen tests were not edited after freeze. Their failures are retained and release blocking. |
+
+#### WorkPlan Phase 12 clause-by-clause compliance audit
+
+| WorkPlan requirement | Status | Evidence and decision |
+|---|---|---|
+| Begin streamed evaluation from verified immutable materialization | Blocked before evaluation | Freeze, materialization, projection, and encrypted stream verification passed; method/execution admission failed before the first case decision. |
+| Execute all valid methods once | Not executed | A valid frozen end-to-end blind execution contract does not exist. Running a subset or inventing adapters would violate matched-method and no-representation-change requirements. |
+| Audit before aggregate inspection | Pass | All pre-label audits ran first; aggregate metrics inspected false and labels revealed 0. |
+| Classify incidents and retain outcomes | Pass | Three scientific and two infrastructure incidents are retained in machine-readable and Path records. No contamination incident was asserted without evidence. |
+| Perform no unlock or rematerialization | Pass | Unlock 0; decryption 0; rematerialization 0; Phase 11 materialization count remains 1. |
+| Verify signed freeze, materialization identity, and encrypted-label stream | Pass | Freeze signature and 472/472 inventory files pass; exact materialization and ciphertext identities pass. |
+| Commit every decision before reveal | Not applicable, boundary preserved | Decisions 0 and reveals 0; execution stopped before either event. |
+| Use evaluator/method/reveal custody stream | Fail, release blocking | The required custody-stream and commitment implementation was absent from the signed freeze (`P12-GAP-004`). |
+| Execute exact, near, reversal, scope, evidence, structural, and domain holdouts | Not executed | All corresponding projection populations were verified, but no method was admitted. |
+| Run leakage/access/trace/budget/holdout/abstention/failure/non-triviality/manifest audits before aggregate inspection | Partial and blocked | Freeze, projection, encrypted-boundary, failure-retention, manifest, console, and mutation audits pass. Decision-dependent audits are explicitly `not_run_no_decisions`; they are not misreported as pass. |
+| Only infrastructure permits invalidation/rerun | Pass | No run was invalidated or rerun. Scientific gaps were not relabeled as infrastructure. |
+| No post-freeze parameter, feature, threshold, or representation changes | Pass | Changes to those scientific surfaces: 0. No adapter, threshold, model, feature, Oracle rule, or report claim was introduced. |
+| Every release-blocking audit passes | Fail | Method-representation contract, frozen execution contract, and complete regression fail. Phase 12 is not finished. |
+| Oracle rule and lossless Oracle reconstruction equal 1.0 | Not estimable | O01 violates the pre-reveal interface as frozen. No value was fabricated. |
+| Learned Oracle-G diagnostic separate | Not estimable | O02 remains a retained Phase 10 resource failure and no blind run occurred. |
+| P-only lower bound/error coverage; Raw-G escape; MAVS-vs-Raw-G; scalar compression; scope leakage; reversal fidelity; ambiguity; domain transfer; worst-world | Retained as not estimable | All 12 required outcome fields exist in `scientific_outcomes.json` with `not_estimable_no_valid_blind_run`. |
+| Every failure and negative retained | Pass | All 13 Phase 10 resource/asset failures, five Phase 12 incidents, two regression failures, blocked attempt, and 12 non-estimable outcomes are visible. |
+| Invalidated run IDs referenced | Pass | No blind run began, so none was invalidated. The blocked attempt is explicitly referenced with null `blind_run_id`. |
+
+#### Stress, tests, and audit evidence
+
+- Mutation stress: 6,000 attempted and 6,000 rejected: 1,000 each for signed-freeze mutation, materialization-identity mutation, encrypted-label-identity mutation, projection-dimension mutation, checkpoint-dimension mutation, and lineage-identity mutation. Label access during stress false.
+- Targeted Phase 12 integration tests: 4/4 pass after final evidence generation.
+- Complete regression: 219 pass, 2 fail, 92 subtests pass in 125.87 seconds. It is deliberately recorded as fail, not a passing percentage.
+- Compile verification: `python -m compileall -q src scripts tests` passed.
+- Console audit: 18/18 operational sites have exact adjacent comments and unique event IDs.
+- Key artifact identities:
+  - run manifest `4e0c720f3847811264afb9580f8e1f5fabb407732c972f5c93f6c5797f0086c7`;
+  - compliance `b6d1b7fbf7ae3ded72b386ac822729e18d7b85bc4dab7101b17588a4ced10d90`;
+  - projection contract `355ba50467acbbe2ac0e3b05a9111ceb491c6dab960cf6291c600ccf591c54ed`;
+  - method representation contract `858aa22bc205ee9e4a40b887e9a2bd70c3e9b99f753d860bd8a4a71b38881581`;
+  - frozen execution contract `29c47aa62fe302d587ca0e60c7dc5ebb18d97ea1439cf842aa41157e97653089`;
+  - encrypted-label boundary `e77f27c4fee2d70f064f8337ee301f93cdea5d6abc527fda14ba94e8577433ba`;
+  - stress test `679ae6888ff8a979e07e3899be652c29d239f3bea7d943181513ce6160bb0abd`;
+  - complete regression `8a4ef22b9e96661da37d4d6dec6c4f82f11cc1812293fe713d0b900a1e412706`;
+  - console inventory `10336b805306362a41b3df9f5f26bea85199dbff44ca2b54589dbe7a3e1911c5`.
+
+#### Exact Phase 12 console comment and line inventory
+
+| File | Comment line | `console.log` line | Event ID | Exact adjacent identifying comment text |
+|---|---:|---:|---|---|
+| `src/pead/phase12/preflight.py` | 549 | 550 | `P12-PREFLIGHT-001` | Bind the attempted Phase 12 execution to the exact v3 lineage, freeze, preseal, and immutable Phase 11 materialization. |
+| `src/pead/phase12/preflight.py` | 564 | 565 | `P12-PREFLIGHT-002` | Verify the Ed25519 freeze signature and every byte in the 472-file frozen inventory before inspecting a method contract. |
+| `src/pead/phase12/preflight.py` | 577 | 578 | `P12-PREFLIGHT-003` | Verify the Phase 11 materialization identity, one-shot count, read-only state, and Phase 12 authorization without invoking materialization. |
+| `src/pead/phase12/preflight.py` | 587 | 588 | `P12-PREFLIGHT-004` | Hash and reconcile only the preserved encrypted evaluator-label object and metadata; do not read any label key or plaintext. |
+| `src/pead/phase12/preflight.py` | 593 | 594 | `P12-PREFLIGHT-005` | Assert zero unlock, decryption, rematerialization, label reveal, decision execution, and aggregate inspection activity. |
+| `src/pead/phase12/preflight.py` | 598 | 599 | `P12-PREFLIGHT-006` | Stream every sealed projection and verify hashes, counts, registered fields, matched identities, tracks, domains, and frozen predictive rendering. |
+| `src/pead/phase12/preflight.py` | 602 | 603 | `P12-PREFLIGHT-007` | Compare every retained Phase 10 method and checkpoint against the exact Phase 11 projection and pre-reveal Oracle interfaces. |
+| `src/pead/phase12/preflight.py` | 606 | 607 | `P12-PREFLIGHT-008` | Verify that blind runner, custody stream, decision commitment, auditor, and reporting code were included in the signed freeze. |
+| `src/pead/phase12/preflight.py` | 610 | 611 | `P12-PREFLIGHT-009` | Classify every discovered event under the frozen infrastructure, contamination, or scientific incident taxonomy. |
+| `src/pead/phase12/preflight.py` | 619 | 620 | `P12-PREFLIGHT-010` | Reject 6,000 synthetic signature, lineage, materialization, ciphertext, projection, and checkpoint mutations without label access. |
+| `src/pead/phase12/preflight.py` | 625 | 626 | `P12-PREFLIGHT-010-REGRESSION` | Retain the complete regression verdict and classify any frozen stale-test expectation without editing the signed test surface. |
+| `src/pead/phase12/preflight.py` | 628 | 629 | `P12-PREFLIGHT-011` | Inventory every Phase 12 console event and prove exact adjacent identifying comments and globally unique event identities. |
+| `src/pead/phase12/preflight.py` | 632 | 633 | `P12-PREFLIGHT-012` | Retain the blocked attempt, every prior failure, every new incident, every non-estimable outcome, and all pre-label evidence. |
+| `src/pead/phase12/preflight.py` | 647 | 648 | `P12-PREFLIGHT-BLOCK` | Stop before method execution and label reveal because release-blocking frozen-contract gaps cannot be repaired within pead-study-v3. |
+| `scripts/preflight_phase12.py` | 19 | 20 | `P12-SCRIPT-PREFLIGHT-001` | Enter the Phase 12 preflight with an explicit custody root and execution timestamp. |
+| `scripts/preflight_phase12.py` | 22 | 23 | `P12-SCRIPT-PREFLIGHT-BLOCK` | Return a nonzero blocked status after preserving all evidence and without crossing the hidden-label boundary. |
+| `scripts/run_phase12_tests.py` | 24 | 25 | `P12-SCRIPT-TEST-001` | Execute the complete test suite in a bytecode-free subprocess after the pre-label audit. |
+| `scripts/run_phase12_tests.py` | 48 | 49 | `P12-SCRIPT-TEST-002` | Retain the exact regression result without interpreting it as a blind scientific execution. |
+
+#### Final adjudication and next phase
+
+- **Phase 12 verdict:** blocked before blind execution; not finished; compliance gaps 5; scientific claims unauthorized.
+- **Why gaps were not completed:** three gaps require changes to frozen feature/method/Oracle contracts and two require changes to the frozen execution/test surface. WorkPlan.md expressly prohibits those changes after Phase 11 without a new study version. Completing them inside `pead-study-v3` would falsify compliance rather than resolve it.
+- **Machine lineage:** `manifests/lineage/pead-study-v3.json` records Phase 12 started, attempt ID, blocked status, five gaps, zero method/decision/label/decryption/rematerialization activity, and Phase 13 unauthorized.
+- **Nominal next phase:** Phase 13 - evidence package, clean reproduction, and bounded release.
+- **Actually permitted next action:** do not begin Phase 13. Create an explicitly authorized new study version, correct and freeze the producer-consumer feature contract, implement a pre-frozen Oracle rule interface and blind custody/commitment/audit/report surface, regenerate all dependent Phase 10-11 artifacts, and repeat Phase 12 once. No such new lineage or scientific change was created in this instruction.
